@@ -47,3 +47,33 @@ script. This script is going to read data from `output/`.
 ```bash
 $ python 04_prepare_phylo.py
 ```
+
+## Community guidelines
+
+While the author can be contacted directly for support, it is recommended that
+third parties use GitHub standard features, such as issues and pull requests, to
+contribute, report problems, or seek support.
+
+Contributing guidelines, including a code of conduct, can be found in the
+`CONTRIBUTING.md` file.
+
+## Author and citation
+
+The library is developed by Tiago Tresoldi (tiago.tresoldi@lingfil.uu.se). The library is developed in the context of
+the [Cultural Evolution of Texts](https://github.com/evotext/) project, with funding from the
+[Riksbankens Jubileumsfond](https://www.rj.se/) (grant agreement ID:
+[MXM19-1087:1](https://www.rj.se/en/anslag/2019/cultural-evolution-of-texts/)).
+
+If you use `GLED`, please cite it as:
+
+> Tresoldi, T., (2022).
+
+In BibTeX:
+
+```
+@article{Tresoldi2022gled,
+  year = {2022},
+  author = {Tiago Tresoldi},
+  title = {A Global Lexical Dataset (GLED) with cognate annotation and phonological alignment},
+}
+```
