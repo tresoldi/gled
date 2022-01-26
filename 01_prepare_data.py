@@ -16,13 +16,11 @@ from pathlib import Path
 import argparse
 import csv
 import logging
-import re
 
 # Import other modules
 import common
 
 ASJP_PATH = Path(__file__).parent / "raw" / "asjp"
-NELX_PATH = Path(__file__).parent / "raw" / "northeuralex"
 
 # Specify output fields
 OUTPUT_FIELDS = [
@@ -302,73 +300,6 @@ def write_data(data, args, per_lineage=False):
             _write_lineage_data(entries, label, "asjp", args)
 
 
-def read_northeuralex_data(args, languoids):
-    # Hold data by family
-    data = defaultdict(list)
-
-    # Read language data for family filtering
-    langfile = NELX_PATH / "northeuralex-0.9-language-data.tsv"
-    with open(langfile, encoding="utf-8") as handler:
-        langmap = {
-            entry["glotto_code"]: (entry["family"], entry["name"])
-            for entry in csv.DictReader(handler, delimiter="\t")
-        }
-
-    # Read concept data for expansion
-    conceptfile = NELX_PATH / "northeuralex-0.9-concept-data.tsv"
-    with open(conceptfile, encoding="utf-8") as handler:
-        conceptmap = {
-            entry["id_nelex"]: entry["gloss_en"]
-            for entry in csv.DictReader(handler, delimiter="\t")
-        }
-
-    # Read form data filtering by family
-    formfile = NELX_PATH / "northeuralex-0.9-forms.tsv"
-    next_id = 1
-    with open(formfile, encoding="utf-8") as handler:
-        for row in csv.DictReader(handler, delimiter="\t"):
-            # Filter the contents we want, also adding new ones when necessary;
-            # this also skips over empty forms
-            row["IPA"] = re.sub("\s+", " ", row["IPA"].strip())
-            if row["IPA"]:
-                entry = {
-                    "ID": str(next_id),
-                    "DOCULECT": langmap[row["Glottocode"]][1],
-                    "GLOTTOCODE": row["Glottocode"],
-                    "GLOTTOLOG_NAME": languoids[row["Glottocode"]],
-                    "CONCEPT": conceptmap[row["Concept_ID"]],
-                    "CONCEPT_ID": row["Concept_ID"],
-                    "VALUE": row["Word_Form"],
-                    "TOKENS": row["IPA"],
-                }
-                next_id += 1
-
-                data[langmap[row["Glottocode"]][0]].append(entry)
-
-    # Output by family
-    for family, entries in data.items():
-        filename = Path(args.output_path) / f"nelx_{common.slug(family)}.tsv"
-        with open(filename, "w", encoding="utf-8") as handler:
-            logging.info("Writing NELX %s data...", family)
-
-            writer = csv.DictWriter(
-                handler,
-                delimiter="\t",
-                fieldnames=[
-                    "ID",
-                    "DOCULECT",
-                    "GLOTTOCODE",
-                    "GLOTTOLOG_NAME",
-                    "CONCEPT",
-                    "CONCEPT_ID",
-                    "VALUE",
-                    "TOKENS",
-                ],
-            )
-            writer.writeheader()
-            writer.writerows(entries)
-
-
 def main(args):
     """
     Entry point for the script.
@@ -386,10 +317,6 @@ def main(args):
     data = read_cldf_data(args, languoids)
     logging.info("Read %i ASJP entries.", len(data))
     write_data(data, args)
-
-    # Read and process NorthEuraLex data
-    logging.info("Reading NorthEuraLex data...")
-    read_northeuralex_data(args, languoids)
 
 
 if __name__ == "__main__":

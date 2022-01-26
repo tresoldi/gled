@@ -6,18 +6,17 @@ Script for aggragating data from clustering, including alignments.
 
 # TODO: add date for latin? and other languages?
 
-import glob
-import csv
-import logging
-from pathlib import Path
 from collections import defaultdict
-import re
-import unidecode
+from pathlib import Path
+import csv
+import glob
 import lingpy
+import logging
 
 from common import slug
 
 BASE_PATH = Path(__file__).parent
+
 
 def collect_data(filenames, id_field, parid_field, concept_map=None, lang_date=None):
     """
@@ -153,7 +152,7 @@ def main():
 
     # Prepare ASJP, reading date of extinction of languages
     with open(
-        BASE_PATH / "raw" / "asjp" / "languages.csv", encoding="utf-8"
+            BASE_PATH / "raw" / "asjp" / "languages.csv", encoding="utf-8"
     ) as handler:
         asjp_lang_date = {
             row["Name"]: row["year_of_extinction"]
@@ -167,28 +166,6 @@ def main():
         asjp_files, "ASJP_ID", "PARAMETER_ID", lang_date=asjp_lang_date
     )
     write_results(asjp_data, "asjp")
-
-    # Prepare NorthEuraLex, where we need to provide the concepticon mapping
-    # NOTE: NorthEuralex does not include date of extinction, even though
-    #       it carries some historical data (like Latin)
-    parameter_file = (
-        BASE_PATH / "raw" / "northeuralex" / "northeuralex-0.9-concept-data.tsv"
-    )
-    with open(parameter_file, encoding="utf-8") as handler:
-        nelx_mapping = {}
-        for row in csv.DictReader(handler, delimiter="\t"):
-            if row["concepticon_id"] == "0":
-                nelx_mapping[row["gloss_en"].strip()] = (None, None)
-            else:
-                nelx_mapping[row["gloss_en"].strip()] = (
-                    row["concepticon"].strip(),
-                    row["concepticon_id"].strip(),
-                )
-
-    nelx_pattern = BASE_PATH / "cluster" / "nelx_*.tsv"
-    nelx_files = glob.glob(str(nelx_pattern))
-    nelx_data = collect_data(nelx_files, "ID", "CONCEPT_ID", concept_map=nelx_mapping)
-    write_results(nelx_data, "nelx")
 
 
 if __name__ == "__main__":
