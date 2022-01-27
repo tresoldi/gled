@@ -26,10 +26,13 @@ def get_glottolog(glottolog_path):
     return glottolog
 
 
-def slug(label):
+def slug(label, drop_parentheses=False):
     """
     Returns a slugged version of a label.
     """
+
+    if drop_parentheses:
+        label = re.sub(r"\([^)]*\)", "", label)
 
     label = label.strip()
     label = re.sub(r"\s+", "_", label)

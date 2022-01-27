@@ -1,0 +1,221 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=5 NCHAR=163;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_2,
+        3 blood_3,
+        4 bone_0ascertainment,
+        5 bone_4,
+        6 breast_0ascertainment,
+        7 breast_5,
+        8 breast_6,
+        9 breast_7,
+        10 come_0ascertainment,
+        11 come_10,
+        12 come_11,
+        13 come_12,
+        14 come_13,
+        15 come_8,
+        16 come_9,
+        17 die_0ascertainment,
+        18 die_14,
+        19 die_15,
+        20 dog_0ascertainment,
+        21 dog_16,
+        22 dog_17,
+        23 dog_18,
+        24 dog_19,
+        25 dog_20,
+        26 dog_21,
+        27 drink_0ascertainment,
+        28 drink_22,
+        29 drink_23,
+        30 ear_0ascertainment,
+        31 ear_24,
+        32 ear_25,
+        33 ear_26,
+        34 ear_27,
+        35 eye_0ascertainment,
+        36 eye_28,
+        37 eye_29,
+        38 eye_30,
+        39 fire_0ascertainment,
+        40 fire_31,
+        41 fire_32,
+        42 fire_33,
+        43 fire_34,
+        44 fish_0ascertainment,
+        45 fish_35,
+        46 full_0ascertainment,
+        47 full_36,
+        48 hand_0ascertainment,
+        49 hand_37,
+        50 hand_38,
+        51 hand_39,
+        52 hand_40,
+        53 hand_41,
+        54 hand_42,
+        55 hand_43,
+        56 hear_0ascertainment,
+        57 hear_44,
+        58 i_0ascertainment,
+        59 i_1,
+        60 knee_0ascertainment,
+        61 knee_45,
+        62 knee_46,
+        63 knee_47,
+        64 knee_48,
+        65 knee_49,
+        66 knee_50,
+        67 knee_51,
+        68 leaf_0ascertainment,
+        69 leaf_52,
+        70 liver_0ascertainment,
+        71 liver_53,
+        72 liver_54,
+        73 liver_55,
+        74 louse_0ascertainment,
+        75 louse_56,
+        76 louse_57,
+        77 mountain_0ascertainment,
+        78 mountain_58,
+        79 name_0ascertainment,
+        80 name_59,
+        81 new_0ascertainment,
+        82 new_60,
+        83 night_0ascertainment,
+        84 night_61,
+        85 night_62,
+        86 nose_0ascertainment,
+        87 nose_63,
+        88 nose_64,
+        89 nose_65,
+        90 nose_66,
+        91 nose_67,
+        92 nose_68,
+        93 one_0ascertainment,
+        94 one_69,
+        95 one_70,
+        96 one_71,
+        97 one_72,
+        98 one_73,
+        99 one_74,
+        100 one_75,
+        101 one_76,
+        102 one_77,
+        103 path_0ascertainment,
+        104 path_78,
+        105 person_0ascertainment,
+        106 person_79,
+        107 person_80,
+        108 person_81,
+        109 person_82,
+        110 person_83,
+        111 person_84,
+        112 see_0ascertainment,
+        113 see_85,
+        114 see_86,
+        115 see_87,
+        116 skin_0ascertainment,
+        117 skin_88,
+        118 skin_89,
+        119 skin_90,
+        120 star_0ascertainment,
+        121 star_91,
+        122 star_92,
+        123 star_93,
+        124 star_94,
+        125 stone_0ascertainment,
+        126 stone_95,
+        127 stone_96,
+        128 stone_97,
+        129 stone_98,
+        130 sun_0ascertainment,
+        131 sun_100,
+        132 sun_99,
+        133 thou_0ascertainment,
+        134 thou_121,
+        135 thou_122,
+        136 thou_123,
+        137 thou_124,
+        138 tongue_0ascertainment,
+        139 tongue_101,
+        140 tongue_102,
+        141 tongue_103,
+        142 tooth_0ascertainment,
+        143 tooth_104,
+        144 tooth_105,
+        145 tooth_106,
+        146 tooth_107,
+        147 tree_0ascertainment,
+        148 tree_108,
+        149 tree_109,
+        150 tree_110,
+        151 tree_111,
+        152 two_0ascertainment,
+        153 two_112,
+        154 two_113,
+        155 two_114,
+        156 two_115,
+        157 two_116,
+        158 water_0ascertainment,
+        159 water_117,
+        160 water_118,
+        161 water_119,
+        162 we_0ascertainment,
+        163 we_120
+;
+
+MATRIX
+gunin_kwini 010010100000001001001000000??010000100010010?0?010000000101010000000?01000??0?0?0?010010000001000000000?010000001000???0????010000010100001000100001000010000010001
+ngarinyin   0??01010000001010110010100010001010101001000?0?001001010101001000100?01000100?0?0?0??001000000100010000?00100010101010001000001100010010000100100100100010000001001
+unggumi     0??010100010000001000011100??000100110001100?0?000100000101000101000?00100010?0?0?0??000100100010000110?000100000100010001000010101100010001100100000100010000???01
+worrorra    001010100001000001000001000010????0100000100101000010000101000010000100010??0101010010000100000010000001000010001000???0001000010001000010???0001000001000100000101
+wunambal    0??010111000100001001100010??010000100011010?0?010000100101000001010?01000??0?0?0?0??010001000010111000?0000010010100010000101000001010000110010000????0000110???01
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-5;
+    charset breast = 6-9;
+    charset come = 10-16;
+    charset die = 17-19;
+    charset dog = 20-26;
+    charset drink = 27-29;
+    charset ear = 30-34;
+    charset eye = 35-38;
+    charset fire = 39-43;
+    charset fish = 44-45;
+    charset full = 46-47;
+    charset hand = 48-55;
+    charset hear = 56-57;
+    charset i = 58-59;
+    charset knee = 60-67;
+    charset leaf = 68-69;
+    charset liver = 70-73;
+    charset louse = 74-76;
+    charset mountain = 77-78;
+    charset name = 79-80;
+    charset new = 81-82;
+    charset night = 83-85;
+    charset nose = 86-92;
+    charset one = 93-102;
+    charset path = 103-104;
+    charset person = 105-111;
+    charset see = 112-115;
+    charset skin = 116-119;
+    charset star = 120-124;
+    charset stone = 125-129;
+    charset sun = 130-132;
+    charset thou = 133-137;
+    charset tongue = 138-141;
+    charset tooth = 142-146;
+    charset tree = 147-151;
+    charset two = 152-157;
+    charset water = 158-161;
+    charset we = 162-163;
+END;

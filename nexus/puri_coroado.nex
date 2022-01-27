@@ -1,0 +1,108 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=62;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_1,
+        3 bone_0ascertainment,
+        4 bone_2,
+        5 breast_0ascertainment,
+        6 breast_3,
+        7 die_0ascertainment,
+        8 die_4,
+        9 dog_0ascertainment,
+        10 dog_5,
+        11 drink_0ascertainment,
+        12 drink_6,
+        13 ear_0ascertainment,
+        14 ear_7,
+        15 eye_0ascertainment,
+        16 eye_8,
+        17 fire_0ascertainment,
+        18 fire_9,
+        19 fish_0ascertainment,
+        20 fish_10,
+        21 hand_0ascertainment,
+        22 hand_11,
+        23 horn_0ascertainment,
+        24 horn_12,
+        25 knee_0ascertainment,
+        26 knee_13,
+        27 leaf_0ascertainment,
+        28 leaf_14,
+        29 mountain_0ascertainment,
+        30 mountain_15,
+        31 name_0ascertainment,
+        32 name_16,
+        33 new_0ascertainment,
+        34 new_17,
+        35 night_0ascertainment,
+        36 night_18,
+        37 nose_0ascertainment,
+        38 nose_19,
+        39 one_0ascertainment,
+        40 one_20,
+        41 path_0ascertainment,
+        42 path_21,
+        43 skin_0ascertainment,
+        44 skin_22,
+        45 star_0ascertainment,
+        46 star_23,
+        47 stone_0ascertainment,
+        48 stone_24,
+        49 sun_0ascertainment,
+        50 sun_25,
+        51 thou_0ascertainment,
+        52 thou_31,
+        53 tongue_0ascertainment,
+        54 tongue_26,
+        55 tooth_0ascertainment,
+        56 tooth_27,
+        57 tree_0ascertainment,
+        58 tree_28,
+        59 two_0ascertainment,
+        60 two_29,
+        61 water_0ascertainment,
+        62 water_30
+;
+
+MATRIX
+puri 01010101010101010101010101010101010101010101010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset die = 7-8;
+    charset dog = 9-10;
+    charset drink = 11-12;
+    charset ear = 13-14;
+    charset eye = 15-16;
+    charset fire = 17-18;
+    charset fish = 19-20;
+    charset hand = 21-22;
+    charset horn = 23-24;
+    charset knee = 25-26;
+    charset leaf = 27-28;
+    charset mountain = 29-30;
+    charset name = 31-32;
+    charset new = 33-34;
+    charset night = 35-36;
+    charset nose = 37-38;
+    charset one = 39-40;
+    charset path = 41-42;
+    charset skin = 43-44;
+    charset star = 45-46;
+    charset stone = 47-48;
+    charset sun = 49-50;
+    charset thou = 51-52;
+    charset tongue = 53-54;
+    charset tooth = 55-56;
+    charset tree = 57-58;
+    charset two = 59-60;
+    charset water = 61-62;
+END;

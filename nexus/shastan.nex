@@ -1,0 +1,99 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=56;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_2,
+        3 bone_0ascertainment,
+        4 bone_3,
+        5 come_0ascertainment,
+        6 come_4,
+        7 dog_0ascertainment,
+        8 dog_5,
+        9 drink_0ascertainment,
+        10 drink_6,
+        11 ear_0ascertainment,
+        12 ear_7,
+        13 eye_0ascertainment,
+        14 eye_8,
+        15 fire_0ascertainment,
+        16 fire_9,
+        17 fish_0ascertainment,
+        18 fish_10,
+        19 hand_0ascertainment,
+        20 hand_11,
+        21 i_0ascertainment,
+        22 i_1,
+        23 leaf_0ascertainment,
+        24 leaf_12,
+        25 mountain_0ascertainment,
+        26 mountain_13,
+        27 name_0ascertainment,
+        28 name_14,
+        29 night_0ascertainment,
+        30 night_15,
+        31 nose_0ascertainment,
+        32 nose_16,
+        33 one_0ascertainment,
+        34 one_17,
+        35 person_0ascertainment,
+        36 person_18,
+        37 see_0ascertainment,
+        38 see_19,
+        39 star_0ascertainment,
+        40 star_20,
+        41 stone_0ascertainment,
+        42 stone_21,
+        43 sun_0ascertainment,
+        44 sun_22,
+        45 tongue_0ascertainment,
+        46 tongue_23,
+        47 tooth_0ascertainment,
+        48 tooth_24,
+        49 tree_0ascertainment,
+        50 tree_25,
+        51 two_0ascertainment,
+        52 two_26,
+        53 water_0ascertainment,
+        54 water_27,
+        55 we_0ascertainment,
+        56 we_28
+;
+
+MATRIX
+shasta 01010101010101010101010101010101010101010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset come = 5-6;
+    charset dog = 7-8;
+    charset drink = 9-10;
+    charset ear = 11-12;
+    charset eye = 13-14;
+    charset fire = 15-16;
+    charset fish = 17-18;
+    charset hand = 19-20;
+    charset i = 21-22;
+    charset leaf = 23-24;
+    charset mountain = 25-26;
+    charset name = 27-28;
+    charset night = 29-30;
+    charset nose = 31-32;
+    charset one = 33-34;
+    charset person = 35-36;
+    charset see = 37-38;
+    charset star = 39-40;
+    charset stone = 41-42;
+    charset sun = 43-44;
+    charset tongue = 45-46;
+    charset tooth = 47-48;
+    charset tree = 49-50;
+    charset two = 51-52;
+    charset water = 53-54;
+    charset we = 55-56;
+END;

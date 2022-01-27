@@ -1,0 +1,115 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=69;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_2,
+        3 bone_0ascertainment,
+        4 bone_3,
+        5 breast_0ascertainment,
+        6 breast_4,
+        7 breast_5,
+        8 dog_0ascertainment,
+        9 dog_6,
+        10 ear_0ascertainment,
+        11 ear_7,
+        12 eye_0ascertainment,
+        13 eye_8,
+        14 eye_9,
+        15 fire_0ascertainment,
+        16 fire_10,
+        17 full_0ascertainment,
+        18 full_11,
+        19 full_12,
+        20 hand_0ascertainment,
+        21 hand_13,
+        22 i_0ascertainment,
+        23 i_1,
+        24 knee_0ascertainment,
+        25 knee_14,
+        26 leaf_0ascertainment,
+        27 leaf_15,
+        28 leaf_16,
+        29 liver_0ascertainment,
+        30 liver_17,
+        31 name_0ascertainment,
+        32 name_18,
+        33 new_0ascertainment,
+        34 new_19,
+        35 night_0ascertainment,
+        36 night_20,
+        37 night_21,
+        38 night_22,
+        39 nose_0ascertainment,
+        40 nose_23,
+        41 one_0ascertainment,
+        42 one_24,
+        43 skin_0ascertainment,
+        44 skin_25,
+        45 star_0ascertainment,
+        46 star_26,
+        47 star_27,
+        48 star_28,
+        49 stone_0ascertainment,
+        50 stone_29,
+        51 sun_0ascertainment,
+        52 sun_30,
+        53 sun_31,
+        54 thou_0ascertainment,
+        55 thou_39,
+        56 thou_40,
+        57 tongue_0ascertainment,
+        58 tongue_32,
+        59 tooth_0ascertainment,
+        60 tooth_33,
+        61 tree_0ascertainment,
+        62 tree_34,
+        63 two_0ascertainment,
+        64 two_35,
+        65 two_36,
+        66 water_0ascertainment,
+        67 water_37,
+        68 we_0ascertainment,
+        69 we_38
+;
+
+MATRIX
+kamor    010101001010100101001010101001010?01000101010100010100100101010100101
+matngala 010101001010010100101010100101010100100101010010010010010101010010101
+yunggor  010100101010100100101010100101010100010101010001010010010101010010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset dog = 8-9;
+    charset ear = 10-11;
+    charset eye = 12-14;
+    charset fire = 15-16;
+    charset full = 17-19;
+    charset hand = 20-21;
+    charset i = 22-23;
+    charset knee = 24-25;
+    charset leaf = 26-28;
+    charset liver = 29-30;
+    charset name = 31-32;
+    charset new = 33-34;
+    charset night = 35-38;
+    charset nose = 39-40;
+    charset one = 41-42;
+    charset skin = 43-44;
+    charset star = 45-48;
+    charset stone = 49-50;
+    charset sun = 51-53;
+    charset thou = 54-56;
+    charset tongue = 57-58;
+    charset tooth = 59-60;
+    charset tree = 61-62;
+    charset two = 63-65;
+    charset water = 66-67;
+    charset we = 68-69;
+END;

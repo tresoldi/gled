@@ -1,0 +1,87 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=48;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_2,
+        3 bone_0ascertainment,
+        4 bone_3,
+        5 come_0ascertainment,
+        6 come_4,
+        7 die_0ascertainment,
+        8 die_5,
+        9 drink_0ascertainment,
+        10 drink_6,
+        11 ear_0ascertainment,
+        12 ear_7,
+        13 eye_0ascertainment,
+        14 eye_8,
+        15 fire_0ascertainment,
+        16 fire_9,
+        17 fish_0ascertainment,
+        18 fish_10,
+        19 full_0ascertainment,
+        20 full_11,
+        21 i_0ascertainment,
+        22 i_1,
+        23 leaf_0ascertainment,
+        24 leaf_12,
+        25 mountain_0ascertainment,
+        26 mountain_13,
+        27 name_0ascertainment,
+        28 name_14,
+        29 one_0ascertainment,
+        30 one_15,
+        31 person_0ascertainment,
+        32 person_16,
+        33 see_0ascertainment,
+        34 see_17,
+        35 stone_0ascertainment,
+        36 stone_18,
+        37 sun_0ascertainment,
+        38 sun_19,
+        39 thou_0ascertainment,
+        40 thou_24,
+        41 tree_0ascertainment,
+        42 tree_20,
+        43 two_0ascertainment,
+        44 two_21,
+        45 water_0ascertainment,
+        46 water_22,
+        47 we_0ascertainment,
+        48 we_23
+;
+
+MATRIX
+kalapuya 010101010101010101010101010101010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset come = 5-6;
+    charset die = 7-8;
+    charset drink = 9-10;
+    charset ear = 11-12;
+    charset eye = 13-14;
+    charset fire = 15-16;
+    charset fish = 17-18;
+    charset full = 19-20;
+    charset i = 21-22;
+    charset leaf = 23-24;
+    charset mountain = 25-26;
+    charset name = 27-28;
+    charset one = 29-30;
+    charset person = 31-32;
+    charset see = 33-34;
+    charset stone = 35-36;
+    charset sun = 37-38;
+    charset thou = 39-40;
+    charset tree = 41-42;
+    charset two = 43-44;
+    charset water = 45-46;
+    charset we = 47-48;
+END;

@@ -1,0 +1,290 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=10 NCHAR=226;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_3,
+        3 blood_4,
+        4 blood_5,
+        5 bone_0ascertainment,
+        6 bone_10,
+        7 bone_6,
+        8 bone_7,
+        9 bone_8,
+        10 bone_9,
+        11 breast_0ascertainment,
+        12 breast_11,
+        13 breast_12,
+        14 breast_13,
+        15 breast_14,
+        16 breast_15,
+        17 breast_16,
+        18 breast_17,
+        19 come_0ascertainment,
+        20 come_18,
+        21 come_19,
+        22 come_20,
+        23 come_21,
+        24 come_22,
+        25 come_23,
+        26 come_24,
+        27 die_0ascertainment,
+        28 die_25,
+        29 die_26,
+        30 die_27,
+        31 die_28,
+        32 die_29,
+        33 die_30,
+        34 die_31,
+        35 die_32,
+        36 dog_0ascertainment,
+        37 dog_33,
+        38 dog_34,
+        39 dog_35,
+        40 dog_36,
+        41 dog_37,
+        42 dog_38,
+        43 drink_0ascertainment,
+        44 drink_39,
+        45 drink_40,
+        46 drink_41,
+        47 drink_42,
+        48 drink_43,
+        49 drink_44,
+        50 drink_45,
+        51 drink_46,
+        52 ear_0ascertainment,
+        53 ear_47,
+        54 ear_48,
+        55 ear_49,
+        56 eye_0ascertainment,
+        57 eye_50,
+        58 eye_51,
+        59 eye_52,
+        60 eye_53,
+        61 fire_0ascertainment,
+        62 fire_54,
+        63 fire_55,
+        64 fish_0ascertainment,
+        65 fish_56,
+        66 fish_57,
+        67 fish_58,
+        68 fish_59,
+        69 fish_60,
+        70 fish_61,
+        71 full_0ascertainment,
+        72 full_62,
+        73 hand_0ascertainment,
+        74 hand_63,
+        75 hand_64,
+        76 hand_65,
+        77 hand_66,
+        78 hand_67,
+        79 hand_68,
+        80 hear_0ascertainment,
+        81 hear_69,
+        82 hear_70,
+        83 hear_71,
+        84 horn_0ascertainment,
+        85 horn_72,
+        86 horn_73,
+        87 horn_74,
+        88 i_0ascertainment,
+        89 i_1,
+        90 i_2,
+        91 knee_0ascertainment,
+        92 knee_75,
+        93 knee_76,
+        94 knee_77,
+        95 leaf_0ascertainment,
+        96 leaf_78,
+        97 leaf_79,
+        98 leaf_80,
+        99 leaf_81,
+        100 leaf_82,
+        101 leaf_83,
+        102 leaf_84,
+        103 leaf_85,
+        104 liver_0ascertainment,
+        105 liver_86,
+        106 liver_87,
+        107 liver_88,
+        108 liver_89,
+        109 liver_90,
+        110 liver_91,
+        111 louse_0ascertainment,
+        112 louse_92,
+        113 louse_93,
+        114 louse_94,
+        115 louse_95,
+        116 louse_96,
+        117 louse_97,
+        118 mountain_0ascertainment,
+        119 mountain_100,
+        120 mountain_101,
+        121 mountain_102,
+        122 mountain_103,
+        123 mountain_104,
+        124 mountain_105,
+        125 mountain_106,
+        126 mountain_98,
+        127 mountain_99,
+        128 name_0ascertainment,
+        129 name_107,
+        130 name_108,
+        131 name_109,
+        132 name_110,
+        133 name_111,
+        134 new_0ascertainment,
+        135 new_112,
+        136 new_113,
+        137 new_114,
+        138 new_115,
+        139 new_116,
+        140 new_117,
+        141 new_118,
+        142 new_119,
+        143 new_120,
+        144 night_0ascertainment,
+        145 night_121,
+        146 night_122,
+        147 night_123,
+        148 night_124,
+        149 night_125,
+        150 nose_0ascertainment,
+        151 nose_126,
+        152 nose_127,
+        153 nose_128,
+        154 one_0ascertainment,
+        155 one_129,
+        156 one_130,
+        157 one_131,
+        158 path_0ascertainment,
+        159 path_132,
+        160 path_133,
+        161 path_134,
+        162 path_135,
+        163 path_136,
+        164 path_137,
+        165 path_138,
+        166 person_0ascertainment,
+        167 person_139,
+        168 person_140,
+        169 person_141,
+        170 person_142,
+        171 person_143,
+        172 see_0ascertainment,
+        173 see_144,
+        174 see_145,
+        175 see_146,
+        176 see_147,
+        177 see_148,
+        178 see_149,
+        179 skin_0ascertainment,
+        180 skin_150,
+        181 skin_151,
+        182 skin_152,
+        183 skin_153,
+        184 skin_154,
+        185 star_0ascertainment,
+        186 star_155,
+        187 star_156,
+        188 stone_0ascertainment,
+        189 stone_157,
+        190 stone_158,
+        191 stone_159,
+        192 sun_0ascertainment,
+        193 sun_160,
+        194 sun_161,
+        195 sun_162,
+        196 sun_163,
+        197 sun_164,
+        198 sun_165,
+        199 sun_166,
+        200 thou_0ascertainment,
+        201 thou_184,
+        202 thou_185,
+        203 thou_186,
+        204 tongue_0ascertainment,
+        205 tongue_167,
+        206 tongue_168,
+        207 tongue_169,
+        208 tongue_170,
+        209 tooth_0ascertainment,
+        210 tooth_171,
+        211 tree_0ascertainment,
+        212 tree_172,
+        213 tree_173,
+        214 tree_174,
+        215 two_0ascertainment,
+        216 two_175,
+        217 two_176,
+        218 two_177,
+        219 two_178,
+        220 water_0ascertainment,
+        221 water_179,
+        222 we_0ascertainment,
+        223 we_180,
+        224 we_181,
+        225 we_182,
+        226 we_183
+;
+
+MATRIX
+baale       01000010000100000001000000010000000010000001000000001000100001001000000?010000001000100010010001000000001000000100000000000001001000001000000000?????01000100010000000100000100000010000010010001000000010001000010100010000101000
+didinga     01000010000010000000110001001000001001000001100000001000100001001000000100100000100010001000100100000000010000001000000000000010100000?????????01000001000100001000000?????0011000010000010001000100000010101000010100010000101001
+kwegu       00100001000001000000010000000100000000100000010000000100010001000100000?0001000001000100100100001000000000100000010000100000000010000001000000000100000100010000100000010000001000010000010001000010000010000100010010001010100100
+meen        00100000100000100000001000000010000010000000001000000100100001000010000?0010000010000010100001000100000000010000100000010000000001000000100000000010000010010000010000001000000100001000001001000001000010000100010001010000101000
+mesengo     00010010000100000000000100000001000000010000000100000010001100100001000?0000100010000010010100000010000000001000001000001000000000100000010000000001001000001000001000000100000010000100010000100000100010000100010100000100100010
+murle       01000000010000010000100000000000100000001000000010001000100001001000000?0000010000101000100010000001000010000000000100000100000000010000001000001000001000100000000100000100010000010000010001000000010010000010010100010000101000
+mursi       00100100000000100000001000000010000010000000001000000100100001000000100?0000001010000010100100000000100000010000100000000010000010000000000100000000100010010000010000001000000001000010010001000000001001000001010001010000101000
+narim_larim 0100001000000000100010000000100000000000010000001000100010000100100000010010000010001000100010010000000010000000100000000001000010000000000010001000001000100000010000000100010000010000010001000100000010001000010100010000101000
+tennet      0100001000001000000010000000100000000000010000000100100010000100100000010010000010001000100010000000010010000000100000000100000000001000000001001000001000100000000010000100010000010000010001000000010010001000010100010000101000
+tirma       00100001000000000100000010000000010010000000000000100100100001000000010?000000101000001010010000000000100000010000001000000010001000000000000010?????00010010010000000000010000100000001010001000000001010000100010001010000101000
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-10;
+    charset breast = 11-18;
+    charset come = 19-26;
+    charset die = 27-35;
+    charset dog = 36-42;
+    charset drink = 43-51;
+    charset ear = 52-55;
+    charset eye = 56-60;
+    charset fire = 61-63;
+    charset fish = 64-70;
+    charset full = 71-72;
+    charset hand = 73-79;
+    charset hear = 80-83;
+    charset horn = 84-87;
+    charset i = 88-90;
+    charset knee = 91-94;
+    charset leaf = 95-103;
+    charset liver = 104-110;
+    charset louse = 111-117;
+    charset mountain = 118-127;
+    charset name = 128-133;
+    charset new = 134-143;
+    charset night = 144-149;
+    charset nose = 150-153;
+    charset one = 154-157;
+    charset path = 158-165;
+    charset person = 166-171;
+    charset see = 172-178;
+    charset skin = 179-184;
+    charset star = 185-187;
+    charset stone = 188-191;
+    charset sun = 192-199;
+    charset thou = 200-203;
+    charset tongue = 204-208;
+    charset tooth = 209-210;
+    charset tree = 211-214;
+    charset two = 215-219;
+    charset water = 220-221;
+    charset we = 222-226;
+END;

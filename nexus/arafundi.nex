@@ -1,0 +1,110 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=68;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_2,
+        3 blood_3,
+        4 bone_0ascertainment,
+        5 bone_4,
+        6 breast_0ascertainment,
+        7 breast_5,
+        8 breast_6,
+        9 breast_7,
+        10 dog_0ascertainment,
+        11 dog_10,
+        12 dog_8,
+        13 dog_9,
+        14 ear_0ascertainment,
+        15 ear_11,
+        16 eye_0ascertainment,
+        17 eye_12,
+        18 fire_0ascertainment,
+        19 fire_13,
+        20 fish_0ascertainment,
+        21 fish_14,
+        22 fish_15,
+        23 hand_0ascertainment,
+        24 hand_16,
+        25 i_0ascertainment,
+        26 i_1,
+        27 mountain_0ascertainment,
+        28 mountain_17,
+        29 nose_0ascertainment,
+        30 nose_18,
+        31 nose_19,
+        32 one_0ascertainment,
+        33 one_20,
+        34 one_21,
+        35 one_22,
+        36 path_0ascertainment,
+        37 path_23,
+        38 path_24,
+        39 skin_0ascertainment,
+        40 skin_25,
+        41 skin_26,
+        42 star_0ascertainment,
+        43 star_27,
+        44 stone_0ascertainment,
+        45 stone_28,
+        46 sun_0ascertainment,
+        47 sun_29,
+        48 sun_30,
+        49 thou_0ascertainment,
+        50 thou_43,
+        51 tongue_0ascertainment,
+        52 tongue_31,
+        53 tongue_32,
+        54 tongue_33,
+        55 tooth_0ascertainment,
+        56 tooth_34,
+        57 tree_0ascertainment,
+        58 tree_35,
+        59 tree_36,
+        60 tree_37,
+        61 two_0ascertainment,
+        62 two_38,
+        63 two_39,
+        64 two_40,
+        65 water_0ascertainment,
+        66 water_41,
+        67 we_0ascertainment,
+        68 we_42
+;
+
+MATRIX
+andai           0100101000010010101010010?01010010001001001010100?01000101000100010?
+nanubae_imameri 00101001000010101010010?01010010010001001010100101001001001000100101
+tapei_angarat   0100100010100010101010010?0100100010100010?010010?00010100010001010?
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-5;
+    charset breast = 6-9;
+    charset dog = 10-13;
+    charset ear = 14-15;
+    charset eye = 16-17;
+    charset fire = 18-19;
+    charset fish = 20-22;
+    charset hand = 23-24;
+    charset i = 25-26;
+    charset mountain = 27-28;
+    charset nose = 29-31;
+    charset one = 32-35;
+    charset path = 36-38;
+    charset skin = 39-41;
+    charset star = 42-43;
+    charset stone = 44-45;
+    charset sun = 46-48;
+    charset thou = 49-50;
+    charset tongue = 51-54;
+    charset tooth = 55-56;
+    charset tree = 57-60;
+    charset two = 61-64;
+    charset water = 65-66;
+    charset we = 67-68;
+END;
