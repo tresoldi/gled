@@ -1,4 +1,4 @@
-# A Global Lexical Dataset (GLED) with cognate annotation and phonological alignment
+# A Global Lexical Dataset (GLED) with cognate annotation and phonological alignments
 
 [![Release](https://img.shields.io/badge/Release-20220127-informational)](https://img.shields.io/badge/Release-20220127-informational)
 [![Lemmas](https://img.shields.io/badge/Lemmas-275340-success)](https://img.shields.io/badge/Lemmas-275340-success)
