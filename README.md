@@ -29,25 +29,25 @@ The 20220127 release comprises:
 
 ## Contents
 
-The dataset is offered as a single textual tabular file, supported by Frictionless metadata,
+The dataset is offered as a single textual tabular file, supported by
+[Frictionless](https://frictionlessdata.io/) metadata,
 to simplify its usage. It is released with the full pipeline for processing, allowing to
 replicate the data and generate future versions. A complementary version following the
-CLDF standard (Forkel et al. 2018) will be available on the next releases.
+[CLDF standard](https://cldf.clld.org/) (Forkel et al. 2018) will be available on the next releases.
 
-The main file released by this project is `gled.tsv` a single textual
-tabular file that contains the entirety of the data. This file is
-accompanied by a dataset description following the Frictionless
+The main file released by this project is `data/gled.{releasedate}.tsv`, a single textual
+tabular file. This tabular source is
+accompanied by a dataset schema description following the Frictionless
 standard in `gled.yaml`, but the latter is not necessary if you
 open the main file as a tabular source within a programming
-language or a spreadsheet program. A CLDF version of the dataset
-will be generated alongside the standalone tabular file
-starting from a future release.
+language or a spreadsheet program.
 
 Field names are all in uppercase strict ASCII, so that they can easily be
-reused and referred to in almost any programming language. The file is sorted
+reused and referred to in almost any programming languages. The file is sorted
 in ascending order following the value of fields `FAMILY`, `COGSET`, and `ID`.
-
-Includes Concepticon (List et al. 2021) and Glottolog (Hammarström et al. 2021)
+Concepts are linked to the Concepticon (List et al. 2021) reference catalog
+for comparative concepts, and language varieties are linked to 
+Glottolog (Hammarström et al. 2021)
 
 | Field name     | Type     | Description                                                                                                                                                                                                                                                  |
 |----------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -62,7 +62,11 @@ Includes Concepticon (List et al. 2021) and Glottolog (Hammarström et al. 2021)
 | ALIGNMENT      | String   | A sequence of BIPA graphemes and dashes (representing gaps) expressing the lemma's alignment in its cognate set. E.g.: `b ʒ ə - -`, `b ʒ ɐ qʼʷ ə`.                                                                                                           |
 | COGSET         | String   | A label identifying the cognate set to which the lemma belongs, also carrying information on linguistic family and concept. All in lowercase, with the cognate set index expressed by trailing digits. E.g.: `abkhaz_adyge_horn_47`, `abkhaz_adyge_knee_49`. |
 
-The entire software pipeline for downloading, processing, and
+The `nexus/` directory carries individual per-family NEXUS files encoding the
+presence or absence of each applicable cognate set. All the characters have an
+ascertainment correction.
+
+The software pipeline for downloading, processing, and
 releasing new versions of the dataset is available in the `pipeline/`
 directory. Please note that, due to processing time necessary for
 the core step of automatic cognate detection, the entire process
@@ -104,8 +108,6 @@ a single dataset that is suitable for testing hypotheses on language evolution. 
 to prototype studies and benchmark methods that can later apply to higher quality
 datasets, such as those provided by the Lexibank project (List et al. under review).
 
-This dataset was first...
-
 ## Methodology
 
 I took the ASJP dataset (Wichmann et al. 2020a) as available (Wichmann et al. 2020b) via the Lexibank
@@ -144,7 +146,7 @@ lemmas which don't appear to fit to their cognate set.
 
 ## Changelog
 
-Release 20220126:
+Release 20220127:
   - First public release.
 
 ## Community guidelines
@@ -158,16 +160,21 @@ Contributing guidelines, including a code of conduct, can be found in the
 
 ## License
 
-As the original ASJP data, 
+As the original ASJP data, this dataset is released under the terms of the
+[Creative Commons Attribution 4.0 International (CC BY 4.0)] license. You are
+free to share and adapt the data, as long as you give appropriate credit,
+provide a link to the license, indicate if changes were made, and don't
+establish additional restrictions on the derivative work.
 
 ## Author and citation
 
-The library is developed by Tiago Tresoldi (tiago.tresoldi@lingfil.uu.se). The library is developed in the context of
+The dataset is developed by Tiago Tresoldi (tiago.tresoldi@lingfil.uu.se).
+It is developed in the context of
 the [Cultural Evolution of Texts](https://github.com/evotext/) project, with funding from the
 [Riksbankens Jubileumsfond](https://www.rj.se/) (grant agreement ID:
 [MXM19-1087:1](https://www.rj.se/en/anslag/2019/cultural-evolution-of-texts/)).
 
-If you use `GLED`, please cite it as:
+If you use this dataset, please cite it as:
 
 > Tresoldi, T., (2022).
 
@@ -180,9 +187,10 @@ In BibTeX:
   title = {A Global Lexical Dataset (GLED) with cognate annotation and phonological alignment},
 }
 ```
+
 ## References
 
-Anderson C, Tresoldi T, Chacon TC, Fehn AM, Walworth M, Forkel R, and List JM. 2018. A Cross-Linguistic Database of Phonetic Transcription Systems. *Yearbook of the Poznań Linguistic Meeting 4.1*. 21-53. DOI: 10.2478/yplm-2018-0002 
+Anderson C, Tresoldi T, Chacon TC, Fehn AM, Walworth M, Forkel R, and List JM. 2018. A Cross-Linguistic Database of Phonetic Transcription Systems. *Yearbook of the Poznań Linguistic Meeting 4.1*. 21-53. doi: [https://doi.org/10.2478/yplm-2018-0002](10.2478/yplm-2018-0002) 
 
 Blasi DE, Wichmann S, Hammarström H, Stadler PF, Christiansen MH. 2016. "Sound–meaning association biases evidenced across thousands of languages." P. Natl. Acad. Sci. USA 113.39: 10818-10823.
 
