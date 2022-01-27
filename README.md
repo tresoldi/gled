@@ -22,6 +22,12 @@ directory. Please note that, due to processing time necessary for
 the core step of automatic cognate detection, the entire process
 can take days on a normal desktop or laptop computer.
 
+## Changelog
+
+Release 20220126:
+  - First public release.
+
+
 ## Community guidelines
 
 While the author can be contacted directly for support, it is recommended that
