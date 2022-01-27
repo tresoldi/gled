@@ -45,9 +45,9 @@ language or a spreadsheet program.
 Field names are all in uppercase strict ASCII, so that they can easily be
 reused and referred to in almost any programming languages. The file is sorted
 in ascending order following the value of fields `FAMILY`, `COGSET`, and `ID`.
-Concepts are linked to the Concepticon (List et al. 2021) reference catalog
+Concepts are linked to the [Concepticon](https://concepticon.clld.org/) (List et al. 2021) reference catalog
 for comparative concepts, and language varieties are linked to 
-Glottolog (Hammarström et al. 2021)
+[Glottolog](http://glottolog.org/) (Hammarström et al. 2021)
 
 | Field name     | Type     | Description                                                                                                                                                                                                                                                  |
 |----------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -192,36 +192,35 @@ In BibTeX:
 
 Anderson C, Tresoldi T, Chacon TC, Fehn AM, Walworth M, Forkel R, and List JM. 2018. A Cross-Linguistic Database of Phonetic Transcription Systems. *Yearbook of the Poznań Linguistic Meeting 4.1*. 21-53. doi: [10.2478/yplm-2018-0002](https://doi.org/10.2478/yplm-2018-0002)
 
-Blasi DE, Wichmann S, Hammarström H, Stadler PF, Christiansen MH. 2016. "Sound–meaning association biases evidenced across thousands of languages." P. Natl. Acad. Sci. USA 113.39: 10818-10823.
+Blasi DE, Wichmann S, Hammarström H, Stadler PF, and Christiansen MH. 2016. "Sound–meaning association biases evidenced across thousands of languages." *P Natl Acad Sci USA* 113.39: 10818-10823. doi: [10.1073/pnas.1605782113](https://doi.org/10.1073/pnas.1605782113)
 
-Brown CH, Holman EW, Wichmann S, and Velupillai V. 2008. Automated classification of the world's languages: a description of the method and preliminary results. *Language Typology and Universals*, vol. 61, no. 4, pp. 285-308. doi:[10.1524/stuf.2008.0026](https://doi.org/10.1524/stuf.2008.0026)
+Brown CH, Holman EW, Wichmann S, and Velupillai V. 2008. Automated classification of the world's languages: a description of the method and preliminary results. *Language Typology and Universals*, vol. 61, no. 4, pp. 285-308. doi: [10.1524/stuf.2008.0026](https://doi.org/10.1524/stuf.2008.0026)
 
-Csárdi G, and Nepusz T. 2006. The igraph software package for complex network research. *InterJournal Complex Systems*, 1695. [library doi: 10.5281/zenodo.3630268]
+Csárdi G, and Nepusz T. 2006. The igraph software package for complex network research. *InterJournal Complex Systems*, 1695. doi: [10.5281/zenodo.3630268](https://doi.org/10.5281/zenodo.3630268)
 
-Forkel R, List JM, Greenhill SJ, Rzymski C, Bank S, Cysouw M, Hammarström H, Haspelmath M, Kaiping GA, and Gray RD. 2018. Cross-Linguistic Data Formats, advancing data sharing and re-use in comparative linguistics. *Sci Data* 5, 180205. https://doi.org/10.1038/sdata.2018.205
+Forkel R, List JM, Greenhill SJ, Rzymski C, Bank S, Cysouw M, Hammarström H, Haspelmath M, Kaiping GA, and Gray RD. 2018. Cross-Linguistic Data Formats, advancing data sharing and re-use in comparative linguistics. *Sci Data* 5, 180205. doi: [10.1038/sdata.2018.205](https://doi.org/10.1038/sdata.2018.205)
 
-Hammarström H, Forkel R, Haspelmath M,Bank S. 2021. *Glottolog 4.5*. Leipzig: Max Planck Institute for Evolutionary Anthropology. https://doi.org/10.5281/zenodo.5772642 (Available online at http://glottolog.org)
+Hammarström H, Forkel R, Haspelmath M, and Bank S. 2021. *Glottolog 4.5*. Leipzig: Max Planck Institute for Evolutionary Anthropology. doi: [10.5281/zenodo.5772642](https://doi.org/10.5281/zenodo.5772642) 
 
-Jäger G. 2013. Phylogenetic Inference from Word Lists Using Weighted Alignment with Empirically Determined Weights. *Language Dynamics and Change*, 3(2), 245-291. doi: https://doi.org/10.1163/22105832-13030204
+Jäger G. 2013. Phylogenetic Inference from Word Lists Using Weighted Alignment with Empirically Determined Weights. *Language Dynamics and Change*, 3(2), 245-291. doi: [10.1163/22105832-13030204](https://doi.org/10.1163/22105832-13030204)
 
-Jäger G. 2018. Global-scale phylogenetic linguistic inference from lexical resources. *Scientific Data* 5, 180189. doi.org/10.1038/sdata.2018.189.
+Jäger G. 2018. Global-scale phylogenetic linguistic inference from lexical resources. *Scientific Data* 5, 180189. doi: [10.1038/sdata.2018.189](https://doi.org/10.1038/sdata.2018.189)
 
 List JM. 2012. "LexStat: Automatic detection of cognates in multilingual wordlists." *Proceedings of the EACL 2012 Joint Workshop of LINGVIS & UNCLH*. p. 117-125.
 
-List JM, and Forkel R 2021. *LingPy. A Python library for historical linguistics*. Version 2.6.9. doi: https://zenodo.org/badge/latestdoi/5137/lingpy/lingpy
+List JM, and Forkel R. 2021. *LingPy. A Python library for historical linguistics*. Version 2.6.9. doi: [10.5281/zenodo.597082](https://doi.org/10.5281/zenodo.597082)
 
-List JM, Rzymski C, Greenhill S,Schweikhard N,Pianykh K, Tjuka A, Hundt C, Forkel R (eds.) 2021. CLLD Concepticon 2.5.0 [Data set]. *Zenodo*. https://doi.org/10.5281/zenodo.4911605 
+List JM, Rzymski C, Greenhill S,Schweikhard N,Pianykh K, Tjuka A, Hundt C, and Forkel R (eds.). 2021. CLLD Concepticon 2.5.0 [Data set]. *Zenodo*. doi: [10.5281/zenodo.4911605](https://doi.org/10.5281/zenodo.4911605) 
 
-List JM, Forkel R, Greenhill SJ, Rzymski C, Englisch J, Gray RD (under review). *Lexibank: A public repository of
-standardized wordlists with computed phonological and lexical features*. [pre-print: https://doi.org/10.21203/rs.3.rs-870835/v1]
+List JM, Forkel R, Greenhill SJ, Rzymski C, Englisch J, and Gray RD. Forthcoming. *Lexibank: A public repository of standardized wordlists with computed phonological and lexical features*. doi: [10.21203/rs.3.rs-870835/v1](https://doi.org/10.21203/rs.3.rs-870835/v1)
 
-Moran S, and Cysouw M. 2018. *The Unicode cookbook for linguists: Managing writing systems using orthography profiles*. Translation and Multilingual Natural Language Processing 10. Berlin: Language Science Press. doi: 10.5281/zenodo.1296780 
+Moran S, and Cysouw M. 2018. *The Unicode cookbook for linguists: Managing writing systems using orthography profiles*. Translation and Multilingual Natural Language Processing 10. Berlin: Language Science Press. doi: [10.5281/zenodo.1296780](https://doi.org/10.5281/zenodo.1296780)
 
-Wichmann S, Rama T, and Holman E. 2011. "Phonological diversity, word length, and population sizes across languages: The ASJP evidence". *Linguistic Typology*, vol. 15, no. 2, pp. 177-197. https://doi.org/10.1515/lity.2011.013
+Wichmann S, Rama T, and Holman E. 2011. "Phonological diversity, word length, and population sizes across languages: The ASJP evidence". *Linguistic Typology*, vol. 15, no. 2, pp. 177-197. doi: [10.1515/lity.2011.013](https://doi.org/10.1515/lity.2011.013)
 
-Wichmann S, Holman EW, and Brown CH (eds.). 2020. *The ASJP Database*. Version 19. Available at: https://asjp.clld.org/
+Wichmann S, Holman EW, and Brown CH (eds.). 2020. *The ASJP Database*. Version 19. Available at: [https://asjp.clld.org/](https://asjp.clld.org/)
 
-Wichmann S, Holman EW, Brown CH, Forkel R, Tresoldi T. 2020. CLDF dataset derived from Wichmann et al.'s "ASJP Database" v19 from 2020. (v19.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.3843469
+Wichmann S, Holman EW, Brown CH, Forkel R, and Tresoldi T. 2020. CLDF dataset derived from Wichmann et al.'s "ASJP Database" v19 from 2020. (v19.1) [Data set]. *Zenodo*. doi: [10.5281/zenodo.3843469](https://doi.org/10.5281/zenodo.3843469)
 
-Wilkinson M, Dumontier M, Aalbersberg I et al. 2016. The FAIR Guiding Principles for scientific data management and stewardship. *Sci Data* 3, 160018. https://doi.org/10.1038/sdata.2016.18
+Wilkinson M, Dumontier M, Aalbersberg I et al. 2016. The FAIR Guiding Principles for scientific data management and stewardship. *Sci Data* 3, 160018. doi: [10.1038/sdata.2016.18](https://doi.org/10.1038/sdata.2016.18)
 
