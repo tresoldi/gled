@@ -1,6 +1,6 @@
 # A Global Lexical Dataset (GLED) with cognate annotation and phonological alignment
 
-[![Lemmas](https://img.shields.io/badge/Lemmas-{275340}-success](https://img.shields.io/badge/Lemmas-{275340}-success)
+[![Lemmas](https://img.shields.io/badge/Lemmas-275340-success](https://img.shields.io/badge/Lemmas-275340-success)
 
 This repository comprises a dataset developed from a subset of ASJP, in which
 all lemmas are presented in a broad phonological transcription, automatically
