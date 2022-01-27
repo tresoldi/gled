@@ -175,8 +175,8 @@ establish additional restrictions on the derivative work.
 
 The dataset is developed by Tiago Tresoldi (tiago.tresoldi@lingfil.uu.se).
 During its development, the author received funding from
-[Cultural Evolution of Texts](https://github.com/evotext/) project (
-[Riksbankens Jubileumsfond](https://www.rj.se/, grant agreement ID:
+[Cultural Evolution of Texts](https://github.com/evotext/)
+project ([Riksbankens Jubileumsfond](https://www.rj.se/), grant agreement ID:
 [MXM19-1087:1](https://www.rj.se/en/anslag/2019/cultural-evolution-of-texts/)).
 
 If you use this dataset, please cite it as:
