@@ -2,7 +2,9 @@
 
 This repository comprises a dataset developed from a subset of ASJP, in which
 all lemmas are presented in a broad phonological transcription, automatically
-annotated for cognacy, and phonologically aligned. It should facilitate prototyping
+annotated for cognacy, and phonologically aligned. Per-family NEXUS files
+with binary annotation of presence/absence of cognate sets are also
+available. The dataset should facilitate prototyping
 studies and methods in quantitative historical linguistics.
 
 ## Statistics
