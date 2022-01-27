@@ -205,17 +205,26 @@ def main():
 
     print("** BADGES\n")
     print(
-        f"[![Release](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-success)](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-success)")
+        f"[![Release](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-informational)](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-informational)"
+    )
     print(
-        f"[![Lemmas](https://img.shields.io/badge/Lemmas-{entries}-informational)](https://img.shields.io/badge/Lemmas-{entries}-informational)")
+        f"[![Lemmas](https://img.shields.io/badge/Lemmas-{entries}-success)](https://img.shields.io/badge/Lemmas-{entries}-success)"
+    )
     print(
-        f"[![Languages](https://img.shields.io/badge/Languages-{doculects}-success)](https://img.shields.io/badge/Languages-{doculects}-success)")
+        f"[![Languages](https://img.shields.io/badge/Languages-{doculects}-success)](https://img.shields.io/badge/Languages-{doculects}-success)"
+    )
     print(
-        f"[![Languages](https://img.shields.io/badge/Families-{families}-success)](https://img.shields.io/badge/Families-{families}-success)")
+        f"[![Languages](https://img.shields.io/badge/Families-{families}-success)](https://img.shields.io/badge/Families-{families}-success)"
+    )
     print(
-        f"[![Cognatesets](https://img.shields.io/badge/Cognatesets-{cogsets}-success)](https://img.shields.io/badge/Cognatesets-{cogsets}-success)")
+        f"[![Cognatesets](https://img.shields.io/badge/Cognatesets-{cogsets}-success)](https://img.shields.io/badge/Cognatesets-{cogsets}-success)"
+    )
     print(
-        f"[![Tokens](https://img.shields.io/badge/Tokens-{tokens}-success)](https://img.shields.io/badge/Tokens-{tokens}-success)")
+        f"[![Tokens](https://img.shields.io/badge/Tokens-{tokens}-success)](https://img.shields.io/badge/Tokens-{tokens}-success)"
+    )
+    print(
+        f"[![CC-BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)"
+    )
     print()
 
     print("## Statistics\n")

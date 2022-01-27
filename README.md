@@ -1,11 +1,12 @@
 # A Global Lexical Dataset (GLED) with cognate annotation and phonological alignment
 
-[![Release](https://img.shields.io/badge/Release-20220127-success)](https://img.shields.io/badge/Release-20220127-success)
-[![Lemmas](https://img.shields.io/badge/Lemmas-275340-informational)](https://img.shields.io/badge/Lemmas-275340-informational)
+[![Release](https://img.shields.io/badge/Release-20220127-informational)](https://img.shields.io/badge/Release-20220127-informational)
+[![Lemmas](https://img.shields.io/badge/Lemmas-275340-success)](https://img.shields.io/badge/Lemmas-275340-success)
 [![Languages](https://img.shields.io/badge/Languages-6447-success)](https://img.shields.io/badge/Languages-6447-success)
 [![Languages](https://img.shields.io/badge/Families-238-success)](https://img.shields.io/badge/Families-238-success)
 [![Cognatesets](https://img.shields.io/badge/Cognatesets-91608-success)](https://img.shields.io/badge/Cognatesets-91608-success)
 [![Tokens](https://img.shields.io/badge/Tokens-2056987-success)](https://img.shields.io/badge/Tokens-2056987-success)
+[![CC-BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
 
 This repository comprises a dataset developed from a subset of ASJP, in which
 all lemmas are presented in a broad phonological transcription, automatically
