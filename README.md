@@ -194,7 +194,7 @@ Anderson C, Tresoldi T, Chacon TC, Fehn AM, Walworth M, Forkel R, and List JM. 2
 
 Blasi DE, Wichmann S, Hammarström H, Stadler PF, Christiansen MH. 2016. "Sound–meaning association biases evidenced across thousands of languages." P. Natl. Acad. Sci. USA 113.39: 10818-10823.
 
-Brown CH, Holman EW, Wichmann S, and Velupillai V. 2008. Automated classification of the world's languages: a description of the method and preliminary results. *Language Typology and Universals*, vol. 61, no. 4, pp. 285-308. https://doi.org/10.1524/stuf.2008.0026
+Brown CH, Holman EW, Wichmann S, and Velupillai V. 2008. Automated classification of the world's languages: a description of the method and preliminary results. *Language Typology and Universals*, vol. 61, no. 4, pp. 285-308. doi:[10.1524/stuf.2008.0026](https://doi.org/10.1524/stuf.2008.0026)
 
 Csárdi G, and Nepusz T. 2006. The igraph software package for complex network research. *InterJournal Complex Systems*, 1695. [library doi: 10.5281/zenodo.3630268]
 
