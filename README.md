@@ -27,20 +27,21 @@ Field names are all in uppercase strict ASCII, so that they can easily be
 reused and referred to in almost any programming language. The file is sorted
 in the following order:
 
-| Field name        | Type     | Description                                                                                                                                                                                            |
-|-------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ID                | String   | A unique identifier for the lemma, as used in  ASJP.                                                                                                                                                   |
-| DOCULECT          | String   | The name of the doculect (``language''), uppercase.                                                                                                                                                    |
-| DOCULECT_DATE     | Integer  | The year associated with the doculect; empty fields should be assumed as living languages.                                                                                                             |
-| GLOTTOCODE        | String   | The languoid associated to the doculect in the Glottolog project.                                                                                                                                      |
-| GLOTTOLOG_NAME    | String   | The language name associated with the `GLOTTOCODE` languoid in the Glottolog project.                                                                                                                  |
-| FAMILY            | String   | The language family for the `DOCULECT`, as specified in ASJP (note that Glottolog's classification might disagree).                                                                                    |
-| CONCEPTICON_ID    | Integer  | The ID for the lemma's concept as specified in the Concepticon project.                                                                                                                                |
-| CONCEPTICON_GLOSS | String   | The normalized gloss for the lemma's concept as specified in the Concepticon project.                                                                                                                  |
-| FORM              | String   | The lemma's form as specified in the ASJP source using ASJPcode.                                                                                                                                       |
-| TOKENS            | String   | A sequence of normalized CLTS BIPA graphemes (i.e., phonemes), separated by spaces.                                                                                                                    |
-| ALIGNMENT         | String   | A sequence of BIPA graphemes and dashes (representing gaps) expressing the lemma's alignment in its cognate set.                                                                                       |
-| COGSET            | String   | A label identifying the cognate set to which the lemma belongs, also carrying information on linguistic family and concept. All in lowercase, with the cognate set index expressed by trailing digits. |
+Includes Concepticon (List et al. 2021) and Glottolog (Hammarström et al. 2021)
+
+| Field name     | Type     | Description                                                                                                                                                                                            |
+|----------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ID             | String   | A unique identifier for the lemma, as used in  ASJP.                                                                                                                                                   |
+| DOCULECT       | String   | The name of the doculect (``language''), uppercase.                                                                                                                                                    |
+| DOCULECT_DATE  | Integer  | The year associated with the doculect; empty fields should be assumed as living languages.                                                                                                             |
+| GLOTTOCODE     | String   | The languoid associated to the doculect in the Glottolog project.                                                                                                                                      |
+| GLOTTOLOG_NAME | String   | The language name associated with the `GLOTTOCODE` languoid in the Glottolog project.                                                                                                                  |
+| FAMILY         | String   | The language family for the `DOCULECT`, as specified in ASJP (note that Glottolog's classification might disagree).                                                                                    |
+| CONCEPT        | String   | The normalized gloss for the lemma's concept, as specified in the Concepticon project.                                                                                                                 |
+| FORM           | String   | The lemma's form as specified in the ASJP source using ASJPcode.                                                                                                                                       |
+| TOKENS         | String   | A sequence of normalized CLTS BIPA graphemes (i.e., phonemes), separated by spaces.                                                                                                                    |
+| ALIGNMENT      | String   | A sequence of BIPA graphemes and dashes (representing gaps) expressing the lemma's alignment in its cognate set.                                                                                       |
+| COGSET         | String   | A label identifying the cognate set to which the lemma belongs, also carrying information on linguistic family and concept. All in lowercase, with the cognate set index expressed by trailing digits. |
 
 The entire software pipeline for downloading, processing, and
 releasing new versions of the dataset is available in the `pipeline/`
@@ -172,6 +173,8 @@ Csárdi G, and Nepusz T. 2006. The igraph software package for complex network r
 
 Forkel R, List JM, Greenhill SJ, Rzymski C, Bank S, Cysouw M, Hammarström H, Haspelmath M, Kaiping GA, and Gray RD. 2018. Cross-Linguistic Data Formats, advancing data sharing and re-use in comparative linguistics. *Sci Data* 5, 180205. https://doi.org/10.1038/sdata.2018.205
 
+Hammarström H, Forkel R, Haspelmath M,Bank S. 2021. *Glottolog 4.5*. Leipzig: Max Planck Institute for Evolutionary Anthropology. https://doi.org/10.5281/zenodo.5772642 (Available online at http://glottolog.org)
+
 Jäger G. 2013. Phylogenetic Inference from Word Lists Using Weighted Alignment with Empirically Determined Weights. *Language Dynamics and Change*, 3(2), 245-291. doi: https://doi.org/10.1163/22105832-13030204
 
 Jäger G. 2018. Global-scale phylogenetic linguistic inference from lexical resources. *Scientific Data* 5, 180189. doi.org/10.1038/sdata.2018.189.
@@ -179,6 +182,8 @@ Jäger G. 2018. Global-scale phylogenetic linguistic inference from lexical reso
 List JM. 2012. "LexStat: Automatic detection of cognates in multilingual wordlists." *Proceedings of the EACL 2012 Joint Workshop of LINGVIS & UNCLH*. p. 117-125.
 
 List JM, and Forkel R 2021. *LingPy. A Python library for historical linguistics*. Version 2.6.9. doi: https://zenodo.org/badge/latestdoi/5137/lingpy/lingpy
+
+List JM, Rzymski C, Greenhill S,Schweikhard N,Pianykh K, Tjuka A, Hundt C, Forkel R (eds.) 2021. CLLD Concepticon 2.5.0 [Data set]. *Zenodo*. https://doi.org/10.5281/zenodo.4911605 
 
 List JM, Forkel R, Greenhill SJ, Rzymski C, Englisch J, Gray RD (under review). *Lexibank: A public repository of
 standardized wordlists with computed phonological and lexical features*. [pre-print: https://doi.org/10.21203/rs.3.rs-870835/v1]
@@ -192,3 +197,4 @@ Wichmann S, Holman EW, and Brown CH (eds.). 2020. *The ASJP Database*. Version 1
 Wichmann S, Holman EW, Brown CH, Forkel R, Tresoldi T. 2020. CLDF dataset derived from Wichmann et al.'s "ASJP Database" v19 from 2020. (v19.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.3843469
 
 Wilkinson M, Dumontier M, Aalbersberg I et al. 2016. The FAIR Guiding Principles for scientific data management and stewardship. *Sci Data* 3, 160018. https://doi.org/10.1038/sdata.2016.18
+
