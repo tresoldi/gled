@@ -190,7 +190,7 @@ In BibTeX:
 
 ## References
 
-Anderson C, Tresoldi T, Chacon TC, Fehn AM, Walworth M, Forkel R, and List JM. 2018. A Cross-Linguistic Database of Phonetic Transcription Systems. *Yearbook of the Poznań Linguistic Meeting 4.1*. 21-53. doi: [https://doi.org/10.2478/yplm-2018-0002](10.2478/yplm-2018-0002) 
+Anderson C, Tresoldi T, Chacon TC, Fehn AM, Walworth M, Forkel R, and List JM. 2018. A Cross-Linguistic Database of Phonetic Transcription Systems. *Yearbook of the Poznań Linguistic Meeting 4.1*. 21-53. doi: [10.2478/yplm-2018-0002](https://doi.org/10.2478/yplm-2018-0002)
 
 Blasi DE, Wichmann S, Hammarström H, Stadler PF, Christiansen MH. 2016. "Sound–meaning association biases evidenced across thousands of languages." P. Natl. Acad. Sci. USA 113.39: 10818-10823.
 
