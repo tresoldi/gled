@@ -6,6 +6,7 @@
 [![Languages](https://img.shields.io/badge/Families-238-success)](https://img.shields.io/badge/Families-238-success)
 [![Cognatesets](https://img.shields.io/badge/Cognatesets-91608-success)](https://img.shields.io/badge/Cognatesets-91608-success)
 [![Tokens](https://img.shields.io/badge/Tokens-2056987-success)](https://img.shields.io/badge/Tokens-2056987-success)
+
 [![CC-BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
 
 This repository comprises a dataset developed from a subset of ASJP, in which
