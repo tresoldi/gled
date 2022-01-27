@@ -109,7 +109,7 @@ remove spurious cognate sets and to obtain a more feasible volume of data-points
 a single dataset that is suitable for testing hypotheses on language evolution. It allows
 to prototype studies and benchmark methods that can later apply to higher quality
 datasets, such as those provided by the Lexibank project (List et al. under review).
-Remember to consider all the limitations of this data before making any claims
+Remember to consider all the limitations of these data before making any claims
 in terms of language evolution or relationship.
 
 ## Methodology
