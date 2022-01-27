@@ -1,0 +1,36 @@
+# --------
+# metadata: gled.20220127.tsv
+# --------
+
+dialect:
+  delimiter: "\t"
+encoding: utf-8
+format: tsv
+hashing: md5
+name: gled.20220127
+path: gled.20220127.tsv
+profile: tabular-data-resource
+schema:
+  fields:
+    - name: ID
+      type: string
+    - name: DOCULECT
+      type: string
+    - name: DOCULECT_DATE
+      type: any
+    - name: GLOTTOCODE
+      type: string
+    - name: GLOTTOLOG_NAME
+      type: string
+    - name: FAMILY
+      type: string
+    - name: CONCEPT
+      type: string
+    - name: IPA
+      type: string
+    - name: ALIGNMENT
+      type: string
+    - name: COGSET
+      type: string
+scheme: file
+
