@@ -180,15 +180,17 @@ During its development, the author received funding from
 
 If you use this dataset, please cite it as:
 
-> Tresoldi, T., (2022).
+> Tresoldi T. 2022. A Global Lexical Dataset (GLED) with cognate annotation and phonological alignments.
+> [Data set]. Zenodo.
 
 In BibTeX:
 
 ```
-@article{Tresoldi2022gled,
-  year = {2022},
-  author = {Tiago Tresoldi},
-  title = {A Global Lexical Dataset (GLED) with cognate annotation and phonological alignment},
+@misc{Tresoldi2022gled,
+  year      = {2022},
+  author    = {Tiago Tresoldi},
+  title     = {A Global Lexical Dataset (GLED) with cognate annotation and phonological alignments},
+  publisher = {Zenodo}
 }
 ```
 
