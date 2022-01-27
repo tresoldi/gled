@@ -8,6 +8,7 @@
 [![Tokens](https://img.shields.io/badge/Tokens-2056987-success)](https://img.shields.io/badge/Tokens-2056987-success)
 
 [![CC-BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
+[![DOI](https://zenodo.org/badge/452418748.svg)](https://zenodo.org/badge/latestdoi/452418748)
 
 This repository comprises a dataset developed from a subset of ASJP, in which
 all lemmas are presented in a broad phonological transcription, automatically
