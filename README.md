@@ -5,7 +5,15 @@ all lemmas are presented in a broad phonological transcription, automatically
 annotated for cognacy, and phonologically aligned. It should facilitate prototyping
 studies and methods in quantitative historical linguistics.
 
-(STATISTICS)
+## Statistics
+
+The 20220127 release comprises:
+
+  - Entries: 275340
+  - Doculects: 6447
+  - Cognate sets: 91608
+  - Tokens: 2056987
+  - Mean cognate set size: 3.01
 
 ## Contents
 
@@ -25,7 +33,7 @@ starting from a future release.
 
 Field names are all in uppercase strict ASCII, so that they can easily be
 reused and referred to in almost any programming language. The file is sorted
-in the following order:
+in ascending order following the value of fields `FAMILY`, `COGSET`, and `ID`.
 
 Includes Concepticon (List et al. 2021) and Glottolog (Hammarström et al. 2021)
 
@@ -38,8 +46,7 @@ Includes Concepticon (List et al. 2021) and Glottolog (Hammarström et al. 2021)
 | GLOTTOLOG_NAME | String   | The language name associated with the `GLOTTOCODE` languoid in the Glottolog project.                                                                                                                  |
 | FAMILY         | String   | The language family for the `DOCULECT`, as specified in ASJP (note that Glottolog's classification might disagree).                                                                                    |
 | CONCEPT        | String   | The normalized gloss for the lemma's concept, as specified in the Concepticon project.                                                                                                                 |
-| FORM           | String   | The lemma's form as specified in the ASJP source using ASJPcode.                                                                                                                                       |
-| TOKENS         | String   | A sequence of normalized CLTS BIPA graphemes (i.e., phonemes), separated by spaces.                                                                                                                    |
+| IPA            | String   | A sequence of normalized CLTS BIPA graphemes (i.e., phonemes), separated by spaces.                                                                                                                    |
 | ALIGNMENT      | String   | A sequence of BIPA graphemes and dashes (representing gaps) expressing the lemma's alignment in its cognate set.                                                                                       |
 | COGSET         | String   | A label identifying the cognate set to which the lemma belongs, also carrying information on linguistic family and concept. All in lowercase, with the cognate set index expressed by trailing digits. |
 

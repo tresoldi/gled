@@ -23,8 +23,8 @@ preprocessed data is distributed along with this repository.
 $ python 01_prepare_data.py
 ```
 
-The second and most computationally intensive script (probably taking
-several hours to finish) will perform the
+The second and most computationally intensive script (potentially taking
+days to finish) will perform the
 cognate detection using the extended LexStat method here presented, taking
 the preprocessed data from `data/` and writing the results in the
 `cluster/` directory. As mentioned above, this can executed with only
@@ -41,9 +41,9 @@ simple long-table tabular files in `output/`.
 $ python 03_aggregate.py
 ```
 
-Datafiles for phylogenetic analyses can be generated with the appropriate
-script. This script is going to read data from `output/`.
+Datafiles for release, including statistics, can be generated with
+the last script:
 
 ```bash
-$ python 04_prepare_phylo.py
+$ python 04_prepare_release.py
 ```
