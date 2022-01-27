@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Script for aggragating data from clustering, including alignments.
+Script for aggregating data from clustering, including alignments.
 """
 
 # TODO: add date for latin? and other languages?
@@ -152,7 +152,7 @@ def main():
 
     # Prepare ASJP, reading date of extinction of languages
     with open(
-            BASE_PATH / "raw" / "asjp" / "languages.csv", encoding="utf-8"
+        BASE_PATH / "raw" / "asjp" / "languages.csv", encoding="utf-8"
     ) as handler:
         asjp_lang_date = {
             row["Name"]: row["year_of_extinction"]
