@@ -192,6 +192,7 @@ def main():
     # Collect and show statistics
     entries = len(release_data)
     doculects = len(set([e["DOCULECT"] for e in release_data]))
+    families = len(set([e["FAMILY"] for e in release_data]))
     cogsets = len(set([e["COGSET"] for e in release_data]))
     tokens = sum([len(e["IPA"]) for e in release_data])
 
@@ -201,13 +202,31 @@ def main():
 
     # Show statistics as a last step
     print("*** REMEMBER TO UPDATE STATISTICS!!! ***\n")
+
+    print("** BADGES\n")
+    print(
+        f"[![Release](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-success)](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-success)")
+    print(
+        f"[![Lemmas](https://img.shields.io/badge/Lemmas-{entries}-informational)](https://img.shields.io/badge/Lemmas-{entries}-informational)")
+    print(
+        f"[![Languages](https://img.shields.io/badge/Languages-{doculects}-success)](https://img.shields.io/badge/Languages-{doculects}-success)")
+    print(
+        f"[![Languages](https://img.shields.io/badge/Families-{families}-success)](https://img.shields.io/badge/Families-{families}-success)")
+    print(
+        f"[![Cognatesets](https://img.shields.io/badge/Cognatesets-{cogsets}-success)](https://img.shields.io/badge/Cognatesets-{cogsets}-success)")
+    print(
+        f"[![Tokens](https://img.shields.io/badge/Tokens-{tokens}-success)](https://img.shields.io/badge/Tokens-{tokens}-success)")
+    print()
+
     print("## Statistics\n")
     print(f"The {today.strftime('%Y%m%d')} release comprises:\n")
     print("  - Entries: %i" % entries)
     print("  - Doculects: %i" % doculects)
+    print("  - Families: %i" % families)
     print("  - Cognate sets: %i" % cogsets)
     print("  - Tokens: %i" % tokens)
     print("  - Mean cognate set size: %.2f" % (entries / cogsets))
+    print()
 
 
 if __name__ == "__main__":

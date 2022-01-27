@@ -1,7 +1,11 @@
 # A Global Lexical Dataset (GLED) with cognate annotation and phonological alignment
 
-[![Lemmas](https://img.shields.io/badge/Lemmas-275340-success)](https://img.shields.io/badge/Lemmas-275340-success)
-[![PyPI](https://img.shields.io/pypi/v/ngesh.svg)](https://pypi.org/project/ngesh)
+[![Release](https://img.shields.io/badge/Release-20220127-success)](https://img.shields.io/badge/Release-20220127-success)
+[![Lemmas](https://img.shields.io/badge/Lemmas-275340-informational)](https://img.shields.io/badge/Lemmas-275340-informational)
+[![Languages](https://img.shields.io/badge/Languages-6447-success)](https://img.shields.io/badge/Languages-6447-success)
+[![Languages](https://img.shields.io/badge/Families-238-success)](https://img.shields.io/badge/Families-238-success)
+[![Cognatesets](https://img.shields.io/badge/Cognatesets-91608-success)](https://img.shields.io/badge/Cognatesets-91608-success)
+[![Tokens](https://img.shields.io/badge/Tokens-2056987-success)](https://img.shields.io/badge/Tokens-2056987-success)
 
 This repository comprises a dataset developed from a subset of ASJP, in which
 all lemmas are presented in a broad phonological transcription, automatically
@@ -16,6 +20,7 @@ The 20220127 release comprises:
 
   - Entries: 275340
   - Doculects: 6447
+  - Families: 238
   - Cognate sets: 91608
   - Tokens: 2056987
   - Mean cognate set size: 3.01
