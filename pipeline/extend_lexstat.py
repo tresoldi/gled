@@ -10,6 +10,9 @@ import random
 from lingpy import LexStat
 import igraph
 
+# Whether to use the extended lexstat method or grab data from other sources
+USE_ELEXSTAT = False
+
 
 def write_wordlist(wordlist):
     """
@@ -193,71 +196,83 @@ def elexstat(
     # we can just call lexstat in the normal way; otherwise,
     # we need to proceed with sub-detection
     if num_rows > limit:
-        # Grab doculects for random selection and compute the
-        # mean number of entries per doculect and the subset
-        # size
-        entries = defaultdict(int)
-        for row in wordlist:
-            entries[row[doculect]] += 1
+        if USE_ELEXSTAT:
+            # Grab doculects for random selection and compute the
+            # mean number of entries per doculect and the subset
+            # size
+            entries = defaultdict(int)
+            for row in wordlist:
+                entries[row[doculect]] += 1
 
-        # TODO: deal with correction factor
-        doculects = sorted(entries.keys())
-        mean = sum(entries.values()) / len(doculects)
-        subset_size = int(limit / (mean * tau))
+            # TODO: deal with correction factor
+            doculects = sorted(entries.keys())
+            mean = sum(entries.values()) / len(doculects)
+            subset_size = int(limit / (mean * tau))
 
-        # Compute the number of subanalyses from an
-        # estimation of the probability of each pairwise
-        # being observed at least once
-        obs = (subset_size / len(doculects)) ** 2
-        iters = int(confidence / obs) + 1
-        partials = []
-        observed = set()
-        for filenum in range(iters + 1):
-            # First obtain doculects that are missing (we use a random
-            # drawing here as well)
-            missing = [doculect for doculect in doculects if doculect not in observed]
-            if not missing:
-                # Get sample of doculects and filter the data
-                sample = random.sample(doculects, subset_size)
-            else:
-                if len(missing) >= subset_size:
-                    sample = random.sample(missing, subset_size)
+            # Compute the number of subanalyses from an
+            # estimation of the probability of each pairwise
+            # being observed at least once
+            obs = (subset_size / len(doculects)) ** 2
+            iters = int(confidence / obs) + 1
+            partials = []
+            observed = set()
+            for filenum in range(iters + 1):
+                # First obtain doculects that are missing (we use a random
+                # drawing here as well)
+                missing = [
+                    doculect for doculect in doculects if doculect not in observed
+                ]
+                if not missing:
+                    # Get sample of doculects and filter the data
+                    sample = random.sample(doculects, subset_size)
                 else:
-                    sample = missing + random.sample(
-                        [doculect for doculect in doculects if doculect not in missing],
-                        subset_size - len(missing),
-                    )
+                    if len(missing) >= subset_size:
+                        sample = random.sample(missing, subset_size)
+                    else:
+                        sample = missing + random.sample(
+                            [
+                                doculect
+                                for doculect in doculects
+                                if doculect not in missing
+                            ],
+                            subset_size - len(missing),
+                        )
 
-            observed = observed.union(sample)
+                observed = observed.union(sample)
 
-            fdata = [row for row in wordlist if row[doculect] in sample]
+                fdata = [row for row in wordlist if row[doculect] in sample]
 
-            # Write temporary file (as unfortunately LexStat does
-            # not accept in-memory wordlists as the `Wordlist`
-            # class)
-            if temp_dir:
-                temp_file = str(Path(temp_dir) / f"elxs.{filenum}")
-            else:
-                temp_file = str(Path("/tmp") / f"elxs.{filenum}")
+                # Write temporary file (as unfortunately LexStat does
+                # not accept in-memory wordlists as the `Wordlist`
+                # class)
+                if temp_dir:
+                    temp_file = str(Path(temp_dir) / f"elxs.{filenum}")
+                else:
+                    temp_file = str(Path("/tmp") / f"elxs.{filenum}")
 
-            partials.append(f"{temp_file}.tsv")
-            elexstat(
-                fdata,
-                temp_file,
-                cogid,
-                doculect,
-                runs,
-                threshold,
-                gop,
-                cluster,
-                mode,
-                method,
+                partials.append(f"{temp_file}.tsv")
+                elexstat(
+                    fdata,
+                    temp_file,
+                    cogid,
+                    doculect,
+                    runs,
+                    threshold,
+                    gop,
+                    cluster,
+                    mode,
+                    method,
+                )
+
+            # Join results
+            join_partials(partials, f"{output}.tsv")
+            print(
+                f"EXTEND_LEXSTAT: Wrote results using partial method to `{output}.tsv`"
             )
-
-        # Join results
-        join_partials(partials, f"{output}.tsv")
-        print(f"EXTEND_LEXSTAT: Wrote results using partial method to `{output}.tsv`")
-
+        else:
+            # large dataset, dont use elexstat
+            # currently grabbing data from Jäger's worldtrees
+            print(f"SKIPPING {output}...")
     else:
         lex = LexStat(wordlist_file)
         lex.get_scorer(runs=runs)
