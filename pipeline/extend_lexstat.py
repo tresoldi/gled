@@ -10,6 +10,8 @@ import random
 from lingpy import LexStat
 import igraph
 
+from build_lang_map import BASE_PATH
+
 # Whether to use the extended lexstat method or grab data from other sources
 USE_ELEXSTAT = False
 
@@ -271,7 +273,13 @@ def elexstat(
             )
         else:
             # large dataset, dont use elexstat
-            # currently grabbing data from Jäger's worldtrees
+
+            # currently reusing data from Jäger's worldtrees
+            with open(BASE_PATH / "etc" / "asjp17Clustered.csv", encoding="utf-8") as h:
+                jaeger = list(csv.DictReader(h))
+
+            # print(jaeger[:100])
+            # print(wordlist[:100])
             print(f"SKIPPING {output}...")
     else:
         lex = LexStat(wordlist_file)
