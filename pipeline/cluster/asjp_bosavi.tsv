@@ -1,0 +1,404 @@
+ID	ASJP_ID	DOCULECT	LANGUAGE_NAME	GLOTTOCODE	GLOTTOLOG_NAME	LANGUAGE_LINEAGE_0	LANGUAGE_LINEAGE_1	LANGUAGE_LINEAGE_2	LANGUAGE_ISOLATE	PARAMETER_ID	CONCEPT	CONCEPTICON_ID	CONCEPTICON_GLOSS	VALUE	FORM	TOKENS	LOAN	SONARS	PROSTRINGS	CLASSES	LANGID	NUMBERS	WEIGHTS	IPA	DUPLICATES	COGID
+1	AIMELE-1-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	1	*I	1209	I	ne	ne	n e	false	4 7	AX	NE	1	1.N.C 1.E.V	2.0 1.5	ne	0	1
+2	KASUA-1-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	1	*I	1209	I	newa	newa	n e w ɐ	false	4 7 6 7	AXBZ	NEWE	8	8.N.C 8.E.V 8.W.C 8.E.V	2.0 1.5 1.75 0.8	newɐ	0	1
+3	ONABASULU-1-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	1	*I	1209	I	na	na	n ɐ	false	4 7	AX	NE	9	9.N.C 9.E.V	2.0 1.5	nɐ	0	1
+112	KALULI-1-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	1	*I	1209	I	ne	ne	n e	false	4 7	AX	NE	7	7.N.C 7.E.V	2.0 1.5	ne	0	1
+113	SUNIA-1-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	1	*I	1209	I	ne	ne	n e	false	4 7	AX	NE	10	10.N.C 10.E.V	2.0 1.5	ne	0	1
+241	BEAMI-1-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	ne	ne	n e	false	4 7	AX	NE	2	2.N.C 2.E.V	2.0 1.5	ne	0	1
+242	BEDAMINI-1-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	na	na	n ɐ	false	4 7	AX	NE	3	3.N.C 3.E.V	2.0 1.5	nɐ	0	1
+243	EDOLO-1-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	ne	ne	n e	false	4 7	AX	NE	5	5.N.C 5.E.V	2.0 1.5	ne	0	1
+244	ETORO-1-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	ne	ne	n e	false	4 7	AX	NE	6	6.N.C 6.E.V	2.0 1.5	ne	0	1
+4	AIMELE-30-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	30	*blood	946	BLOOD	omani	omani	o m ɐ n i	false	7 4 7 4 7	XBYBZ	UMENI	1	1.U.V 1.M.C 1.E.V 1.N.C 1.I.V	1.5 1.75 1.3 1.75 0.8	omɐni	0	2
+5	KASUA-30-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	30	*blood	946	BLOOD	pepeta	pepeta	p e p e t ɐ	false	1 7 1 7 1 7	AXBYBZ	PEPETE	8	8.P.C 8.E.V 8.P.C 8.E.V 8.T.C 8.E.V	2.0 1.5 1.75 1.3 1.75 0.8	pepetɐ	0	5
+6	ONABASULU-30-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	30	*blood	946	BLOOD	ibi	ibi	i b i	false	7 1 7	XBZ	IPI	9	9.I.V 9.P.C 9.I.V	1.5 1.75 0.8	ibi	0	4
+114	BOSAVI-30-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	30	*blood	946	BLOOD	hobo	hobo	h o b o	false	3 7 1 7	AXBZ	HUPU	4	4.H.C 4.U.V 4.P.C 4.U.V	2.0 1.5 1.75 0.8	hobo	0	4
+115	KALULI-30-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	30	*blood	946	BLOOD	hobo	hobo	h o b o	false	3 7 1 7	AXBZ	HUPU	7	7.H.C 7.U.V 7.P.C 7.U.V	2.0 1.5 1.75 0.8	hobo	0	4
+116	SUNIA-30-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	30	*blood	946	BLOOD	hobo	hobo	h o b o	false	3 7 1 7	AXBZ	HUPU	10	10.H.C 10.U.V 10.P.C 10.U.V	2.0 1.5 1.75 0.8	hobo	0	4
+245	BEAMI-30-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	hiole	hiole	h i o l e	false	3 7 7 5 7	AXYBZ	HIULE	2	2.H.C 2.I.V 2.U.V 2.L.C 2.E.V	2.0 1.5 1.3 1.75 0.8	hiole	0	3
+246	BEDAMINI-30-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	h3le	h3le	h ə l e	false	3 7 5 7	AXBZ	HELE	3	3.H.C 3.E.V 3.L.C 3.E.V	2.0 1.5 1.75 0.8	həle	0	3
+247	EDOLO-30-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	heale	heale	h e ɐ l e	false	3 7 7 5 7	AXYBZ	HEELE	5	5.H.C 5.E.V 5.E.V 5.L.C 5.E.V	2.0 1.5 1.3 1.75 0.8	heɐle	0	3
+248	ETORO-30-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	hiole	hiole	h i o l e	false	3 7 7 5 7	AXYBZ	HIULE	6	6.H.C 6.I.V 6.U.V 6.L.C 6.E.V	2.0 1.5 1.3 1.75 0.8	hiole	0	3
+7	AIMELE-31-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	31	*bone	1394	BONE	ki	ki	k i	false	1 7	AX	KI	1	1.K.C 1.I.V	2.0 1.5	ki	0	6
+8	KASUA-31-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	31	*bone	1394	BONE	ki	ki	k i	false	1 7	AX	KI	8	8.K.C 8.I.V	2.0 1.5	ki	0	6
+9	ONABASULU-31-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false	1 7 6 7	AXBZ	KIWI	9	9.K.C 9.I.V 9.W.C 9.I.V	2.0 1.5 1.75 0.8	kiwi	0	7
+117	BOSAVI-31-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	31	*bone	1394	BONE	ki	ki	k i	false	1 7	AX	KI	4	4.K.C 4.I.V	2.0 1.5	ki	0	6
+118	KALULI-31-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	31	*bone	1394	BONE	kh~i	kh~i	kʰ i	false	1 7	AX	KI	7	7.K.C 7.I.V	2.0 1.5	kʰi	0	6
+119	SUNIA-31-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	31	*bone	1394	BONE	uku	uku	u k u	false	7 1 7	XBZ	YKY	10	10.Y.V 10.K.C 10.Y.V	1.5 1.75 0.8	uku	0	8
+249	BEAMI-31-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false	1 7 6 7	AXBZ	KIWI	2	2.K.C 2.I.V 2.W.C 2.I.V	2.0 1.5 1.75 0.8	kiwi	0	7
+250	BEDAMINI-31-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kasa	kasa	k ɐ s ɐ	false	1 7 3 7	AXBZ	KESE	3	3.K.C 3.E.V 3.S.C 3.E.V	2.0 1.5 1.75 0.8	kɐsɐ	0	7
+251	BEDAMINI-31-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	koso	koso	k o s o	false	1 7 3 7	AXBZ	KUSU	3	3.K.C 3.U.V 3.S.C 3.U.V	2.0 1.5 1.75 0.8	koso	0	7
+252	EDOLO-31-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false	1 7 6 7	AXBZ	KIWI	5	5.K.C 5.I.V 5.W.C 5.I.V	2.0 1.5 1.75 0.8	kiwi	0	7
+253	ETORO-31-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false	1 7 6 7	AXBZ	KIWI	6	6.K.C 6.I.V 6.W.C 6.I.V	2.0 1.5 1.75 0.8	kiwi	0	7
+10	AIMELE-51-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	51	*breasts	1402	BREAST	bu	bu	b u	false	1 7	AX	PY	1	1.P.C 1.Y.V	2.0 1.5	bu	0	9
+11	KASUA-51-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	51	*breasts	1402	BREAST	po	po	p o	false	1 7	AX	PU	8	8.P.C 8.U.V	2.0 1.5	po	0	9
+12	ONABASULU-51-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	51	*breasts	1402	BREAST	bu	bu	b u	false	1 7	AX	PY	9	9.P.C 9.Y.V	2.0 1.5	bu	0	9
+120	BOSAVI-51-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	51	*breasts	1402	BREAST	bo	bo	b o	false	1 7	AX	PU	4	4.P.C 4.U.V	2.0 1.5	bo	0	9
+121	KALULI-51-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	51	*breasts	1402	BREAST	bo	bo	b o	false	1 7	AX	PU	7	7.P.C 7.U.V	2.0 1.5	bo	0	9
+122	SUNIA-51-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	51	*breasts	1402	BREAST	bo	bo	b o	false	1 7	AX	PU	10	10.P.C 10.U.V	2.0 1.5	bo	0	9
+254	BEAMI-51-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false	1 7 1 7	AXBZ	TUTU	2	2.T.C 2.U.V 2.T.C 2.U.V	2.0 1.5 1.75 0.8	toto	0	10
+255	BEDAMINI-51-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false	1 7 1 7	AXBZ	TUTU	3	3.T.C 3.U.V 3.T.C 3.U.V	2.0 1.5 1.75 0.8	toto	0	10
+256	EDOLO-51-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false	1 7 1 7	AXBZ	TUTU	5	5.T.C 5.U.V 5.T.C 5.U.V	2.0 1.5 1.75 0.8	toto	0	10
+257	ETORO-51-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false	1 7 1 7	AXBZ	TUTU	6	6.T.C 6.U.V 6.T.C 6.U.V	2.0 1.5 1.75 0.8	toto	0	10
+13	AIMELE-66-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	66	*come	1446	COME	yabe	yabe	j ɐ b e	false	6 7 1 7	AXBZ	JEPE	1	1.J.C 1.E.V 1.P.C 1.E.V	2.0 1.5 1.75 0.8	jɐbe	0	11
+14	KASUA-66-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	66	*come	1446	COME	mina	mina	m i n ɐ	false	4 7 4 7	AXBZ	MINE	8	8.M.C 8.I.V 8.N.C 8.E.V	2.0 1.5 1.75 0.8	minɐ	0	12
+15	ONABASULU-66-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	66	*come	1446	COME	mila	mila	m i l ɐ	false	4 7 5 7	AXBZ	MILE	9	9.M.C 9.I.V 9.L.C 9.E.V	2.0 1.5 1.75 0.8	milɐ	0	12
+123	BOSAVI-66-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	mena	mena	m e n ɐ	false	4 7 4 7	AXBZ	MENE	4	4.M.C 4.E.V 4.N.C 4.E.V	2.0 1.5 1.75 0.8	menɐ	0	12
+124	BOSAVI-66-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	yabi	yabi	j ɐ b i	false	6 7 1 7	AXBZ	JEPI	4	4.J.C 4.E.V 4.P.C 4.I.V	2.0 1.5 1.75 0.8	jɐbi	0	11
+125	BOSAVI-66-3	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	miano	miano	m i ɐ n o	false	4 7 7 4 7	AXYBZ	MIENU	4	4.M.C 4.I.V 4.E.V 4.N.C 4.U.V	2.0 1.5 1.3 1.75 0.8	miɐno	0	12
+126	BOSAVI-66-4	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	miyo	miyo	m i j o	false	4 7 6 7	AXBZ	MIJU	4	4.M.C 4.I.V 4.J.C 4.U.V	2.0 1.5 1.75 0.8	mijo	0	12
+127	KALULI-66-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	mene	mene	m e n e	false	4 7 4 7	AXBZ	MENE	7	7.M.C 7.E.V 7.N.C 7.E.V	2.0 1.5 1.75 0.8	mene	0	12
+128	KALULI-66-2	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	mio	mio	m i o	false	4 7 7	AXZ	MIU	7	7.M.C 7.I.V 7.U.V	2.0 1.5 0.8	mio	0	12
+129	SUNIA-66-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	meno	meno	m e n o	false	4 7 4 7	AXBZ	MENU	10	10.M.C 10.E.V 10.N.C 10.U.V	2.0 1.5 1.75 0.8	meno	0	12
+258	BEAMI-66-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	masipe	masipe	m ɐ s i p e	false	4 7 3 7 1 7	AXBYBZ	MESIPE	2	2.M.C 2.E.V 2.S.C 2.I.V 2.P.C 2.E.V	2.0 1.5 1.75 1.3 1.75 0.8	mɐsipe	0	12
+259	BEDAMINI-66-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	misa	misa	m i s ɐ	false	4 7 3 7	AXBZ	MISE	3	3.M.C 3.I.V 3.S.C 3.E.V	2.0 1.5 1.75 0.8	misɐ	0	12
+260	EDOLO-66-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	ma	ma	m ɐ	false	4 7	AX	ME	5	5.M.C 5.E.V	2.0 1.5	mɐ	0	12
+261	ETORO-66-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	masipe	masipe	m ɐ s i p e	false	4 7 3 7 1 7	AXBYBZ	MESIPE	6	6.M.C 6.E.V 6.S.C 6.I.V 6.P.C 6.E.V	2.0 1.5 1.75 1.3 1.75 0.8	mɐsipe	0	12
+16	KASUA-61-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	61	*die	1494	DIE	kulu	kulu	k u l u	false	1 7 5 7	AXBZ	KYLY	8	8.K.C 8.Y.V 8.L.C 8.Y.V	2.0 1.5 1.75 0.8	kulu	0	15
+130	BOSAVI-61-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	soma	soma	s o m ɐ	false	3 7 4 7	AXBZ	SUME	4	4.S.C 4.U.V 4.M.C 4.E.V	2.0 1.5 1.75 0.8	somɐ	0	13
+131	BOSAVI-61-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	sowabi	sowabi	s o w ɐ b i	false	3 7 6 7 1 7	AXBYBZ	SUWEPI	4	4.S.C 4.U.V 4.W.C 4.E.V 4.P.C 4.I.V	2.0 1.5 1.75 1.3 1.75 0.8	sowɐbi	0	13
+132	BOSAVI-61-3	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	somano	somano	s o m ɐ n o	false	3 7 4 7 4 7	AXBYBZ	SUMENU	4	4.S.C 4.U.V 4.M.C 4.E.V 4.N.C 4.U.V	2.0 1.5 1.75 1.3 1.75 0.8	somɐno	0	13
+133	BOSAVI-61-4	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	sowo	sowo	s o w o	false	3 7 6 7	AXBZ	SUWU	4	4.S.C 4.U.V 4.W.C 4.U.V	2.0 1.5 1.75 0.8	sowo	0	13
+134	KALULI-61-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	someno	someno	s o m e n o	false	3 7 4 7 4 7	AXBYBZ	SUMENU	7	7.S.C 7.U.V 7.M.C 7.E.V 7.N.C 7.U.V	2.0 1.5 1.75 1.3 1.75 0.8	someno	0	13
+135	KALULI-61-2	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	sowo	sowo	s o w o	false	3 7 6 7	AXBZ	SUWU	7	7.S.C 7.U.V 7.W.C 7.U.V	2.0 1.5 1.75 0.8	sowo	0	13
+262	EDOLO-61-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	61	*die	1494	DIE	pako	pako	p ɐ k o	false	1 7 1 7	AXBZ	PEKU	5	5.P.C 5.E.V 5.K.C 5.U.V	2.0 1.5 1.75 0.8	pɐko	0	14
+17	AIMELE-21-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	21	*dog	2009	DOG	a*gi	a*gi	ɐ̃ g i	false	7 1 7	XBZ	EKI	1	1.E.V 1.K.C 1.I.V	1.5 1.75 0.8	ɐ̃gi	0	16
+18	KASUA-21-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	21	*dog	2009	DOG	kasolo	kasolo	k ɐ s o l o	false	1 7 3 7 5 7	AXBYBZ	KESULU	8	8.K.C 8.E.V 8.S.C 8.U.V 8.L.C 8.U.V	2.0 1.5 1.75 1.3 1.75 0.8	kɐsolo	0	18
+19	ONABASULU-21-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	21	*dog	2009	DOG	keso	keso	k e s o	false	1 7 3 7	AXBZ	KESU	9	9.K.C 9.E.V 9.S.C 9.U.V	2.0 1.5 1.75 0.8	keso	0	18
+136	BOSAVI-21-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	21	*dog	2009	DOG	gasa	gasa	g ɐ s ɐ	false	1 7 3 7	AXBZ	KESE	4	4.K.C 4.E.V 4.S.C 4.E.V	2.0 1.5 1.75 0.8	gɐsɐ	0	18
+137	KALULI-21-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	21	*dog	2009	DOG	kasa	kasa	k ɐ s ɐ	false	1 7 3 7	AXBZ	KESE	7	7.K.C 7.E.V 7.S.C 7.E.V	2.0 1.5 1.75 0.8	kɐsɐ	0	18
+138	SUNIA-21-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	21	*dog	2009	DOG	wEi	wEi	w a i	false	6 7 7	AXZ	WAI	10	10.W.C 10.A.V 10.I.V	2.0 1.5 0.8	wai	0	18
+263	BEAMI-21-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	ogono	ogono	o g o n o	false	7 1 7 4 7	XBYBZ	UKUNU	2	2.U.V 2.K.C 2.U.V 2.N.C 2.U.V	1.5 1.75 1.3 1.75 0.8	ogono	0	17
+264	BEDAMINI-21-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	wame	wame	w ɐ m e	false	6 7 4 7	AXBZ	WEME	3	3.W.C 3.E.V 3.M.C 3.E.V	2.0 1.5 1.75 0.8	wɐme	0	18
+265	BEDAMINI-21-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	w3me	w3me	w ə m e	false	6 7 4 7	AXBZ	WEME	3	3.W.C 3.E.V 3.M.C 3.E.V	2.0 1.5 1.75 0.8	wəme	0	18
+266	EDOLO-21-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	u*ku*lo	u*ku*lo	ũ k ũ l o	false	7 1 7 5 7	XBYBZ	YKYLU	5	5.Y.V 5.K.C 5.Y.V 5.L.C 5.U.V	1.5 1.75 1.3 1.75 0.8	ũkũlo	0	17
+267	ETORO-21-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	ogono	ogono	o g o n o	false	7 1 7 4 7	XBYBZ	UKUNU	6	6.U.V 6.K.C 6.U.V 6.N.C 6.U.V	1.5 1.75 1.3 1.75 0.8	ogono	0	17
+20	KASUA-54-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	54	*drink	1401	DRINK	mEnE	mEnE	m a n a	false	4 7 4 7	AXBZ	MANA	8	8.M.C 8.A.V 8.N.C 8.A.V	2.0 1.5 1.75 0.8	mana	0	19
+139	BOSAVI-54-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	maya	maya	m ɐ j ɐ	false	4 7 6 7	AXBZ	MEJE	4	4.M.C 4.E.V 4.J.C 4.E.V	2.0 1.5 1.75 0.8	mɐjɐ	0	19
+140	BOSAVI-54-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	nabi	nabi	n ɐ b i	false	4 7 1 7	AXBZ	NEPI	4	4.N.C 4.E.V 4.P.C 4.I.V	2.0 1.5 1.75 0.8	nɐbi	0	21
+141	BOSAVI-54-3	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mano	mano	m ɐ n o	false	4 7 4 7	AXBZ	MENU	4	4.M.C 4.E.V 4.N.C 4.U.V	2.0 1.5 1.75 0.8	mɐno	0	19
+142	BOSAVI-54-4	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mono	mono	m o n o	false	4 7 4 7	AXBZ	MUNU	4	4.M.C 4.U.V 4.N.C 4.U.V	2.0 1.5 1.75 0.8	mono	0	19
+143	KALULI-54-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mano	mano	m ɐ n o	false	4 7 4 7	AXBZ	MENU	7	7.M.C 7.E.V 7.N.C 7.U.V	2.0 1.5 1.75 0.8	mɐno	0	19
+144	KALULI-54-2	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mono	mono	m o n o	false	4 7 4 7	AXBZ	MUNU	7	7.M.C 7.U.V 7.N.C 7.U.V	2.0 1.5 1.75 0.8	mono	0	19
+268	EDOLO-54-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	54	*drink	1401	DRINK	naha	naha	n ɐ h ɐ	false	4 7 3 7	AXBZ	NEHE	5	5.N.C 5.E.V 5.H.C 5.E.V	2.0 1.5 1.75 0.8	nɐhɐ	0	20
+21	AIMELE-39-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	39	*ear	1247	EAR	keleni	keleni	k e l e n i	false	1 7 5 7 4 7	AXBYBZ	KELENI	1	1.K.C 1.E.V 1.L.C 1.E.V 1.N.C 1.I.V	2.0 1.5 1.75 1.3 1.75 0.8	keleni	0	22
+22	KASUA-39-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	39	*ear	1247	EAR	kenEne	kenEne	k e n a n e	false	1 7 4 7 4 7	AXBYBZ	KENANE	8	8.K.C 8.E.V 8.N.C 8.A.V 8.N.C 8.E.V	2.0 1.5 1.75 1.3 1.75 0.8	kenane	0	22
+23	ONABASULU-39-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	39	*ear	1247	EAR	koheni	koheni	k o h e n i	false	1 7 3 7 4 7	AXBYBZ	KUHENI	9	9.K.C 9.U.V 9.H.C 9.E.V 9.N.C 9.I.V	2.0 1.5 1.75 1.3 1.75 0.8	koheni	0	24
+145	KALULI-39-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	39	*ear	1247	EAR	kh~alan	kh~alan	kʰ ɐ l ɐ n	false	1 7 5 7 4	AXBYN	KELEN	7	7.K.C 7.E.V 7.L.C 7.E.V 7.N.c	2.0 1.5 1.75 1.3 0.8	kʰɐlɐn	0	22
+146	SUNIA-39-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	39	*ear	1247	EAR	ekadem	ekadem	e k ɐ d e m	false	7 1 7 1 7 4	XBYBYN	EKETEM	10	10.E.V 10.K.C 10.E.V 10.T.C 10.E.V 10.M.c	1.5 1.75 1.3 1.75 1.3 0.8	ekɐdem	0	25
+269	BEAMI-39-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	kahe	kahe	k ɐ h e	false	1 7 3 7	AXBZ	KEHE	2	2.K.C 2.E.V 2.H.C 2.E.V	2.0 1.5 1.75 0.8	kɐhe	0	23
+270	BEDAMINI-39-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	ka*	ka*	k ɐ̃	false	1 7	AX	KE	3	3.K.C 3.E.V	2.0 1.5	kɐ̃	0	23
+271	EDOLO-39-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	ke*he	ke*he	k ẽ h e	false	1 7 3 7	AXBZ	KEHE	5	5.K.C 5.E.V 5.H.C 5.E.V	2.0 1.5 1.75 0.8	kẽhe	0	23
+272	ETORO-39-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	kEhe	kEhe	k a h e	false	1 7 3 7	AXBZ	KAHE	6	6.K.C 6.A.V 6.H.C 6.E.V	2.0 1.5 1.75 0.8	kahe	0	23
+24	AIMELE-40-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	40	*eye	1248	EYE	si	si	s i	false	3 7	AX	SI	1	1.S.C 1.I.V	2.0 1.5	si	0	26
+25	KASUA-40-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	40	*eye	1248	EYE	si	si	s i	false	3 7	AX	SI	8	8.S.C 8.I.V	2.0 1.5	si	0	26
+26	ONABASULU-40-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	40	*eye	1248	EYE	si	si	s i	false	3 7	AX	SI	9	9.S.C 9.I.V	2.0 1.5	si	0	26
+147	BOSAVI-40-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	40	*eye	1248	EYE	si	si	s i	false	3 7	AX	SI	4	4.S.C 4.I.V	2.0 1.5	si	0	26
+148	KALULI-40-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	40	*eye	1248	EYE	si	si	s i	false	3 7	AX	SI	7	7.S.C 7.I.V	2.0 1.5	si	0	26
+149	SUNIA-40-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	40	*eye	1248	EYE	si	si	s i	false	3 7	AX	SI	10	10.S.C 10.I.V	2.0 1.5	si	0	26
+273	BEAMI-40-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false	3 7	AX	SI	2	2.S.C 2.I.V	2.0 1.5	si	0	26
+274	BEDAMINI-40-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false	3 7	AX	SI	3	3.S.C 3.I.V	2.0 1.5	si	0	26
+275	EDOLO-40-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false	3 7	AX	SI	5	5.S.C 5.I.V	2.0 1.5	si	0	26
+276	ETORO-40-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false	3 7	AX	SI	6	6.S.C 6.I.V	2.0 1.5	si	0	26
+27	AIMELE-82-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	82	*fire	221	FIRE	di	di	d i	false	1 7	AX	TI	1	1.T.C 1.I.V	2.0 1.5	di	0	27
+28	KASUA-82-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	82	*fire	221	FIRE	tei	tei	t e i	false	1 7 7	AXZ	TEI	8	8.T.C 8.E.V 8.I.V	2.0 1.5 0.8	tei	0	27
+29	ONABASULU-82-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	82	*fire	221	FIRE	ti	ti	t i	false	1 7	AX	TI	9	9.T.C 9.I.V	2.0 1.5	ti	0	27
+150	BOSAVI-82-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	82	*fire	221	FIRE	de	de	d e	false	1 7	AX	TE	4	4.T.C 4.E.V	2.0 1.5	de	0	27
+151	KALULI-82-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	82	*fire	221	FIRE	te	te	t e	false	1 7	AX	TE	7	7.T.C 7.E.V	2.0 1.5	te	0	27
+152	SUNIA-82-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	82	*fire	221	FIRE	de	de	d e	false	1 7	AX	TE	10	10.T.C 10.E.V	2.0 1.5	de	0	27
+277	BEAMI-82-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nulu	nulu	n u l u	false	4 7 5 7	AXBZ	NYLY	2	2.N.C 2.Y.V 2.L.C 2.Y.V	2.0 1.5 1.75 0.8	nulu	0	28
+278	BEDAMINI-82-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	daru	daru	d ɐ r u	false	1 7 5 7	AXBZ	TERY	3	3.T.C 3.E.V 3.R.C 3.Y.V	2.0 1.5 1.75 0.8	dɐru	0	29
+279	BEDAMINI-82-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nalu	nalu	n ɐ l u	false	4 7 5 7	AXBZ	NELY	3	3.N.C 3.E.V 3.L.C 3.Y.V	2.0 1.5 1.75 0.8	nɐlu	0	28
+280	EDOLO-82-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nulo	nulo	n u l o	false	4 7 5 7	AXBZ	NYLU	5	5.N.C 5.Y.V 5.L.C 5.U.V	2.0 1.5 1.75 0.8	nulo	0	28
+281	ETORO-82-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nuLu	nuLu	n u ʎ u	false	4 7 5 7	AXBZ	NYLY	6	6.N.C 6.Y.V 6.L.C 6.Y.V	2.0 1.5 1.75 0.8	nuʎu	0	28
+30	AIMELE-19-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	19	*fish	227	FISH	komolu	komolu	k o m o l u	false	1 7 4 7 5 7	AXBYBZ	KUMULY	1	1.K.C 1.U.V 1.M.C 1.U.V 1.L.C 1.Y.V	2.0 1.5 1.75 1.3 1.75 0.8	komolu	0	30
+31	KASUA-19-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	19	*fish	227	FISH	ewalo	ewalo	e w ɐ l o	false	7 6 7 5 7	XBYBZ	EWELU	8	8.E.V 8.W.C 8.E.V 8.L.C 8.U.V	1.5 1.75 1.3 1.75 0.8	ewɐlo	0	34
+32	ONABASULU-19-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	19	*fish	227	FISH	hani	hani	h ɐ n i	false	3 7 4 7	AXBZ	HENI	9	9.H.C 9.E.V 9.N.C 9.I.V	2.0 1.5 1.75 0.8	hɐni	0	35
+153	BOSAVI-19-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	19	*fish	227	FISH	ka	ka	k ɐ	false	1 7	AX	KE	4	4.K.C 4.E.V	2.0 1.5	kɐ	0	33
+154	KALULI-19-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	19	*fish	227	FISH	kh~e	kh~e	kʰ e	false	1 7	AX	KE	7	7.K.C 7.E.V	2.0 1.5	kʰe	0	33
+155	SUNIA-19-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	19	*fish	227	FISH	douba	douba	d o u b ɐ	false	1 7 7 1 7	AXYBZ	TUYPE	10	10.T.C 10.U.V 10.Y.V 10.P.C 10.E.V	2.0 1.5 1.3 1.75 0.8	doubɐ	0	36
+282	BEAMI-19-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	seme	seme	s e m e	false	3 7 4 7	AXBZ	SEME	2	2.S.C 2.E.V 2.M.C 2.E.V	2.0 1.5 1.75 0.8	seme	0	31
+283	BEDAMINI-19-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	ai	ai	ɐ i	false	7 7	XZ	EI	3	3.E.V 3.I.V	1.5 0.8	ɐi	0	32
+284	EDOLO-19-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	seme	seme	s e m e	false	3 7 4 7	AXBZ	SEME	5	5.S.C 5.E.V 5.M.C 5.E.V	2.0 1.5 1.75 0.8	seme	0	31
+285	EDOLO-19-2	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	a*i	a*i	ɐ̃ i	false	7 7	XZ	EI	5	5.E.V 5.I.V	1.5 0.8	ɐ̃i	0	32
+286	ETORO-19-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	seme	seme	s e m e	false	3 7 4 7	AXBZ	SEME	6	6.S.C 6.E.V 6.M.C 6.E.V	2.0 1.5 1.75 0.8	seme	0	31
+33	KASUA-95-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	95	*full	1429	FULL	woliyeti	woliyeti	w o l i j e t i	false	6 7 5 7 6 7 1 7	AXBYBYBZ	WULIJETI	8	8.W.C 8.U.V 8.L.C 8.I.V 8.J.C 8.E.V 8.T.C 8.I.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	wolijeti	0	40
+34	ONABASULU-95-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	95	*full	1429	FULL	wasiga*nu	wasiga*nu	w ɐ s i g ɐ̃ n u	false	6 7 3 7 1 7 4 7	AXBYBYBZ	WESIKENY	9	9.W.C 9.E.V 9.S.C 9.I.V 9.K.C 9.E.V 9.N.C 9.Y.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	wɐsigɐ̃nu	0	41
+156	BOSAVI-95-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	95	*full	1429	FULL	walifo	walifo	w ɐ l i f o	false	6 7 5 7 3 7	AXBYBZ	WELIBU	4	4.W.C 4.E.V 4.L.C 4.I.V 4.B.C 4.U.V	2.0 1.5 1.75 1.3 1.75 0.8	wɐlifo	0	39
+157	KALULI-95-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	95	*full	1429	FULL	walifo	walifo	w ɐ l i f o	false	6 7 5 7 3 7	AXBYBZ	WELIBU	7	7.W.C 7.E.V 7.L.C 7.I.V 7.B.C 7.U.V	2.0 1.5 1.75 1.3 1.75 0.8	wɐlifo	0	39
+158	SUNIA-95-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	95	*full	1429	FULL	ugodo	ugodo	u g o d o	false	7 1 7 1 7	XBYBZ	YKUTU	10	10.Y.V 10.K.C 10.U.V 10.T.C 10.U.V	1.5 1.75 1.3 1.75 0.8	ugodo	0	42
+287	BEAMI-95-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	wa*la*sube	wa*la*sube	w ɐ̃ l ɐ̃ s u b e	false	6 7 5 7 3 7 1 7	AXBYBYBZ	WELESYPE	2	2.W.C 2.E.V 2.L.C 2.E.V 2.S.C 2.Y.V 2.P.C 2.E.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	wɐ̃lɐ̃sube	0	37
+288	BEDAMINI-95-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	naba	naba	n ɐ b ɐ	false	4 7 1 7	AXBZ	NEPE	3	3.N.C 3.E.V 3.P.C 3.E.V	2.0 1.5 1.75 0.8	nɐbɐ	0	38
+289	EDOLO-95-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	nopai	nopai	n o p ɐ i	false	4 7 1 7 7	AXBYZ	NUPEI	5	5.N.C 5.U.V 5.P.C 5.E.V 5.I.V	2.0 1.5 1.75 1.3 0.8	nopɐi	0	38
+290	ETORO-95-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	wa*la*sube	wa*la*sube	w ɐ̃ l ɐ̃ s u b e	false	6 7 5 7 3 7 1 7	AXBYBYBZ	WELESYPE	6	6.W.C 6.E.V 6.L.C 6.E.V 6.S.C 6.Y.V 6.P.C 6.E.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	wɐ̃lɐ̃sube	0	37
+35	AIMELE-48-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	48	*hand	1277	HAND	debe	debe	d e b e	false	1 7 1 7	AXBZ	TEPE	1	1.T.C 1.E.V 1.P.C 1.E.V	2.0 1.5 1.75 0.8	debe	0	43
+36	KASUA-48-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	48	*hand	1277	HAND	tiyEle	tiyEle	t i j a l e	false	1 7 6 7 5 7	AXBYBZ	TIJALE	8	8.T.C 8.I.V 8.J.C 8.A.V 8.L.C 8.E.V	2.0 1.5 1.75 1.3 1.75 0.8	tijale	0	45
+37	ONABASULU-48-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	48	*hand	1277	HAND	sone	sone	s o n e	false	3 7 4 7	AXBZ	SUNE	9	9.S.C 9.U.V 9.N.C 9.E.V	2.0 1.5 1.75 0.8	sone	0	46
+159	BOSAVI-48-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	48	*hand	1277	HAND	dagi	dagi	d ɐ g i	false	1 7 1 7	AXBZ	TEKI	4	4.T.C 4.E.V 4.K.C 4.I.V	2.0 1.5 1.75 0.8	dɐgi	0	44
+160	KALULI-48-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	48	*hand	1277	HAND	taki	taki	t ɐ k i	false	1 7 1 7	AXBZ	TEKI	7	7.T.C 7.E.V 7.K.C 7.I.V	2.0 1.5 1.75 0.8	tɐki	0	44
+161	SUNIA-48-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	48	*hand	1277	HAND	dob	dob	d o b	false	1 7 1	AXN	TUP	10	10.T.C 10.U.V 10.P.c	2.0 1.5 0.8	dob	0	43
+291	EDOLO-48-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	48	*hand	1277	HAND	napo	napo	n ɐ p o	false	4 7 1 7	AXBZ	NEPU	5	5.N.C 5.E.V 5.P.C 5.U.V	2.0 1.5 1.75 0.8	nɐpo	0	43
+292	ETORO-48-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	48	*hand	1277	HAND	nobo	nobo	n o b o	false	4 7 1 7	AXBZ	NUPU	6	6.N.C 6.U.V 6.P.C 6.U.V	2.0 1.5 1.75 0.8	nobo	0	43
+38	AIMELE-58-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	58	*hear	1408	HEAR	deba	deba	d e b ɐ	false	1 7 1 7	AXBZ	TEPE	1	1.T.C 1.E.V 1.P.C 1.E.V	2.0 1.5 1.75 0.8	debɐ	0	47
+39	KASUA-58-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	58	*hear	1408	HEAR	topu	topu	t o p u	false	1 7 1 7	AXBZ	TUPY	8	8.T.C 8.U.V 8.P.C 8.Y.V	2.0 1.5 1.75 0.8	topu	0	47
+40	ONABASULU-58-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	58	*hear	1408	HEAR	to	to	t o	false	1 7	AX	TU	9	9.T.C 9.U.V	2.0 1.5	to	0	49
+162	BOSAVI-58-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dabuma	dabuma	d ɐ b u m ɐ	false	1 7 1 7 4 7	AXBYBZ	TEPYME	4	4.T.C 4.E.V 4.P.C 4.Y.V 4.M.C 4.E.V	2.0 1.5 1.75 1.3 1.75 0.8	dɐbumɐ	0	47
+163	BOSAVI-58-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dadabi	dadabi	d ɐ d ɐ b i	false	1 7 1 7 1 7	AXBYBZ	TETEPI	4	4.T.C 4.E.V 4.T.C 4.E.V 4.P.C 4.I.V	2.0 1.5 1.75 1.3 1.75 0.8	dɐdɐbi	0	47
+164	BOSAVI-58-3	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dabano	dabano	d ɐ b ɐ n o	false	1 7 1 7 4 7	AXBYBZ	TEPENU	4	4.T.C 4.E.V 4.P.C 4.E.V 4.N.C 4.U.V	2.0 1.5 1.75 1.3 1.75 0.8	dɐbɐno	0	48
+165	BOSAVI-58-4	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dabu	dabu	d ɐ b u	false	1 7 1 7	AXBZ	TEPY	4	4.T.C 4.E.V 4.P.C 4.Y.V	2.0 1.5 1.75 0.8	dɐbu	0	47
+166	KALULI-58-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	tapu	tapu	t ɐ p u	false	1 7 1 7	AXBZ	TEPY	7	7.T.C 7.E.V 7.P.C 7.Y.V	2.0 1.5 1.75 0.8	tɐpu	0	47
+167	SUNIA-58-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dobudo	dobudo	d o b u d o	false	1 7 1 7 1 7	AXBYBZ	TUPYTU	10	10.T.C 10.U.V 10.P.C 10.Y.V 10.T.C 10.U.V	2.0 1.5 1.75 1.3 1.75 0.8	dobudo	0	47
+293	BEAMI-58-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	naboba	naboba	n ɐ b o b ɐ	false	4 7 1 7 1 7	AXBYBZ	NEPUPE	2	2.N.C 2.E.V 2.P.C 2.U.V 2.P.C 2.E.V	2.0 1.5 1.75 1.3 1.75 0.8	nɐbobɐ	0	48
+294	BEDAMINI-58-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	nabama	nabama	n ɐ b ɐ m ɐ	false	4 7 1 7 4 7	AXBYBZ	NEPEME	3	3.N.C 3.E.V 3.P.C 3.E.V 3.M.C 3.E.V	2.0 1.5 1.75 1.3 1.75 0.8	nɐbɐmɐ	0	48
+295	EDOLO-58-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	napasepe	napasepe	n ɐ p ɐ s e p e	false	4 7 1 7 3 7 1 7	AXBYBYBZ	NEPESEPE	5	5.N.C 5.E.V 5.P.C 5.E.V 5.S.C 5.E.V 5.P.C 5.E.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	nɐpɐsepe	0	48
+296	ETORO-58-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	naboba	naboba	n ɐ b o b ɐ	false	4 7 1 7 1 7	AXBYBZ	NEPUPE	6	6.N.C 6.E.V 6.P.C 6.U.V 6.P.C 6.E.V	2.0 1.5 1.75 1.3 1.75 0.8	nɐbobɐ	0	48
+41	KASUA-34-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	34	*horn	1393	HORN (ANATOMY)	belo	belo	b e l o	false	1 7 5 7	AXBZ	PELU	8	8.P.C 8.E.V 8.L.C 8.U.V	2.0 1.5 1.75 0.8	belo	0	52
+168	KALULI-34-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	34	*horn	1393	HORN (ANATOMY)	pis	pis	p i s	false	1 7 3	AXN	PIS	7	7.P.C 7.I.V 7.S.c	2.0 1.5 0.8	pis	0	51
+297	EDOLO-34-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	34	*horn	1393	HORN (ANATOMY)	pese	pese	p e s e	false	1 7 3 7	AXBZ	PESE	5	5.P.C 5.E.V 5.S.C 5.E.V	2.0 1.5 1.75 0.8	pese	0	50
+42	AIMELE-47-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	47	*knee	1371	KNEE	gulu	gulu	g u l u	false	1 7 5 7	AXBZ	KYLY	1	1.K.C 1.Y.V 1.L.C 1.Y.V	2.0 1.5 1.75 0.8	gulu	0	53
+43	KASUA-47-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	47	*knee	1371	KNEE	kuniu	kuniu	k u n i u	false	1 7 4 7 7	AXBYZ	KYNIY	8	8.K.C 8.Y.V 8.N.C 8.I.V 8.Y.V	2.0 1.5 1.75 1.3 0.8	kuniu	0	54
+44	ONABASULU-47-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	47	*knee	1371	KNEE	hogonomo	hogonomo	h o g o n o m o	false	3 7 1 7 4 7 4 7	AXBYBYBZ	HUKUNUMU	9	9.H.C 9.U.V 9.K.C 9.U.V 9.N.C 9.U.V 9.M.C 9.U.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	hogonomo	0	56
+169	BOSAVI-47-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	gulau	gulau	g u l ɐ u	false	1 7 5 7 7	AXBYZ	KYLEY	4	4.K.C 4.Y.V 4.L.C 4.E.V 4.Y.V	2.0 1.5 1.75 1.3 0.8	gulɐu	0	53
+170	BOSAVI-47-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	gul	gul	g u l	false	1 7 5	AXN	KYL	4	4.K.C 4.Y.V 4.L.c	2.0 1.5 0.8	gul	0	53
+171	KALULI-47-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	kul	kul	k u l	false	1 7 5	AXN	KYL	7	7.K.C 7.Y.V 7.L.c	2.0 1.5 0.8	kul	0	53
+172	SUNIA-47-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	gut	gut	g u t	false	1 7 1	AXN	KYT	10	10.K.C 10.Y.V 10.T.c	2.0 1.5 0.8	gut	0	57
+298	BEAMI-47-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	emogumu	emogumu	e m o g u m u	false	7 4 7 1 7 4 7	XBYBYBZ	EMUKYMY	2	2.E.V 2.M.C 2.U.V 2.K.C 2.Y.V 2.M.C 2.Y.V	1.5 1.75 1.3 1.75 1.3 1.75 0.8	emogumu	0	54
+299	BEDAMINI-47-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	muguni	muguni	m u g u n i	false	4 7 1 7 4 7	AXBYBZ	MYKYNI	3	3.M.C 3.Y.V 3.K.C 3.Y.V 3.N.C 3.I.V	2.0 1.5 1.75 1.3 1.75 0.8	muguni	0	55
+300	EDOLO-47-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	kumu	kumu	k u m u	false	1 7 4 7	AXBZ	KYMY	5	5.K.C 5.Y.V 5.M.C 5.Y.V	2.0 1.5 1.75 0.8	kumu	0	54
+301	ETORO-47-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	emogumu	emogumu	e m o g u m u	false	7 4 7 1 7 4 7	XBYBYBZ	EMUKYMY	6	6.E.V 6.M.C 6.U.V 6.K.C 6.Y.V 6.M.C 6.Y.V	1.5 1.75 1.3 1.75 1.3 1.75 0.8	emogumu	0	54
+45	AIMELE-25-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	25	*leaf	628	LEAF	yefo	yefo	j e f o	false	6 7 3 7	AXBZ	JEBU	1	1.J.C 1.E.V 1.B.C 1.U.V	2.0 1.5 1.75 0.8	jefo	0	58
+46	KASUA-25-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	25	*leaf	628	LEAF	i falo	i falo	i f ɐ l o	false	7 3 7 5 7	XBYBZ	IBELU	8	8.I.V 8.B.C 8.E.V 8.L.C 8.U.V	1.5 1.75 1.3 1.75 0.8	ifɐlo	0	63
+47	ONABASULU-25-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	25	*leaf	628	LEAF	iwalu	iwalu	i w ɐ l u	false	7 6 7 5 7	XBYBZ	IWELY	9	9.I.V 9.W.C 9.E.V 9.L.C 9.Y.V	1.5 1.75 1.3 1.75 0.8	iwɐlu	0	64
+173	BOSAVI-25-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	25	*leaf	628	LEAF	sogo	sogo	s o g o	false	3 7 1 7	AXBZ	SUKU	4	4.S.C 4.U.V 4.K.C 4.U.V	2.0 1.5 1.75 0.8	sogo	0	61
+174	KALULI-25-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	25	*leaf	628	LEAF	fos	fos	f o s	false	3 7 3	AXN	BUS	7	7.B.C 7.U.V 7.S.c	2.0 1.5 0.8	fos	0	62
+175	SUNIA-25-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	25	*leaf	628	LEAF	yofoS	yofoS	j o f o ʃ	false	6 7 3 7 3	AXBYN	JUBUS	10	10.J.C 10.U.V 10.B.C 10.U.V 10.S.c	2.0 1.5 1.75 1.3 0.8	jofoʃ	0	65
+302	BEAMI-25-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	ipau	ipau	i p ɐ u	false	7 1 7 7	XBYZ	IPEY	2	2.I.V 2.P.C 2.E.V 2.Y.V	1.5 1.75 1.3 0.8	ipɐu	0	59
+303	BEDAMINI-25-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	lubi	lubi	l u b i	false	5 7 1 7	AXBZ	LYPI	3	3.L.C 3.Y.V 3.P.C 3.I.V	2.0 1.5 1.75 0.8	lubi	0	60
+304	BEDAMINI-25-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	rubi	rubi	r u b i	false	5 7 1 7	AXBZ	RYPI	3	3.R.C 3.Y.V 3.P.C 3.I.V	2.0 1.5 1.75 0.8	rubi	0	60
+305	EDOLO-25-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	pa*u	pa*u	p ɐ̃ u	false	1 7 7	AXZ	PEY	5	5.P.C 5.E.V 5.Y.V	2.0 1.5 0.8	pɐ̃u	0	59
+306	ETORO-25-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	ipau	ipau	i p ɐ u	false	7 1 7 7	XBYZ	IPEY	6	6.I.V 6.P.C 6.E.V 6.Y.V	1.5 1.75 1.3 0.8	ipɐu	0	59
+48	KASUA-53-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	53	*liver	1224	LIVER	hau	hau	h ɐ u	false	3 7 7	AXZ	HEY	8	8.H.C 8.E.V 8.Y.V	2.0 1.5 0.8	hɐu	0	68
+176	BOSAVI-53-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	53	*liver	1224	LIVER	yog	yog	j o g	false	6 7 1	AXN	JUK	4	4.J.C 4.U.V 4.K.c	2.0 1.5 0.8	jog	0	66
+177	KALULI-53-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	53	*liver	1224	LIVER	yok	yok	j o k	false	6 7 1	AXN	JUK	7	7.J.C 7.U.V 7.K.c	2.0 1.5 0.8	jok	0	66
+307	EDOLO-53-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	53	*liver	1224	LIVER	popa	popa	p o p ɐ	false	1 7 1 7	AXBZ	PUPE	5	5.P.C 5.U.V 5.P.C 5.E.V	2.0 1.5 1.75 0.8	popɐ	0	67
+49	AIMELE-22-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	22	*louse	1392	LOUSE	tede	tede	t e d e	false	1 7 1 7	AXBZ	TETE	1	1.T.C 1.E.V 1.T.C 1.E.V	2.0 1.5 1.75 0.8	tede	0	69
+50	KASUA-22-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	22	*louse	1392	LOUSE	fei	fei	f e i	false	3 7 7	AXZ	BEI	8	8.B.C 8.E.V 8.I.V	2.0 1.5 0.8	fei	0	71
+51	ONABASULU-22-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	22	*louse	1392	LOUSE	fe*	fe*	f ẽ	false	3 7	AX	BE	9	9.B.C 9.E.V	2.0 1.5	fẽ	0	72
+178	KALULI-22-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	22	*louse	1392	LOUSE	fe	fe	f e	false	3 7	AX	BE	7	7.B.C 7.E.V	2.0 1.5	fe	0	71
+179	SUNIA-22-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	22	*louse	1392	LOUSE	fi	fi	f i	false	3 7	AX	BI	10	10.B.C 10.I.V	2.0 1.5	fi	0	71
+308	BEAMI-22-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu*	imu*	i m ũ	false	7 4 7	XBZ	IMY	2	2.I.V 2.M.C 2.Y.V	1.5 1.75 0.8	imũ	0	70
+309	BEDAMINI-22-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu	imu	i m u	false	7 4 7	XBZ	IMY	3	3.I.V 3.M.C 3.Y.V	1.5 1.75 0.8	imu	0	70
+310	EDOLO-22-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu	imu	i m u	false	7 4 7	XBZ	IMY	5	5.I.V 5.M.C 5.Y.V	1.5 1.75 0.8	imu	0	70
+311	ETORO-22-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu*	imu*	i m ũ	false	7 4 7	XBZ	IMY	6	6.I.V 6.M.C 6.Y.V	1.5 1.75 0.8	imũ	0	70
+52	AIMELE-86-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	86	*mountain	639	MOUNTAIN	doma	doma	d o m ɐ	false	1 7 4 7	AXBZ	TUME	1	1.T.C 1.U.V 1.M.C 1.E.V	2.0 1.5 1.75 0.8	domɐ	0	73
+53	KASUA-86-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	86	*mountain	639	MOUNTAIN	tokomo	tokomo	t o k o m o	false	1 7 1 7 4 7	AXBYBZ	TUKUMU	8	8.T.C 8.U.V 8.K.C 8.U.V 8.M.C 8.U.V	2.0 1.5 1.75 1.3 1.75 0.8	tokomo	0	78
+54	ONABASULU-86-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	86	*mountain	639	MOUNTAIN	gali	gali	g ɐ l i	false	1 7 5 7	AXBZ	KELI	9	9.K.C 9.E.V 9.L.C 9.I.V	2.0 1.5 1.75 0.8	gɐli	0	79
+180	BOSAVI-86-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	86	*mountain	639	MOUNTAIN	kugun	kugun	k u g u n	false	1 7 1 7 4	AXBYN	KYKYN	4	4.K.C 4.Y.V 4.K.C 4.Y.V 4.N.c	2.0 1.5 1.75 1.3 0.8	kugun	0	76
+181	KALULI-86-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	86	*mountain	639	MOUNTAIN	misio	misio	m i s i o	false	4 7 3 7 7	AXBYZ	MISIU	7	7.M.C 7.I.V 7.S.C 7.I.V 7.U.V	2.0 1.5 1.75 1.3 0.8	misio	0	77
+182	SUNIA-86-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	86	*mountain	639	MOUNTAIN	muSio	muSio	m u ʃ i o	false	4 7 3 7 7	AXBYZ	MYSIU	10	10.M.C 10.Y.V 10.S.C 10.I.V 10.U.V	2.0 1.5 1.75 1.3 0.8	muʃio	0	77
+312	BEAMI-86-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	segebi	segebi	s e g e b i	false	3 7 1 7 1 7	AXBYBZ	SEKEPI	2	2.S.C 2.E.V 2.K.C 2.E.V 2.P.C 2.I.V	2.0 1.5 1.75 1.3 1.75 0.8	segebi	0	74
+313	BEDAMINI-86-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	kaumi	kaumi	k ɐ u m i	false	1 7 7 4 7	AXYBZ	KEYMI	3	3.K.C 3.E.V 3.Y.V 3.M.C 3.I.V	2.0 1.5 1.3 1.75 0.8	kɐumi	0	75
+314	EDOLO-86-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	sekepi	sekepi	s e k e p i	false	3 7 1 7 1 7	AXBYBZ	SEKEPI	5	5.S.C 5.E.V 5.K.C 5.E.V 5.P.C 5.I.V	2.0 1.5 1.75 1.3 1.75 0.8	sekepi	0	74
+315	ETORO-86-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	segebi	segebi	s e g e b i	false	3 7 1 7 1 7	AXBYBZ	SEKEPI	6	6.S.C 6.E.V 6.K.C 6.E.V 6.P.C 6.I.V	2.0 1.5 1.75 1.3 1.75 0.8	segebi	0	74
+55	AIMELE-100-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	100	*name	1405	NAME	wi	wi	w i	false	6 7	AX	WI	1	1.W.C 1.I.V	2.0 1.5	wi	0	80
+56	KASUA-100-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	100	*name	1405	NAME	unuwa	unuwa	u n u w ɐ	false	7 4 7 6 7	XBYBZ	YNYWE	8	8.Y.V 8.N.C 8.Y.V 8.W.C 8.E.V	1.5 1.75 1.3 1.75 0.8	unuwɐ	0	84
+57	ONABASULU-100-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	100	*name	1405	NAME	wi	wi	w i	false	6 7	AX	WI	9	9.W.C 9.I.V	2.0 1.5	wi	0	83
+183	BOSAVI-100-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	100	*name	1405	NAME	wi	wi	w i	false	6 7	AX	WI	4	4.W.C 4.I.V	2.0 1.5	wi	0	83
+184	KALULI-100-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	100	*name	1405	NAME	wi	wi	w i	false	6 7	AX	WI	7	7.W.C 7.I.V	2.0 1.5	wi	0	83
+185	SUNIA-100-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	100	*name	1405	NAME	imi	imi	i m i	false	7 4 7	XBZ	IMI	10	10.I.V 10.M.C 10.I.V	1.5 1.75 0.8	imi	0	85
+316	BEAMI-100-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	a*i	a*i	ɐ̃ i	false	7 7	XZ	EI	2	2.E.V 2.I.V	1.5 0.8	ɐ̃i	0	81
+317	BEDAMINI-100-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	dio	dio	d i o	false	1 7 7	AXZ	TIU	3	3.T.C 3.I.V 3.U.V	2.0 1.5 0.8	dio	0	82
+318	BEDAMINI-100-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	dio*	dio*	d i õ	false	1 7 7	AXZ	TIU	3	3.T.C 3.I.V 3.U.V	2.0 1.5 0.8	diõ	0	82
+319	EDOLO-100-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	e*i	e*i	ẽ i	false	7 7	XZ	EI	5	5.E.V 5.I.V	1.5 0.8	ẽi	0	81
+320	ETORO-100-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	e*i	e*i	ẽ i	false	7 7	XZ	EI	6	6.E.V 6.I.V	1.5 0.8	ẽi	0	81
+58	AIMELE-96-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	96	*new	1231	NEW	hi	hi	h i	false	3 7	AX	HI	1	1.H.C 1.I.V	2.0 1.5	hi	0	86
+59	KASUA-96-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	96	*new	1231	NEW	hili	hili	h i l i	false	3 7 5 7	AXBZ	HILI	8	8.H.C 8.I.V 8.L.C 8.I.V	2.0 1.5 1.75 0.8	hili	0	86
+60	ONABASULU-96-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	96	*new	1231	NEW	hili	hili	h i l i	false	3 7 5 7	AXBZ	HILI	9	9.H.C 9.I.V 9.L.C 9.I.V	2.0 1.5 1.75 0.8	hili	0	86
+186	BOSAVI-96-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	96	*new	1231	NEW	hogi	hogi	h o g i	false	3 7 1 7	AXBZ	HUKI	4	4.H.C 4.U.V 4.K.C 4.I.V	2.0 1.5 1.75 0.8	hogi	0	86
+187	KALULI-96-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	96	*new	1231	NEW	hoki	hoki	h o k i	false	3 7 1 7	AXBZ	HUKI	7	7.H.C 7.U.V 7.K.C 7.I.V	2.0 1.5 1.75 0.8	hoki	0	86
+188	SUNIA-96-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	96	*new	1231	NEW	hi	hi	h i	false	3 7	AX	HI	10	10.H.C 10.I.V	2.0 1.5	hi	0	88
+321	BEAMI-96-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	kaha*	kaha*	k ɐ h ɐ̃	false	1 7 3 7	AXBZ	KEHE	2	2.K.C 2.E.V 2.H.C 2.E.V	2.0 1.5 1.75 0.8	kɐhɐ̃	0	87
+322	BEDAMINI-96-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	gaheve	gaheve	g ɐ h e v e	false	1 7 3 7 3 7	AXBYBZ	KEHEBE	3	3.K.C 3.E.V 3.H.C 3.E.V 3.B.C 3.E.V	2.0 1.5 1.75 1.3 1.75 0.8	gɐheve	0	87
+323	EDOLO-96-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	ka*hi	ka*hi	k ɐ̃ h i	false	1 7 3 7	AXBZ	KEHI	5	5.K.C 5.E.V 5.H.C 5.I.V	2.0 1.5 1.75 0.8	kɐ̃hi	0	87
+324	ETORO-96-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	kahe*	kahe*	k ɐ h ẽ	false	1 7 3 7	AXBZ	KEHE	6	6.K.C 6.E.V 6.H.C 6.E.V	2.0 1.5 1.75 0.8	kɐhẽ	0	87
+61	AIMELE-92-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	92	*night	1233	NIGHT	solodiyabe	solodiyabe	s o l o d i j ɐ b e	false	3 7 5 7 1 7 6 7 1 7	AXBYBYBYBZ	SULUTIJEPE	1	1.S.C 1.U.V 1.L.C 1.U.V 1.T.C 1.I.V 1.J.C 1.E.V 1.P.C 1.E.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 1.3 1.75 0.8	solodijɐbe	0	89
+62	KASUA-92-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	92	*night	1233	NIGHT	yopolotela	yopolotela	j o p o l o t e l ɐ	false	6 7 1 7 5 7 1 7 5 7	AXBYBYBYBZ	JUPULUTELE	8	8.J.C 8.U.V 8.P.C 8.U.V 8.L.C 8.U.V 8.T.C 8.E.V 8.L.C 8.E.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 1.3 1.75 0.8	jopolotelɐ	0	92
+63	ONABASULU-92-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	92	*night	1233	NIGHT	nigili	nigili	n i g i l i	false	4 7 1 7 5 7	AXBYBZ	NIKILI	9	9.N.C 9.I.V 9.K.C 9.I.V 9.L.C 9.I.V	2.0 1.5 1.75 1.3 1.75 0.8	nigili	0	93
+189	BOSAVI-92-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	92	*night	1233	NIGHT	nulu	nulu	n u l u	false	4 7 5 7	AXBZ	NYLY	4	4.N.C 4.Y.V 4.L.C 4.Y.V	2.0 1.5 1.75 0.8	nulu	0	91
+190	KALULI-92-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	92	*night	1233	NIGHT	nulu	nulu	n u l u	false	4 7 5 7	AXBZ	NYLY	7	7.N.C 7.Y.V 7.L.C 7.Y.V	2.0 1.5 1.75 0.8	nulu	0	91
+191	SUNIA-92-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	92	*night	1233	NIGHT	unudu	unudu	u n u d u	false	7 4 7 1 7	XBYBZ	YNYTY	10	10.Y.V 10.N.C 10.Y.V 10.T.C 10.Y.V	1.5 1.75 1.3 1.75 0.8	unudu	0	91
+325	BEAMI-92-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasigi	kasigi	k ɐ s i g i	false	1 7 3 7 1 7	AXBYBZ	KESIKI	2	2.K.C 2.E.V 2.S.C 2.I.V 2.K.C 2.I.V	2.0 1.5 1.75 1.3 1.75 0.8	kɐsigi	0	90
+326	BEDAMINI-92-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasi	kasi	k ɐ s i	false	1 7 3 7	AXBZ	KESI	3	3.K.C 3.E.V 3.S.C 3.I.V	2.0 1.5 1.75 0.8	kɐsi	0	90
+327	EDOLO-92-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasiki	kasiki	k ɐ s i k i	false	1 7 3 7 1 7	AXBYBZ	KESIKI	5	5.K.C 5.E.V 5.S.C 5.I.V 5.K.C 5.I.V	2.0 1.5 1.75 1.3 1.75 0.8	kɐsiki	0	90
+328	ETORO-92-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasigi	kasigi	k ɐ s i g i	false	1 7 3 7 1 7	AXBYBZ	KESIKI	6	6.K.C 6.E.V 6.S.C 6.I.V 6.K.C 6.I.V	2.0 1.5 1.75 1.3 1.75 0.8	kɐsigi	0	90
+64	AIMELE-41-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	41	*nose	1221	NOSE	migi	migi	m i g i	false	4 7 1 7	AXBZ	MIKI	1	1.M.C 1.I.V 1.K.C 1.I.V	2.0 1.5 1.75 0.8	migi	0	94
+65	KASUA-41-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	41	*nose	1221	NOSE	mi	mi	m i	false	4 7	AX	MI	8	8.M.C 8.I.V	2.0 1.5	mi	0	95
+66	ONABASULU-41-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	41	*nose	1221	NOSE	mi*	mi*	m ĩ	false	4 7	AX	MI	9	9.M.C 9.I.V	2.0 1.5	mĩ	0	95
+192	BOSAVI-41-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	41	*nose	1221	NOSE	migi	migi	m i g i	false	4 7 1 7	AXBZ	MIKI	4	4.M.C 4.I.V 4.K.C 4.I.V	2.0 1.5 1.75 0.8	migi	0	94
+193	KALULI-41-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	41	*nose	1221	NOSE	miki	miki	m i k i	false	4 7 1 7	AXBZ	MIKI	7	7.M.C 7.I.V 7.K.C 7.I.V	2.0 1.5 1.75 0.8	miki	0	94
+194	SUNIA-41-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	41	*nose	1221	NOSE	miki	miki	m i k i	false	4 7 1 7	AXBZ	MIKI	10	10.M.C 10.I.V 10.K.C 10.I.V	2.0 1.5 1.75 0.8	miki	0	94
+329	EDOLO-41-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	41	*nose	1221	NOSE	mi	mi	m i	false	4 7	AX	MI	5	5.M.C 5.I.V	2.0 1.5	mi	0	95
+330	ETORO-41-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	41	*nose	1221	NOSE	migoni	migoni	m i g o n i	false	4 7 1 7 4 7	AXBYBZ	MIKUNI	6	6.M.C 6.I.V 6.K.C 6.U.V 6.N.C 6.I.V	2.0 1.5 1.75 1.3 1.75 0.8	migoni	0	94
+67	AIMELE-11-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	11	*one	1493	ONE	ageli	ageli	ɐ g e l i	false	7 1 7 5 7	XBYBZ	EKELI	1	1.E.V 1.K.C 1.E.V 1.L.C 1.I.V	1.5 1.75 1.3 1.75 0.8	ɐgeli	0	96
+68	KASUA-11-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	11	*one	1493	ONE	semetei	semetei	s e m e t e i	false	3 7 4 7 1 7 7	AXBYBYZ	SEMETEI	8	8.S.C 8.E.V 8.M.C 8.E.V 8.T.C 8.E.V 8.I.V	2.0 1.5 1.75 1.3 1.75 1.3 0.8	semetei	0	98
+69	ONABASULU-11-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	11	*one	1493	ONE	agale	agale	ɐ g ɐ l e	false	7 1 7 5 7	XBYBZ	EKELE	9	9.E.V 9.K.C 9.E.V 9.L.C 9.E.V	1.5 1.75 1.3 1.75 0.8	ɐgɐle	0	96
+195	BOSAVI-11-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	agel	agel	ɐ g e l	false	7 1 7 5	XBYN	EKEL	4	4.E.V 4.K.C 4.E.V 4.L.c	1.5 1.75 1.3 0.8	ɐgel	0	96
+196	KALULI-11-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	akel	akel	ɐ k e l	false	7 1 7 5	XBYN	EKEL	7	7.E.V 7.K.C 7.E.V 7.L.c	1.5 1.75 1.3 0.8	ɐkel	0	96
+197	KALULI-11-2	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	imilise	imilise	i m i l i s e	false	7 4 7 5 7 3 7	XBYBYBZ	IMILISE	7	7.I.V 7.M.C 7.I.V 7.L.C 7.I.V 7.S.C 7.E.V	1.5 1.75 1.3 1.75 1.3 1.75 0.8	imilise	0	101
+198	SUNIA-11-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	itidi	itidi	i t i d i	false	7 1 7 1 7	XBYBZ	ITITI	10	10.I.V 10.T.C 10.I.V 10.T.C 10.I.V	1.5 1.75 1.3 1.75 0.8	itidi	0	99
+331	BEAMI-11-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	age	age	ɐ g e	false	7 1 7	XBZ	EKE	2	2.E.V 2.K.C 2.E.V	1.5 1.75 0.8	ɐge	0	96
+332	BEDAMINI-11-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	afai	afai	ɐ f ɐ i	false	7 3 7 7	XBYZ	EBEI	3	3.E.V 3.B.C 3.E.V 3.I.V	1.5 1.75 1.3 0.8	ɐfɐi	0	97
+333	EDOLO-11-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	ake	ake	ɐ k e	false	7 1 7	XBZ	EKE	5	5.E.V 5.K.C 5.E.V	1.5 1.75 0.8	ɐke	0	96
+334	EDOLO-11-2	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	afa*te*	afa*te*	ɐ f ɐ̃ t ẽ	false	7 3 7 1 7	XBYBZ	EBETE	5	5.E.V 5.B.C 5.E.V 5.T.C 5.E.V	1.5 1.75 1.3 1.75 0.8	ɐfɐ̃tẽ	0	100
+335	ETORO-11-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	age	age	ɐ g e	false	7 1 7	XBZ	EKE	6	6.E.V 6.K.C 6.E.V	1.5 1.75 0.8	ɐge	0	96
+70	AIMELE-85-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	85	*path	2252	PATH	togolo	togolo	t o g o l o	false	1 7 1 7 5 7	AXBYBZ	TUKULU	1	1.T.C 1.U.V 1.K.C 1.U.V 1.L.C 1.U.V	2.0 1.5 1.75 1.3 1.75 0.8	togolo	0	102
+71	KASUA-85-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	85	*path	2252	PATH	isu	isu	i s u	false	7 3 7	XBZ	ISY	8	8.I.V 8.S.C 8.Y.V	1.5 1.75 0.8	isu	0	105
+72	ONABASULU-85-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	85	*path	2252	PATH	eno	eno	e n o	false	7 4 7	XBZ	ENU	9	9.E.V 9.N.C 9.U.V	1.5 1.75 0.8	eno	0	106
+199	BOSAVI-85-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	85	*path	2252	PATH	sok	sok	s o k	false	3 7 1	AXN	SUK	4	4.S.C 4.U.V 4.K.c	2.0 1.5 0.8	sok	0	104
+200	KALULI-85-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	85	*path	2252	PATH	th~ok	th~ok	tʰ o k	false	1 7 1	AXN	TUK	7	7.T.C 7.U.V 7.K.c	2.0 1.5 0.8	tʰok	0	104
+201	SUNIA-85-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	85	*path	2252	PATH	tokor	tokor	t o k o r	false	1 7 1 7 5	AXBYN	TUKUR	10	10.T.C 10.U.V 10.K.C 10.U.V 10.R.c	2.0 1.5 1.75 1.3 0.8	tokor	0	107
+336	BEAMI-85-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	idi	idi	i d i	false	7 1 7	XBZ	ITI	2	2.I.V 2.T.C 2.I.V	1.5 1.75 0.8	idi	0	103
+337	BEDAMINI-85-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	logo	logo	l o g o	false	5 7 1 7	AXBZ	LUKU	3	3.L.C 3.U.V 3.K.C 3.U.V	2.0 1.5 1.75 0.8	logo	0	104
+338	BEDAMINI-85-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	nogo	nogo	n o g o	false	4 7 1 7	AXBZ	NUKU	3	3.N.C 3.U.V 3.K.C 3.U.V	2.0 1.5 1.75 0.8	nogo	0	104
+339	EDOLO-85-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	iti	iti	i t i	false	7 1 7	XBZ	ITI	5	5.I.V 5.T.C 5.I.V	1.5 1.75 0.8	iti	0	103
+340	ETORO-85-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	idi	idi	i d i	false	7 1 7	XBZ	ITI	6	6.I.V 6.T.C 6.I.V	1.5 1.75 0.8	idi	0	103
+73	AIMELE-18-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	18	*person	683	PERSON	kolu	kolu	k o l u	false	1 7 5 7	AXBZ	KULY	1	1.K.C 1.U.V 1.L.C 1.Y.V	2.0 1.5 1.75 0.8	kolu	0	108
+74	KASUA-18-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	18	*person	683	PERSON	sena kesale	sena kesale	s e n ɐ k e s ɐ l e	false	3 7 4 7 1 7 3 7 5 7	AXBYBYBYBZ	SENEKESELE	8	8.S.C 8.E.V 8.N.C 8.E.V 8.K.C 8.E.V 8.S.C 8.E.V 8.L.C 8.E.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 1.3 1.75 0.8	senɐkesɐle	0	110
+75	ONABASULU-18-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	18	*person	683	PERSON	inolo	inolo	i n o l o	false	7 4 7 5 7	XBYBZ	INULU	9	9.I.V 9.N.C 9.U.V 9.L.C 9.U.V	1.5 1.75 1.3 1.75 0.8	inolo	0	111
+202	KALULI-18-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	18	*person	683	PERSON	kh~elu	kh~elu	kʰ e l u	false	1 7 5 7	AXBZ	KELY	7	7.K.C 7.E.V 7.L.C 7.Y.V	2.0 1.5 1.75 0.8	kʰelu	0	108
+203	SUNIA-18-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	18	*person	683	PERSON	oseno	oseno	o s e n o	false	7 3 7 4 7	XBYBZ	USENU	10	10.U.V 10.S.C 10.E.V 10.N.C 10.U.V	1.5 1.75 1.3 1.75 0.8	oseno	0	112
+341	EDOLO-18-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	18	*person	683	PERSON	tolo*	tolo*	t o l õ	false	1 7 5 7	AXBZ	TULU	5	5.T.C 5.U.V 5.L.C 5.U.V	2.0 1.5 1.75 0.8	tolõ	0	109
+342	ETORO-18-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	18	*person	683	PERSON	tono	tono	t o n o	false	1 7 4 7	AXBZ	TUNU	6	6.T.C 6.U.V 6.N.C 6.U.V	2.0 1.5 1.75 0.8	tono	0	109
+76	AIMELE-57-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	57	*see	1409	SEE	bobo	bobo	b o b o	false	1 7 1 7	AXBZ	PUPU	1	1.P.C 1.U.V 1.P.C 1.U.V	2.0 1.5 1.75 0.8	bobo	0	113
+77	KASUA-57-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	57	*see	1409	SEE	pota	pota	p o t ɐ	false	1 7 1 7	AXBZ	PUTE	8	8.P.C 8.U.V 8.T.C 8.E.V	2.0 1.5 1.75 0.8	potɐ	0	113
+78	ONABASULU-57-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	57	*see	1409	SEE	ba	ba	b ɐ	false	1 7	AX	PE	9	9.P.C 9.E.V	2.0 1.5	bɐ	0	113
+204	BOSAVI-57-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	boba	boba	b o b ɐ	false	1 7 1 7	AXBZ	PUPE	4	4.P.C 4.U.V 4.P.C 4.E.V	2.0 1.5 1.75 0.8	bobɐ	0	113
+205	BOSAVI-57-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	badabi	badabi	b ɐ d ɐ b i	false	1 7 1 7 1 7	AXBYBZ	PETEPI	4	4.P.C 4.E.V 4.T.C 4.E.V 4.P.C 4.I.V	2.0 1.5 1.75 1.3 1.75 0.8	bɐdɐbi	0	113
+206	BOSAVI-57-3	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	babano	babano	b ɐ b ɐ n o	false	1 7 1 7 4 7	AXBYBZ	PEPENU	4	4.P.C 4.E.V 4.P.C 4.E.V 4.N.C 4.U.V	2.0 1.5 1.75 1.3 1.75 0.8	bɐbɐno	0	113
+207	BOSAVI-57-4	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	baba	baba	b ɐ b ɐ	false	1 7 1 7	AXBZ	PEPE	4	4.P.C 4.E.V 4.P.C 4.E.V	2.0 1.5 1.75 0.8	bɐbɐ	0	113
+208	KALULI-57-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	papa	papa	p ɐ p ɐ	false	1 7 1 7	AXBZ	PEPE	7	7.P.C 7.E.V 7.P.C 7.E.V	2.0 1.5 1.75 0.8	pɐpɐ	0	113
+209	SUNIA-57-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	bo	bo	b o	false	1 7	AX	PU	10	10.P.C 10.U.V	2.0 1.5	bo	1	113
+343	BEAMI-57-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	peyaha	peyaha	p e j ɐ h ɐ	false	1 7 6 7 3 7	AXBYBZ	PEJEHE	2	2.P.C 2.E.V 2.J.C 2.E.V 2.H.C 2.E.V	2.0 1.5 1.75 1.3 1.75 0.8	pejɐhɐ	0	113
+344	BEDAMINI-57-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	pama	pama	p ɐ m ɐ	false	1 7 4 7	AXBZ	PEME	3	3.P.C 3.E.V 3.M.C 3.E.V	2.0 1.5 1.75 0.8	pɐmɐ	0	113
+345	BEDAMINI-57-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	bama	bama	b ɐ m ɐ	false	1 7 4 7	AXBZ	PEME	3	3.P.C 3.E.V 3.M.C 3.E.V	2.0 1.5 1.75 0.8	bɐmɐ	0	113
+346	EDOLO-57-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	peasepe	peasepe	p e ɐ s e p e	false	1 7 7 3 7 1 7	AXYBYBZ	PEESEPE	5	5.P.C 5.E.V 5.E.V 5.S.C 5.E.V 5.P.C 5.E.V	2.0 1.5 1.3 1.75 1.3 1.75 0.8	peɐsepe	0	113
+347	ETORO-57-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	peyaha	peyaha	p e j ɐ h ɐ	false	1 7 6 7 3 7	AXBYBZ	PEJEHE	6	6.P.C 6.E.V 6.J.C 6.E.V 6.H.C 6.E.V	2.0 1.5 1.75 1.3 1.75 0.8	pejɐhɐ	0	113
+79	AIMELE-28-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	28	*skin	763	SKIN	ka*fu	ka*fu	k ɐ̃ f u	false	1 7 3 7	AXBZ	KEBY	1	1.K.C 1.E.V 1.B.C 1.Y.V	2.0 1.5 1.75 0.8	kɐ̃fu	0	114
+80	KASUA-28-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	28	*skin	763	SKIN	kapo	kapo	k ɐ p o	false	1 7 1 7	AXBZ	KEPU	8	8.K.C 8.E.V 8.P.C 8.U.V	2.0 1.5 1.75 0.8	kɐpo	0	114
+81	ONABASULU-28-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	28	*skin	763	SKIN	tomola	tomola	t o m o l ɐ	false	1 7 4 7 5 7	AXBYBZ	TUMULE	9	9.T.C 9.U.V 9.M.C 9.U.V 9.L.C 9.E.V	2.0 1.5 1.75 1.3 1.75 0.8	tomolɐ	0	118
+210	BOSAVI-28-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	28	*skin	763	SKIN	dogof	dogof	d o g o f	false	1 7 1 7 3	AXBYN	TUKUB	4	4.T.C 4.U.V 4.K.C 4.U.V 4.B.c	2.0 1.5 1.75 1.3 0.8	dogof	0	116
+211	KALULI-28-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	28	*skin	763	SKIN	tokof	tokof	t o k o f	false	1 7 1 7 3	AXBYN	TUKUB	7	7.T.C 7.U.V 7.K.C 7.U.V 7.B.c	2.0 1.5 1.75 1.3 0.8	tokof	0	116
+212	SUNIA-28-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	28	*skin	763	SKIN	okof	okof	o k o f	false	7 1 7 3	XBYN	UKUB	10	10.U.V 10.K.C 10.U.V 10.B.c	1.5 1.75 1.3 0.8	okof	0	116
+348	BEAMI-28-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kodofo	kodofo	k o d o f o	false	1 7 1 7 3 7	AXBYBZ	KUTUBU	2	2.K.C 2.U.V 2.T.C 2.U.V 2.B.C 2.U.V	2.0 1.5 1.75 1.3 1.75 0.8	kodofo	0	115
+349	BEDAMINI-28-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kadofo	kadofo	k ɐ d o f o	false	1 7 1 7 3 7	AXBYBZ	KETUBU	3	3.K.C 3.E.V 3.T.C 3.U.V 3.B.C 3.U.V	2.0 1.5 1.75 1.3 1.75 0.8	kɐdofo	0	115
+350	EDOLO-28-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kafoto	kafoto	k ɐ f o t o	false	1 7 3 7 1 7	AXBYBZ	KEBUTU	5	5.K.C 5.E.V 5.B.C 5.U.V 5.T.C 5.U.V	2.0 1.5 1.75 1.3 1.75 0.8	kɐfoto	0	117
+351	ETORO-28-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kodofo	kodofo	k o d o f o	false	1 7 1 7 3 7	AXBYBZ	KUTUBU	6	6.K.C 6.U.V 6.T.C 6.U.V 6.B.C 6.U.V	2.0 1.5 1.75 1.3 1.75 0.8	kodofo	0	115
+82	AIMELE-74-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	74	*star	1430	STAR	bilimu	bilimu	b i l i m u	false	1 7 5 7 4 7	AXBYBZ	PILIMY	1	1.P.C 1.I.V 1.L.C 1.I.V 1.M.C 1.Y.V	2.0 1.5 1.75 1.3 1.75 0.8	bilimu	0	119
+83	KASUA-74-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	74	*star	1430	STAR	yepisini	yepisini	j e p i s i n i	false	6 7 1 7 3 7 4 7	AXBYBYBZ	JEPISINI	8	8.J.C 8.E.V 8.P.C 8.I.V 8.S.C 8.I.V 8.N.C 8.I.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	jepisini	0	123
+84	ONABASULU-74-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	74	*star	1430	STAR	sigabi	sigabi	s i g ɐ b i	false	3 7 1 7 1 7	AXBYBZ	SIKEPI	9	9.S.C 9.I.V 9.K.C 9.E.V 9.P.C 9.I.V	2.0 1.5 1.75 1.3 1.75 0.8	sigɐbi	0	120
+213	BOSAVI-74-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	74	*star	1430	STAR	samin	samin	s ɐ m i n	false	3 7 4 7 4	AXBYN	SEMIN	4	4.S.C 4.E.V 4.M.C 4.I.V 4.N.c	2.0 1.5 1.75 1.3 0.8	sɐmin	0	122
+214	KALULI-74-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	74	*star	1430	STAR	th~amin	th~amin	tʰ ɐ m i n	false	1 7 4 7 4	AXBYN	TEMIN	7	7.T.C 7.E.V 7.M.C 7.I.V 7.N.c	2.0 1.5 1.75 1.3 0.8	tʰɐmin	0	122
+215	SUNIA-74-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	74	*star	1430	STAR	themi	themi	t h e m i	false	1 3 7 4 7	ACXBZ	THEMI	10	10.T.C 10.H.C 10.E.V 10.M.C 10.I.V	2.0 1.5 1.5 1.75 0.8	themi	0	124
+352	BEAMI-74-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	sikabi	sikabi	s i k ɐ b i	false	3 7 1 7 1 7	AXBYBZ	SIKEPI	2	2.S.C 2.I.V 2.K.C 2.E.V 2.P.C 2.I.V	2.0 1.5 1.75 1.3 1.75 0.8	sikɐbi	0	120
+353	BEDAMINI-74-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	gasumuni	gasumuni	g ɐ s u m u n i	false	1 7 3 7 4 7 4 7	AXBYBYBZ	KESYMYNI	3	3.K.C 3.E.V 3.S.C 3.Y.V 3.M.C 3.Y.V 3.N.C 3.I.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	gɐsumuni	0	121
+354	BEDAMINI-74-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	kasumuni	kasumuni	k ɐ s u m u n i	false	1 7 3 7 4 7 4 7	AXBYBYBZ	KESYMYNI	3	3.K.C 3.E.V 3.S.C 3.Y.V 3.M.C 3.Y.V 3.N.C 3.I.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	kɐsumuni	0	121
+355	EDOLO-74-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	kasumli*	kasumli*	k ɐ s u m l ĩ	false	1 7 3 7 4 5 7	AXBYBCZ	KESYMLI	5	5.K.C 5.E.V 5.S.C 5.Y.V 5.M.C 5.L.C 5.I.V	2.0 1.5 1.75 1.3 1.75 1.5 0.8	kɐsumlĩ	0	121
+356	ETORO-74-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	sikabi	sikabi	s i k ɐ b i	false	3 7 1 7 1 7	AXBYBZ	SIKEPI	6	6.S.C 6.I.V 6.K.C 6.E.V 6.P.C 6.I.V	2.0 1.5 1.75 1.3 1.75 0.8	sikɐbi	0	120
+85	AIMELE-77-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	77	*stone	857	STONE	doa	doa	d o ɐ	false	1 7 7	AXZ	TUE	1	1.T.C 1.U.V 1.E.V	2.0 1.5 0.8	doɐ	0	125
+86	KASUA-77-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	77	*stone	857	STONE	etewa	etewa	e t e w ɐ	false	7 1 7 6 7	XBYBZ	ETEWE	8	8.E.V 8.T.C 8.E.V 8.W.C 8.E.V	1.5 1.75 1.3 1.75 0.8	etewɐ	0	125
+87	ONABASULU-77-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	77	*stone	857	STONE	abane	abane	ɐ b ɐ n e	false	7 1 7 4 7	XBYBZ	EPENE	9	9.E.V 9.P.C 9.E.V 9.N.C 9.E.V	1.5 1.75 1.3 1.75 0.8	ɐbɐne	0	128
+216	KALULI-77-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	77	*stone	857	STONE	u	u	u	false	7	X	Y	7	7.Y.V	1.5	u	0	127
+217	SUNIA-77-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	77	*stone	857	STONE	ka	ka	k ɐ	false	1 7	AX	KE	10	10.K.C 10.E.V	2.0 1.5	kɐ	0	129
+357	BEAMI-77-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	igi	igi	i g i	false	7 1 7	XBZ	IKI	2	2.I.V 2.K.C 2.I.V	1.5 1.75 0.8	igi	0	126
+358	BEDAMINI-77-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	igi	igi	i g i	false	7 1 7	XBZ	IKI	3	3.I.V 3.K.C 3.I.V	1.5 1.75 0.8	igi	0	126
+359	EDOLO-77-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	iki	iki	i k i	false	7 1 7	XBZ	IKI	5	5.I.V 5.K.C 5.I.V	1.5 1.75 0.8	iki	0	126
+360	ETORO-77-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	igi	igi	i g i	false	7 1 7	XBZ	IKI	6	6.I.V 6.K.C 6.I.V	1.5 1.75 0.8	igi	0	126
+88	AIMELE-72-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	72	*sun	1343	SUN	ofo	ofo	o f o	false	7 3 7	XBZ	UBU	1	1.U.V 1.B.C 1.U.V	1.5 1.75 0.8	ofo	0	130
+89	KASUA-72-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	72	*sun	1343	SUN	opo	opo	o p o	false	7 1 7	XBZ	UPU	8	8.U.V 8.P.C 8.U.V	1.5 1.75 0.8	opo	0	130
+90	ONABASULU-72-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	72	*sun	1343	SUN	holo	holo	h o l o	false	3 7 5 7	AXBZ	HULU	9	9.H.C 9.U.V 9.L.C 9.U.V	2.0 1.5 1.75 0.8	holo	0	132
+218	BOSAVI-72-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	72	*sun	1343	SUN	of	of	o f	false	7 3	XN	UB	4	4.U.V 4.B.c	1.5 0.8	of	0	130
+219	KALULI-72-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	72	*sun	1343	SUN	of	of	o f	false	7 3	XN	UB	7	7.U.V 7.B.c	1.5 0.8	of	0	130
+220	SUNIA-72-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	72	*sun	1343	SUN	of	of	o f	false	7 3	XN	UB	10	10.U.V 10.B.c	1.5 0.8	of	0	130
+361	BEAMI-72-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false	7 3 7	XBZ	ESU	2	2.E.V 2.S.C 2.U.V	1.5 1.75 0.8	eso	0	131
+362	BEDAMINI-72-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false	7 3 7	XBZ	ESU	3	3.E.V 3.S.C 3.U.V	1.5 1.75 0.8	eso	0	131
+363	EDOLO-72-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false	7 3 7	XBZ	ESU	5	5.E.V 5.S.C 5.U.V	1.5 1.75 0.8	eso	0	131
+364	ETORO-72-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false	7 3 7	XBZ	ESU	6	6.E.V 6.S.C 6.U.V	1.5 1.75 0.8	eso	0	131
+91	AIMELE-44-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	44	*tongue	1205	TONGUE	dabise*	dabise*	d ɐ b i s ẽ	false	1 7 1 7 3 7	AXBYBZ	TEPISE	1	1.T.C 1.E.V 1.P.C 1.I.V 1.S.C 1.E.V	2.0 1.5 1.75 1.3 1.75 0.8	dɐbisẽ	0	133
+92	KASUA-44-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	44	*tongue	1205	TONGUE	tepe	tepe	t e p e	false	1 7 1 7	AXBZ	TEPE	8	8.T.C 8.E.V 8.P.C 8.E.V	2.0 1.5 1.75 0.8	tepe	0	133
+93	ONABASULU-44-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	44	*tongue	1205	TONGUE	Eane	Eane	a ɐ n e	false	7 7 4 7	XYBZ	AENE	9	9.A.V 9.E.V 9.N.C 9.E.V	1.5 1.3 1.75 0.8	aɐne	0	136
+221	BOSAVI-44-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	44	*tongue	1205	TONGUE	eyan	eyan	e j ɐ n	false	7 6 7 4	XBYN	EJEN	4	4.E.V 4.J.C 4.E.V 4.N.c	1.5 1.75 1.3 0.8	ejɐn	0	135
+222	KALULI-44-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	44	*tongue	1205	TONGUE	en	en	e n	false	7 4	XN	EN	7	7.E.V 7.N.c	1.5 0.8	en	0	135
+223	SUNIA-44-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	44	*tongue	1205	TONGUE	tobise	tobise	t o b i s e	false	1 7 1 7 3 7	AXBYBZ	TUPISE	10	10.T.C 10.U.V 10.P.C 10.I.V 10.S.C 10.E.V	2.0 1.5 1.75 1.3 1.75 0.8	tobise	0	133
+365	BEAMI-44-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eli	eli	e l i	false	7 5 7	XBZ	ELI	2	2.E.V 2.L.C 2.I.V	1.5 1.75 0.8	eli	0	134
+366	BEDAMINI-44-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eri	eri	e r i	false	7 5 7	XBZ	ERI	3	3.E.V 3.R.C 3.I.V	1.5 1.75 0.8	eri	0	134
+367	BEDAMINI-44-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	kona*su	kona*su	k o n ɐ̃ s u	false	1 7 4 7 3 7	AXBYBZ	KUNESY	3	3.K.C 3.U.V 3.N.C 3.E.V 3.S.C 3.Y.V	2.0 1.5 1.75 1.3 1.75 0.8	konɐ̃su	0	137
+368	EDOLO-44-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eli*	eli*	e l ĩ	false	7 5 7	XBZ	ELI	5	5.E.V 5.L.C 5.I.V	1.5 1.75 0.8	elĩ	0	134
+369	ETORO-44-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eli	eli	e l i	false	7 5 7	XBZ	ELI	6	6.E.V 6.L.C 6.I.V	1.5 1.75 0.8	eli	0	134
+94	AIMELE-43-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	43	*tooth	1380	TOOTH	bisi	bisi	b i s i	false	1 7 3 7	AXBZ	PISI	1	1.P.C 1.I.V 1.S.C 1.I.V	2.0 1.5 1.75 0.8	bisi	0	138
+95	KASUA-43-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false	1 7 3 7	AXBZ	PESE	8	8.P.C 8.E.V 8.S.C 8.E.V	2.0 1.5 1.75 0.8	pese	0	138
+96	ONABASULU-43-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false	1 7 3 7	AXBZ	PESE	9	9.P.C 9.E.V 9.S.C 9.E.V	2.0 1.5 1.75 0.8	pese	0	138
+224	BOSAVI-43-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	43	*tooth	1380	TOOTH	bes	bes	b e s	false	1 7 3	AXN	PES	4	4.P.C 4.E.V 4.S.c	2.0 1.5 0.8	bes	0	138
+225	KALULI-43-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	43	*tooth	1380	TOOTH	pis	pis	p i s	false	1 7 3	AXN	PIS	7	7.P.C 7.I.V 7.S.c	2.0 1.5 0.8	pis	1	138
+226	SUNIA-43-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	43	*tooth	1380	TOOTH	oneno	oneno	o n e n o	false	7 4 7 4 7	XBYBZ	UNENU	10	10.U.V 10.N.C 10.E.V 10.N.C 10.U.V	1.5 1.75 1.3 1.75 0.8	oneno	0	139
+370	BEAMI-43-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false	1 7 3 7	AXBZ	PESE	2	2.P.C 2.E.V 2.S.C 2.E.V	2.0 1.5 1.75 0.8	pese	0	138
+371	BEAMI-43-2	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	bese	bese	b e s e	false	1 7 3 7	AXBZ	PESE	2	2.P.C 2.E.V 2.S.C 2.E.V	2.0 1.5 1.75 0.8	bese	0	138
+372	BEDAMINI-43-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false	1 7 3 7	AXBZ	PESE	3	3.P.C 3.E.V 3.S.C 3.E.V	2.0 1.5 1.75 0.8	pese	0	138
+373	BEDAMINI-43-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pa*sa*	pa*sa*	p ɐ̃ s ɐ̃	false	1 7 3 7	AXBZ	PESE	3	3.P.C 3.E.V 3.S.C 3.E.V	2.0 1.5 1.75 0.8	pɐ̃sɐ̃	0	138
+374	EDOLO-43-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false	1 7 3 7	AXBZ	PESE	5	5.P.C 5.E.V 5.S.C 5.E.V	2.0 1.5 1.75 0.8	pese	1	138
+375	ETORO-43-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false	1 7 3 7	AXBZ	PESE	6	6.P.C 6.E.V 6.S.C 6.E.V	2.0 1.5 1.75 0.8	pese	0	138
+376	ETORO-43-2	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	bese	bese	b e s e	false	1 7 3 7	AXBZ	PESE	6	6.P.C 6.E.V 6.S.C 6.E.V	2.0 1.5 1.75 0.8	bese	0	138
+97	AIMELE-23-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	23	*tree	906	TREE	yebe	yebe	j e b e	false	6 7 1 7	AXBZ	JEPE	1	1.J.C 1.E.V 1.P.C 1.E.V	2.0 1.5 1.75 0.8	jebe	0	140
+98	KASUA-23-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	23	*tree	906	TREE	i	i	i	false	7	X	I	8	8.I.V	1.5	i	0	141
+99	ONABASULU-23-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	23	*tree	906	TREE	i	i	i	false	7	X	I	9	9.I.V	1.5	i	0	141
+227	BOSAVI-23-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	23	*tree	906	TREE	i	i	i	false	7	X	I	4	4.I.V	1.5	i	0	141
+228	KALULI-23-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	23	*tree	906	TREE	i	i	i	false	7	X	I	7	7.I.V	1.5	i	0	141
+229	SUNIA-23-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	23	*tree	906	TREE	yep	yep	j e p	false	6 7 1	AXN	JEP	10	10.J.C 10.E.V 10.P.c	2.0 1.5 0.8	jep	0	140
+377	BEAMI-23-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	i	i	i	false	7	X	I	2	2.I.V	1.5	i	0	141
+378	BEDAMINI-23-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	ifa	ifa	i f ɐ	false	7 3 7	XBZ	IBE	3	3.I.V 3.B.C 3.E.V	1.5 1.75 0.8	ifɐ	0	142
+379	EDOLO-23-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	i	i	i	false	7	X	I	5	5.I.V	1.5	i	0	141
+380	ETORO-23-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	i	i	i	false	7	X	I	6	6.I.V	1.5	i	0	141
+100	AIMELE-12-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	12	*two	1498	TWO	ageleweli	ageleweli	ɐ g e l e w e l i	false	7 1 7 5 7 6 7 5 7	XBYBYBYBZ	EKELEWELI	1	1.E.V 1.K.C 1.E.V 1.L.C 1.E.V 1.W.C 1.E.V 1.L.C 1.I.V	1.5 1.75 1.3 1.75 1.3 1.75 1.3 1.75 0.8	ɐgeleweli	0	143
+101	KASUA-12-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	12	*two	1498	TWO	elipei	elipei	e l i p e i	false	7 5 7 1 7 7	XBYBYZ	ELIPEI	8	8.E.V 8.L.C 8.I.V 8.P.C 8.E.V 8.I.V	1.5 1.75 1.3 1.75 1.3 0.8	elipei	0	148
+102	ONABASULU-12-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	12	*two	1498	TWO	aida	aida	ɐ i d ɐ	false	7 7 1 7	XYBZ	EITE	9	9.E.V 9.I.V 9.T.C 9.E.V	1.5 1.3 1.75 0.8	ɐidɐ	0	149
+230	BOSAVI-12-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	andeb	andeb	ɐ n d e b	false	7 4 1 7 1	XMBYN	ENTEP	4	4.E.V 4.N.c 4.T.C 4.E.V 4.P.c	1.5 1.1 1.75 1.3 0.8	ɐndeb	0	146
+231	KALULI-12-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	atep	atep	ɐ t e p	false	7 1 7 1	XBYN	ETEP	7	7.E.V 7.T.C 7.E.V 7.P.c	1.5 1.75 1.3 0.8	ɐtep	0	147
+232	KALULI-12-2	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	ele	ele	e l e	false	7 5 7	XBZ	ELE	7	7.E.V 7.L.C 7.E.V	1.5 1.75 0.8	ele	0	150
+233	SUNIA-12-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	ani	ani	ɐ n i	false	7 4 7	XBZ	ENI	10	10.E.V 10.N.C 10.I.V	1.5 1.75 0.8	ɐni	0	145
+381	BEAMI-12-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	agedu	agedu	ɐ g e d u	false	7 1 7 1 7	XBYBZ	EKETY	2	2.E.V 2.K.C 2.E.V 2.T.C 2.Y.V	1.5 1.75 1.3 1.75 0.8	ɐgedu	0	144
+382	BEDAMINI-12-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	aduna*	aduna*	ɐ d u n ɐ̃	false	7 1 7 4 7	XBYBZ	ETYNE	3	3.E.V 3.T.C 3.Y.V 3.N.C 3.E.V	1.5 1.75 1.3 1.75 0.8	ɐdunɐ̃	0	145
+383	EDOLO-12-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	aketu	aketu	ɐ k e t u	false	7 1 7 1 7	XBYBZ	EKETY	5	5.E.V 5.K.C 5.E.V 5.T.C 5.Y.V	1.5 1.75 1.3 1.75 0.8	ɐketu	0	144
+384	EDOLO-12-2	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	a*uta*	a*uta*	ɐ̃ u t ɐ̃	false	7 7 1 7	XYBZ	EYTE	5	5.E.V 5.Y.V 5.T.C 5.E.V	1.5 1.3 1.75 0.8	ɐ̃utɐ̃	0	149
+385	ETORO-12-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	agedu	agedu	ɐ g e d u	false	7 1 7 1 7	XBYBZ	EKETY	6	6.E.V 6.K.C 6.E.V 6.T.C 6.Y.V	1.5 1.75 1.3 1.75 0.8	ɐgedu	0	144
+103	AIMELE-75-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	75	*water	948	WATER	ha*ni	ha*ni	h ɐ̃ n i	false	3 7 4 7	AXBZ	HENI	1	1.H.C 1.E.V 1.N.C 1.I.V	2.0 1.5 1.75 0.8	hɐ̃ni	0	151
+104	KASUA-75-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	75	*water	948	WATER	hano	hano	h ɐ n o	false	3 7 4 7	AXBZ	HENU	8	8.H.C 8.E.V 8.N.C 8.U.V	2.0 1.5 1.75 0.8	hɐno	0	151
+105	ONABASULU-75-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	75	*water	948	WATER	hano	hano	h ɐ n o	false	3 7 4 7	AXBZ	HENU	9	9.H.C 9.E.V 9.N.C 9.U.V	2.0 1.5 1.75 0.8	hɐno	0	151
+234	BOSAVI-75-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	75	*water	948	WATER	hon	hon	h o n	false	3 7 4	AXN	HUN	4	4.H.C 4.U.V 4.N.c	2.0 1.5 0.8	hon	0	151
+235	KALULI-75-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	75	*water	948	WATER	hon	hon	h o n	false	3 7 4	AXN	HUN	7	7.H.C 7.U.V 7.N.c	2.0 1.5 0.8	hon	0	151
+236	SUNIA-75-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	75	*water	948	WATER	mo*	mo*	m õ	false	4 7	AX	MU	10	10.M.C 10.U.V	2.0 1.5	mõ	0	154
+386	BEAMI-75-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	o*ta*	o*ta*	õ t ɐ̃	false	7 1 7	XBZ	UTE	2	2.U.V 2.T.C 2.E.V	1.5 1.75 0.8	õtɐ̃	0	152
+387	BEDAMINI-75-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	ha*lo	ha*lo	h ɐ̃ l o	false	3 7 5 7	AXBZ	HELU	3	3.H.C 3.E.V 3.L.C 3.U.V	2.0 1.5 1.75 0.8	hɐ̃lo	0	153
+388	BEDAMINI-75-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	haro*	haro*	h ɐ r õ	false	3 7 5 7	AXBZ	HERU	3	3.H.C 3.E.V 3.R.C 3.U.V	2.0 1.5 1.75 0.8	hɐrõ	0	153
+389	EDOLO-75-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	o*ta*	o*ta*	õ t ɐ̃	false	7 1 7	XBZ	UTE	5	5.U.V 5.T.C 5.E.V	1.5 1.75 0.8	õtɐ̃	0	152
+390	ETORO-75-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	o*ta*	o*ta*	õ t ɐ̃	false	7 1 7	XBZ	UTE	6	6.U.V 6.T.C 6.E.V	1.5 1.75 0.8	õtɐ̃	0	152
+106	AIMELE-3-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	3	*we	1212	WE	ni	ni	n i	false	4 7	AX	NI	1	1.N.C 1.I.V	2.0 1.5	ni	0	155
+107	KASUA-3-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	3	*we	1212	WE	niwa	niwa	n i w ɐ	false	4 7 6 7	AXBZ	NIWE	8	8.N.C 8.I.V 8.W.C 8.E.V	2.0 1.5 1.75 0.8	niwɐ	0	155
+108	ONABASULU-3-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	3	*we	1212	WE	nini	nini	n i n i	false	4 7 4 7	AXBZ	NINI	9	9.N.C 9.I.V 9.N.C 9.I.V	2.0 1.5 1.75 0.8	nini	0	155
+237	KALULI-3-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	3	*we	1212	WE	nio	nio	n i o	false	4 7 7	AXZ	NIU	7	7.N.C 7.I.V 7.U.V	2.0 1.5 0.8	nio	0	155
+238	SUNIA-3-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	3	*we	1212	WE	niLi	niLi	n i ʎ i	false	4 7 5 7	AXBZ	NILI	10	10.N.C 10.I.V 10.L.C 10.I.V	2.0 1.5 1.75 0.8	niʎi	0	155
+391	BEAMI-3-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nini	nini	n i n i	false	4 7 4 7	AXBZ	NINI	2	2.N.C 2.I.V 2.N.C 2.I.V	2.0 1.5 1.75 0.8	nini	0	155
+392	BEDAMINI-3-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nini	nini	n i n i	false	4 7 4 7	AXBZ	NINI	3	3.N.C 3.I.V 3.N.C 3.I.V	2.0 1.5 1.75 0.8	nini	0	155
+393	BEDAMINI-3-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	ni*ni*	ni*ni*	n ĩ n ĩ	false	4 7 4 7	AXBZ	NINI	3	3.N.C 3.I.V 3.N.C 3.I.V	2.0 1.5 1.75 0.8	nĩnĩ	0	155
+394	EDOLO-3-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nili*	nili*	n i l ĩ	false	4 7 5 7	AXBZ	NILI	5	5.N.C 5.I.V 5.L.C 5.I.V	2.0 1.5 1.75 0.8	nilĩ	0	155
+395	ETORO-3-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nini	nini	n i n i	false	4 7 4 7	AXBZ	NINI	6	6.N.C 6.I.V 6.N.C 6.I.V	2.0 1.5 1.75 0.8	nini	0	155
+109	AIMELE-2-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	2	*you	1215	THOU	ge	ge	g e	false	1 7	AX	KE	1	1.K.C 1.E.V	2.0 1.5	ge	0	156
+110	KASUA-2-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	2	*you	1215	THOU	kewa	kewa	k e w ɐ	false	1 7 6 7	AXBZ	KEWE	8	8.K.C 8.E.V 8.W.C 8.E.V	2.0 1.5 1.75 0.8	kewɐ	0	156
+111	ONABASULU-2-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	2	*you	1215	THOU	ka	ka	k ɐ	false	1 7	AX	KE	9	9.K.C 9.E.V	2.0 1.5	kɐ	0	156
+239	KALULI-2-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	2	*you	1215	THOU	ke	ke	k e	false	1 7	AX	KE	7	7.K.C 7.E.V	2.0 1.5	ke	0	156
+240	SUNIA-2-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	2	*you	1215	THOU	ge	ge	g e	false	1 7	AX	KE	10	10.K.C 10.E.V	2.0 1.5	ge	0	156
+396	BEAMI-2-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false	1 7	AX	TI	2	2.T.C 2.I.V	2.0 1.5	ti	0	157
+397	BEDAMINI-2-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false	1 7	AX	TI	3	3.T.C 3.I.V	2.0 1.5	ti	0	157
+398	BEDAMINI-2-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	tiri	tiri	t i r i	false	1 7 5 7	AXBZ	TIRI	3	3.T.C 3.I.V 3.R.C 3.I.V	2.0 1.5 1.75 0.8	tiri	0	158
+399	EDOLO-2-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false	1 7	AX	TI	5	5.T.C 5.I.V	2.0 1.5	ti	0	157
+400	ETORO-2-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false	1 7	AX	TI	6	6.T.C 6.I.V	2.0 1.5	ti	0	157
+# Created using the LexStat class of LingPy-2.6.9
+# Parameters: 2:1_1.00_10000_0.70_global-2-0.50:local-1-0.50_0.30__T_shuffle_False:upgma:-2_0.7_0.00_-5.00
+# Cluster: lexstat_infomap_0.55
