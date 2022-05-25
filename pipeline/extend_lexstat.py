@@ -5,6 +5,7 @@ from tempfile import NamedTemporaryFile
 import csv
 import itertools
 import random
+from importlib_metadata import Pair
 
 # Import 3rd party libraries
 from lingpy import LexStat
@@ -13,7 +14,7 @@ import igraph
 from build_lang_map import BASE_PATH
 
 # Whether to use the extended lexstat method or grab data from other sources
-USE_ELEXSTAT = False
+USE_ELEXSTAT = True
 
 
 def write_wordlist(wordlist):
@@ -273,14 +274,7 @@ def elexstat(
             )
         else:
             # large dataset, dont use elexstat
-
-            # currently reusing data from Jäger's worldtrees
-            with open(BASE_PATH / "etc" / "asjp17Clustered.csv", encoding="utf-8") as h:
-                jaeger = list(csv.DictReader(h))
-
-            # print(jaeger[:100])
-            # print(wordlist[:100])
-            print(f"SKIPPING {output}...")
+            pass
     else:
         lex = LexStat(wordlist_file)
         lex.get_scorer(runs=runs)
