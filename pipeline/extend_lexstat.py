@@ -5,7 +5,6 @@ from tempfile import NamedTemporaryFile
 import csv
 import itertools
 import random
-from importlib_metadata import Pair
 
 # Import 3rd party libraries
 from lingpy import LexStat
