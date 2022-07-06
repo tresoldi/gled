@@ -1,33 +1,26 @@
 # A Global Lexical Dataset (GLED) with cognate annotation and phonological alignments
 
-[![Release](https://img.shields.io/badge/Release-20220127-informational)](https://img.shields.io/badge/Release-20220127-informational)
-[![Lemmas](https://img.shields.io/badge/Lemmas-275340-success)](https://img.shields.io/badge/Lemmas-275340-success)
-[![Languages](https://img.shields.io/badge/Languages-6447-success)](https://img.shields.io/badge/Languages-6447-success)
+[![Release](https://img.shields.io/badge/Release-20220706-informational)](https://img.shields.io/badge/Release-20220706-informational)
+[![Lemmas](https://img.shields.io/badge/Lemmas-275894-success)](https://img.shields.io/badge/Lemmas-275894-success)
+[![Languages](https://img.shields.io/badge/Languages-6449-success)](https://img.shields.io/badge/Languages-6449-success)
 [![Languages](https://img.shields.io/badge/Families-238-success)](https://img.shields.io/badge/Families-238-success)
-[![Cognatesets](https://img.shields.io/badge/Cognatesets-91608-success)](https://img.shields.io/badge/Cognatesets-91608-success)
-[![Tokens](https://img.shields.io/badge/Tokens-2056987-success)](https://img.shields.io/badge/Tokens-2056987-success)
+[![Cognatesets](https://img.shields.io/badge/Cognatesets-89575-success)](https://img.shields.io/badge/Cognatesets-89575-success)
+[![Tokens](https://img.shields.io/badge/Tokens-2064717-success)](https://img.shields.io/badge/Tokens-2064717-success)
 
 [![CC-BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
 [![DOI](https://zenodo.org/badge/452418748.svg)](https://zenodo.org/badge/latestdoi/452418748)
 
-This repository comprises a dataset developed from a subset of ASJP, in which
-all lemmas are given in a broad phonological transcription, automatically
-annotated for cognacy, and phonologically aligned. Per-family NEXUS files
-with binary annotation of presence/absence of cognate sets are also
-available. The dataset is intended to facilitate prototyping
-studies and methods in quantitative historical linguistics, especially those
-requiring phonological data.
-
 ## Statistics
 
-The 20220127 release comprises:
+The 20220706 release comprises:
 
-  - Entries: 275340
-  - Doculects: 6447
+  - Entries: 275894
+  - Doculects: 6449
   - Families: 238
-  - Cognate sets: 91608
-  - Tokens: 2056987
-  - Mean cognate set size: 3.01
+  - Cognate sets: 89575
+  - Tokens: 2064717
+  - Mean cognate set size: 3.08
+
 
 ## Contents
 
@@ -151,6 +144,10 @@ automatic alignment is likewise subject to errors, even more when an alignment i
 lemmas which don't appear to fit to their cognate set.
 
 ## Changelog
+
+Release 20220706:
+  - Second public release, improvements to language mapping and to pipeline in line
+    with future work.
 
 Release 20220127:
   - First public release.
