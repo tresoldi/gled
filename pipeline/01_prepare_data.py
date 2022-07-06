@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Script for preparing wordlists from ASJP and NorthEuralex.
+Script for preparing wordlists from ASJP.
 """
 
 # TODO: implement custom language filter (remove some duplicates, remove
@@ -56,8 +56,10 @@ def _read_language_data(args, languoids):
         for row in csv.DictReader(csvfile):
             # If there is a glottocode, just extend the mapping
             if row["PROXY"]:
-                proxy[row["NAME"]] = (row["PROXY"], row["GLOTTOCODE"])
+                # Use one existing language as a proxy for the current one
+                proxy[row["NAME"]] = row["PROXY"]
             else:
+                # We override any mapping of ASJP NAME to our own GLOTTOCODE
                 custom[row["NAME"]] = row["GLOTTOCODE"]
 
     # Read the language data
@@ -73,21 +75,21 @@ def _read_language_data(args, languoids):
                 row["Glottocode"],
             )
 
-            lineage_0, lineage_1, lineage_2 = "", "", ""
-            isolate = ""
-            glottolog_name = ""
-            glottocode = ""
-
+            languoid = None
+            glottocode = None
             if row["Name"] in custom:
                 glottocode = custom[row["Name"]]
                 languoid = languoids.get(glottocode)
             elif row["Name"] in proxy:
-                glottocode = "*" + row["Name"].lower()
-                languoid = languoids.get(proxy[row["Name"]][0])
+                glottocode = "*" + row["Name"].lower()  # build a fake glottocode (ID)
+                languoid = languoids.get(proxy[row["Name"]])
             else:
                 glottocode = row["Glottocode"]
                 languoid = languoids.get(row["Glottocode"])
 
+            lineage_0, lineage_1, lineage_2 = "", "", ""
+            isolate = ""
+            glottolog_name = ""
             if not languoid:
                 logging.info("Skipping unmapped language `%s`...", row["Name"])
                 unmapped.append(row["Name"])
@@ -154,7 +156,7 @@ def read_cldf_data(args, languoids):
                 logging.info("Processing form #%i...", idx + 1)
 
             # Skip over loans if requested
-            if args.keep_loans and row["Loan"] == "true":
+            if not args.keep_loans and row["Loan"] == "true":
                 continue
 
             # Collect language and parameter ID, skipping over if

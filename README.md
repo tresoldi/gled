@@ -11,11 +11,12 @@
 [![DOI](https://zenodo.org/badge/452418748.svg)](https://zenodo.org/badge/latestdoi/452418748)
 
 This repository comprises a dataset developed from a subset of ASJP, in which
-all lemmas are presented in a broad phonological transcription, automatically
+all lemmas are given in a broad phonological transcription, automatically
 annotated for cognacy, and phonologically aligned. Per-family NEXUS files
 with binary annotation of presence/absence of cognate sets are also
 available. The dataset is intended to facilitate prototyping
-studies and methods in quantitative historical linguistics.
+studies and methods in quantitative historical linguistics, especially those
+requiring phonological data.
 
 ## Statistics
 

@@ -11,7 +11,7 @@ import unidecode
 from pyglottolog import Glottolog
 
 
-def get_glottolog(glottolog_path):
+def get_glottolog(glottolog_path=None):
     """
     Instantiates and returns a Glottolog object.
     """

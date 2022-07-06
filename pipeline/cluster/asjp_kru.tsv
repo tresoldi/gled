@@ -1,0 +1,637 @@
+ID	ASJP_ID	DOCULECT	LANGUAGE_NAME	GLOTTOCODE	GLOTTOLOG_NAME	LANGUAGE_LINEAGE_0	LANGUAGE_LINEAGE_1	LANGUAGE_LINEAGE_2	LANGUAGE_ISOLATE	PARAMETER_ID	CONCEPT	CONCEPTICON_ID	CONCEPTICON_GLOSS	VALUE	FORM	TOKENS	LOAN	SONARS	PROSTRINGS	CLASSES	LANGID	NUMBERS	WEIGHTS	IPA	DUPLICATES	COGID
+1	BAKWE-1-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	1	*I	1209	I	mo	mo	m o	false	4 7	AX	MU	2	2.M.C 2.U.V	2.0 1.5	mo	0	1
+47	GODIE-1-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	1	*I	1209	I	am3	am3	ɐ m ə	false	7 4 7	XBZ	EME	11	11.E.V 11.M.C 11.E.V	1.5 1.75 0.8	ɐmə	0	1
+249	GREBO-1-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	1	*I	1209	I	ne	ne	n e	false	4 7	AX	NE	12	12.N.C 12.E.V	2.0 1.5	ne	0	2
+250	KLAO-1-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	1	*I	1209	I	mo*	mo*	m õ	false	4 7	AX	MU	13	13.M.C 13.U.V	2.0 1.5	mõ	0	1
+251	KRUMAN-1-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	1	*I	1209	I	mo	mo	m o	false	4 7	AX	MU	14	14.M.C 14.U.V	2.0 1.5	mo	0	1
+252	WOBE-1-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	1	*I	1209	I	mo*	mo*	m õ	false	4 7	AX	MU	20	20.M.C 20.U.V	2.0 1.5	mõ	0	1
+2	BAKWE-30-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	30	*blood	946	BLOOD	toru	toru	t o r u	false	1 7 5 7	AXBZ	TURY	2	2.T.C 2.U.V 2.R.C 2.Y.V	2.0 1.5 1.75 0.8	toru	0	4
+3	BAKWE-30-2	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	30	*blood	946	BLOOD	5otru	5otru	ɲ o t r u	false	4 7 1 5 7	AXBCZ	NUTRY	2	2.N.C 2.U.V 2.T.C 2.R.C 2.Y.V	2.0 1.5 1.75 1.5 0.8	ɲotru	0	3
+48	BETE_DALOA-30-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	30	*blood	946	BLOOD	dl~u	dl~u	d l u	false	1 5 7	ACX	TLY	4	4.T.C 4.L.C 4.Y.V	2.0 1.5 1.5	dlu	0	4
+49	BETE_GUIBEROUA-30-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	30	*blood	946	BLOOD	duru	duru	d u r u	false	1 7 5 7	AXBZ	TYRY	5	5.T.C 5.Y.V 5.R.C 5.Y.V	2.0 1.5 1.75 0.8	duru	0	4
+50	GODIE-30-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	30	*blood	946	BLOOD	dlu	dlu	d l u	false	1 5 7	ACX	TLY	11	11.T.C 11.L.C 11.Y.V	2.0 1.5 1.5	dlu	0	3
+138	DIDA_LAKOTA-30-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	30	*blood	946	BLOOD	dulu	dulu	d u l u	false	1 7 5 7	AXBZ	TYLY	7	7.T.C 7.Y.V 7.L.C 7.Y.V	2.0 1.5 1.75 0.8	dulu	0	4
+139	DIDA_YOCOBOUE-30-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	30	*blood	946	BLOOD	dolu	dolu	d o l u	false	1 7 5 7	AXBZ	TULY	8	8.T.C 8.U.V 8.L.C 8.Y.V	2.0 1.5 1.75 0.8	dolu	0	4
+140	NEYO-30-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	30	*blood	946	BLOOD	dolu	dolu	d o l u	false	1 7 5 7	AXBZ	TULY	17	17.T.C 17.U.V 17.L.C 17.Y.V	2.0 1.5 1.75 0.8	dolu	0	4
+232	KUWAA-30-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	30	*blood	946	BLOOD	toyo	toyo	t o j o	false	1 7 6 7	AXBZ	TUJU	16	16.T.C 16.U.V 16.J.C 16.U.V	2.0 1.5 1.75 0.8	tojo	0	4
+253	AIZI_TIAGBAMRIN-30-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	5re	5re	ɲ r e	false	4 5 7	ACX	NRE	1	1.N.C 1.R.C 1.E.V	2.0 1.5 1.5	ɲre	0	3
+254	BASSA-30-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	nomo	nomo	n o m o	false	4 7 4 7	AXBZ	NUMU	3	3.N.C 3.U.V 3.M.C 3.U.V	2.0 1.5 1.75 0.8	nomo	0	5
+255	DEWOIN-30-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	5imo	5imo	ɲ i m o	false	4 7 4 7	AXBZ	NIMU	6	6.N.C 6.I.V 6.M.C 6.U.V	2.0 1.5 1.75 0.8	ɲimo	0	5
+256	EASTERN_KRAHN-30-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	daluo	daluo	d ɐ l u o	false	1 7 5 7 7	AXBYZ	TELYU	9	9.T.C 9.E.V 9.L.C 9.Y.V 9.U.V	2.0 1.5 1.75 1.3 0.8	dɐluo	0	6
+257	GLIO_OUBI-30-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	doula	doula	d o u l ɐ	false	1 7 7 5 7	AXYBZ	TUYLE	10	10.T.C 10.U.V 10.Y.V 10.L.C 10.E.V	2.0 1.5 1.3 1.75 0.8	doulɐ	0	4
+258	GREBO-30-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	nyeno	nyeno	n j e n o	false	4 6 7 4 7	ACXBZ	NJENU	12	12.N.C 12.J.C 12.E.V 12.N.C 12.U.V	2.0 1.5 1.5 1.75 0.8	njeno	0	5
+259	GREBO-30-2	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	nyo	nyo	n j o	false	4 6 7	ACX	NJU	12	12.N.C 12.J.C 12.U.V	2.0 1.5 1.5	njo	0	5
+260	KLAO-30-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	nino	nino	n i n o	false	4 7 4 7	AXBZ	NINU	13	13.N.C 13.I.V 13.N.C 13.U.V	2.0 1.5 1.75 0.8	nino	0	5
+261	KRUMAN-30-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	dablu	dablu	d ɐ b l u	false	1 7 1 5 7	AXBCZ	TEPLY	14	14.T.C 14.E.V 14.P.C 14.L.C 14.Y.V	2.0 1.5 1.75 1.5 0.8	dɐblu	0	4
+262	KRUMEN_PYE-30-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	klu	klu	k l u	false	1 5 7	ACX	KLY	15	15.K.C 15.L.C 15.Y.V	2.0 1.5 1.5	klu	0	7
+263	NYABWA-30-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	5emo	5emo	ɲ e m o	false	4 7 4 7	AXBZ	NEMU	18	18.N.C 18.E.V 18.M.C 18.U.V	2.0 1.5 1.75 0.8	ɲemo	0	5
+264	WE_SOUTHERN-30-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	su	su	s u	false	3 7	AX	SY	19	19.S.C 19.Y.V	2.0 1.5	su	0	8
+265	WOBE-30-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	30	*blood	946	BLOOD	nm~o	nm~o	n m o	false	4 4 7	ACZ	NMU	20	20.N.C 20.M.C 20.U.V	2.0 1.5 0.8	nmo	0	5
+4	BAKWE-31-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	31	*bone	1394	BONE	kou	kou	k o u	false	1 7 7	AXZ	KUY	2	2.K.C 2.U.V 2.Y.V	2.0 1.5 0.8	kou	0	9
+51	BETE_DALOA-31-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	31	*bone	1394	BONE	kw~a	kw~a	kʷ ɐ	false	1 7	AX	KE	4	4.K.C 4.E.V	2.0 1.5	kʷɐ	0	9
+52	BETE_GUIBEROUA-31-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	31	*bone	1394	BONE	kwa	kwa	k w ɐ	false	1 6 7	ACX	KWE	5	5.K.C 5.W.C 5.E.V	2.0 1.5 1.5	kwɐ	0	9
+53	GODIE-31-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	31	*bone	1394	BONE	fi	fi	f i	false	3 7	AX	BI	11	11.B.C 11.I.V	2.0 1.5	fi	0	12
+141	DIDA_LAKOTA-31-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	31	*bone	1394	BONE	fa	fa	f ɐ	false	3 7	AX	BE	7	7.B.C 7.E.V	2.0 1.5	fɐ	0	9
+142	DIDA_YOCOBOUE-31-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	31	*bone	1394	BONE	kwiye	kwiye	k w i j e	false	1 6 7 6 7	ACXBZ	KWIJE	8	8.K.C 8.W.C 8.I.V 8.J.C 8.E.V	2.0 1.5 1.5 1.75 0.8	kwije	0	11
+143	NEYO-31-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	31	*bone	1394	BONE	fee	fee	f e e	false	3 7 7	AXZ	BEE	17	17.B.C 17.E.V 17.E.V	2.0 1.5 0.8	fee	0	9
+233	KUWAA-31-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	31	*bone	1394	BONE	kwa	kwa	k w ɐ	false	1 6 7	ACX	KWE	16	16.K.C 16.W.C 16.E.V	2.0 1.5 1.5	kwɐ	0	9
+266	AIZI_TIAGBAMRIN-31-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	kra	kra	k r ɐ	false	1 5 7	ACX	KRE	1	1.K.C 1.R.C 1.E.V	2.0 1.5 1.5	krɐ	0	9
+267	BASSA-31-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	kpa	kpa	k p ɐ	false	1 1 7	ACZ	KPE	3	3.K.C 3.P.C 3.E.V	2.0 1.5 0.8	kpɐ	0	9
+268	DEWOIN-31-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	gba	gba	g b ɐ	false	1 1 7	ACZ	KPE	6	6.K.C 6.P.C 6.E.V	2.0 1.5 0.8	gbɐ	0	10
+269	EASTERN_KRAHN-31-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	kla	kla	k l ɐ	false	1 5 7	ACX	KLE	9	9.K.C 9.L.C 9.E.V	2.0 1.5 1.5	klɐ	0	9
+270	GLIO_OUBI-31-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	kala	kala	k ɐ l ɐ	false	1 7 5 7	AXBZ	KELE	10	10.K.C 10.E.V 10.L.C 10.E.V	2.0 1.5 1.75 0.8	kɐlɐ	0	9
+271	GREBO-31-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	kla	kla	k l ɐ	false	1 5 7	ACX	KLE	12	12.K.C 12.L.C 12.E.V	2.0 1.5 1.5	klɐ	0	9
+272	KLAO-31-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	kp~a	kp~a	kp ɐ	false	1 7	AX	KE	13	13.K.C 13.E.V	2.0 1.5	kpɐ	0	9
+273	KRUMAN-31-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	k3la	k3la	k ə l ɐ	false	1 7 5 7	AXBZ	KELE	14	14.K.C 14.E.V 14.L.C 14.E.V	2.0 1.5 1.75 0.8	kəlɐ	0	9
+274	KRUMEN_PYE-31-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	kla	kla	k l ɐ	false	1 5 7	ACX	KLE	15	15.K.C 15.L.C 15.E.V	2.0 1.5 1.5	klɐ	0	9
+275	NYABWA-31-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	kp~a	kp~a	kp ɐ	false	1 7	AX	KE	18	18.K.C 18.E.V	2.0 1.5	kpɐ	0	9
+276	WE_SOUTHERN-31-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	dekp~a	dekp~a	d e kp ɐ	false	1 7 1 7	AXBZ	TEKE	19	19.T.C 19.E.V 19.K.C 19.E.V	2.0 1.5 1.75 0.8	dekpɐ	0	13
+277	WOBE-31-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	31	*bone	1394	BONE	kp~a	kp~a	kp ɐ	false	1 7	AX	KE	20	20.K.C 20.E.V	2.0 1.5	kpɐ	0	9
+5	BAKWE-51-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	51	*breasts	1402	BREAST	5iti	5iti	ɲ i t i	false	4 7 1 7	AXBZ	NITI	2	2.N.C 2.I.V 2.T.C 2.I.V	2.0 1.5 1.75 0.8	ɲiti	0	15
+54	BETE_DALOA-51-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	51	*breasts	1402	BREAST	k3kli	k3kli	k ə k l i	false	1 7 1 5 7	AXBCZ	KEKLI	4	4.K.C 4.E.V 4.K.C 4.L.C 4.I.V	2.0 1.5 1.75 1.5 0.8	kəkli	0	16
+55	BETE_GUIBEROUA-51-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	51	*breasts	1402	BREAST	k3k3li	k3k3li	k ə k ə l i	false	1 7 1 7 5 7	AXBYBZ	KEKELI	5	5.K.C 5.E.V 5.K.C 5.E.V 5.L.C 5.I.V	2.0 1.5 1.75 1.3 1.75 0.8	kəkəli	0	16
+144	DIDA_LAKOTA-51-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	51	*breasts	1402	BREAST	ciclegbole	ciclegbole	ts i ts l e g b o l e	false	2 7 2 5 7 1 1 7 5 7	AXBCYMBYBZ	CICLEKPULE	7	7.C.C 7.I.V 7.C.C 7.L.C 7.E.V 7.K.c 7.P.C 7.U.V 7.L.C 7.E.V	2.0 1.5 1.75 1.5 1.3 1.1 1.75 1.3 1.75 0.8	tsitslegbole	0	17
+145	DIDA_YOCOBOUE-51-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	51	*breasts	1402	BREAST	dine	dine	d i n e	false	1 7 4 7	AXBZ	TINE	8	8.T.C 8.I.V 8.N.C 8.E.V	2.0 1.5 1.75 0.8	dine	0	18
+146	NEYO-51-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	51	*breasts	1402	BREAST	digble	digble	d i g b l e	false	1 7 1 1 5 7	AXMBCZ	TIKPLE	17	17.T.C 17.I.V 17.K.c 17.P.C 17.L.C 17.E.V	2.0 1.5 1.1 1.75 1.5 0.8	digble	0	20
+278	AIZI_TIAGBAMRIN-51-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	51	*breasts	1402	BREAST	dri	dri	d r i	false	1 5 7	ACX	TRI	1	1.T.C 1.R.C 1.I.V	2.0 1.5 1.5	dri	0	14
+279	EASTERN_KRAHN-51-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	51	*breasts	1402	BREAST	5iniE	5iniE	ɲ i n i a	false	4 7 4 7 7	AXBYZ	NINIA	9	9.N.C 9.I.V 9.N.C 9.I.V 9.A.V	2.0 1.5 1.75 1.3 0.8	ɲinia	0	19
+280	GREBO-51-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	51	*breasts	1402	BREAST	nyine	nyine	n j i n e	false	4 6 7 4 7	ACXBZ	NJINE	12	12.N.C 12.J.C 12.I.V 12.N.C 12.E.V	2.0 1.5 1.5 1.75 0.8	njine	0	15
+281	KLAO-51-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	51	*breasts	1402	BREAST	5iti	5iti	ɲ i t i	false	4 7 1 7	AXBZ	NITI	13	13.N.C 13.I.V 13.T.C 13.I.V	2.0 1.5 1.75 0.8	ɲiti	0	15
+282	KRUMEN_PYE-51-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	51	*breasts	1402	BREAST	5E*sE	5E*sE	ɲ ã s a	false	4 7 3 7	AXBZ	NASA	15	15.N.C 15.A.V 15.S.C 15.A.V	2.0 1.5 1.75 0.8	ɲãsa	0	15
+283	NYABWA-51-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	51	*breasts	1402	BREAST	bEtE	bEtE	b a t a	false	1 7 1 7	AXBZ	PATA	18	18.P.C 18.A.V 18.T.C 18.A.V	2.0 1.5 1.75 0.8	bata	0	21
+284	NYABWA-51-2	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	51	*breasts	1402	BREAST	5etiE	5etiE	ɲ e t i a	false	4 7 1 7 7	AXBYZ	NETIA	18	18.N.C 18.E.V 18.T.C 18.I.V 18.A.V	2.0 1.5 1.75 1.3 0.8	ɲetia	0	15
+6	BAKWE-66-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	66	*come	1446	COME	ji	ji	dʒ i	false	1 7	AX	TI	2	2.T.C 2.I.V	2.0 1.5	dʒi	0	23
+56	BETE_DALOA-66-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	66	*come	1446	COME	Ti	Ti	c i	false	1 7	AX	CI	4	4.C.C 4.I.V	2.0 1.5	ci	0	23
+57	BETE_GUIBEROUA-66-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	66	*come	1446	COME	yi	yi	j i	false	6 7	AX	JI	5	5.J.C 5.I.V	2.0 1.5	ji	0	23
+58	GODIE-66-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	66	*come	1446	COME	yi	yi	j i	false	6 7	AX	JI	11	11.J.C 11.I.V	2.0 1.5	ji	0	23
+147	DIDA_LAKOTA-66-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	66	*come	1446	COME	ii	ii	i i	false	7 7	XZ	II	7	7.I.V 7.I.V	1.5 0.8	ii	0	26
+148	DIDA_YOCOBOUE-66-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	66	*come	1446	COME	ci	ci	ts i	false	2 7	AX	CI	8	8.C.C 8.I.V	2.0 1.5	tsi	0	23
+149	NEYO-66-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	66	*come	1446	COME	yi	yi	j i	false	6 7	AX	JI	17	17.J.C 17.I.V	2.0 1.5	ji	0	23
+234	KUWAA-66-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	66	*come	1446	COME	yi	yi	j i	false	6 7	AX	JI	16	16.J.C 16.I.V	2.0 1.5	ji	0	27
+285	AIZI_TIAGBAMRIN-66-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	yi	yi	j i	false	6 7	AX	JI	1	1.J.C 1.I.V	2.0 1.5	ji	0	22
+286	BASSA-66-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	Ti	Ti	c i	false	1 7	AX	CI	3	3.C.C 3.I.V	2.0 1.5	ci	0	24
+287	DEWOIN-66-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	yi	yi	j i	false	6 7	AX	JI	6	6.J.C 6.I.V	2.0 1.5	ji	0	25
+288	EASTERN_KRAHN-66-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	jlo	jlo	dʒ l o	false	1 5 7	ACX	TLU	9	9.T.C 9.L.C 9.U.V	2.0 1.5 1.5	dʒlo	0	23
+289	GLIO_OUBI-66-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	do	do	d o	false	1 7	AX	TU	10	10.T.C 10.U.V	2.0 1.5	do	0	23
+290	GREBO-66-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	di	di	d i	false	1 7	AX	TI	12	12.T.C 12.I.V	2.0 1.5	di	0	23
+291	KLAO-66-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	ji	ji	dʒ i	false	1 7	AX	TI	13	13.T.C 13.I.V	2.0 1.5	dʒi	0	23
+292	KRUMAN-66-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	di	di	d i	false	1 7	AX	TI	14	14.T.C 14.I.V	2.0 1.5	di	0	23
+293	KRUMEN_PYE-66-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	dire	dire	d i r e	false	1 7 5 7	AXBZ	TIRE	15	15.T.C 15.I.V 15.R.C 15.E.V	2.0 1.5 1.75 0.8	dire	0	23
+294	NYABWA-66-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	Ti	Ti	c i	false	1 7	AX	CI	18	18.C.C 18.I.V	2.0 1.5	ci	0	23
+295	WE_SOUTHERN-66-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	yi	yi	j i	false	6 7	AX	JI	19	19.J.C 19.I.V	2.0 1.5	ji	0	23
+296	WOBE-66-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	66	*come	1446	COME	Ti	Ti	c i	false	1 7	AX	CI	20	20.C.C 20.I.V	2.0 1.5	ci	0	23
+7	BAKWE-61-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	61	*die	1494	DIE	molo	molo	m o l o	false	4 7 5 7	AXBZ	MULU	2	2.M.C 2.U.V 2.L.C 2.U.V	2.0 1.5 1.75 0.8	molo	0	29
+59	BETE_DALOA-61-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	61	*die	1494	DIE	tili	tili	t i l i	false	1 7 5 7	AXBZ	TILI	4	4.T.C 4.I.V 4.L.C 4.I.V	2.0 1.5 1.75 0.8	tili	0	31
+60	BETE_GUIBEROUA-61-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	61	*die	1494	DIE	ku	ku	k u	false	1 7	AX	KY	5	5.K.C 5.Y.V	2.0 1.5	ku	0	28
+61	GODIE-61-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	61	*die	1494	DIE	ku	ku	k u	false	1 7	AX	KY	11	11.K.C 11.Y.V	2.0 1.5	ku	0	28
+150	DIDA_LAKOTA-61-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	61	*die	1494	DIE	fu	fu	f u	false	3 7	AX	BY	7	7.B.C 7.Y.V	2.0 1.5	fu	0	28
+151	DIDA_LAKOTA-61-2	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	61	*die	1494	DIE	fule	fule	f u l e	false	3 7 5 7	AXBZ	BYLE	7	7.B.C 7.Y.V 7.L.C 7.E.V	2.0 1.5 1.75 0.8	fule	0	33
+152	DIDA_YOCOBOUE-61-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	61	*die	1494	DIE	ku	ku	k u	false	1 7	AX	KY	8	8.K.C 8.Y.V	2.0 1.5	ku	0	28
+153	NEYO-61-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	61	*die	1494	DIE	ku	ku	k u	false	1 7	AX	KY	17	17.K.C 17.Y.V	2.0 1.5	ku	0	28
+235	KUWAA-61-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	61	*die	1494	DIE	fa*la*	fa*la*	f ɐ̃ l ɐ̃	false	3 7 5 7	AXBZ	BELE	16	16.B.C 16.E.V 16.L.C 16.E.V	2.0 1.5 1.75 0.8	fɐ̃lɐ̃	0	33
+297	AIZI_TIAGBAMRIN-61-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	61	*die	1494	DIE	ko	ko	k o	false	1 7	AX	KU	1	1.K.C 1.U.V	2.0 1.5	ko	0	28
+298	BASSA-61-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	61	*die	1494	DIE	mE	mE	m a	false	4 7	AX	MA	3	3.M.C 3.A.V	2.0 1.5	ma	0	30
+299	DEWOIN-61-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	61	*die	1494	DIE	ku	ku	k u	false	1 7	AX	KY	6	6.K.C 6.Y.V	2.0 1.5	ku	0	32
+300	EASTERN_KRAHN-61-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	61	*die	1494	DIE	mE	mE	m a	false	4 7	AX	MA	9	9.M.C 9.A.V	2.0 1.5	ma	0	30
+301	GLIO_OUBI-61-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	61	*die	1494	DIE	k3	k3	k ə	false	1 7	AX	KE	10	10.K.C 10.E.V	2.0 1.5	kə	0	28
+302	GREBO-61-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	61	*die	1494	DIE	ko	ko	k o	false	1 7	AX	KU	12	12.K.C 12.U.V	2.0 1.5	ko	0	28
+303	KLAO-61-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	61	*die	1494	DIE	mE	mE	m a	false	4 7	AX	MA	13	13.M.C 13.A.V	2.0 1.5	ma	0	30
+304	KRUMAN-61-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	61	*die	1494	DIE	ku	ku	k u	false	1 7	AX	KY	14	14.K.C 14.Y.V	2.0 1.5	ku	0	28
+305	WOBE-61-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	61	*die	1494	DIE	ma	ma	m ɐ	false	4 7	AX	ME	20	20.M.C 20.E.V	2.0 1.5	mɐ	0	30
+8	BAKWE-21-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	21	*dog	2009	DOG	fE	fE	f a	false	3 7	AX	BA	2	2.B.C 2.A.V	2.0 1.5	fa	0	34
+62	BETE_DALOA-21-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	21	*dog	2009	DOG	gw~i	gw~i	gʷ i	false	1 7	AX	KI	4	4.K.C 4.I.V	2.0 1.5	gʷi	0	34
+63	GODIE-21-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	21	*dog	2009	DOG	g3yi	g3yi	g ə j i	false	1 7 6 7	AXBZ	KEJI	11	11.K.C 11.E.V 11.J.C 11.I.V	2.0 1.5 1.75 0.8	gəji	0	36
+154	DIDA_LAKOTA-21-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	21	*dog	2009	DOG	voio	voio	v o i o	false	3 7 7 7	AXYZ	BUIU	7	7.B.C 7.U.V 7.I.V 7.U.V	2.0 1.5 1.3 0.8	voio	0	35
+155	DIDA_YOCOBOUE-21-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	21	*dog	2009	DOG	goyi	goyi	g o j i	false	1 7 6 7	AXBZ	KUJI	8	8.K.C 8.U.V 8.J.C 8.I.V	2.0 1.5 1.75 0.8	goji	0	36
+156	NEYO-21-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	21	*dog	2009	DOG	vii	vii	v i i	false	3 7 7	AXZ	BII	17	17.B.C 17.I.V 17.I.V	2.0 1.5 0.8	vii	0	37
+306	AIZI_TIAGBAMRIN-21-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	21	*dog	2009	DOG	vE	vE	v a	false	3 7	AX	BA	1	1.B.C 1.A.V	2.0 1.5	va	0	34
+307	GREBO-21-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	21	*dog	2009	DOG	gbe	gbe	g b e	false	1 1 7	ACZ	KPE	12	12.K.C 12.P.C 12.E.V	2.0 1.5 0.8	gbe	0	34
+308	KLAO-21-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	21	*dog	2009	DOG	gb~e	gb~e	g b e	false	1 1 7	ACZ	KPE	13	13.K.C 13.P.C 13.E.V	2.0 1.5 0.8	gbe	0	34
+309	KRUMAN-21-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	21	*dog	2009	DOG	gb~i	gb~i	g b i	false	1 1 7	ACZ	KPI	14	14.K.C 14.P.C 14.I.V	2.0 1.5 0.8	gbi	0	34
+310	KRUMEN_PYE-21-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	21	*dog	2009	DOG	gbe	gbe	g b e	false	1 1 7	ACZ	KPE	15	15.K.C 15.P.C 15.E.V	2.0 1.5 0.8	gbe	0	34
+311	NYABWA-21-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	21	*dog	2009	DOG	gbe	gbe	g b e	false	1 1 7	ACZ	KPE	18	18.K.C 18.P.C 18.E.V	2.0 1.5 0.8	gbe	0	34
+312	WE_SOUTHERN-21-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	21	*dog	2009	DOG	be	be	b e	false	1 7	AX	PE	19	19.P.C 19.E.V	2.0 1.5	be	0	34
+313	WE_SOUTHERN-21-2	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	21	*dog	2009	DOG	gb~e	gb~e	g b e	false	1 1 7	ACZ	KPE	19	19.K.C 19.P.C 19.E.V	2.0 1.5 0.8	gbe	0	34
+314	WOBE-21-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	21	*dog	2009	DOG	gb~e	gb~e	g b e	false	1 1 7	ACZ	KPE	20	20.K.C 20.P.C 20.E.V	2.0 1.5 0.8	gbe	0	34
+9	BAKWE-54-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	54	*drink	1401	DRINK	na	na	n ɐ	false	4 7	AX	NE	2	2.N.C 2.E.V	2.0 1.5	nɐ	0	39
+10	BAKWE-54-2	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	54	*drink	1401	DRINK	nu	nu	n u	false	4 7	AX	NY	2	2.N.C 2.Y.V	2.0 1.5	nu	0	39
+64	BETE_DALOA-54-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	54	*drink	1401	DRINK	nima	nima	n i m ɐ	false	4 7 4 7	AXBZ	NIME	4	4.N.C 4.I.V 4.M.C 4.E.V	2.0 1.5 1.75 0.8	nimɐ	0	39
+65	BETE_GUIBEROUA-54-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	54	*drink	1401	DRINK	nimo	nimo	n i m o	false	4 7 4 7	AXBZ	NIMU	5	5.N.C 5.I.V 5.M.C 5.U.V	2.0 1.5 1.75 0.8	nimo	0	39
+66	GODIE-54-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	54	*drink	1401	DRINK	m3lo	m3lo	m ə l o	false	4 7 5 7	AXBZ	MELU	11	11.M.C 11.E.V 11.L.C 11.U.V	2.0 1.5 1.75 0.8	məlo	0	38
+157	DIDA_LAKOTA-54-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	54	*drink	1401	DRINK	nla	nla	n l ɐ	false	4 5 7	ACX	NLE	7	7.N.C 7.L.C 7.E.V	2.0 1.5 1.5	nlɐ	0	39
+158	DIDA_YOCOBOUE-54-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	54	*drink	1401	DRINK	mla	mla	m l ɐ	false	4 5 7	ACX	MLE	8	8.M.C 8.L.C 8.E.V	2.0 1.5 1.5	mlɐ	0	38
+159	NEYO-54-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	54	*drink	1401	DRINK	mla	mla	m l ɐ	false	4 5 7	ACX	MLE	17	17.M.C 17.L.C 17.E.V	2.0 1.5 1.5	mlɐ	0	38
+236	KUWAA-54-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	54	*drink	1401	DRINK	gbE	gbE	g b a	false	1 1 7	ACZ	KPA	16	16.K.C 16.P.C 16.A.V	2.0 1.5 0.8	gba	0	40
+315	AIZI_TIAGBAMRIN-54-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	ma	ma	m ɐ	false	4 7	AX	ME	1	1.M.C 1.E.V	2.0 1.5	mɐ	0	38
+316	BASSA-54-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	na	na	n ɐ	false	4 7	AX	NE	3	3.N.C 3.E.V	2.0 1.5	nɐ	0	39
+317	DEWOIN-54-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	na	na	n ɐ	false	4 7	AX	NE	6	6.N.C 6.E.V	2.0 1.5	nɐ	0	39
+318	EASTERN_KRAHN-54-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	na	na	n ɐ	false	4 7	AX	NE	9	9.N.C 9.E.V	2.0 1.5	nɐ	0	39
+319	GLIO_OUBI-54-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	na	na	n ɐ	false	4 7	AX	NE	10	10.N.C 10.E.V	2.0 1.5	nɐ	0	39
+320	GREBO-54-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	ni	ni	n i	false	4 7	AX	NI	12	12.N.C 12.I.V	2.0 1.5	ni	0	39
+321	KLAO-54-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	na	na	n ɐ	false	4 7	AX	NE	13	13.N.C 13.E.V	2.0 1.5	nɐ	0	39
+322	KRUMAN-54-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	na	na	n ɐ	false	4 7	AX	NE	14	14.N.C 14.E.V	2.0 1.5	nɐ	0	39
+323	KRUMEN_PYE-54-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	na	na	n ɐ	false	4 7	AX	NE	15	15.N.C 15.E.V	2.0 1.5	nɐ	0	39
+324	NYABWA-54-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	na	na	n ɐ	false	4 7	AX	NE	18	18.N.C 18.E.V	2.0 1.5	nɐ	0	39
+325	WE_SOUTHERN-54-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	na	na	n ɐ	false	4 7	AX	NE	19	19.N.C 19.E.V	2.0 1.5	nɐ	0	39
+326	WOBE-54-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	54	*drink	1401	DRINK	na	na	n ɐ	false	4 7	AX	NE	20	20.N.C 20.E.V	2.0 1.5	nɐ	0	39
+11	BAKWE-39-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	39	*ear	1247	EAR	5aklu	5aklu	ɲ ɐ k l u	false	4 7 1 5 7	AXBCZ	NEKLY	2	2.N.C 2.E.V 2.K.C 2.L.C 2.Y.V	2.0 1.5 1.75 1.5 0.8	ɲɐklu	0	42
+67	BETE_DALOA-39-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	39	*ear	1247	EAR	yukuli	yukuli	j u k u l i	false	6 7 1 7 5 7	AXBYBZ	JYKYLI	4	4.J.C 4.Y.V 4.K.C 4.Y.V 4.L.C 4.I.V	2.0 1.5 1.75 1.3 1.75 0.8	jukuli	0	43
+68	BETE_GUIBEROUA-39-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	39	*ear	1247	EAR	yukw3li	yukw3li	j u k w ə l i	false	6 7 1 6 7 5 7	AXBCYBZ	JYKWELI	5	5.J.C 5.Y.V 5.K.C 5.W.C 5.E.V 5.L.C 5.I.V	2.0 1.5 1.75 1.5 1.3 1.75 0.8	jukwəli	0	43
+69	GODIE-39-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	39	*ear	1247	EAR	5uklu	5uklu	ɲ u k l u	false	4 7 1 5 7	AXBCZ	NYKLY	11	11.N.C 11.Y.V 11.K.C 11.L.C 11.Y.V	2.0 1.5 1.75 1.5 0.8	ɲuklu	0	42
+160	DIDA_LAKOTA-39-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	39	*ear	1247	EAR	nyeflu	nyeflu	n j e f l u	false	4 6 7 3 5 7	ACXBCZ	NJEBLY	7	7.N.C 7.J.C 7.E.V 7.B.C 7.L.C 7.Y.V	2.0 1.5 1.5 1.75 1.5 0.8	njeflu	0	42
+161	DIDA_YOCOBOUE-39-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	39	*ear	1247	EAR	5ukwli	5ukwli	ɲ u k w l i	false	4 7 1 6 5 7	AXBYBZ	NYKWLI	8	8.N.C 8.Y.V 8.K.C 8.W.V 8.L.C 8.I.V	2.0 1.5 1.75 1.3 1.75 0.8	ɲukwli	0	42
+162	NEYO-39-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	39	*ear	1247	EAR	5ukwli	5ukwli	ɲ u k w l i	false	4 7 1 6 5 7	AXBYBZ	NYKWLI	17	17.N.C 17.Y.V 17.K.C 17.W.V 17.L.C 17.I.V	2.0 1.5 1.75 1.3 1.75 0.8	ɲukwli	0	42
+237	KUWAA-39-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	39	*ear	1247	EAR	noi	noi	n o i	false	4 7 7	AXZ	NUI	16	16.N.C 16.U.V 16.I.V	2.0 1.5 0.8	noi	0	44
+327	AIZI_TIAGBAMRIN-39-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	39	*ear	1247	EAR	luko	luko	l u k o	false	5 7 1 7	AXBZ	LYKU	1	1.L.C 1.Y.V 1.K.C 1.U.V	2.0 1.5 1.75 0.8	luko	0	41
+328	EASTERN_KRAHN-39-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	39	*ear	1247	EAR	nao	nao	n ɐ o	false	4 7 7	AXZ	NEU	9	9.N.C 9.E.V 9.U.V	2.0 1.5 0.8	nɐo	0	44
+329	GLIO_OUBI-39-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	39	*ear	1247	EAR	noa	noa	n o ɐ	false	4 7 7	AXZ	NUE	10	10.N.C 10.U.V 10.E.V	2.0 1.5 0.8	noɐ	0	44
+330	KLAO-39-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	39	*ear	1247	EAR	noku*	noku*	n o k ũ	false	4 7 1 7	AXBZ	NUKY	13	13.N.C 13.U.V 13.K.C 13.Y.V	2.0 1.5 1.75 0.8	nokũ	0	42
+331	KRUMAN-39-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	39	*ear	1247	EAR	noa	noa	n o ɐ	false	4 7 7	AXZ	NUE	14	14.N.C 14.U.V 14.E.V	2.0 1.5 0.8	noɐ	0	44
+332	KRUMEN_PYE-39-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	39	*ear	1247	EAR	nua	nua	n u ɐ	false	4 7 7	AXZ	NYE	15	15.N.C 15.Y.V 15.E.V	2.0 1.5 0.8	nuɐ	0	44
+333	NYABWA-39-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	39	*ear	1247	EAR	ioku	ioku	i o k u	false	7 7 1 7	XYBZ	IUKY	18	18.I.V 18.U.V 18.K.C 18.Y.V	1.5 1.3 1.75 0.8	ioku	0	42
+334	WE_SOUTHERN-39-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	39	*ear	1247	EAR	du	du	d u	false	1 7	AX	TY	19	19.T.C 19.Y.V	2.0 1.5	du	0	45
+335	WOBE-39-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	39	*ear	1247	EAR	do*u*	do*u*	d õ ũ	false	1 7 7	AXZ	TUY	20	20.T.C 20.U.V 20.Y.V	2.0 1.5 0.8	dõũ	0	46
+12	BAKWE-40-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	40	*eye	1248	EYE	5io	5io	ɲ i o	false	4 7 7	AXZ	NIU	2	2.N.C 2.I.V 2.U.V	2.0 1.5 0.8	ɲio	0	48
+13	BAKWE-40-2	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	40	*eye	1248	EYE	5ie	5ie	ɲ i e	false	4 7 7	AXZ	NIE	2	2.N.C 2.I.V 2.E.V	2.0 1.5 0.8	ɲie	0	48
+70	BETE_DALOA-40-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	40	*eye	1248	EYE	Ti	Ti	c i	false	1 7	AX	CI	4	4.C.C 4.I.V	2.0 1.5	ci	1	50
+71	BETE_GUIBEROUA-40-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	40	*eye	1248	EYE	yiri	yiri	j i r i	false	6 7 5 7	AXBZ	JIRI	5	5.J.C 5.I.V 5.R.C 5.I.V	2.0 1.5 1.75 0.8	jiri	0	49
+72	GODIE-40-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	40	*eye	1248	EYE	yli	yli	j l i	false	6 5 7	ACZ	JLI	11	11.J.C 11.L.C 11.I.V	2.0 1.5 0.8	jli	0	49
+163	DIDA_LAKOTA-40-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	40	*eye	1248	EYE	ii	ii	i i	false	7 7	XZ	II	7	7.I.V 7.I.V	1.5 0.8	ii	1	52
+164	DIDA_YOCOBOUE-40-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	40	*eye	1248	EYE	ci	ci	ts i	false	2 7	AX	CI	8	8.C.C 8.I.V	2.0 1.5	tsi	1	50
+165	NEYO-40-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	40	*eye	1248	EYE	yi	yi	j i	false	6 7	AX	JI	17	17.J.C 17.I.V	2.0 1.5	ji	1	55
+238	KUWAA-40-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	40	*eye	1248	EYE	si*	si*	s ĩ	false	3 7	AX	SI	16	16.S.C 16.I.V	2.0 1.5	sĩ	0	47
+336	AIZI_TIAGBAMRIN-40-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	40	*eye	1248	EYE	zre	zre	z r e	false	3 5 7	ACX	SRE	1	1.S.C 1.R.C 1.E.V	2.0 1.5 1.5	zre	0	47
+337	BASSA-40-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	40	*eye	1248	EYE	Tele	Tele	c e l e	false	1 7 5 7	AXBZ	CELE	3	3.C.C 3.E.V 3.L.C 3.E.V	2.0 1.5 1.75 0.8	cele	0	49
+338	DEWOIN-40-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	40	*eye	1248	EYE	gire	gire	g i r e	false	1 7 5 7	AXBZ	KIRE	6	6.K.C 6.I.V 6.R.C 6.E.V	2.0 1.5 1.75 0.8	gire	0	51
+339	EASTERN_KRAHN-40-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	40	*eye	1248	EYE	yido	yido	j i d o	false	6 7 1 7	AXBZ	JITU	9	9.J.C 9.I.V 9.T.C 9.U.V	2.0 1.5 1.75 0.8	jido	0	53
+340	GLIO_OUBI-40-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	40	*eye	1248	EYE	yiro	yiro	j i r o	false	6 7 5 7	AXBZ	JIRU	10	10.J.C 10.I.V 10.R.C 10.U.V	2.0 1.5 1.75 0.8	jiro	0	53
+341	KLAO-40-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	40	*eye	1248	EYE	ji	ji	dʒ i	false	1 7	AX	TI	13	13.T.C 13.I.V	2.0 1.5	dʒi	1	54
+342	KRUMAN-40-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	40	*eye	1248	EYE	yiye	yiye	j i j e	false	6 7 6 7	AXBZ	JIJE	14	14.J.C 14.I.V 14.J.C 14.E.V	2.0 1.5 1.75 0.8	jije	0	55
+343	KRUMEN_PYE-40-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	40	*eye	1248	EYE	jro	jro	dʒ r o	false	1 5 7	ACX	TRU	15	15.T.C 15.R.C 15.U.V	2.0 1.5 1.5	dʒro	0	50
+344	NYABWA-40-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	40	*eye	1248	EYE	Tiri	Tiri	c i r i	false	1 7 5 7	AXBZ	CIRI	18	18.C.C 18.I.V 18.R.C 18.I.V	2.0 1.5 1.75 0.8	ciri	0	49
+345	WE_SOUTHERN-40-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	40	*eye	1248	EYE	jireyo	jireyo	dʒ i r e j o	false	1 7 5 7 6 7	AXBYBZ	TIREJU	19	19.T.C 19.I.V 19.R.C 19.E.V 19.J.C 19.U.V	2.0 1.5 1.75 1.3 1.75 0.8	dʒirejo	0	56
+346	WOBE-40-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	40	*eye	1248	EYE	Tria	Tria	c r i ɐ	false	1 5 7 7	ACXZ	CRIE	20	20.C.C 20.R.C 20.I.V 20.E.V	2.0 1.5 1.5 0.8	criɐ	0	49
+14	BAKWE-82-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	82	*fire	221	FIRE	kapu	kapu	k ɐ p u	false	1 7 1 7	AXBZ	KEPY	2	2.K.C 2.E.V 2.P.C 2.Y.V	2.0 1.5 1.75 0.8	kɐpu	0	58
+73	BETE_DALOA-82-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	82	*fire	221	FIRE	kosu	kosu	k o s u	false	1 7 3 7	AXBZ	KUSY	4	4.K.C 4.U.V 4.S.C 4.Y.V	2.0 1.5 1.75 0.8	kosu	0	60
+74	BETE_GUIBEROUA-82-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	82	*fire	221	FIRE	kosu	kosu	k o s u	false	1 7 3 7	AXBZ	KUSY	5	5.K.C 5.U.V 5.S.C 5.Y.V	2.0 1.5 1.75 0.8	kosu	0	60
+75	GODIE-82-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	82	*fire	221	FIRE	kosu	kosu	k o s u	false	1 7 3 7	AXBZ	KUSY	11	11.K.C 11.U.V 11.S.C 11.Y.V	2.0 1.5 1.75 0.8	kosu	0	60
+166	DIDA_LAKOTA-82-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	82	*fire	221	FIRE	kosu	kosu	k o s u	false	1 7 3 7	AXBZ	KUSY	7	7.K.C 7.U.V 7.S.C 7.Y.V	2.0 1.5 1.75 0.8	kosu	0	60
+167	DIDA_YOCOBOUE-82-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	82	*fire	221	FIRE	kosu	kosu	k o s u	false	1 7 3 7	AXBZ	KUSY	8	8.K.C 8.U.V 8.S.C 8.Y.V	2.0 1.5 1.75 0.8	kosu	0	60
+168	NEYO-82-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	82	*fire	221	FIRE	kosu	kosu	k o s u	false	1 7 3 7	AXBZ	KUSY	17	17.K.C 17.U.V 17.S.C 17.Y.V	2.0 1.5 1.75 0.8	kosu	0	60
+239	KUWAA-82-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	82	*fire	221	FIRE	ka	ka	k ɐ	false	1 7	AX	KE	16	16.K.C 16.E.V	2.0 1.5	kɐ	0	59
+347	AIZI_TIAGBAMRIN-82-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	lede	lede	l e d e	false	5 7 1 7	AXBZ	LETE	1	1.L.C 1.E.V 1.T.C 1.E.V	2.0 1.5 1.75 0.8	lede	0	57
+348	BASSA-82-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	5E	5E	ɲ a	false	4 7	AX	NA	3	3.N.C 3.A.V	2.0 1.5	ɲa	0	59
+349	DEWOIN-82-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	nai	nai	n ɐ i	false	4 7 7	AXZ	NEI	6	6.N.C 6.E.V 6.I.V	2.0 1.5 0.8	nɐi	0	59
+350	EASTERN_KRAHN-82-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	nani	nani	n ɐ n i	false	4 7 4 7	AXBZ	NENI	9	9.N.C 9.E.V 9.N.C 9.I.V	2.0 1.5 1.75 0.8	nɐni	0	59
+351	GLIO_OUBI-82-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	nani	nani	n ɐ n i	false	4 7 4 7	AXBZ	NENI	10	10.N.C 10.E.V 10.N.C 10.I.V	2.0 1.5 1.75 0.8	nɐni	0	59
+352	GREBO-82-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	na	na	n ɐ	false	4 7	AX	NE	12	12.N.C 12.E.V	2.0 1.5	nɐ	0	59
+353	KLAO-82-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	nE	nE	n a	false	4 7	AX	NA	13	13.N.C 13.A.V	2.0 1.5	na	0	59
+354	KRUMAN-82-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	na	na	n ɐ	false	4 7	AX	NE	14	14.N.C 14.E.V	2.0 1.5	nɐ	1	59
+355	KRUMEN_PYE-82-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	na	na	n ɐ	false	4 7	AX	NE	15	15.N.C 15.E.V	2.0 1.5	nɐ	1	59
+356	NYABWA-82-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	nE	nE	n a	false	4 7	AX	NA	18	18.N.C 18.A.V	2.0 1.5	na	0	59
+357	WE_SOUTHERN-82-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	ne	ne	n e	false	4 7	AX	NE	19	19.N.C 19.E.V	2.0 1.5	ne	0	59
+358	WE_SOUTHERN-82-2	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	ne*	ne*	n ẽ	false	4 7	AX	NE	19	19.N.C 19.E.V	2.0 1.5	nẽ	0	59
+359	WOBE-82-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	82	*fire	221	FIRE	na	na	n ɐ	false	4 7	AX	NE	20	20.N.C 20.E.V	2.0 1.5	nɐ	1	59
+15	BAKWE-19-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	19	*fish	227	FISH	sre	sre	s r e	false	3 5 7	ACX	SRE	2	2.S.C 2.R.C 2.E.V	2.0 1.5 1.5	sre	0	61
+76	BETE_DALOA-19-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	19	*fish	227	FISH	zibh~iyi	zibh~iyi	z i bʰ i j i	false	3 7 1 7 6 7	AXBYBZ	SIPIJI	4	4.S.C 4.I.V 4.P.C 4.I.V 4.J.C 4.I.V	2.0 1.5 1.75 1.3 1.75 0.8	zibʰiji	0	62
+77	BETE_GUIBEROUA-19-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	19	*fish	227	FISH	zib3	zib3	z i b ə	false	3 7 1 7	AXBZ	SIPE	5	5.S.C 5.I.V 5.P.C 5.E.V	2.0 1.5 1.75 0.8	zibə	0	61
+78	GODIE-19-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	19	*fish	227	FISH	zle	zle	z l e	false	3 5 7	ACX	SLE	11	11.S.C 11.L.C 11.E.V	2.0 1.5 1.5	zle	0	61
+169	DIDA_LAKOTA-19-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	19	*fish	227	FISH	zle	zle	z l e	false	3 5 7	ACX	SLE	7	7.S.C 7.L.C 7.E.V	2.0 1.5 1.5	zle	0	61
+170	DIDA_YOCOBOUE-19-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	19	*fish	227	FISH	zri	zri	z r i	false	3 5 7	ACX	SRI	8	8.S.C 8.R.C 8.I.V	2.0 1.5 1.5	zri	0	63
+171	NEYO-19-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	19	*fish	227	FISH	zlii	zlii	z l i i	false	3 5 7 7	ACXZ	SLII	17	17.S.C 17.L.C 17.I.V 17.I.V	2.0 1.5 1.5 0.8	zlii	0	61
+360	AIZI_TIAGBAMRIN-19-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	19	*fish	227	FISH	zrE	zrE	z r a	false	3 5 7	ACX	SRA	1	1.S.C 1.R.C 1.A.V	2.0 1.5 1.5	zra	0	61
+361	GREBO-19-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	19	*fish	227	FISH	hn~E	hn~E	ʰn a	false	4 7	AX	NA	12	12.N.C 12.A.V	2.0 1.5	ʰna	0	64
+362	KLAO-19-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	19	*fish	227	FISH	nE	nE	n a	false	4 7	AX	NA	13	13.N.C 13.A.V	2.0 1.5	na	1	64
+363	KRUMAN-19-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	19	*fish	227	FISH	hni	hni	h n i	false	3 4 7	ACX	HNI	14	14.H.C 14.N.C 14.I.V	2.0 1.5 1.5	hni	0	61
+364	KRUMEN_PYE-19-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	19	*fish	227	FISH	hl*e	hl*e	h l̃ e	false	3 5 7	ACX	HLE	15	15.H.C 15.L.C 15.E.V	2.0 1.5 1.5	hl̃e	0	61
+365	NYABWA-19-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	19	*fish	227	FISH	zimi	zimi	z i m i	false	3 7 4 7	AXBZ	SIMI	18	18.S.C 18.I.V 18.M.C 18.I.V	2.0 1.5 1.75 0.8	zimi	0	65
+366	WOBE-19-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	19	*fish	227	FISH	smi	smi	s m i	false	3 4 7	ACX	SMI	20	20.S.C 20.M.C 20.I.V	2.0 1.5 1.5	smi	0	65
+367	GREBO-95-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	95	*full	1429	FULL	bloblo	bloblo	b l o b l o	false	1 5 7 1 5 7	ACXBCZ	PLUPLU	12	12.P.C 12.L.C 12.U.V 12.P.C 12.L.C 12.U.V	2.0 1.5 1.5 1.75 1.5 0.8	bloblo	0	66
+368	KLAO-95-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	95	*full	1429	FULL	jidi	jidi	dʒ i d i	false	1 7 1 7	AXBZ	TITI	13	13.T.C 13.I.V 13.T.C 13.I.V	2.0 1.5 1.75 0.8	dʒidi	0	67
+16	BAKWE-48-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	48	*hand	1277	HAND	klugb~a	klugb~a	k l u g b ɐ	false	1 5 7 1 1 7	ACXMBZ	KLYKPE	2	2.K.C 2.L.C 2.Y.V 2.K.c 2.P.C 2.E.V	2.0 1.5 1.5 1.1 1.75 0.8	klugbɐ	0	68
+79	BETE_DALOA-48-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	48	*hand	1277	HAND	kota	kota	k o t ɐ	false	1 7 1 7	AXBZ	KUTE	4	4.K.C 4.U.V 4.T.C 4.E.V	2.0 1.5 1.75 0.8	kotɐ	0	68
+80	GODIE-48-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	48	*hand	1277	HAND	klogba	klogba	k l o g b ɐ	false	1 5 7 1 1 7	ACXMBZ	KLUKPE	11	11.K.C 11.L.C 11.U.V 11.K.c 11.P.C 11.E.V	2.0 1.5 1.5 1.1 1.75 0.8	klogbɐ	0	68
+172	DIDA_LAKOTA-48-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	48	*hand	1277	HAND	kotukpa	kotukpa	k o t u k p ɐ	false	1 7 1 7 1 1 7	AXBYMBZ	KUTYKPE	7	7.K.C 7.U.V 7.T.C 7.Y.V 7.K.c 7.P.C 7.E.V	2.0 1.5 1.75 1.3 1.1 1.75 0.8	kotukpɐ	0	68
+369	GLIO_OUBI-48-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	48	*hand	1277	HAND	ho*	ho*	h õ	false	3 7	AX	HU	10	10.H.C 10.U.V	2.0 1.5	hõ	0	69
+370	GREBO-48-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	48	*hand	1277	HAND	koba	koba	k o b ɐ	false	1 7 1 7	AXBZ	KUPE	12	12.K.C 12.U.V 12.P.C 12.E.V	2.0 1.5 1.75 0.8	kobɐ	0	68
+371	GREBO-48-2	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	48	*hand	1277	HAND	kwa	kwa	k w ɐ	false	1 6 7	ACX	KWE	12	12.K.C 12.W.C 12.E.V	2.0 1.5 1.5	kwɐ	0	70
+372	KLAO-48-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	48	*hand	1277	HAND	k3ba	k3ba	k ə b ɐ	false	1 7 1 7	AXBZ	KEPE	13	13.K.C 13.E.V 13.P.C 13.E.V	2.0 1.5 1.75 0.8	kəbɐ	0	68
+373	KRUMAN-48-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	48	*hand	1277	HAND	kata	kata	k ɐ t ɐ	false	1 7 1 7	AXBZ	KETE	14	14.K.C 14.E.V 14.T.C 14.E.V	2.0 1.5 1.75 0.8	kɐtɐ	0	68
+374	WE_SOUTHERN-48-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	48	*hand	1277	HAND	so*	so*	s õ	false	3 7	AX	SU	19	19.S.C 19.U.V	2.0 1.5	sõ	0	69
+375	WE_SOUTHERN-48-2	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	48	*hand	1277	HAND	kola	kola	k o l ɐ	false	1 7 5 7	AXBZ	KULE	19	19.K.C 19.U.V 19.L.C 19.E.V	2.0 1.5 1.75 0.8	kolɐ	0	71
+376	WOBE-48-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	48	*hand	1277	HAND	kw~a	kw~a	kʷ ɐ	false	1 7	AX	KE	20	20.K.C 20.E.V	2.0 1.5	kʷɐ	0	70
+17	BAKWE-58-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	58	*hear	1408	HEAR	jE	jE	dʒ a	false	1 7	AX	TA	2	2.T.C 2.A.V	2.0 1.5	dʒa	0	72
+18	BAKWE-58-2	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	58	*hear	1408	HEAR	nuwli	nuwli	n u w l i	false	4 7 6 5 7	AXMBZ	NYWLI	2	2.N.C 2.Y.V 2.W.c 2.L.C 2.I.V	2.0 1.5 1.1 1.75 0.8	nuwli	0	81
+81	BETE_DALOA-58-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	58	*hear	1408	HEAR	p3niyukuli	p3niyukuli	p ə n i j u k u l i	false	1 7 4 7 6 7 1 7 5 7	AXBYBYBYBZ	PENIJYKYLI	4	4.P.C 4.E.V 4.N.C 4.I.V 4.J.C 4.Y.V 4.K.C 4.Y.V 4.L.C 4.I.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 1.3 1.75 0.8	pənijukuli	0	73
+82	BETE_GUIBEROUA-58-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	58	*hear	1408	HEAR	n3	n3	n ə	false	4 7	AX	NE	5	5.N.C 5.E.V	2.0 1.5	nə	0	74
+83	GODIE-58-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	58	*hear	1408	HEAR	nu	nu	n u	false	4 7	AX	NY	11	11.N.C 11.Y.V	2.0 1.5	nu	0	74
+173	DIDA_LAKOTA-58-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	58	*hear	1408	HEAR	nu	nu	n u	false	4 7	AX	NY	7	7.N.C 7.Y.V	2.0 1.5	nu	0	74
+174	DIDA_YOCOBOUE-58-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	58	*hear	1408	HEAR	nu	nu	n u	false	4 7	AX	NY	8	8.N.C 8.Y.V	2.0 1.5	nu	0	74
+175	NEYO-58-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	58	*hear	1408	HEAR	nu	nu	n u	false	4 7	AX	NY	17	17.N.C 17.Y.V	2.0 1.5	nu	0	74
+377	GREBO-58-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	58	*hear	1408	HEAR	Nwo	Nwo	ŋ w o	false	4 6 7	ACX	NWU	12	12.N.C 12.W.C 12.U.V	2.0 1.5 1.5	ŋwo	0	75
+378	KLAO-58-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	58	*hear	1408	HEAR	wo*	wo*	w õ	false	6 7	AX	WU	13	13.W.C 13.U.V	2.0 1.5	wõ	0	76
+379	KRUMAN-58-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	58	*hear	1408	HEAR	Nwe	Nwe	ŋ w e	false	4 6 7	ACX	NWE	14	14.N.C 14.W.C 14.E.V	2.0 1.5 1.5	ŋwe	0	77
+380	KRUMEN_PYE-58-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	58	*hear	1408	HEAR	wi*	wi*	w ĩ	false	6 7	AX	WI	15	15.W.C 15.I.V	2.0 1.5	wĩ	0	78
+381	NYABWA-58-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	58	*hear	1408	HEAR	NwE bo	NwE bo	ŋ w a b o	false	4 6 7 1 7	ACXBZ	NWAPU	18	18.N.C 18.W.C 18.A.V 18.P.C 18.U.V	2.0 1.5 1.5 1.75 0.8	ŋwabo	0	79
+382	WE_SOUTHERN-58-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	58	*hear	1408	HEAR	diNwe*	diNwe*	d i ŋ w ẽ	false	1 7 4 6 7	AXBCZ	TINWE	19	19.T.C 19.I.V 19.N.C 19.W.C 19.E.V	2.0 1.5 1.75 1.5 0.8	diŋwẽ	0	80
+383	WOBE-58-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	58	*hear	1408	HEAR	Nw~o	Nw~o	ŋʷ o	false	4 7	AX	NU	20	20.N.C 20.U.V	2.0 1.5	ŋʷo	0	75
+19	BAKWE-34-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	34	*horn	1393	HORN (ANATOMY)	gue	gue	g u e	false	1 7 7	AXZ	KYE	2	2.K.C 2.Y.V 2.E.V	2.0 1.5 0.8	gue	0	82
+84	BETE_GUIBEROUA-34-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	34	*horn	1393	HORN (ANATOMY)	g3	g3	g ə	false	1 7	AX	KE	5	5.K.C 5.E.V	2.0 1.5	gə	0	82
+176	DIDA_LAKOTA-34-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	34	*horn	1393	HORN (ANATOMY)	vo	vo	v o	false	3 7	AX	BU	7	7.B.C 7.U.V	2.0 1.5	vo	0	84
+177	DIDA_YOCOBOUE-34-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	34	*horn	1393	HORN (ANATOMY)	gwi	gwi	g w i	false	1 6 7	ACX	KWI	8	8.K.C 8.W.C 8.I.V	2.0 1.5 1.5	gwi	0	85
+178	NEYO-34-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	34	*horn	1393	HORN (ANATOMY)	v3	v3	v ə	false	3 7	AX	BE	17	17.B.C 17.E.V	2.0 1.5	və	0	88
+240	KUWAA-34-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	34	*horn	1393	HORN (ANATOMY)	ku*be	ku*be	k ũ b e	false	1 7 1 7	AXBZ	KYPE	16	16.K.C 16.Y.V 16.P.C 16.E.V	2.0 1.5 1.75 0.8	kũbe	0	82
+384	AIZI_TIAGBAMRIN-34-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	34	*horn	1393	HORN (ANATOMY)	gbeli	gbeli	g b e l i	false	1 1 7 5 7	ACYBZ	KPELI	1	1.K.C 1.P.C 1.E.V 1.L.C 1.I.V	2.0 1.5 1.3 1.75 0.8	gbeli	0	82
+385	BASSA-34-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	34	*horn	1393	HORN (ANATOMY)	gmE	gmE	g m a	false	1 4 7	ACX	KMA	3	3.K.C 3.M.C 3.A.V	2.0 1.5 1.5	gma	0	83
+386	EASTERN_KRAHN-34-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	34	*horn	1393	HORN (ANATOMY)	gbo	gbo	g b o	false	1 1 7	ACZ	KPU	9	9.K.C 9.P.C 9.U.V	2.0 1.5 0.8	gbo	0	82
+387	GLIO_OUBI-34-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	34	*horn	1393	HORN (ANATOMY)	NmE*	NmE*	ŋ m ã	false	4 4 7	ACZ	NMA	10	10.N.C 10.M.C 10.A.V	2.0 1.5 0.8	ŋmã	0	86
+388	GREBO-34-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	34	*horn	1393	HORN (ANATOMY)	Nmo	Nmo	ŋ m o	false	4 4 7	ACZ	NMU	12	12.N.C 12.M.C 12.U.V	2.0 1.5 0.8	ŋmo	0	86
+389	KLAO-34-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	34	*horn	1393	HORN (ANATOMY)	Nmo*	Nmo*	ŋ m õ	false	4 4 7	ACZ	NMU	13	13.N.C 13.M.C 13.U.V	2.0 1.5 0.8	ŋmõ	0	86
+390	KRUMEN_PYE-34-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	34	*horn	1393	HORN (ANATOMY)	doe	doe	d o e	false	1 7 7	AXZ	TUE	15	15.T.C 15.U.V 15.E.V	2.0 1.5 0.8	doe	0	87
+391	NYABWA-34-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	34	*horn	1393	HORN (ANATOMY)	gbo	gbo	g b o	false	1 1 7	ACZ	KPU	18	18.K.C 18.P.C 18.U.V	2.0 1.5 0.8	gbo	0	82
+20	BAKWE-47-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	47	*knee	1371	KNEE	kotu	kotu	k o t u	false	1 7 1 7	AXBZ	KUTY	2	2.K.C 2.U.V 2.T.C 2.Y.V	2.0 1.5 1.75 0.8	kotu	0	90
+85	BETE_DALOA-47-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	47	*knee	1371	KNEE	kokoml~u	kokoml~u	k o k o m l u	false	1 7 1 7 4 5 7	AXBYBCZ	KUKUMLY	4	4.K.C 4.U.V 4.K.C 4.U.V 4.M.C 4.L.C 4.Y.V	2.0 1.5 1.75 1.3 1.75 1.5 0.8	kokomlu	0	91
+86	BETE_GUIBEROUA-47-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	47	*knee	1371	KNEE	kokom3ni	kokom3ni	k o k o m ə n i	false	1 7 1 7 4 7 4 7	AXBYBYBZ	KUKUMENI	5	5.K.C 5.U.V 5.K.C 5.U.V 5.M.C 5.E.V 5.N.C 5.I.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	kokoməni	0	91
+87	GODIE-47-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	47	*knee	1371	KNEE	k3k3gb3	k3k3gb3	k ə k ə g b ə	false	1 7 1 7 1 1 7	AXBYMBZ	KEKEKPE	11	11.K.C 11.E.V 11.K.C 11.E.V 11.K.c 11.P.C 11.E.V	2.0 1.5 1.75 1.3 1.1 1.75 0.8	kəkəgbə	0	92
+179	DIDA_LAKOTA-47-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	47	*knee	1371	KNEE	kokoulu	kokoulu	k o k o u l u	false	1 7 1 7 7 5 7	AXBYYBZ	KUKUYLY	7	7.K.C 7.U.V 7.K.C 7.U.V 7.Y.V 7.L.C 7.Y.V	2.0 1.5 1.75 1.3 1.3 1.75 0.8	kokoulu	0	91
+180	DIDA_YOCOBOUE-47-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	47	*knee	1371	KNEE	kokowlu	kokowlu	k o k o w l u	false	1 7 1 7 6 5 7	AXBYMBZ	KUKUWLY	8	8.K.C 8.U.V 8.K.C 8.U.V 8.W.c 8.L.C 8.Y.V	2.0 1.5 1.75 1.3 1.1 1.75 0.8	kokowlu	0	91
+181	NEYO-47-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	47	*knee	1371	KNEE	kotu	kotu	k o t u	false	1 7 1 7	AXBZ	KUTY	17	17.K.C 17.U.V 17.T.C 17.Y.V	2.0 1.5 1.75 0.8	kotu	0	90
+392	AIZI_TIAGBAMRIN-47-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	47	*knee	1371	KNEE	kukru	kukru	k u k r u	false	1 7 1 5 7	AXBCZ	KYKRY	1	1.K.C 1.Y.V 1.K.C 1.R.C 1.Y.V	2.0 1.5 1.75 1.5 0.8	kukru	0	89
+393	GREBO-47-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	47	*knee	1371	KNEE	kona	kona	k o n ɐ	false	1 7 4 7	AXBZ	KUNE	12	12.K.C 12.U.V 12.N.C 12.E.V	2.0 1.5 1.75 0.8	konɐ	0	90
+394	KLAO-47-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	47	*knee	1371	KNEE	kulu	kulu	k u l u	false	1 7 5 7	AXBZ	KYLY	13	13.K.C 13.Y.V 13.L.C 13.Y.V	2.0 1.5 1.75 0.8	kulu	0	89
+395	KRUMAN-47-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	47	*knee	1371	KNEE	kw~la	kw~la	kʷ l ɐ	false	1 5 7	ACX	KLE	14	14.K.C 14.L.C 14.E.V	2.0 1.5 1.5	kʷlɐ	0	90
+396	KRUMEN_PYE-47-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	47	*knee	1371	KNEE	kuru	kuru	k u r u	false	1 7 5 7	AXBZ	KYRY	15	15.K.C 15.Y.V 15.R.C 15.Y.V	2.0 1.5 1.75 0.8	kuru	0	89
+397	NYABWA-47-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	47	*knee	1371	KNEE	kudru	kudru	k u d r u	false	1 7 1 5 7	AXBCZ	KYTRY	18	18.K.C 18.Y.V 18.T.C 18.R.C 18.Y.V	2.0 1.5 1.75 1.5 0.8	kudru	0	89
+398	WE_SOUTHERN-47-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	47	*knee	1371	KNEE	ku	ku	k u	false	1 7	AX	KY	19	19.K.C 19.Y.V	2.0 1.5	ku	0	93
+399	WOBE-47-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	47	*knee	1371	KNEE	kou	kou	k o u	false	1 7 7	AXZ	KUY	20	20.K.C 20.U.V 20.Y.V	2.0 1.5 0.8	kou	0	90
+21	BAKWE-25-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	25	*leaf	628	LEAF	napu	napu	n ɐ p u	false	4 7 1 7	AXBZ	NEPY	2	2.N.C 2.E.V 2.P.C 2.Y.V	2.0 1.5 1.75 0.8	nɐpu	0	95
+88	BETE_GUIBEROUA-25-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	25	*leaf	628	LEAF	kp3	kp3	k p ə	false	1 1 7	ACZ	KPE	5	5.K.C 5.P.C 5.E.V	2.0 1.5 0.8	kpə	0	96
+182	DIDA_LAKOTA-25-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	25	*leaf	628	LEAF	fuflu	fuflu	f u f l u	false	3 7 3 5 7	AXBCZ	BYBLY	7	7.B.C 7.Y.V 7.B.C 7.L.C 7.Y.V	2.0 1.5 1.75 1.5 0.8	fuflu	0	97
+183	DIDA_YOCOBOUE-25-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	25	*leaf	628	LEAF	tokp3	tokp3	t o k p ə	false	1 7 1 1 7	AXMBZ	TUKPE	8	8.T.C 8.U.V 8.K.c 8.P.C 8.E.V	2.0 1.5 1.1 1.75 0.8	tokpə	0	98
+184	NEYO-25-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	25	*leaf	628	LEAF	5oku	5oku	ɲ o k u	false	4 7 1 7	AXBZ	NUKY	17	17.N.C 17.U.V 17.K.C 17.Y.V	2.0 1.5 1.75 0.8	ɲoku	0	101
+400	AIZI_TIAGBAMRIN-25-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	25	*leaf	628	LEAF	fi	fi	f i	false	3 7	AX	BI	1	1.B.C 1.I.V	2.0 1.5	fi	0	94
+401	GREBO-25-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	25	*leaf	628	LEAF	hu	hu	h u	false	3 7	AX	HY	12	12.H.C 12.Y.V	2.0 1.5	hu	0	99
+402	KLAO-25-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	25	*leaf	628	LEAF	w3	w3	w ə	false	6 7	AX	WE	13	13.W.C 13.E.V	2.0 1.5	wə	0	100
+403	KRUMEN_PYE-25-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	25	*leaf	628	LEAF	5awa	5awa	ɲ ɐ w ɐ	false	4 7 6 7	AXBZ	NEWE	15	15.N.C 15.E.V 15.W.C 15.E.V	2.0 1.5 1.75 0.8	ɲɐwɐ	0	100
+404	NYABWA-25-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	25	*leaf	628	LEAF	Nwe	Nwe	ŋ w e	false	4 6 7	ACX	NWE	18	18.N.C 18.W.C 18.E.V	2.0 1.5 1.5	ŋwe	0	100
+22	BAKWE-53-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	53	*liver	1224	LIVER	plE	plE	p l a	false	1 5 7	ACX	PLA	2	2.P.C 2.L.C 2.A.V	2.0 1.5 1.5	pla	0	103
+89	BETE_DALOA-53-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	53	*liver	1224	LIVER	polE	polE	p o l a	false	1 7 5 7	AXBZ	PULA	4	4.P.C 4.U.V 4.L.C 4.A.V	2.0 1.5 1.75 0.8	pola	0	103
+90	BETE_GUIBEROUA-53-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	53	*liver	1224	LIVER	diri	diri	d i r i	false	1 7 5 7	AXBZ	TIRI	5	5.T.C 5.I.V 5.R.C 5.I.V	2.0 1.5 1.75 0.8	diri	0	104
+185	DIDA_LAKOTA-53-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	53	*liver	1224	LIVER	polE	polE	p o l a	false	1 7 5 7	AXBZ	PULA	7	7.P.C 7.U.V 7.L.C 7.A.V	2.0 1.5 1.75 0.8	pola	0	103
+186	DIDA_YOCOBOUE-53-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	53	*liver	1224	LIVER	polE	polE	p o l a	false	1 7 5 7	AXBZ	PULA	8	8.P.C 8.U.V 8.L.C 8.A.V	2.0 1.5 1.75 0.8	pola	0	103
+187	NEYO-53-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	53	*liver	1224	LIVER	pol3	pol3	p o l ə	false	1 7 5 7	AXBZ	PULE	17	17.P.C 17.U.V 17.L.C 17.E.V	2.0 1.5 1.75 0.8	polə	0	103
+405	AIZI_TIAGBAMRIN-53-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	53	*liver	1224	LIVER	pri	pri	p r i	false	1 5 7	ACX	PRI	1	1.P.C 1.R.C 1.I.V	2.0 1.5 1.5	pri	0	102
+406	GREBO-53-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	53	*liver	1224	LIVER	plo	plo	p l o	false	1 5 7	ACX	PLU	12	12.P.C 12.L.C 12.U.V	2.0 1.5 1.5	plo	0	103
+407	KLAO-53-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	53	*liver	1224	LIVER	polo	polo	p o l o	false	1 7 5 7	AXBZ	PULU	13	13.P.C 13.U.V 13.L.C 13.U.V	2.0 1.5 1.75 0.8	polo	0	105
+408	KRUMEN_PYE-53-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	53	*liver	1224	LIVER	gbulE	gbulE	g b u l a	false	1 1 7 5 7	ACYBZ	KPYLA	15	15.K.C 15.P.C 15.Y.V 15.L.C 15.A.V	2.0 1.5 1.3 1.75 0.8	gbula	0	106
+409	NYABWA-53-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	53	*liver	1224	LIVER	polo	polo	p o l o	false	1 7 5 7	AXBZ	PULU	18	18.P.C 18.U.V 18.L.C 18.U.V	2.0 1.5 1.75 0.8	polo	0	105
+23	BAKWE-22-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	22	*louse	1392	LOUSE	5aka	5aka	ɲ ɐ k ɐ	false	4 7 1 7	AXBZ	NEKE	2	2.N.C 2.E.V 2.K.C 2.E.V	2.0 1.5 1.75 0.8	ɲɐkɐ	0	108
+24	BAKWE-22-2	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	22	*louse	1392	LOUSE	gb~igb~li	gb~igb~li	g b i g b l i	false	1 1 7 1 1 5 7	ACYMBCZ	KPIKPLI	2	2.K.C 2.P.C 2.I.V 2.K.c 2.P.C 2.L.C 2.I.V	2.0 1.5 1.3 1.1 1.75 1.5 0.8	gbigbli	0	112
+91	BETE_DALOA-22-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	22	*louse	1392	LOUSE	nEbh~3	nEbh~3	n a bʰ ə	false	4 7 1 7	AXBZ	NAPE	4	4.N.C 4.A.V 4.P.C 4.E.V	2.0 1.5 1.75 0.8	nabʰə	0	109
+92	BETE_GUIBEROUA-22-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	22	*louse	1392	LOUSE	nE	nE	n a	false	4 7	AX	NA	5	5.N.C 5.A.V	2.0 1.5	na	0	110
+188	DIDA_YOCOBOUE-22-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	22	*louse	1392	LOUSE	numo	numo	n u m o	false	4 7 4 7	AXBZ	NYMU	8	8.N.C 8.Y.V 8.M.C 8.U.V	2.0 1.5 1.75 0.8	numo	0	107
+189	NEYO-22-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	22	*louse	1392	LOUSE	ni	ni	n i	false	4 7	AX	NI	17	17.N.C 17.I.V	2.0 1.5	ni	0	111
+410	AIZI_TIAGBAMRIN-22-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	22	*louse	1392	LOUSE	numo	numo	n u m o	false	4 7 4 7	AXBZ	NYMU	1	1.N.C 1.Y.V 1.M.C 1.U.V	2.0 1.5 1.75 0.8	numo	0	107
+411	KLAO-22-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	22	*louse	1392	LOUSE	nE	nE	n a	false	4 7	AX	NA	13	13.N.C 13.A.V	2.0 1.5	na	1	111
+412	KRUMEN_PYE-22-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	22	*louse	1392	LOUSE	nuo*	nuo*	n u õ	false	4 7 7	AXZ	NYU	15	15.N.C 15.Y.V 15.U.V	2.0 1.5 0.8	nuõ	0	107
+413	NYABWA-22-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	22	*louse	1392	LOUSE	ne	ne	n e	false	4 7	AX	NE	18	18.N.C 18.E.V	2.0 1.5	ne	0	111
+414	NYABWA-22-2	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	22	*louse	1392	LOUSE	ni	ni	n i	false	4 7	AX	NI	18	18.N.C 18.I.V	2.0 1.5	ni	0	107
+25	BAKWE-86-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	86	*mountain	639	MOUNTAIN	dugb~a	dugb~a	d u g b ɐ	false	1 7 1 1 7	AXMBZ	TYKPE	2	2.T.C 2.Y.V 2.K.c 2.P.C 2.E.V	2.0 1.5 1.1 1.75 0.8	dugbɐ	0	113
+93	BETE_DALOA-86-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	86	*mountain	639	MOUNTAIN	kp~i	kp~i	kp i	false	1 7	AX	KI	4	4.K.C 4.I.V	2.0 1.5	kpi	0	114
+190	DIDA_LAKOTA-86-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	86	*mountain	639	MOUNTAIN	tlukpe	tlukpe	t l u k p e	false	1 5 7 1 1 7	ACXMBZ	TLYKPE	7	7.T.C 7.L.C 7.Y.V 7.K.c 7.P.C 7.E.V	2.0 1.5 1.5 1.1 1.75 0.8	tlukpe	0	113
+415	GREBO-86-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	86	*mountain	639	MOUNTAIN	tebe	tebe	t e b e	false	1 7 1 7	AXBZ	TEPE	12	12.T.C 12.E.V 12.P.C 12.E.V	2.0 1.5 1.75 0.8	tebe	0	113
+416	KLAO-86-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	86	*mountain	639	MOUNTAIN	tlo	tlo	t l o	false	1 5 7	ACX	TLU	13	13.T.C 13.L.C 13.U.V	2.0 1.5 1.5	tlo	0	115
+26	BAKWE-100-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	100	*name	1405	NAME	5ri	5ri	ɲ r i	false	4 5 7	ACX	NRI	2	2.N.C 2.R.C 2.I.V	2.0 1.5 1.5	ɲri	0	116
+94	BETE_DALOA-100-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	100	*name	1405	NAME	N3ni	N3ni	ŋ ə n i	false	4 7 4 7	AXBZ	NENI	4	4.N.C 4.E.V 4.N.C 4.I.V	2.0 1.5 1.75 0.8	ŋəni	0	117
+95	BETE_GUIBEROUA-100-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	100	*name	1405	NAME	N3ni	N3ni	ŋ ə n i	false	4 7 4 7	AXBZ	NENI	5	5.N.C 5.E.V 5.N.C 5.I.V	2.0 1.5 1.75 0.8	ŋəni	0	117
+96	GODIE-100-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	100	*name	1405	NAME	Nl3	Nl3	ŋ l ə	false	4 5 7	ACX	NLE	11	11.N.C 11.L.C 11.E.V	2.0 1.5 1.5	ŋlə	0	116
+191	DIDA_YOCOBOUE-100-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	100	*name	1405	NAME	Nii	Nii	ŋ i i	false	4 7 7	AXZ	NII	8	8.N.C 8.I.V 8.I.V	2.0 1.5 0.8	ŋii	0	117
+192	NEYO-100-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	100	*name	1405	NAME	jli	jli	dʒ l i	false	1 5 7	ACX	TLI	17	17.T.C 17.L.C 17.I.V	2.0 1.5 1.5	dʒli	0	119
+241	KUWAA-100-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	100	*name	1405	NAME	5ElE*	5ElE*	ɲ a l ã	false	4 7 5 7	AXBZ	NALA	16	16.N.C 16.A.V 16.L.C 16.A.V	2.0 1.5 1.75 0.8	ɲalã	0	117
+417	BASSA-100-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	100	*name	1405	NAME	5EnE	5EnE	ɲ a n a	false	4 7 4 7	AXBZ	NANA	3	3.N.C 3.A.V 3.N.C 3.A.V	2.0 1.5 1.75 0.8	ɲana	0	117
+418	DEWOIN-100-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	100	*name	1405	NAME	NElE	NElE	ŋ a l a	false	4 7 5 7	AXBZ	NALA	6	6.N.C 6.A.V 6.L.C 6.A.V	2.0 1.5 1.75 0.8	ŋala	0	117
+419	EASTERN_KRAHN-100-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	100	*name	1405	NAME	5i	5i	ɲ i	false	4 7	AX	NI	9	9.N.C 9.I.V	2.0 1.5	ɲi	0	116
+420	GLIO_OUBI-100-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	100	*name	1405	NAME	5iro*	5iro*	ɲ i r õ	false	4 7 5 7	AXBZ	NIRU	10	10.N.C 10.I.V 10.R.C 10.U.V	2.0 1.5 1.75 0.8	ɲirõ	0	116
+421	GREBO-100-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	100	*name	1405	NAME	nyene	nyene	n j e n e	false	4 6 7 4 7	ACXBZ	NJENE	12	12.N.C 12.J.C 12.E.V 12.N.C 12.E.V	2.0 1.5 1.5 1.75 0.8	njene	0	117
+422	KLAO-100-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	100	*name	1405	NAME	ninE	ninE	n i n a	false	4 7 4 7	AXBZ	NINA	13	13.N.C 13.I.V 13.N.C 13.A.V	2.0 1.5 1.75 0.8	nina	0	117
+423	KRUMAN-100-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	100	*name	1405	NAME	do	do	d o	false	1 7	AX	TU	14	14.T.C 14.U.V	2.0 1.5	do	0	118
+424	KRUMEN_PYE-100-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	100	*name	1405	NAME	5l*o*	5l*o*	ɲ l̃ õ	false	4 5 7	ACX	NLU	15	15.N.C 15.L.C 15.U.V	2.0 1.5 1.5	ɲl̃õ	0	116
+425	NYABWA-100-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	100	*name	1405	NAME	5ene	5ene	ɲ e n e	false	4 7 4 7	AXBZ	NENE	18	18.N.C 18.E.V 18.N.C 18.E.V	2.0 1.5 1.75 0.8	ɲene	0	117
+426	WOBE-100-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	100	*name	1405	NAME	5n~e	5n~e	ŋ n e	false	4 4 7	ACZ	NNE	20	20.N.C 20.N.C 20.E.V	2.0 1.5 0.8	ŋne	0	117
+27	BAKWE-96-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	96	*new	1231	NEW	jijarE	jijarE	dʒ i dʒ ɐ r a	false	1 7 1 7 5 7	AXBYBZ	TITERA	2	2.T.C 2.I.V 2.T.C 2.E.V 2.R.C 2.A.V	2.0 1.5 1.75 1.3 1.75 0.8	dʒidʒɐra	0	120
+97	BETE_DALOA-96-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	96	*new	1231	NEW	lile	lile	l i l e	false	5 7 5 7	AXBZ	LILE	4	4.L.C 4.I.V 4.L.C 4.E.V	2.0 1.5 1.75 0.8	lile	0	121
+427	KLAO-96-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	96	*new	1231	NEW	dede	dede	d e d e	false	1 7 1 7	AXBZ	TETE	13	13.T.C 13.E.V 13.T.C 13.E.V	2.0 1.5 1.75 0.8	dede	0	122
+28	BAKWE-92-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	92	*night	1233	NIGHT	gb~ia	gb~ia	g b i ɐ	false	1 1 7 7	ACYZ	KPIE	2	2.K.C 2.P.C 2.I.V 2.E.V	2.0 1.5 1.3 0.8	gbiɐ	0	124
+98	BETE_DALOA-92-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	92	*night	1233	NIGHT	d3d3	d3d3	d ə d ə	false	1 7 1 7	AXBZ	TETE	4	4.T.C 4.E.V 4.T.C 4.E.V	2.0 1.5 1.75 0.8	dədə	0	123
+99	BETE_GUIBEROUA-92-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	92	*night	1233	NIGHT	sab3	sab3	s ɐ b ə	false	3 7 1 7	AXBZ	SEPE	5	5.S.C 5.E.V 5.P.C 5.E.V	2.0 1.5 1.75 0.8	sɐbə	0	125
+100	GODIE-92-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	92	*night	1233	NIGHT	kigbiso	kigbiso	k i g b i s o	false	1 7 1 1 7 3 7	AXMBYBZ	KIKPISU	11	11.K.C 11.I.V 11.K.c 11.P.C 11.I.V 11.S.C 11.U.V	2.0 1.5 1.1 1.75 1.3 1.75 0.8	kigbiso	0	127
+193	DIDA_LAKOTA-92-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	92	*night	1233	NIGHT	debe	debe	d e b e	false	1 7 1 7	AXBZ	TEPE	7	7.T.C 7.E.V 7.P.C 7.E.V	2.0 1.5 1.75 0.8	debe	0	126
+194	DIDA_YOCOBOUE-92-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	92	*night	1233	NIGHT	d3bi	d3bi	d ə b i	false	1 7 1 7	AXBZ	TEPI	8	8.T.C 8.E.V 8.P.C 8.I.V	2.0 1.5 1.75 0.8	dəbi	0	126
+195	NEYO-92-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	92	*night	1233	NIGHT	dibi	dibi	d i b i	false	1 7 1 7	AXBZ	TIPI	17	17.T.C 17.I.V 17.P.C 17.I.V	2.0 1.5 1.75 0.8	dibi	0	126
+428	AIZI_TIAGBAMRIN-92-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	92	*night	1233	NIGHT	dudo	dudo	d u d o	false	1 7 1 7	AXBZ	TYTU	1	1.T.C 1.Y.V 1.T.C 1.U.V	2.0 1.5 1.75 0.8	dudo	0	123
+429	GREBO-92-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	92	*night	1233	NIGHT	to	to	t o	false	1 7	AX	TU	12	12.T.C 12.U.V	2.0 1.5	to	0	128
+430	KLAO-92-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	92	*night	1233	NIGHT	mat3	mat3	m ɐ t ə	false	4 7 1 7	AXBZ	METE	13	13.M.C 13.E.V 13.T.C 13.E.V	2.0 1.5 1.75 0.8	mɐtə	0	129
+431	KRUMAN-92-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	92	*night	1233	NIGHT	gb~3gb~3yra	gb~3gb~3yra	g b ə g b ə j r ɐ	false	1 1 7 1 1 7 6 5 7	ACYMBYMBZ	KPEKPEJRE	14	14.K.C 14.P.C 14.E.V 14.K.c 14.P.C 14.E.V 14.J.c 14.R.C 14.E.V	2.0 1.5 1.3 1.1 1.75 1.3 1.1 1.75 0.8	gbəgbəjrɐ	0	130
+432	KRUMEN_PYE-92-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	92	*night	1233	NIGHT	to	to	t o	false	1 7	AX	TU	15	15.T.C 15.U.V	2.0 1.5	to	0	128
+433	NYABWA-92-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	92	*night	1233	NIGHT	muto	muto	m u t o	false	4 7 1 7	AXBZ	MYTU	18	18.M.C 18.Y.V 18.T.C 18.U.V	2.0 1.5 1.75 0.8	muto	0	129
+434	WOBE-92-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	92	*night	1233	NIGHT	ma*o*	ma*o*	m ɐ̃ õ	false	4 7 7	AXZ	MEU	20	20.M.C 20.E.V 20.U.V	2.0 1.5 0.8	mɐ̃õ	0	131
+435	WOBE-92-2	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	92	*night	1233	NIGHT	kw~iye	kw~iye	kʷ i j e	false	1 7 6 7	AXBZ	KIJE	20	20.K.C 20.I.V 20.J.C 20.E.V	2.0 1.5 1.75 0.8	kʷije	0	132
+29	BAKWE-41-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	41	*nose	1221	NOSE	mru	mru	m r u	false	4 5 7	ACX	MRY	2	2.M.C 2.R.C 2.Y.V	2.0 1.5 1.5	mru	0	134
+101	BETE_DALOA-41-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	41	*nose	1221	NOSE	mlE	mlE	m l a	false	4 5 7	ACX	MLA	4	4.M.C 4.L.C 4.A.V	2.0 1.5 1.5	mla	0	134
+102	BETE_GUIBEROUA-41-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	41	*nose	1221	NOSE	m3n3	m3n3	m ə n ə	false	4 7 4 7	AXBZ	MENE	5	5.M.C 5.E.V 5.N.C 5.E.V	2.0 1.5 1.75 0.8	mənə	0	134
+103	GODIE-41-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	41	*nose	1221	NOSE	ml3	ml3	m l ə	false	4 5 7	ACX	MLE	11	11.M.C 11.L.C 11.E.V	2.0 1.5 1.5	mlə	0	134
+196	DIDA_LAKOTA-41-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	41	*nose	1221	NOSE	mene	mene	m e n e	false	4 7 4 7	AXBZ	MENE	7	7.M.C 7.E.V 7.N.C 7.E.V	2.0 1.5 1.75 0.8	mene	0	134
+197	DIDA_YOCOBOUE-41-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	41	*nose	1221	NOSE	mne	mne	m n e	false	4 4 7	ACZ	MNE	8	8.M.C 8.N.C 8.E.V	2.0 1.5 0.8	mne	0	134
+198	NEYO-41-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	41	*nose	1221	NOSE	mle	mle	m l e	false	4 5 7	ACX	MLE	17	17.M.C 17.L.C 17.E.V	2.0 1.5 1.5	mle	0	134
+242	KUWAA-41-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	41	*nose	1221	NOSE	5u*	5u*	ɲ ũ	false	4 7	AX	NY	16	16.N.C 16.Y.V	2.0 1.5	ɲũ	0	134
+436	AIZI_TIAGBAMRIN-41-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	41	*nose	1221	NOSE	muvo	muvo	m u v o	false	4 7 3 7	AXBZ	MYBU	1	1.M.C 1.Y.V 1.B.C 1.U.V	2.0 1.5 1.75 0.8	muvo	0	133
+437	BASSA-41-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	41	*nose	1221	NOSE	mana	mana	m ɐ n ɐ	false	4 7 4 7	AXBZ	MENE	3	3.M.C 3.E.V 3.N.C 3.E.V	2.0 1.5 1.75 0.8	mɐnɐ	0	134
+438	DEWOIN-41-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	41	*nose	1221	NOSE	mala*	mala*	m ɐ l ɐ̃	false	4 7 5 7	AXBZ	MELE	6	6.M.C 6.E.V 6.L.C 6.E.V	2.0 1.5 1.75 0.8	mɐlɐ̃	0	134
+439	EASTERN_KRAHN-41-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	41	*nose	1221	NOSE	mla*	mla*	m l ɐ̃	false	4 5 7	ACX	MLE	9	9.M.C 9.L.C 9.E.V	2.0 1.5 1.5	mlɐ̃	0	134
+440	GLIO_OUBI-41-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	41	*nose	1221	NOSE	mea*	mea*	m e ɐ̃	false	4 7 7	AXZ	MEE	10	10.M.C 10.E.V 10.E.V	2.0 1.5 0.8	meɐ̃	0	134
+441	GREBO-41-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	41	*nose	1221	NOSE	me	me	m e	false	4 7	AX	ME	12	12.M.C 12.E.V	2.0 1.5	me	0	134
+442	KLAO-41-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	41	*nose	1221	NOSE	mna	mna	m n ɐ	false	4 4 7	ACZ	MNE	13	13.M.C 13.N.C 13.E.V	2.0 1.5 0.8	mnɐ	0	134
+443	KRUMAN-41-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	41	*nose	1221	NOSE	mea	mea	m e ɐ	false	4 7 7	AXZ	MEE	14	14.M.C 14.E.V 14.E.V	2.0 1.5 0.8	meɐ	0	134
+444	KRUMEN_PYE-41-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	41	*nose	1221	NOSE	mi*a	mi*a	m ĩ ɐ	false	4 7 7	AXZ	MIE	15	15.M.C 15.I.V 15.E.V	2.0 1.5 0.8	mĩɐ	0	134
+445	NYABWA-41-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	41	*nose	1221	NOSE	mana	mana	m ɐ n ɐ	false	4 7 4 7	AXBZ	MENE	18	18.M.C 18.E.V 18.N.C 18.E.V	2.0 1.5 1.75 0.8	mɐnɐ	0	134
+446	WOBE-41-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	41	*nose	1221	NOSE	mla	mla	m l ɐ	false	4 5 7	ACX	MLE	20	20.M.C 20.L.C 20.E.V	2.0 1.5 1.5	mlɐ	0	134
+30	BAKWE-11-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	11	*one	1493	ONE	do	do	d o	false	1 7	AX	TU	2	2.T.C 2.U.V	2.0 1.5	do	0	136
+104	BETE_GUIBEROUA-11-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	11	*one	1493	ONE	b3l3	b3l3	b ə l ə	false	1 7 5 7	AXBZ	PELE	5	5.P.C 5.E.V 5.L.C 5.E.V	2.0 1.5 1.75 0.8	bələ	0	138
+105	GODIE-11-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	11	*one	1493	ONE	bolo	bolo	b o l o	false	1 7 5 7	AXBZ	PULU	11	11.P.C 11.U.V 11.L.C 11.U.V	2.0 1.5 1.75 0.8	bolo	0	138
+199	DIDA_LAKOTA-11-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	11	*one	1493	ONE	bio	bio	b i o	false	1 7 7	AXZ	PIU	7	7.P.C 7.I.V 7.U.V	2.0 1.5 0.8	bio	0	140
+200	DIDA_YOCOBOUE-11-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	11	*one	1493	ONE	mblo	mblo	m b l o	false	4 1 5 7	ACCZ	MPLU	8	8.M.C 8.P.C 8.L.C 8.U.V	2.0 1.5 1.5 0.8	mblo	0	138
+201	NEYO-11-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	11	*one	1493	ONE	bolo	bolo	b o l o	false	1 7 5 7	AXBZ	PULU	17	17.P.C 17.U.V 17.L.C 17.U.V	2.0 1.5 1.75 0.8	bolo	0	138
+243	KUWAA-11-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	11	*one	1493	ONE	dee	dee	d e e	false	1 7 7	AXZ	TEE	16	16.T.C 16.E.V 16.E.V	2.0 1.5 0.8	dee	0	136
+447	AIZI_TIAGBAMRIN-11-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	mumo*	mumo*	m u m õ	false	4 7 4 7	AXBZ	MYMU	1	1.M.C 1.Y.V 1.M.C 1.U.V	2.0 1.5 1.75 0.8	mumõ	0	135
+448	AIZI_TIAGBAMRIN-11-2	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	yre	yre	j r e	false	6 5 7	ACZ	JRE	1	1.J.C 1.R.C 1.E.V	2.0 1.5 0.8	jre	0	141
+449	BASSA-11-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	doo	doo	d o o	false	1 7 7	AXZ	TUU	3	3.T.C 3.U.V 3.U.V	2.0 1.5 0.8	doo	0	137
+450	DEWOIN-11-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	gbo	gbo	g b o	false	1 1 7	ACZ	KPU	6	6.K.C 6.P.C 6.U.V	2.0 1.5 0.8	gbo	0	139
+451	EASTERN_KRAHN-11-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	du	du	d u	false	1 7	AX	TY	9	9.T.C 9.Y.V	2.0 1.5	du	0	136
+452	GLIO_OUBI-11-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	do	do	d o	false	1 7	AX	TU	10	10.T.C 10.U.V	2.0 1.5	do	1	136
+453	GREBO-11-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	do	do	d o	false	1 7	AX	TU	12	12.T.C 12.U.V	2.0 1.5	do	0	136
+454	KLAO-11-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	do	do	d o	false	1 7	AX	TU	13	13.T.C 13.U.V	2.0 1.5	do	0	136
+455	KRUMAN-11-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	do	do	d o	false	1 7	AX	TU	14	14.T.C 14.U.V	2.0 1.5	do	1	136
+456	KRUMEN_PYE-11-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	do	do	d o	false	1 7	AX	TU	15	15.T.C 15.U.V	2.0 1.5	do	0	136
+457	NYABWA-11-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	do	do	d o	false	1 7	AX	TU	18	18.T.C 18.U.V	2.0 1.5	do	0	136
+458	WE_SOUTHERN-11-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	to	to	t o	false	1 7	AX	TU	19	19.T.C 19.U.V	2.0 1.5	to	0	136
+459	WOBE-11-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	11	*one	1493	ONE	to	to	t o	false	1 7	AX	TU	20	20.T.C 20.U.V	2.0 1.5	to	0	136
+31	BAKWE-85-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	85	*path	2252	PATH	sa	sa	s ɐ	false	3 7	AX	SE	2	2.S.C 2.E.V	2.0 1.5	sɐ	0	142
+32	BAKWE-85-2	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	85	*path	2252	PATH	5ufo	5ufo	ɲ u f o	false	4 7 3 7	AXBZ	NYBU	2	2.N.C 2.Y.V 2.B.C 2.U.V	2.0 1.5 1.75 0.8	ɲufo	0	148
+106	GODIE-85-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	85	*path	2252	PATH	blo	blo	b l o	false	1 5 7	ACX	PLU	11	11.P.C 11.L.C 11.U.V	2.0 1.5 1.5	blo	0	144
+202	DIDA_LAKOTA-85-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	85	*path	2252	PATH	nyici	nyici	n j i ts i	false	4 6 7 2 7	ACXBZ	NJICI	7	7.N.C 7.J.C 7.I.V 7.C.C 7.I.V	2.0 1.5 1.5 1.75 0.8	njitsi	0	143
+460	GREBO-85-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	85	*path	2252	PATH	tide	tide	t i d e	false	1 7 1 7	AXBZ	TITE	12	12.T.C 12.I.V 12.T.C 12.E.V	2.0 1.5 1.75 0.8	tide	0	145
+461	KLAO-85-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	85	*path	2252	PATH	wi	wi	w i	false	6 7	AX	WI	13	13.W.C 13.I.V	2.0 1.5	wi	0	146
+462	KRUMAN-85-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	85	*path	2252	PATH	hru	hru	h r u	false	3 5 7	ACX	HRY	14	14.H.C 14.R.C 14.Y.V	2.0 1.5 1.5	hru	0	147
+463	WE_SOUTHERN-85-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	85	*path	2252	PATH	die	die	d i e	false	1 7 7	AXZ	TIE	19	19.T.C 19.I.V 19.E.V	2.0 1.5 0.8	die	0	145
+464	WE_SOUTHERN-85-2	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	85	*path	2252	PATH	yike	yike	j i k e	false	6 7 1 7	AXBZ	JIKE	19	19.J.C 19.I.V 19.K.C 19.E.V	2.0 1.5 1.75 0.8	jike	0	149
+465	WOBE-85-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	85	*path	2252	PATH	sru	sru	s r u	false	3 5 7	ACX	SRY	20	20.S.C 20.R.C 20.Y.V	2.0 1.5 1.5	sru	0	147
+33	BAKWE-18-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	18	*person	683	PERSON	5o	5o	ɲ o	false	4 7	AX	NU	2	2.N.C 2.U.V	2.0 1.5	ɲo	0	151
+107	BETE_DALOA-18-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	18	*person	683	PERSON	nikp~E	nikp~E	n i kp a	false	4 7 1 7	AXBZ	NIKA	4	4.N.C 4.I.V 4.K.C 4.A.V	2.0 1.5 1.75 0.8	nikpa	0	152
+466	AIZI_TIAGBAMRIN-18-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	18	*person	683	PERSON	5o	5o	ɲ o	false	4 7	AX	NU	1	1.N.C 1.U.V	2.0 1.5	ɲo	0	150
+467	GREBO-18-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	18	*person	683	PERSON	nye	nye	n j e	false	4 6 7	ACX	NJE	12	12.N.C 12.J.C 12.E.V	2.0 1.5 1.5	nje	0	151
+468	KLAO-18-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	18	*person	683	PERSON	5o	5o	ɲ o	false	4 7	AX	NU	13	13.N.C 13.U.V	2.0 1.5	ɲo	0	151
+469	KRUMEN_PYE-18-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	18	*person	683	PERSON	to5o*	to5o*	t o ɲ õ	false	1 7 4 7	AXBZ	TUNU	15	15.T.C 15.U.V 15.N.C 15.U.V	2.0 1.5 1.75 0.8	toɲõ	0	153
+470	NYABWA-18-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	18	*person	683	PERSON	5u5o	5u5o	ɲ u ɲ o	false	4 7 4 7	AXBZ	NYNU	18	18.N.C 18.Y.V 18.N.C 18.U.V	2.0 1.5 1.75 0.8	ɲuɲo	0	150
+471	WE_SOUTHERN-18-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	18	*person	683	PERSON	5o*	5o*	ɲ õ	false	4 7	AX	NU	19	19.N.C 19.U.V	2.0 1.5	ɲõ	0	151
+34	BAKWE-57-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	57	*see	1409	SEE	jE	jE	dʒ a	false	1 7	AX	TA	2	2.T.C 2.A.V	2.0 1.5	dʒa	1	155
+35	BAKWE-57-2	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	57	*see	1409	SEE	yEkE	yEkE	j a k a	false	6 7 1 7	AXBZ	JAKA	2	2.J.C 2.A.V 2.K.C 2.A.V	2.0 1.5 1.75 0.8	jaka	0	160
+108	BETE_DALOA-57-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	57	*see	1409	SEE	yili	yili	j i l i	false	6 7 5 7	AXBZ	JILI	4	4.J.C 4.I.V 4.L.C 4.I.V	2.0 1.5 1.75 0.8	jili	0	156
+109	BETE_GUIBEROUA-57-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	57	*see	1409	SEE	yi yiri m3	yi yiri m3	j i j i r i m ə	false	6 7 6 7 5 7 4 7	AXBYBYBZ	JIJIRIME	5	5.J.C 5.I.V 5.J.C 5.I.V 5.R.C 5.I.V 5.M.C 5.E.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	jijirimə	0	157
+110	GODIE-57-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	57	*see	1409	SEE	ni	ni	n i	false	4 7	AX	NI	11	11.N.C 11.I.V	2.0 1.5	ni	0	154
+203	DIDA_LAKOTA-57-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	57	*see	1409	SEE	ii iE	ii iE	i i i a	false	7 7 7 7	XYYZ	IIIA	7	7.I.V 7.I.V 7.I.V 7.A.V	1.5 1.3 1.3 0.8	iiia	0	158
+204	DIDA_YOCOBOUE-57-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	57	*see	1409	SEE	li	li	l i	false	5 7	AX	LI	8	8.L.C 8.I.V	2.0 1.5	li	0	159
+205	NEYO-57-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	57	*see	1409	SEE	yE	yE	j a	false	6 7	AX	JA	17	17.J.C 17.A.V	2.0 1.5	ja	0	155
+472	AIZI_TIAGBAMRIN-57-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	57	*see	1409	SEE	ni	ni	n i	false	4 7	AX	NI	1	1.N.C 1.I.V	2.0 1.5	ni	0	154
+473	KLAO-57-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	57	*see	1409	SEE	je	je	dʒ e	false	1 7	AX	TE	13	13.T.C 13.E.V	2.0 1.5	dʒe	0	155
+474	KRUMAN-57-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	57	*see	1409	SEE	ye	ye	j e	false	6 7	AX	JE	14	14.J.C 14.E.V	2.0 1.5	je	0	155
+475	KRUMAN-57-2	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	57	*see	1409	SEE	ta	ta	t ɐ	false	1 7	AX	TE	14	14.T.C 14.E.V	2.0 1.5	tɐ	0	155
+476	KRUMEN_PYE-57-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	57	*see	1409	SEE	je	je	dʒ e	false	1 7	AX	TE	15	15.T.C 15.E.V	2.0 1.5	dʒe	0	155
+477	NYABWA-57-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	57	*see	1409	SEE	Te	Te	c e	false	1 7	AX	CE	18	18.C.C 18.E.V	2.0 1.5	ce	0	155
+478	WE_SOUTHERN-57-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	57	*see	1409	SEE	je	je	dʒ e	false	1 7	AX	TE	19	19.T.C 19.E.V	2.0 1.5	dʒe	0	155
+479	WOBE-57-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	57	*see	1409	SEE	Te	Te	c e	false	1 7	AX	CE	20	20.C.C 20.E.V	2.0 1.5	ce	0	155
+36	BAKWE-28-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	28	*skin	763	SKIN	fu	fu	f u	false	3 7	AX	BY	2	2.B.C 2.Y.V	2.0 1.5	fu	0	162
+111	BETE_DALOA-28-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	28	*skin	763	SKIN	ku	ku	k u	false	1 7	AX	KY	4	4.K.C 4.Y.V	2.0 1.5	ku	0	161
+112	BETE_GUIBEROUA-28-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	28	*skin	763	SKIN	ku	ku	k u	false	1 7	AX	KY	5	5.K.C 5.Y.V	2.0 1.5	ku	1	161
+113	GODIE-28-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	28	*skin	763	SKIN	kp3kpa	kp3kpa	k p ə k p ɐ	false	1 1 7 1 1 7	ACYMBZ	KPEKPE	11	11.K.C 11.P.C 11.E.V 11.K.c 11.P.C 11.E.V	2.0 1.5 1.3 1.1 1.75 0.8	kpəkpɐ	0	163
+206	DIDA_LAKOTA-28-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	28	*skin	763	SKIN	fukpa	fukpa	f u k p ɐ	false	3 7 1 1 7	AXMBZ	BYKPE	7	7.B.C 7.Y.V 7.K.c 7.P.C 7.E.V	2.0 1.5 1.1 1.75 0.8	fukpɐ	0	163
+207	DIDA_YOCOBOUE-28-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	28	*skin	763	SKIN	kp3kpa	kp3kpa	k p ə k p ɐ	false	1 1 7 1 1 7	ACYMBZ	KPEKPE	8	8.K.C 8.P.C 8.E.V 8.K.c 8.P.C 8.E.V	2.0 1.5 1.3 1.1 1.75 0.8	kpəkpɐ	0	163
+208	NEYO-28-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	28	*skin	763	SKIN	kp3kpa	kp3kpa	k p ə k p ɐ	false	1 1 7 1 1 7	ACYMBZ	KPEKPE	17	17.K.C 17.P.C 17.E.V 17.K.c 17.P.C 17.E.V	2.0 1.5 1.3 1.1 1.75 0.8	kpəkpɐ	0	163
+244	KUWAA-28-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	28	*skin	763	SKIN	ku	ku	k u	false	1 7	AX	KY	16	16.K.C 16.Y.V	2.0 1.5	ku	0	161
+480	AIZI_TIAGBAMRIN-28-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	28	*skin	763	SKIN	kuko	kuko	k u k o	false	1 7 1 7	AXBZ	KYKU	1	1.K.C 1.Y.V 1.K.C 1.U.V	2.0 1.5 1.75 0.8	kuko	0	161
+481	BASSA-28-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	28	*skin	763	SKIN	ku	ku	k u	false	1 7	AX	KY	3	3.K.C 3.Y.V	2.0 1.5	ku	0	161
+482	EASTERN_KRAHN-28-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	28	*skin	763	SKIN	ku	ku	k u	false	1 7	AX	KY	9	9.K.C 9.Y.V	2.0 1.5	ku	0	161
+483	GREBO-28-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	28	*skin	763	SKIN	fE	fE	f a	false	3 7	AX	BA	12	12.B.C 12.A.V	2.0 1.5	fa	0	164
+484	GREBO-28-2	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	28	*skin	763	SKIN	kp~amo	kp~amo	kp ɐ m o	false	1 7 4 7	AXBZ	KEMU	12	12.K.C 12.E.V 12.M.C 12.U.V	2.0 1.5 1.75 0.8	kpɐmo	0	166
+485	KLAO-28-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	28	*skin	763	SKIN	ku	ku	k u	false	1 7	AX	KY	13	13.K.C 13.Y.V	2.0 1.5	ku	0	161
+486	KRUMAN-28-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	28	*skin	763	SKIN	Nm~aNm~a	Nm~aNm~a	ŋ m ɐ ŋ m ɐ	false	4 4 7 4 4 7	ACYMBZ	NMENME	14	14.N.C 14.M.C 14.E.V 14.N.c 14.M.C 14.E.V	2.0 1.5 1.3 1.1 1.75 0.8	ŋmɐŋmɐ	0	165
+487	KRUMEN_PYE-28-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	28	*skin	763	SKIN	ko	ko	k o	false	1 7	AX	KU	15	15.K.C 15.U.V	2.0 1.5	ko	0	161
+488	NYABWA-28-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	28	*skin	763	SKIN	ku	ku	k u	false	1 7	AX	KY	18	18.K.C 18.Y.V	2.0 1.5	ku	0	161
+489	WOBE-28-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	28	*skin	763	SKIN	ku	ku	k u	false	1 7	AX	KY	20	20.K.C 20.Y.V	2.0 1.5	ku	0	161
+37	BAKWE-74-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	74	*star	1430	STAR	sEr3	sEr3	s a r ə	false	3 7 5 7	AXBZ	SARE	2	2.S.C 2.A.V 2.R.C 2.E.V	2.0 1.5 1.75 0.8	sarə	0	168
+114	BETE_DALOA-74-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	74	*star	1430	STAR	zEliyi	zEliyi	z a l i j i	false	3 7 5 7 6 7	AXBYBZ	SALIJI	4	4.S.C 4.A.V 4.L.C 4.I.V 4.J.C 4.I.V	2.0 1.5 1.75 1.3 1.75 0.8	zaliji	0	168
+115	BETE_GUIBEROUA-74-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	74	*star	1430	STAR	zEli	zEli	z a l i	false	3 7 5 7	AXBZ	SALI	5	5.S.C 5.A.V 5.L.C 5.I.V	2.0 1.5 1.75 0.8	zali	0	168
+209	DIDA_LAKOTA-74-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	74	*star	1430	STAR	zEli	zEli	z a l i	false	3 7 5 7	AXBZ	SALI	7	7.S.C 7.A.V 7.L.C 7.I.V	2.0 1.5 1.75 0.8	zali	0	168
+210	DIDA_YOCOBOUE-74-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	74	*star	1430	STAR	zol3	zol3	z o l ə	false	3 7 5 7	AXBZ	SULE	8	8.S.C 8.U.V 8.L.C 8.E.V	2.0 1.5 1.75 0.8	zolə	0	169
+211	NEYO-74-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	74	*star	1430	STAR	dre	dre	d r e	false	1 5 7	ACX	TRE	17	17.T.C 17.R.C 17.E.V	2.0 1.5 1.5	dre	0	172
+490	AIZI_TIAGBAMRIN-74-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	74	*star	1430	STAR	de5i	de5i	d e ɲ i	false	1 7 4 7	AXBZ	TENI	1	1.T.C 1.E.V 1.N.C 1.I.V	2.0 1.5 1.75 0.8	deɲi	0	167
+491	GREBO-74-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	74	*star	1430	STAR	hn~E	hn~E	ʰn a	false	4 7	AX	NA	12	12.N.C 12.A.V	2.0 1.5	ʰna	1	170
+492	KLAO-74-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	74	*star	1430	STAR	jatnE	jatnE	dʒ ɐ t n a	false	1 7 1 4 7	AXBCZ	TETNA	13	13.T.C 13.E.V 13.T.C 13.N.C 13.A.V	2.0 1.5 1.75 1.5 0.8	dʒɐtna	0	167
+493	KRUMEN_PYE-74-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	74	*star	1430	STAR	howujalE	howujalE	h o w u dʒ ɐ l a	false	3 7 6 7 1 7 5 7	AXBYBYBZ	HUWYTELA	15	15.H.C 15.U.V 15.W.C 15.Y.V 15.T.C 15.E.V 15.L.C 15.A.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	howudʒɐla	0	171
+494	NYABWA-74-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	74	*star	1430	STAR	TodrE	TodrE	c o d r a	false	1 7 1 5 7	AXBCZ	CUTRA	18	18.C.C 18.U.V 18.T.C 18.R.C 18.A.V	2.0 1.5 1.75 1.5 0.8	codra	0	173
+495	WE_SOUTHERN-74-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	74	*star	1430	STAR	cyotre*	cyotre*	ts j o t r ẽ	false	2 6 7 1 5 7	ACXBCZ	CJUTRE	19	19.C.C 19.J.C 19.U.V 19.T.C 19.R.C 19.E.V	2.0 1.5 1.5 1.75 1.5 0.8	tsjotrẽ	0	173
+38	BAKWE-77-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	77	*stone	857	STONE	tEkE	tEkE	t a k a	false	1 7 1 7	AXBZ	TAKA	2	2.T.C 2.A.V 2.K.C 2.A.V	2.0 1.5 1.75 0.8	taka	0	174
+116	GODIE-77-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	77	*stone	857	STONE	Toku	Toku	c o k u	false	1 7 1 7	AXBZ	CUKY	11	11.C.C 11.U.V 11.K.C 11.Y.V	2.0 1.5 1.75 0.8	coku	0	176
+212	DIDA_LAKOTA-77-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	77	*stone	857	STONE	gli	gli	g l i	false	1 5 7	ACX	KLI	7	7.K.C 7.L.C 7.I.V	2.0 1.5 1.5	gli	0	175
+496	GREBO-77-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	77	*stone	857	STONE	seo	seo	s e o	false	3 7 7	AXZ	SEU	12	12.S.C 12.E.V 12.U.V	2.0 1.5 0.8	seo	0	177
+497	KLAO-77-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	77	*stone	857	STONE	sogb~3	sogb~3	s o g b ə	false	3 7 1 1 7	AXMBZ	SUKPE	13	13.S.C 13.U.V 13.K.c 13.P.C 13.E.V	2.0 1.5 1.1 1.75 0.8	sogbə	0	178
+498	KRUMAN-77-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	77	*stone	857	STONE	heo	heo	h e o	false	3 7 7	AXZ	HEU	14	14.H.C 14.E.V 14.U.V	2.0 1.5 0.8	heo	0	179
+499	WOBE-77-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	77	*stone	857	STONE	sou	sou	s o u	false	3 7 7	AXZ	SUY	20	20.S.C 20.U.V 20.Y.V	2.0 1.5 0.8	sou	0	179
+39	BAKWE-72-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	72	*sun	1343	SUN	jru	jru	dʒ r u	false	1 5 7	ACX	TRY	2	2.T.C 2.R.C 2.Y.V	2.0 1.5 1.5	dʒru	0	181
+117	BETE_DALOA-72-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	72	*sun	1343	SUN	y3l3	y3l3	j ə l ə	false	6 7 5 7	AXBZ	JELE	4	4.J.C 4.E.V 4.L.C 4.E.V	2.0 1.5 1.75 0.8	jələ	0	181
+118	BETE_GUIBEROUA-72-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	72	*sun	1343	SUN	y3r3	y3r3	j ə r ə	false	6 7 5 7	AXBZ	JERE	5	5.J.C 5.E.V 5.R.C 5.E.V	2.0 1.5 1.75 0.8	jərə	0	181
+119	GODIE-72-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	72	*sun	1343	SUN	ylu	ylu	j l u	false	6 5 7	ACZ	JLY	11	11.J.C 11.L.C 11.Y.V	2.0 1.5 0.8	jlu	0	181
+213	DIDA_LAKOTA-72-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	72	*sun	1343	SUN	ilu	ilu	i l u	false	7 5 7	XBZ	ILY	7	7.I.V 7.L.C 7.Y.V	1.5 1.75 0.8	ilu	0	181
+214	DIDA_YOCOBOUE-72-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	72	*sun	1343	SUN	yl3	yl3	j l ə	false	6 5 7	ACZ	JLE	8	8.J.C 8.L.C 8.E.V	2.0 1.5 0.8	jlə	0	181
+215	NEYO-72-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	72	*sun	1343	SUN	jl3	jl3	dʒ l ə	false	1 5 7	ACX	TLE	17	17.T.C 17.L.C 17.E.V	2.0 1.5 1.5	dʒlə	0	181
+245	KUWAA-72-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	72	*sun	1343	SUN	kala	kala	k ɐ l ɐ	false	1 7 5 7	AXBZ	KELE	16	16.K.C 16.E.V 16.L.C 16.E.V	2.0 1.5 1.75 0.8	kɐlɐ	0	181
+500	AIZI_TIAGBAMRIN-72-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	ze	ze	z e	false	3 7	AX	SE	1	1.S.C 1.E.V	2.0 1.5	ze	0	180
+501	BASSA-72-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	Tolo	Tolo	c o l o	false	1 7 5 7	AXBZ	CULU	3	3.C.C 3.U.V 3.L.C 3.U.V	2.0 1.5 1.75 0.8	colo	0	181
+502	DEWOIN-72-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	gu	gu	g u	false	1 7	AX	KY	6	6.K.C 6.Y.V	2.0 1.5	gu	0	182
+503	EASTERN_KRAHN-72-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	j3do	j3do	dʒ ə d o	false	1 7 1 7	AXBZ	TETU	9	9.T.C 9.E.V 9.T.C 9.U.V	2.0 1.5 1.75 0.8	dʒədo	0	181
+504	GLIO_OUBI-72-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	Tiro	Tiro	c i r o	false	1 7 5 7	AXBZ	CIRU	10	10.C.C 10.I.V 10.R.C 10.U.V	2.0 1.5 1.75 0.8	ciro	0	181
+505	GREBO-72-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	NwE	NwE	ŋ w a	false	4 6 7	ACX	NWA	12	12.N.C 12.W.C 12.A.V	2.0 1.5 1.5	ŋwa	0	183
+506	KLAO-72-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	jl3	jl3	dʒ l ə	false	1 5 7	ACX	TLE	13	13.T.C 13.L.C 13.E.V	2.0 1.5 1.5	dʒlə	0	181
+507	KRUMAN-72-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	yro	yro	j r o	false	6 5 7	ACZ	JRU	14	14.J.C 14.R.C 14.U.V	2.0 1.5 0.8	jro	0	181
+508	KRUMEN_PYE-72-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	jru	jru	dʒ r u	false	1 5 7	ACX	TRY	15	15.T.C 15.R.C 15.Y.V	2.0 1.5 1.5	dʒru	0	181
+509	NYABWA-72-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	yoro	yoro	j o r o	false	6 7 5 7	AXBZ	JURU	18	18.J.C 18.U.V 18.R.C 18.U.V	2.0 1.5 1.75 0.8	joro	0	181
+510	WE_SOUTHERN-72-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	jiro	jiro	dʒ i r o	false	1 7 5 7	AXBZ	TIRU	19	19.T.C 19.I.V 19.R.C 19.U.V	2.0 1.5 1.75 0.8	dʒiro	0	181
+511	WE_SOUTHERN-72-2	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	yiro	yiro	j i r o	false	6 7 5 7	AXBZ	JIRU	19	19.J.C 19.I.V 19.R.C 19.U.V	2.0 1.5 1.75 0.8	jiro	0	181
+512	WOBE-72-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	72	*sun	1343	SUN	Tru	Tru	c r u	false	1 5 7	ACX	CRY	20	20.C.C 20.R.C 20.Y.V	2.0 1.5 1.5	cru	0	181
+40	BAKWE-44-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	44	*tongue	1205	TONGUE	mE	mE	m a	false	4 7	AX	MA	2	2.M.C 2.A.V	2.0 1.5	ma	0	184
+120	BETE_DALOA-44-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	44	*tongue	1205	TONGUE	mio	mio	m i o	false	4 7 7	AXZ	MIU	4	4.M.C 4.I.V 4.U.V	2.0 1.5 0.8	mio	0	184
+121	BETE_GUIBEROUA-44-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	44	*tongue	1205	TONGUE	mio	mio	m i o	false	4 7 7	AXZ	MIU	5	5.M.C 5.I.V 5.U.V	2.0 1.5 0.8	mio	0	184
+122	GODIE-44-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	44	*tongue	1205	TONGUE	mio	mio	m i o	false	4 7 7	AXZ	MIU	11	11.M.C 11.I.V 11.U.V	2.0 1.5 0.8	mio	0	184
+216	DIDA_LAKOTA-44-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	44	*tongue	1205	TONGUE	mi	mi	m i	false	4 7	AX	MI	7	7.M.C 7.I.V	2.0 1.5	mi	0	184
+217	DIDA_YOCOBOUE-44-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	44	*tongue	1205	TONGUE	mio	mio	m i o	false	4 7 7	AXZ	MIU	8	8.M.C 8.I.V 8.U.V	2.0 1.5 0.8	mio	0	184
+218	NEYO-44-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	44	*tongue	1205	TONGUE	mio	mio	m i o	false	4 7 7	AXZ	MIU	17	17.M.C 17.I.V 17.U.V	2.0 1.5 0.8	mio	0	184
+246	KUWAA-44-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	44	*tongue	1205	TONGUE	mEwu*	mEwu*	m a w ũ	false	4 7 6 7	AXBZ	MAWY	16	16.M.C 16.A.V 16.W.C 16.Y.V	2.0 1.5 1.75 0.8	mawũ	0	185
+513	AIZI_TIAGBAMRIN-44-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	mro	mro	m r o	false	4 5 7	ACX	MRU	1	1.M.C 1.R.C 1.U.V	2.0 1.5 1.5	mro	0	184
+514	AIZI_TIAGBAMRIN-44-2	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	mri	mri	m r i	false	4 5 7	ACX	MRI	1	1.M.C 1.R.C 1.I.V	2.0 1.5 1.5	mri	0	184
+515	BASSA-44-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	mo	mo	m o	false	4 7	AX	MU	3	3.M.C 3.U.V	2.0 1.5	mo	0	184
+516	DEWOIN-44-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	mila*	mila*	m i l ɐ̃	false	4 7 5 7	AXBZ	MILE	6	6.M.C 6.I.V 6.L.C 6.E.V	2.0 1.5 1.75 0.8	milɐ̃	0	184
+517	EASTERN_KRAHN-44-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	mE	mE	m a	false	4 7	AX	MA	9	9.M.C 9.A.V	2.0 1.5	ma	1	184
+518	GREBO-44-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	mE	mE	m a	false	4 7	AX	MA	12	12.M.C 12.A.V	2.0 1.5	ma	0	184
+519	KLAO-44-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	mE	mE	m a	false	4 7	AX	MA	13	13.M.C 13.A.V	2.0 1.5	ma	1	184
+520	KRUMAN-44-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	ma	ma	m ɐ	false	4 7	AX	ME	14	14.M.C 14.E.V	2.0 1.5	mɐ	0	184
+521	KRUMEN_PYE-44-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	mE*	mE*	m ã	false	4 7	AX	MA	15	15.M.C 15.A.V	2.0 1.5	mã	0	184
+522	KRUMEN_PYE-44-2	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	wi	wi	w i	false	6 7	AX	WI	15	15.W.C 15.I.V	2.0 1.5	wi	0	186
+523	NYABWA-44-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	meE	meE	m e a	false	4 7 7	AXZ	MEA	18	18.M.C 18.E.V 18.A.V	2.0 1.5 0.8	mea	0	184
+524	WOBE-44-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	44	*tongue	1205	TONGUE	meo	meo	m e o	false	4 7 7	AXZ	MEU	20	20.M.C 20.E.V 20.U.V	2.0 1.5 0.8	meo	0	184
+41	BAKWE-43-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	43	*tooth	1380	TOOTH	glE	glE	g l a	false	1 5 7	ACX	KLA	2	2.K.C 2.L.C 2.A.V	2.0 1.5 1.5	gla	0	188
+123	BETE_DALOA-43-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	43	*tooth	1380	TOOTH	gl~eyi	gl~eyi	g l e j i	false	1 5 7 6 7	ACXBZ	KLEJI	4	4.K.C 4.L.C 4.E.V 4.J.C 4.I.V	2.0 1.5 1.5 1.75 0.8	gleji	0	188
+124	BETE_GUIBEROUA-43-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	43	*tooth	1380	TOOTH	gola	gola	g o l ɐ	false	1 7 5 7	AXBZ	KULE	5	5.K.C 5.U.V 5.L.C 5.E.V	2.0 1.5 1.75 0.8	golɐ	0	188
+125	GODIE-43-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	43	*tooth	1380	TOOTH	g3le	g3le	g ə l e	false	1 7 5 7	AXBZ	KELE	11	11.K.C 11.E.V 11.L.C 11.E.V	2.0 1.5 1.75 0.8	gəle	0	188
+219	DIDA_LAKOTA-43-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	43	*tooth	1380	TOOTH	gla	gla	g l ɐ	false	1 5 7	ACX	KLE	7	7.K.C 7.L.C 7.E.V	2.0 1.5 1.5	glɐ	0	188
+220	DIDA_YOCOBOUE-43-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	43	*tooth	1380	TOOTH	gla	gla	g l ɐ	false	1 5 7	ACX	KLE	8	8.K.C 8.L.C 8.E.V	2.0 1.5 1.5	glɐ	0	188
+221	NEYO-43-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	43	*tooth	1380	TOOTH	gle	gle	g l e	false	1 5 7	ACX	KLE	17	17.K.C 17.L.C 17.E.V	2.0 1.5 1.5	gle	0	188
+525	AIZI_TIAGBAMRIN-43-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	43	*tooth	1380	TOOTH	5i	5i	ɲ i	false	4 7	AX	NI	1	1.N.C 1.I.V	2.0 1.5	ɲi	0	187
+526	GREBO-43-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	43	*tooth	1380	TOOTH	nye	nye	n j e	false	4 6 7	ACX	NJE	12	12.N.C 12.J.C 12.E.V	2.0 1.5 1.5	nje	1	187
+527	KLAO-43-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	43	*tooth	1380	TOOTH	5E	5E	ɲ a	false	4 7	AX	NA	13	13.N.C 13.A.V	2.0 1.5	ɲa	0	187
+528	KRUMAN-43-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	43	*tooth	1380	TOOTH	5ya	5ya	ɲ j ɐ	false	4 6 7	ACX	NJE	14	14.N.C 14.J.C 14.E.V	2.0 1.5 1.5	ɲjɐ	0	187
+529	KRUMEN_PYE-43-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	43	*tooth	1380	TOOTH	5E*	5E*	ɲ ã	false	4 7	AX	NA	15	15.N.C 15.A.V	2.0 1.5	ɲã	0	187
+530	NYABWA-43-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	43	*tooth	1380	TOOTH	5eno	5eno	ɲ e n o	false	4 7 4 7	AXBZ	NENU	18	18.N.C 18.E.V 18.N.C 18.U.V	2.0 1.5 1.75 0.8	ɲeno	0	187
+531	WE_SOUTHERN-43-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	43	*tooth	1380	TOOTH	5re*	5re*	ɲ r ẽ	false	4 5 7	ACX	NRE	19	19.N.C 19.R.C 19.E.V	2.0 1.5 1.5	ɲrẽ	0	187
+532	WOBE-43-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	43	*tooth	1380	TOOTH	5n~ea	5n~ea	ŋ n e ɐ	false	4 4 7 7	ACYZ	NNEE	20	20.N.C 20.N.C 20.E.V 20.E.V	2.0 1.5 1.3 0.8	ŋneɐ	0	189
+42	BAKWE-23-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	23	*tree	906	TREE	tu	tu	t u	false	1 7	AX	TY	2	2.T.C 2.Y.V	2.0 1.5	tu	0	191
+126	BETE_DALOA-23-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	23	*tree	906	TREE	su	su	s u	false	3 7	AX	SY	4	4.S.C 4.Y.V	2.0 1.5	su	0	192
+127	BETE_GUIBEROUA-23-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	23	*tree	906	TREE	su	su	s u	false	3 7	AX	SY	5	5.S.C 5.Y.V	2.0 1.5	su	0	192
+128	GODIE-23-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	23	*tree	906	TREE	su	su	s u	false	3 7	AX	SY	11	11.S.C 11.Y.V	2.0 1.5	su	0	192
+222	DIDA_LAKOTA-23-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	23	*tree	906	TREE	sukle	sukle	s u k l e	false	3 7 1 5 7	AXBCZ	SYKLE	7	7.S.C 7.Y.V 7.K.C 7.L.C 7.E.V	2.0 1.5 1.75 1.5 0.8	sukle	0	193
+223	DIDA_YOCOBOUE-23-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	23	*tree	906	TREE	su	su	s u	false	3 7	AX	SY	8	8.S.C 8.Y.V	2.0 1.5	su	0	192
+224	NEYO-23-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	23	*tree	906	TREE	suu	suu	s u u	false	3 7 7	AXZ	SYY	17	17.S.C 17.Y.V 17.Y.V	2.0 1.5 0.8	suu	0	192
+533	AIZI_TIAGBAMRIN-23-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	23	*tree	906	TREE	ke	ke	k e	false	1 7	AX	KE	1	1.K.C 1.E.V	2.0 1.5	ke	0	190
+534	GREBO-23-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	23	*tree	906	TREE	tu	tu	t u	false	1 7	AX	TY	12	12.T.C 12.Y.V	2.0 1.5	tu	0	194
+535	KLAO-23-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	23	*tree	906	TREE	tu	tu	t u	false	1 7	AX	TY	13	13.T.C 13.Y.V	2.0 1.5	tu	0	191
+536	KRUMAN-23-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	23	*tree	906	TREE	tugb~a	tugb~a	t u g b ɐ	false	1 7 1 1 7	AXMBZ	TYKPE	14	14.T.C 14.Y.V 14.K.c 14.P.C 14.E.V	2.0 1.5 1.1 1.75 0.8	tugbɐ	0	191
+537	KRUMEN_PYE-23-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	23	*tree	906	TREE	tuwE	tuwE	t u w a	false	1 7 6 7	AXBZ	TYWA	15	15.T.C 15.Y.V 15.W.C 15.A.V	2.0 1.5 1.75 0.8	tuwa	0	195
+538	NYABWA-23-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	23	*tree	906	TREE	tu	tu	t u	false	1 7	AX	TY	18	18.T.C 18.Y.V	2.0 1.5	tu	0	191
+539	WE_SOUTHERN-23-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	23	*tree	906	TREE	tu	tu	t u	false	1 7	AX	TY	19	19.T.C 19.Y.V	2.0 1.5	tu	0	191
+540	WOBE-23-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	23	*tree	906	TREE	tu	tu	t u	false	1 7	AX	TY	20	20.T.C 20.Y.V	2.0 1.5	tu	0	191
+43	BAKWE-12-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	12	*two	1498	TWO	so	so	s o	false	3 7	AX	SU	2	2.S.C 2.U.V	2.0 1.5	so	0	197
+129	BETE_DALOA-12-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	12	*two	1498	TWO	so	so	s o	false	3 7	AX	SU	4	4.S.C 4.U.V	2.0 1.5	so	0	197
+130	BETE_GUIBEROUA-12-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	12	*two	1498	TWO	so	so	s o	false	3 7	AX	SU	5	5.S.C 5.U.V	2.0 1.5	so	0	197
+131	GODIE-12-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	12	*two	1498	TWO	so	so	s o	false	3 7	AX	SU	11	11.S.C 11.U.V	2.0 1.5	so	0	197
+225	DIDA_LAKOTA-12-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	12	*two	1498	TWO	so	so	s o	false	3 7	AX	SU	7	7.S.C 7.U.V	2.0 1.5	so	0	197
+226	DIDA_YOCOBOUE-12-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	12	*two	1498	TWO	moso	moso	m o s o	false	4 7 3 7	AXBZ	MUSU	8	8.M.C 8.U.V 8.S.C 8.U.V	2.0 1.5 1.75 0.8	moso	0	197
+227	NEYO-12-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	12	*two	1498	TWO	so	so	s o	false	3 7	AX	SU	17	17.S.C 17.U.V	2.0 1.5	so	0	197
+247	KUWAA-12-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	12	*two	1498	TWO	so*o*	so*o*	s õ õ	false	3 7 7	AXZ	SUU	16	16.S.C 16.U.V 16.U.V	2.0 1.5 0.8	sõõ	0	202
+541	AIZI_TIAGBAMRIN-12-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	12	*two	1498	TWO	iSi	iSi	i ʃ i	false	7 3 7	XBZ	ISI	1	1.I.V 1.S.C 1.I.V	1.5 1.75 0.8	iʃi	0	196
+542	BASSA-12-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	12	*two	1498	TWO	so*	so*	s õ	false	3 7	AX	SU	3	3.S.C 3.U.V	2.0 1.5	sõ	0	198
+543	DEWOIN-12-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	12	*two	1498	TWO	so*	so*	s õ	false	3 7	AX	SU	6	6.S.C 6.U.V	2.0 1.5	sõ	0	199
+544	EASTERN_KRAHN-12-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	12	*two	1498	TWO	buwE	buwE	b u w a	false	1 7 6 7	AXBZ	PYWA	9	9.P.C 9.Y.V 9.W.C 9.A.V	2.0 1.5 1.75 0.8	buwa	0	200
+545	GLIO_OUBI-12-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	12	*two	1498	TWO	hw3*	hw3*	h w ə̃	false	3 6 7	ACX	HWE	10	10.H.C 10.W.C 10.E.V	2.0 1.5 1.5	hwə̃	0	201
+546	KLAO-12-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	12	*two	1498	TWO	s3*	s3*	s ə̃	false	3 7	AX	SE	13	13.S.C 13.E.V	2.0 1.5	sə̃	0	197
+547	KRUMAN-12-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	12	*two	1498	TWO	ho	ho	h o	false	3 7	AX	HU	14	14.H.C 14.U.V	2.0 1.5	ho	0	197
+548	KRUMEN_PYE-12-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	12	*two	1498	TWO	huE*	huE*	h u ã	false	3 7 7	AXZ	HYA	15	15.H.C 15.Y.V 15.A.V	2.0 1.5 0.8	huã	0	197
+549	NYABWA-12-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	12	*two	1498	TWO	so	so	s o	false	3 7	AX	SU	18	18.S.C 18.U.V	2.0 1.5	so	0	197
+550	WE_SOUTHERN-12-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	12	*two	1498	TWO	so*	so*	s õ	false	3 7	AX	SU	19	19.S.C 19.U.V	2.0 1.5	sõ	1	203
+551	WOBE-12-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	12	*two	1498	TWO	so*	so*	s õ	false	3 7	AX	SU	20	20.S.C 20.U.V	2.0 1.5	sõ	0	197
+44	BAKWE-75-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	75	*water	948	WATER	ni	ni	n i	false	4 7	AX	NI	2	2.N.C 2.I.V	2.0 1.5	ni	0	204
+132	BETE_DALOA-75-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	75	*water	948	WATER	5u	5u	ɲ u	false	4 7	AX	NY	4	4.N.C 4.Y.V	2.0 1.5	ɲu	0	206
+133	BETE_GUIBEROUA-75-1	BETE_GUIBEROUA	BETE_GUIBEROUA	guib1246	Guiberoua Béte	Kru	Eastern Kru	Beteic	False	75	*water	948	WATER	5u	5u	ɲ u	false	4 7	AX	NY	5	5.N.C 5.Y.V	2.0 1.5	ɲu	0	206
+134	GODIE-75-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	75	*water	948	WATER	5u	5u	ɲ u	false	4 7	AX	NY	11	11.N.C 11.Y.V	2.0 1.5	ɲu	0	206
+228	DIDA_YOCOBOUE-75-1	DIDA_YOCOBOUE	DIDA_YOCOBOUE	yoco1235	Yocoboué Dida	Kru	Eastern Kru	Neyo-Dida	False	75	*water	948	WATER	5u	5u	ɲ u	false	4 7	AX	NY	8	8.N.C 8.Y.V	2.0 1.5	ɲu	0	206
+229	NEYO-75-1	NEYO	NEYO	neyo1238	Neyo	Kru	Eastern Kru	Neyo-Dida	False	75	*water	948	WATER	5u	5u	ɲ u	false	4 7	AX	NY	17	17.N.C 17.Y.V	2.0 1.5	ɲu	0	206
+248	KUWAA-75-1	KUWAA	KUWAA	kuwa1247	Kuwaa	Kru	Greater Western Kru		False	75	*water	948	WATER	nimi	nimi	n i m i	false	4 7 4 7	AXBZ	NIMI	16	16.N.C 16.I.V 16.M.C 16.I.V	2.0 1.5 1.75 0.8	nimi	0	204
+552	AIZI_TIAGBAMRIN-75-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	nri	nri	n r i	false	4 5 7	ACX	NRI	1	1.N.C 1.R.C 1.I.V	2.0 1.5 1.5	nri	0	204
+553	BASSA-75-1	BASSA	BASSA	nucl1418	Bassa	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	dunu	dunu	d u n u	false	1 7 4 7	AXBZ	TYNY	3	3.T.C 3.Y.V 3.N.C 3.Y.V	2.0 1.5 1.75 0.8	dunu	0	205
+554	DEWOIN-75-1	DEWOIN	DEWOIN	dewo1238	Dewoin	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	ni	ni	n i	false	4 7	AX	NI	6	6.N.C 6.I.V	2.0 1.5	ni	0	204
+555	EASTERN_KRAHN-75-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	5E	5E	ɲ a	false	4 7	AX	NA	9	9.N.C 9.A.V	2.0 1.5	ɲa	0	204
+556	GLIO_OUBI-75-1	GLIO_OUBI	GLIO_OUBI	glio1241	Glio-Oubi	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	5E	5E	ɲ a	false	4 7	AX	NA	10	10.N.C 10.A.V	2.0 1.5	ɲa	0	207
+557	GREBO-75-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	ni	ni	n i	false	4 7	AX	NI	12	12.N.C 12.I.V	2.0 1.5	ni	1	204
+558	KLAO-75-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	ni	ni	n i	false	4 7	AX	NI	13	13.N.C 13.I.V	2.0 1.5	ni	0	204
+559	KRUMAN-75-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	5ya	5ya	ɲ j ɐ	false	4 6 7	ACX	NJE	14	14.N.C 14.J.C 14.E.V	2.0 1.5 1.5	ɲjɐ	1	206
+560	KRUMEN_PYE-75-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	nie	nie	n i e	false	4 7 7	AXZ	NIE	15	15.N.C 15.I.V 15.E.V	2.0 1.5 0.8	nie	0	204
+561	NYABWA-75-1	NYABWA	NYABWA	nyab1255	Nyabwa	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	ni	ni	n i	false	4 7	AX	NI	18	18.N.C 18.I.V	2.0 1.5	ni	1	204
+562	WE_SOUTHERN-75-1	WE_SOUTHERN	WE_SOUTHERN	weso1238	Wè Southern	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	ni	ni	n i	false	4 7	AX	NI	19	19.N.C 19.I.V	2.0 1.5	ni	0	204
+563	WOBE-75-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	75	*water	948	WATER	ni	ni	n i	false	4 7	AX	NI	20	20.N.C 20.I.V	2.0 1.5	ni	0	204
+45	BAKWE-3-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	3	*we	1212	WE	amo	amo	ɐ m o	false	7 4 7	XBZ	EMU	2	2.E.V 2.M.C 2.U.V	1.5 1.75 0.8	ɐmo	0	208
+135	BETE_DALOA-3-1	BETE_DALOA	BETE_DALOA	dalo1238	Daloa Bété	Kru	Eastern Kru	Beteic	False	3	*we	1212	WE	a	a	ɐ	false	7	X	E	4	4.E.V	1.5	ɐ	0	209
+136	GODIE-3-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	3	*we	1212	WE	a5i	a5i	ɐ ɲ i	false	7 4 7	XBZ	ENI	11	11.E.V 11.N.C 11.I.V	1.5 1.75 0.8	ɐɲi	0	210
+230	DIDA_LAKOTA-3-1	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	3	*we	1212	WE	a	a	ɐ	false	7	X	E	7	7.E.V	1.5	ɐ	0	209
+231	DIDA_LAKOTA-3-2	DIDA_LAKOTA	DIDA_LAKOTA	lako1244	Lakota Dida	Kru	Eastern Kru	Neyo-Dida	False	3	*we	1212	WE	anyi	anyi	ɐ n j i	false	7 4 6 7	XBCZ	ENJI	7	7.E.V 7.N.C 7.J.C 7.I.V	1.5 1.75 1.5 0.8	ɐnji	0	210
+564	GREBO-3-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	3	*we	1212	WE	ba	ba	b ɐ	false	1 7	AX	PE	12	12.P.C 12.E.V	2.0 1.5	bɐ	0	209
+565	KLAO-3-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	3	*we	1212	WE	a m3a	a m3a	ɐ m ə ɐ	false	7 4 7 7	XBYZ	EMEE	13	13.E.V 13.M.C 13.E.V 13.E.V	1.5 1.75 1.3 0.8	ɐməɐ	0	208
+566	KRUMAN-3-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	3	*we	1212	WE	amo	amo	ɐ m o	false	7 4 7	XBZ	EMU	14	14.E.V 14.M.C 14.U.V	1.5 1.75 0.8	ɐmo	0	208
+567	WOBE-3-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	3	*we	1212	WE	apuo	apuo	ɐ p u o	false	7 1 7 7	XBYZ	EPYU	20	20.E.V 20.P.C 20.Y.V 20.U.V	1.5 1.75 1.3 0.8	ɐpuo	0	211
+46	BAKWE-2-1	BAKWE	BAKWE	bakw1243	Bakwé	Kru	Eastern Kru	Bakwe-Wane	False	2	*you	1215	THOU	amo	amo	ɐ m o	false	7 4 7	XBZ	EMU	2	2.E.V 2.M.C 2.U.V	1.5 1.75 0.8	ɐmo	1	212
+137	GODIE-2-1	GODIE	GODIE	godi1239	Godié	Kru	Eastern Kru	Beteic	False	2	*you	1215	THOU	mo	mo	m o	false	4 7	AX	MU	11	11.M.C 11.U.V	2.0 1.5	mo	0	212
+568	GREBO-2-1	GREBO	GREBO	sout2826	Southern Grebo	Kru	Greater Western Kru	Western Kru	False	2	*you	1215	THOU	ne	ne	n e	false	4 7	AX	NE	12	12.N.C 12.E.V	2.0 1.5	ne	1	213
+569	KLAO-2-1	KLAO	KLAO	klao1243	Klao	Kru	Greater Western Kru	Western Kru	False	2	*you	1215	THOU	mo*	mo*	m õ	false	4 7	AX	MU	13	13.M.C 13.U.V	2.0 1.5	mõ	1	212
+570	KRUMAN-2-1	KRUMAN	KRUMAN	tepo1239	Tepo Krumen	Kru	Greater Western Kru	Western Kru	False	2	*you	1215	THOU	mo	mo	m o	false	4 7	AX	MU	14	14.M.C 14.U.V	2.0 1.5	mo	1	212
+571	WOBE-2-1	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	2	*you	1215	THOU	mo	mo	m o	false	4 7	AX	MU	20	20.M.C 20.U.V	2.0 1.5	mo	0	212
+572	WOBE-2-2	WOBE	WOBE	weno1238	Wobe-Wè Northern	Kru	Greater Western Kru	Western Kru	False	2	*you	1215	THOU	amo*	amo*	ɐ m õ	false	7 4 7	XBZ	EMU	20	20.E.V 20.M.C 20.U.V	1.5 1.75 0.8	ɐmõ	0	212
+573	AIZI_TIAGBAMRIN-83-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	83	ash	646	ASH	tutu	tutu	t u t u	false	1 7 1 7	AXBZ	TYTY	1	1.T.C 1.Y.V 1.T.C 1.Y.V	2.0 1.5 1.75 0.8	tutu	0	214
+574	KRUMEN_PYE-83-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	83	ash	646	ASH	puwo	puwo	p u w o	false	1 7 6 7	AXBZ	PYWU	15	15.P.C 15.Y.V 15.W.C 15.U.V	2.0 1.5 1.75 0.8	puwo	0	215
+575	AIZI_TIAGBAMRIN-20-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	20	bird	937	BIRD	kosoje	kosoje	k o s o dʒ e	false	1 7 3 7 1 7	AXBYBZ	KUSUTE	1	1.K.C 1.U.V 1.S.C 1.U.V 1.T.C 1.E.V	2.0 1.5 1.75 1.3 1.75 0.8	kosodʒe	0	216
+576	KRUMEN_PYE-20-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	20	bird	937	BIRD	nuwlo	nuwlo	n u w l o	false	4 7 6 5 7	AXMBZ	NYWLU	15	15.N.C 15.Y.V 15.W.c 15.L.C 15.U.V	2.0 1.5 1.1 1.75 0.8	nuwlo	0	217
+577	AIZI_TIAGBAMRIN-56-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	56	bite	1403	BITE	CE	CE	tʃ a	false	1 7	AX	TA	1	1.T.C 1.A.V	2.0 1.5	tʃa	0	218
+578	EASTERN_KRAHN-56-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	56	bite	1403	BITE	wlawo	wlawo	w l ɐ w o	false	6 5 7 6 7	ACYBZ	WLEWU	9	9.W.C 9.L.C 9.E.V 9.W.C 9.U.V	2.0 1.5 1.3 1.75 0.8	wlɐwo	0	219
+579	KRUMEN_PYE-56-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	56	bite	1403	BITE	nE*	nE*	n ã	false	4 7	AX	NA	15	15.N.C 15.A.V	2.0 1.5	nã	0	220
+580	AIZI_TIAGBAMRIN-84-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	84	burn	2102	BURN	No	No	ŋ o	false	4 7	AX	NU	1	1.N.C 1.U.V	2.0 1.5	ŋo	0	221
+581	KRUMEN_PYE-84-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	84	burn	2102	BURN	puto	puto	p u t o	false	1 7 1 7	AXBZ	PYTU	15	15.P.C 15.Y.V 15.T.C 15.U.V	2.0 1.5 1.75 0.8	puto	0	222
+582	KRUMEN_PYE-45-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	45	claw	72	CLAW	kuElE	kuElE	k u a l a	false	1 7 7 5 7	AXYBZ	KYALA	15	15.K.C 15.Y.V 15.A.V 15.L.C 15.A.V	2.0 1.5 1.3 1.75 0.8	kuala	0	223
+583	AIZI_TIAGBAMRIN-55-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	55	eat	1336	EAT	li	li	l i	false	5 7	AX	LI	1	1.L.C 1.I.V	2.0 1.5	li	0	224
+584	EASTERN_KRAHN-55-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	55	eat	1336	EAT	di	di	d i	false	1 7	AX	TI	9	9.T.C 9.I.V	2.0 1.5	di	0	225
+585	KRUMEN_PYE-55-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	55	eat	1336	EAT	didE	didE	d i d a	false	1 7 1 7	AXBZ	TITA	15	15.T.C 15.I.V 15.T.C 15.A.V	2.0 1.5 1.75 0.8	dida	0	226
+586	AIZI_TIAGBAMRIN-33-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	33	egg	744	EGG	yi	yi	j i	false	6 7	AX	JI	1	1.J.C 1.I.V	2.0 1.5	ji	1	227
+587	EASTERN_KRAHN-33-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	33	egg	744	EGG	5ie	5ie	ɲ i e	false	4 7 7	AXZ	NIE	9	9.N.C 9.I.V 9.E.V	2.0 1.5 0.8	ɲie	0	228
+588	KRUMEN_PYE-33-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	33	egg	744	EGG	5o*lo	5o*lo	ɲ õ l o	false	4 7 5 7	AXBZ	NULU	15	15.N.C 15.U.V 15.L.C 15.U.V	2.0 1.5 1.75 0.8	ɲõlo	0	229
+589	AIZI_TIAGBAMRIN-36-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	36	feather	1201	FEATHER	folu	folu	f o l u	false	3 7 5 7	AXBZ	BULY	1	1.B.C 1.U.V 1.L.C 1.Y.V	2.0 1.5 1.75 0.8	folu	0	230
+590	KRUMEN_PYE-36-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	36	feather	1201	FEATHER	duro	duro	d u r o	false	1 7 5 7	AXBZ	TYRU	15	15.T.C 15.Y.V 15.R.C 15.U.V	2.0 1.5 1.75 0.8	duro	0	231
+591	AIZI_TIAGBAMRIN-29-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	29	flesh	2259	FLESH	nu5o	nu5o	n u ɲ o	false	4 7 4 7	AXBZ	NYNU	1	1.N.C 1.Y.V 1.N.C 1.U.V	2.0 1.5 1.75 0.8	nuɲo	0	232
+592	KRUMEN_PYE-29-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	29	flesh	2259	FLESH	huE	huE	h u a	false	3 7 7	AXZ	HYA	15	15.H.C 15.Y.V 15.A.V	2.0 1.5 0.8	hua	0	233
+593	AIZI_TIAGBAMRIN-64-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	64	fly	1441	FLY (MOVE THROUGH AIR)	tu	tu	t u	false	1 7	AX	TY	1	1.T.C 1.Y.V	2.0 1.5	tu	0	234
+594	KRUMEN_PYE-64-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	64	fly	1441	FLY (MOVE THROUGH AIR)	hw~lu	hw~lu	hʷ l u	false	3 5 7	ACX	HLY	15	15.H.C 15.L.C 15.Y.V	2.0 1.5 1.5	hʷlu	0	235
+595	AIZI_TIAGBAMRIN-70-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	70	give	1447	GIVE	5E	5E	ɲ a	false	4 7	AX	NA	1	1.N.C 1.A.V	2.0 1.5	ɲa	0	236
+596	EASTERN_KRAHN-70-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	70	give	1447	GIVE	ye	ye	j e	false	6 7	AX	JE	9	9.J.C 9.E.V	2.0 1.5	je	0	237
+597	KRUMEN_PYE-70-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	70	give	1447	GIVE	5E*	5E*	ɲ ã	false	4 7	AX	NA	15	15.N.C 15.A.V	2.0 1.5	ɲã	1	236
+598	AIZI_TIAGBAMRIN-37-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	37	hair	1040	HAIR	lifi	lifi	l i f i	false	5 7 3 7	AXBZ	LIBI	1	1.L.C 1.I.V 1.B.C 1.I.V	2.0 1.5 1.75 0.8	lifi	0	238
+599	EASTERN_KRAHN-37-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	37	hair	1040	HAIR	mi	mi	m i	false	4 7	AX	MI	9	9.M.C 9.I.V	2.0 1.5	mi	0	239
+600	KRUMEN_PYE-37-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	37	hair	1040	HAIR	le 5aE*	le 5aE*	l e ɲ ɐ ã	false	5 7 4 7 7	AXBYZ	LENEA	15	15.L.C 15.E.V 15.N.C 15.E.V 15.A.V	2.0 1.5 1.75 1.3 0.8	leɲɐã	0	240
+601	AIZI_TIAGBAMRIN-38-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	38	head	1256	HEAD	dru	dru	d r u	false	1 5 7	ACX	TRY	1	1.T.C 1.R.C 1.Y.V	2.0 1.5 1.5	dru	0	241
+602	EASTERN_KRAHN-38-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	38	head	1256	HEAD	dro	dro	d r o	false	1 5 7	ACX	TRU	9	9.T.C 9.R.C 9.U.V	2.0 1.5 1.5	dro	0	241
+603	KRUMEN_PYE-38-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	38	head	1256	HEAD	le	le	l e	false	5 7	AX	LE	15	15.L.C 15.E.V	2.0 1.5	le	0	242
+604	AIZI_TIAGBAMRIN-52-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	52	heart	1223	HEART	pro	pro	p r o	false	1 5 7	ACX	PRU	1	1.P.C 1.R.C 1.U.V	2.0 1.5 1.5	pro	0	243
+605	KRUMEN_PYE-52-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	52	heart	1223	HEART	plo	plo	p l o	false	1 5 7	ACX	PLU	15	15.P.C 15.L.C 15.U.V	2.0 1.5 1.5	plo	0	243
+606	AIZI_TIAGBAMRIN-62-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	62	kill	1417	KILL	yra	yra	j r ɐ	false	6 5 7	ACZ	JRE	1	1.J.C 1.R.C 1.E.V	2.0 1.5 0.8	jrɐ	0	244
+607	EASTERN_KRAHN-62-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	62	kill	1417	KILL	dra	dra	d r ɐ	false	1 5 7	ACX	TRE	9	9.T.C 9.R.C 9.E.V	2.0 1.5 1.5	drɐ	0	245
+608	KRUMEN_PYE-62-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	62	kill	1417	KILL	la	la	l ɐ	false	5 7	AX	LE	15	15.L.C 15.E.V	2.0 1.5	lɐ	0	246
+609	AIZI_TIAGBAMRIN-59-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	59	know	3626	KNOW	zi	zi	z i	false	3 7	AX	SI	1	1.S.C 1.I.V	2.0 1.5	zi	0	247
+610	KRUMEN_PYE-59-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	59	know	3626	KNOW	yi	yi	j i	false	6 7	AX	JI	15	15.J.C 15.I.V	2.0 1.5	ji	0	248
+611	AIZI_TIAGBAMRIN-73-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	73	moon	1313	MOON	Cu	Cu	tʃ u	false	1 7	AX	TY	1	1.T.C 1.Y.V	2.0 1.5	tʃu	0	249
+612	EASTERN_KRAHN-73-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	73	moon	1313	MOON	Co	Co	tʃ o	false	1 7	AX	TU	9	9.T.C 9.U.V	2.0 1.5	tʃo	0	249
+613	KRUMEN_PYE-73-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	73	moon	1313	MOON	ho	ho	h o	false	3 7	AX	HU	15	15.H.C 15.U.V	2.0 1.5	ho	0	250
+614	AIZI_TIAGBAMRIN-42-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	42	mouth	674	MOUTH	mu	mu	m u	false	4 7	AX	MY	1	1.M.C 1.Y.V	2.0 1.5	mu	0	251
+615	KRUMEN_PYE-42-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	42	mouth	674	MOUTH	wu	wu	w u	false	6 7	AX	WY	15	15.W.C 15.Y.V	2.0 1.5	wu	0	252
+616	AIZI_TIAGBAMRIN-50-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	50	neck	1333	NECK	vu	vu	v u	false	3 7	AX	BY	1	1.B.C 1.Y.V	2.0 1.5	vu	0	253
+617	KRUMEN_PYE-50-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	50	neck	1333	NECK	plu	plu	p l u	false	1 5 7	ACX	PLY	15	15.P.C 15.L.C 15.Y.V	2.0 1.5 1.5	plu	0	254
+618	KRUMEN_PYE-24-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	24	seed	714	SEED	jo	jo	dʒ o	false	1 7	AX	TU	15	15.T.C 15.U.V	2.0 1.5	dʒo	0	255
+619	AIZI_TIAGBAMRIN-60-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	60	sleep	1585	SLEEP	mo namu	mo namu	m o n ɐ m u	false	4 7 4 7 4 7	AXBYBZ	MUNEMY	1	1.M.C 1.U.V 1.N.C 1.E.V 1.M.C 1.Y.V	2.0 1.5 1.75 1.3 1.75 0.8	monɐmu	0	256
+620	EASTERN_KRAHN-60-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	60	sleep	1585	SLEEP	mo	mo	m o	false	4 7	AX	MU	9	9.M.C 9.U.V	2.0 1.5	mo	0	257
+621	KRUMEN_PYE-60-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	60	sleep	1585	SLEEP	Nme	Nme	ŋ m e	false	4 4 7	ACZ	NME	15	15.N.C 15.M.C 15.E.V	2.0 1.5 0.8	ŋme	0	257
+622	AIZI_TIAGBAMRIN-81-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	81	smoke	778	SMOKE (EXHAUST)	lede zani	lede zani	l e d e z ɐ n i	false	5 7 1 7 3 7 4 7	AXBYBYBZ	LETESENI	1	1.L.C 1.E.V 1.T.C 1.E.V 1.S.C 1.E.V 1.N.C 1.I.V	2.0 1.5 1.75 1.3 1.75 1.3 1.75 0.8	ledezɐni	0	258
+623	KRUMEN_PYE-81-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	81	smoke	778	SMOKE (EXHAUST)	5ayu	5ayu	ɲ ɐ j u	false	4 7 6 7	AXBZ	NEJY	15	15.N.C 15.E.V 15.J.C 15.Y.V	2.0 1.5 1.75 0.8	ɲɐju	0	259
+624	KRUMEN_PYE-69-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	69	stand	1442	STAND	holu	holu	h o l u	false	3 7 5 7	AXBZ	HULY	15	15.H.C 15.U.V 15.L.C 15.Y.V	2.0 1.5 1.75 0.8	holu	0	260
+625	AIZI_TIAGBAMRIN-35-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	35	tail	1220	TAIL	gEtE	gEtE	g a t a	false	1 7 1 7	AXBZ	KATA	1	1.K.C 1.A.V 1.T.C 1.A.V	2.0 1.5 1.75 0.8	gata	0	261
+626	EASTERN_KRAHN-35-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	35	tail	1220	TAIL	gw~o	gw~o	gʷ o	false	1 7	AX	KU	9	9.K.C 9.U.V	2.0 1.5	gʷo	0	262
+627	KRUMEN_PYE-35-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	35	tail	1220	TAIL	ba	ba	b ɐ	false	1 7	AX	PE	15	15.P.C 15.E.V	2.0 1.5	bɐ	0	263
+628	AIZI_TIAGBAMRIN-65-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	65	walk	1443	WALK	na	na	n ɐ	false	4 7	AX	NE	1	1.N.C 1.E.V	2.0 1.5	nɐ	0	264
+629	EASTERN_KRAHN-65-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	65	walk	1443	WALK	na	na	n ɐ	false	4 7	AX	NE	9	9.N.C 9.E.V	2.0 1.5	nɐ	1	264
+630	KRUMEN_PYE-65-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	65	walk	1443	WALK	na	na	n ɐ	false	4 7	AX	NE	15	15.N.C 15.E.V	2.0 1.5	nɐ	1	264
+631	AIZI_TIAGBAMRIN-16-1	AIZI_TIAGBAMRIN	AIZI_TIAGBAMRIN	tiag1235	Tiagbamrin Aizi	Kru	Greater Western Kru	Western Kru	False	16	woman	962	WOMAN	lapE	lapE	l ɐ p a	false	5 7 1 7	AXBZ	LEPA	1	1.L.C 1.E.V 1.P.C 1.A.V	2.0 1.5 1.75 0.8	lɐpa	0	265
+632	EASTERN_KRAHN-16-1	EASTERN_KRAHN	EASTERN_KRAHN	east2414	Konobo-Eastern Krahn	Kru	Greater Western Kru	Western Kru	False	16	woman	962	WOMAN	5ini	5ini	ɲ i n i	false	4 7 4 7	AXBZ	NINI	9	9.N.C 9.I.V 9.N.C 9.I.V	2.0 1.5 1.75 0.8	ɲini	0	266
+633	KRUMEN_PYE-16-1	KRUMEN_PYE	KRUMEN_PYE	pyek1235	Pye Krumen	Kru	Greater Western Kru	Western Kru	False	16	woman	962	WOMAN	no*wa	no*wa	n õ w ɐ	false	4 7 6 7	AXBZ	NUWE	15	15.N.C 15.U.V 15.W.C 15.E.V	2.0 1.5 1.75 0.8	nõwɐ	0	267
+# Created using the LexStat class of LingPy-2.6.9
+# Parameters: 2:1_1.00_10000_0.70_global-2-0.50:local-1-0.50_0.30__T_shuffle_False:upgma:-2_0.7_0.00_-5.00
+# Cluster: lexstat_infomap_0.55

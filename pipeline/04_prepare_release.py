@@ -225,7 +225,9 @@ def main():
     print(
         f"\n[![CC-BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)"
     )
-    print("[![DOI](https://zenodo.org/badge/452418748.svg)](https://zenodo.org/badge/latestdoi/452418748)")
+    print(
+        "[![DOI](https://zenodo.org/badge/452418748.svg)](https://zenodo.org/badge/latestdoi/452418748)"
+    )
     print()
 
     print("## Statistics\n")
