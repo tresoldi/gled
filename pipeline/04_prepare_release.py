@@ -124,13 +124,6 @@ def build_nexus(data):
 
         # Output NEXUS file
         output_nexus(charstates, matrix, assumptions, family)
-        # print(family)
-        # print(charstates)
-        # lens = set([len(v) for _, v in matrix.items()])
-        # print(lens)
-        # if len(lens) != 1:
-        #    for k, v in matrix.items():
-        #        print("!!!!!!!", k, len(v), v)
 
 
 def main():
