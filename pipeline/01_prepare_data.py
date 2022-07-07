@@ -52,7 +52,7 @@ def _read_language_data(args, languoids):
     # Read custom mapping
     custom = {}
     proxy = {}
-    with open("pipeline/etc/custom_mapping.csv") as csvfile:
+    with open("etc/custom_mapping.csv") as csvfile:
         for row in csv.DictReader(csvfile):
             # If there is a glottocode, just extend the mapping
             if row["PROXY"]:
@@ -225,22 +225,25 @@ def _write_full_data(data, args):
 
             # Collect sub-lineage data, skipping over non-existant
             # categories (such as missing lineage2). Note that data at this
-            # point is already sorted.
+            # point is already sorted. We still add isolates as members of their
+            # own family (lineage 0)
             if entry["LANGUAGE_LINEAGE_0"]:
-                lin0_label = common.slug(entry["LANGUAGE_LINEAGE_0"])
+                lin0_label = common.slug(entry["LANGUAGE_LINEAGE_0"], drop_parentheses=True)
                 lineage_0[lin0_label].append(entry)
+            else:
+                lineage_0[common.slug(entry["GLOTTOLOG_NAME"], drop_parentheses=True)].append(entry)
 
             if entry["LANGUAGE_LINEAGE_1"]:
                 lin1_label = "%s-%s" % (
                     lin0_label,
-                    common.slug(entry["LANGUAGE_LINEAGE_1"]),
+                    common.slug(entry["LANGUAGE_LINEAGE_1"], drop_parentheses=True),
                 )
                 lineage_1[lin1_label].append(entry)
 
             if entry["LANGUAGE_LINEAGE_2"]:
                 lin2_label = "%s-%s" % (
                     lin1_label,
-                    common.slug(entry["LANGUAGE_LINEAGE_2"]),
+                    common.slug(entry["LANGUAGE_LINEAGE_2"], drop_parentheses=True),
                 )
                 lineage_2[lin2_label].append(entry)
 
@@ -294,7 +297,8 @@ def write_data(data, args, per_lineage=False):
 
     # Write sublineage datasets
     for label, entries in lineage_0.items():
-        _write_lineage_data(entries, label, "asjp", args)
+        if not "artificial" in label and not "unclassifiable" in label:
+            _write_lineage_data(entries, label, "asjp", args)
     if per_lineage:
         for label, entries in lineage_1.items():
             _write_lineage_data(entries, label, "asjp", args)

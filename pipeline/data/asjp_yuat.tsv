@@ -70,97 +70,385 @@ ID	ASJP_ID	DOCULECT	LANGUAGE_NAME	GLOTTOCODE	GLOTTOLOG_NAME	LANGUAGE_LINEAGE_0	L
 69	MEKMEK-3-1	MEKMEK	MEKMEK	mekm1240	Mekmek	Yuat			False	3	*we	1212	WE	yin	yin	j i n	false
 70	CHANGRIWA-2-1	CHANGRIWA	CHANGRIWA	chan1319	Changriwa	Yuat			False	2	*you	1215	THOU	ari	ari	ɐ r i	false
 71	MEKMEK-2-1	MEKMEK	MEKMEK	mekm1240	Mekmek	Yuat			False	2	*you	1215	THOU	ndon	ndon	n d o n	false
-72	MIYAK-1-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	1	*I	1209	I	Nin	Nin	ŋ i n	false
-73	MIYAK-30-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	30	*blood	946	BLOOD	ambala	ambala	ɐ m b ɐ l ɐ	false
-74	MIYAK-31-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	31	*bone	1394	BONE	ampuwa	ampuwa	ɐ m p u w ɐ	false
-75	MIYAK-51-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	51	*breasts	1402	BREAST	miru	miru	m i r u	false
-76	MIYAK-66-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	66	*come	1446	COME	N3ma	N3ma	ŋ ə m ɐ	false
-77	MIYAK-21-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	21	*dog	2009	DOG	gan	gan	g ɐ n	false
-78	MIYAK-39-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	39	*ear	1247	EAR	tandu	tandu	t ɐ n d u	false
-79	MIYAK-40-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	40	*eye	1248	EYE	siph~ala	siph~ala	s i pʰ ɐ l ɐ	false
-80	MIYAK-82-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	82	*fire	221	FIRE	m3n	m3n	m ə n	false
-81	MIYAK-48-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	48	*hand	1277	HAND	gori saNpaN	gori saNpaN	g o r i s ɐ ŋ p ɐ ŋ	false
-82	MIYAK-25-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	25	*leaf	628	LEAF	mu andaNa	mu andaNa	m u ɐ n d ɐ ŋ ɐ	false
-83	MIYAK-22-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	22	*louse	1392	LOUSE	wututh~oma	wututh~oma	w u t u tʰ o m ɐ	false
-84	MIYAK-86-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	86	*mountain	639	MOUNTAIN	lam	lam	l ɐ m	false
-85	MIYAK-92-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	92	*night	1233	NIGHT	wukh~an	wukh~an	w u kʰ ɐ n	false
-86	MIYAK-41-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	41	*nose	1221	NOSE	nangeling	nangeling	n ɐ n g e l i n g	false
-87	MIYAK-11-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	11	*one	1493	ONE	Naykh~okh~	Naykh~okh~	ŋ ɐ j kʰ o kʰ	false
-88	MIYAK-85-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	85	*path	2252	PATH	mayt	mayt	m ɐ j t	false
-89	MIYAK-57-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	57	*see	1409	SEE	wudla	wudla	w u d l ɐ	false
-90	MIYAK-28-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	28	*skin	763	SKIN	npisakh~	npisakh~	n p i s ɐ kʰ	false
-91	MIYAK-74-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	74	*star	1430	STAR	SunSa	SunSa	ʃ u n ʃ ɐ	false
-92	MIYAK-77-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	77	*stone	857	STONE	m3ndim	m3ndim	m ə n d i m	false
-93	MIYAK-72-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	72	*sun	1343	SUN	banma	banma	b ɐ n m ɐ	false
-94	MIYAK-44-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	44	*tongue	1205	TONGUE	mpe	mpe	m p e	false
-95	MIYAK-43-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	43	*tooth	1380	TOOTH	Nandu	Nandu	ŋ ɐ n d u	false
-96	MIYAK-23-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	23	*tree	906	TREE	mi	mi	m i	false
-97	MIYAK-12-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	12	*two	1498	TWO	alawin	alawin	ɐ l ɐ w i n	false
-98	MIYAK-75-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	75	*water	948	WATER	mangam	mangam	m ɐ n g ɐ m	false
-99	MIYAK-75-2	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	75	*water	948	WATER	yim	yim	j i m	false
-100	MIYAK-3-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	3	*we	1212	WE	nye	nye	n j e	false
-101	MIYAK-2-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	2	*you	1215	THOU	aNgulon bolanSu wopok	aNgulon bolanSu wopok	ɐ ŋ g u l o n b o l ɐ n ʃ u w o p o k	false
-102	MIYAK-2-2	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	2	*you	1215	THOU	ndin	ndin	n d i n	false
-103	BIWAT-1-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	1	*I	1209	I	N3n	N3n	ŋ ə n	false
-104	BUN-1-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	1	*I	1209	I	an	an	ɐ n	false
-105	BIWAT-30-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	30	*blood	946	BLOOD	amb3ra	amb3ra	ɐ m b ə r ɐ	false
-106	BUN-30-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	30	*blood	946	BLOOD	aba	aba	ɐ b ɐ	false
-107	BIWAT-31-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	31	*bone	1394	BONE	amfupa	amfupa	ɐ m f u p ɐ	false
-108	BUN-31-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	31	*bone	1394	BONE	abubwa	abubwa	ɐ b u b w ɐ	false
-109	BIWAT-51-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	51	*breasts	1402	BREAST	miru	miru	m i r u	false
-110	BUN-51-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	51	*breasts	1402	BREAST	mu5E	mu5E	m u ɲ a	false
-111	BIWAT-21-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	21	*dog	2009	DOG	key3n	key3n	k e j ə n	false
-112	BIWAT-21-2	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	21	*dog	2009	DOG	kindu	kindu	k i n d u	false
-113	BUN-21-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	21	*dog	2009	DOG	kiyn	kiyn	k i j n	false
-114	BIWAT-39-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	39	*ear	1247	EAR	tundu	tundu	t u n d u	false
-115	BUN-39-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	39	*ear	1247	EAR	tuwan	tuwan	t u w ɐ n	false
-116	BIWAT-40-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	40	*eye	1248	EYE	sip3ra	sip3ra	s i p ə r ɐ	false
-117	BUN-40-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	40	*eye	1248	EYE	sik37	sik37	s i k ə ʔ	false
-118	BIWAT-82-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	82	*fire	221	FIRE	mw~3n	mw~3n	mʷ ə n	false
-119	BUN-82-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	82	*fire	221	FIRE	m3n	m3n	m ə n	false
-120	BIWAT-19-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	19	*fish	227	FISH	simiyaN	simiyaN	s i m i j ɐ ŋ	false
-121	BUN-19-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	19	*fish	227	FISH	simi	simi	s i m i	false
-122	BUN-48-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	48	*hand	1277	HAND	k3bak	k3bak	k ə b ɐ k	false
-123	BIWAT-47-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	47	*knee	1371	KNEE	wandanma	wandanma	w ɐ n d ɐ n m ɐ	false
-124	BUN-47-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	47	*knee	1371	KNEE	banpup	banpup	b ɐ n p u p	false
-125	BIWAT-25-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	25	*leaf	628	LEAF	munanGi	munanGi	m u n ɐ n ɢ i	false
-126	BUN-25-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	25	*leaf	628	LEAF	dab3	dab3	d ɐ b ə	false
-127	BIWAT-53-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	53	*liver	1224	LIVER	nin	nin	n i n	false
-128	BUN-53-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	53	*liver	1224	LIVER	5impat	5impat	ɲ i m p ɐ t	false
-129	BUN-22-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	22	*louse	1392	LOUSE	wuta	wuta	w u t ɐ	false
-130	BIWAT-86-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	86	*mountain	639	MOUNTAIN	mansisiN	mansisiN	m ɐ n s i s i ŋ	false
-131	BUN-86-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	86	*mountain	639	MOUNTAIN	lam	lam	l ɐ m	false
-132	BIWAT-96-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	96	*new	1231	NEW	k3raN	k3raN	k ə r ɐ ŋ	false
-133	BIWAT-92-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	92	*night	1233	NIGHT	ikwan	ikwan	i k w ɐ n	false
-134	BUN-92-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	92	*night	1233	NIGHT	numkwa	numkwa	n u m k w ɐ	false
-135	BIWAT-41-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	41	*nose	1221	NOSE	N3r3k	N3r3k	ŋ ə r ə k	false
-136	BUN-41-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	41	*nose	1221	NOSE	N3r3k	N3r3k	ŋ ə r ə k	false
-137	BIWAT-11-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	11	*one	1493	ONE	nat3	nat3	n ɐ t ə	false
-138	BUN-11-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	11	*one	1493	ONE	t3t3m	t3t3m	t ə t ə m	false
-139	BIWAT-85-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	85	*path	2252	PATH	mayikwa	mayikwa	m ɐ j i k w ɐ	false
-140	BUN-85-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	85	*path	2252	PATH	mariyEN	mariyEN	m ɐ r i j a ŋ	false
-141	BIWAT-18-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	18	*person	683	PERSON	fob3ra	fob3ra	f o b ə r ɐ	false
-142	BUN-18-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	18	*person	683	PERSON	mbalaji	mbalaji	m b ɐ l ɐ dʒ i	false
-143	BIWAT-28-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	28	*skin	763	SKIN	yabot	yabot	j ɐ b o t	false
-144	BUN-28-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	28	*skin	763	SKIN	patyikEmbosa	patyikEmbosa	p ɐ t j i k a m b o s ɐ	false
-145	BIWAT-74-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	74	*star	1430	STAR	susuwaN	susuwaN	s u s u w ɐ ŋ	false
-146	BUN-74-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	74	*star	1430	STAR	susuaN	susuaN	s u s u ɐ ŋ	false
-147	BIWAT-77-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	77	*stone	857	STONE	niraN	niraN	n i r ɐ ŋ	false
-148	BUN-77-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	77	*stone	857	STONE	m3d3m	m3d3m	m ə d ə m	false
-149	BIWAT-72-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	72	*sun	1343	SUN	ba	ba	b ɐ	false
-150	BUN-72-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	72	*sun	1343	SUN	banukwoba	banukwoba	b ɐ n u k w o b ɐ	false
-151	BIWAT-44-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	44	*tongue	1205	TONGUE	mbE	mbE	m b a	false
-152	BUN-44-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	44	*tongue	1205	TONGUE	mbay3	mbay3	m b ɐ j ə	false
-153	BIWAT-43-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	43	*tooth	1380	TOOTH	andu	andu	ɐ n d u	false
-154	BUN-43-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	43	*tooth	1380	TOOTH	Nadu	Nadu	ŋ ɐ d u	false
-155	BIWAT-23-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	23	*tree	906	TREE	muN	muN	m u ŋ	false
-156	BUN-23-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	23	*tree	906	TREE	muN	muN	m u ŋ	false
-157	BIWAT-12-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	12	*two	1498	TWO	arabu	arabu	ɐ r ɐ b u	false
-158	BUN-12-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	12	*two	1498	TWO	arawin	arawin	ɐ r ɐ w i n	false
-159	BIWAT-75-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	75	*water	948	WATER	mam	mam	m ɐ m	false
-160	BUN-75-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	75	*water	948	WATER	mam	mam	m ɐ m	false
-161	BIWAT-3-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	3	*we	1212	WE	amb3	amb3	ɐ m b ə	false
-162	BUN-3-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	3	*we	1212	WE	min	min	m i n	false
-163	BIWAT-2-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	2	*you	1215	THOU	d3	d3	d ə	false
-164	BIWAT-2-2	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	2	*you	1215	THOU	d3n	d3n	d ə n	false
-165	BUN-2-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	2	*you	1215	THOU	ndi	ndi	n d i	false
+72	KYAIMBARANG-1-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	1	*I	1209	I	ndu	ndu	n d u	false
+73	KYENELE-1-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	1	*I	1209	I	N3n	N3n	ŋ ə n	false
+74	KYENELE-1-2	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	1	*I	1209	I	Nunu	Nunu	ŋ u n u	false
+75	MIYAK-1-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	1	*I	1209	I	Nin	Nin	ŋ i n	false
+76	KYAIMBARANG-30-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	30	*blood	946	BLOOD	ambara	ambara	ɐ m b ɐ r ɐ	false
+77	KYENELE-30-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	30	*blood	946	BLOOD	ambala	ambala	ɐ m b ɐ l ɐ	false
+78	MIYAK-30-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	30	*blood	946	BLOOD	ambala	ambala	ɐ m b ɐ l ɐ	false
+79	KYAIMBARANG-31-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	31	*bone	1394	BONE	ampu	ampu	ɐ m p u	false
+80	KYENELE-31-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	31	*bone	1394	BONE	amfuwa	amfuwa	ɐ m f u w ɐ	false
+81	MIYAK-31-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	31	*bone	1394	BONE	ampuwa	ampuwa	ɐ m p u w ɐ	false
+82	KYAIMBARANG-51-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	51	*breasts	1402	BREAST	mi	mi	m i	false
+83	KYENELE-51-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	51	*breasts	1402	BREAST	miru	miru	m i r u	false
+84	MIYAK-51-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	51	*breasts	1402	BREAST	miru	miru	m i r u	false
+85	KYAIMBARANG-66-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	66	*come	1446	COME	N3ma	N3ma	ŋ ə m ɐ	false
+86	KYENELE-66-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	66	*come	1446	COME	yiNma	yiNma	j i ŋ m ɐ	false
+87	MIYAK-66-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	66	*come	1446	COME	N3ma	N3ma	ŋ ə m ɐ	false
+88	KYAIMBARANG-61-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	61	*die	1494	DIE	s3Nginma	s3Nginma	s ə ŋ g i n m ɐ	false
+89	KYAIMBARANG-21-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	21	*dog	2009	DOG	kyan	kyan	k j ɐ n	false
+90	KYENELE-21-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	21	*dog	2009	DOG	kyEn	kyEn	k j a n	false
+91	MIYAK-21-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	21	*dog	2009	DOG	gan	gan	g ɐ n	false
+92	KYAIMBARANG-39-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	39	*ear	1247	EAR	twan	twan	t w ɐ n	false
+93	KYENELE-39-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	39	*ear	1247	EAR	tuan	tuan	t u ɐ n	false
+94	MIYAK-39-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	39	*ear	1247	EAR	tandu	tandu	t ɐ n d u	false
+95	KYAIMBARANG-40-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	40	*eye	1248	EYE	Cik	Cik	tʃ i k	false
+96	KYENELE-40-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	40	*eye	1248	EYE	siki	siki	s i k i	false
+97	MIYAK-40-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	40	*eye	1248	EYE	siph~ala	siph~ala	s i pʰ ɐ l ɐ	false
+98	KYAIMBARANG-82-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	82	*fire	221	FIRE	piucu ro7ai	piucu ro7ai	p i u ts u r o ʔ ɐ i	false
+99	KYENELE-82-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	82	*fire	221	FIRE	m3n	m3n	m ə n	false
+100	MIYAK-82-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	82	*fire	221	FIRE	m3n	m3n	m ə n	false
+101	KYENELE-19-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	19	*fish	227	FISH	Nguli	Nguli	ŋ g u l i	false
+102	KYENELE-19-2	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	19	*fish	227	FISH	simiya7	simiya7	s i m i j ɐ ʔ	false
+103	KYAIMBARANG-95-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	95	*full	1429	FULL	m3m3r3sewa	m3m3r3sewa	m ə m ə r ə s e w ɐ	false
+104	KYAIMBARANG-48-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	48	*hand	1277	HAND	k3ri	k3ri	k ə r i	false
+105	KYENELE-48-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	48	*hand	1277	HAND	k3lipat	k3lipat	k ə l i p ɐ t	false
+106	MIYAK-48-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	48	*hand	1277	HAND	gori saNpaN	gori saNpaN	g o r i s ɐ ŋ p ɐ ŋ	false
+107	KYAIMBARANG-58-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	58	*hear	1408	HEAR	b3yal3	b3yal3	b ə j ɐ l ə	false
+108	KYENELE-58-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	58	*hear	1408	HEAR	bwi	bwi	b w i	false
+109	KYENELE-47-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	47	*knee	1371	KNEE	bandanfop	bandanfop	b ɐ n d ɐ n f o p	false
+110	KYAIMBARANG-25-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	25	*leaf	628	LEAF	munda	munda	m u n d ɐ	false
+111	KYENELE-25-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	25	*leaf	628	LEAF	fw~op	fw~op	fʷ o p	false
+112	MIYAK-25-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	25	*leaf	628	LEAF	mu andaNa	mu andaNa	m u ɐ n d ɐ ŋ ɐ	false
+113	KYENELE-53-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	53	*liver	1224	LIVER	forok	forok	f o r o k	false
+114	KYAIMBARANG-22-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	22	*louse	1392	LOUSE	uta	uta	u t ɐ	false
+115	KYENELE-22-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	22	*louse	1392	LOUSE	wuta	wuta	w u t ɐ	false
+116	MIYAK-22-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	22	*louse	1392	LOUSE	wututh~oma	wututh~oma	w u t u tʰ o m ɐ	false
+117	KYAIMBARANG-86-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	86	*mountain	639	MOUNTAIN	r3m	r3m	r ə m	false
+118	KYENELE-86-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	86	*mountain	639	MOUNTAIN	ram	ram	r ɐ m	false
+119	MIYAK-86-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	86	*mountain	639	MOUNTAIN	lam	lam	l ɐ m	false
+120	KYAIMBARANG-100-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	100	*name	1405	NAME	wuN	wuN	w u ŋ	false
+121	KYAIMBARANG-96-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	96	*new	1231	NEW	a5ig3	a5ig3	ɐ ɲ i g ə	false
+122	KYENELE-96-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	96	*new	1231	NEW	a5igam	a5igam	ɐ ɲ i g ɐ m	false
+123	KYAIMBARANG-92-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	92	*night	1233	NIGHT	uXwan	uXwan	u χ w ɐ n	false
+124	KYENELE-92-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	92	*night	1233	NIGHT	wukwan	wukwan	w u k w ɐ n	false
+125	MIYAK-92-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	92	*night	1233	NIGHT	wukh~an	wukh~an	w u kʰ ɐ n	false
+126	KYENELE-41-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	41	*nose	1221	NOSE	N3N3liN	N3N3liN	ŋ ə ŋ ə l i ŋ	false
+127	MIYAK-41-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	41	*nose	1221	NOSE	nangeling	nangeling	n ɐ n g e l i n g	false
+128	KYAIMBARANG-11-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	11	*one	1493	ONE	Nayk3	Nayk3	ŋ ɐ j k ə	false
+129	KYENELE-11-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	11	*one	1493	ONE	Naikyek	Naikyek	ŋ ɐ i k j e k	false
+130	MIYAK-11-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	11	*one	1493	ONE	Naykh~okh~	Naykh~okh~	ŋ ɐ j kʰ o kʰ	false
+131	KYAIMBARANG-85-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	85	*path	2252	PATH	may	may	m ɐ j	false
+132	KYENELE-85-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	85	*path	2252	PATH	mayt	mayt	m ɐ j t	false
+133	MIYAK-85-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	85	*path	2252	PATH	mayt	mayt	m ɐ j t	false
+134	KYENELE-18-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	18	*person	683	PERSON	ab3t	ab3t	ɐ b ə t	false
+135	KYAIMBARANG-57-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	57	*see	1409	SEE	ura	ura	u r ɐ	false
+136	KYENELE-57-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	57	*see	1409	SEE	wur	wur	w u r	false
+137	MIYAK-57-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	57	*see	1409	SEE	wudla	wudla	w u d l ɐ	false
+138	KYAIMBARANG-28-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	28	*skin	763	SKIN	v3za	v3za	v ə z ɐ	false
+139	KYENELE-28-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	28	*skin	763	SKIN	mbusak	mbusak	m b u s ɐ k	false
+140	MIYAK-28-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	28	*skin	763	SKIN	npisakh~	npisakh~	n p i s ɐ kʰ	false
+141	KYAIMBARANG-74-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	74	*star	1430	STAR	z3nza	z3nza	z ə n z ɐ	false
+142	KYENELE-74-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	74	*star	1430	STAR	nsunsa	nsunsa	n s u n s ɐ	false
+143	MIYAK-74-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	74	*star	1430	STAR	SunSa	SunSa	ʃ u n ʃ ɐ	false
+144	KYAIMBARANG-77-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	77	*stone	857	STONE	m3nd3m	m3nd3m	m ə n d ə m	false
+145	KYENELE-77-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	77	*stone	857	STONE	munt3m	munt3m	m u n t ə m	false
+146	MIYAK-77-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	77	*stone	857	STONE	m3ndim	m3ndim	m ə n d i m	false
+147	KYAIMBARANG-72-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	72	*sun	1343	SUN	banma	banma	b ɐ n m ɐ	false
+148	KYENELE-72-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	72	*sun	1343	SUN	banma	banma	b ɐ n m ɐ	false
+149	MIYAK-72-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	72	*sun	1343	SUN	banma	banma	b ɐ n m ɐ	false
+150	KYAIMBARANG-44-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	44	*tongue	1205	TONGUE	mbye	mbye	m b j e	false
+151	KYENELE-44-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	44	*tongue	1205	TONGUE	mbE	mbE	m b a	false
+152	MIYAK-44-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	44	*tongue	1205	TONGUE	mpe	mpe	m p e	false
+153	KYAIMBARANG-43-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	43	*tooth	1380	TOOTH	Nandu	Nandu	ŋ ɐ n d u	false
+154	KYENELE-43-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	43	*tooth	1380	TOOTH	Nan	Nan	ŋ ɐ n	false
+155	KYENELE-43-2	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	43	*tooth	1380	TOOTH	Nantu	Nantu	ŋ ɐ n t u	false
+156	MIYAK-43-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	43	*tooth	1380	TOOTH	Nandu	Nandu	ŋ ɐ n d u	false
+157	KYAIMBARANG-23-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	23	*tree	906	TREE	mu	mu	m u	false
+158	KYENELE-23-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	23	*tree	906	TREE	muN	muN	m u ŋ	false
+159	MIYAK-23-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	23	*tree	906	TREE	mi	mi	m i	false
+160	KYAIMBARANG-12-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	12	*two	1498	TWO	arawi	arawi	ɐ r ɐ w i	false
+161	KYENELE-12-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	12	*two	1498	TWO	arawin	arawin	ɐ r ɐ w i n	false
+162	MIYAK-12-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	12	*two	1498	TWO	alawin	alawin	ɐ l ɐ w i n	false
+163	KYAIMBARANG-75-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	75	*water	948	WATER	maNam	maNam	m ɐ ŋ ɐ m	false
+164	KYENELE-75-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	75	*water	948	WATER	maNam	maNam	m ɐ ŋ ɐ m	false
+165	MIYAK-75-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	75	*water	948	WATER	mangam	mangam	m ɐ n g ɐ m	false
+166	MIYAK-75-2	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	75	*water	948	WATER	yim	yim	j i m	false
+167	KYENELE-3-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	3	*we	1212	WE	amban	amban	ɐ m b ɐ n	false
+168	MIYAK-3-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	3	*we	1212	WE	nye	nye	n j e	false
+169	KYAIMBARANG-2-1	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	2	*you	1215	THOU	bara Nayk3k	bara Nayk3k	b ɐ r ɐ ŋ ɐ j k ə k	false
+170	KYAIMBARANG-2-2	KYAIMBARANG	KYAIMBARANG	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	2	*you	1215	THOU	Nunu	Nunu	ŋ u n u	false
+171	KYENELE-2-1	KYENELE	KYENELE	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	2	*you	1215	THOU	ndin	ndin	n d i n	false
+172	MIYAK-2-1	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	2	*you	1215	THOU	aNgulon bolanSu wopok	aNgulon bolanSu wopok	ɐ ŋ g u l o n b o l ɐ n ʃ u w o p o k	false
+173	MIYAK-2-2	MIYAK	MIYAK	kyen1243	Kyenele	Yuat	Miyak-Bun-Biwat		False	2	*you	1215	THOU	ndin	ndin	n d i n	false
+174	BIWAT-1-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	1	*I	1209	I	N3n	N3n	ŋ ə n	false
+175	BIWAT_3-1-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	1	*I	1209	I	nene	nene	n e n e	false
+176	BIWAT_3-1-2	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	1	*I	1209	I	Nine	Nine	ŋ i n e	false
+177	BIWAT_MUDUKUMO-1-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	1	*I	1209	I	N3	N3	ŋ ə	false
+178	BUN-1-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	1	*I	1209	I	an	an	ɐ n	false
+179	BIWAT-30-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	30	*blood	946	BLOOD	amb3ra	amb3ra	ɐ m b ə r ɐ	false
+180	BIWAT_2-30-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	30	*blood	946	BLOOD	amberaeh	amberaeh	ɐ m b e r ɐ e h	false
+181	BIWAT_3-30-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	30	*blood	946	BLOOD	ambra	ambra	ɐ m b r ɐ	false
+182	BUN-30-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	30	*blood	946	BLOOD	aba	aba	ɐ b ɐ	false
+183	BIWAT-31-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	31	*bone	1394	BONE	amfupa	amfupa	ɐ m f u p ɐ	false
+184	BIWAT_2-31-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	31	*bone	1394	BONE	amfuvaheh	amfuvaheh	ɐ m f u v ɐ h e h	false
+185	BIWAT_3-31-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	31	*bone	1394	BONE	amfuva	amfuva	ɐ m f u v ɐ	false
+186	BUN-31-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	31	*bone	1394	BONE	abubwa	abubwa	ɐ b u b w ɐ	false
+187	BIWAT-51-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	51	*breasts	1402	BREAST	miru	miru	m i r u	false
+188	BIWAT_2-51-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	51	*breasts	1402	BREAST	meruhe	meruhe	m e r u h e	false
+189	BIWAT_3-51-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	51	*breasts	1402	BREAST	meru	meru	m e r u	false
+190	BUN-51-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	51	*breasts	1402	BREAST	mu5E	mu5E	m u ɲ a	false
+191	BIWAT_2-66-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	66	*come	1446	COME	avateh reveh	avateh reveh	ɐ v ɐ t e h r e v e h	false
+192	BIWAT_3-66-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	66	*come	1446	COME	rive	rive	r i v e	false
+193	BIWAT_MUDUKUMO-66-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	66	*come	1446	COME	im3	im3	i m ə	false
+194	BIWAT_2-61-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	61	*die	1494	DIE	ameNe	ameNe	ɐ m e ŋ e	false
+195	BIWAT_3-61-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	61	*die	1494	DIE	amene	amene	ɐ m e n e	false
+196	BIWAT-21-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	21	*dog	2009	DOG	key3n	key3n	k e j ə n	false
+197	BIWAT-21-2	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	21	*dog	2009	DOG	kindu	kindu	k i n d u	false
+198	BIWAT_2-21-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	21	*dog	2009	DOG	kenhe	kenhe	k e n h e	false
+199	BIWAT_3-21-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	21	*dog	2009	DOG	ken	ken	k e n	false
+200	BIWAT_MUDUKUMO-21-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	21	*dog	2009	DOG	ken	ken	k e n	false
+201	BUN-21-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	21	*dog	2009	DOG	kiyn	kiyn	k i j n	false
+202	BIWAT_2-54-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	54	*drink	1401	DRINK	uaNi	uaNi	u ɐ ŋ i	false
+203	BIWAT_3-54-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	54	*drink	1401	DRINK	mam give	mam give	m ɐ m g i v e	false
+204	BIWAT-39-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	39	*ear	1247	EAR	tundu	tundu	t u n d u	false
+205	BIWAT_2-39-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	39	*ear	1247	EAR	tuanhe	tuanhe	t u ɐ n h e	false
+206	BIWAT_3-39-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	39	*ear	1247	EAR	tundu	tundu	t u n d u	false
+207	BUN-39-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	39	*ear	1247	EAR	tuwan	tuwan	t u w ɐ n	false
+208	BIWAT-40-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	40	*eye	1248	EYE	sip3ra	sip3ra	s i p ə r ɐ	false
+209	BIWAT_2-40-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	40	*eye	1248	EYE	siketeh	siketeh	s i k e t e h	false
+210	BIWAT_3-40-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	40	*eye	1248	EYE	sipta	sipta	s i p t ɐ	false
+211	BUN-40-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	40	*eye	1248	EYE	sik37	sik37	s i k ə ʔ	false
+212	BIWAT-82-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	82	*fire	221	FIRE	mw~3n	mw~3n	mʷ ə n	false
+213	BIWAT_2-82-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	82	*fire	221	FIRE	mehen	mehen	m e h e n	false
+214	BIWAT_3-82-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	82	*fire	221	FIRE	men	men	m e n	false
+215	BIWAT_MUDUKUMO-82-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	82	*fire	221	FIRE	m3	m3	m ə	false
+216	BUN-82-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	82	*fire	221	FIRE	m3n	m3n	m ə n	false
+217	BIWAT-19-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	19	*fish	227	FISH	simiyaN	simiyaN	s i m i j ɐ ŋ	false
+218	BIWAT_2-19-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	19	*fish	227	FISH	ulefuaeh	ulefuaeh	u l e f u ɐ e h	false
+219	BIWAT_3-19-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	19	*fish	227	FISH	urifua	urifua	u r i f u ɐ	false
+220	BIWAT_MUDUKUMO-19-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	19	*fish	227	FISH	ilifuNu	ilifuNu	i l i f u ŋ u	false
+221	BUN-19-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	19	*fish	227	FISH	simi	simi	s i m i	false
+222	BIWAT_2-95-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	95	*full	1429	FULL	amuemerak	amuemerak	ɐ m u e m e r ɐ k	false
+223	BIWAT_3-95-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	95	*full	1429	FULL	muri	muri	m u r i	false
+224	BIWAT_2-48-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	48	*hand	1277	HAND	kelekhe	kelekhe	k e l e k h e	false
+225	BIWAT_3-48-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	48	*hand	1277	HAND	kirik	kirik	k i r i k	false
+226	BUN-48-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	48	*hand	1277	HAND	k3bak	k3bak	k ə b ɐ k	false
+227	BIWAT_2-58-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	58	*hear	1408	HEAR	deaembe	deaembe	d e ɐ e m b e	false
+228	BIWAT_3-58-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	58	*hear	1408	HEAR	biive	biive	b i i v e	false
+229	BIWAT_3-58-2	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	58	*hear	1408	HEAR	ambisi	ambisi	ɐ m b i s i	false
+230	BIWAT_MUDUKUMO-58-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	58	*hear	1408	HEAR	b3si	b3si	b ə s i	false
+231	BIWAT_2-34-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	34	*horn	1393	HORN (ANATOMY)	aNerueh	aNerueh	ɐ ŋ e r u e h	false
+232	BIWAT-47-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	47	*knee	1371	KNEE	wandanma	wandanma	w ɐ n d ɐ n m ɐ	false
+233	BIWAT_2-47-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	47	*knee	1371	KNEE	vuandanma	vuandanma	v u ɐ n d ɐ n m ɐ	false
+234	BIWAT_3-47-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	47	*knee	1371	KNEE	voandanma	voandanma	v o ɐ n d ɐ n m ɐ	false
+235	BUN-47-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	47	*knee	1371	KNEE	banpup	banpup	b ɐ n p u p	false
+236	BIWAT-25-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	25	*leaf	628	LEAF	munanGi	munanGi	m u n ɐ n ɢ i	false
+237	BIWAT_2-25-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	25	*leaf	628	LEAF	mundageh	mundageh	m u n d ɐ g e h	false
+238	BIWAT_3-25-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	25	*leaf	628	LEAF	muNdaNi	muNdaNi	m u ŋ d ɐ ŋ i	false
+239	BUN-25-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	25	*leaf	628	LEAF	dab3	dab3	d ɐ b ə	false
+240	BIWAT-53-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	53	*liver	1224	LIVER	nin	nin	n i n	false
+241	BIWAT_2-53-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	53	*liver	1224	LIVER	nenbaheh	nenbaheh	n e n b ɐ h e h	false
+242	BIWAT_3-53-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	53	*liver	1224	LIVER	sigemavi	sigemavi	s i g e m ɐ v i	false
+243	BUN-53-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	53	*liver	1224	LIVER	5impat	5impat	ɲ i m p ɐ t	false
+244	BIWAT_2-22-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	22	*louse	1392	LOUSE	utaeh	utaeh	u t ɐ e h	false
+245	BIWAT_3-22-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	22	*louse	1392	LOUSE	uta	uta	u t ɐ	false
+246	BUN-22-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	22	*louse	1392	LOUSE	wuta	wuta	w u t ɐ	false
+247	BIWAT-86-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	86	*mountain	639	MOUNTAIN	mansisiN	mansisiN	m ɐ n s i s i ŋ	false
+248	BIWAT_2-86-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	86	*mountain	639	MOUNTAIN	lamehbeh	lamehbeh	l ɐ m e h b e h	false
+249	BIWAT_3-86-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	86	*mountain	639	MOUNTAIN	manyi siN	manyi siN	m ɐ n j i s i ŋ	false
+250	BUN-86-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	86	*mountain	639	MOUNTAIN	lam	lam	l ɐ m	false
+251	BIWAT_2-100-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	100	*name	1405	NAME	vugeh	vugeh	v u g e h	false
+252	BIWAT_3-100-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	100	*name	1405	NAME	vuN	vuN	v u ŋ	false
+253	BIWAT_MUDUKUMO-100-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	100	*name	1405	NAME	vuN	vuN	v u ŋ	false
+254	BIWAT-96-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	96	*new	1231	NEW	k3raN	k3raN	k ə r ɐ ŋ	false
+255	BIWAT_2-96-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	96	*new	1231	NEW	aneake	aneake	ɐ n e ɐ k e	false
+256	BIWAT_3-96-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	96	*new	1231	NEW	aneke	aneke	ɐ n e k e	false
+257	BIWAT-92-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	92	*night	1233	NIGHT	ikwan	ikwan	i k w ɐ n	false
+258	BIWAT_2-92-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	92	*night	1233	NIGHT	ikuan	ikuan	i k u ɐ n	false
+259	BIWAT_3-92-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	92	*night	1233	NIGHT	ikuan	ikuan	i k u ɐ n	false
+260	BIWAT_MUDUKUMO-92-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	92	*night	1233	NIGHT	ikuanXXX	ikuanXXX	i k u ɐ n χ χ χ	false
+261	BUN-92-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	92	*night	1233	NIGHT	numkwa	numkwa	n u m k w ɐ	false
+262	BIWAT-41-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	41	*nose	1221	NOSE	N3r3k	N3r3k	ŋ ə r ə k	false
+263	BIWAT_2-41-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	41	*nose	1221	NOSE	gerekeh	gerekeh	g e r e k e h	false
+264	BIWAT_3-41-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	41	*nose	1221	NOSE	Nerek	Nerek	ŋ e r e k	false
+265	BUN-41-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	41	*nose	1221	NOSE	N3r3k	N3r3k	ŋ ə r ə k	false
+266	BIWAT-11-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	11	*one	1493	ONE	nat3	nat3	n ɐ t ə	false
+267	BIWAT_2-11-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	11	*one	1493	ONE	nategeh	nategeh	n ɐ t e g e h	false
+268	BIWAT_3-11-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	11	*one	1493	ONE	natek	natek	n ɐ t e k	false
+269	BIWAT_MUDUKUMO-11-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	11	*one	1493	ONE	nat3k	nat3k	n ɐ t ə k	false
+270	BUN-11-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	11	*one	1493	ONE	t3t3m	t3t3m	t ə t ə m	false
+271	BIWAT-85-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	85	*path	2252	PATH	mayikwa	mayikwa	m ɐ j i k w ɐ	false
+272	BIWAT_2-85-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	85	*path	2252	PATH	miakuahe	miakuahe	m i ɐ k u ɐ h e	false
+273	BIWAT_3-85-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	85	*path	2252	PATH	maikua	maikua	m ɐ i k u ɐ	false
+274	BIWAT_MUDUKUMO-85-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	85	*path	2252	PATH	maikua	maikua	m ɐ i k u ɐ	false
+275	BUN-85-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	85	*path	2252	PATH	mariyEN	mariyEN	m ɐ r i j a ŋ	false
+276	BIWAT-18-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	18	*person	683	PERSON	fob3ra	fob3ra	f o b ə r ɐ	false
+277	BIWAT_2-18-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	18	*person	683	PERSON	balayik	balayik	b ɐ l ɐ j i k	false
+278	BIWAT_3-18-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	18	*person	683	PERSON	baranyik	baranyik	b ɐ r ɐ n j i k	false
+279	BIWAT_MUDUKUMO-18-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	18	*person	683	PERSON	fua	fua	f u ɐ	false
+280	BUN-18-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	18	*person	683	PERSON	mbalaji	mbalaji	m b ɐ l ɐ dʒ i	false
+281	BIWAT_2-57-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	57	*see	1409	SEE	ueh lulineh	ueh lulineh	u e h l u l i n e h	false
+282	BIWAT_3-57-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	57	*see	1409	SEE	urine	urine	u r i n e	false
+283	BIWAT-28-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	28	*skin	763	SKIN	yabot	yabot	j ɐ b o t	false
+284	BIWAT_2-28-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	28	*skin	763	SKIN	iaveteh	iaveteh	i ɐ v e t e h	false
+285	BIWAT_3-28-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	28	*skin	763	SKIN	gamfuin	gamfuin	g ɐ m f u i n	false
+286	BUN-28-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	28	*skin	763	SKIN	patyikEmbosa	patyikEmbosa	p ɐ t j i k a m b o s ɐ	false
+287	BIWAT-74-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	74	*star	1430	STAR	susuwaN	susuwaN	s u s u w ɐ ŋ	false
+288	BIWAT_2-74-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	74	*star	1430	STAR	susuNeh	susuNeh	s u s u ŋ e h	false
+289	BIWAT_3-74-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	74	*star	1430	STAR	susuaN	susuaN	s u s u ɐ ŋ	false
+290	BUN-74-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	74	*star	1430	STAR	susuaN	susuaN	s u s u ɐ ŋ	false
+291	BIWAT-77-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	77	*stone	857	STONE	niraN	niraN	n i r ɐ ŋ	false
+292	BIWAT_2-77-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	77	*stone	857	STONE	ghateh	ghateh	g h ɐ t e h	false
+293	BIWAT_3-77-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	77	*stone	857	STONE	yiak	yiak	j i ɐ k	false
+294	BUN-77-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	77	*stone	857	STONE	m3d3m	m3d3m	m ə d ə m	false
+295	BIWAT-72-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	72	*sun	1343	SUN	ba	ba	b ɐ	false
+296	BIWAT_2-72-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	72	*sun	1343	SUN	vaeh	vaeh	v ɐ e h	false
+297	BIWAT_3-72-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	72	*sun	1343	SUN	va	va	v ɐ	false
+298	BUN-72-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	72	*sun	1343	SUN	banukwoba	banukwoba	b ɐ n u k w o b ɐ	false
+299	BIWAT-44-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	44	*tongue	1205	TONGUE	mbE	mbE	m b a	false
+300	BIWAT_2-44-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	44	*tongue	1205	TONGUE	behe	behe	b e h e	false
+301	BIWAT_3-44-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	44	*tongue	1205	TONGUE	be	be	b e	false
+302	BUN-44-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	44	*tongue	1205	TONGUE	mbay3	mbay3	m b ɐ j ə	false
+303	BIWAT-43-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	43	*tooth	1380	TOOTH	andu	andu	ɐ n d u	false
+304	BIWAT_2-43-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	43	*tooth	1380	TOOTH	andusivahe	andusivahe	ɐ n d u s i v ɐ h e	false
+305	BIWAT_3-43-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	43	*tooth	1380	TOOTH	andu	andu	ɐ n d u	false
+306	BUN-43-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	43	*tooth	1380	TOOTH	Nadu	Nadu	ŋ ɐ d u	false
+307	BIWAT-23-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	23	*tree	906	TREE	muN	muN	m u ŋ	false
+308	BIWAT_2-23-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	23	*tree	906	TREE	muNeh	muNeh	m u ŋ e h	false
+309	BIWAT_3-23-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	23	*tree	906	TREE	muN	muN	m u ŋ	false
+310	BUN-23-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	23	*tree	906	TREE	muN	muN	m u ŋ	false
+311	BIWAT-12-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	12	*two	1498	TWO	arabu	arabu	ɐ r ɐ b u	false
+312	BIWAT_2-12-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	12	*two	1498	TWO	aravueh	aravueh	ɐ r ɐ v u e h	false
+313	BIWAT_3-12-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	12	*two	1498	TWO	arauu	arauu	ɐ r ɐ u u	false
+314	BIWAT_MUDUKUMO-12-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	12	*two	1498	TWO	alavu	alavu	ɐ l ɐ v u	false
+315	BUN-12-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	12	*two	1498	TWO	arawin	arawin	ɐ r ɐ w i n	false
+316	BIWAT-75-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	75	*water	948	WATER	mam	mam	m ɐ m	false
+317	BIWAT_2-75-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	75	*water	948	WATER	mumeh	mumeh	m u m e h	false
+318	BIWAT_3-75-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	75	*water	948	WATER	mam	mam	m ɐ m	false
+319	BIWAT_MUDUKUMO-75-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	75	*water	948	WATER	mam	mam	m ɐ m	false
+320	BUN-75-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	75	*water	948	WATER	mam	mam	m ɐ m	false
+321	BIWAT-3-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	3	*we	1212	WE	amb3	amb3	ɐ m b ə	false
+322	BIWAT_MUDUKUMO-3-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	3	*we	1212	WE	i	i	i	false
+323	BUN-3-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	3	*we	1212	WE	min	min	m i n	false
+324	BIWAT-2-1	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	2	*you	1215	THOU	d3	d3	d ə	false
+325	BIWAT-2-2	BIWAT	BIWAT	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	2	*you	1215	THOU	d3n	d3n	d ə n	false
+326	BIWAT_MUDUKUMO-2-1	BIWAT_MUDUKUMO	BIWAT_MUDUKUMO	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	2	*you	1215	THOU	d3	d3	d ə	false
+327	BUN-2-1	BUN	BUN	bunn1240	Bun	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	2	*you	1215	THOU	ndi	ndi	n d i	false
+328	BIWAT_2-9-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	9	all	98	ALL	okenate	okenate	o k e n ɐ t e	false
+329	BIWAT_3-9-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	9	all	98	ALL	utamavi	utamavi	u t ɐ m ɐ v i	false
+330	BIWAT_2-83-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	83	ash	646	ASH	kuiefuhe	kuiefuhe	k u i e f u h e	false
+331	BIWAT_3-83-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	83	ash	646	ASH	men biru	men biru	m e n b i r u	false
+332	BIWAT_2-27-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	27	bark	1204	BARK	vusak	vusak	v u s ɐ k	false
+333	BIWAT_3-27-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	27	bark	1204	BARK	muN vusak	muN vusak	m u ŋ v u s ɐ k	false
+334	BIWAT_2-49-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	49	belly	1251	BELLY	meaNuan	meaNuan	m e ɐ ŋ u ɐ n	false
+335	BIWAT_3-49-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	49	belly	1251	BELLY	maNuan	maNuan	m ɐ ŋ u ɐ n	false
+336	BIWAT_2-13-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	13	big	1202	BIG	arekeiak	arekeiak	ɐ r e k e i ɐ k	false
+337	BIWAT_3-13-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	13	big	1202	BIG	sakima	sakima	s ɐ k i m ɐ	false
+338	BIWAT_3-13-2	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	13	big	1202	BIG	arekaik arikih	arekaik arikih	ɐ r e k ɐ i k ɐ r i k i h	false
+339	BIWAT_2-20-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	20	bird	937	BIRD	kaokhek	kaokhek	k ɐ o k h e k	false
+340	BIWAT_3-20-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	20	bird	937	BIRD	kaok	kaok	k ɐ o k	false
+341	BIWAT_2-56-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	56	bite	1403	BITE	ken baranyik amarene	ken baranyik amarene	k e n b ɐ r ɐ n j i k ɐ m ɐ r e n e	false
+342	BIWAT_3-56-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	56	bite	1403	BITE	kene baranyik marine	kene baranyik marine	k e n e b ɐ r ɐ n j i k m ɐ r i n e	false
+343	BIWAT_2-91-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	91	black	163	BLACK	siseuaN	siseuaN	s i s e u ɐ ŋ	false
+344	BIWAT_3-91-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	91	black	163	BLACK	siseuaN	siseuaN	s i s e u ɐ ŋ	false
+345	BIWAT_2-45-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	45	claw	72	CLAW	kaok gefurasipa	kaok gefurasipa	k ɐ o k g e f u r ɐ s i p ɐ	false
+346	BIWAT_3-45-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	45	claw	72	CLAW	kaokke gafrosipa	kaokke gafrosipa	k ɐ o k k e g ɐ f r o s i p ɐ	false
+347	BIWAT_2-80-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	80	cloud	1489	CLOUD	peh	peh	p e h	false
+348	BIWAT_3-80-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	80	cloud	1489	CLOUD	pi	pi	p i	false
+349	BIWAT_2-94-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	94	cold	1287	COLD	arevak	arevak	ɐ r e v ɐ k	false
+350	BIWAT_3-94-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	94	cold	1287	COLD	arevuak	arevuak	ɐ r e v u ɐ k	false
+351	BIWAT_2-99-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	99	dry	1398	DRY	kukurasak	kukurasak	k u k u r ɐ s ɐ k	false
+352	BIWAT_3-99-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	99	dry	1398	DRY	krukrosak	krukrosak	k r u k r o s ɐ k	false
+353	BIWAT_2-79-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	79	earth	1228	EARTH (SOIL)	manyike	manyike	m ɐ n j i k e	false
+354	BIWAT_3-79-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	79	earth	1228	EARTH (SOIL)	manyike	manyike	m ɐ n j i k e	false
+355	BIWAT_2-55-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	55	eat	1336	EAT	ueh yiveh	ueh yiveh	u e h j i v e h	false
+356	BIWAT_3-55-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	55	eat	1336	EAT	give	give	g i v e	false
+357	BIWAT_2-33-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	33	egg	744	EGG	momoateh	momoateh	m o m o ɐ t e h	false
+358	BIWAT_3-33-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	33	egg	744	EGG	mumuat	mumuat	m u m u ɐ t	false
+359	BIWAT_2-36-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	36	feather	1201	FEATHER	kaok daNeh	kaok daNeh	k ɐ o k d ɐ ŋ e h	false
+360	BIWAT_3-36-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	36	feather	1201	FEATHER	dumbi	dumbi	d u m b i	false
+361	BIWAT_3-36-2	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	36	feather	1201	FEATHER	kao daNi	kao daNi	k ɐ o d ɐ ŋ i	false
+362	BIWAT_2-29-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	29	flesh	2259	FLESH	bakateh	bakateh	b ɐ k ɐ t e h	false
+363	BIWAT_2-29-2	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	29	flesh	2259	FLESH	yiketeh	yiketeh	j i k e t e h	false
+364	BIWAT_3-29-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	29	flesh	2259	FLESH	yikiri	yikiri	j i k i r i	false
+365	BIWAT_3-29-2	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	29	flesh	2259	FLESH	yiket	yiket	j i k e t	false
+366	BIWAT_2-64-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	64	fly	1441	FLY (MOVE THROUGH AIR)	u avetaperine	u avetaperine	u ɐ v e t ɐ p e r i n e	false
+367	BIWAT_3-64-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	64	fly	1441	FLY (MOVE THROUGH AIR)	avetape reve	avetape reve	ɐ v e t ɐ p e r e v e	false
+368	BIWAT_2-46-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	46	foot	1301	FOOT	geambeaNhe	geambeaNhe	g e ɐ m b e ɐ ŋ h e	false
+369	BIWAT_3-46-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	46	foot	1301	FOOT	gambaN	gambaN	g ɐ m b ɐ ŋ	false
+370	BIWAT_2-70-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	70	give	1447	GIVE	ueh geneh vaseh	ueh geneh vaseh	u e h g e n e h v ɐ s e h	false
+371	BIWAT_3-70-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	70	give	1447	GIVE	Nne vasine	Nne vasine	ŋ n e v ɐ s i n e	false
+372	BIWAT_2-97-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	97	good	1035	GOOD	uakasak	uakasak	u ɐ k ɐ s ɐ k	false
+373	BIWAT_3-97-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	97	good	1035	GOOD	uakasa	uakasa	u ɐ k ɐ s ɐ	false
+374	BIWAT_2-32-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	32	grease	323	FAT (ORGANIC SUBSTANCE)	anyiaNeh	anyiaNeh	ɐ n j i ɐ ŋ e h	false
+375	BIWAT_3-32-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	32	grease	323	FAT (ORGANIC SUBSTANCE)	anyaN	anyaN	ɐ n j ɐ ŋ	false
+376	BIWAT_2-88-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	88	green	1425	GREEN	maNepeneh	maNepeneh	m ɐ ŋ e p e n e h	false
+377	BIWAT_3-88-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	88	green	1425	GREEN	iavere	iavere	i ɐ v e r e	false
+378	BIWAT_3-88-2	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	88	green	1425	GREEN	muNdaNi	muNdaNi	m u ŋ d ɐ ŋ i	false
+379	BIWAT_2-37-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	37	hair	1040	HAIR	fufuimaye	fufuimaye	f u f u i m ɐ j e	false
+380	BIWAT_3-37-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	37	hair	1040	HAIR	fufuimaivi	fufuimaivi	f u f u i m ɐ i v i	false
+381	BIWAT_2-38-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	38	head	1256	HEAD	fopeh	fopeh	f o p e h	false
+382	BIWAT_3-38-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	38	head	1256	HEAD	fop	fop	f o p	false
+383	BIWAT_2-52-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	52	heart	1223	HEART	maeh	maeh	m ɐ e h	false
+384	BIWAT_3-52-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	52	heart	1223	HEART	ma	ma	m ɐ	false
+385	BIWAT_2-62-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	62	kill	1417	KILL	pasimandine	pasimandine	p ɐ s i m ɐ n d i n e	false
+386	BIWAT_3-62-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	62	kill	1417	KILL	pasimandine	pasimandine	p ɐ s i m ɐ n d i n e	false
+387	BIWAT_2-59-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	59	know	3626	KNOW	usave geve	usave geve	u s ɐ v e g e v e	false
+388	BIWAT_2-59-2	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	59	know	3626	KNOW	geve	geve	g e v e	false
+389	BIWAT_3-59-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	59	know	3626	KNOW	une yuNuamae	une yuNuamae	u n e j u ŋ u ɐ m ɐ e	false
+390	BIWAT_2-67-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	67	lie	1411	LIE (REST)	ue	ue	u e	false
+391	BIWAT_3-67-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	67	lie	1411	LIE (REST)	inembe	inembe	i n e m b e	false
+392	BIWAT_2-14-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	14	long	1203	LONG	kaitaN	kaitaN	k ɐ i t ɐ ŋ	false
+393	BIWAT_3-14-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	14	long	1203	LONG	kakai	kakai	k ɐ k ɐ i	false
+394	BIWAT_3-14-2	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	14	long	1203	LONG	kaitaN	kaitaN	k ɐ i t ɐ ŋ	false
+395	BIWAT_2-17-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	17	man	1554	MAN	fuakpahe	fuakpahe	f u ɐ k p ɐ h e	false
+396	BIWAT_3-17-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	17	man	1554	MAN	foakpa	foakpa	f o ɐ k p ɐ	false
+397	BIWAT_2-10-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	10	many	1198	MANY	kamaga	kamaga	k ɐ m ɐ g ɐ	false
+398	BIWAT_3-10-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	10	many	1198	MANY	kamaNa	kamaNa	k ɐ m ɐ ŋ ɐ	false
+399	BIWAT_2-73-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	73	moon	1313	MOON	mumereh	mumereh	m u m e r e h	false
+400	BIWAT_3-73-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	73	moon	1313	MOON	mumere	mumere	m u m e r e	false
+401	BIWAT_3-42-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	42	mouth	674	MOUTH	baraN	baraN	b ɐ r ɐ ŋ	false
+402	BIWAT_2-50-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	50	neck	1333	NECK	vuaram	vuaram	v u ɐ r ɐ m	false
+403	BIWAT_3-50-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	50	neck	1333	NECK	voaran	voaran	v o ɐ r ɐ n	false
+404	BIWAT_2-8-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	8	not	1240	NOT	aketi	aketi	ɐ k e t i	false
+405	BIWAT_3-8-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	8	not	1240	NOT	iati	iati	i ɐ t i	false
+406	BIWAT_3-8-2	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	8	not	1240	NOT	vivik	vivik	v i v i k	false
+407	BIWAT_2-76-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	76	rain	2108	RAINING OR RAIN	mateh	mateh	m ɐ t e h	false
+408	BIWAT_3-76-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	76	rain	2108	RAINING OR RAIN	mat	mat	m ɐ t	false
+409	BIWAT_2-87-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	87	red	156	RED	treNeh	treNeh	t r e ŋ e h	false
+410	BIWAT_3-87-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	87	red	156	RED	tereN	tereN	t e r e ŋ	false
+411	BIWAT_2-26-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	26	root	670	ROOT	muNeh simblieh	muNeh simblieh	m u ŋ e h s i m b l i e h	false
+412	BIWAT_3-26-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	26	root	670	ROOT	muN simbri	muN simbri	m u ŋ s i m b r i	false
+413	BIWAT_2-98-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	98	round	1395	ROUND	kugma	kugma	k u g m ɐ	false
+414	BIWAT_3-98-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	98	round	1395	ROUND	kuNma	kuNma	k u ŋ m ɐ	false
+415	BIWAT_2-78-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	78	sand	671	SAND	vuakaneh	vuakaneh	v u ɐ k ɐ n e h	false
+416	BIWAT_3-78-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	78	sand	671	SAND	fokain	fokain	f o k ɐ i n	false
+417	BIWAT_2-71-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	71	say	1458	SAY	de dasevet	de dasevet	d e d ɐ s e v e t	false
+418	BIWAT_3-71-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	71	say	1458	SAY	sivetve	sivetve	s i v e t v e	false
+419	BIWAT_2-24-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	24	seed	714	SEED	mugeh mavieh	mugeh mavieh	m u g e h m ɐ v i e h	false
+420	BIWAT_3-24-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	24	seed	714	SEED	muN mavi	muN mavi	m u ŋ m ɐ v i	false
+421	BIWAT_2-68-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	68	sit	1416	SIT	ue	ue	u e	false
+422	BIWAT_3-68-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	68	sit	1416	SIT	isi pe ve	isi pe ve	i s i p e v e	false
+423	BIWAT_2-60-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	60	sleep	1585	SLEEP	uainamene	uainamene	u ɐ i n ɐ m e n e	false
+424	BIWAT_3-60-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	60	sleep	1585	SLEEP	inembe	inembe	i n e m b e	false
+425	BIWAT_2-15-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	15	small	1246	SMALL	siatik	siatik	s i ɐ t i k	false
+426	BIWAT_3-15-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	15	small	1246	SMALL	dudombraNa	dudombraNa	d u d o m b r ɐ ŋ ɐ	false
+427	BIWAT_3-15-2	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	15	small	1246	SMALL	satek	satek	s ɐ t e k	false
+428	BIWAT_2-81-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	81	smoke	778	SMOKE (EXHAUST)	mundovuakhe	mundovuakhe	m u n d o v u ɐ k h e	false
+429	BIWAT_3-81-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	81	smoke	778	SMOKE (EXHAUST)	mendevoak	mendevoak	m e n d e v o ɐ k	false
+430	BIWAT_2-69-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	69	stand	1442	STAND	ue	ue	u e	false
+431	BIWAT_3-69-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	69	stand	1442	STAND	sampere ve	sampere ve	s ɐ m p e r e v e	false
+432	BIWAT_2-63-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	63	swim	1439	SWIM	mameverereve	mameverereve	m ɐ m e v e r e r e v e	false
+433	BIWAT_3-63-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	63	swim	1439	SWIM	vitve	vitve	v i t v e	false
+434	BIWAT_3-63-2	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	63	swim	1439	SWIM	avotve	avotve	ɐ v o t v e	false
+435	BIWAT_2-35-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	35	tail	1220	TAIL	laNug	laNug	l ɐ ŋ u g	false
+436	BIWAT_3-35-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	35	tail	1220	TAIL	raNuN	raNuN	r ɐ ŋ u ŋ	false
+437	BIWAT_2-5-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	5	that	78	THAT	tutave	tutave	t u t ɐ v e	false
+438	BIWAT_3-5-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	5	that	78	THAT	aNgetek	aNgetek	ɐ ŋ g e t e k	false
+439	BIWAT_2-4-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	4	this	1214	THIS	tetek	tetek	t e t e k	false
+440	BIWAT_3-4-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	4	this	1214	THIS	tutua	tutua	t u t u ɐ	false
+441	BIWAT_3-4-2	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	4	this	1214	THIS	titek	titek	t i t e k	false
+442	BIWAT_2-65-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	65	walk	1443	WALK	ue	ue	u e	false
+443	BIWAT_3-65-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	65	walk	1443	WALK	reve	reve	r e v e	false
+444	BIWAT_2-7-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	7	what	1236	WHAT	gerewe	gerewe	g e r e w e	false
+445	BIWAT_3-7-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	7	what	1236	WHAT	gire wei	gire wei	g i r e w e i	false
+446	BIWAT_2-90-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	90	white	1335	WHITE	kliak	kliak	k l i ɐ k	false
+447	BIWAT_3-90-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	90	white	1335	WHITE	kriak	kriak	k r i ɐ k	false
+448	BIWAT_2-6-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	6	who	1235	WHO	nane	nane	n ɐ n e	false
+449	BIWAT_3-6-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	6	who	1235	WHO	nane	nane	n ɐ n e	false
+450	BIWAT_2-16-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	16	woman	962	WOMAN	arepahe	arepahe	ɐ r e p ɐ h e	false
+451	BIWAT_3-16-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	16	woman	962	WOMAN	arepa	arepa	ɐ r e p ɐ	false
+452	BIWAT_2-89-1	BIWAT_2	BIWAT_2	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	89	yellow	1424	YELLOW	vuvuam	vuvuam	v u v u ɐ m	false
+453	BIWAT_3-89-1	BIWAT_3	BIWAT_3	biwa1243	Biwat	Yuat	Miyak-Bun-Biwat	Bun-Mundukumo	False	89	yellow	1424	YELLOW	fufuam	fufuam	f u f u ɐ m	false

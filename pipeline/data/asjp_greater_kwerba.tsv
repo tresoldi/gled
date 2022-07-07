@@ -1,337 +1,631 @@
 ID	ASJP_ID	DOCULECT	LANGUAGE_NAME	GLOTTOCODE	GLOTTOLOG_NAME	LANGUAGE_LINEAGE_0	LANGUAGE_LINEAGE_1	LANGUAGE_LINEAGE_2	LANGUAGE_ISOLATE	PARAMETER_ID	CONCEPT	CONCEPTICON_ID	CONCEPTICON_GLOSS	VALUE	FORM	TOKENS	LOAN
 1	SABERI-1-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	1	*I	1209	I	ou	ou	o u	false
-2	SABERI-51-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	51	*breasts	1402	BREAST	asi	asi	ɐ s i	false
-3	SABERI-21-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	21	*dog	2009	DOG	nana	nana	n ɐ n ɐ	false
-4	SABERI-54-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	54	*drink	1401	DRINK	n3sa	n3sa	n ə s ɐ	false
-5	SABERI-39-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	39	*ear	1247	EAR	saTama	saTama	s ɐ c ɐ m ɐ	false
-6	SABERI-40-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	40	*eye	1248	EYE	nuwera	nuwera	n u w e r ɐ	false
-7	SABERI-19-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	19	*fish	227	FISH	awisi	awisi	ɐ w i s i	false
-8	SABERI-48-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	48	*hand	1277	HAND	Tana	Tana	c ɐ n ɐ	false
-9	SABERI-58-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	58	*hear	1408	HEAR	mait3yi	mait3yi	m ɐ i t ə j i	false
-10	SABERI-47-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	47	*knee	1371	KNEE	nabon3 fa	nabon3 fa	n ɐ b o n ə f ɐ	false
-11	SABERI-25-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	25	*leaf	628	LEAF	fi	fi	f i	false
-12	SABERI-86-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	86	*mountain	639	MOUNTAIN	te nina	te nina	t e n i n ɐ	false
-13	SABERI-92-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	92	*night	1233	NIGHT	pini	pini	p i n i	false
-14	SABERI-41-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	41	*nose	1221	NOSE	tiTa	tiTa	t i c ɐ	false
-15	SABERI-11-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	11	*one	1493	ONE	m3re	m3re	m ə r e	false
-16	SABERI-85-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	85	*path	2252	PATH	rara	rara	r ɐ r ɐ	false
-17	SABERI-18-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	18	*person	683	PERSON	Eh	Eh	a h	false
-18	SABERI-57-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	57	*see	1409	SEE	boware	boware	b o w ɐ r e	false
-19	SABERI-74-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	74	*star	1430	STAR	umeta	umeta	u m e t ɐ	false
-20	SABERI-77-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	77	*stone	857	STONE	pati	pati	p ɐ t i	false
-21	SABERI-72-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	72	*sun	1343	SUN	sobe	sobe	s o b e	false
-22	SABERI-44-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	44	*tongue	1205	TONGUE	mEmu	mEmu	m a m u	false
-23	SABERI-43-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	43	*tooth	1380	TOOTH	wana	wana	w ɐ n ɐ	false
-24	SABERI-12-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	12	*two	1498	TWO	nab3g3	nab3g3	n ɐ b ə g ə	false
-25	SABERI-75-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	75	*water	948	WATER	bu	bu	b u	false
-26	SABERI-3-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	3	*we	1212	WE	ou	ou	o u	false
-27	SABERI-2-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	2	*you	1215	THOU	miu	miu	m i u	false
-28	SABERI-83-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	83	ash	646	ASH	nasa	nasa	n ɐ s ɐ	false
-29	SABERI-49-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	49	belly	1251	BELLY	tona	tona	t o n ɐ	false
-30	SABERI-13-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	13	big	1202	BIG	wisu	wisu	w i s u	false
-31	SABERI-20-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	20	bird	937	BIRD	sai	sai	s ɐ i	false
-32	SABERI-94-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	94	cold	1287	COLD	ninifa	ninifa	n i n i f ɐ	false
-33	SABERI-79-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	79	earth	1228	EARTH (SOIL)	u	u	u	false
-34	SABERI-55-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	55	eat	1336	EAT	fifrina	fifrina	f i f r i n ɐ	false
-35	SABERI-33-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	33	egg	744	EGG	afa	afa	ɐ f ɐ	false
-36	SABERI-36-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	36	feather	1201	FEATHER	abr3 s3tata	abr3 s3tata	ɐ b r ə s ə t ɐ t ɐ	false
-37	SABERI-46-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	46	foot	1301	FOOT	teni	teni	t e n i	false
-38	SABERI-70-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	70	give	1447	GIVE	ma	ma	m ɐ	false
-39	SABERI-37-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	37	hair	1040	HAIR	bibisi ra	bibisi ra	b i b i s i r ɐ	false
-40	SABERI-38-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	38	head	1256	HEAD	uwena	uwena	u w e n ɐ	false
-41	SABERI-93-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	93	hot	1286	HOT	noma	noma	n o m ɐ	false
-42	SABERI-62-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	62	kill	1417	KILL	s3s3na	s3s3na	s ə s ə n ɐ	false
-43	SABERI-17-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	17	man	1554	MAN	Eh	Eh	a h	false
-44	SABERI-73-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	73	moon	1313	MOON	nawaTa	nawaTa	n ɐ w ɐ c ɐ	false
-45	SABERI-42-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	42	mouth	674	MOUTH	muna	muna	m u n ɐ	false
-46	SABERI-8-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	8	not	1240	NOT	pai	pai	p ɐ i	false
-47	SABERI-76-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	76	rain	2108	RAINING OR RAIN	bu	bu	b u	false
-48	SABERI-71-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	71	say	1458	SAY	sarifaru	sarifaru	s ɐ r i f ɐ r u	false
-49	SABERI-68-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	68	sit	1416	SIT	ma me nafa	ma me nafa	m ɐ m e n ɐ f ɐ	false
-50	SABERI-60-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	60	sleep	1585	SLEEP	n3 sa burana	n3 sa burana	n ə s ɐ b u r ɐ n ɐ	false
-51	SABERI-15-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	15	small	1246	SMALL	k3nana	k3nana	k ə n ɐ n ɐ	false
-52	SABERI-81-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	81	smoke	778	SMOKE (EXHAUST)	noti	noti	n o t i	false
-53	SABERI-16-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	16	woman	962	WOMAN	awi	awi	ɐ w i	false
-54	BAGUSA-1-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	abo	abo	ɐ b o	false
-55	KWERBA_AIRMATI-1-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	To	To	c o	false
-56	KWERBA_KAUWERAWET_I-1-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	em	em	e m	false
-57	KWERBA_MAMBERAMO-1-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	co	co	ts o	false
-58	KWERBA_NAIDJBEDJ-1-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	co	co	ts o	false
-59	KWERBA_AIRMATI-30-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	30	*blood	946	BLOOD	kumwa	kumwa	k u m w ɐ	false
-60	KWERBA_KAUWERAWET_I-30-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	30	*blood	946	BLOOD	sac	sac	s ɐ ts	false
-61	KWERBA_MAMBERAMO-30-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	30	*blood	946	BLOOD	hac	hac	h ɐ ts	false
-62	KWERBA_NAIDJBEDJ-30-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	30	*blood	946	BLOOD	guma	guma	g u m ɐ	false
-63	KWERBA_AIRMATI-31-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	31	*bone	1394	BONE	kaka	kaka	k ɐ k ɐ	false
-64	KWERBA_KAUWERAWET_I-31-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	31	*bone	1394	BONE	kak	kak	k ɐ k	false
-65	KWERBA_MAMBERAMO-31-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	31	*bone	1394	BONE	kak	kak	k ɐ k	false
-66	KWERBA_NAIDJBEDJ-31-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	31	*bone	1394	BONE	kaka	kaka	k ɐ k ɐ	false
-67	BAGUSA-51-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	51	*breasts	1402	BREAST	dabun	dabun	d ɐ b u n	false
-68	KWERBA_NAIDJBEDJ-51-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	51	*breasts	1402	BREAST	meme	meme	m e m e	false
-69	KWERBA_AIRMATI-66-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	wabunam	wabunam	w ɐ b u n ɐ m	false
-70	KWERBA_KAUWERAWET_I-66-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	com	com	ts o m	false
-71	KWERBA_MAMBERAMO-66-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	onecaw	onecaw	o n e ts ɐ w	false
-72	KWERBA_NAIDJBEDJ-66-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	wabunam	wabunam	w ɐ b u n ɐ m	false
-73	BAGUSA-61-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	61	*die	1494	DIE	jabaguru	jabaguru	dʒ ɐ b ɐ g u r u	false
-74	KWERBA_NAIDJBEDJ-61-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	61	*die	1494	DIE	gworam	gworam	g w o r ɐ m	false
-75	BAGUSA-21-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	21	*dog	2009	DOG	on	on	o n	false
-76	KWERBA_KAUWERAWET_I-21-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	21	*dog	2009	DOG	okwa	okwa	o k w ɐ	false
-77	KWERBA_MAMBERAMO-21-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	21	*dog	2009	DOG	okwa	okwa	o k w ɐ	false
-78	BAGUSA-54-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	54	*drink	1401	DRINK	eCabin	eCabin	e tʃ ɐ b i n	false
-79	KWERBA_NAIDJBEDJ-54-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	54	*drink	1401	DRINK	penam	penam	p e n ɐ m	false
-80	BAGUSA-39-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	39	*ear	1247	EAR	mula	mula	m u l ɐ	false
-81	KWERBA_NAIDJBEDJ-39-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	39	*ear	1247	EAR	nyar	nyar	n j ɐ r	false
-82	BAGUSA-40-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nug	nug	n u g	false
-83	KWERBA_AIRMATI-40-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nukwe	nukwe	n u k w e	false
-84	KWERBA_KAUWERAWET_I-40-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nok	nok	n o k	false
-85	KWERBA_MAMBERAMO-40-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nuk	nuk	n u k	false
-86	KWERBA_NAIDJBEDJ-40-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nukw~e	nukw~e	n u kʷ e	false
-87	BAGUSA-82-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	seren	seren	s e r e n	false
-88	KWERBA_AIRMATI-82-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	sida	sida	s i d ɐ	false
-89	KWERBA_KAUWERAWET_I-82-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	her	her	h e r	false
-90	KWERBA_KAUWERAWET_I-82-2	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	ser	ser	s e r	false
-91	KWERBA_MAMBERAMO-82-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	hel	hel	h e l	false
-92	KWERBA_MAMBERAMO-82-2	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	ser	ser	s e r	false
-93	KWERBA_NAIDJBEDJ-82-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	sida	sida	s i d ɐ	false
-94	BAGUSA-19-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	19	*fish	227	FISH	nebinis	nebinis	n e b i n i s	false
-95	KWERBA_NAIDJBEDJ-19-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	19	*fish	227	FISH	segwin	segwin	s e g w i n	false
-96	BAGUSA-48-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	48	*hand	1277	HAND	dagu	dagu	d ɐ g u	false
-97	KWERBA_KAUWERAWET_I-48-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	48	*hand	1277	HAND	tajen	tajen	t ɐ dʒ e n	false
-98	KWERBA_MAMBERAMO-48-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	48	*hand	1277	HAND	tac	tac	t ɐ ts	false
-99	KWERBA_NAIDJBEDJ-48-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	48	*hand	1277	HAND	mantaic	mantaic	m ɐ n t ɐ i ts	false
-100	KWERBA_NAIDJBEDJ-58-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	58	*hear	1408	HEAR	yanediy	yanediy	j ɐ n e d i j	false
-101	BAGUSA-47-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	47	*knee	1371	KNEE	suminara	suminara	s u m i n ɐ r ɐ	false
-102	KWERBA_NAIDJBEDJ-47-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	47	*knee	1371	KNEE	sumwan	sumwan	s u m w ɐ n	false
-103	BAGUSA-25-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	25	*leaf	628	LEAF	ididaja	ididaja	i d i d ɐ dʒ ɐ	false
-104	BAGUSA-22-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	22	*louse	1392	LOUSE	negunu	negunu	n e g u n u	false
-105	KWERBA_AIRMATI-22-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	22	*louse	1392	LOUSE	negwan	negwan	n e g w ɐ n	false
-106	KWERBA_KAUWERAWET_I-22-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	22	*louse	1392	LOUSE	pise	pise	p i s e	false
-107	KWERBA_MAMBERAMO-22-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	22	*louse	1392	LOUSE	nenun	nenun	n e n u n	false
-108	BAGUSA-86-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	86	*mountain	639	MOUNTAIN	kowi	kowi	k o w i	false
-109	KWERBA_NAIDJBEDJ-86-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	86	*mountain	639	MOUNTAIN	esiuw	esiuw	e s i u w	false
-110	KWERBA_AIRMATI-100-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	100	*name	1405	NAME	mesaiT	mesaiT	m e s ɐ i c	false
-111	KWERBA_KAUWERAWET_I-100-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	100	*name	1405	NAME	bukwin	bukwin	b u k w i n	false
-112	KWERBA_MAMBERAMO-100-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	100	*name	1405	NAME	kweic	kweic	k w e i ts	false
-113	KWERBA_NAIDJBEDJ-96-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	96	*new	1231	NEW	esam	esam	e s ɐ m	false
-114	KWERBA_AIRMATI-92-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	92	*night	1233	NIGHT	kwin	kwin	k w i n	false
-115	KWERBA_KAUWERAWET_I-92-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	92	*night	1233	NIGHT	cin	cin	ts i n	false
-116	KWERBA_MAMBERAMO-92-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	92	*night	1233	NIGHT	ic	ic	i ts	false
-117	KWERBA_NAIDJBEDJ-92-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	92	*night	1233	NIGHT	kw~une	kw~une	kʷ u n e	false
-118	BAGUSA-41-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	41	*nose	1221	NOSE	ug	ug	u g	false
-119	KWERBA_NAIDJBEDJ-41-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	41	*nose	1221	NOSE	udiny	udiny	u d i n j	false
-120	BAGUSA-11-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	tanabar	tanabar	t ɐ n ɐ b ɐ r	false
-121	KWERBA_AIRMATI-11-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	aberyas	aberyas	ɐ b e r j ɐ s	false
-122	KWERBA_KAUWERAWET_I-11-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	abic	abic	ɐ b i ts	false
-123	KWERBA_MAMBERAMO-11-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	abaic	abaic	ɐ b ɐ i ts	false
-124	KWERBA_NAIDJBEDJ-11-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	aweryas	aweryas	ɐ w e r j ɐ s	false
-125	KWERBA_NAIDJBEDJ-85-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	85	*path	2252	PATH	agwainaic	agwainaic	ɐ g w ɐ i n ɐ i ts	false
-126	BAGUSA-18-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	18	*person	683	PERSON	koassa	koassa	k o ɐ s s ɐ	false
-127	KWERBA_AIRMATI-57-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	57	*see	1409	SEE	yawayaiT	yawayaiT	j ɐ w ɐ j ɐ i c	false
-128	KWERBA_KAUWERAWET_I-57-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	57	*see	1409	SEE	uwarim	uwarim	u w ɐ r i m	false
-129	KWERBA_MAMBERAMO-57-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	57	*see	1409	SEE	onowaric	onowaric	o n o w ɐ r i ts	false
-130	KWERBA_NAIDJBEDJ-57-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	57	*see	1409	SEE	nebug	nebug	n e b u g	false
-131	BAGUSA-28-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	korora	korora	k o r o r ɐ	false
-132	KWERBA_AIRMATI-28-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	kora	kora	k o r ɐ	false
-133	KWERBA_KAUWERAWET_I-28-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	kurakora	kurakora	k u r ɐ k o r ɐ	false
-134	KWERBA_MAMBERAMO-28-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	koa	koa	k o ɐ	false
-135	KWERBA_NAIDJBEDJ-28-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	kora	kora	k o r ɐ	false
-136	KWERBA_NAIDJBEDJ-74-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	74	*star	1430	STAR	gwinte	gwinte	g w i n t e	false
-137	BAGUSA-77-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	kowi	kowi	k o w i	false
-138	KWERBA_AIRMATI-77-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	ton	ton	t o n	false
-139	KWERBA_KAUWERAWET_I-77-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	kaowi	kaowi	k ɐ o w i	false
-140	KWERBA_KAUWERAWET_I-77-2	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	ton	ton	t o n	false
-141	KWERBA_MAMBERAMO-77-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	omeic	omeic	o m e i ts	false
-142	KWERBA_NAIDJBEDJ-77-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	tone	tone	t o n e	false
-143	BAGUSA-72-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	72	*sun	1343	SUN	abija	abija	ɐ b i dʒ ɐ	false
-144	KWERBA_AIRMATI-72-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	72	*sun	1343	SUN	abiy	abiy	ɐ b i j	false
-145	KWERBA_KAUWERAWET_I-72-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	72	*sun	1343	SUN	abic	abic	ɐ b i ts	false
-146	KWERBA_MAMBERAMO-72-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	72	*sun	1343	SUN	abic	abic	ɐ b i ts	false
-147	KWERBA_NAIDJBEDJ-72-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	72	*sun	1343	SUN	abiy	abiy	ɐ b i j	false
-148	BAGUSA-44-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	44	*tongue	1205	TONGUE	meu	meu	m e u	false
-149	KWERBA_NAIDJBEDJ-44-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	44	*tongue	1205	TONGUE	terug	terug	t e r u g	false
-150	BAGUSA-43-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	guan	guan	g u ɐ n	false
-151	KWERBA_AIRMATI-43-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	gwan3	gwan3	g w ɐ n ə	false
-152	KWERBA_KAUWERAWET_I-43-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	kwan	kwan	k w ɐ n	false
-153	KWERBA_MAMBERAMO-43-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	kwan	kwan	k w ɐ n	false
-154	KWERBA_NAIDJBEDJ-43-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	gwarne	gwarne	g w ɐ r n e	false
-155	BAGUSA-23-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	iji	iji	i dʒ i	false
-156	KWERBA_AIRMATI-23-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	idedes	idedes	i d e d e s	false
-157	KWERBA_KAUWERAWET_I-23-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	ic	ic	i ts	false
-158	KWERBA_MAMBERAMO-23-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	ec	ec	e ts	false
-159	KWERBA_MAMBERAMO-23-2	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	ic3	ic3	i ts ə	false
-160	KWERBA_NAIDJBEDJ-23-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	buma	buma	b u m ɐ	false
-161	BAGUSA-12-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	murinam	murinam	m u r i n ɐ m	false
-162	KWERBA_AIRMATI-12-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	nenemuan	nenemuan	n e n e m u ɐ n	false
-163	KWERBA_KAUWERAWET_I-12-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	ninic	ninic	n i n i ts	false
-164	KWERBA_MAMBERAMO-12-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	inic	inic	i n i ts	false
-165	KWERBA_NAIDJBEDJ-12-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	nenemuana	nenemuana	n e n e m u ɐ n ɐ	false
-166	BAGUSA-75-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	75	*water	948	WATER	bau	bau	b ɐ u	false
-167	KWERBA_AIRMATI-75-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	75	*water	948	WATER	bituw	bituw	b i t u w	false
-168	KWERBA_KAUWERAWET_I-75-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	75	*water	948	WATER	pitao	pitao	p i t ɐ o	false
-169	KWERBA_MAMBERAMO-75-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	75	*water	948	WATER	pitew	pitew	p i t e w	false
-170	KWERBA_NAIDJBEDJ-75-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	75	*water	948	WATER	bituw	bituw	b i t u w	false
-171	KWERBA_AIRMATI-3-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	3	*we	1212	WE	anomura	anomura	ɐ n o m u r ɐ	false
-172	KWERBA_KAUWERAWET_I-3-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	3	*we	1212	WE	nana	nana	n ɐ n ɐ	false
-173	KWERBA_MAMBERAMO-3-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	3	*we	1212	WE	neno	neno	n e n o	false
-174	BAGUSA-2-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	2	*you	1215	THOU	au	au	ɐ u	false
-175	KWERBA_KAUWERAWET_I-2-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	2	*you	1215	THOU	am	am	ɐ m	false
-176	KWERBA_MAMBERAMO-2-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	2	*you	1215	THOU	am	am	ɐ m	false
-177	BAGUSA-83-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	83	ash	646	ASH	umurija	umurija	u m u r i dʒ ɐ	false
-178	KWERBA_AIRMATI-83-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	83	ash	646	ASH	maraka	maraka	m ɐ r ɐ k ɐ	false
-179	BAGUSA-27-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	27	bark	1204	BARK	ijikorora	ijikorora	i dʒ i k o r o r ɐ	false
-180	BAGUSA-49-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	49	belly	1251	BELLY	ebis	ebis	e b i s	false
-181	KWERBA_AIRMATI-20-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	20	bird	937	BIRD	kaiyetin	kaiyetin	k ɐ i j e t i n	false
-182	KWERBA_AIRMATI-91-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	91	black	163	BLACK	iyem	iyem	i j e m	false
-183	BAGUSA-94-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	94	cold	1287	COLD	enaguaid	enaguaid	e n ɐ g u ɐ i d	false
-184	BAGUSA-55-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	55	eat	1336	EAT	eCenanis	eCenanis	e tʃ e n ɐ n i s	false
-185	KWERBA_AIRMATI-55-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	55	eat	1336	EAT	nan	nan	n ɐ n	false
-186	KWERBA_AIRMATI-55-2	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	55	eat	1336	EAT	nam	nam	n ɐ m	false
-187	KWERBA_AIRMATI-33-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	33	egg	744	EGG	koret	koret	k o r e t	false
-188	BAGUSA-46-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	46	foot	1301	FOOT	gum	gum	g u m	false
-189	BAGUSA-46-2	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	46	foot	1301	FOOT	tene	tene	t e n e	false
-190	KWERBA_AIRMATI-70-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	70	give	1447	GIVE	antemin	antemin	ɐ n t e m i n	false
-191	KWERBA_AIRMATI-97-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	97	good	1035	GOOD	esam	esam	e s ɐ m	false
-192	BAGUSA-37-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	37	hair	1040	HAIR	nirija	nirija	n i r i dʒ ɐ	false
-193	KWERBA_AIRMATI-37-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	37	hair	1040	HAIR	neriy	neriy	n e r i j	false
-194	KWERBA_AIRMATI-38-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	38	head	1256	HEAD	Tuwara	Tuwara	c u w ɐ r ɐ	false
-195	BAGUSA-93-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	93	hot	1286	HOT	bebas	bebas	b e b ɐ s	false
-196	BAGUSA-67-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	67	lie	1411	LIE (REST)	duguam	duguam	d u g u ɐ m	false
-197	BAGUSA-17-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	17	man	1554	MAN	mana	mana	m ɐ n ɐ	false
-198	KWERBA_AIRMATI-17-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	17	man	1554	MAN	abaiT	abaiT	ɐ b ɐ i c	false
-199	BAGUSA-73-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	73	moon	1313	MOON	jowari	jowari	dʒ o w ɐ r i	false
-200	BAGUSA-42-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	42	mouth	674	MOUTH	mau	mau	m ɐ u	false
-201	BAGUSA-50-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	50	neck	1333	NECK	neran	neran	n e r ɐ n	false
-202	BAGUSA-76-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	76	rain	2108	RAINING OR RAIN	ona	ona	o n ɐ	false
-203	BAGUSA-68-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	68	sit	1416	SIT	nomonau	nomonau	n o m o n ɐ u	false
-204	KWERBA_AIRMATI-68-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	68	sit	1416	SIT	monanem	monanem	m o n ɐ n e m	false
-205	BAGUSA-60-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	60	sleep	1585	SLEEP	naurija	naurija	n ɐ u r i dʒ ɐ	false
-206	KWERBA_AIRMATI-60-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	60	sleep	1585	SLEEP	TowerewaiT	TowerewaiT	c o w e r e w ɐ i c	false
-207	BAGUSA-15-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	15	small	1246	SMALL	garin	garin	g ɐ r i n	false
-208	KWERBA_AIRMATI-35-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	35	tail	1220	TAIL	et3rum	et3rum	e t ə r u m	false
-209	BAGUSA-16-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	16	woman	962	WOMAN	ca	ca	ts ɐ	false
-210	ADORA-1-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	1	*I	1209	I	aCa	aCa	ɐ tʃ ɐ	false
-211	ADORA-30-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	30	*blood	946	BLOOD	psay	psay	p s ɐ j	false
-212	SAMAROKENA_TOMAYO-30-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	30	*blood	946	BLOOD	komisia	komisia	k o m i s i ɐ	false
-213	ADORA-31-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	31	*bone	1394	BONE	kakam3	kakam3	k ɐ k ɐ m ə	false
-214	ADORA-51-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	51	*breasts	1402	BREAST	mema	mema	m e m ɐ	false
-215	SAMAROKENA_TOMAYO-51-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	51	*breasts	1402	BREAST	mema7	mema7	m e m ɐ ʔ	false
-216	ADORA-66-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	66	*come	1446	COME	maCa	maCa	m ɐ tʃ ɐ	false
-217	ADORA-61-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	61	*die	1494	DIE	kwaram	kwaram	k w ɐ r ɐ m	false
-218	SAMAROKENA_TOMAYO-61-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	61	*die	1494	DIE	awobuda	awobuda	ɐ w o b u d ɐ	false
-219	ADORA-21-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	21	*dog	2009	DOG	ikwe	ikwe	i k w e	false
-220	SAMAROKENA_TOMAYO-21-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	21	*dog	2009	DOG	nibia	nibia	n i b i ɐ	false
-221	SAMAROKENA_TOMAYO-54-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	54	*drink	1401	DRINK	hobehin	hobehin	h o b e h i n	false
-222	ADORA-39-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	39	*ear	1247	EAR	saji mara	saji mara	s ɐ dʒ i m ɐ r ɐ	false
-223	SAMAROKENA_TOMAYO-39-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	39	*ear	1247	EAR	matimia	matimia	m ɐ t i m i ɐ	false
-224	ADORA-40-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	40	*eye	1248	EYE	nukwi	nukwi	n u k w i	false
-225	SAMAROKENA_TOMAYO-40-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	40	*eye	1248	EYE	nubia	nubia	n u b i ɐ	false
-226	ADORA-82-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	82	*fire	221	FIRE	sidik	sidik	s i d i k	false
-227	SAMAROKENA_TOMAYO-82-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	82	*fire	221	FIRE	Esira	Esira	a s i r ɐ	false
-228	ADORA-19-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	19	*fish	227	FISH	kaus	kaus	k ɐ u s	false
-229	SAMAROKENA_TOMAYO-19-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	19	*fish	227	FISH	tam3ta	tam3ta	t ɐ m ə t ɐ	false
-230	ADORA-95-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	95	*full	1429	FULL	mumnam	mumnam	m u m n ɐ m	false
-231	ADORA-48-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	48	*hand	1277	HAND	taCa bok	taCa bok	t ɐ tʃ ɐ b o k	false
-232	SAMAROKENA_TOMAYO-48-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	48	*hand	1277	HAND	yana	yana	j ɐ n ɐ	false
-233	ADORA-58-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	58	*hear	1408	HEAR	mate	mate	m ɐ t e	false
-234	ADORA-34-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	34	*horn	1393	HORN (ANATOMY)	nebatrenam	nebatrenam	n e b ɐ t r e n ɐ m	false
-235	ADORA-47-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	47	*knee	1371	KNEE	sumana kaka	sumana kaka	s u m ɐ n ɐ k ɐ k ɐ	false
-236	SAMAROKENA_TOMAYO-47-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	47	*knee	1371	KNEE	hobisiakaka	hobisiakaka	h o b i s i ɐ k ɐ k ɐ	false
-237	ADORA-25-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	25	*leaf	628	LEAF	kwan3tai	kwan3tai	k w ɐ n ə t ɐ i	false
-238	SAMAROKENA_TOMAYO-25-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	25	*leaf	628	LEAF	tawarama	tawarama	t ɐ w ɐ r ɐ m ɐ	false
-239	ADORA-53-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	53	*liver	1224	LIVER	eni	eni	e n i	false
-240	ADORA-22-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	22	*louse	1392	LOUSE	nekwana	nekwana	n e k w ɐ n ɐ	false
-241	ADORA-86-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	86	*mountain	639	MOUNTAIN	tim3	tim3	t i m ə	false
-242	SAMAROKENA_TOMAYO-86-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	86	*mountain	639	MOUNTAIN	tikinEhEma	tikinEhEma	t i k i n a h a m ɐ	false
-243	ADORA-100-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	100	*name	1405	NAME	kwiCi	kwiCi	k w i tʃ i	false
-244	SAMAROKENA_TOMAYO-100-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	100	*name	1405	NAME	sita	sita	s i t ɐ	false
-245	ADORA-96-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	96	*new	1231	NEW	pahitam	pahitam	p ɐ h i t ɐ m	false
-246	ADORA-92-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	92	*night	1233	NIGHT	kwitimu	kwitimu	k w i t i m u	false
-247	SAMAROKENA_TOMAYO-92-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	92	*night	1233	NIGHT	kitimi3s	kitimi3s	k i t i m i ə s	false
-248	ADORA-41-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	41	*nose	1221	NOSE	hotin	hotin	h o t i n	false
-249	SAMAROKENA_TOMAYO-41-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	41	*nose	1221	NOSE	nokw~oika	nokw~oika	n o kʷ o i k ɐ	false
-250	ADORA-11-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	11	*one	1493	ONE	aberdi	aberdi	ɐ b e r d i	false
-251	SAMAROKENA_TOMAYO-11-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	11	*one	1493	ONE	noha	noha	n o h ɐ	false
-252	ADORA-85-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	85	*path	2252	PATH	nari	nari	n ɐ r i	false
-253	SAMAROKENA_TOMAYO-85-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	85	*path	2252	PATH	nahara	nahara	n ɐ h ɐ r ɐ	false
-254	ADORA-18-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	18	*person	683	PERSON	3na	3na	ə n ɐ	false
-255	SAMAROKENA_TOMAYO-18-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	18	*person	683	PERSON	anak	anak	ɐ n ɐ k	false
-256	ADORA-57-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	57	*see	1409	SEE	awariC	awariC	ɐ w ɐ r i tʃ	false
-257	ADORA-28-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	28	*skin	763	SKIN	korima	korima	k o r i m ɐ	false
-258	SAMAROKENA_TOMAYO-28-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	28	*skin	763	SKIN	kor3ma	kor3ma	k o r ə m ɐ	false
-259	ADORA-74-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	74	*star	1430	STAR	kom3ta	kom3ta	k o m ə t ɐ	false
-260	SAMAROKENA_TOMAYO-74-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	74	*star	1430	STAR	kom3ta	kom3ta	k o m ə t ɐ	false
-261	ADORA-77-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	77	*stone	857	STONE	kowia	kowia	k o w i ɐ	false
-262	SAMAROKENA_TOMAYO-77-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	77	*stone	857	STONE	owEta	owEta	o w a t ɐ	false
-263	ADORA-72-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	72	*sun	1343	SUN	habiC3	habiC3	h ɐ b i tʃ ə	false
-264	SAMAROKENA_TOMAYO-72-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	72	*sun	1343	SUN	harisia	harisia	h ɐ r i s i ɐ	false
-265	ADORA-44-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	44	*tongue	1205	TONGUE	ateru	ateru	ɐ t e r u	false
-266	SAMAROKENA_TOMAYO-44-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	44	*tongue	1205	TONGUE	piara	piara	p i ɐ r ɐ	false
-267	ADORA-43-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	43	*tooth	1380	TOOTH	kwan3	kwan3	k w ɐ n ə	false
-268	SAMAROKENA_TOMAYO-43-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	43	*tooth	1380	TOOTH	puna7	puna7	p u n ɐ ʔ	false
-269	ADORA-23-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	23	*tree	906	TREE	mubwarim	mubwarim	m u b w ɐ r i m	false
-270	SAMAROKENA_TOMAYO-23-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	23	*tree	906	TREE	ahafa	ahafa	ɐ h ɐ f ɐ	false
-271	ADORA-12-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	12	*two	1498	TWO	inine	inine	i n i n e	false
-272	SAMAROKENA_TOMAYO-12-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	12	*two	1498	TWO	EnEt3	EnEt3	a n a t ə	false
-273	ADORA-75-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	75	*water	948	WATER	pit	pit	p i t	false
-274	SAMAROKENA_TOMAYO-75-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	75	*water	948	WATER	EwEhEna	EwEhEna	a w a h a n ɐ	false
-275	ADORA-3-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	3	*we	1212	WE	aCa	aCa	ɐ tʃ ɐ	false
-276	ADORA-2-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	2	*you	1215	THOU	ama	ama	ɐ m ɐ	false
-277	ADORA-9-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	9	all	98	ALL	papenama	papenama	p ɐ p e n ɐ m ɐ	false
-278	ADORA-83-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	83	ash	646	ASH	marak3	marak3	m ɐ r ɐ k ə	false
-279	ADORA-27-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	27	bark	1204	BARK	kwarnakwEri	kwarnakwEri	k w ɐ r n ɐ k w a r i	false
-280	ADORA-49-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	49	belly	1251	BELLY	Cirihahana	Cirihahana	tʃ i r i h ɐ h ɐ n ɐ	false
-281	ADORA-13-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	13	big	1202	BIG	marima	marima	m ɐ r i m ɐ	false
-282	ADORA-20-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	20	bird	937	BIRD	inihit	inihit	i n i h i t	false
-283	ADORA-56-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	56	bite	1403	BITE	awabiC	awabiC	ɐ w ɐ b i tʃ	false
-284	ADORA-91-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	91	black	163	BLACK	niC3m	niC3m	n i tʃ ə m	false
-285	ADORA-84-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	84	burn	2102	BURN	tatehenEm	tatehenEm	t ɐ t e h e n a m	false
-286	ADORA-45-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	45	claw	72	CLAW	tabwin	tabwin	t ɐ b w i n	false
-287	ADORA-80-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	80	cloud	1489	CLOUD	osak	osak	o s ɐ k	false
-288	ADORA-94-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	94	cold	1287	COLD	kinowa	kinowa	k i n o w ɐ	false
-289	ADORA-99-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	99	dry	1398	DRY	t3maram	t3maram	t ə m ɐ r ɐ m	false
-290	ADORA-79-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	79	earth	1228	EARTH (SOIL)	sia	sia	s i ɐ	false
-291	ADORA-55-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	55	eat	1336	EAT	n3n3ma anan	n3n3ma anan	n ə n ə m ɐ ɐ n ɐ n	false
-292	ADORA-33-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	33	egg	744	EGG	segwe	segwe	s e g w e	false
-293	ADORA-36-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	36	feather	1201	FEATHER	tehauwat	tehauwat	t e h ɐ u w ɐ t	false
-294	ADORA-29-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	29	flesh	2259	FLESH	metikam	metikam	m e t i k ɐ m	false
-295	ADORA-64-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	64	fly	1441	FLY (MOVE THROUGH AIR)	ibima	ibima	i b i m ɐ	false
-296	ADORA-46-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	46	foot	1301	FOOT	tiCi	tiCi	t i tʃ i	false
-297	ADORA-70-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	70	give	1447	GIVE	ahon	ahon	ɐ h o n	false
-298	ADORA-97-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	97	good	1035	GOOD	manikweri	manikweri	m ɐ n i k w e r i	false
-299	ADORA-32-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	32	grease	323	FAT (ORGANIC SUBSTANCE)	panim	panim	p ɐ n i m	false
-300	ADORA-88-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	88	green	1425	GREEN	pikar3m	pikar3m	p i k ɐ r ə m	false
-301	ADORA-37-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	37	hair	1040	HAIR	nehEriCe	nehEriCe	n e h a r i tʃ e	false
-302	ADORA-38-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	38	head	1256	HEAD	nebar	nebar	n e b ɐ r	false
-303	ADORA-52-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	52	heart	1223	HEART	Erhahan	Erhahan	a r h ɐ h ɐ n	false
-304	ADORA-93-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	93	hot	1286	HOT	sakan3m	sakan3m	s ɐ k ɐ n ə m	false
-305	ADORA-62-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	62	kill	1417	KILL	awahan	awahan	ɐ w ɐ h ɐ n	false
-306	ADORA-59-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	59	know	3626	KNOW	aCetukwi	aCetukwi	ɐ tʃ e t u k w i	false
-307	ADORA-14-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	14	long	1203	LONG	peCom	peCom	p e tʃ o m	false
-308	ADORA-17-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	17	man	1554	MAN	ana	ana	ɐ n ɐ	false
-309	ADORA-17-2	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	17	man	1554	MAN	anat	anat	ɐ n ɐ t	false
-310	ADORA-10-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	10	many	1198	MANY	3mari	3mari	ə m ɐ r i	false
-311	ADORA-73-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	73	moon	1313	MOON	keba	keba	k e b ɐ	false
-312	ADORA-42-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	42	mouth	674	MOUTH	monu	monu	m o n u	false
-313	ADORA-50-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	50	neck	1333	NECK	padian	padian	p ɐ d i ɐ n	false
-314	ADORA-8-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	8	not	1240	NOT	kaita	kaita	k ɐ i t ɐ	false
-315	ADORA-76-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	76	rain	2108	RAINING OR RAIN	h3n	h3n	h ə n	false
-316	ADORA-87-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	87	red	156	RED	nokonim	nokonim	n o k o n i m	false
-317	ADORA-26-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	26	root	670	ROOT	tikwiman	tikwiman	t i k w i m ɐ n	false
-318	ADORA-98-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	98	round	1395	ROUND	kaiba	kaiba	k ɐ i b ɐ	false
-319	ADORA-78-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	78	sand	671	SAND	kas	kas	k ɐ s	false
-320	ADORA-71-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	71	say	1458	SAY	atawa	atawa	ɐ t ɐ w ɐ	false
-321	ADORA-24-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	24	seed	714	SEED	biti	biti	b i t i	false
-322	ADORA-68-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	68	sit	1416	SIT	amonaham	amonaham	ɐ m o n ɐ h ɐ m	false
-323	ADORA-60-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	60	sleep	1585	SLEEP	arukwa	arukwa	ɐ r u k w ɐ	false
-324	ADORA-15-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	15	small	1246	SMALL	howai3m	howai3m	h o w ɐ i ə m	false
-325	ADORA-81-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	81	smoke	778	SMOKE (EXHAUST)	inenwa	inenwa	i n e n w ɐ	false
-326	ADORA-69-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	69	stand	1442	STAND	akwiba	akwiba	ɐ k w i b ɐ	false
-327	ADORA-63-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	63	swim	1439	SWIM	ibikwem	ibikwem	i b i k w e m	false
-328	ADORA-35-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	35	tail	1220	TAIL	hem	hem	h e m	false
-329	ADORA-5-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	5	that	78	THAT	arib	arib	ɐ r i b	false
-330	ADORA-4-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	4	this	1214	THIS	3na	3na	ə n ɐ	false
-331	ADORA-65-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	65	walk	1443	WALK	kwakwa	kwakwa	k w ɐ k w ɐ	false
-332	ADORA-7-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	7	what	1236	WHAT	kabahona	kabahona	k ɐ b ɐ h o n ɐ	false
-333	ADORA-90-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	90	white	1335	WHITE	karam	karam	k ɐ r ɐ m	false
-334	ADORA-6-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	6	who	1235	WHO	kwin3	kwin3	k w i n ə	false
-335	ADORA-16-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	16	woman	962	WOMAN	esa	esa	e s ɐ	false
-336	ADORA-89-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	89	yellow	1424	YELLOW	tima	tima	t i m ɐ	false
+2	SABERI_2-1-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	1	*I	1209	I	e	e	e	false
+3	SABERI_2-1-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	1	*I	1209	I	au	au	ɐ u	false
+4	SABERI_2-31-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	31	*bone	1394	BONE	kaka	kaka	k ɐ k ɐ	false
+5	SABERI_2-31-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	31	*bone	1394	BONE	awa	awa	ɐ w ɐ	false
+6	SABERI-51-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	51	*breasts	1402	BREAST	asi	asi	ɐ s i	false
+7	SABERI_2-66-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	66	*come	1446	COME	rauma	rauma	r ɐ u m ɐ	false
+8	SABERI_2-66-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	66	*come	1446	COME	niai	niai	n i ɐ i	false
+9	SABERI_2-66-3	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	66	*come	1446	COME	rim3mi	rim3mi	r i m ə m i	false
+10	SABERI_2-61-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	61	*die	1494	DIE	kEkErana	kEkErana	k a k a r ɐ n ɐ	false
+11	SABERI_2-61-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	61	*die	1494	DIE	keran	keran	k e r ɐ n	false
+12	SABERI-21-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	21	*dog	2009	DOG	nana	nana	n ɐ n ɐ	false
+13	SABERI_2-21-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	21	*dog	2009	DOG	nani	nani	n ɐ n i	false
+14	SABERI-54-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	54	*drink	1401	DRINK	n3sa	n3sa	n ə s ɐ	false
+15	SABERI_2-54-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	54	*drink	1401	DRINK	nEnEisana	nEnEisana	n a n a i s ɐ n ɐ	false
+16	SABERI-39-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	39	*ear	1247	EAR	saTama	saTama	s ɐ c ɐ m ɐ	false
+17	SABERI-40-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	40	*eye	1248	EYE	nuwera	nuwera	n u w e r ɐ	false
+18	SABERI_2-40-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	40	*eye	1248	EYE	nuerau	nuerau	n u e r ɐ u	false
+19	SABERI_2-40-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	40	*eye	1248	EYE	nuwera	nuwera	n u w e r ɐ	false
+20	SABERI_2-82-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	82	*fire	221	FIRE	aniva	aniva	ɐ n i v ɐ	false
+21	SABERI-19-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	19	*fish	227	FISH	awisi	awisi	ɐ w i s i	false
+22	SABERI_2-95-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	95	*full	1429	FULL	pakra	pakra	p ɐ k r ɐ	false
+23	SABERI-48-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	48	*hand	1277	HAND	Tana	Tana	c ɐ n ɐ	false
+24	SABERI_2-48-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	48	*hand	1277	HAND	Ca	Ca	tʃ ɐ	false
+25	SABERI_2-48-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	48	*hand	1277	HAND	Can	Can	tʃ ɐ n	false
+26	SABERI-58-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	58	*hear	1408	HEAR	mait3yi	mait3yi	m ɐ i t ə j i	false
+27	SABERI_2-58-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	58	*hear	1408	HEAR	tei	tei	t e i	false
+28	SABERI-47-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	47	*knee	1371	KNEE	nabon3 fa	nabon3 fa	n ɐ b o n ə f ɐ	false
+29	SABERI-25-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	25	*leaf	628	LEAF	fi	fi	f i	false
+30	SABERI_2-53-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	53	*liver	1224	LIVER	w3ik	w3ik	w ə i k	false
+31	SABERI-86-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	86	*mountain	639	MOUNTAIN	te nina	te nina	t e n i n ɐ	false
+32	SABERI_2-86-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	86	*mountain	639	MOUNTAIN	tnaina	tnaina	t n ɐ i n ɐ	false
+33	SABERI_2-100-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	100	*name	1405	NAME	wiye	wiye	w i j e	false
+34	SABERI_2-100-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	100	*name	1405	NAME	wi	wi	w i	false
+35	SABERI_2-96-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	96	*new	1231	NEW	riri	riri	r i r i	false
+36	SABERI-92-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	92	*night	1233	NIGHT	pini	pini	p i n i	false
+37	SABERI_2-92-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	92	*night	1233	NIGHT	pini	pini	p i n i	false
+38	SABERI-41-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	41	*nose	1221	NOSE	tiTa	tiTa	t i c ɐ	false
+39	SABERI_2-41-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	41	*nose	1221	NOSE	tiana	tiana	t i ɐ n ɐ	false
+40	SABERI-11-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	11	*one	1493	ONE	m3re	m3re	m ə r e	false
+41	SABERI_2-11-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	11	*one	1493	ONE	mri	mri	m r i	false
+42	SABERI-85-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	85	*path	2252	PATH	rara	rara	r ɐ r ɐ	false
+43	SABERI_2-85-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	85	*path	2252	PATH	rara	rara	r ɐ r ɐ	false
+44	SABERI-18-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	18	*person	683	PERSON	Eh	Eh	a h	false
+45	SABERI-57-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	57	*see	1409	SEE	boware	boware	b o w ɐ r e	false
+46	SABERI_2-57-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	57	*see	1409	SEE	main	main	m ɐ i n	false
+47	SABERI_2-57-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	57	*see	1409	SEE	wapi	wapi	w ɐ p i	false
+48	SABERI_2-57-3	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	57	*see	1409	SEE	wari	wari	w ɐ r i	false
+49	SABERI_2-57-4	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	57	*see	1409	SEE	mamauna	mamauna	m ɐ m ɐ u n ɐ	false
+50	SABERI_2-28-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	28	*skin	763	SKIN	viri	viri	v i r i	false
+51	SABERI-74-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	74	*star	1430	STAR	umeta	umeta	u m e t ɐ	false
+52	SABERI_2-74-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	74	*star	1430	STAR	omita	omita	o m i t ɐ	false
+53	SABERI-77-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	77	*stone	857	STONE	pati	pati	p ɐ t i	false
+54	SABERI-72-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	72	*sun	1343	SUN	sobe	sobe	s o b e	false
+55	SABERI_2-72-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	72	*sun	1343	SUN	sopi	sopi	s o p i	false
+56	SABERI-44-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	44	*tongue	1205	TONGUE	mEmu	mEmu	m a m u	false
+57	SABERI_2-44-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	44	*tongue	1205	TONGUE	mEmu	mEmu	m a m u	false
+58	SABERI-43-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	43	*tooth	1380	TOOTH	wana	wana	w ɐ n ɐ	false
+59	SABERI_2-43-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	43	*tooth	1380	TOOTH	wana	wana	w ɐ n ɐ	false
+60	SABERI_2-23-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	23	*tree	906	TREE	warare	warare	w ɐ r ɐ r e	false
+61	SABERI-12-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	12	*two	1498	TWO	nab3g3	nab3g3	n ɐ b ə g ə	false
+62	SABERI_2-12-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	12	*two	1498	TWO	napni	napni	n ɐ p n i	false
+63	SABERI-75-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	75	*water	948	WATER	bu	bu	b u	false
+64	SABERI_2-75-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	75	*water	948	WATER	pu	pu	p u	false
+65	SABERI-3-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	3	*we	1212	WE	ou	ou	o u	false
+66	SABERI_2-3-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	3	*we	1212	WE	ne	ne	n e	false
+67	SABERI-2-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	2	*you	1215	THOU	miu	miu	m i u	false
+68	SABERI_2-2-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	2	*you	1215	THOU	mi	mi	m i	false
+69	SABERI_2-9-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	9	all	98	ALL	bisa	bisa	b i s ɐ	false
+70	SABERI_2-9-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	9	all	98	ALL	sowEk	sowEk	s o w a k	false
+71	SABERI-83-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	83	ash	646	ASH	nasa	nasa	n ɐ s ɐ	false
+72	SABERI-49-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	49	belly	1251	BELLY	tona	tona	t o n ɐ	false
+73	SABERI-13-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	13	big	1202	BIG	wisu	wisu	w i s u	false
+74	SABERI_2-13-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	13	big	1202	BIG	biso	biso	b i s o	false
+75	SABERI_2-13-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	13	big	1202	BIG	vise	vise	v i s e	false
+76	SABERI-20-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	20	bird	937	BIRD	sai	sai	s ɐ i	false
+77	SABERI_2-20-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	20	bird	937	BIRD	apre	apre	ɐ p r e	false
+78	SABERI_2-91-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	91	black	163	BLACK	kafora	kafora	k ɐ f o r ɐ	false
+79	SABERI_2-80-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	80	cloud	1489	CLOUD	onowara	onowara	o n o w ɐ r ɐ	false
+80	SABERI-94-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	94	cold	1287	COLD	ninifa	ninifa	n i n i f ɐ	false
+81	SABERI_2-94-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	94	cold	1287	COLD	ninifa	ninifa	n i n i f ɐ	false
+82	SABERI-79-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	79	earth	1228	EARTH (SOIL)	u	u	u	false
+83	SABERI_2-79-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	79	earth	1228	EARTH (SOIL)	u	u	u	false
+84	SABERI-55-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	55	eat	1336	EAT	fifrina	fifrina	f i f r i n ɐ	false
+85	SABERI_2-55-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	55	eat	1336	EAT	kone	kone	k o n e	false
+86	SABERI-33-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	33	egg	744	EGG	afa	afa	ɐ f ɐ	false
+87	SABERI_2-33-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	33	egg	744	EGG	Cawer3fa	Cawer3fa	tʃ ɐ w e r ə f ɐ	false
+88	SABERI-36-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	36	feather	1201	FEATHER	abr3 s3tata	abr3 s3tata	ɐ b r ə s ə t ɐ t ɐ	false
+89	SABERI_2-64-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	64	fly	1441	FLY (MOVE THROUGH AIR)	tatabraniba	tatabraniba	t ɐ t ɐ b r ɐ n i b ɐ	false
+90	SABERI-46-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	46	foot	1301	FOOT	teni	teni	t e n i	false
+91	SABERI_2-46-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	46	foot	1301	FOOT	teni	teni	t e n i	false
+92	SABERI-70-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	70	give	1447	GIVE	ma	ma	m ɐ	false
+93	SABERI_2-70-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	70	give	1447	GIVE	vren	vren	v r e n	false
+94	SABERI_2-70-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	70	give	1447	GIVE	vrun	vrun	v r u n	false
+95	SABERI_2-97-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	97	good	1035	GOOD	av3Ca	av3Ca	ɐ v ə tʃ ɐ	false
+96	SABERI-37-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	37	hair	1040	HAIR	bibisi ra	bibisi ra	b i b i s i r ɐ	false
+97	SABERI_2-37-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	37	hair	1040	HAIR	pirisira	pirisira	p i r i s i r ɐ	false
+98	SABERI-38-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	38	head	1256	HEAD	uwena	uwena	u w e n ɐ	false
+99	SABERI_2-38-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	38	head	1256	HEAD	coaka	coaka	ts o ɐ k ɐ	false
+100	SABERI_2-38-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	38	head	1256	HEAD	wina	wina	w i n ɐ	false
+101	SABERI_2-52-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	52	heart	1223	HEART	wawai	wawai	w ɐ w ɐ i	false
+102	SABERI_2-52-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	52	heart	1223	HEART	w3ik	w3ik	w ə i k	false
+103	SABERI-93-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	93	hot	1286	HOT	noma	noma	n o m ɐ	false
+104	SABERI_2-93-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	93	hot	1286	HOT	noma	noma	n o m ɐ	false
+105	SABERI-62-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	62	kill	1417	KILL	s3s3na	s3s3na	s ə s ə n ɐ	false
+106	SABERI_2-62-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	62	kill	1417	KILL	posu	posu	p o s u	false
+107	SABERI_2-62-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	62	kill	1417	KILL	posi	posi	p o s i	false
+108	SABERI_2-59-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	59	know	3626	KNOW	nifota	nifota	n i f o t ɐ	false
+109	SABERI-17-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	17	man	1554	MAN	Eh	Eh	a h	false
+110	SABERI_2-17-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	17	man	1554	MAN	i	i	i	false
+111	SABERI_2-17-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	17	man	1554	MAN	e	e	e	false
+112	SABERI_2-10-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	10	many	1198	MANY	warofa	warofa	w ɐ r o f ɐ	false
+113	SABERI-73-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	73	moon	1313	MOON	nawaTa	nawaTa	n ɐ w ɐ c ɐ	false
+114	SABERI-42-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	42	mouth	674	MOUTH	muna	muna	m u n ɐ	false
+115	SABERI_2-42-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	42	mouth	674	MOUTH	muna	muna	m u n ɐ	false
+116	SABERI_2-42-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	42	mouth	674	MOUTH	enapari	enapari	e n ɐ p ɐ r i	false
+117	SABERI-8-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	8	not	1240	NOT	pai	pai	p ɐ i	false
+118	SABERI_2-8-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	8	not	1240	NOT	ma	ma	m ɐ	false
+119	SABERI_2-8-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	8	not	1240	NOT	pai	pai	p ɐ i	false
+120	SABERI-76-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	76	rain	2108	RAINING OR RAIN	bu	bu	b u	false
+121	SABERI_2-76-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	76	rain	2108	RAINING OR RAIN	ona	ona	o n ɐ	false
+122	SABERI_2-76-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	76	rain	2108	RAINING OR RAIN	pu	pu	p u	false
+123	SABERI_2-87-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	87	red	156	RED	aroama	aroama	ɐ r o ɐ m ɐ	false
+124	SABERI_2-26-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	26	root	670	ROOT	topa	topa	t o p ɐ	false
+125	SABERI_2-26-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	26	root	670	ROOT	popo	popo	p o p o	false
+126	SABERI-71-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	71	say	1458	SAY	sarifaru	sarifaru	s ɐ r i f ɐ r u	false
+127	SABERI_2-24-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	24	seed	714	SEED	era	era	e r ɐ	false
+128	SABERI-68-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	68	sit	1416	SIT	ma me nafa	ma me nafa	m ɐ m e n ɐ f ɐ	false
+129	SABERI-60-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	60	sleep	1585	SLEEP	n3 sa burana	n3 sa burana	n ə s ɐ b u r ɐ n ɐ	false
+130	SABERI_2-60-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	60	sleep	1585	SLEEP	maveri	maveri	m ɐ v e r i	false
+131	SABERI_2-60-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	60	sleep	1585	SLEEP	ritapai	ritapai	r i t ɐ p ɐ i	false
+132	SABERI-15-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	15	small	1246	SMALL	k3nana	k3nana	k ə n ɐ n ɐ	false
+133	SABERI-81-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	81	smoke	778	SMOKE (EXHAUST)	noti	noti	n o t i	false
+134	SABERI_2-81-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	81	smoke	778	SMOKE (EXHAUST)	noti	noti	n o t i	false
+135	SABERI_2-63-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	63	swim	1439	SWIM	asrauna	asrauna	ɐ s r ɐ u n ɐ	false
+136	SABERI_2-5-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	5	that	78	THAT	Ce	Ce	tʃ e	false
+137	SABERI_2-4-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	4	this	1214	THIS	me	me	m e	false
+138	SABERI_2-4-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	4	this	1214	THIS	mai	mai	m ɐ i	false
+139	SABERI_2-7-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	7	what	1236	WHAT	naevome	naevome	n ɐ e v o m e	false
+140	SABERI_2-7-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	7	what	1236	WHAT	wari	wari	w ɐ r i	false
+141	SABERI_2-6-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	6	who	1235	WHO	mava	mava	m ɐ v ɐ	false
+142	SABERI_2-6-2	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	6	who	1235	WHO	inane	inane	i n ɐ n e	false
+143	SABERI-16-1	SABERI	SABERI	isir1237	Isirawa	Greater Kwerba			False	16	woman	962	WOMAN	awi	awi	ɐ w i	false
+144	SABERI_2-16-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	16	woman	962	WOMAN	avi	avi	ɐ v i	false
+145	SABERI_2-89-1	SABERI_2	SABERI_2	isir1237	Isirawa	Greater Kwerba			False	89	yellow	1424	YELLOW	kanEsisani	kanEsisani	k ɐ n a s i s ɐ n i	false
+146	BAGUSA-1-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	abo	abo	ɐ b o	false
+147	BAGUSA_2-1-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	em	em	e m	false
+148	KWERBA_AIRMATI-1-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	To	To	c o	false
+149	KWERBA_AIRMATI_3-1-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	Co	Co	tʃ o	false
+150	KWERBA_KAUWERAWET_I-1-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	em	em	e m	false
+151	KWERBA_MAMBERAMO-1-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	co	co	ts o	false
+152	KWERBA_NAIDJBEDJ-1-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	1	*I	1209	I	co	co	ts o	false
+153	BAGUSA_2-30-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	30	*blood	946	BLOOD	hats	hats	h ɐ t s	false
+154	BAGUSA_2-30-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	30	*blood	946	BLOOD	sanaCa	sanaCa	s ɐ n ɐ tʃ ɐ	false
+155	KWERBA_AIRMATI-30-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	30	*blood	946	BLOOD	kumwa	kumwa	k u m w ɐ	false
+156	KWERBA_AIRMATI_3-30-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	30	*blood	946	BLOOD	kumwah	kumwah	k u m w ɐ h	false
+157	KWERBA_KAUWERAWET_I-30-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	30	*blood	946	BLOOD	sac	sac	s ɐ ts	false
+158	KWERBA_MAMBERAMO-30-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	30	*blood	946	BLOOD	hac	hac	h ɐ ts	false
+159	KWERBA_NAIDJBEDJ-30-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	30	*blood	946	BLOOD	guma	guma	g u m ɐ	false
+160	BAGUSA_2-31-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	31	*bone	1394	BONE	kak	kak	k ɐ k	false
+161	KWERBA_AIRMATI-31-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	31	*bone	1394	BONE	kaka	kaka	k ɐ k ɐ	false
+162	KWERBA_AIRMATI_3-31-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	31	*bone	1394	BONE	kaka	kaka	k ɐ k ɐ	false
+163	KWERBA_KAUWERAWET_I-31-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	31	*bone	1394	BONE	kak	kak	k ɐ k	false
+164	KWERBA_MAMBERAMO-31-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	31	*bone	1394	BONE	kak	kak	k ɐ k	false
+165	KWERBA_NAIDJBEDJ-31-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	31	*bone	1394	BONE	kaka	kaka	k ɐ k ɐ	false
+166	BAGUSA-51-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	51	*breasts	1402	BREAST	dabun	dabun	d ɐ b u n	false
+167	BAGUSA_2-51-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	51	*breasts	1402	BREAST	tab7una	tab7una	t ɐ b ʔ u n ɐ	false
+168	KWERBA_NAIDJBEDJ-51-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	51	*breasts	1402	BREAST	meme	meme	m e m e	false
+169	BAGUSA_2-66-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	naCau	naCau	n ɐ tʃ ɐ u	false
+170	BAGUSA_2-66-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	aCom	aCom	ɐ tʃ o m	false
+171	KWERBA_AIRMATI-66-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	wabunam	wabunam	w ɐ b u n ɐ m	false
+172	KWERBA_AIRMATI_3-66-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	wabene	wabene	w ɐ b e n e	false
+173	KWERBA_AIRMATI_3-66-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	wawunam	wawunam	w ɐ w u n ɐ m	false
+174	KWERBA_KAUWERAWET_I-66-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	com	com	ts o m	false
+175	KWERBA_MAMBERAMO-66-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	onecaw	onecaw	o n e ts ɐ w	false
+176	KWERBA_NAIDJBEDJ-66-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	66	*come	1446	COME	wabunam	wabunam	w ɐ b u n ɐ m	false
+177	BAGUSA-61-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	61	*die	1494	DIE	jabaguru	jabaguru	dʒ ɐ b ɐ g u r u	false
+178	BAGUSA_2-61-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	61	*die	1494	DIE	koram	koram	k o r ɐ m	false
+179	KWERBA_NAIDJBEDJ-61-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	61	*die	1494	DIE	gworam	gworam	g w o r ɐ m	false
+180	BAGUSA-21-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	21	*dog	2009	DOG	on	on	o n	false
+181	BAGUSA_2-21-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	21	*dog	2009	DOG	okwa	okwa	o k w ɐ	false
+182	KWERBA_AIRMATI_2-21-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	21	*dog	2009	DOG	ukw~3	ukw~3	u kʷ ə	false
+183	KWERBA_KAUWERAWET_I-21-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	21	*dog	2009	DOG	okwa	okwa	o k w ɐ	false
+184	KWERBA_MAMBERAMO-21-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	21	*dog	2009	DOG	okwa	okwa	o k w ɐ	false
+185	BAGUSA-54-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	54	*drink	1401	DRINK	eCabin	eCabin	e tʃ ɐ b i n	false
+186	BAGUSA_2-54-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	54	*drink	1401	DRINK	pinam	pinam	p i n ɐ m	false
+187	BAGUSA_2-54-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	54	*drink	1401	DRINK	Caben	Caben	tʃ ɐ b e n	false
+188	KWERBA_AIRMATI_3-54-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	54	*drink	1401	DRINK	penam	penam	p e n ɐ m	false
+189	KWERBA_AIRMATI_3-54-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	54	*drink	1401	DRINK	5ar	5ar	ɲ ɐ r	false
+190	KWERBA_NAIDJBEDJ-54-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	54	*drink	1401	DRINK	penam	penam	p e n ɐ m	false
+191	BAGUSA-39-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	39	*ear	1247	EAR	mula	mula	m u l ɐ	false
+192	BAGUSA_2-39-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	39	*ear	1247	EAR	mura	mura	m u r ɐ	false
+193	KWERBA_AIRMATI_2-39-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	39	*ear	1247	EAR	inar3	inar3	i n ɐ r ə	false
+194	KWERBA_AIRMATI_3-39-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	39	*ear	1247	EAR	5ara	5ara	ɲ ɐ r ɐ	false
+195	KWERBA_NAIDJBEDJ-39-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	39	*ear	1247	EAR	nyar	nyar	n j ɐ r	false
+196	BAGUSA-40-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nug	nug	n u g	false
+197	BAGUSA_2-40-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nuh	nuh	n u h	false
+198	KWERBA_AIRMATI-40-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nukwe	nukwe	n u k w e	false
+199	KWERBA_AIRMATI_3-40-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nukwe	nukwe	n u k w e	false
+200	KWERBA_KAUWERAWET_I-40-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nok	nok	n o k	false
+201	KWERBA_MAMBERAMO-40-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nuk	nuk	n u k	false
+202	KWERBA_NAIDJBEDJ-40-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	40	*eye	1248	EYE	nukw~e	nukw~e	n u kʷ e	false
+203	BAGUSA-82-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	seren	seren	s e r e n	false
+204	BAGUSA_2-82-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	seren	seren	s e r e n	false
+205	KWERBA_AIRMATI-82-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	sida	sida	s i d ɐ	false
+206	KWERBA_KAUWERAWET_I-82-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	her	her	h e r	false
+207	KWERBA_KAUWERAWET_I-82-2	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	ser	ser	s e r	false
+208	KWERBA_MAMBERAMO-82-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	hel	hel	h e l	false
+209	KWERBA_MAMBERAMO-82-2	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	ser	ser	s e r	false
+210	KWERBA_NAIDJBEDJ-82-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	82	*fire	221	FIRE	sida	sida	s i d ɐ	false
+211	BAGUSA-19-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	19	*fish	227	FISH	nebinis	nebinis	n e b i n i s	false
+212	BAGUSA_2-19-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	19	*fish	227	FISH	nebinis	nebinis	n e b i n i s	false
+213	KWERBA_AIRMATI_3-19-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	19	*fish	227	FISH	7sekun3	7sekun3	ʔ s e k u n ə	false
+214	KWERBA_AIRMATI_3-19-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	19	*fish	227	FISH	7akw3net	7akw3net	ʔ ɐ k w ə n e t	false
+215	KWERBA_NAIDJBEDJ-19-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	19	*fish	227	FISH	segwin	segwin	s e g w i n	false
+216	BAGUSA-48-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	48	*hand	1277	HAND	dagu	dagu	d ɐ g u	false
+217	BAGUSA_2-48-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	48	*hand	1277	HAND	tats	tats	t ɐ t s	false
+218	BAGUSA_2-48-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	48	*hand	1277	HAND	tajukum	tajukum	t ɐ dʒ u k u m	false
+219	KWERBA_AIRMATI_3-48-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	48	*hand	1277	HAND	taiC	taiC	t ɐ i tʃ	false
+220	KWERBA_KAUWERAWET_I-48-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	48	*hand	1277	HAND	tajen	tajen	t ɐ dʒ e n	false
+221	KWERBA_MAMBERAMO-48-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	48	*hand	1277	HAND	tac	tac	t ɐ ts	false
+222	KWERBA_NAIDJBEDJ-48-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	48	*hand	1277	HAND	mantaic	mantaic	m ɐ n t ɐ i ts	false
+223	BAGUSA_2-58-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	58	*hear	1408	HEAR	nitiam	nitiam	n i t i ɐ m	false
+224	BAGUSA_2-58-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	58	*hear	1408	HEAR	Cabanoti	Cabanoti	tʃ ɐ b ɐ n o t i	false
+225	KWERBA_AIRMATI_3-58-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	58	*hear	1408	HEAR	luk	luk	l u k	false
+226	KWERBA_AIRMATI_3-58-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	58	*hear	1408	HEAR	CanediC	CanediC	tʃ ɐ n e d i tʃ	false
+227	KWERBA_NAIDJBEDJ-58-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	58	*hear	1408	HEAR	yanediy	yanediy	j ɐ n e d i j	false
+228	BAGUSA-47-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	47	*knee	1371	KNEE	suminara	suminara	s u m i n ɐ r ɐ	false
+229	BAGUSA_2-47-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	47	*knee	1371	KNEE	somun	somun	s o m u n	false
+230	KWERBA_AIRMATI_3-47-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	47	*knee	1371	KNEE	sumwan	sumwan	s u m w ɐ n	false
+231	KWERBA_NAIDJBEDJ-47-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	47	*knee	1371	KNEE	sumwan	sumwan	s u m w ɐ n	false
+232	BAGUSA-25-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	25	*leaf	628	LEAF	ididaja	ididaja	i d i d ɐ dʒ ɐ	false
+233	BAGUSA_2-25-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	25	*leaf	628	LEAF	tam	tam	t ɐ m	false
+234	KWERBA_AIRMATI_3-25-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	25	*leaf	628	LEAF	tam	tam	t ɐ m	false
+235	KWERBA_AIRMATI_2-53-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	53	*liver	1224	LIVER	kw~3tiN	kw~3tiN	kʷ ə t i ŋ	false
+236	BAGUSA-22-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	22	*louse	1392	LOUSE	negunu	negunu	n e g u n u	false
+237	KWERBA_AIRMATI-22-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	22	*louse	1392	LOUSE	negwan	negwan	n e g w ɐ n	false
+238	KWERBA_KAUWERAWET_I-22-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	22	*louse	1392	LOUSE	pise	pise	p i s e	false
+239	KWERBA_MAMBERAMO-22-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	22	*louse	1392	LOUSE	nenun	nenun	n e n u n	false
+240	BAGUSA-86-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	86	*mountain	639	MOUNTAIN	kowi	kowi	k o w i	false
+241	BAGUSA_2-86-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	86	*mountain	639	MOUNTAIN	isiu	isiu	i s i u	false
+242	KWERBA_AIRMATI_3-86-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	86	*mountain	639	MOUNTAIN	esiuw	esiuw	e s i u w	false
+243	KWERBA_NAIDJBEDJ-86-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	86	*mountain	639	MOUNTAIN	esiuw	esiuw	e s i u w	false
+244	KWERBA_AIRMATI-100-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	100	*name	1405	NAME	mesaiT	mesaiT	m e s ɐ i c	false
+245	KWERBA_KAUWERAWET_I-100-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	100	*name	1405	NAME	bukwin	bukwin	b u k w i n	false
+246	KWERBA_MAMBERAMO-100-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	100	*name	1405	NAME	kweic	kweic	k w e i ts	false
+247	BAGUSA_2-96-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	96	*new	1231	NEW	bairim	bairim	b ɐ i r i m	false
+248	KWERBA_AIRMATI_3-96-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	96	*new	1231	NEW	esam	esam	e s ɐ m	false
+249	KWERBA_NAIDJBEDJ-96-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	96	*new	1231	NEW	esam	esam	e s ɐ m	false
+250	KWERBA_AIRMATI-92-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	92	*night	1233	NIGHT	kwin	kwin	k w i n	false
+251	KWERBA_AIRMATI_2-92-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	92	*night	1233	NIGHT	kw~ina	kw~ina	kʷ i n ɐ	false
+252	KWERBA_KAUWERAWET_I-92-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	92	*night	1233	NIGHT	cin	cin	ts i n	false
+253	KWERBA_MAMBERAMO-92-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	92	*night	1233	NIGHT	ic	ic	i ts	false
+254	KWERBA_NAIDJBEDJ-92-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	92	*night	1233	NIGHT	kw~une	kw~une	kʷ u n e	false
+255	BAGUSA-41-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	41	*nose	1221	NOSE	ug	ug	u g	false
+256	BAGUSA_2-41-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	41	*nose	1221	NOSE	uke	uke	u k e	false
+257	KWERBA_AIRMATI_2-41-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	41	*nose	1221	NOSE	utiN	utiN	u t i ŋ	false
+258	KWERBA_AIRMATI_3-41-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	41	*nose	1221	NOSE	ugwah	ugwah	u g w ɐ h	false
+259	KWERBA_NAIDJBEDJ-41-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	41	*nose	1221	NOSE	udiny	udiny	u d i n j	false
+260	BAGUSA-11-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	tanabar	tanabar	t ɐ n ɐ b ɐ r	false
+261	BAGUSA_2-11-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	abets	abets	ɐ b e t s	false
+262	KWERBA_AIRMATI-11-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	aberyas	aberyas	ɐ b e r j ɐ s	false
+263	KWERBA_AIRMATI_3-11-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	aberjas	aberjas	ɐ b e r dʒ ɐ s	false
+264	KWERBA_KAUWERAWET_I-11-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	abic	abic	ɐ b i ts	false
+265	KWERBA_MAMBERAMO-11-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	abaic	abaic	ɐ b ɐ i ts	false
+266	KWERBA_NAIDJBEDJ-11-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	11	*one	1493	ONE	aweryas	aweryas	ɐ w e r j ɐ s	false
+267	KWERBA_NAIDJBEDJ-85-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	85	*path	2252	PATH	agwainaic	agwainaic	ɐ g w ɐ i n ɐ i ts	false
+268	BAGUSA-18-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	18	*person	683	PERSON	koassa	koassa	k o ɐ s s ɐ	false
+269	BAGUSA_2-18-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	18	*person	683	PERSON	koasa	koasa	k o ɐ s ɐ	false
+270	KWERBA_AIRMATI_2-18-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	18	*person	683	PERSON	ana	ana	ɐ n ɐ	false
+271	KWERBA_AIRMATI-57-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	57	*see	1409	SEE	yawayaiT	yawayaiT	j ɐ w ɐ j ɐ i c	false
+272	KWERBA_KAUWERAWET_I-57-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	57	*see	1409	SEE	uwarim	uwarim	u w ɐ r i m	false
+273	KWERBA_MAMBERAMO-57-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	57	*see	1409	SEE	onowaric	onowaric	o n o w ɐ r i ts	false
+274	KWERBA_NAIDJBEDJ-57-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	57	*see	1409	SEE	nebug	nebug	n e b u g	false
+275	BAGUSA-28-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	korora	korora	k o r o r ɐ	false
+276	BAGUSA_2-28-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	kora	kora	k o r ɐ	false
+277	KWERBA_AIRMATI-28-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	kora	kora	k o r ɐ	false
+278	KWERBA_AIRMATI_3-28-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	kora	kora	k o r ɐ	false
+279	KWERBA_KAUWERAWET_I-28-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	kurakora	kurakora	k u r ɐ k o r ɐ	false
+280	KWERBA_MAMBERAMO-28-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	koa	koa	k o ɐ	false
+281	KWERBA_NAIDJBEDJ-28-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	28	*skin	763	SKIN	kora	kora	k o r ɐ	false
+282	KWERBA_AIRMATI_3-74-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	74	*star	1430	STAR	on7na	on7na	o n ʔ n ɐ	false
+283	KWERBA_NAIDJBEDJ-74-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	74	*star	1430	STAR	gwinte	gwinte	g w i n t e	false
+284	BAGUSA-77-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	kowi	kowi	k o w i	false
+285	BAGUSA_2-77-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	kowi	kowi	k o w i	false
+286	KWERBA_AIRMATI-77-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	ton	ton	t o n	false
+287	KWERBA_KAUWERAWET_I-77-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	kaowi	kaowi	k ɐ o w i	false
+288	KWERBA_KAUWERAWET_I-77-2	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	ton	ton	t o n	false
+289	KWERBA_MAMBERAMO-77-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	omeic	omeic	o m e i ts	false
+290	KWERBA_NAIDJBEDJ-77-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	77	*stone	857	STONE	tone	tone	t o n e	false
+291	BAGUSA-72-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	72	*sun	1343	SUN	abija	abija	ɐ b i dʒ ɐ	false
+292	KWERBA_AIRMATI-72-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	72	*sun	1343	SUN	abiy	abiy	ɐ b i j	false
+293	KWERBA_AIRMATI_2-72-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	72	*sun	1343	SUN	apiC	apiC	ɐ p i tʃ	false
+294	KWERBA_KAUWERAWET_I-72-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	72	*sun	1343	SUN	abic	abic	ɐ b i ts	false
+295	KWERBA_MAMBERAMO-72-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	72	*sun	1343	SUN	abic	abic	ɐ b i ts	false
+296	KWERBA_NAIDJBEDJ-72-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	72	*sun	1343	SUN	abiy	abiy	ɐ b i j	false
+297	BAGUSA-44-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	44	*tongue	1205	TONGUE	meu	meu	m e u	false
+298	KWERBA_AIRMATI_3-44-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	44	*tongue	1205	TONGUE	m37we	m37we	m ə ʔ w e	false
+299	KWERBA_NAIDJBEDJ-44-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	44	*tongue	1205	TONGUE	terug	terug	t e r u g	false
+300	BAGUSA-43-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	guan	guan	g u ɐ n	false
+301	KWERBA_AIRMATI-43-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	gwan3	gwan3	g w ɐ n ə	false
+302	KWERBA_AIRMATI_2-43-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	kw~an	kw~an	kʷ ɐ n	false
+303	KWERBA_AIRMATI_3-43-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	kwan7na	kwan7na	k w ɐ n ʔ n ɐ	false
+304	KWERBA_KAUWERAWET_I-43-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	kwan	kwan	k w ɐ n	false
+305	KWERBA_MAMBERAMO-43-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	kwan	kwan	k w ɐ n	false
+306	KWERBA_NAIDJBEDJ-43-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	43	*tooth	1380	TOOTH	gwarne	gwarne	g w ɐ r n e	false
+307	BAGUSA-23-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	iji	iji	i dʒ i	false
+308	BAGUSA_2-23-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	murin	murin	m u r i n	false
+309	BAGUSA_2-23-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	arasum	arasum	ɐ r ɐ s u m	false
+310	KWERBA_AIRMATI-23-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	idedes	idedes	i d e d e s	false
+311	KWERBA_AIRMATI_2-23-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	iC	iC	i tʃ	false
+312	KWERBA_AIRMATI_3-23-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	buma	buma	b u m ɐ	false
+313	KWERBA_AIRMATI_3-23-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	idedes	idedes	i d e d e s	false
+314	KWERBA_KAUWERAWET_I-23-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	ic	ic	i ts	false
+315	KWERBA_MAMBERAMO-23-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	ec	ec	e ts	false
+316	KWERBA_MAMBERAMO-23-2	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	ic3	ic3	i ts ə	false
+317	KWERBA_NAIDJBEDJ-23-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	23	*tree	906	TREE	buma	buma	b u m ɐ	false
+318	BAGUSA-12-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	murinam	murinam	m u r i n ɐ m	false
+319	BAGUSA_2-12-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	murinam	murinam	m u r i n ɐ m	false
+320	KWERBA_AIRMATI-12-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	nenemuan	nenemuan	n e n e m u ɐ n	false
+321	KWERBA_AIRMATI_2-12-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	nEnumw~ana	nEnumw~ana	n a n u mʷ ɐ n ɐ	false
+322	KWERBA_KAUWERAWET_I-12-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	ninic	ninic	n i n i ts	false
+323	KWERBA_MAMBERAMO-12-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	inic	inic	i n i ts	false
+324	KWERBA_NAIDJBEDJ-12-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	12	*two	1498	TWO	nenemuana	nenemuana	n e n e m u ɐ n ɐ	false
+325	BAGUSA-75-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	75	*water	948	WATER	bau	bau	b ɐ u	false
+326	BAGUSA_2-75-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	75	*water	948	WATER	bau	bau	b ɐ u	false
+327	KWERBA_AIRMATI-75-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	75	*water	948	WATER	bituw	bituw	b i t u w	false
+328	KWERBA_KAUWERAWET_I-75-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	75	*water	948	WATER	pitao	pitao	p i t ɐ o	false
+329	KWERBA_MAMBERAMO-75-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	75	*water	948	WATER	pitew	pitew	p i t e w	false
+330	KWERBA_NAIDJBEDJ-75-1	KWERBA_NAIDJBEDJ	KWERBA_NAIDJBEDJ	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	75	*water	948	WATER	bituw	bituw	b i t u w	false
+331	KWERBA_AIRMATI-3-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	3	*we	1212	WE	anomura	anomura	ɐ n o m u r ɐ	false
+332	KWERBA_AIRMATI_2-3-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	3	*we	1212	WE	n3no	n3no	n ə n o	false
+333	KWERBA_AIRMATI_2-3-2	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	3	*we	1212	WE	ena	ena	e n ɐ	false
+334	KWERBA_KAUWERAWET_I-3-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	3	*we	1212	WE	nana	nana	n ɐ n ɐ	false
+335	KWERBA_MAMBERAMO-3-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	3	*we	1212	WE	neno	neno	n e n o	false
+336	BAGUSA-2-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	2	*you	1215	THOU	au	au	ɐ u	false
+337	BAGUSA_2-2-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	2	*you	1215	THOU	abaCa	abaCa	ɐ b ɐ tʃ ɐ	false
+338	BAGUSA_2-2-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	2	*you	1215	THOU	iba	iba	i b ɐ	false
+339	BAGUSA_2-2-3	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	2	*you	1215	THOU	i	i	i	false
+340	KWERBA_AIRMATI_3-2-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	2	*you	1215	THOU	dam	dam	d ɐ m	false
+341	KWERBA_AIRMATI_3-2-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	2	*you	1215	THOU	amer	amer	ɐ m e r	false
+342	KWERBA_KAUWERAWET_I-2-1	KWERBA_KAUWERAWET_I	KWERBA_KAUWERAWET_I	kauw1242	Kauwera	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	2	*you	1215	THOU	am	am	ɐ m	false
+343	KWERBA_MAMBERAMO-2-1	KWERBA_MAMBERAMO	KWERBA_MAMBERAMO	kwer1263	Kwerba Mamberamo	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	2	*you	1215	THOU	am	am	ɐ m	false
+344	KWERBA_AIRMATI_2-9-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	9	all	98	ALL	poporas	poporas	p o p o r ɐ s	false
+345	BAGUSA-83-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	83	ash	646	ASH	umurija	umurija	u m u r i dʒ ɐ	false
+346	BAGUSA_2-83-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	83	ash	646	ASH	merah	merah	m e r ɐ h	false
+347	KWERBA_AIRMATI-83-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	83	ash	646	ASH	maraka	maraka	m ɐ r ɐ k ɐ	false
+348	KWERBA_AIRMATI_2-83-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	83	ash	646	ASH	marak	marak	m ɐ r ɐ k	false
+349	KWERBA_AIRMATI_3-83-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	83	ash	646	ASH	maraka	maraka	m ɐ r ɐ k ɐ	false
+350	BAGUSA-27-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	27	bark	1204	BARK	ijikorora	ijikorora	i dʒ i k o r o r ɐ	false
+351	BAGUSA_2-27-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	27	bark	1204	BARK	arukam	arukam	ɐ r u k ɐ m	false
+352	KWERBA_AIRMATI_2-27-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	27	bark	1204	BARK	kw~arin	kw~arin	kʷ ɐ r i n	false
+353	BAGUSA-49-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	49	belly	1251	BELLY	ebis	ebis	e b i s	false
+354	BAGUSA_2-49-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	49	belly	1251	BELLY	okum	okum	o k u m	false
+355	BAGUSA_2-49-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	49	belly	1251	BELLY	ibis	ibis	i b i s	false
+356	KWERBA_AIRMATI_2-49-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	49	belly	1251	BELLY	ukw~om	ukw~om	u kʷ o m	false
+357	KWERBA_AIRMATI_3-49-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	49	belly	1251	BELLY	guom	guom	g u o m	false
+358	BAGUSA_2-13-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	13	big	1202	BIG	marem	marem	m ɐ r e m	false
+359	KWERBA_AIRMATI_3-13-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	13	big	1202	BIG	dejauwer	dejauwer	d e dʒ ɐ u w e r	false
+360	KWERBA_AIRMATI-20-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	20	bird	937	BIRD	kaiyetin	kaiyetin	k ɐ i j e t i n	false
+361	BAGUSA_2-56-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	56	bite	1403	BITE	kaweyEm	kaweyEm	k ɐ w e j a m	false
+362	KWERBA_AIRMATI-91-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	91	black	163	BLACK	iyem	iyem	i j e m	false
+363	KWERBA_AIRMATI_2-91-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	91	black	163	BLACK	iCEm	iCEm	i tʃ a m	false
+364	BAGUSA_2-84-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	84	burn	2102	BURN	Cabanabun	Cabanabun	tʃ ɐ b ɐ n ɐ b u n	false
+365	KWERBA_AIRMATI_3-84-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	84	burn	2102	BURN	agwanaunim	agwanaunim	ɐ g w ɐ n ɐ u n i m	false
+366	BAGUSA-94-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	94	cold	1287	COLD	enaguaid	enaguaid	e n ɐ g u ɐ i d	false
+367	BAGUSA_2-94-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	94	cold	1287	COLD	kekenuw	kekenuw	k e k e n u w	false
+368	KWERBA_AIRMATI_3-94-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	94	cold	1287	COLD	kinkenem	kinkenem	k i n k e n e m	false
+369	BAGUSA_2-99-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	99	dry	1398	DRY	ikaram	ikaram	i k ɐ r ɐ m	false
+370	KWERBA_AIRMATI_2-99-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	99	dry	1398	DRY	tan3m	tan3m	t ɐ n ə m	false
+371	KWERBA_AIRMATI_2-99-2	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	99	dry	1398	DRY	toton3m	toton3m	t o t o n ə m	false
+372	KWERBA_AIRMATI_3-99-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	99	dry	1398	DRY	Cataniret	Cataniret	tʃ ɐ t ɐ n i r e t	false
+373	KWERBA_AIRMATI_3-99-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	99	dry	1398	DRY	dedem	dedem	d e d e m	false
+374	BAGUSA_2-79-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	79	earth	1228	EARTH (SOIL)	isiu	isiu	i s i u	false
+375	BAGUSA_2-79-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	79	earth	1228	EARTH (SOIL)	erau	erau	e r ɐ u	false
+376	KWERBA_AIRMATI_2-79-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	79	earth	1228	EARTH (SOIL)	isiwu	isiwu	i s i w u	false
+377	KWERBA_AIRMATI_3-79-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	79	earth	1228	EARTH (SOIL)	eyem	eyem	e j e m	false
+378	KWERBA_AIRMATI_3-79-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	79	earth	1228	EARTH (SOIL)	izuwe	izuwe	i z u w e	false
+379	BAGUSA-55-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	55	eat	1336	EAT	eCenanis	eCenanis	e tʃ e n ɐ n i s	false
+380	BAGUSA_2-55-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	55	eat	1336	EAT	nanam	nanam	n ɐ n ɐ m	false
+381	BAGUSA_2-55-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	55	eat	1336	EAT	konam	konam	k o n ɐ m	false
+382	KWERBA_AIRMATI-55-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	55	eat	1336	EAT	nan	nan	n ɐ n	false
+383	KWERBA_AIRMATI-55-2	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	55	eat	1336	EAT	nam	nam	n ɐ m	false
+384	KWERBA_AIRMATI_2-55-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	55	eat	1336	EAT	popon3n3m	popon3n3m	p o p o n ə n ə m	false
+385	KWERBA_AIRMATI_3-55-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	55	eat	1336	EAT	nam	nam	n ɐ m	false
+386	BAGUSA_2-33-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	33	egg	744	EGG	somuk	somuk	s o m u k	false
+387	BAGUSA_2-33-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	33	egg	744	EGG	inam	inam	i n ɐ m	false
+388	KWERBA_AIRMATI-33-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	33	egg	744	EGG	koret	koret	k o r e t	false
+389	KWERBA_AIRMATI_3-33-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	33	egg	744	EGG	koret	koret	k o r e t	false
+390	KWERBA_AIRMATI_3-33-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	33	egg	744	EGG	oretu	oretu	o r e t u	false
+391	KWERBA_AIRMATI_2-36-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	36	feather	1201	FEATHER	inim	inim	i n i m	false
+392	BAGUSA-46-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	46	foot	1301	FOOT	gum	gum	g u m	false
+393	BAGUSA-46-2	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	46	foot	1301	FOOT	tene	tene	t e n e	false
+394	KWERBA_AIRMATI_2-46-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	46	foot	1301	FOOT	kaka	kaka	k ɐ k ɐ	false
+395	KWERBA_AIRMATI_3-46-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	46	foot	1301	FOOT	ten7dzye7gum	ten7dzye7gum	t e n ʔ d z j e ʔ g u m	false
+396	BAGUSA_2-70-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	70	give	1447	GIVE	huminam	huminam	h u m i n ɐ m	false
+397	BAGUSA_2-70-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	70	give	1447	GIVE	7idienEm	7idienEm	ʔ i d i e n a m	false
+398	KWERBA_AIRMATI-70-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	70	give	1447	GIVE	antemin	antemin	ɐ n t e m i n	false
+399	KWERBA_AIRMATI_3-70-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	70	give	1447	GIVE	agwentes	agwentes	ɐ g w e n t e s	false
+400	KWERBA_AIRMATI_3-70-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	70	give	1447	GIVE	antenim	antenim	ɐ n t e n i m	false
+401	BAGUSA_2-97-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	97	good	1035	GOOD	aninona	aninona	ɐ n i n o n ɐ	false
+402	BAGUSA_2-97-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	97	good	1035	GOOD	7ezamas	7ezamas	ʔ e z ɐ m ɐ s	false
+403	KWERBA_AIRMATI-97-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	97	good	1035	GOOD	esam	esam	e s ɐ m	false
+404	KWERBA_AIRMATI_2-97-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	97	good	1035	GOOD	Esam	Esam	a s ɐ m	false
+405	KWERBA_AIRMATI_2-97-2	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	97	good	1035	GOOD	hekw~e	hekw~e	h e kʷ e	false
+406	KWERBA_AIRMATI_3-97-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	97	good	1035	GOOD	esenam	esenam	e s e n ɐ m	false
+407	BAGUSA_2-88-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	88	green	1425	GREEN	peCum	peCum	p e tʃ u m	false
+408	BAGUSA_2-88-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	88	green	1425	GREEN	kwatin	kwatin	k w ɐ t i n	false
+409	KWERBA_AIRMATI_3-88-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	88	green	1425	GREEN	taxeuw	taxeuw	t ɐ x e u w	false
+410	KWERBA_AIRMATI_3-88-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	88	green	1425	GREEN	tareuw	tareuw	t ɐ r e u w	false
+411	BAGUSA-37-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	37	hair	1040	HAIR	nirija	nirija	n i r i dʒ ɐ	false
+412	BAGUSA_2-37-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	37	hair	1040	HAIR	niri	niri	n i r i	false
+413	BAGUSA_2-37-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	37	hair	1040	HAIR	niriCe	niriCe	n i r i tʃ e	false
+414	KWERBA_AIRMATI-37-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	37	hair	1040	HAIR	neriy	neriy	n e r i j	false
+415	KWERBA_AIRMATI_2-37-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	37	hair	1040	HAIR	nEriCh~	nEriCh~	n a r i tʃʰ	false
+416	KWERBA_AIRMATI_3-37-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	37	hair	1040	HAIR	neriC	neriC	n e r i tʃ	false
+417	BAGUSA_2-38-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	38	head	1256	HEAD	nabar	nabar	n ɐ b ɐ r	false
+418	KWERBA_AIRMATI-38-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	38	head	1256	HEAD	Tuwara	Tuwara	c u w ɐ r ɐ	false
+419	KWERBA_AIRMATI_3-38-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	38	head	1256	HEAD	Cuar	Cuar	tʃ u ɐ r	false
+420	BAGUSA_2-52-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	52	heart	1223	HEART	om	om	o m	false
+421	BAGUSA-93-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	93	hot	1286	HOT	bebas	bebas	b e b ɐ s	false
+422	KWERBA_AIRMATI_2-93-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	93	hot	1286	HOT	kortEn	kortEn	k o r t a n	false
+423	KWERBA_AIRMATI_2-59-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	59	know	3626	KNOW	tukw~om	tukw~om	t u kʷ o m	false
+424	BAGUSA-67-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	67	lie	1411	LIE (REST)	duguam	duguam	d u g u ɐ m	false
+425	BAGUSA-17-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	17	man	1554	MAN	mana	mana	m ɐ n ɐ	false
+426	BAGUSA_2-17-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	17	man	1554	MAN	jowari	jowari	dʒ o w ɐ r i	false
+427	KWERBA_AIRMATI-17-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	17	man	1554	MAN	abaiT	abaiT	ɐ b ɐ i c	false
+428	BAGUSA-73-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	73	moon	1313	MOON	jowari	jowari	dʒ o w ɐ r i	false
+429	BAGUSA-42-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	42	mouth	674	MOUTH	mau	mau	m ɐ u	false
+430	KWERBA_AIRMATI_3-42-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	42	mouth	674	MOUTH	mona	mona	m o n ɐ	false
+431	BAGUSA-50-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	50	neck	1333	NECK	neran	neran	n e r ɐ n	false
+432	BAGUSA_2-50-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	50	neck	1333	NECK	baCan	baCan	b ɐ tʃ ɐ n	false
+433	BAGUSA_2-50-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	50	neck	1333	NECK	nekan	nekan	n e k ɐ n	false
+434	KWERBA_AIRMATI_3-50-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	50	neck	1333	NECK	akai	akai	ɐ k ɐ i	false
+435	BAGUSA_2-8-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	8	not	1240	NOT	tarara	tarara	t ɐ r ɐ r ɐ	false
+436	KWERBA_AIRMATI_2-8-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	8	not	1240	NOT	anta	anta	ɐ n t ɐ	false
+437	BAGUSA-76-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	76	rain	2108	RAINING OR RAIN	ona	ona	o n ɐ	false
+438	BAGUSA_2-76-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	76	rain	2108	RAINING OR RAIN	on	on	o n	false
+439	KWERBA_AIRMATI_3-76-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	76	rain	2108	RAINING OR RAIN	on	on	o n	false
+440	BAGUSA_2-87-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	87	red	156	RED	nokanam	nokanam	n o k ɐ n ɐ m	false
+441	BAGUSA_2-87-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	87	red	156	RED	saC	saC	s ɐ tʃ	false
+442	KWERBA_AIRMATI_3-87-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	87	red	156	RED	nogohnem	nogohnem	n o g o h n e m	false
+443	KWERBA_AIRMATI_2-26-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	26	root	670	ROOT	tukw~3m	tukw~3m	t u kʷ ə m	false
+444	BAGUSA_2-98-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	98	round	1395	ROUND	mamatam	mamatam	m ɐ m ɐ t ɐ m	false
+445	KWERBA_AIRMATI_2-78-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	78	sand	671	SAND	Erit	Erit	a r i t	false
+446	BAGUSA_2-71-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	71	say	1458	SAY	naieC	naieC	n ɐ i e tʃ	false
+447	KWERBA_AIRMATI_2-71-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	71	say	1458	SAY	yaporaC	yaporaC	j ɐ p o r ɐ tʃ	false
+448	BAGUSA-68-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	68	sit	1416	SIT	nomonau	nomonau	n o m o n ɐ u	false
+449	KWERBA_AIRMATI-68-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	68	sit	1416	SIT	monanem	monanem	m o n ɐ n e m	false
+450	KWERBA_AIRMATI_2-68-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	68	sit	1416	SIT	akw~omonan	akw~omonan	ɐ kʷ o m o n ɐ n	false
+451	BAGUSA-60-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	60	sleep	1585	SLEEP	naurija	naurija	n ɐ u r i dʒ ɐ	false
+452	KWERBA_AIRMATI-60-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	60	sleep	1585	SLEEP	TowerewaiT	TowerewaiT	c o w e r e w ɐ i c	false
+453	KWERBA_AIRMATI_2-60-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	60	sleep	1585	SLEEP	kar3mowara	kar3mowara	k ɐ r ə m o w ɐ r ɐ	false
+454	BAGUSA-15-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	15	small	1246	SMALL	garin	garin	g ɐ r i n	false
+455	BAGUSA_2-15-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	15	small	1246	SMALL	neneCirak	neneCirak	n e n e tʃ i r ɐ k	false
+456	BAGUSA_2-15-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	15	small	1246	SMALL	matros	matros	m ɐ t r o s	false
+457	KWERBA_AIRMATI_3-15-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	15	small	1246	SMALL	arikurikam	arikurikam	ɐ r i k u r i k ɐ m	false
+458	KWERBA_AIRMATI_3-15-2	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	15	small	1246	SMALL	argam	argam	ɐ r g ɐ m	false
+459	BAGUSA_2-81-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	81	smoke	778	SMOKE (EXHAUST)	sinouwa	sinouwa	s i n o u w ɐ	false
+460	BAGUSA_2-81-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	81	smoke	778	SMOKE (EXHAUST)	sinew	sinew	s i n e w	false
+461	KWERBA_AIRMATI_3-81-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	81	smoke	778	SMOKE (EXHAUST)	nieuw	nieuw	n i e u w	false
+462	KWERBA_AIRMATI_2-63-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	63	swim	1439	SWIM	sa5am	sa5am	s ɐ ɲ ɐ m	false
+463	KWERBA_AIRMATI-35-1	KWERBA_AIRMATI	KWERBA_AIRMATI	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	35	tail	1220	TAIL	et3rum	et3rum	e t ə r u m	false
+464	BAGUSA_2-5-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	5	that	78	THAT	babena	babena	b ɐ b e n ɐ	false
+465	KWERBA_AIRMATI_3-5-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	5	that	78	THAT	uben	uben	u b e n	false
+466	BAGUSA_2-4-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	4	this	1214	THIS	aribebana	aribebana	ɐ r i b e b ɐ n ɐ	false
+467	KWERBA_AIRMATI_3-4-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	4	this	1214	THIS	naben	naben	n ɐ b e n	false
+468	KWERBA_AIRMATI_2-65-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	65	walk	1443	WALK	warsom	warsom	w ɐ r s o m	false
+469	KWERBA_AIRMATI_2-6-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	6	who	1235	WHO	aNkw~in	aNkw~in	ɐ ŋ kʷ i n	false
+470	BAGUSA-16-1	BAGUSA	BAGUSA	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	16	woman	962	WOMAN	ca	ca	ts ɐ	false
+471	BAGUSA_2-16-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	16	woman	962	WOMAN	senau	senau	s e n ɐ u	false
+472	BAGUSA_2-89-1	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	89	yellow	1424	YELLOW	Cawak	Cawak	tʃ ɐ w ɐ k	false
+473	BAGUSA_2-89-2	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	89	yellow	1424	YELLOW	kaimEsem	kaimEsem	k ɐ i m a s e m	false
+474	BAGUSA_2-89-3	BAGUSA_2	BAGUSA_2	bagu1251	Bagusa	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	89	yellow	1424	YELLOW	setan	setan	s e t ɐ n	false
+475	KWERBA_AIRMATI_2-89-1	KWERBA_AIRMATI_2	KWERBA_AIRMATI_2	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	89	yellow	1424	YELLOW	kEkErEtum	kEkErEtum	k a k a r a t u m	false
+476	KWERBA_AIRMATI_3-89-1	KWERBA_AIRMATI_3	KWERBA_AIRMATI_3	nucl1595	Kwerba	Greater Kwerba	Kwerba-Samarokena	Kwerbaic	False	89	yellow	1424	YELLOW	mezow	mezow	m e z o w	false
+477	ADORA-1-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	1	*I	1209	I	aCa	aCa	ɐ tʃ ɐ	false
+478	ADORA-30-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	30	*blood	946	BLOOD	psay	psay	p s ɐ j	false
+479	SAMAROKENA_TOMAYO-30-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	30	*blood	946	BLOOD	komisia	komisia	k o m i s i ɐ	false
+480	ADORA-31-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	31	*bone	1394	BONE	kakam3	kakam3	k ɐ k ɐ m ə	false
+481	ADORA-51-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	51	*breasts	1402	BREAST	mema	mema	m e m ɐ	false
+482	AIRORAN-51-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	51	*breasts	1402	BREAST	m3ma7	m3ma7	m ə m ɐ ʔ	false
+483	SAMAROKENA_TOMAYO-51-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	51	*breasts	1402	BREAST	mema7	mema7	m e m ɐ ʔ	false
+484	ADORA-66-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	66	*come	1446	COME	maCa	maCa	m ɐ tʃ ɐ	false
+485	ADORA-61-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	61	*die	1494	DIE	kwaram	kwaram	k w ɐ r ɐ m	false
+486	AIRORAN-61-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	61	*die	1494	DIE	Cawakwar	Cawakwar	tʃ ɐ w ɐ k w ɐ r	false
+487	SAMAROKENA_TOMAYO-61-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	61	*die	1494	DIE	awobuda	awobuda	ɐ w o b u d ɐ	false
+488	ADORA-21-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	21	*dog	2009	DOG	ikwe	ikwe	i k w e	false
+489	AIRORAN-21-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	21	*dog	2009	DOG	ikwi	ikwi	i k w i	false
+490	SAMAROKENA_TOMAYO-21-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	21	*dog	2009	DOG	nibia	nibia	n i b i ɐ	false
+491	AIRORAN-54-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	54	*drink	1401	DRINK	ab3hin	ab3hin	ɐ b ə h i n	false
+492	SAMAROKENA_TOMAYO-54-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	54	*drink	1401	DRINK	hobehin	hobehin	h o b e h i n	false
+493	ADORA-39-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	39	*ear	1247	EAR	saji mara	saji mara	s ɐ dʒ i m ɐ r ɐ	false
+494	AIRORAN-39-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	39	*ear	1247	EAR	saji	saji	s ɐ dʒ i	false
+495	SAMAROKENA_TOMAYO-39-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	39	*ear	1247	EAR	matimia	matimia	m ɐ t i m i ɐ	false
+496	ADORA-40-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	40	*eye	1248	EYE	nukwi	nukwi	n u k w i	false
+497	AIRORAN-40-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	40	*eye	1248	EYE	negu	negu	n e g u	false
+498	SAMAROKENA_TOMAYO-40-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	40	*eye	1248	EYE	nubia	nubia	n u b i ɐ	false
+499	ADORA-82-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	82	*fire	221	FIRE	sidik	sidik	s i d i k	false
+500	AIRORAN-82-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	82	*fire	221	FIRE	sira	sira	s i r ɐ	false
+501	SAMAROKENA_TOMAYO-82-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	82	*fire	221	FIRE	Esira	Esira	a s i r ɐ	false
+502	ADORA-19-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	19	*fish	227	FISH	kaus	kaus	k ɐ u s	false
+503	AIRORAN-19-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	19	*fish	227	FISH	kawisi	kawisi	k ɐ w i s i	false
+504	SAMAROKENA_TOMAYO-19-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	19	*fish	227	FISH	tam3ta	tam3ta	t ɐ m ə t ɐ	false
+505	ADORA-95-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	95	*full	1429	FULL	mumnam	mumnam	m u m n ɐ m	false
+506	ADORA-48-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	48	*hand	1277	HAND	taCa bok	taCa bok	t ɐ tʃ ɐ b o k	false
+507	AIRORAN-48-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	48	*hand	1277	HAND	taj3	taj3	t ɐ dʒ ə	false
+508	SAMAROKENA_TOMAYO-48-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	48	*hand	1277	HAND	yana	yana	j ɐ n ɐ	false
+509	ADORA-58-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	58	*hear	1408	HEAR	mate	mate	m ɐ t e	false
+510	ADORA-34-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	34	*horn	1393	HORN (ANATOMY)	nebatrenam	nebatrenam	n e b ɐ t r e n ɐ m	false
+511	ADORA-47-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	47	*knee	1371	KNEE	sumana kaka	sumana kaka	s u m ɐ n ɐ k ɐ k ɐ	false
+512	AIRORAN-47-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	47	*knee	1371	KNEE	somonakaka	somonakaka	s o m o n ɐ k ɐ k ɐ	false
+513	SAMAROKENA_TOMAYO-47-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	47	*knee	1371	KNEE	hobisiakaka	hobisiakaka	h o b i s i ɐ k ɐ k ɐ	false
+514	ADORA-25-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	25	*leaf	628	LEAF	kwan3tai	kwan3tai	k w ɐ n ə t ɐ i	false
+515	AIRORAN-25-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	25	*leaf	628	LEAF	tawaram	tawaram	t ɐ w ɐ r ɐ m	false
+516	SAMAROKENA_TOMAYO-25-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	25	*leaf	628	LEAF	tawarama	tawarama	t ɐ w ɐ r ɐ m ɐ	false
+517	ADORA-53-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	53	*liver	1224	LIVER	eni	eni	e n i	false
+518	ADORA-22-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	22	*louse	1392	LOUSE	nekwana	nekwana	n e k w ɐ n ɐ	false
+519	ADORA-86-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	86	*mountain	639	MOUNTAIN	tim3	tim3	t i m ə	false
+520	AIRORAN-86-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	86	*mountain	639	MOUNTAIN	tima7	tima7	t i m ɐ ʔ	false
+521	SAMAROKENA_TOMAYO-86-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	86	*mountain	639	MOUNTAIN	tikinEhEma	tikinEhEma	t i k i n a h a m ɐ	false
+522	ADORA-100-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	100	*name	1405	NAME	kwiCi	kwiCi	k w i tʃ i	false
+523	AIRORAN-100-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	100	*name	1405	NAME	fuCi	fuCi	f u tʃ i	false
+524	SAMAROKENA_TOMAYO-100-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	100	*name	1405	NAME	sita	sita	s i t ɐ	false
+525	ADORA-96-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	96	*new	1231	NEW	pahitam	pahitam	p ɐ h i t ɐ m	false
+526	ADORA-92-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	92	*night	1233	NIGHT	kwitimu	kwitimu	k w i t i m u	false
+527	AIRORAN-92-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	92	*night	1233	NIGHT	kwitim	kwitim	k w i t i m	false
+528	SAMAROKENA_TOMAYO-92-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	92	*night	1233	NIGHT	kitimi3s	kitimi3s	k i t i m i ə s	false
+529	ADORA-41-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	41	*nose	1221	NOSE	hotin	hotin	h o t i n	false
+530	AIRORAN-41-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	41	*nose	1221	NOSE	hodinun	hodinun	h o d i n u n	false
+531	SAMAROKENA_TOMAYO-41-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	41	*nose	1221	NOSE	nokw~oika	nokw~oika	n o kʷ o i k ɐ	false
+532	ADORA-11-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	11	*one	1493	ONE	aberdi	aberdi	ɐ b e r d i	false
+533	AIRORAN-11-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	11	*one	1493	ONE	abat	abat	ɐ b ɐ t	false
+534	SAMAROKENA_TOMAYO-11-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	11	*one	1493	ONE	noha	noha	n o h ɐ	false
+535	ADORA-85-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	85	*path	2252	PATH	nari	nari	n ɐ r i	false
+536	AIRORAN-85-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	85	*path	2252	PATH	nari	nari	n ɐ r i	false
+537	SAMAROKENA_TOMAYO-85-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	85	*path	2252	PATH	nahara	nahara	n ɐ h ɐ r ɐ	false
+538	ADORA-18-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	18	*person	683	PERSON	3na	3na	ə n ɐ	false
+539	AIRORAN-18-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	18	*person	683	PERSON	ana7	ana7	ɐ n ɐ ʔ	false
+540	SAMAROKENA_TOMAYO-18-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	18	*person	683	PERSON	anak	anak	ɐ n ɐ k	false
+541	ADORA-57-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	57	*see	1409	SEE	awariC	awariC	ɐ w ɐ r i tʃ	false
+542	ADORA-28-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	28	*skin	763	SKIN	korima	korima	k o r i m ɐ	false
+543	AIRORAN-28-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	28	*skin	763	SKIN	kor3m	kor3m	k o r ə m	false
+544	SAMAROKENA_TOMAYO-28-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	28	*skin	763	SKIN	kor3ma	kor3ma	k o r ə m ɐ	false
+545	ADORA-74-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	74	*star	1430	STAR	kom3ta	kom3ta	k o m ə t ɐ	false
+546	AIRORAN-74-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	74	*star	1430	STAR	kom3ta	kom3ta	k o m ə t ɐ	false
+547	SAMAROKENA_TOMAYO-74-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	74	*star	1430	STAR	kom3ta	kom3ta	k o m ə t ɐ	false
+548	ADORA-77-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	77	*stone	857	STONE	kowia	kowia	k o w i ɐ	false
+549	AIRORAN-77-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	77	*stone	857	STONE	kowi3t	kowi3t	k o w i ə t	false
+550	SAMAROKENA_TOMAYO-77-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	77	*stone	857	STONE	owEta	owEta	o w a t ɐ	false
+551	ADORA-72-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	72	*sun	1343	SUN	habiC3	habiC3	h ɐ b i tʃ ə	false
+552	AIRORAN-72-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	72	*sun	1343	SUN	habitS	habitS	h ɐ b i t ʃ	false
+553	SAMAROKENA_TOMAYO-72-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	72	*sun	1343	SUN	harisia	harisia	h ɐ r i s i ɐ	false
+554	ADORA-44-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	44	*tongue	1205	TONGUE	ateru	ateru	ɐ t e r u	false
+555	AIRORAN-44-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	44	*tongue	1205	TONGUE	at3ri	at3ri	ɐ t ə r i	false
+556	SAMAROKENA_TOMAYO-44-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	44	*tongue	1205	TONGUE	piara	piara	p i ɐ r ɐ	false
+557	ADORA-43-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	43	*tooth	1380	TOOTH	kwan3	kwan3	k w ɐ n ə	false
+558	AIRORAN-43-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	43	*tooth	1380	TOOTH	kwoit3ri	kwoit3ri	k w o i t ə r i	false
+559	SAMAROKENA_TOMAYO-43-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	43	*tooth	1380	TOOTH	puna7	puna7	p u n ɐ ʔ	false
+560	ADORA-23-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	23	*tree	906	TREE	mubwarim	mubwarim	m u b w ɐ r i m	false
+561	AIRORAN-23-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	23	*tree	906	TREE	kwamana	kwamana	k w ɐ m ɐ n ɐ	false
+562	SAMAROKENA_TOMAYO-23-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	23	*tree	906	TREE	ahafa	ahafa	ɐ h ɐ f ɐ	false
+563	ADORA-12-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	12	*two	1498	TWO	inine	inine	i n i n e	false
+564	AIRORAN-12-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	12	*two	1498	TWO	inen	inen	i n e n	false
+565	SAMAROKENA_TOMAYO-12-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	12	*two	1498	TWO	EnEt3	EnEt3	a n a t ə	false
+566	ADORA-75-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	75	*water	948	WATER	pit	pit	p i t	false
+567	AIRORAN-75-1	AIRORAN	AIRORAN	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	75	*water	948	WATER	biti	biti	b i t i	false
+568	SAMAROKENA_TOMAYO-75-1	SAMAROKENA_TOMAYO	SAMAROKENA_TOMAYO	sama1240	Samarokena	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	75	*water	948	WATER	EwEhEna	EwEhEna	a w a h a n ɐ	false
+569	ADORA-3-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	3	*we	1212	WE	aCa	aCa	ɐ tʃ ɐ	false
+570	ADORA-2-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	2	*you	1215	THOU	ama	ama	ɐ m ɐ	false
+571	ADORA-9-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	9	all	98	ALL	papenama	papenama	p ɐ p e n ɐ m ɐ	false
+572	ADORA-83-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	83	ash	646	ASH	marak3	marak3	m ɐ r ɐ k ə	false
+573	ADORA-27-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	27	bark	1204	BARK	kwarnakwEri	kwarnakwEri	k w ɐ r n ɐ k w a r i	false
+574	ADORA-49-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	49	belly	1251	BELLY	Cirihahana	Cirihahana	tʃ i r i h ɐ h ɐ n ɐ	false
+575	ADORA-13-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	13	big	1202	BIG	marima	marima	m ɐ r i m ɐ	false
+576	ADORA-20-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	20	bird	937	BIRD	inihit	inihit	i n i h i t	false
+577	ADORA-56-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	56	bite	1403	BITE	awabiC	awabiC	ɐ w ɐ b i tʃ	false
+578	ADORA-91-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	91	black	163	BLACK	niC3m	niC3m	n i tʃ ə m	false
+579	ADORA-84-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	84	burn	2102	BURN	tatehenEm	tatehenEm	t ɐ t e h e n a m	false
+580	ADORA-45-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	45	claw	72	CLAW	tabwin	tabwin	t ɐ b w i n	false
+581	ADORA-80-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	80	cloud	1489	CLOUD	osak	osak	o s ɐ k	false
+582	ADORA-94-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	94	cold	1287	COLD	kinowa	kinowa	k i n o w ɐ	false
+583	ADORA-99-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	99	dry	1398	DRY	t3maram	t3maram	t ə m ɐ r ɐ m	false
+584	ADORA-79-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	79	earth	1228	EARTH (SOIL)	sia	sia	s i ɐ	false
+585	ADORA-55-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	55	eat	1336	EAT	n3n3ma anan	n3n3ma anan	n ə n ə m ɐ ɐ n ɐ n	false
+586	ADORA-33-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	33	egg	744	EGG	segwe	segwe	s e g w e	false
+587	ADORA-36-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	36	feather	1201	FEATHER	tehauwat	tehauwat	t e h ɐ u w ɐ t	false
+588	ADORA-29-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	29	flesh	2259	FLESH	metikam	metikam	m e t i k ɐ m	false
+589	ADORA-64-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	64	fly	1441	FLY (MOVE THROUGH AIR)	ibima	ibima	i b i m ɐ	false
+590	ADORA-46-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	46	foot	1301	FOOT	tiCi	tiCi	t i tʃ i	false
+591	ADORA-70-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	70	give	1447	GIVE	ahon	ahon	ɐ h o n	false
+592	ADORA-97-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	97	good	1035	GOOD	manikweri	manikweri	m ɐ n i k w e r i	false
+593	ADORA-32-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	32	grease	323	FAT (ORGANIC SUBSTANCE)	panim	panim	p ɐ n i m	false
+594	ADORA-88-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	88	green	1425	GREEN	pikar3m	pikar3m	p i k ɐ r ə m	false
+595	ADORA-37-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	37	hair	1040	HAIR	nehEriCe	nehEriCe	n e h a r i tʃ e	false
+596	ADORA-38-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	38	head	1256	HEAD	nebar	nebar	n e b ɐ r	false
+597	ADORA-52-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	52	heart	1223	HEART	Erhahan	Erhahan	a r h ɐ h ɐ n	false
+598	ADORA-93-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	93	hot	1286	HOT	sakan3m	sakan3m	s ɐ k ɐ n ə m	false
+599	ADORA-62-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	62	kill	1417	KILL	awahan	awahan	ɐ w ɐ h ɐ n	false
+600	ADORA-59-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	59	know	3626	KNOW	aCetukwi	aCetukwi	ɐ tʃ e t u k w i	false
+601	ADORA-14-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	14	long	1203	LONG	peCom	peCom	p e tʃ o m	false
+602	ADORA-17-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	17	man	1554	MAN	ana	ana	ɐ n ɐ	false
+603	ADORA-17-2	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	17	man	1554	MAN	anat	anat	ɐ n ɐ t	false
+604	ADORA-10-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	10	many	1198	MANY	3mari	3mari	ə m ɐ r i	false
+605	ADORA-73-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	73	moon	1313	MOON	keba	keba	k e b ɐ	false
+606	ADORA-42-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	42	mouth	674	MOUTH	monu	monu	m o n u	false
+607	ADORA-50-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	50	neck	1333	NECK	padian	padian	p ɐ d i ɐ n	false
+608	ADORA-8-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	8	not	1240	NOT	kaita	kaita	k ɐ i t ɐ	false
+609	ADORA-76-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	76	rain	2108	RAINING OR RAIN	h3n	h3n	h ə n	false
+610	ADORA-87-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	87	red	156	RED	nokonim	nokonim	n o k o n i m	false
+611	ADORA-26-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	26	root	670	ROOT	tikwiman	tikwiman	t i k w i m ɐ n	false
+612	ADORA-98-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	98	round	1395	ROUND	kaiba	kaiba	k ɐ i b ɐ	false
+613	ADORA-78-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	78	sand	671	SAND	kas	kas	k ɐ s	false
+614	ADORA-71-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	71	say	1458	SAY	atawa	atawa	ɐ t ɐ w ɐ	false
+615	ADORA-24-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	24	seed	714	SEED	biti	biti	b i t i	false
+616	ADORA-68-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	68	sit	1416	SIT	amonaham	amonaham	ɐ m o n ɐ h ɐ m	false
+617	ADORA-60-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	60	sleep	1585	SLEEP	arukwa	arukwa	ɐ r u k w ɐ	false
+618	ADORA-15-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	15	small	1246	SMALL	howai3m	howai3m	h o w ɐ i ə m	false
+619	ADORA-81-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	81	smoke	778	SMOKE (EXHAUST)	inenwa	inenwa	i n e n w ɐ	false
+620	ADORA-69-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	69	stand	1442	STAND	akwiba	akwiba	ɐ k w i b ɐ	false
+621	ADORA-63-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	63	swim	1439	SWIM	ibikwem	ibikwem	i b i k w e m	false
+622	ADORA-35-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	35	tail	1220	TAIL	hem	hem	h e m	false
+623	ADORA-5-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	5	that	78	THAT	arib	arib	ɐ r i b	false
+624	ADORA-4-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	4	this	1214	THIS	3na	3na	ə n ɐ	false
+625	ADORA-65-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	65	walk	1443	WALK	kwakwa	kwakwa	k w ɐ k w ɐ	false
+626	ADORA-7-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	7	what	1236	WHAT	kabahona	kabahona	k ɐ b ɐ h o n ɐ	false
+627	ADORA-90-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	90	white	1335	WHITE	karam	karam	k ɐ r ɐ m	false
+628	ADORA-6-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	6	who	1235	WHO	kwin3	kwin3	k w i n ə	false
+629	ADORA-16-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	16	woman	962	WOMAN	esa	esa	e s ɐ	false
+630	ADORA-89-1	ADORA	ADORA	airo1242	Airoran	Greater Kwerba	Kwerba-Samarokena	Samarokena-Airoran	False	89	yellow	1424	YELLOW	tima	tima	t i m ɐ	false

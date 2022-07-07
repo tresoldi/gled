@@ -1,23 +1,107 @@
 ID	ASJP_ID	DOCULECT	LANGUAGE_NAME	GLOTTOCODE	GLOTTOLOG_NAME	LANGUAGE_LINEAGE_0	LANGUAGE_LINEAGE_1	LANGUAGE_LINEAGE_2	LANGUAGE_ISOLATE	PARAMETER_ID	CONCEPT	CONCEPTICON_ID	CONCEPTICON_GLOSS	VALUE	FORM	TOKENS	LOAN
-1	KARON_DORI-1-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	1	*I	1209	I	tuo	tuo	t u o	false
-2	KARON_DORI-30-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	30	*blood	946	BLOOD	mes	mes	m e s	false
-3	KARON_DORI-31-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	31	*bone	1394	BONE	beti	beti	b e t i	false
-4	KARON_DORI-66-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	66	*come	1446	COME	nama	nama	n ɐ m ɐ	false
-5	KARON_DORI-21-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	21	*dog	2009	DOG	dag	dag	d ɐ g	false
-6	KARON_DORI-40-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	40	*eye	1248	EYE	pesu	pesu	p e s u	false
-7	KARON_DORI-82-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	82	*fire	221	FIRE	tafok	tafok	t ɐ f o k	false
-8	KARON_DORI-48-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	48	*hand	1277	HAND	petem	petem	p e t e m	false
-9	KARON_DORI-22-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	22	*louse	1392	LOUSE	xate	xate	x ɐ t e	false
-10	KARON_DORI-100-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	100	*name	1405	NAME	masom	masom	m ɐ s o m	false
-11	KARON_DORI-92-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	92	*night	1233	NIGHT	meti	meti	m e t i	false
-12	KARON_DORI-11-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	11	*one	1493	ONE	sow	sow	s o w	false
-13	KARON_DORI-57-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	57	*see	1409	SEE	Ngeiti	Ngeiti	ŋ g e i t i	false
-14	KARON_DORI-28-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	28	*skin	763	SKIN	rak	rak	r ɐ k	false
-15	KARON_DORI-77-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	77	*stone	857	STONE	fra	fra	f r ɐ	false
-16	KARON_DORI-72-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	72	*sun	1343	SUN	ayo	ayo	ɐ j o	false
-17	KARON_DORI-43-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	43	*tooth	1380	TOOTH	pesyen	pesyen	p e s j e n	false
-18	KARON_DORI-23-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	23	*tree	906	TREE	ara	ara	ɐ r ɐ	false
-19	KARON_DORI-12-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	12	*two	1498	TWO	ai	ai	ɐ i	false
-20	KARON_DORI-75-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	75	*water	948	WATER	aya	aya	ɐ j ɐ	false
-21	KARON_DORI-3-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	3	*we	1212	WE	anu	anu	ɐ n u	false
-22	KARON_DORI-2-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	2	*you	1215	THOU	nuo	nuo	n u o	false
+1	MAI_BRAT-1-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	1	*I	1209	I	tuo	tuo	t u o	false
+2	MAI_BRAT-1-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	1	*I	1209	I	tuwo	tuwo	t u w o	false
+3	MAI_BRAT-30-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	30	*blood	946	BLOOD	mes	mes	m e s	false
+4	MAI_BRAT-31-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	31	*bone	1394	BONE	tai	tai	t ɐ i	false
+5	MAI_BRAT-31-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	31	*bone	1394	BONE	tayi	tayi	t ɐ j i	false
+6	MAI_BRAT-51-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	51	*breasts	1402	BREAST	sis	sis	s i s	false
+7	MAI_BRAT-66-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	66	*come	1446	COME	ama	ama	ɐ m ɐ	false
+8	MAI_BRAT-61-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	61	*die	1494	DIE	hai	hai	h ɐ i	false
+9	MAI_BRAT-61-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	61	*die	1494	DIE	hayi	hayi	h ɐ j i	false
+10	MAI_BRAT-21-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	21	*dog	2009	DOG	mtax	mtax	m t ɐ x	false
+11	MAI_BRAT-21-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	21	*dog	2009	DOG	mtah	mtah	m t ɐ h	false
+12	MAI_BRAT-54-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	54	*drink	1401	DRINK	ata	ata	ɐ t ɐ	false
+13	MAI_BRAT-39-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	39	*ear	1247	EAR	imara	imara	i m ɐ r ɐ	false
+14	MAI_BRAT-82-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	82	*fire	221	FIRE	tafox	tafox	t ɐ f o x	false
+15	MAI_BRAT-82-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	82	*fire	221	FIRE	tafoh	tafoh	t ɐ f o h	false
+16	MAI_BRAT-19-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	19	*fish	227	FISH	sa	sa	s ɐ	false
+17	MAI_BRAT-95-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	95	*full	1429	FULL	atot	atot	ɐ t o t	false
+18	MAI_BRAT-58-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	58	*hear	1408	HEAR	ari	ari	ɐ r i	false
+19	MAI_BRAT-25-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	25	*leaf	628	LEAF	ata	ata	ɐ t ɐ	false
+20	MAI_BRAT-25-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	25	*leaf	628	LEAF	ita	ita	i t ɐ	false
+21	MAI_BRAT-22-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	22	*louse	1392	LOUSE	hate	hate	h ɐ t e	false
+22	MAI_BRAT-22-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	22	*louse	1392	LOUSE	s3ruom	s3ruom	s ə r u o m	false
+23	MAI_BRAT-86-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	86	*mountain	639	MOUNTAIN	atu	atu	ɐ t u	false
+24	MAI_BRAT-86-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	86	*mountain	639	MOUNTAIN	wiam	wiam	w i ɐ m	false
+25	MAI_BRAT-100-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	100	*name	1405	NAME	asom	asom	ɐ s o m	false
+26	MAI_BRAT-92-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	92	*night	1233	NIGHT	mti	mti	m t i	false
+27	MAI_BRAT-41-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	41	*nose	1221	NOSE	naif	naif	n ɐ i f	false
+28	MAI_BRAT-41-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	41	*nose	1221	NOSE	nayif	nayif	n ɐ j i f	false
+29	MAI_BRAT-11-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	11	*one	1493	ONE	sau	sau	s ɐ u	false
+30	MAI_BRAT-11-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	11	*one	1493	ONE	s	s	s	false
+31	MAI_BRAT-85-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	85	*path	2252	PATH	iso	iso	i s o	false
+32	MAI_BRAT-18-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	18	*person	683	PERSON	rae	rae	r ɐ e	false
+33	MAI_BRAT-57-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	57	*see	1409	SEE	he	he	h e	false
+34	MAI_BRAT-57-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	57	*see	1409	SEE	xe	xe	x e	false
+35	MAI_BRAT-74-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	74	*star	1430	STAR	sken	sken	s k e n	false
+36	MAI_BRAT-77-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	77	*stone	857	STONE	fra	fra	f r ɐ	false
+37	MAI_BRAT-72-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	72	*sun	1343	SUN	isie	isie	i s i e	false
+38	MAI_BRAT-72-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	72	*sun	1343	SUN	ayo	ayo	ɐ j o	false
+39	MAI_BRAT-44-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	44	*tongue	1205	TONGUE	hreha	hreha	h r e h ɐ	false
+40	MAI_BRAT-44-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	44	*tongue	1205	TONGUE	xrexa	xrexa	x r e x ɐ	false
+41	MAI_BRAT-43-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	43	*tooth	1380	TOOTH	apat	apat	ɐ p ɐ t	false
+42	MAI_BRAT-43-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	43	*tooth	1380	TOOTH	pat	pat	p ɐ t	false
+43	MAI_BRAT-23-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	23	*tree	906	TREE	ara	ara	ɐ r ɐ	false
+44	MAI_BRAT-12-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	12	*two	1498	TWO	eok	eok	e o k	false
+45	MAI_BRAT-12-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	12	*two	1498	TWO	ewok	ewok	e w o k	false
+46	MAI_BRAT-75-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	75	*water	948	WATER	aya	aya	ɐ j ɐ	false
+47	MAI_BRAT-3-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	3	*we	1212	WE	amu	amu	ɐ m u	false
+48	MAI_BRAT-3-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	3	*we	1212	WE	p	p	p	false
+49	MAI_BRAT-2-1	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	2	*you	1215	THOU	nuo	nuo	n u o	false
+50	MAI_BRAT-2-2	MAI_BRAT	MAI_BRAT	maib1239	Maybrat-Karon				True	2	*you	1215	THOU	n	n	n	false
+51	KARON_DORI-1-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	1	*I	1209	I	tuo	tuo	t u o	false
+52	KARON_DORI_2-1-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	1	*I	1209	I	tuo	tuo	t u o	false
+53	KARON_DORI-30-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	30	*blood	946	BLOOD	mes	mes	m e s	false
+54	KARON_DORI_2-30-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	30	*blood	946	BLOOD	mees	mees	m e e s	false
+55	KARON_DORI-31-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	31	*bone	1394	BONE	beti	beti	b e t i	false
+56	KARON_DORI_2-31-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	31	*bone	1394	BONE	patay	patay	p ɐ t ɐ j	false
+57	KARON_DORI-66-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	66	*come	1446	COME	nama	nama	n ɐ m ɐ	false
+58	KARON_DORI_2-66-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	66	*come	1446	COME	nama	nama	n ɐ m ɐ	false
+59	KARON_DORI-21-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	21	*dog	2009	DOG	dag	dag	d ɐ g	false
+60	KARON_DORI_2-21-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	21	*dog	2009	DOG	meetax	meetax	m e e t ɐ x	false
+61	KARON_DORI-40-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	40	*eye	1248	EYE	pesu	pesu	p e s u	false
+62	KARON_DORI_2-40-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	40	*eye	1248	EYE	takan	takan	t ɐ k ɐ n	false
+63	KARON_DORI-82-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	82	*fire	221	FIRE	tafok	tafok	t ɐ f o k	false
+64	KARON_DORI_2-82-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	82	*fire	221	FIRE	kan	kan	k ɐ n	false
+65	KARON_DORI-48-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	48	*hand	1277	HAND	petem	petem	p e t e m	false
+66	KARON_DORI-22-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	22	*louse	1392	LOUSE	xate	xate	x ɐ t e	false
+67	KARON_DORI_2-22-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	22	*louse	1392	LOUSE	xatee	xatee	x ɐ t e e	false
+68	KARON_DORI-100-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	100	*name	1405	NAME	masom	masom	m ɐ s o m	false
+69	KARON_DORI_2-100-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	100	*name	1405	NAME	tasom	tasom	t ɐ s o m	false
+70	KARON_DORI-92-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	92	*night	1233	NIGHT	meti	meti	m e t i	false
+71	KARON_DORI_2-92-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	92	*night	1233	NIGHT	ati	ati	ɐ t i	false
+72	KARON_DORI-11-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	11	*one	1493	ONE	sow	sow	s o w	false
+73	KARON_DORI_2-11-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	11	*one	1493	ONE	saw	saw	s ɐ w	false
+74	KARON_DORI-57-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	57	*see	1409	SEE	Ngeiti	Ngeiti	ŋ g e i t i	false
+75	KARON_DORI_2-57-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	57	*see	1409	SEE	neexe	neexe	n e e x e	false
+76	KARON_DORI-28-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	28	*skin	763	SKIN	rak	rak	r ɐ k	false
+77	KARON_DORI_2-28-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	28	*skin	763	SKIN	tarak	tarak	t ɐ r ɐ k	false
+78	KARON_DORI-77-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	77	*stone	857	STONE	fra	fra	f r ɐ	false
+79	KARON_DORI_2-77-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	77	*stone	857	STONE	fra	fra	f r ɐ	false
+80	KARON_DORI-72-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	72	*sun	1343	SUN	ayo	ayo	ɐ j o	false
+81	KARON_DORI_2-72-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	72	*sun	1343	SUN	ayom	ayom	ɐ j o m	false
+82	KARON_DORI-43-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	43	*tooth	1380	TOOTH	pesyen	pesyen	p e s j e n	false
+83	KARON_DORI_2-43-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	43	*tooth	1380	TOOTH	yeepat	yeepat	j e e p ɐ t	false
+84	KARON_DORI-23-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	23	*tree	906	TREE	ara	ara	ɐ r ɐ	false
+85	KARON_DORI_2-23-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	23	*tree	906	TREE	ara	ara	ɐ r ɐ	false
+86	KARON_DORI-12-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	12	*two	1498	TWO	ai	ai	ɐ i	false
+87	KARON_DORI_2-12-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	12	*two	1498	TWO	ayok	ayok	ɐ j o k	false
+88	KARON_DORI-75-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	75	*water	948	WATER	aya	aya	ɐ j ɐ	false
+89	KARON_DORI_2-75-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	75	*water	948	WATER	aya	aya	ɐ j ɐ	false
+90	KARON_DORI-3-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	3	*we	1212	WE	anu	anu	ɐ n u	false
+91	KARON_DORI_2-3-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	3	*we	1212	WE	amu	amu	ɐ m u	false
+92	KARON_DORI-2-1	KARON_DORI	KARON_DORI	karo1303	Karon Dori	Maybrat-Karon			False	2	*you	1215	THOU	nuo	nuo	n u o	false
+93	KARON_DORI_2-2-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	2	*you	1215	THOU	nuwo	nuwo	n u w o	false
+94	KARON_DORI_2-83-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	83	ash	646	ASH	asiees	asiees	ɐ s i e e s	false
+95	KARON_DORI_2-20-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	20	bird	937	BIRD	eru	eru	e r u	false
+96	KARON_DORI_2-91-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	91	black	163	BLACK	genu	genu	g e n u	false
+97	KARON_DORI_2-55-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	55	eat	1336	EAT	tayt	tayt	t ɐ j t	false
+98	KARON_DORI_2-33-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	33	egg	744	EGG	yayuf	yayuf	j ɐ j u f	false
+99	KARON_DORI_2-70-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	70	give	1447	GIVE	tee	tee	t e e	false
+100	KARON_DORI_2-97-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	97	good	1035	GOOD	mof	mof	m o f	false
+101	KARON_DORI_2-37-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	37	hair	1040	HAIR	mauwyan	mauwyan	m ɐ u w j ɐ n	false
+102	KARON_DORI_2-38-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	38	head	1256	HEAD	tana	tana	t ɐ n ɐ	false
+103	KARON_DORI_2-17-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	17	man	1554	MAN	raysmi	raysmi	r ɐ j s m i	false
+104	KARON_DORI_2-68-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	68	sit	1416	SIT	xoren	xoren	x o r e n	false
+105	KARON_DORI_2-60-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	60	sleep	1585	SLEEP	tidiin	tidiin	t i d i i n	false
+106	KARON_DORI_2-35-1	KARON_DORI_2	KARON_DORI_2	karo1303	Karon Dori	Maybrat-Karon			False	35	tail	1220	TAIL	sawyax	sawyax	s ɐ w j ɐ x	false

@@ -1,25 +1,25 @@
 # A Global Lexical Dataset (GLED) with cognate annotation and phonological alignments
 
-[![Release](https://img.shields.io/badge/Release-20220706-informational)](https://img.shields.io/badge/Release-20220706-informational)
-[![Lemmas](https://img.shields.io/badge/Lemmas-275894-success)](https://img.shields.io/badge/Lemmas-275894-success)
-[![Languages](https://img.shields.io/badge/Languages-6449-success)](https://img.shields.io/badge/Languages-6449-success)
-[![Languages](https://img.shields.io/badge/Families-238-success)](https://img.shields.io/badge/Families-238-success)
-[![Cognatesets](https://img.shields.io/badge/Cognatesets-89575-success)](https://img.shields.io/badge/Cognatesets-89575-success)
-[![Tokens](https://img.shields.io/badge/Tokens-2064717-success)](https://img.shields.io/badge/Tokens-2064717-success)
+[![Release](https://img.shields.io/badge/Release-20220707-informational)](https://img.shields.io/badge/Release-20220707-informational)
+[![Lemmas](https://img.shields.io/badge/Lemmas-286054-success)](https://img.shields.io/badge/Lemmas-286054-success)
+[![Languages](https://img.shields.io/badge/Languages-6654-success)](https://img.shields.io/badge/Languages-6654-success)
+[![Languages](https://img.shields.io/badge/Families-388-success)](https://img.shields.io/badge/Families-388-success)
+[![Cognatesets](https://img.shields.io/badge/Cognatesets-97906-success)](https://img.shields.io/badge/Cognatesets-97906-success)
+[![Tokens](https://img.shields.io/badge/Tokens-2148614-success)](https://img.shields.io/badge/Tokens-2148614-success)
 
 [![CC-BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
 [![DOI](https://zenodo.org/badge/452418748.svg)](https://zenodo.org/badge/latestdoi/452418748)
 
 ## Statistics
 
-The 20220706 release comprises:
+The 20220707 release comprises:
 
-  - Entries: 275894
-  - Doculects: 6449
-  - Families: 238
-  - Cognate sets: 89575
-  - Tokens: 2064717
-  - Mean cognate set size: 3.08
+  - Entries: 286054
+  - Doculects: 6654
+  - Families: 388
+  - Cognate sets: 97906
+  - Tokens: 2148614
+  - Mean cognate set size: 2.92
 
 
 ## Contents

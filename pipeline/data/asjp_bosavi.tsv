@@ -1,401 +1,500 @@
 ID	ASJP_ID	DOCULECT	LANGUAGE_NAME	GLOTTOCODE	GLOTTOLOG_NAME	LANGUAGE_LINEAGE_0	LANGUAGE_LINEAGE_1	LANGUAGE_LINEAGE_2	LANGUAGE_ISOLATE	PARAMETER_ID	CONCEPT	CONCEPTICON_ID	CONCEPTICON_GLOSS	VALUE	FORM	TOKENS	LOAN
 1	AIMELE-1-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	1	*I	1209	I	ne	ne	n e	false
 2	KASUA-1-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	1	*I	1209	I	newa	newa	n e w ɐ	false
-3	ONABASULU-1-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	1	*I	1209	I	na	na	n ɐ	false
-4	AIMELE-30-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	30	*blood	946	BLOOD	omani	omani	o m ɐ n i	false
-5	KASUA-30-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	30	*blood	946	BLOOD	pepeta	pepeta	p e p e t ɐ	false
-6	ONABASULU-30-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	30	*blood	946	BLOOD	ibi	ibi	i b i	false
-7	AIMELE-31-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	31	*bone	1394	BONE	ki	ki	k i	false
-8	KASUA-31-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	31	*bone	1394	BONE	ki	ki	k i	false
-9	ONABASULU-31-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false
-10	AIMELE-51-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	51	*breasts	1402	BREAST	bu	bu	b u	false
-11	KASUA-51-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	51	*breasts	1402	BREAST	po	po	p o	false
-12	ONABASULU-51-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	51	*breasts	1402	BREAST	bu	bu	b u	false
-13	AIMELE-66-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	66	*come	1446	COME	yabe	yabe	j ɐ b e	false
-14	KASUA-66-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	66	*come	1446	COME	mina	mina	m i n ɐ	false
-15	ONABASULU-66-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	66	*come	1446	COME	mila	mila	m i l ɐ	false
-16	KASUA-61-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	61	*die	1494	DIE	kulu	kulu	k u l u	false
-17	AIMELE-21-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	21	*dog	2009	DOG	a*gi	a*gi	ɐ̃ g i	false
-18	KASUA-21-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	21	*dog	2009	DOG	kasolo	kasolo	k ɐ s o l o	false
-19	ONABASULU-21-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	21	*dog	2009	DOG	keso	keso	k e s o	false
-20	KASUA-54-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	54	*drink	1401	DRINK	mEnE	mEnE	m a n a	false
-21	AIMELE-39-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	39	*ear	1247	EAR	keleni	keleni	k e l e n i	false
-22	KASUA-39-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	39	*ear	1247	EAR	kenEne	kenEne	k e n a n e	false
-23	ONABASULU-39-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	39	*ear	1247	EAR	koheni	koheni	k o h e n i	false
-24	AIMELE-40-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	40	*eye	1248	EYE	si	si	s i	false
-25	KASUA-40-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	40	*eye	1248	EYE	si	si	s i	false
-26	ONABASULU-40-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	40	*eye	1248	EYE	si	si	s i	false
-27	AIMELE-82-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	82	*fire	221	FIRE	di	di	d i	false
-28	KASUA-82-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	82	*fire	221	FIRE	tei	tei	t e i	false
-29	ONABASULU-82-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	82	*fire	221	FIRE	ti	ti	t i	false
-30	AIMELE-19-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	19	*fish	227	FISH	komolu	komolu	k o m o l u	false
-31	KASUA-19-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	19	*fish	227	FISH	ewalo	ewalo	e w ɐ l o	false
-32	ONABASULU-19-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	19	*fish	227	FISH	hani	hani	h ɐ n i	false
-33	KASUA-95-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	95	*full	1429	FULL	woliyeti	woliyeti	w o l i j e t i	false
-34	ONABASULU-95-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	95	*full	1429	FULL	wasiga*nu	wasiga*nu	w ɐ s i g ɐ̃ n u	false
-35	AIMELE-48-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	48	*hand	1277	HAND	debe	debe	d e b e	false
-36	KASUA-48-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	48	*hand	1277	HAND	tiyEle	tiyEle	t i j a l e	false
-37	ONABASULU-48-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	48	*hand	1277	HAND	sone	sone	s o n e	false
-38	AIMELE-58-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	58	*hear	1408	HEAR	deba	deba	d e b ɐ	false
-39	KASUA-58-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	58	*hear	1408	HEAR	topu	topu	t o p u	false
-40	ONABASULU-58-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	58	*hear	1408	HEAR	to	to	t o	false
-41	KASUA-34-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	34	*horn	1393	HORN (ANATOMY)	belo	belo	b e l o	false
-42	AIMELE-47-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	47	*knee	1371	KNEE	gulu	gulu	g u l u	false
-43	KASUA-47-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	47	*knee	1371	KNEE	kuniu	kuniu	k u n i u	false
-44	ONABASULU-47-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	47	*knee	1371	KNEE	hogonomo	hogonomo	h o g o n o m o	false
-45	AIMELE-25-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	25	*leaf	628	LEAF	yefo	yefo	j e f o	false
-46	KASUA-25-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	25	*leaf	628	LEAF	i falo	i falo	i f ɐ l o	false
-47	ONABASULU-25-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	25	*leaf	628	LEAF	iwalu	iwalu	i w ɐ l u	false
-48	KASUA-53-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	53	*liver	1224	LIVER	hau	hau	h ɐ u	false
-49	AIMELE-22-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	22	*louse	1392	LOUSE	tede	tede	t e d e	false
-50	KASUA-22-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	22	*louse	1392	LOUSE	fei	fei	f e i	false
-51	ONABASULU-22-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	22	*louse	1392	LOUSE	fe*	fe*	f ẽ	false
-52	AIMELE-86-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	86	*mountain	639	MOUNTAIN	doma	doma	d o m ɐ	false
-53	KASUA-86-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	86	*mountain	639	MOUNTAIN	tokomo	tokomo	t o k o m o	false
-54	ONABASULU-86-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	86	*mountain	639	MOUNTAIN	gali	gali	g ɐ l i	false
-55	AIMELE-100-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	100	*name	1405	NAME	wi	wi	w i	false
-56	KASUA-100-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	100	*name	1405	NAME	unuwa	unuwa	u n u w ɐ	false
-57	ONABASULU-100-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	100	*name	1405	NAME	wi	wi	w i	false
-58	AIMELE-96-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	96	*new	1231	NEW	hi	hi	h i	false
-59	KASUA-96-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	96	*new	1231	NEW	hili	hili	h i l i	false
-60	ONABASULU-96-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	96	*new	1231	NEW	hili	hili	h i l i	false
-61	AIMELE-92-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	92	*night	1233	NIGHT	solodiyabe	solodiyabe	s o l o d i j ɐ b e	false
-62	KASUA-92-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	92	*night	1233	NIGHT	yopolotela	yopolotela	j o p o l o t e l ɐ	false
-63	ONABASULU-92-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	92	*night	1233	NIGHT	nigili	nigili	n i g i l i	false
-64	AIMELE-41-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	41	*nose	1221	NOSE	migi	migi	m i g i	false
-65	KASUA-41-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	41	*nose	1221	NOSE	mi	mi	m i	false
-66	ONABASULU-41-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	41	*nose	1221	NOSE	mi*	mi*	m ĩ	false
-67	AIMELE-11-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	11	*one	1493	ONE	ageli	ageli	ɐ g e l i	false
-68	KASUA-11-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	11	*one	1493	ONE	semetei	semetei	s e m e t e i	false
-69	ONABASULU-11-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	11	*one	1493	ONE	agale	agale	ɐ g ɐ l e	false
-70	AIMELE-85-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	85	*path	2252	PATH	togolo	togolo	t o g o l o	false
-71	KASUA-85-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	85	*path	2252	PATH	isu	isu	i s u	false
-72	ONABASULU-85-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	85	*path	2252	PATH	eno	eno	e n o	false
-73	AIMELE-18-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	18	*person	683	PERSON	kolu	kolu	k o l u	false
-74	KASUA-18-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	18	*person	683	PERSON	sena kesale	sena kesale	s e n ɐ k e s ɐ l e	false
-75	ONABASULU-18-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	18	*person	683	PERSON	inolo	inolo	i n o l o	false
-76	AIMELE-57-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	57	*see	1409	SEE	bobo	bobo	b o b o	false
-77	KASUA-57-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	57	*see	1409	SEE	pota	pota	p o t ɐ	false
-78	ONABASULU-57-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	57	*see	1409	SEE	ba	ba	b ɐ	false
-79	AIMELE-28-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	28	*skin	763	SKIN	ka*fu	ka*fu	k ɐ̃ f u	false
-80	KASUA-28-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	28	*skin	763	SKIN	kapo	kapo	k ɐ p o	false
-81	ONABASULU-28-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	28	*skin	763	SKIN	tomola	tomola	t o m o l ɐ	false
-82	AIMELE-74-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	74	*star	1430	STAR	bilimu	bilimu	b i l i m u	false
-83	KASUA-74-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	74	*star	1430	STAR	yepisini	yepisini	j e p i s i n i	false
-84	ONABASULU-74-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	74	*star	1430	STAR	sigabi	sigabi	s i g ɐ b i	false
-85	AIMELE-77-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	77	*stone	857	STONE	doa	doa	d o ɐ	false
-86	KASUA-77-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	77	*stone	857	STONE	etewa	etewa	e t e w ɐ	false
-87	ONABASULU-77-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	77	*stone	857	STONE	abane	abane	ɐ b ɐ n e	false
-88	AIMELE-72-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	72	*sun	1343	SUN	ofo	ofo	o f o	false
-89	KASUA-72-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	72	*sun	1343	SUN	opo	opo	o p o	false
-90	ONABASULU-72-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	72	*sun	1343	SUN	holo	holo	h o l o	false
-91	AIMELE-44-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	44	*tongue	1205	TONGUE	dabise*	dabise*	d ɐ b i s ẽ	false
-92	KASUA-44-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	44	*tongue	1205	TONGUE	tepe	tepe	t e p e	false
-93	ONABASULU-44-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	44	*tongue	1205	TONGUE	Eane	Eane	a ɐ n e	false
-94	AIMELE-43-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	43	*tooth	1380	TOOTH	bisi	bisi	b i s i	false
-95	KASUA-43-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
-96	ONABASULU-43-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
-97	AIMELE-23-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	23	*tree	906	TREE	yebe	yebe	j e b e	false
-98	KASUA-23-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	23	*tree	906	TREE	i	i	i	false
-99	ONABASULU-23-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	23	*tree	906	TREE	i	i	i	false
-100	AIMELE-12-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	12	*two	1498	TWO	ageleweli	ageleweli	ɐ g e l e w e l i	false
-101	KASUA-12-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	12	*two	1498	TWO	elipei	elipei	e l i p e i	false
-102	ONABASULU-12-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	12	*two	1498	TWO	aida	aida	ɐ i d ɐ	false
-103	AIMELE-75-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	75	*water	948	WATER	ha*ni	ha*ni	h ɐ̃ n i	false
-104	KASUA-75-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	75	*water	948	WATER	hano	hano	h ɐ n o	false
-105	ONABASULU-75-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	75	*water	948	WATER	hano	hano	h ɐ n o	false
-106	AIMELE-3-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	3	*we	1212	WE	ni	ni	n i	false
-107	KASUA-3-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	3	*we	1212	WE	niwa	niwa	n i w ɐ	false
-108	ONABASULU-3-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	3	*we	1212	WE	nini	nini	n i n i	false
-109	AIMELE-2-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	2	*you	1215	THOU	ge	ge	g e	false
-110	KASUA-2-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	2	*you	1215	THOU	kewa	kewa	k e w ɐ	false
-111	ONABASULU-2-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	2	*you	1215	THOU	ka	ka	k ɐ	false
-112	KALULI-1-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	1	*I	1209	I	ne	ne	n e	false
-113	SUNIA-1-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	1	*I	1209	I	ne	ne	n e	false
-114	BOSAVI-30-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	30	*blood	946	BLOOD	hobo	hobo	h o b o	false
-115	KALULI-30-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	30	*blood	946	BLOOD	hobo	hobo	h o b o	false
-116	SUNIA-30-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	30	*blood	946	BLOOD	hobo	hobo	h o b o	false
-117	BOSAVI-31-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	31	*bone	1394	BONE	ki	ki	k i	false
-118	KALULI-31-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	31	*bone	1394	BONE	kh~i	kh~i	kʰ i	false
-119	SUNIA-31-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	31	*bone	1394	BONE	uku	uku	u k u	false
-120	BOSAVI-51-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	51	*breasts	1402	BREAST	bo	bo	b o	false
-121	KALULI-51-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	51	*breasts	1402	BREAST	bo	bo	b o	false
-122	SUNIA-51-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	51	*breasts	1402	BREAST	bo	bo	b o	false
-123	BOSAVI-66-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	mena	mena	m e n ɐ	false
-124	BOSAVI-66-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	yabi	yabi	j ɐ b i	false
-125	BOSAVI-66-3	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	miano	miano	m i ɐ n o	false
-126	BOSAVI-66-4	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	miyo	miyo	m i j o	false
-127	KALULI-66-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	mene	mene	m e n e	false
-128	KALULI-66-2	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	mio	mio	m i o	false
-129	SUNIA-66-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	meno	meno	m e n o	false
-130	BOSAVI-61-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	soma	soma	s o m ɐ	false
-131	BOSAVI-61-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	sowabi	sowabi	s o w ɐ b i	false
-132	BOSAVI-61-3	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	somano	somano	s o m ɐ n o	false
-133	BOSAVI-61-4	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	sowo	sowo	s o w o	false
-134	KALULI-61-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	someno	someno	s o m e n o	false
-135	KALULI-61-2	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	sowo	sowo	s o w o	false
-136	BOSAVI-21-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	21	*dog	2009	DOG	gasa	gasa	g ɐ s ɐ	false
-137	KALULI-21-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	21	*dog	2009	DOG	kasa	kasa	k ɐ s ɐ	false
-138	SUNIA-21-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	21	*dog	2009	DOG	wEi	wEi	w a i	false
-139	BOSAVI-54-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	maya	maya	m ɐ j ɐ	false
-140	BOSAVI-54-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	nabi	nabi	n ɐ b i	false
-141	BOSAVI-54-3	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mano	mano	m ɐ n o	false
-142	BOSAVI-54-4	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mono	mono	m o n o	false
-143	KALULI-54-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mano	mano	m ɐ n o	false
-144	KALULI-54-2	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mono	mono	m o n o	false
-145	KALULI-39-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	39	*ear	1247	EAR	kh~alan	kh~alan	kʰ ɐ l ɐ n	false
-146	SUNIA-39-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	39	*ear	1247	EAR	ekadem	ekadem	e k ɐ d e m	false
-147	BOSAVI-40-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	40	*eye	1248	EYE	si	si	s i	false
-148	KALULI-40-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	40	*eye	1248	EYE	si	si	s i	false
-149	SUNIA-40-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	40	*eye	1248	EYE	si	si	s i	false
-150	BOSAVI-82-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	82	*fire	221	FIRE	de	de	d e	false
-151	KALULI-82-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	82	*fire	221	FIRE	te	te	t e	false
-152	SUNIA-82-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	82	*fire	221	FIRE	de	de	d e	false
-153	BOSAVI-19-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	19	*fish	227	FISH	ka	ka	k ɐ	false
-154	KALULI-19-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	19	*fish	227	FISH	kh~e	kh~e	kʰ e	false
-155	SUNIA-19-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	19	*fish	227	FISH	douba	douba	d o u b ɐ	false
-156	BOSAVI-95-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	95	*full	1429	FULL	walifo	walifo	w ɐ l i f o	false
-157	KALULI-95-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	95	*full	1429	FULL	walifo	walifo	w ɐ l i f o	false
-158	SUNIA-95-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	95	*full	1429	FULL	ugodo	ugodo	u g o d o	false
-159	BOSAVI-48-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	48	*hand	1277	HAND	dagi	dagi	d ɐ g i	false
-160	KALULI-48-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	48	*hand	1277	HAND	taki	taki	t ɐ k i	false
-161	SUNIA-48-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	48	*hand	1277	HAND	dob	dob	d o b	false
-162	BOSAVI-58-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dabuma	dabuma	d ɐ b u m ɐ	false
-163	BOSAVI-58-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dadabi	dadabi	d ɐ d ɐ b i	false
-164	BOSAVI-58-3	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dabano	dabano	d ɐ b ɐ n o	false
-165	BOSAVI-58-4	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dabu	dabu	d ɐ b u	false
-166	KALULI-58-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	tapu	tapu	t ɐ p u	false
-167	SUNIA-58-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dobudo	dobudo	d o b u d o	false
-168	KALULI-34-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	34	*horn	1393	HORN (ANATOMY)	pis	pis	p i s	false
-169	BOSAVI-47-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	gulau	gulau	g u l ɐ u	false
-170	BOSAVI-47-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	gul	gul	g u l	false
-171	KALULI-47-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	kul	kul	k u l	false
-172	SUNIA-47-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	gut	gut	g u t	false
-173	BOSAVI-25-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	25	*leaf	628	LEAF	sogo	sogo	s o g o	false
-174	KALULI-25-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	25	*leaf	628	LEAF	fos	fos	f o s	false
-175	SUNIA-25-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	25	*leaf	628	LEAF	yofoS	yofoS	j o f o ʃ	false
-176	BOSAVI-53-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	53	*liver	1224	LIVER	yog	yog	j o g	false
-177	KALULI-53-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	53	*liver	1224	LIVER	yok	yok	j o k	false
-178	KALULI-22-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	22	*louse	1392	LOUSE	fe	fe	f e	false
-179	SUNIA-22-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	22	*louse	1392	LOUSE	fi	fi	f i	false
-180	BOSAVI-86-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	86	*mountain	639	MOUNTAIN	kugun	kugun	k u g u n	false
-181	KALULI-86-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	86	*mountain	639	MOUNTAIN	misio	misio	m i s i o	false
-182	SUNIA-86-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	86	*mountain	639	MOUNTAIN	muSio	muSio	m u ʃ i o	false
-183	BOSAVI-100-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	100	*name	1405	NAME	wi	wi	w i	false
-184	KALULI-100-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	100	*name	1405	NAME	wi	wi	w i	false
-185	SUNIA-100-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	100	*name	1405	NAME	imi	imi	i m i	false
-186	BOSAVI-96-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	96	*new	1231	NEW	hogi	hogi	h o g i	false
-187	KALULI-96-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	96	*new	1231	NEW	hoki	hoki	h o k i	false
-188	SUNIA-96-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	96	*new	1231	NEW	hi	hi	h i	false
-189	BOSAVI-92-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	92	*night	1233	NIGHT	nulu	nulu	n u l u	false
-190	KALULI-92-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	92	*night	1233	NIGHT	nulu	nulu	n u l u	false
-191	SUNIA-92-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	92	*night	1233	NIGHT	unudu	unudu	u n u d u	false
-192	BOSAVI-41-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	41	*nose	1221	NOSE	migi	migi	m i g i	false
-193	KALULI-41-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	41	*nose	1221	NOSE	miki	miki	m i k i	false
-194	SUNIA-41-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	41	*nose	1221	NOSE	miki	miki	m i k i	false
-195	BOSAVI-11-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	agel	agel	ɐ g e l	false
-196	KALULI-11-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	akel	akel	ɐ k e l	false
-197	KALULI-11-2	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	imilise	imilise	i m i l i s e	false
-198	SUNIA-11-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	itidi	itidi	i t i d i	false
-199	BOSAVI-85-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	85	*path	2252	PATH	sok	sok	s o k	false
-200	KALULI-85-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	85	*path	2252	PATH	th~ok	th~ok	tʰ o k	false
-201	SUNIA-85-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	85	*path	2252	PATH	tokor	tokor	t o k o r	false
-202	KALULI-18-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	18	*person	683	PERSON	kh~elu	kh~elu	kʰ e l u	false
-203	SUNIA-18-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	18	*person	683	PERSON	oseno	oseno	o s e n o	false
-204	BOSAVI-57-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	boba	boba	b o b ɐ	false
-205	BOSAVI-57-2	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	badabi	badabi	b ɐ d ɐ b i	false
-206	BOSAVI-57-3	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	babano	babano	b ɐ b ɐ n o	false
-207	BOSAVI-57-4	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	baba	baba	b ɐ b ɐ	false
-208	KALULI-57-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	papa	papa	p ɐ p ɐ	false
-209	SUNIA-57-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	bo	bo	b o	false
-210	BOSAVI-28-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	28	*skin	763	SKIN	dogof	dogof	d o g o f	false
-211	KALULI-28-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	28	*skin	763	SKIN	tokof	tokof	t o k o f	false
-212	SUNIA-28-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	28	*skin	763	SKIN	okof	okof	o k o f	false
-213	BOSAVI-74-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	74	*star	1430	STAR	samin	samin	s ɐ m i n	false
-214	KALULI-74-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	74	*star	1430	STAR	th~amin	th~amin	tʰ ɐ m i n	false
-215	SUNIA-74-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	74	*star	1430	STAR	themi	themi	t h e m i	false
-216	KALULI-77-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	77	*stone	857	STONE	u	u	u	false
-217	SUNIA-77-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	77	*stone	857	STONE	ka	ka	k ɐ	false
-218	BOSAVI-72-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	72	*sun	1343	SUN	of	of	o f	false
-219	KALULI-72-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	72	*sun	1343	SUN	of	of	o f	false
-220	SUNIA-72-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	72	*sun	1343	SUN	of	of	o f	false
-221	BOSAVI-44-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	44	*tongue	1205	TONGUE	eyan	eyan	e j ɐ n	false
-222	KALULI-44-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	44	*tongue	1205	TONGUE	en	en	e n	false
-223	SUNIA-44-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	44	*tongue	1205	TONGUE	tobise	tobise	t o b i s e	false
-224	BOSAVI-43-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	43	*tooth	1380	TOOTH	bes	bes	b e s	false
-225	KALULI-43-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	43	*tooth	1380	TOOTH	pis	pis	p i s	false
-226	SUNIA-43-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	43	*tooth	1380	TOOTH	oneno	oneno	o n e n o	false
-227	BOSAVI-23-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	23	*tree	906	TREE	i	i	i	false
-228	KALULI-23-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	23	*tree	906	TREE	i	i	i	false
-229	SUNIA-23-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	23	*tree	906	TREE	yep	yep	j e p	false
-230	BOSAVI-12-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	andeb	andeb	ɐ n d e b	false
-231	KALULI-12-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	atep	atep	ɐ t e p	false
-232	KALULI-12-2	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	ele	ele	e l e	false
-233	SUNIA-12-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	ani	ani	ɐ n i	false
-234	BOSAVI-75-1	BOSAVI	BOSAVI	*bosavi	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	75	*water	948	WATER	hon	hon	h o n	false
-235	KALULI-75-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	75	*water	948	WATER	hon	hon	h o n	false
-236	SUNIA-75-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	75	*water	948	WATER	mo*	mo*	m õ	false
-237	KALULI-3-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	3	*we	1212	WE	nio	nio	n i o	false
-238	SUNIA-3-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	3	*we	1212	WE	niLi	niLi	n i ʎ i	false
-239	KALULI-2-1	KALULI	KALULI	*kaluli	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	2	*you	1215	THOU	ke	ke	k e	false
-240	SUNIA-2-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	2	*you	1215	THOU	ge	ge	g e	false
-241	BEAMI-1-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	ne	ne	n e	false
-242	BEDAMINI-1-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	na	na	n ɐ	false
-243	EDOLO-1-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	ne	ne	n e	false
-244	ETORO-1-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	ne	ne	n e	false
-245	BEAMI-30-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	hiole	hiole	h i o l e	false
-246	BEDAMINI-30-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	h3le	h3le	h ə l e	false
-247	EDOLO-30-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	heale	heale	h e ɐ l e	false
-248	ETORO-30-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	hiole	hiole	h i o l e	false
-249	BEAMI-31-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false
-250	BEDAMINI-31-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kasa	kasa	k ɐ s ɐ	false
-251	BEDAMINI-31-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	koso	koso	k o s o	false
-252	EDOLO-31-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false
-253	ETORO-31-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false
-254	BEAMI-51-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false
-255	BEDAMINI-51-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false
-256	EDOLO-51-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false
-257	ETORO-51-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false
-258	BEAMI-66-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	masipe	masipe	m ɐ s i p e	false
-259	BEDAMINI-66-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	misa	misa	m i s ɐ	false
-260	EDOLO-66-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	ma	ma	m ɐ	false
-261	ETORO-66-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	masipe	masipe	m ɐ s i p e	false
-262	EDOLO-61-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	61	*die	1494	DIE	pako	pako	p ɐ k o	false
-263	BEAMI-21-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	ogono	ogono	o g o n o	false
-264	BEDAMINI-21-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	wame	wame	w ɐ m e	false
-265	BEDAMINI-21-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	w3me	w3me	w ə m e	false
-266	EDOLO-21-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	u*ku*lo	u*ku*lo	ũ k ũ l o	false
-267	ETORO-21-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	ogono	ogono	o g o n o	false
-268	EDOLO-54-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	54	*drink	1401	DRINK	naha	naha	n ɐ h ɐ	false
-269	BEAMI-39-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	kahe	kahe	k ɐ h e	false
-270	BEDAMINI-39-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	ka*	ka*	k ɐ̃	false
-271	EDOLO-39-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	ke*he	ke*he	k ẽ h e	false
-272	ETORO-39-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	kEhe	kEhe	k a h e	false
-273	BEAMI-40-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false
-274	BEDAMINI-40-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false
-275	EDOLO-40-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false
-276	ETORO-40-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false
-277	BEAMI-82-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nulu	nulu	n u l u	false
-278	BEDAMINI-82-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	daru	daru	d ɐ r u	false
-279	BEDAMINI-82-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nalu	nalu	n ɐ l u	false
-280	EDOLO-82-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nulo	nulo	n u l o	false
-281	ETORO-82-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nuLu	nuLu	n u ʎ u	false
-282	BEAMI-19-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	seme	seme	s e m e	false
-283	BEDAMINI-19-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	ai	ai	ɐ i	false
-284	EDOLO-19-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	seme	seme	s e m e	false
-285	EDOLO-19-2	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	a*i	a*i	ɐ̃ i	false
-286	ETORO-19-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	seme	seme	s e m e	false
-287	BEAMI-95-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	wa*la*sube	wa*la*sube	w ɐ̃ l ɐ̃ s u b e	false
-288	BEDAMINI-95-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	naba	naba	n ɐ b ɐ	false
-289	EDOLO-95-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	nopai	nopai	n o p ɐ i	false
-290	ETORO-95-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	wa*la*sube	wa*la*sube	w ɐ̃ l ɐ̃ s u b e	false
-291	EDOLO-48-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	48	*hand	1277	HAND	napo	napo	n ɐ p o	false
-292	ETORO-48-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	48	*hand	1277	HAND	nobo	nobo	n o b o	false
-293	BEAMI-58-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	naboba	naboba	n ɐ b o b ɐ	false
-294	BEDAMINI-58-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	nabama	nabama	n ɐ b ɐ m ɐ	false
-295	EDOLO-58-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	napasepe	napasepe	n ɐ p ɐ s e p e	false
-296	ETORO-58-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	naboba	naboba	n ɐ b o b ɐ	false
-297	EDOLO-34-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	34	*horn	1393	HORN (ANATOMY)	pese	pese	p e s e	false
-298	BEAMI-47-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	emogumu	emogumu	e m o g u m u	false
-299	BEDAMINI-47-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	muguni	muguni	m u g u n i	false
-300	EDOLO-47-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	kumu	kumu	k u m u	false
-301	ETORO-47-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	emogumu	emogumu	e m o g u m u	false
-302	BEAMI-25-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	ipau	ipau	i p ɐ u	false
-303	BEDAMINI-25-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	lubi	lubi	l u b i	false
-304	BEDAMINI-25-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	rubi	rubi	r u b i	false
-305	EDOLO-25-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	pa*u	pa*u	p ɐ̃ u	false
-306	ETORO-25-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	ipau	ipau	i p ɐ u	false
-307	EDOLO-53-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	53	*liver	1224	LIVER	popa	popa	p o p ɐ	false
-308	BEAMI-22-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu*	imu*	i m ũ	false
-309	BEDAMINI-22-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu	imu	i m u	false
-310	EDOLO-22-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu	imu	i m u	false
-311	ETORO-22-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu*	imu*	i m ũ	false
-312	BEAMI-86-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	segebi	segebi	s e g e b i	false
-313	BEDAMINI-86-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	kaumi	kaumi	k ɐ u m i	false
-314	EDOLO-86-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	sekepi	sekepi	s e k e p i	false
-315	ETORO-86-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	segebi	segebi	s e g e b i	false
-316	BEAMI-100-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	a*i	a*i	ɐ̃ i	false
-317	BEDAMINI-100-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	dio	dio	d i o	false
-318	BEDAMINI-100-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	dio*	dio*	d i õ	false
-319	EDOLO-100-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	e*i	e*i	ẽ i	false
-320	ETORO-100-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	e*i	e*i	ẽ i	false
-321	BEAMI-96-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	kaha*	kaha*	k ɐ h ɐ̃	false
-322	BEDAMINI-96-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	gaheve	gaheve	g ɐ h e v e	false
-323	EDOLO-96-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	ka*hi	ka*hi	k ɐ̃ h i	false
-324	ETORO-96-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	kahe*	kahe*	k ɐ h ẽ	false
-325	BEAMI-92-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasigi	kasigi	k ɐ s i g i	false
-326	BEDAMINI-92-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasi	kasi	k ɐ s i	false
-327	EDOLO-92-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasiki	kasiki	k ɐ s i k i	false
-328	ETORO-92-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasigi	kasigi	k ɐ s i g i	false
-329	EDOLO-41-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	41	*nose	1221	NOSE	mi	mi	m i	false
-330	ETORO-41-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	41	*nose	1221	NOSE	migoni	migoni	m i g o n i	false
-331	BEAMI-11-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	age	age	ɐ g e	false
-332	BEDAMINI-11-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	afai	afai	ɐ f ɐ i	false
-333	EDOLO-11-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	ake	ake	ɐ k e	false
-334	EDOLO-11-2	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	afa*te*	afa*te*	ɐ f ɐ̃ t ẽ	false
-335	ETORO-11-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	age	age	ɐ g e	false
-336	BEAMI-85-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	idi	idi	i d i	false
-337	BEDAMINI-85-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	logo	logo	l o g o	false
-338	BEDAMINI-85-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	nogo	nogo	n o g o	false
-339	EDOLO-85-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	iti	iti	i t i	false
-340	ETORO-85-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	idi	idi	i d i	false
-341	EDOLO-18-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	18	*person	683	PERSON	tolo*	tolo*	t o l õ	false
-342	ETORO-18-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	18	*person	683	PERSON	tono	tono	t o n o	false
-343	BEAMI-57-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	peyaha	peyaha	p e j ɐ h ɐ	false
-344	BEDAMINI-57-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	pama	pama	p ɐ m ɐ	false
-345	BEDAMINI-57-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	bama	bama	b ɐ m ɐ	false
-346	EDOLO-57-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	peasepe	peasepe	p e ɐ s e p e	false
-347	ETORO-57-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	peyaha	peyaha	p e j ɐ h ɐ	false
-348	BEAMI-28-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kodofo	kodofo	k o d o f o	false
-349	BEDAMINI-28-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kadofo	kadofo	k ɐ d o f o	false
-350	EDOLO-28-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kafoto	kafoto	k ɐ f o t o	false
-351	ETORO-28-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kodofo	kodofo	k o d o f o	false
-352	BEAMI-74-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	sikabi	sikabi	s i k ɐ b i	false
-353	BEDAMINI-74-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	gasumuni	gasumuni	g ɐ s u m u n i	false
-354	BEDAMINI-74-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	kasumuni	kasumuni	k ɐ s u m u n i	false
-355	EDOLO-74-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	kasumli*	kasumli*	k ɐ s u m l ĩ	false
-356	ETORO-74-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	sikabi	sikabi	s i k ɐ b i	false
-357	BEAMI-77-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	igi	igi	i g i	false
-358	BEDAMINI-77-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	igi	igi	i g i	false
-359	EDOLO-77-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	iki	iki	i k i	false
-360	ETORO-77-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	igi	igi	i g i	false
-361	BEAMI-72-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false
-362	BEDAMINI-72-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false
-363	EDOLO-72-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false
-364	ETORO-72-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false
-365	BEAMI-44-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eli	eli	e l i	false
-366	BEDAMINI-44-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eri	eri	e r i	false
-367	BEDAMINI-44-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	kona*su	kona*su	k o n ɐ̃ s u	false
-368	EDOLO-44-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eli*	eli*	e l ĩ	false
-369	ETORO-44-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eli	eli	e l i	false
-370	BEAMI-43-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
-371	BEAMI-43-2	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	bese	bese	b e s e	false
-372	BEDAMINI-43-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
-373	BEDAMINI-43-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pa*sa*	pa*sa*	p ɐ̃ s ɐ̃	false
-374	EDOLO-43-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
-375	ETORO-43-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
-376	ETORO-43-2	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	bese	bese	b e s e	false
-377	BEAMI-23-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	i	i	i	false
-378	BEDAMINI-23-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	ifa	ifa	i f ɐ	false
-379	EDOLO-23-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	i	i	i	false
-380	ETORO-23-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	i	i	i	false
-381	BEAMI-12-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	agedu	agedu	ɐ g e d u	false
-382	BEDAMINI-12-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	aduna*	aduna*	ɐ d u n ɐ̃	false
-383	EDOLO-12-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	aketu	aketu	ɐ k e t u	false
-384	EDOLO-12-2	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	a*uta*	a*uta*	ɐ̃ u t ɐ̃	false
-385	ETORO-12-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	agedu	agedu	ɐ g e d u	false
-386	BEAMI-75-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	o*ta*	o*ta*	õ t ɐ̃	false
-387	BEDAMINI-75-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	ha*lo	ha*lo	h ɐ̃ l o	false
-388	BEDAMINI-75-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	haro*	haro*	h ɐ r õ	false
-389	EDOLO-75-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	o*ta*	o*ta*	õ t ɐ̃	false
-390	ETORO-75-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	o*ta*	o*ta*	õ t ɐ̃	false
-391	BEAMI-3-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nini	nini	n i n i	false
-392	BEDAMINI-3-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nini	nini	n i n i	false
-393	BEDAMINI-3-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	ni*ni*	ni*ni*	n ĩ n ĩ	false
-394	EDOLO-3-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nili*	nili*	n i l ĩ	false
-395	ETORO-3-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nini	nini	n i n i	false
-396	BEAMI-2-1	BEAMI	BEAMI	*beami	Beami	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false
-397	BEDAMINI-2-1	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false
-398	BEDAMINI-2-2	BEDAMINI	BEDAMINI	*bedamini	Beami	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	tiri	tiri	t i r i	false
-399	EDOLO-2-1	EDOLO	EDOLO	*edolo	Edolo	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false
-400	ETORO-2-1	ETORO	ETORO	*etoro	Edolo	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false
+3	KASUA_2-1-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	1	*I	1209	I	nE	nE	n a	false
+4	ONABASULU-1-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	1	*I	1209	I	na	na	n ɐ	false
+5	AIMELE-30-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	30	*blood	946	BLOOD	omani	omani	o m ɐ n i	false
+6	KASUA-30-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	30	*blood	946	BLOOD	pepeta	pepeta	p e p e t ɐ	false
+7	KASUA_2-30-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	30	*blood	946	BLOOD	bebeto	bebeto	b e b e t o	false
+8	ONABASULU-30-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	30	*blood	946	BLOOD	ibi	ibi	i b i	false
+9	AIMELE-31-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	31	*bone	1394	BONE	ki	ki	k i	false
+10	KASUA-31-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	31	*bone	1394	BONE	ki	ki	k i	false
+11	KASUA_2-31-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	31	*bone	1394	BONE	ki	ki	k i	false
+12	ONABASULU-31-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false
+13	AIMELE-51-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	51	*breasts	1402	BREAST	bu	bu	b u	false
+14	KASUA-51-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	51	*breasts	1402	BREAST	po	po	p o	false
+15	KASUA_2-51-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	51	*breasts	1402	BREAST	bo	bo	b o	false
+16	ONABASULU-51-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	51	*breasts	1402	BREAST	bu	bu	b u	false
+17	AIMELE-66-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	66	*come	1446	COME	yabe	yabe	j ɐ b e	false
+18	KASUA-66-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	66	*come	1446	COME	mina	mina	m i n ɐ	false
+19	KASUA_2-66-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	66	*come	1446	COME	minE	minE	m i n a	false
+20	ONABASULU-66-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	66	*come	1446	COME	mila	mila	m i l ɐ	false
+21	KASUA-61-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	61	*die	1494	DIE	kulu	kulu	k u l u	false
+22	AIMELE-21-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	21	*dog	2009	DOG	a*gi	a*gi	ɐ̃ g i	false
+23	KASUA-21-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	21	*dog	2009	DOG	kasolo	kasolo	k ɐ s o l o	false
+24	KASUA_2-21-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	21	*dog	2009	DOG	kosoro	kosoro	k o s o r o	false
+25	ONABASULU-21-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	21	*dog	2009	DOG	keso	keso	k e s o	false
+26	KASUA-54-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	54	*drink	1401	DRINK	mEnE	mEnE	m a n a	false
+27	AIMELE-39-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	39	*ear	1247	EAR	keleni	keleni	k e l e n i	false
+28	KASUA-39-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	39	*ear	1247	EAR	kenEne	kenEne	k e n a n e	false
+29	KASUA_2-39-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	39	*ear	1247	EAR	kinEli	kinEli	k i n a l i	false
+30	ONABASULU-39-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	39	*ear	1247	EAR	koheni	koheni	k o h e n i	false
+31	AIMELE-40-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	40	*eye	1248	EYE	si	si	s i	false
+32	KASUA-40-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	40	*eye	1248	EYE	si	si	s i	false
+33	KASUA_2-40-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	40	*eye	1248	EYE	si	si	s i	false
+34	ONABASULU-40-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	40	*eye	1248	EYE	si	si	s i	false
+35	AIMELE-82-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	82	*fire	221	FIRE	di	di	d i	false
+36	KASUA-82-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	82	*fire	221	FIRE	tei	tei	t e i	false
+37	KASUA_2-82-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	82	*fire	221	FIRE	tei	tei	t e i	false
+38	ONABASULU-82-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	82	*fire	221	FIRE	ti	ti	t i	false
+39	AIMELE-19-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	19	*fish	227	FISH	komolu	komolu	k o m o l u	false
+40	KASUA-19-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	19	*fish	227	FISH	ewalo	ewalo	e w ɐ l o	false
+41	KASUA_2-19-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	19	*fish	227	FISH	turu	turu	t u r u	false
+42	ONABASULU-19-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	19	*fish	227	FISH	hani	hani	h ɐ n i	false
+43	KASUA-95-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	95	*full	1429	FULL	woliyeti	woliyeti	w o l i j e t i	false
+44	KASUA_2-95-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	95	*full	1429	FULL	waruya	waruya	w ɐ r u j ɐ	false
+45	ONABASULU-95-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	95	*full	1429	FULL	wasiga*nu	wasiga*nu	w ɐ s i g ɐ̃ n u	false
+46	AIMELE-48-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	48	*hand	1277	HAND	debe	debe	d e b e	false
+47	KASUA-48-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	48	*hand	1277	HAND	tiyEle	tiyEle	t i j a l e	false
+48	KASUA_2-48-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	48	*hand	1277	HAND	tiEle	tiEle	t i a l e	false
+49	ONABASULU-48-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	48	*hand	1277	HAND	sone	sone	s o n e	false
+50	AIMELE-58-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	58	*hear	1408	HEAR	deba	deba	d e b ɐ	false
+51	KASUA-58-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	58	*hear	1408	HEAR	topu	topu	t o p u	false
+52	KASUA_2-58-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	58	*hear	1408	HEAR	totogeye	totogeye	t o t o g e j e	false
+53	ONABASULU-58-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	58	*hear	1408	HEAR	to	to	t o	false
+54	KASUA-34-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	34	*horn	1393	HORN (ANATOMY)	belo	belo	b e l o	false
+55	AIMELE-47-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	47	*knee	1371	KNEE	gulu	gulu	g u l u	false
+56	KASUA-47-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	47	*knee	1371	KNEE	kuniu	kuniu	k u n i u	false
+57	KASUA_2-47-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	47	*knee	1371	KNEE	kuniyu*n	kuniyu*n	k u n i j ũ n	false
+58	ONABASULU-47-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	47	*knee	1371	KNEE	hogonomo	hogonomo	h o g o n o m o	false
+59	AIMELE-25-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	25	*leaf	628	LEAF	yefo	yefo	j e f o	false
+60	KASUA-25-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	25	*leaf	628	LEAF	i falo	i falo	i f ɐ l o	false
+61	KASUA_2-25-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	25	*leaf	628	LEAF	folo	folo	f o l o	false
+62	ONABASULU-25-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	25	*leaf	628	LEAF	iwalu	iwalu	i w ɐ l u	false
+63	KASUA-53-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	53	*liver	1224	LIVER	hau	hau	h ɐ u	false
+64	AIMELE-22-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	22	*louse	1392	LOUSE	tede	tede	t e d e	false
+65	KASUA-22-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	22	*louse	1392	LOUSE	fei	fei	f e i	false
+66	KASUA_2-22-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	22	*louse	1392	LOUSE	pfEi	pfEi	p f a i	false
+67	ONABASULU-22-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	22	*louse	1392	LOUSE	fe*	fe*	f ẽ	false
+68	AIMELE-86-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	86	*mountain	639	MOUNTAIN	doma	doma	d o m ɐ	false
+69	KASUA-86-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	86	*mountain	639	MOUNTAIN	tokomo	tokomo	t o k o m o	false
+70	KASUA_2-86-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	86	*mountain	639	MOUNTAIN	tokomo	tokomo	t o k o m o	false
+71	ONABASULU-86-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	86	*mountain	639	MOUNTAIN	gali	gali	g ɐ l i	false
+72	AIMELE-100-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	100	*name	1405	NAME	wi	wi	w i	false
+73	KASUA-100-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	100	*name	1405	NAME	unuwa	unuwa	u n u w ɐ	false
+74	KASUA_2-100-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	100	*name	1405	NAME	unu*	unu*	u n ũ	false
+75	ONABASULU-100-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	100	*name	1405	NAME	wi	wi	w i	false
+76	AIMELE-96-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	96	*new	1231	NEW	hi	hi	h i	false
+77	KASUA-96-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	96	*new	1231	NEW	hili	hili	h i l i	false
+78	KASUA_2-96-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	96	*new	1231	NEW	hiLi	hiLi	h i ʎ i	false
+79	ONABASULU-96-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	96	*new	1231	NEW	hili	hili	h i l i	false
+80	AIMELE-92-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	92	*night	1233	NIGHT	solodiyabe	solodiyabe	s o l o d i j ɐ b e	false
+81	KASUA-92-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	92	*night	1233	NIGHT	yopolotela	yopolotela	j o p o l o t e l ɐ	false
+82	KASUA_2-92-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	92	*night	1233	NIGHT	nukruano	nukruano	n u k r u ɐ n o	false
+83	ONABASULU-92-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	92	*night	1233	NIGHT	nigili	nigili	n i g i l i	false
+84	AIMELE-41-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	41	*nose	1221	NOSE	migi	migi	m i g i	false
+85	KASUA-41-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	41	*nose	1221	NOSE	mi	mi	m i	false
+86	KASUA_2-41-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	41	*nose	1221	NOSE	mi*	mi*	m ĩ	false
+87	ONABASULU-41-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	41	*nose	1221	NOSE	mi*	mi*	m ĩ	false
+88	AIMELE-11-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	11	*one	1493	ONE	ageli	ageli	ɐ g e l i	false
+89	KASUA-11-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	11	*one	1493	ONE	semetei	semetei	s e m e t e i	false
+90	KASUA_2-11-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	11	*one	1493	ONE	semeti	semeti	s e m e t i	false
+91	ONABASULU-11-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	11	*one	1493	ONE	agale	agale	ɐ g ɐ l e	false
+92	AIMELE-85-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	85	*path	2252	PATH	togolo	togolo	t o g o l o	false
+93	KASUA-85-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	85	*path	2252	PATH	isu	isu	i s u	false
+94	KASUA_2-85-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	85	*path	2252	PATH	isu	isu	i s u	false
+95	ONABASULU-85-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	85	*path	2252	PATH	eno	eno	e n o	false
+96	AIMELE-18-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	18	*person	683	PERSON	kolu	kolu	k o l u	false
+97	KASUA-18-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	18	*person	683	PERSON	sena kesale	sena kesale	s e n ɐ k e s ɐ l e	false
+98	KASUA_2-18-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	18	*person	683	PERSON	senE	senE	s e n a	false
+99	ONABASULU-18-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	18	*person	683	PERSON	inolo	inolo	i n o l o	false
+100	AIMELE-57-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	57	*see	1409	SEE	bobo	bobo	b o b o	false
+101	KASUA-57-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	57	*see	1409	SEE	pota	pota	p o t ɐ	false
+102	KASUA_2-57-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	57	*see	1409	SEE	bobo	bobo	b o b o	false
+103	ONABASULU-57-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	57	*see	1409	SEE	ba	ba	b ɐ	false
+104	AIMELE-28-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	28	*skin	763	SKIN	ka*fu	ka*fu	k ɐ̃ f u	false
+105	KASUA-28-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	28	*skin	763	SKIN	kapo	kapo	k ɐ p o	false
+106	KASUA_2-28-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	28	*skin	763	SKIN	kopo	kopo	k o p o	false
+107	ONABASULU-28-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	28	*skin	763	SKIN	tomola	tomola	t o m o l ɐ	false
+108	AIMELE-74-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	74	*star	1430	STAR	bilimu	bilimu	b i l i m u	false
+109	KASUA-74-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	74	*star	1430	STAR	yepisini	yepisini	j e p i s i n i	false
+110	KASUA_2-74-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	74	*star	1430	STAR	yEpisini	yEpisini	j a p i s i n i	false
+111	ONABASULU-74-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	74	*star	1430	STAR	sigabi	sigabi	s i g ɐ b i	false
+112	AIMELE-77-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	77	*stone	857	STONE	doa	doa	d o ɐ	false
+113	KASUA-77-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	77	*stone	857	STONE	etewa	etewa	e t e w ɐ	false
+114	KASUA_2-77-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	77	*stone	857	STONE	etewo	etewo	e t e w o	false
+115	ONABASULU-77-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	77	*stone	857	STONE	abane	abane	ɐ b ɐ n e	false
+116	AIMELE-72-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	72	*sun	1343	SUN	ofo	ofo	o f o	false
+117	KASUA-72-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	72	*sun	1343	SUN	opo	opo	o p o	false
+118	KASUA_2-72-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	72	*sun	1343	SUN	obo	obo	o b o	false
+119	ONABASULU-72-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	72	*sun	1343	SUN	holo	holo	h o l o	false
+120	AIMELE-44-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	44	*tongue	1205	TONGUE	dabise*	dabise*	d ɐ b i s ẽ	false
+121	KASUA-44-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	44	*tongue	1205	TONGUE	tepe	tepe	t e p e	false
+122	KASUA_2-44-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	44	*tongue	1205	TONGUE	tepE	tepE	t e p a	false
+123	ONABASULU-44-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	44	*tongue	1205	TONGUE	Eane	Eane	a ɐ n e	false
+124	AIMELE-43-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	43	*tooth	1380	TOOTH	bisi	bisi	b i s i	false
+125	KASUA-43-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
+126	KASUA_2-43-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	43	*tooth	1380	TOOTH	apa	apa	ɐ p ɐ	false
+127	ONABASULU-43-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
+128	AIMELE-23-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	23	*tree	906	TREE	yebe	yebe	j e b e	false
+129	KASUA-23-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	23	*tree	906	TREE	i	i	i	false
+130	KASUA_2-23-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	23	*tree	906	TREE	i	i	i	false
+131	ONABASULU-23-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	23	*tree	906	TREE	i	i	i	false
+132	AIMELE-12-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	12	*two	1498	TWO	ageleweli	ageleweli	ɐ g e l e w e l i	false
+133	KASUA-12-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	12	*two	1498	TWO	elipei	elipei	e l i p e i	false
+134	KASUA_2-12-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	12	*two	1498	TWO	ELipi	ELipi	a ʎ i p i	false
+135	ONABASULU-12-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	12	*two	1498	TWO	aida	aida	ɐ i d ɐ	false
+136	AIMELE-75-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	75	*water	948	WATER	ha*ni	ha*ni	h ɐ̃ n i	false
+137	KASUA-75-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	75	*water	948	WATER	hano	hano	h ɐ n o	false
+138	KASUA_2-75-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	75	*water	948	WATER	hono*	hono*	h o n õ	false
+139	ONABASULU-75-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	75	*water	948	WATER	hano	hano	h ɐ n o	false
+140	AIMELE-3-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	3	*we	1212	WE	ni	ni	n i	false
+141	KASUA-3-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	3	*we	1212	WE	niwa	niwa	n i w ɐ	false
+142	KASUA_2-3-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	3	*we	1212	WE	niuwo	niuwo	n i u w o	false
+143	ONABASULU-3-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	3	*we	1212	WE	nini	nini	n i n i	false
+144	AIMELE-2-1	AIMELE	AIMELE	aime1238	Aimele	Bosavi	Bosavi Watershed		False	2	*you	1215	THOU	ge	ge	g e	false
+145	KASUA-2-1	KASUA	KASUA	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	2	*you	1215	THOU	kewa	kewa	k e w ɐ	false
+146	KASUA_2-2-1	KASUA_2	KASUA_2	kasu1251	Kasua	Bosavi	Bosavi Watershed		False	2	*you	1215	THOU	kE	kE	k a	false
+147	ONABASULU-2-1	ONABASULU	ONABASULU	onob1238	Onobasulu	Bosavi	Bosavi Watershed		False	2	*you	1215	THOU	ka	ka	k ɐ	false
+148	KALULI-1-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	1	*I	1209	I	ne	ne	n e	false
+149	KALULI_2-1-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	1	*I	1209	I	ni	ni	n i	false
+150	SUNIA-1-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	1	*I	1209	I	ne	ne	n e	false
+151	BOSAVI-30-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	30	*blood	946	BLOOD	hobo	hobo	h o b o	false
+152	KALULI-30-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	30	*blood	946	BLOOD	hobo	hobo	h o b o	false
+153	KALULI_2-30-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	30	*blood	946	BLOOD	hobo	hobo	h o b o	false
+154	SUNIA-30-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	30	*blood	946	BLOOD	hobo	hobo	h o b o	false
+155	BOSAVI-31-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	31	*bone	1394	BONE	ki	ki	k i	false
+156	KALULI-31-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	31	*bone	1394	BONE	kh~i	kh~i	kʰ i	false
+157	KALULI_2-31-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	31	*bone	1394	BONE	ki	ki	k i	false
+158	SUNIA-31-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	31	*bone	1394	BONE	uku	uku	u k u	false
+159	BOSAVI-51-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	51	*breasts	1402	BREAST	bo	bo	b o	false
+160	KALULI-51-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	51	*breasts	1402	BREAST	bo	bo	b o	false
+161	KALULI_2-51-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	51	*breasts	1402	BREAST	bu	bu	b u	false
+162	SUNIA-51-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	51	*breasts	1402	BREAST	bo	bo	b o	false
+163	BOSAVI-66-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	mena	mena	m e n ɐ	false
+164	BOSAVI-66-2	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	yabi	yabi	j ɐ b i	false
+165	BOSAVI-66-3	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	miano	miano	m i ɐ n o	false
+166	BOSAVI-66-4	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	miyo	miyo	m i j o	false
+167	KALULI-66-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	mene	mene	m e n e	false
+168	KALULI-66-2	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	mio	mio	m i o	false
+169	KALULI_2-66-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	mina	mina	m i n ɐ	false
+170	SUNIA-66-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	66	*come	1446	COME	meno	meno	m e n o	false
+171	BOSAVI-61-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	soma	soma	s o m ɐ	false
+172	BOSAVI-61-2	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	sowabi	sowabi	s o w ɐ b i	false
+173	BOSAVI-61-3	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	somano	somano	s o m ɐ n o	false
+174	BOSAVI-61-4	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	sowo	sowo	s o w o	false
+175	KALULI-61-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	someno	someno	s o m e n o	false
+176	KALULI-61-2	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	61	*die	1494	DIE	sowo	sowo	s o w o	false
+177	BOSAVI-21-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	21	*dog	2009	DOG	gasa	gasa	g ɐ s ɐ	false
+178	KALULI-21-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	21	*dog	2009	DOG	kasa	kasa	k ɐ s ɐ	false
+179	KALULI_2-21-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	21	*dog	2009	DOG	kaso	kaso	k ɐ s o	false
+180	SUNIA-21-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	21	*dog	2009	DOG	wEi	wEi	w a i	false
+181	BOSAVI-54-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	maya	maya	m ɐ j ɐ	false
+182	BOSAVI-54-2	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	nabi	nabi	n ɐ b i	false
+183	BOSAVI-54-3	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mano	mano	m ɐ n o	false
+184	BOSAVI-54-4	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mono	mono	m o n o	false
+185	KALULI-54-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mano	mano	m ɐ n o	false
+186	KALULI-54-2	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	54	*drink	1401	DRINK	mono	mono	m o n o	false
+187	KALULI-39-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	39	*ear	1247	EAR	kh~alan	kh~alan	kʰ ɐ l ɐ n	false
+188	KALULI_2-39-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	39	*ear	1247	EAR	kene*	kene*	k e n ẽ	false
+189	SUNIA-39-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	39	*ear	1247	EAR	ekadem	ekadem	e k ɐ d e m	false
+190	BOSAVI-40-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	40	*eye	1248	EYE	si	si	s i	false
+191	KALULI-40-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	40	*eye	1248	EYE	si	si	s i	false
+192	KALULI_2-40-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	40	*eye	1248	EYE	si	si	s i	false
+193	SUNIA-40-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	40	*eye	1248	EYE	si	si	s i	false
+194	BOSAVI-82-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	82	*fire	221	FIRE	de	de	d e	false
+195	KALULI-82-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	82	*fire	221	FIRE	te	te	t e	false
+196	KALULI_2-82-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	82	*fire	221	FIRE	di	di	d i	false
+197	SUNIA-82-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	82	*fire	221	FIRE	de	de	d e	false
+198	BOSAVI-19-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	19	*fish	227	FISH	ka	ka	k ɐ	false
+199	KALULI-19-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	19	*fish	227	FISH	kh~e	kh~e	kʰ e	false
+200	KALULI_2-19-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	19	*fish	227	FISH	ke	ke	k e	false
+201	SUNIA-19-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	19	*fish	227	FISH	douba	douba	d o u b ɐ	false
+202	BOSAVI-95-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	95	*full	1429	FULL	walifo	walifo	w ɐ l i f o	false
+203	KALULI-95-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	95	*full	1429	FULL	walifo	walifo	w ɐ l i f o	false
+204	KALULI_2-95-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	95	*full	1429	FULL	waido	waido	w ɐ i d o	false
+205	SUNIA-95-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	95	*full	1429	FULL	ugodo	ugodo	u g o d o	false
+206	BOSAVI-48-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	48	*hand	1277	HAND	dagi	dagi	d ɐ g i	false
+207	KALULI-48-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	48	*hand	1277	HAND	taki	taki	t ɐ k i	false
+208	KALULI_2-48-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	48	*hand	1277	HAND	tagi	tagi	t ɐ g i	false
+209	SUNIA-48-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	48	*hand	1277	HAND	dob	dob	d o b	false
+210	BOSAVI-58-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dabuma	dabuma	d ɐ b u m ɐ	false
+211	BOSAVI-58-2	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dadabi	dadabi	d ɐ d ɐ b i	false
+212	BOSAVI-58-3	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dabano	dabano	d ɐ b ɐ n o	false
+213	BOSAVI-58-4	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dabu	dabu	d ɐ b u	false
+214	KALULI-58-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	tapu	tapu	t ɐ p u	false
+215	KALULI_2-58-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dod	dod	d o d	false
+216	SUNIA-58-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	58	*hear	1408	HEAR	dobudo	dobudo	d o b u d o	false
+217	KALULI-34-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	34	*horn	1393	HORN (ANATOMY)	pis	pis	p i s	false
+218	BOSAVI-47-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	gulau	gulau	g u l ɐ u	false
+219	BOSAVI-47-2	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	gul	gul	g u l	false
+220	KALULI-47-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	kul	kul	k u l	false
+221	KALULI_2-47-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	kulau	kulau	k u l ɐ u	false
+222	SUNIA-47-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	47	*knee	1371	KNEE	gut	gut	g u t	false
+223	BOSAVI-25-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	25	*leaf	628	LEAF	sogo	sogo	s o g o	false
+224	KALULI-25-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	25	*leaf	628	LEAF	fos	fos	f o s	false
+225	KALULI_2-25-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	25	*leaf	628	LEAF	fos	fos	f o s	false
+226	SUNIA-25-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	25	*leaf	628	LEAF	yofoS	yofoS	j o f o ʃ	false
+227	BOSAVI-53-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	53	*liver	1224	LIVER	yog	yog	j o g	false
+228	KALULI-53-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	53	*liver	1224	LIVER	yok	yok	j o k	false
+229	KALULI-22-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	22	*louse	1392	LOUSE	fe	fe	f e	false
+230	KALULI_2-22-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	22	*louse	1392	LOUSE	fe*	fe*	f ẽ	false
+231	SUNIA-22-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	22	*louse	1392	LOUSE	fi	fi	f i	false
+232	BOSAVI-86-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	86	*mountain	639	MOUNTAIN	kugun	kugun	k u g u n	false
+233	KALULI-86-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	86	*mountain	639	MOUNTAIN	misio	misio	m i s i o	false
+234	KALULI_2-86-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	86	*mountain	639	MOUNTAIN	misio	misio	m i s i o	false
+235	SUNIA-86-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	86	*mountain	639	MOUNTAIN	muSio	muSio	m u ʃ i o	false
+236	BOSAVI-100-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	100	*name	1405	NAME	wi	wi	w i	false
+237	KALULI-100-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	100	*name	1405	NAME	wi	wi	w i	false
+238	KALULI_2-100-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	100	*name	1405	NAME	wi	wi	w i	false
+239	SUNIA-100-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	100	*name	1405	NAME	imi	imi	i m i	false
+240	BOSAVI-96-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	96	*new	1231	NEW	hogi	hogi	h o g i	false
+241	KALULI-96-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	96	*new	1231	NEW	hoki	hoki	h o k i	false
+242	KALULI_2-96-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	96	*new	1231	NEW	hogi	hogi	h o g i	false
+243	SUNIA-96-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	96	*new	1231	NEW	hi	hi	h i	false
+244	BOSAVI-92-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	92	*night	1233	NIGHT	nulu	nulu	n u l u	false
+245	KALULI-92-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	92	*night	1233	NIGHT	nulu	nulu	n u l u	false
+246	KALULI_2-92-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	92	*night	1233	NIGHT	nutap	nutap	n u t ɐ p	false
+247	SUNIA-92-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	92	*night	1233	NIGHT	unudu	unudu	u n u d u	false
+248	BOSAVI-41-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	41	*nose	1221	NOSE	migi	migi	m i g i	false
+249	KALULI-41-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	41	*nose	1221	NOSE	miki	miki	m i k i	false
+250	KALULI_2-41-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	41	*nose	1221	NOSE	migi	migi	m i g i	false
+251	SUNIA-41-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	41	*nose	1221	NOSE	miki	miki	m i k i	false
+252	BOSAVI-11-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	agel	agel	ɐ g e l	false
+253	KALULI-11-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	akel	akel	ɐ k e l	false
+254	KALULI-11-2	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	imilise	imilise	i m i l i s e	false
+255	KALULI_2-11-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	a*gel	a*gel	ɐ̃ g e l	false
+256	SUNIA-11-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	11	*one	1493	ONE	itidi	itidi	i t i d i	false
+257	BOSAVI-85-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	85	*path	2252	PATH	sok	sok	s o k	false
+258	KALULI-85-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	85	*path	2252	PATH	th~ok	th~ok	tʰ o k	false
+259	KALULI_2-85-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	85	*path	2252	PATH	tok	tok	t o k	false
+260	SUNIA-85-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	85	*path	2252	PATH	tokor	tokor	t o k o r	false
+261	KALULI-18-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	18	*person	683	PERSON	kh~elu	kh~elu	kʰ e l u	false
+262	KALULI_2-18-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	18	*person	683	PERSON	kalu	kalu	k ɐ l u	false
+263	SUNIA-18-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	18	*person	683	PERSON	oseno	oseno	o s e n o	false
+264	BOSAVI-57-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	boba	boba	b o b ɐ	false
+265	BOSAVI-57-2	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	badabi	badabi	b ɐ d ɐ b i	false
+266	BOSAVI-57-3	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	babano	babano	b ɐ b ɐ n o	false
+267	BOSAVI-57-4	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	baba	baba	b ɐ b ɐ	false
+268	KALULI-57-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	papa	papa	p ɐ p ɐ	false
+269	KALULI_2-57-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	boba	boba	b o b ɐ	false
+270	SUNIA-57-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	57	*see	1409	SEE	bo	bo	b o	false
+271	BOSAVI-28-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	28	*skin	763	SKIN	dogof	dogof	d o g o f	false
+272	KALULI-28-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	28	*skin	763	SKIN	tokof	tokof	t o k o f	false
+273	KALULI_2-28-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	28	*skin	763	SKIN	dogof	dogof	d o g o f	false
+274	SUNIA-28-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	28	*skin	763	SKIN	okof	okof	o k o f	false
+275	BOSAVI-74-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	74	*star	1430	STAR	samin	samin	s ɐ m i n	false
+276	KALULI-74-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	74	*star	1430	STAR	th~amin	th~amin	tʰ ɐ m i n	false
+277	KALULI_2-74-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	74	*star	1430	STAR	tami	tami	t ɐ m i	false
+278	SUNIA-74-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	74	*star	1430	STAR	themi	themi	t h e m i	false
+279	KALULI-77-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	77	*stone	857	STONE	u	u	u	false
+280	KALULI_2-77-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	77	*stone	857	STONE	u	u	u	false
+281	SUNIA-77-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	77	*stone	857	STONE	ka	ka	k ɐ	false
+282	BOSAVI-72-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	72	*sun	1343	SUN	of	of	o f	false
+283	KALULI-72-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	72	*sun	1343	SUN	of	of	o f	false
+284	KALULI_2-72-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	72	*sun	1343	SUN	of	of	o f	false
+285	SUNIA-72-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	72	*sun	1343	SUN	of	of	o f	false
+286	BOSAVI-44-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	44	*tongue	1205	TONGUE	eyan	eyan	e j ɐ n	false
+287	KALULI-44-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	44	*tongue	1205	TONGUE	en	en	e n	false
+288	KALULI_2-44-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	44	*tongue	1205	TONGUE	eon	eon	e o n	false
+289	SUNIA-44-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	44	*tongue	1205	TONGUE	tobise	tobise	t o b i s e	false
+290	BOSAVI-43-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	43	*tooth	1380	TOOTH	bes	bes	b e s	false
+291	KALULI-43-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	43	*tooth	1380	TOOTH	pis	pis	p i s	false
+292	KALULI_2-43-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	43	*tooth	1380	TOOTH	bis	bis	b i s	false
+293	SUNIA-43-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	43	*tooth	1380	TOOTH	oneno	oneno	o n e n o	false
+294	BOSAVI-23-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	23	*tree	906	TREE	i	i	i	false
+295	KALULI-23-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	23	*tree	906	TREE	i	i	i	false
+296	KALULI_2-23-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	23	*tree	906	TREE	i	i	i	false
+297	SUNIA-23-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	23	*tree	906	TREE	yep	yep	j e p	false
+298	BOSAVI-12-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	andeb	andeb	ɐ n d e b	false
+299	KALULI-12-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	atep	atep	ɐ t e p	false
+300	KALULI-12-2	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	ele	ele	e l e	false
+301	KALULI_2-12-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	a*dip	a*dip	ɐ̃ d i p	false
+302	SUNIA-12-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	12	*two	1498	TWO	ani	ani	ɐ n i	false
+303	BOSAVI-75-1	BOSAVI	BOSAVI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	75	*water	948	WATER	hon	hon	h o n	false
+304	KALULI-75-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	75	*water	948	WATER	hon	hon	h o n	false
+305	KALULI_2-75-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	75	*water	948	WATER	ho*n	ho*n	h õ n	false
+306	SUNIA-75-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	75	*water	948	WATER	mo*	mo*	m õ	false
+307	KALULI-3-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	3	*we	1212	WE	nio	nio	n i o	false
+308	KALULI_2-3-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	3	*we	1212	WE	niyo*	niyo*	n i j õ	false
+309	SUNIA-3-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	3	*we	1212	WE	niLi	niLi	n i ʎ i	false
+310	KALULI-2-1	KALULI	KALULI	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	2	*you	1215	THOU	ke	ke	k e	false
+311	KALULI_2-2-1	KALULI_2	KALULI_2	kalu1248	Kaluli	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	2	*you	1215	THOU	ki	ki	k i	false
+312	SUNIA-2-1	SUNIA	SUNIA	soni1260	Sonia	Bosavi	Bosavi Watershed	Kaluli-Sunia	False	2	*you	1215	THOU	ge	ge	g e	false
+313	BEAMI-1-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	ne	ne	n e	false
+314	BEDAMINI-1-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	na	na	n ɐ	false
+315	EDOLO-1-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	ne	ne	n e	false
+316	ETORO-1-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	1	*I	1209	I	ne	ne	n e	false
+317	BEAMI-30-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	hiole	hiole	h i o l e	false
+318	BEDAMINI-30-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	h3le	h3le	h ə l e	false
+319	BIAMI-30-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	hasai	hasai	h ɐ s ɐ i	false
+320	EDOLO-30-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	heale	heale	h e ɐ l e	false
+321	ETORO-30-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	30	*blood	946	BLOOD	hiole	hiole	h i o l e	false
+322	BEAMI-31-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false
+323	BEDAMINI-31-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kasa	kasa	k ɐ s ɐ	false
+324	BEDAMINI-31-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	koso	koso	k o s o	false
+325	BIAMI-31-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	pakala	pakala	p ɐ k ɐ l ɐ	false
+326	EDOLO-31-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false
+327	ETORO-31-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	31	*bone	1394	BONE	kiwi	kiwi	k i w i	false
+328	BEAMI-51-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false
+329	BEDAMINI-51-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false
+330	BIAMI-51-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	ane	ane	ɐ n e	false
+331	EDOLO-51-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false
+332	ETORO-51-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	51	*breasts	1402	BREAST	toto	toto	t o t o	false
+333	BEAMI-66-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	masipe	masipe	m ɐ s i p e	false
+334	BEDAMINI-66-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	misa	misa	m i s ɐ	false
+335	EDOLO-66-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	ma	ma	m ɐ	false
+336	ETORO-66-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	66	*come	1446	COME	masipe	masipe	m ɐ s i p e	false
+337	EDOLO-61-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	61	*die	1494	DIE	pako	pako	p ɐ k o	false
+338	BEAMI-21-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	ogono	ogono	o g o n o	false
+339	BEDAMINI-21-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	wame	wame	w ɐ m e	false
+340	BEDAMINI-21-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	w3me	w3me	w ə m e	false
+341	BIAMI-21-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	biso	biso	b i s o	false
+342	EDOLO-21-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	u*ku*lo	u*ku*lo	ũ k ũ l o	false
+343	ETORO-21-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	21	*dog	2009	DOG	ogono	ogono	o g o n o	false
+344	EDOLO-54-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	54	*drink	1401	DRINK	naha	naha	n ɐ h ɐ	false
+345	BEAMI-39-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	kahe	kahe	k ɐ h e	false
+346	BEDAMINI-39-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	ka*	ka*	k ɐ̃	false
+347	BIAMI-39-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	penia	penia	p e n i ɐ	false
+348	EDOLO-39-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	ke*he	ke*he	k ẽ h e	false
+349	ETORO-39-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	39	*ear	1247	EAR	kEhe	kEhe	k a h e	false
+350	BEAMI-40-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false
+351	BEDAMINI-40-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false
+352	BIAMI-40-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	manaua	manaua	m ɐ n ɐ u ɐ	false
+353	EDOLO-40-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false
+354	ETORO-40-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	40	*eye	1248	EYE	si	si	s i	false
+355	BEAMI-82-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nulu	nulu	n u l u	false
+356	BEDAMINI-82-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	daru	daru	d ɐ r u	false
+357	BEDAMINI-82-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nalu	nalu	n ɐ l u	false
+358	BIAMI-82-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	yei	yei	j e i	false
+359	EDOLO-82-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nulo	nulo	n u l o	false
+360	ETORO-82-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	82	*fire	221	FIRE	nuLu	nuLu	n u ʎ u	false
+361	BEAMI-19-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	seme	seme	s e m e	false
+362	BEDAMINI-19-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	ai	ai	ɐ i	false
+363	BIAMI-19-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	ene	ene	e n e	false
+364	EDOLO-19-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	seme	seme	s e m e	false
+365	EDOLO-19-2	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	a*i	a*i	ɐ̃ i	false
+366	ETORO-19-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	19	*fish	227	FISH	seme	seme	s e m e	false
+367	BEAMI-95-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	wa*la*sube	wa*la*sube	w ɐ̃ l ɐ̃ s u b e	false
+368	BEDAMINI-95-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	naba	naba	n ɐ b ɐ	false
+369	EDOLO-95-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	nopai	nopai	n o p ɐ i	false
+370	ETORO-95-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	95	*full	1429	FULL	wa*la*sube	wa*la*sube	w ɐ̃ l ɐ̃ s u b e	false
+371	BIAMI-48-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	48	*hand	1277	HAND	fafulu	fafulu	f ɐ f u l u	false
+372	EDOLO-48-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	48	*hand	1277	HAND	napo	napo	n ɐ p o	false
+373	ETORO-48-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	48	*hand	1277	HAND	nobo	nobo	n o b o	false
+374	BEAMI-58-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	naboba	naboba	n ɐ b o b ɐ	false
+375	BEDAMINI-58-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	nabama	nabama	n ɐ b ɐ m ɐ	false
+376	EDOLO-58-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	napasepe	napasepe	n ɐ p ɐ s e p e	false
+377	ETORO-58-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	58	*hear	1408	HEAR	naboba	naboba	n ɐ b o b ɐ	false
+378	EDOLO-34-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	34	*horn	1393	HORN (ANATOMY)	pese	pese	p e s e	false
+379	BEAMI-47-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	emogumu	emogumu	e m o g u m u	false
+380	BEDAMINI-47-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	muguni	muguni	m u g u n i	false
+381	BIAMI-47-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	toku	toku	t o k u	false
+382	EDOLO-47-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	kumu	kumu	k u m u	false
+383	ETORO-47-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	47	*knee	1371	KNEE	emogumu	emogumu	e m o g u m u	false
+384	BEAMI-25-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	ipau	ipau	i p ɐ u	false
+385	BEDAMINI-25-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	lubi	lubi	l u b i	false
+386	BEDAMINI-25-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	rubi	rubi	r u b i	false
+387	BIAMI-25-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	meo	meo	m e o	false
+388	EDOLO-25-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	pa*u	pa*u	p ɐ̃ u	false
+389	ETORO-25-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	25	*leaf	628	LEAF	ipau	ipau	i p ɐ u	false
+390	EDOLO-53-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	53	*liver	1224	LIVER	popa	popa	p o p ɐ	false
+391	BEAMI-22-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu*	imu*	i m ũ	false
+392	BEDAMINI-22-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu	imu	i m u	false
+393	BIAMI-22-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	maniu	maniu	m ɐ n i u	false
+394	EDOLO-22-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu	imu	i m u	false
+395	ETORO-22-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	22	*louse	1392	LOUSE	imu*	imu*	i m ũ	false
+396	BEAMI-86-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	segebi	segebi	s e g e b i	false
+397	BEDAMINI-86-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	kaumi	kaumi	k ɐ u m i	false
+398	EDOLO-86-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	sekepi	sekepi	s e k e p i	false
+399	ETORO-86-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	86	*mountain	639	MOUNTAIN	segebi	segebi	s e g e b i	false
+400	BEAMI-100-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	a*i	a*i	ɐ̃ i	false
+401	BEDAMINI-100-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	dio	dio	d i o	false
+402	BEDAMINI-100-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	dio*	dio*	d i õ	false
+403	BIAMI-100-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	pafe	pafe	p ɐ f e	false
+404	EDOLO-100-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	e*i	e*i	ẽ i	false
+405	ETORO-100-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	100	*name	1405	NAME	e*i	e*i	ẽ i	false
+406	BEAMI-96-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	kaha*	kaha*	k ɐ h ɐ̃	false
+407	BEDAMINI-96-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	gaheve	gaheve	g ɐ h e v e	false
+408	BIAMI-96-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	nebeli	nebeli	n e b e l i	false
+409	EDOLO-96-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	ka*hi	ka*hi	k ɐ̃ h i	false
+410	ETORO-96-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	96	*new	1231	NEW	kahe*	kahe*	k ɐ h ẽ	false
+411	BEAMI-92-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasigi	kasigi	k ɐ s i g i	false
+412	BEDAMINI-92-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasi	kasi	k ɐ s i	false
+413	BIAMI-92-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	nubaio	nubaio	n u b ɐ i o	false
+414	EDOLO-92-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasiki	kasiki	k ɐ s i k i	false
+415	ETORO-92-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	92	*night	1233	NIGHT	kasigi	kasigi	k ɐ s i g i	false
+416	BIAMI-41-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	41	*nose	1221	NOSE	kalemi	kalemi	k ɐ l e m i	false
+417	EDOLO-41-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	41	*nose	1221	NOSE	mi	mi	m i	false
+418	ETORO-41-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	41	*nose	1221	NOSE	migoni	migoni	m i g o n i	false
+419	BEAMI-11-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	age	age	ɐ g e	false
+420	BEDAMINI-11-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	afai	afai	ɐ f ɐ i	false
+421	BIAMI-11-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	piofi	piofi	p i o f i	false
+422	EDOLO-11-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	ake	ake	ɐ k e	false
+423	EDOLO-11-2	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	afa*te*	afa*te*	ɐ f ɐ̃ t ẽ	false
+424	ETORO-11-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	11	*one	1493	ONE	age	age	ɐ g e	false
+425	BEAMI-85-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	idi	idi	i d i	false
+426	BEDAMINI-85-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	logo	logo	l o g o	false
+427	BEDAMINI-85-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	nogo	nogo	n o g o	false
+428	BIAMI-85-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	yo	yo	j o	false
+429	EDOLO-85-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	iti	iti	i t i	false
+430	ETORO-85-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	85	*path	2252	PATH	idi	idi	i d i	false
+431	EDOLO-18-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	18	*person	683	PERSON	tolo*	tolo*	t o l õ	false
+432	ETORO-18-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	18	*person	683	PERSON	tono	tono	t o n o	false
+433	BEAMI-57-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	peyaha	peyaha	p e j ɐ h ɐ	false
+434	BEDAMINI-57-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	pama	pama	p ɐ m ɐ	false
+435	BEDAMINI-57-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	bama	bama	b ɐ m ɐ	false
+436	EDOLO-57-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	peasepe	peasepe	p e ɐ s e p e	false
+437	ETORO-57-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	57	*see	1409	SEE	peyaha	peyaha	p e j ɐ h ɐ	false
+438	BEAMI-28-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kodofo	kodofo	k o d o f o	false
+439	BEDAMINI-28-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kadofo	kadofo	k ɐ d o f o	false
+440	BIAMI-28-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	toku	toku	t o k u	false
+441	EDOLO-28-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kafoto	kafoto	k ɐ f o t o	false
+442	ETORO-28-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	28	*skin	763	SKIN	kodofo	kodofo	k o d o f o	false
+443	BEAMI-74-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	sikabi	sikabi	s i k ɐ b i	false
+444	BEDAMINI-74-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	gasumuni	gasumuni	g ɐ s u m u n i	false
+445	BEDAMINI-74-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	kasumuni	kasumuni	k ɐ s u m u n i	false
+446	BIAMI-74-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	pai	pai	p ɐ i	false
+447	EDOLO-74-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	kasumli*	kasumli*	k ɐ s u m l ĩ	false
+448	ETORO-74-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	74	*star	1430	STAR	sikabi	sikabi	s i k ɐ b i	false
+449	BEAMI-77-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	igi	igi	i g i	false
+450	BEDAMINI-77-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	igi	igi	i g i	false
+451	BIAMI-77-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	yawi	yawi	j ɐ w i	false
+452	EDOLO-77-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	iki	iki	i k i	false
+453	ETORO-77-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	77	*stone	857	STONE	igi	igi	i g i	false
+454	BEAMI-72-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false
+455	BEDAMINI-72-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false
+456	BIAMI-72-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	tenia	tenia	t e n i ɐ	false
+457	EDOLO-72-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false
+458	ETORO-72-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	72	*sun	1343	SUN	eso	eso	e s o	false
+459	BEAMI-44-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eli	eli	e l i	false
+460	BEDAMINI-44-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eri	eri	e r i	false
+461	BEDAMINI-44-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	kona*su	kona*su	k o n ɐ̃ s u	false
+462	BIAMI-44-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	salifei	salifei	s ɐ l i f e i	false
+463	EDOLO-44-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eli*	eli*	e l ĩ	false
+464	ETORO-44-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	44	*tongue	1205	TONGUE	eli	eli	e l i	false
+465	BEAMI-43-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
+466	BEAMI-43-2	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	bese	bese	b e s e	false
+467	BEDAMINI-43-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
+468	BEDAMINI-43-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pa*sa*	pa*sa*	p ɐ̃ s ɐ̃	false
+469	BIAMI-43-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	biei	biei	b i e i	false
+470	EDOLO-43-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
+471	ETORO-43-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	pese	pese	p e s e	false
+472	ETORO-43-2	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	43	*tooth	1380	TOOTH	bese	bese	b e s e	false
+473	BEAMI-23-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	i	i	i	false
+474	BEDAMINI-23-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	ifa	ifa	i f ɐ	false
+475	BIAMI-23-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	mei	mei	m e i	false
+476	EDOLO-23-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	i	i	i	false
+477	ETORO-23-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	23	*tree	906	TREE	i	i	i	false
+478	BEAMI-12-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	agedu	agedu	ɐ g e d u	false
+479	BEDAMINI-12-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	aduna*	aduna*	ɐ d u n ɐ̃	false
+480	BIAMI-12-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	lumeli	lumeli	l u m e l i	false
+481	EDOLO-12-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	aketu	aketu	ɐ k e t u	false
+482	EDOLO-12-2	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	a*uta*	a*uta*	ɐ̃ u t ɐ̃	false
+483	ETORO-12-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	12	*two	1498	TWO	agedu	agedu	ɐ g e d u	false
+484	BEAMI-75-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	o*ta*	o*ta*	õ t ɐ̃	false
+485	BEDAMINI-75-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	ha*lo	ha*lo	h ɐ̃ l o	false
+486	BEDAMINI-75-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	haro*	haro*	h ɐ r õ	false
+487	BIAMI-75-1	BIAMI	BIAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	sai	sai	s ɐ i	false
+488	EDOLO-75-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	o*ta*	o*ta*	õ t ɐ̃	false
+489	ETORO-75-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	75	*water	948	WATER	o*ta*	o*ta*	õ t ɐ̃	false
+490	BEAMI-3-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nini	nini	n i n i	false
+491	BEDAMINI-3-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nini	nini	n i n i	false
+492	BEDAMINI-3-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	ni*ni*	ni*ni*	n ĩ n ĩ	false
+493	EDOLO-3-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nili*	nili*	n i l ĩ	false
+494	ETORO-3-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	3	*we	1212	WE	nini	nini	n i n i	false
+495	BEAMI-2-1	BEAMI	BEAMI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false
+496	BEDAMINI-2-1	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false
+497	BEDAMINI-2-2	BEDAMINI	BEDAMINI	beam1240	Beami	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	tiri	tiri	t i r i	false
+498	EDOLO-2-1	EDOLO	EDOLO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false
+499	ETORO-2-1	ETORO	ETORO	edol1239	Edolo	Bosavi	Etoro-Bedamini		False	2	*you	1215	THOU	ti	ti	t i	false

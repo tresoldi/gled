@@ -1,432 +1,662 @@
 ID	ASJP_ID	DOCULECT	LANGUAGE_NAME	GLOTTOCODE	GLOTTOLOG_NAME	LANGUAGE_LINEAGE_0	LANGUAGE_LINEAGE_1	LANGUAGE_LINEAGE_2	LANGUAGE_ISOLATE	PARAMETER_ID	CONCEPT	CONCEPTICON_ID	CONCEPTICON_GLOSS	VALUE	FORM	TOKENS	LOAN
 1	BIANGAI-1-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	1	*I	1209	I	n3	n3	n ə	false
 2	FUYUG-1-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	1	*I	1209	I	na	na	n ɐ	false
-3	KUNIMAIPA-1-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	1	*I	1209	I	ne	ne	n e	false
-4	TAUADE-1-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	1	*I	1209	I	nai	nai	n ɐ i	false
-5	TAUADE-1-2	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	1	*I	1209	I	na	na	n ɐ	false
-6	BIANGAI-30-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	30	*blood	946	BLOOD	iwi	iwi	i w i	false
-7	FUYUG-30-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	30	*blood	946	BLOOD	tana	tana	t ɐ n ɐ	false
-8	TAUADE-30-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	30	*blood	946	BLOOD	ilive	ilive	i l i v e	false
-9	BIANGAI-31-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	31	*bone	1394	BONE	koza	koza	k o z ɐ	false
-10	FUYUG-31-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	31	*bone	1394	BONE	hude	hude	h u d e	false
-11	KUNIMAIPA-31-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	31	*bone	1394	BONE	hatai	hatai	h ɐ t ɐ i	false
-12	BIANGAI-51-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	51	*breasts	1402	BREAST	yEbiLi	yEbiLi	j a b i ʎ i	false
-13	FUYUG-51-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	51	*breasts	1402	BREAST	duda	duda	d u d ɐ	false
-14	TAUADE-51-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	51	*breasts	1402	BREAST	opipe	opipe	o p i p e	false
-15	BIANGAI-66-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	66	*come	1446	COME	L3wa	L3wa	ʎ ə w ɐ	false
-16	FUYUG-66-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	66	*come	1446	COME	telele	telele	t e l e l e	false
-17	KUNIMAIPA-66-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	66	*come	1446	COME	ema	ema	e m ɐ	false
-18	TAUADE-66-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	66	*come	1446	COME	lei	lei	l e i	false
-19	TAUADE-66-2	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	66	*come	1446	COME	konae	konae	k o n ɐ e	false
-20	BIANGAI-61-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	61	*die	1494	DIE	ib3N	ib3N	i b ə ŋ	false
-21	FUYUG-61-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	61	*die	1494	DIE	usaNege	usaNege	u s ɐ ŋ e g e	false
-22	KUNIMAIPA-61-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	61	*die	1494	DIE	Nome	Nome	ŋ o m e	false
-23	TAUADE-61-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	61	*die	1494	DIE	kelui	kelui	k e l u i	false
-24	BIANGAI-21-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	21	*dog	2009	DOG	k3ri	k3ri	k ə r i	false
-25	FUYUG-21-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	21	*dog	2009	DOG	ho	ho	h o	false
-26	KUNIMAIPA-21-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	21	*dog	2009	DOG	hadepu	hadepu	h ɐ d e p u	false
-27	TAUADE-21-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	21	*dog	2009	DOG	kovela	kovela	k o v e l ɐ	false
-28	BIANGAI-54-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	54	*drink	1401	DRINK	n	n	n	false
-29	FUYUG-54-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	54	*drink	1401	DRINK	nene	nene	n e n e	false
-30	TAUADE-54-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	54	*drink	1401	DRINK	nai	nai	n ɐ i	false
-31	BIANGAI-39-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	39	*ear	1247	EAR	kere	kere	k e r e	false
-32	FUYUG-39-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	39	*ear	1247	EAR	gadolo	gadolo	g ɐ d o l o	false
-33	KUNIMAIPA-39-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	39	*ear	1247	EAR	hata	hata	h ɐ t ɐ	false
-34	TAUADE-39-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	39	*ear	1247	EAR	kepape	kepape	k e p ɐ p e	false
-35	BIANGAI-40-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	40	*eye	1248	EYE	wir3	wir3	w i r ə	false
-36	FUYUG-40-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	40	*eye	1248	EYE	li	li	l i	false
-37	KUNIMAIPA-40-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	40	*eye	1248	EYE	et	et	e t	false
-38	TAUADE-40-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	40	*eye	1248	EYE	vape	vape	v ɐ p e	false
-39	BIANGAI-82-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	82	*fire	221	FIRE	y3zi	y3zi	j ə z i	false
-40	FUYUG-82-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	82	*fire	221	FIRE	oki	oki	o k i	false
-41	KUNIMAIPA-82-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	82	*fire	221	FIRE	itiNade	itiNade	i t i ŋ ɐ d e	false
-42	TAUADE-82-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	82	*fire	221	FIRE	ename	ename	e n ɐ m e	false
-43	BIANGAI-19-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	19	*fish	227	FISH	watakai	watakai	w ɐ t ɐ k ɐ i	false
-44	FUYUG-19-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	19	*fish	227	FISH	galu	galu	g ɐ l u	false
-45	KUNIMAIPA-19-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	19	*fish	227	FISH	pisiholo	pisiholo	p i s i h o l o	false
-46	TAUADE-19-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	19	*fish	227	FISH	kapita	kapita	k ɐ p i t ɐ	false
-47	BIANGAI-95-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	95	*full	1429	FULL	wiLak	wiLak	w i ʎ ɐ k	false
-48	FUYUG-95-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	95	*full	1429	FULL	indela	indela	i n d e l ɐ	false
-49	BIANGAI-48-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	48	*hand	1277	HAND	m3l3	m3l3	m ə l ə	false
-50	FUYUG-48-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	48	*hand	1277	HAND	iZa	iZa	i ʒ ɐ	false
-51	KUNIMAIPA-48-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	48	*hand	1277	HAND	mara	mara	m ɐ r ɐ	false
-52	TAUADE-48-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	48	*hand	1277	HAND	kala opua	kala opua	k ɐ l ɐ o p u ɐ	false
-53	BIANGAI-58-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	58	*hear	1408	HEAR	k3riwe	k3riwe	k ə r i w e	false
-54	FUYUG-58-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	58	*hear	1408	HEAR	alele	alele	ɐ l e l e	false
-55	KUNIMAIPA-58-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	58	*hear	1408	HEAR	hatete	hatete	h ɐ t e t e	false
-56	FUYUG-34-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	34	*horn	1393	HORN (ANATOMY)	bisa	bisa	b i s ɐ	false
-57	FUYUG-47-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	47	*knee	1371	KNEE	muda	muda	m u d ɐ	false
-58	KUNIMAIPA-47-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	47	*knee	1371	KNEE	rari	rari	r ɐ r i	false
-59	BIANGAI-25-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	25	*leaf	628	LEAF	y3Ne	y3Ne	j ə ŋ e	false
-60	BIANGAI-25-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	25	*leaf	628	LEAF	wir3k	wir3k	w i r ə k	false
-61	FUYUG-25-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	25	*leaf	628	LEAF	hutu	hutu	h u t u	false
-62	TAUADE-25-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	25	*leaf	628	LEAF	valupe	valupe	v ɐ l u p e	false
-63	FUYUG-53-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	53	*liver	1224	LIVER	huma	huma	h u m ɐ	false
-64	FUYUG-22-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	22	*louse	1392	LOUSE	hi	hi	h i	false
-65	TAUADE-22-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	22	*louse	1392	LOUSE	eate	eate	e ɐ t e	false
-66	BIANGAI-86-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	86	*mountain	639	MOUNTAIN	Luw3	Luw3	ʎ u w ə	false
-67	FUYUG-86-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	86	*mountain	639	MOUNTAIN	kum	kum	k u m	false
-68	TAUADE-86-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	86	*mountain	639	MOUNTAIN	maive	maive	m ɐ i v e	false
-69	BIANGAI-100-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	100	*name	1405	NAME	yek	yek	j e k	false
-70	FUYUG-100-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	100	*name	1405	NAME	ifa	ifa	i f ɐ	false
-71	KUNIMAIPA-100-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	100	*name	1405	NAME	abatavo	abatavo	ɐ b ɐ t ɐ v o	false
-72	TAUADE-100-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	100	*name	1405	NAME	apete	apete	ɐ p e t e	false
-73	FUYUG-96-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	96	*new	1231	NEW	hasi	hasi	h ɐ s i	false
-74	KUNIMAIPA-96-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	96	*new	1231	NEW	magei	magei	m ɐ g e i	false
-75	TAUADE-96-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	96	*new	1231	NEW	kailepe	kailepe	k ɐ i l e p e	false
-76	BIANGAI-92-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	92	*night	1233	NIGHT	kusa	kusa	k u s ɐ	false
-77	FUYUG-92-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	92	*night	1233	NIGHT	dubiti	dubiti	d u b i t i	false
-78	KUNIMAIPA-92-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	92	*night	1233	NIGHT	kuturuta	kuturuta	k u t u r u t ɐ	false
-79	TAUADE-92-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	92	*night	1233	NIGHT	kuvite	kuvite	k u v i t e	false
-80	FUYUG-41-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	41	*nose	1221	NOSE	huNa	huNa	h u ŋ ɐ	false
-81	TAUADE-41-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	41	*nose	1221	NOSE	kite	kite	k i t e	false
-82	BIANGAI-11-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	11	*one	1493	ONE	na	na	n ɐ	false
-83	BIANGAI-11-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	11	*one	1493	ONE	nak	nak	n ɐ k	false
-84	FUYUG-11-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	11	*one	1493	ONE	fida	fida	f i d ɐ	false
-85	KUNIMAIPA-11-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	11	*one	1493	ONE	napu	napu	n ɐ p u	false
-86	TAUADE-11-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	11	*one	1493	ONE	kone	kone	k o n e	false
-87	BIANGAI-85-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	85	*path	2252	PATH	kazi	kazi	k ɐ z i	false
-88	FUYUG-85-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	85	*path	2252	PATH	enamba	enamba	e n ɐ m b ɐ	false
-89	KUNIMAIPA-85-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	85	*path	2252	PATH	nonoro	nonoro	n o n o r o	false
-90	TAUADE-85-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	85	*path	2252	PATH	kane	kane	k ɐ n e	false
-91	BIANGAI-18-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	18	*person	683	PERSON	yoNkampu	yoNkampu	j o ŋ k ɐ m p u	false
-92	FUYUG-18-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	18	*person	683	PERSON	aa	aa	ɐ ɐ	false
-93	TAUADE-18-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	18	*person	683	PERSON	ivavale	ivavale	i v ɐ v ɐ l e	false
-94	BIANGAI-57-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	57	*see	1409	SEE	k3riwe	k3riwe	k ə r i w e	false
-95	BIANGAI-57-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	57	*see	1409	SEE	pakeLa	pakeLa	p ɐ k e ʎ ɐ	false
-96	FUYUG-57-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	57	*see	1409	SEE	alili	alili	ɐ l i l i	false
-97	KUNIMAIPA-57-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	57	*see	1409	SEE	ete	ete	e t e	false
-98	TAUADE-57-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	57	*see	1409	SEE	kae	kae	k ɐ e	false
-99	BIANGAI-28-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	28	*skin	763	SKIN	korik	korik	k o r i k	false
-100	FUYUG-28-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	28	*skin	763	SKIN	hoda	hoda	h o d ɐ	false
-101	TAUADE-28-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	28	*skin	763	SKIN	kotsipe	kotsipe	k o t s i p e	false
-102	BIANGAI-74-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	74	*star	1430	STAR	p3l3w3	p3l3w3	p ə l ə w ə	false
-103	FUYUG-74-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	74	*star	1430	STAR	hamadofa	hamadofa	h ɐ m ɐ d o f ɐ	false
-104	TAUADE-74-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	74	*star	1430	STAR	imuli	imuli	i m u l i	false
-105	BIANGAI-77-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	77	*stone	857	STONE	kiN	kiN	k i ŋ	false
-106	FUYUG-77-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	77	*stone	857	STONE	zo	zo	z o	false
-107	TAUADE-77-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	77	*stone	857	STONE	evite	evite	e v i t e	false
-108	BIANGAI-72-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	72	*sun	1343	SUN	yokm3k	yokm3k	j o k m ə k	false
-109	FUYUG-72-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	72	*sun	1343	SUN	evuli	evuli	e v u l i	false
-110	KUNIMAIPA-72-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	72	*sun	1343	SUN	gitapu	gitapu	g i t ɐ p u	false
-111	TAUADE-72-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	72	*sun	1343	SUN	vatave	vatave	v ɐ t ɐ v e	false
-112	BIANGAI-44-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	44	*tongue	1205	TONGUE	LoNok	LoNok	ʎ o ŋ o k	false
-113	FUYUG-44-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	44	*tongue	1205	TONGUE	asese	asese	ɐ s e s e	false
-114	TAUADE-44-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	44	*tongue	1205	TONGUE	aive	aive	ɐ i v e	false
-115	BIANGAI-43-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	43	*tooth	1380	TOOTH	kili	kili	k i l i	false
-116	FUYUG-43-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	43	*tooth	1380	TOOTH	usi	usi	u s i	false
-117	TAUADE-43-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	43	*tooth	1380	TOOTH	notoape	notoape	n o t o ɐ p e	false
-118	BIANGAI-23-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	23	*tree	906	TREE	y3N3Le	y3N3Le	j ə ŋ ə ʎ e	false
-119	BIANGAI-23-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	23	*tree	906	TREE	iNiLe	iNiLe	i ŋ i ʎ e	false
-120	BIANGAI-23-3	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	23	*tree	906	TREE	iLe	iLe	i ʎ e	false
-121	FUYUG-23-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	23	*tree	906	TREE	ii	ii	i i	false
-122	KUNIMAIPA-23-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	23	*tree	906	TREE	zi	zi	z i	false
-123	TAUADE-23-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	23	*tree	906	TREE	eate	eate	e ɐ t e	false
-124	BIANGAI-12-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	12	*two	1498	TWO	yau	yau	j ɐ u	false
-125	FUYUG-12-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	12	*two	1498	TWO	Zuvalo	Zuvalo	ʒ u v ɐ l o	false
-126	KUNIMAIPA-12-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	12	*two	1498	TWO	naNarivi	naNarivi	n ɐ ŋ ɐ r i v i	false
-127	TAUADE-12-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	12	*two	1498	TWO	atoloai	atoloai	ɐ t o l o ɐ i	false
-128	BIANGAI-75-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	75	*water	948	WATER	kai	kai	k ɐ i	false
-129	FUYUG-75-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	75	*water	948	WATER	Zu	Zu	ʒ u	false
-130	KUNIMAIPA-75-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	75	*water	948	WATER	ivovo	ivovo	i v o v o	false
-131	TAUADE-75-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	75	*water	948	WATER	ipe	ipe	i p e	false
-132	BIANGAI-3-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	3	*we	1212	WE	t3ni	t3ni	t ə n i	false
-133	KUNIMAIPA-3-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	3	*we	1212	WE	rei	rei	r e i	false
-134	TAUADE-3-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	3	*we	1212	WE	nanei	nanei	n ɐ n e i	false
-135	TAUADE-3-2	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	3	*we	1212	WE	nane	nane	n ɐ n e	false
-136	BIANGAI-2-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	2	*you	1215	THOU	ni	ni	n i	false
-137	KUNIMAIPA-2-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	2	*you	1215	THOU	ni	ni	n i	false
-138	TAUADE-2-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	2	*you	1215	THOU	nui	nui	n u i	false
-139	TAUADE-2-2	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	2	*you	1215	THOU	nu	nu	n u	false
-140	BIANGAI-9-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	9	all	98	ALL	mamorok	mamorok	m ɐ m o r o k	false
-141	FUYUG-9-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	9	all	98	ALL	antalu	antalu	ɐ n t ɐ l u	false
-142	FUYUG-83-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	83	ash	646	ASH	ho	ho	h o	false
-143	BIANGAI-27-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	27	bark	1204	BARK	k3l3	k3l3	k ə l ə	false
-144	FUYUG-27-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	27	bark	1204	BARK	hoda	hoda	h o d ɐ	false
-145	FUYUG-49-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	49	belly	1251	BELLY	hombo	hombo	h o m b o	false
-146	BIANGAI-13-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	13	big	1202	BIG	unatuba	unatuba	u n ɐ t u b ɐ	false
-147	BIANGAI-13-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	13	big	1202	BIG	y3man3	y3man3	j ə m ɐ n ə	false
-148	BIANGAI-13-3	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	13	big	1202	BIG	y3mizi	y3mizi	j ə m i z i	false
-149	FUYUG-13-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	13	big	1202	BIG	inoga	inoga	i n o g ɐ	false
-150	BIANGAI-20-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	20	bird	937	BIRD	winak	winak	w i n ɐ k	false
-151	FUYUG-20-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	20	bird	937	BIRD	nemba	nemba	n e m b ɐ	false
-152	FUYUG-56-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	56	bite	1403	BITE	idede	idede	i d e d e	false
-153	BIANGAI-91-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	91	black	163	BLACK	kusabanu	kusabanu	k u s ɐ b ɐ n u	false
-154	FUYUG-91-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	91	black	163	BLACK	duba fifi	duba fifi	d u b ɐ f i f i	false
-155	BIANGAI-84-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	84	burn	2102	BURN	Nori	Nori	ŋ o r i	false
-156	FUYUG-45-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	45	claw	72	CLAW	kosida	kosida	k o s i d ɐ	false
-157	FUYUG-80-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	80	cloud	1489	CLOUD	hunu	hunu	h u n u	false
-158	BIANGAI-94-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	94	cold	1287	COLD	kab3n3N	kab3n3N	k ɐ b ə n ə ŋ	false
-159	FUYUG-94-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	94	cold	1287	COLD	Zunda	Zunda	ʒ u n d ɐ	false
-160	BIANGAI-99-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	99	dry	1398	DRY	NaiNaiLiya	NaiNaiLiya	ŋ ɐ i ŋ ɐ i ʎ i j ɐ	false
-161	FUYUG-99-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	99	dry	1398	DRY	holo	holo	h o l o	false
-162	BIANGAI-79-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	79	earth	1228	EARTH (SOIL)	Nab3Lak	Nab3Lak	ŋ ɐ b ə ʎ ɐ k	false
-163	FUYUG-79-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	79	earth	1228	EARTH (SOIL)	hova	hova	h o v ɐ	false
-164	BIANGAI-55-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	55	eat	1336	EAT	n	n	n	false
-165	FUYUG-55-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	55	eat	1336	EAT	nene	nene	n e n e	false
-166	BIANGAI-33-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	33	egg	744	EGG	N3k	N3k	ŋ ə k	false
-167	FUYUG-33-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	33	egg	744	EGG	hulombo	hulombo	h u l o m b o	false
-168	FUYUG-36-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	36	feather	1201	FEATHER	nemba huma	nemba huma	n e m b ɐ h u m ɐ	false
-169	BIANGAI-29-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	29	flesh	2259	FLESH	wata	wata	w ɐ t ɐ	false
-170	FUYUG-29-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	29	flesh	2259	FLESH	mada	mada	m ɐ d ɐ	false
-171	FUYUG-64-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	64	fly	1441	FLY (MOVE THROUGH AIR)	sumeme	sumeme	s u m e m e	false
-172	BIANGAI-46-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	46	foot	1301	FOOT	iN3	iN3	i ŋ ə	false
-173	FUYUG-46-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	46	foot	1301	FOOT	soga	soga	s o g ɐ	false
-174	BIANGAI-70-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	70	give	1447	GIVE	an	an	ɐ n	false
-175	FUYUG-70-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	70	give	1447	GIVE	nendidi	nendidi	n e n d i d i	false
-176	BIANGAI-97-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	97	good	1035	GOOD	wazono	wazono	w ɐ z o n o	false
-177	FUYUG-97-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	97	good	1035	GOOD	ifa	ifa	i f ɐ	false
-178	FUYUG-32-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	hugu	hugu	h u g u	false
-179	FUYUG-88-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	88	green	1425	GREEN	duba	duba	d u b ɐ	false
-180	FUYUG-37-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	37	hair	1040	HAIR	haluma	haluma	h ɐ l u m ɐ	false
-181	BIANGAI-38-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	38	head	1256	HEAD	k3bi	k3bi	k ə b i	false
-182	FUYUG-38-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	38	head	1256	HEAD	ha	ha	h ɐ	false
-183	BIANGAI-52-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	52	heart	1223	HEART	wiL3kai	wiL3kai	w i ʎ ə k ɐ i	false
-184	FUYUG-52-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	52	heart	1223	HEART	huva	huva	h u v ɐ	false
-185	BIANGAI-93-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	93	hot	1286	HOT	y3ziNe	y3ziNe	j ə z i ŋ e	false
-186	BIANGAI-62-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	62	kill	1417	KILL	3l	3l	ə l	false
-187	BIANGAI-62-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	62	kill	1417	KILL	ul	ul	u l	false
-188	FUYUG-62-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	62	kill	1417	KILL	hadede	hadede	h ɐ d e d e	false
-189	BIANGAI-59-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	59	know	3626	KNOW	iwaka	iwaka	i w ɐ k ɐ	false
-190	FUYUG-59-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	59	know	3626	KNOW	sisiba	sisiba	s i s i b ɐ	false
-191	FUYUG-67-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	67	lie	1411	LIE (REST)	idede	idede	i d e d e	false
-192	BIANGAI-14-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	14	long	1203	LONG	yokoLoN	yokoLoN	j o k o ʎ o ŋ	false
-193	FUYUG-14-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	14	long	1203	LONG	sesa	sesa	s e s ɐ	false
-194	BIANGAI-17-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	17	man	1554	MAN	yompu	yompu	j o m p u	false
-195	FUYUG-17-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	17	man	1554	MAN	aa	aa	ɐ ɐ	false
-196	BIANGAI-10-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	10	many	1198	MANY	k3r3muNk3	k3r3muNk3	k ə r ə m u ŋ k ə	false
-197	FUYUG-10-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	10	many	1198	MANY	halulu	halulu	h ɐ l u l u	false
-198	BIANGAI-73-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	73	moon	1313	MOON	NoN	NoN	ŋ o ŋ	false
-199	FUYUG-73-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	73	moon	1313	MOON	hama	hama	h ɐ m ɐ	false
-200	FUYUG-42-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	42	mouth	674	MOUTH	uda	uda	u d ɐ	false
-201	FUYUG-50-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	50	neck	1333	NECK	indu	indu	i n d u	false
-202	BIANGAI-8-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	8	not	1240	NOT	ono	ono	o n o	false
-203	FUYUG-8-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	8	not	1240	NOT	huva susu	huva susu	h u v ɐ s u s u	false
-204	BIANGAI-76-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	76	rain	2108	RAINING OR RAIN	kuli	kuli	k u l i	false
-205	BIANGAI-76-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	76	rain	2108	RAINING OR RAIN	mani	mani	m ɐ n i	false
-206	BIANGAI-76-3	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	76	rain	2108	RAINING OR RAIN	kobo	kobo	k o b o	false
-207	FUYUG-76-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	76	rain	2108	RAINING OR RAIN	ZaNosa	ZaNosa	ʒ ɐ ŋ o s ɐ	false
-208	FUYUG-87-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	87	red	156	RED	tadana	tadana	t ɐ d ɐ n ɐ	false
-209	BIANGAI-26-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	26	root	670	ROOT	puLiLi	puLiLi	p u ʎ i ʎ i	false
-210	FUYUG-26-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	26	root	670	ROOT	kufuli	kufuli	k u f u l i	false
-211	BIANGAI-98-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	98	round	1395	ROUND	l3k	l3k	l ə k	false
-212	FUYUG-98-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	98	round	1395	ROUND	kombofuda	kombofuda	k o m b o f u d ɐ	false
-213	BIANGAI-78-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	78	sand	671	SAND	kai	kai	k ɐ i	false
-214	FUYUG-78-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	78	sand	671	SAND	asaNa	asaNa	ɐ s ɐ ŋ ɐ	false
-215	BIANGAI-71-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	71	say	1458	SAY	kai	kai	k ɐ i	false
-216	BIANGAI-71-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	71	say	1458	SAY	e	e	e	false
-217	BIANGAI-71-3	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	71	say	1458	SAY	me	me	m e	false
-218	FUYUG-71-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	71	say	1458	SAY	ete	ete	e t e	false
-219	FUYUG-24-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	24	seed	714	SEED	deda	deda	d e d ɐ	false
-220	BIANGAI-68-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	68	sit	1416	SIT	moxos	moxos	m o x o s	false
-221	FUYUG-68-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	68	sit	1416	SIT	andede	andede	ɐ n d e d e	false
-222	BIANGAI-60-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	60	sleep	1585	SLEEP	wiy3k	wiy3k	w i j ə k	false
-223	FUYUG-60-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	60	sleep	1585	SLEEP	idede	idede	i d e d e	false
-224	BIANGAI-15-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	15	small	1246	SMALL	soNoNo	soNoNo	s o ŋ o ŋ o	false
-225	BIANGAI-15-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	15	small	1246	SMALL	koru	koru	k o r u	false
-226	FUYUG-15-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	15	small	1246	SMALL	galiba	galiba	g ɐ l i b ɐ	false
-227	BIANGAI-81-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	81	smoke	778	SMOKE (EXHAUST)	y3Lakp3k	y3Lakp3k	j ə ʎ ɐ k p ə k	false
-228	FUYUG-81-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	81	smoke	778	SMOKE (EXHAUST)	iso	iso	i s o	false
-229	BIANGAI-69-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	69	stand	1442	STAND	Luw3z	Luw3z	ʎ u w ə z	false
-230	FUYUG-69-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	69	stand	1442	STAND	zuZu	zuZu	z u ʒ u	false
-231	BIANGAI-63-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	63	swim	1439	SWIM	kai kisi	kai kisi	k ɐ i k i s i	false
-232	FUYUG-63-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	63	swim	1439	SWIM	emodi	emodi	e m o d i	false
-233	FUYUG-35-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	35	tail	1220	TAIL	tofa	tofa	t o f ɐ	false
-234	BIANGAI-5-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	5	that	78	THAT	pu	pu	p u	false
-235	FUYUG-5-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	5	that	78	THAT	vane	vane	v ɐ n e	false
-236	BIANGAI-4-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	4	this	1214	THIS	pe	pe	p e	false
-237	FUYUG-4-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	4	this	1214	THIS	uvane	uvane	u v ɐ n e	false
-238	FUYUG-65-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	65	walk	1443	WALK	sumeme	sumeme	s u m e m e	false
-239	BIANGAI-7-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	7	what	1236	WHAT	taLik	taLik	t ɐ ʎ i k	false
-240	FUYUG-7-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	7	what	1236	WHAT	anda	anda	ɐ n d ɐ	false
-241	BIANGAI-90-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	90	white	1335	WHITE	wiLaNka	wiLaNka	w i ʎ ɐ ŋ k ɐ	false
-242	FUYUG-90-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	90	white	1335	WHITE	keneke	keneke	k e n e k e	false
-243	BIANGAI-6-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	6	who	1235	WHO	ta	ta	t ɐ	false
-244	FUYUG-6-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	6	who	1235	WHO	da	da	d ɐ	false
-245	BIANGAI-16-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	16	woman	962	WOMAN	yoNok	yoNok	j o ŋ o k	false
-246	FUYUG-16-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	16	woman	962	WOMAN	amu	amu	ɐ m u	false
-247	BIANGAI-89-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	89	yellow	1424	YELLOW	simaNkaim3	simaNkaim3	s i m ɐ ŋ k ɐ i m ə	false
-248	FUYUG-89-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	89	yellow	1424	YELLOW	toZoto	toZoto	t o ʒ o t o	false
-249	AMAM-1-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	1	*I	1209	I	ne	ne	n e	false
-250	WERI-1-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	1	*I	1209	I	ne	ne	n e	false
-251	AMAM-30-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	30	*blood	946	BLOOD	i	i	i	false
-252	SINI-30-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	30	*blood	946	BLOOD	i7iara	i7iara	i ʔ i ɐ r ɐ	false
-253	SINI-31-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	31	*bone	1394	BONE	koZora	koZora	k o ʒ o r ɐ	false
-254	SINI-51-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	51	*breasts	1402	BREAST	kavada	kavada	k ɐ v ɐ d ɐ	false
-255	AMAM-66-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	66	*come	1446	COME	im	im	i m	false
-256	SINI-66-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	66	*come	1446	COME	wuliluli	wuliluli	w u l i l u l i	false
-257	WERI-66-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	66	*come	1446	COME	wais	wais	w ɐ i s	false
-258	AMAM-61-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	61	*die	1494	DIE	walwi	walwi	w ɐ l w i	false
-259	SINI-61-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	61	*die	1494	DIE	welvia	welvia	w e l v i ɐ	false
-260	AMAM-21-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	21	*dog	2009	DOG	kent	kent	k e n t	false
-261	WERI-21-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	21	*dog	2009	DOG	kent	kent	k e n t	false
-262	SINI-54-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	54	*drink	1401	DRINK	iwonoma	iwonoma	i w o n o m ɐ	false
-263	WERI-54-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	54	*drink	1401	DRINK	yen	yen	j e n	false
-264	AMAM-39-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	39	*ear	1247	EAR	kat	kat	k ɐ t	false
-265	SINI-39-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	39	*ear	1247	EAR	karab	karab	k ɐ r ɐ b	false
-266	WERI-39-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	39	*ear	1247	EAR	kat	kat	k ɐ t	false
-267	AMAM-40-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	40	*eye	1248	EYE	it	it	i t	false
-268	SINI-40-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	40	*eye	1248	EYE	numa	numa	n u m ɐ	false
-269	WERI-40-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	40	*eye	1248	EYE	it	it	i t	false
-270	AMAM-82-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	82	*fire	221	FIRE	is	is	i s	false
-271	SINI-82-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	82	*fire	221	FIRE	ijuis	ijuis	i dʒ u i s	false
-272	WERI-82-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	82	*fire	221	FIRE	es	es	e s	false
-273	AMAM-48-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	48	*hand	1277	HAND	mor	mor	m o r	false
-274	SINI-48-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	48	*hand	1277	HAND	moreZ	moreZ	m o r e ʒ	false
-275	WERI-48-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	48	*hand	1277	HAND	mor	mor	m o r	false
-276	AMAM-58-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	58	*hear	1408	HEAR	katwi	katwi	k ɐ t w i	false
-277	SINI-58-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	58	*hear	1408	HEAR	kataki tiNi katul	kataki tiNi katul	k ɐ t ɐ k i t i ŋ i k ɐ t u l	false
-278	WERI-58-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	58	*hear	1408	HEAR	kat wi	kat wi	k ɐ t w i	false
-279	SINI-47-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	47	*knee	1371	KNEE	laru	laru	l ɐ r u	false
-280	AMAM-25-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	25	*leaf	628	LEAF	keraoep	keraoep	k e r ɐ o e p	false
-281	AMAM-86-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	86	*mountain	639	MOUNTAIN	tomon	tomon	t o m o n	false
-282	SINI-86-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	86	*mountain	639	MOUNTAIN	lauiearo	lauiearo	l ɐ u i e ɐ r o	false
-283	AMAM-96-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	96	*new	1231	NEW	Nolop	Nolop	ŋ o l o p	false
-284	AMAM-92-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	92	*night	1233	NIGHT	kouta	kouta	k o u t ɐ	false
-285	SINI-92-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	92	*night	1233	NIGHT	jeitarawa	jeitarawa	dʒ e i t ɐ r ɐ w ɐ	false
-286	WERI-92-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	92	*night	1233	NIGHT	ru	ru	r u	false
-287	AMAM-41-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	41	*nose	1221	NOSE	woto	woto	w o t o	false
-288	SINI-41-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	41	*nose	1221	NOSE	wowora	wowora	w o w o r ɐ	false
-289	WERI-41-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	41	*nose	1221	NOSE	wot	wot	w o t	false
-290	AMAM-11-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	11	*one	1493	ONE	naar	naar	n ɐ ɐ r	false
-291	WERI-11-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	11	*one	1493	ONE	namp	namp	n ɐ m p	false
-292	AMAM-85-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	85	*path	2252	PATH	kan	kan	k ɐ n	false
-293	SINI-85-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	85	*path	2252	PATH	kaNara	kaNara	k ɐ ŋ ɐ r ɐ	false
-294	WERI-85-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	85	*path	2252	PATH	kan	kan	k ɐ n	false
-295	AMAM-18-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	18	*person	683	PERSON	omporoa	omporoa	o m p o r o ɐ	false
-296	SINI-18-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	18	*person	683	PERSON	ambobo	ambobo	ɐ m b o b o	false
-297	WERI-18-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	18	*person	683	PERSON	omin	omin	o m i n	false
-298	AMAM-57-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	57	*see	1409	SEE	ita	ita	i t ɐ	false
-299	SINI-57-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	57	*see	1409	SEE	idugalili	idugalili	i d u g ɐ l i l i	false
-300	WERI-57-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	57	*see	1409	SEE	itaNk	itaNk	i t ɐ ŋ k	false
-301	WERI-57-2	WERI	WERI	*weri	Weri	Goilalan	Weric		False	57	*see	1409	SEE	iten	iten	i t e n	false
-302	AMAM-28-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	28	*skin	763	SKIN	korop	korop	k o r o p	false
-303	SINI-28-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	28	*skin	763	SKIN	koropari	koropari	k o r o p ɐ r i	false
-304	WERI-28-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	28	*skin	763	SKIN	korup	korup	k o r u p	false
-305	AMAM-74-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	74	*star	1430	STAR	muri	muri	m u r i	false
-306	AMAM-77-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	77	*stone	857	STONE	kel	kel	k e l	false
-307	SINI-77-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	77	*stone	857	STONE	kaliaro	kaliaro	k ɐ l i ɐ r o	false
-308	AMAM-72-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	72	*sun	1343	SUN	kete	kete	k e t e	false
-309	SINI-72-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	72	*sun	1343	SUN	gadep	gadep	g ɐ d e p	false
-310	WERI-72-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	72	*sun	1343	SUN	kit	kit	k i t	false
-311	SINI-44-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	44	*tongue	1205	TONGUE	yangaueri	yangaueri	j ɐ n g ɐ u e r i	false
-312	AMAM-43-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	43	*tooth	1380	TOOTH	ke	ke	k e	false
-313	SINI-43-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	43	*tooth	1380	TOOTH	kera	kera	k e r ɐ	false
-314	AMAM-23-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	23	*tree	906	TREE	kerao	kerao	k e r ɐ o	false
-315	SINI-23-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	23	*tree	906	TREE	karamedi	karamedi	k ɐ r ɐ m e d i	false
-316	WERI-23-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	23	*tree	906	TREE	kira	kira	k i r ɐ	false
-317	AMAM-12-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	12	*two	1498	TWO	narar	narar	n ɐ r ɐ r	false
-318	WERI-12-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	12	*two	1498	TWO	nar	nar	n ɐ r	false
-319	AMAM-75-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	75	*water	948	WATER	i	i	i	false
-320	WERI-75-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	75	*water	948	WATER	i	i	i	false
-321	AMAM-3-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	3	*we	1212	WE	tiar	tiar	t i ɐ r	false
-322	WERI-3-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	3	*we	1212	WE	tiar	tiar	t i ɐ r	false
-323	AMAM-2-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	2	*you	1215	THOU	ni	ni	n i	false
-324	SINI-2-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	2	*you	1215	THOU	nine	nine	n i n e	false
-325	WERI-2-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	2	*you	1215	THOU	ni	ni	n i	false
-326	AMAM-9-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	9	all	98	ALL	pouroa	pouroa	p o u r o ɐ	false
-327	WERI-9-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	9	all	98	ALL	pou	pou	p o u	false
-328	SINI-49-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	49	belly	1251	BELLY	yada	yada	j ɐ d ɐ	false
-329	WERI-49-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	49	belly	1251	BELLY	ya	ya	j ɐ	false
-330	AMAM-13-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	13	big	1202	BIG	kesaNar	kesaNar	k e s ɐ ŋ ɐ r	false
-331	WERI-13-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	13	big	1202	BIG	kisaN	kisaN	k i s ɐ ŋ	false
-332	WERI-13-2	WERI	WERI	*weri	Weri	Goilalan	Weric		False	13	big	1202	BIG	kau	kau	k ɐ u	false
-333	AMAM-20-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	20	bird	937	BIRD	indek	indek	i n d e k	false
-334	SINI-20-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	20	bird	937	BIRD	indegep	indegep	i n d e g e p	false
-335	WERI-20-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	20	bird	937	BIRD	int	int	i n t	false
-336	AMAM-56-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	56	bite	1403	BITE	mu	mu	m u	false
-337	WERI-56-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	56	bite	1403	BITE	kant	kant	k ɐ n t	false
-338	AMAM-91-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	91	black	163	BLACK	kouar	kouar	k o u ɐ r	false
-339	AMAM-84-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	84	burn	2102	BURN	maNg	maNg	m ɐ ŋ g	false
-340	AMAM-94-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	94	cold	1287	COLD	siplok	siplok	s i p l o k	false
-341	SINI-94-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	94	cold	1287	COLD	ebiai	ebiai	e b i ɐ i	false
-342	WERI-94-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	94	cold	1287	COLD	ip	ip	i p	false
-343	AMAM-79-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	79	earth	1228	EARTH (SOIL)	yaNa	yaNa	j ɐ ŋ ɐ	false
-344	WERI-79-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	79	earth	1228	EARTH (SOIL)	yaN	yaN	j ɐ ŋ	false
-345	AMAM-55-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	55	eat	1336	EAT	ne	ne	n e	false
-346	AMAM-55-2	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	55	eat	1336	EAT	na	na	n ɐ	false
-347	SINI-55-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	55	eat	1336	EAT	namek	namek	n ɐ m e k	false
-348	WERI-55-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	55	eat	1336	EAT	ni	ni	n i	false
-349	AMAM-46-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	46	foot	1301	FOOT	iN	iN	i ŋ	false
-350	WERI-46-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	46	foot	1301	FOOT	iN	iN	i ŋ	false
-351	AMAM-70-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	70	give	1447	GIVE	aNg	aNg	ɐ ŋ g	false
-352	SINI-70-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	70	give	1447	GIVE	mani	mani	m ɐ n i	false
-353	WERI-70-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	70	give	1447	GIVE	n	n	n	false
-354	WERI-70-2	WERI	WERI	*weri	Weri	Goilalan	Weric		False	70	give	1447	GIVE	mp	mp	m p	false
-355	WERI-70-3	WERI	WERI	*weri	Weri	Goilalan	Weric		False	70	give	1447	GIVE	Nk	Nk	ŋ k	false
-356	WERI-70-4	WERI	WERI	*weri	Weri	Goilalan	Weric		False	70	give	1447	GIVE	in	in	i n	false
-357	AMAM-97-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	97	good	1035	GOOD	ompeaup	ompeaup	o m p e ɐ u p	false
-358	SINI-97-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	97	good	1035	GOOD	kilitu	kilitu	k i l i t u	false
-359	WERI-97-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	97	good	1035	GOOD	ompyau	ompyau	o m p j ɐ u	false
-360	AMAM-88-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	88	green	1425	GREEN	keraep yolsaiar	keraep yolsaiar	k e r ɐ e p j o l s ɐ i ɐ r	false
-361	SINI-37-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	37	hair	1040	HAIR	gaueri	gaueri	g ɐ u e r i	false
-362	WERI-37-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	37	hair	1040	HAIR	ip	ip	i p	false
-363	AMAM-38-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	38	head	1256	HEAD	kepo	kepo	k e p o	false
-364	SINI-38-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	38	head	1256	HEAD	gogomari	gogomari	g o g o m ɐ r i	false
-365	WERI-38-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	38	head	1256	HEAD	kepun	kepun	k e p u n	false
-366	AMAM-93-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	93	hot	1286	HOT	isNa	isNa	i s ŋ ɐ	false
-367	SINI-93-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	93	hot	1286	HOT	midiniai	midiniai	m i d i n i ɐ i	false
-368	WERI-93-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	93	hot	1286	HOT	es	es	e s	false
-369	SINI-62-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	62	kill	1417	KILL	ma	ma	m ɐ	false
-370	AMAM-14-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	14	long	1203	LONG	walau	walau	w ɐ l ɐ u	false
-371	WERI-14-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	14	long	1203	LONG	wali	wali	w ɐ l i	false
-372	AMAM-17-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	17	man	1554	MAN	omporoa	omporoa	o m p o r o ɐ	false
-373	SINI-17-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	17	man	1554	MAN	ambobo	ambobo	ɐ m b o b o	false
-374	WERI-17-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	17	man	1554	MAN	omp	omp	o m p	false
-375	AMAM-10-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	10	many	1198	MANY	sarar	sarar	s ɐ r ɐ r	false
-376	SINI-10-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	10	many	1198	MANY	borua	borua	b o r u ɐ	false
-377	AMAM-73-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	73	moon	1313	MOON	Nono	Nono	ŋ o n o	false
-378	SINI-73-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	73	moon	1313	MOON	gnoNa	gnoNa	g n o ŋ ɐ	false
-379	WERI-73-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	73	moon	1313	MOON	Non	Non	ŋ o n	false
-380	AMAM-42-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	42	mouth	674	MOUTH	kem	kem	k e m	false
-381	SINI-50-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	50	neck	1333	NECK	meZara	meZara	m e ʒ ɐ r ɐ	false
-382	WERI-50-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	50	neck	1333	NECK	mis	mis	m i s	false
-383	AMAM-8-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	8	not	1240	NOT	won	won	w o n	false
-384	AMAM-8-2	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	8	not	1240	NOT	na	na	n ɐ	false
-385	WERI-8-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	8	not	1240	NOT	won	won	w o n	false
-386	WERI-8-2	WERI	WERI	*weri	Weri	Goilalan	Weric		False	8	not	1240	NOT	na	na	n ɐ	false
-387	WERI-8-3	WERI	WERI	*weri	Weri	Goilalan	Weric		False	8	not	1240	NOT	n	n	n	false
-388	AMAM-76-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	76	rain	2108	RAINING OR RAIN	kopi	kopi	k o p i	false
-389	AMAM-76-2	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	76	rain	2108	RAINING OR RAIN	pel	pel	p e l	false
-390	SINI-76-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	76	rain	2108	RAINING OR RAIN	kovira	kovira	k o v i r ɐ	false
-391	WERI-76-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	76	rain	2108	RAINING OR RAIN	kopi	kopi	k o p i	false
-392	WERI-76-2	WERI	WERI	*weri	Weri	Goilalan	Weric		False	76	rain	2108	RAINING OR RAIN	pel	pel	p e l	false
-393	AMAM-87-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	87	red	156	RED	kopmoaiar	kopmoaiar	k o p m o ɐ i ɐ r	false
-394	WERI-87-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	87	red	156	RED	kup	kup	k u p	false
-395	WERI-71-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	71	say	1458	SAY	e	e	e	false
-396	WERI-71-2	WERI	WERI	*weri	Weri	Goilalan	Weric		False	71	say	1458	SAY	a	a	ɐ	false
-397	WERI-71-3	WERI	WERI	*weri	Weri	Goilalan	Weric		False	71	say	1458	SAY	i	i	i	false
-398	WERI-71-4	WERI	WERI	*weri	Weri	Goilalan	Weric		False	71	say	1458	SAY	ak	ak	ɐ k	false
-399	AMAM-24-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	24	seed	714	SEED	wop	wop	w o p	false
-400	AMAM-68-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	68	sit	1416	SIT	Nendi	Nendi	ŋ e n d i	false
-401	SINI-68-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	68	sit	1416	SIT	welZe	welZe	w e l ʒ e	false
-402	WERI-68-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	68	sit	1416	SIT	wel	wel	w e l	false
-403	WERI-68-2	WERI	WERI	*weri	Weri	Goilalan	Weric		False	68	sit	1416	SIT	aisi	aisi	ɐ i s i	false
-404	AMAM-60-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	60	sleep	1585	SLEEP	ao	ao	ɐ o	false
-405	AMAM-60-2	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	60	sleep	1585	SLEEP	aok	aok	ɐ o k	false
-406	SINI-60-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	60	sleep	1585	SLEEP	urakenorak	urakenorak	u r ɐ k e n o r ɐ k	false
-407	WERI-60-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	60	sleep	1585	SLEEP	ur	ur	u r	false
-408	WERI-60-2	WERI	WERI	*weri	Weri	Goilalan	Weric		False	60	sleep	1585	SLEEP	ka	ka	k ɐ	false
-409	AMAM-15-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	15	small	1246	SMALL	kotuta	kotuta	k o t u t ɐ	false
-410	SINI-15-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	15	small	1246	SMALL	kadupa	kadupa	k ɐ d u p ɐ	false
-411	WERI-15-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	15	small	1246	SMALL	kot	kot	k o t	false
-412	WERI-81-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	81	smoke	778	SMOKE (EXHAUST)	koulup	koulup	k o u l u p	false
-413	SINI-69-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	69	stand	1442	STAND	lavaka	lavaka	l ɐ v ɐ k ɐ	false
-414	WERI-69-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	69	stand	1442	STAND	tau	tau	t ɐ u	false
-415	AMAM-5-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	5	that	78	THAT	pipar	pipar	p i p ɐ r	false
-416	AMAM-5-2	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	5	that	78	THAT	eNgar	eNgar	e ŋ g ɐ r	false
-417	WERI-5-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	5	that	78	THAT	pip	pip	p i p	false
-418	WERI-5-2	WERI	WERI	*weri	Weri	Goilalan	Weric		False	5	that	78	THAT	pu	pu	p u	false
-419	AMAM-4-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	4	this	1214	THIS	epar	epar	e p ɐ r	false
-420	WERI-4-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	4	this	1214	THIS	ep	ep	e p	false
-421	AMAM-65-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	65	walk	1443	WALK	kaniN	kaniN	k ɐ n i ŋ	false
-422	AMAM-7-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	7	what	1236	WHAT	oropot	oropot	o r o p o t	false
-423	WERI-7-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	7	what	1236	WHAT	tol	tol	t o l	false
-424	AMAM-90-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	90	white	1335	WHITE	kolamar	kolamar	k o l ɐ m ɐ r	false
-425	AMAM-6-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	6	who	1235	WHO	talep	talep	t ɐ l e p	false
-426	SINI-6-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	6	who	1235	WHO	talip	talip	t ɐ l i p	false
-427	WERI-6-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	6	who	1235	WHO	tal	tal	t ɐ l	false
-428	AMAM-16-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	16	woman	962	WOMAN	oNo	oNo	o ŋ o	false
-429	SINI-16-1	SINI	SINI	*sini	Weri	Goilalan	Weric		False	16	woman	962	WOMAN	aNopa	aNopa	ɐ ŋ o p ɐ	false
-430	WERI-16-1	WERI	WERI	*weri	Weri	Goilalan	Weric		False	16	woman	962	WOMAN	uN	uN	u ŋ	false
-431	AMAM-89-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	89	yellow	1424	YELLOW	koprendeNar	koprendeNar	k o p r e n d e ŋ ɐ r	false
+3	FUYUG_3-1-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	1	*I	1209	I	na	na	n ɐ	false
+4	KUNIMAIPA-1-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	1	*I	1209	I	ne	ne	n e	false
+5	TAUADE-1-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	1	*I	1209	I	nai	nai	n ɐ i	false
+6	TAUADE-1-2	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	1	*I	1209	I	na	na	n ɐ	false
+7	TAUADE_2-1-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	1	*I	1209	I	na	na	n ɐ	false
+8	BIANGAI-30-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	30	*blood	946	BLOOD	iwi	iwi	i w i	false
+9	FUYUG-30-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	30	*blood	946	BLOOD	tana	tana	t ɐ n ɐ	false
+10	FUYUG_GAGAGRA-30-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	30	*blood	946	BLOOD	tanaro	tanaro	t ɐ n ɐ r o	false
+11	TAUADE-30-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	30	*blood	946	BLOOD	ilive	ilive	i l i v e	false
+12	TAUADE_2-30-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	30	*blood	946	BLOOD	ilivi	ilivi	i l i v i	false
+13	BIANGAI-31-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	31	*bone	1394	BONE	koza	koza	k o z ɐ	false
+14	FUYUG-31-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	31	*bone	1394	BONE	hude	hude	h u d e	false
+15	FUYUG_GAGAGRA-31-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	31	*bone	1394	BONE	ude	ude	u d e	false
+16	KUNIMAIPA-31-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	31	*bone	1394	BONE	hatai	hatai	h ɐ t ɐ i	false
+17	TAUADE_2-31-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	31	*bone	1394	BONE	kenivi	kenivi	k e n i v i	false
+18	BIANGAI-51-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	51	*breasts	1402	BREAST	yEbiLi	yEbiLi	j a b i ʎ i	false
+19	FUYUG-51-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	51	*breasts	1402	BREAST	duda	duda	d u d ɐ	false
+20	FUYUG_GAGAGRA-51-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	51	*breasts	1402	BREAST	luda	luda	l u d ɐ	false
+21	TAUADE-51-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	51	*breasts	1402	BREAST	opipe	opipe	o p i p e	false
+22	TAUADE_2-51-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	51	*breasts	1402	BREAST	data	data	d ɐ t ɐ	false
+23	BIANGAI-66-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	66	*come	1446	COME	L3wa	L3wa	ʎ ə w ɐ	false
+24	FUYUG-66-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	66	*come	1446	COME	telele	telele	t e l e l e	false
+25	FUYUG_3-66-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	66	*come	1446	COME	tel	tel	t e l	false
+26	KUNIMAIPA-66-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	66	*come	1446	COME	ema	ema	e m ɐ	false
+27	TAUADE-66-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	66	*come	1446	COME	lei	lei	l e i	false
+28	TAUADE-66-2	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	66	*come	1446	COME	konae	konae	k o n ɐ e	false
+29	TAUADE_2-66-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	66	*come	1446	COME	doi konaia	doi konaia	d o i k o n ɐ i ɐ	false
+30	BIANGAI-61-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	61	*die	1494	DIE	ib3N	ib3N	i b ə ŋ	false
+31	FUYUG-61-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	61	*die	1494	DIE	usaNege	usaNege	u s ɐ ŋ e g e	false
+32	FUYUG_3-61-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	61	*die	1494	DIE	us	us	u s	false
+33	KUNIMAIPA-61-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	61	*die	1494	DIE	Nome	Nome	ŋ o m e	false
+34	TAUADE-61-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	61	*die	1494	DIE	kelui	kelui	k e l u i	false
+35	TAUADE_2-61-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	61	*die	1494	DIE	ulo kelu	ulo kelu	u l o k e l u	false
+36	BIANGAI-21-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	21	*dog	2009	DOG	k3ri	k3ri	k ə r i	false
+37	FUYUG-21-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	21	*dog	2009	DOG	ho	ho	h o	false
+38	FUYUG_2-21-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	21	*dog	2009	DOG	oi	oi	o i	false
+39	FUYUG_3-21-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	21	*dog	2009	DOG	hoy	hoy	h o j	false
+40	FUYUG_GAGAGRA-21-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	21	*dog	2009	DOG	ho	ho	h o	false
+41	KUNIMAIPA-21-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	21	*dog	2009	DOG	hadepu	hadepu	h ɐ d e p u	false
+42	TAUADE-21-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	21	*dog	2009	DOG	kovela	kovela	k o v e l ɐ	false
+43	TAUADE_2-21-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	21	*dog	2009	DOG	kovera	kovera	k o v e r ɐ	false
+44	BIANGAI-54-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	54	*drink	1401	DRINK	n	n	n	false
+45	FUYUG-54-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	54	*drink	1401	DRINK	nene	nene	n e n e	false
+46	FUYUG_3-54-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	54	*drink	1401	DRINK	n	n	n	false
+47	TAUADE-54-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	54	*drink	1401	DRINK	nai	nai	n ɐ i	false
+48	TAUADE_2-54-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	54	*drink	1401	DRINK	ipnai	ipnai	i p n ɐ i	false
+49	BIANGAI-39-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	39	*ear	1247	EAR	kere	kere	k e r e	false
+50	FUYUG-39-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	39	*ear	1247	EAR	gadolo	gadolo	g ɐ d o l o	false
+51	FUYUG_3-39-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	39	*ear	1247	EAR	yangol	yangol	j ɐ n g o l	false
+52	FUYUG_GAGAGRA-39-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	39	*ear	1247	EAR	gadron	gadron	g ɐ d r o n	false
+53	KUNIMAIPA-39-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	39	*ear	1247	EAR	hata	hata	h ɐ t ɐ	false
+54	TAUADE-39-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	39	*ear	1247	EAR	kepape	kepape	k e p ɐ p e	false
+55	TAUADE_2-39-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	39	*ear	1247	EAR	kepapai	kepapai	k e p ɐ p ɐ i	false
+56	BIANGAI-40-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	40	*eye	1248	EYE	wir3	wir3	w i r ə	false
+57	FUYUG-40-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	40	*eye	1248	EYE	li	li	l i	false
+58	FUYUG_2-40-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	40	*eye	1248	EYE	im	im	i m	false
+59	FUYUG_3-40-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	40	*eye	1248	EYE	im	im	i m	false
+60	FUYUG_GAGAGRA-40-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	40	*eye	1248	EYE	odoro	odoro	o d o r o	false
+61	KUNIMAIPA-40-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	40	*eye	1248	EYE	et	et	e t	false
+62	TAUADE-40-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	40	*eye	1248	EYE	vape	vape	v ɐ p e	false
+63	TAUADE_2-40-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	40	*eye	1248	EYE	tavai	tavai	t ɐ v ɐ i	false
+64	BIANGAI-82-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	82	*fire	221	FIRE	y3zi	y3zi	j ə z i	false
+65	FUYUG-82-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	82	*fire	221	FIRE	oki	oki	o k i	false
+66	FUYUG_3-82-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	82	*fire	221	FIRE	oki	oki	o k i	false
+67	FUYUG_GAGAGRA-82-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	82	*fire	221	FIRE	oki	oki	o k i	false
+68	KUNIMAIPA-82-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	82	*fire	221	FIRE	itiNade	itiNade	i t i ŋ ɐ d e	false
+69	TAUADE-82-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	82	*fire	221	FIRE	ename	ename	e n ɐ m e	false
+70	TAUADE_2-82-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	82	*fire	221	FIRE	enam	enam	e n ɐ m	false
+71	BIANGAI-19-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	19	*fish	227	FISH	watakai	watakai	w ɐ t ɐ k ɐ i	false
+72	FUYUG-19-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	19	*fish	227	FISH	galu	galu	g ɐ l u	false
+73	FUYUG_3-19-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	19	*fish	227	FISH	galum	galum	g ɐ l u m	false
+74	FUYUG_GAGAGRA-19-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	19	*fish	227	FISH	garume	garume	g ɐ r u m e	false
+75	KUNIMAIPA-19-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	19	*fish	227	FISH	pisiholo	pisiholo	p i s i h o l o	false
+76	TAUADE-19-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	19	*fish	227	FISH	kapita	kapita	k ɐ p i t ɐ	false
+77	TAUADE_2-19-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	19	*fish	227	FISH	korume	korume	k o r u m e	false
+78	BIANGAI-95-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	95	*full	1429	FULL	wiLak	wiLak	w i ʎ ɐ k	false
+79	FUYUG-95-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	95	*full	1429	FULL	indela	indela	i n d e l ɐ	false
+80	TAUADE_2-95-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	95	*full	1429	FULL	naniamiu	naniamiu	n ɐ n i ɐ m i u	false
+81	BIANGAI-48-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	48	*hand	1277	HAND	m3l3	m3l3	m ə l ə	false
+82	FUYUG-48-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	48	*hand	1277	HAND	iZa	iZa	i ʒ ɐ	false
+83	FUYUG_3-48-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	48	*hand	1277	HAND	iyal	iyal	i j ɐ l	false
+84	FUYUG_GAGAGRA-48-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	48	*hand	1277	HAND	iyara	iyara	i j ɐ r ɐ	false
+85	KUNIMAIPA-48-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	48	*hand	1277	HAND	mara	mara	m ɐ r ɐ	false
+86	TAUADE-48-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	48	*hand	1277	HAND	kala opua	kala opua	k ɐ l ɐ o p u ɐ	false
+87	TAUADE_2-48-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	48	*hand	1277	HAND	karavai	karavai	k ɐ r ɐ v ɐ i	false
+88	BIANGAI-58-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	58	*hear	1408	HEAR	k3riwe	k3riwe	k ə r i w e	false
+89	FUYUG-58-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	58	*hear	1408	HEAR	alele	alele	ɐ l e l e	false
+90	FUYUG_3-58-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	58	*hear	1408	HEAR	al	al	ɐ l	false
+91	KUNIMAIPA-58-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	58	*hear	1408	HEAR	hatete	hatete	h ɐ t e t e	false
+92	TAUADE_2-58-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	58	*hear	1408	HEAR	om doi niu	om doi niu	o m d o i n i u	false
+93	FUYUG-34-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	34	*horn	1393	HORN (ANATOMY)	bisa	bisa	b i s ɐ	false
+94	TAUADE_2-34-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	34	*horn	1393	HORN (ANATOMY)	kovuri	kovuri	k o v u r i	false
+95	FUYUG-47-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	47	*knee	1371	KNEE	muda	muda	m u d ɐ	false
+96	FUYUG_2-47-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	47	*knee	1371	KNEE	ami	ami	ɐ m i	false
+97	FUYUG_3-47-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	47	*knee	1371	KNEE	amiya	amiya	ɐ m i j ɐ	false
+98	KUNIMAIPA-47-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	47	*knee	1371	KNEE	rari	rari	r ɐ r i	false
+99	TAUADE_2-47-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	47	*knee	1371	KNEE	ketitai	ketitai	k e t i t ɐ i	false
+100	BIANGAI-25-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	25	*leaf	628	LEAF	y3Ne	y3Ne	j ə ŋ e	false
+101	BIANGAI-25-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	25	*leaf	628	LEAF	wir3k	wir3k	w i r ə k	false
+102	FUYUG-25-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	25	*leaf	628	LEAF	hutu	hutu	h u t u	false
+103	FUYUG_3-25-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	25	*leaf	628	LEAF	gob	gob	g o b	false
+104	FUYUG_GAGAGRA-25-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	25	*leaf	628	LEAF	itu	itu	i t u	false
+105	TAUADE-25-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	25	*leaf	628	LEAF	valupe	valupe	v ɐ l u p e	false
+106	TAUADE_2-25-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	25	*leaf	628	LEAF	eavalupu	eavalupu	e ɐ v ɐ l u p u	false
+107	FUYUG-53-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	53	*liver	1224	LIVER	huma	huma	h u m ɐ	false
+108	FUYUG_GAGAGRA-53-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	53	*liver	1224	LIVER	ual	ual	u ɐ l	false
+109	TAUADE_2-53-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	53	*liver	1224	LIVER	kutoudata	kutoudata	k u t o u d ɐ t ɐ	false
+110	FUYUG-22-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	22	*louse	1392	LOUSE	hi	hi	h i	false
+111	FUYUG_GAGAGRA-22-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	22	*louse	1392	LOUSE	ia	ia	i ɐ	false
+112	TAUADE-22-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	22	*louse	1392	LOUSE	eate	eate	e ɐ t e	false
+113	TAUADE_2-22-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	22	*louse	1392	LOUSE	daut	daut	d ɐ u t	false
+114	BIANGAI-86-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	86	*mountain	639	MOUNTAIN	Luw3	Luw3	ʎ u w ə	false
+115	FUYUG-86-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	86	*mountain	639	MOUNTAIN	kum	kum	k u m	false
+116	FUYUG_3-86-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	86	*mountain	639	MOUNTAIN	kum	kum	k u m	false
+117	FUYUG_GAGAGRA-86-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	86	*mountain	639	MOUNTAIN	aran	aran	ɐ r ɐ n	false
+118	TAUADE-86-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	86	*mountain	639	MOUNTAIN	maive	maive	m ɐ i v e	false
+119	TAUADE_2-86-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	86	*mountain	639	MOUNTAIN	oloto	oloto	o l o t o	false
+120	BIANGAI-100-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	100	*name	1405	NAME	yek	yek	j e k	false
+121	FUYUG-100-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	100	*name	1405	NAME	ifa	ifa	i f ɐ	false
+122	FUYUG_3-100-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	100	*name	1405	NAME	if	if	i f	false
+123	KUNIMAIPA-100-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	100	*name	1405	NAME	abatavo	abatavo	ɐ b ɐ t ɐ v o	false
+124	TAUADE-100-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	100	*name	1405	NAME	apete	apete	ɐ p e t e	false
+125	TAUADE_2-100-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	100	*name	1405	NAME	apete	apete	ɐ p e t e	false
+126	FUYUG-96-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	96	*new	1231	NEW	hasi	hasi	h ɐ s i	false
+127	FUYUG_3-96-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	96	*new	1231	NEW	hasil	hasil	h ɐ s i l	false
+128	KUNIMAIPA-96-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	96	*new	1231	NEW	magei	magei	m ɐ g e i	false
+129	TAUADE-96-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	96	*new	1231	NEW	kailepe	kailepe	k ɐ i l e p e	false
+130	TAUADE_2-96-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	96	*new	1231	NEW	kaire	kaire	k ɐ i r e	false
+131	BIANGAI-92-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	92	*night	1233	NIGHT	kusa	kusa	k u s ɐ	false
+132	FUYUG-92-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	92	*night	1233	NIGHT	dubiti	dubiti	d u b i t i	false
+133	FUYUG_3-92-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	92	*night	1233	NIGHT	dub	dub	d u b	false
+134	FUYUG_GAGAGRA-92-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	92	*night	1233	NIGHT	wadubaga	wadubaga	w ɐ d u b ɐ g ɐ	false
+135	KUNIMAIPA-92-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	92	*night	1233	NIGHT	kuturuta	kuturuta	k u t u r u t ɐ	false
+136	TAUADE-92-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	92	*night	1233	NIGHT	kuvite	kuvite	k u v i t e	false
+137	TAUADE_2-92-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	92	*night	1233	NIGHT	kuitdama	kuitdama	k u i t d ɐ m ɐ	false
+138	FUYUG-41-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	41	*nose	1221	NOSE	huNa	huNa	h u ŋ ɐ	false
+139	FUYUG_2-41-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	41	*nose	1221	NOSE	uNe	uNe	u ŋ e	false
+140	FUYUG_3-41-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	41	*nose	1221	NOSE	uNg	uNg	u ŋ g	false
+141	FUYUG_GAGAGRA-41-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	41	*nose	1221	NOSE	unga	unga	u n g ɐ	false
+142	TAUADE-41-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	41	*nose	1221	NOSE	kite	kite	k i t e	false
+143	TAUADE_2-41-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	41	*nose	1221	NOSE	kit	kit	k i t	false
+144	BIANGAI-11-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	11	*one	1493	ONE	na	na	n ɐ	false
+145	BIANGAI-11-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	11	*one	1493	ONE	nak	nak	n ɐ k	false
+146	FUYUG-11-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	11	*one	1493	ONE	fida	fida	f i d ɐ	false
+147	FUYUG_3-11-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	11	*one	1493	ONE	fidan	fidan	f i d ɐ n	false
+148	FUYUG_GAGAGRA-11-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	11	*one	1493	ONE	fidan	fidan	f i d ɐ n	false
+149	KUNIMAIPA-11-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	11	*one	1493	ONE	napu	napu	n ɐ p u	false
+150	TAUADE-11-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	11	*one	1493	ONE	kone	kone	k o n e	false
+151	TAUADE_2-11-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	11	*one	1493	ONE	kone	kone	k o n e	false
+152	BIANGAI-85-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	85	*path	2252	PATH	kazi	kazi	k ɐ z i	false
+153	FUYUG-85-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	85	*path	2252	PATH	enamba	enamba	e n ɐ m b ɐ	false
+154	FUYUG_2-85-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	85	*path	2252	PATH	inambe	inambe	i n ɐ m b e	false
+155	FUYUG_3-85-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	85	*path	2252	PATH	enamb	enamb	e n ɐ m b	false
+156	FUYUG_GAGAGRA-85-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	85	*path	2252	PATH	enami	enami	e n ɐ m i	false
+157	KUNIMAIPA-85-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	85	*path	2252	PATH	nonoro	nonoro	n o n o r o	false
+158	TAUADE-85-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	85	*path	2252	PATH	kane	kane	k ɐ n e	false
+159	TAUADE_2-85-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	85	*path	2252	PATH	borivara	borivara	b o r i v ɐ r ɐ	false
+160	BIANGAI-18-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	18	*person	683	PERSON	yoNkampu	yoNkampu	j o ŋ k ɐ m p u	false
+161	FUYUG-18-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	18	*person	683	PERSON	aa	aa	ɐ ɐ	false
+162	FUYUG_3-18-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	18	*person	683	PERSON	nanan	nanan	n ɐ n ɐ n	false
+163	FUYUG_GAGAGRA-18-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	18	*person	683	PERSON	ana	ana	ɐ n ɐ	false
+164	TAUADE-18-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	18	*person	683	PERSON	ivavale	ivavale	i v ɐ v ɐ l e	false
+165	TAUADE_2-18-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	18	*person	683	PERSON	mu	mu	m u	false
+166	BIANGAI-57-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	57	*see	1409	SEE	k3riwe	k3riwe	k ə r i w e	false
+167	BIANGAI-57-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	57	*see	1409	SEE	pakeLa	pakeLa	p ɐ k e ʎ ɐ	false
+168	FUYUG-57-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	57	*see	1409	SEE	alili	alili	ɐ l i l i	false
+169	FUYUG_3-57-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	57	*see	1409	SEE	al	al	ɐ l	false
+170	KUNIMAIPA-57-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	57	*see	1409	SEE	ete	ete	e t e	false
+171	TAUADE-57-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	57	*see	1409	SEE	kae	kae	k ɐ e	false
+172	TAUADE_2-57-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	57	*see	1409	SEE	kau	kau	k ɐ u	false
+173	BIANGAI-28-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	28	*skin	763	SKIN	korik	korik	k o r i k	false
+174	FUYUG-28-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	28	*skin	763	SKIN	hoda	hoda	h o d ɐ	false
+175	FUYUG_2-28-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	28	*skin	763	SKIN	ode	ode	o d e	false
+176	FUYUG_3-28-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	28	*skin	763	SKIN	hod	hod	h o d	false
+177	FUYUG_GAGAGRA-28-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	28	*skin	763	SKIN	oada	oada	o ɐ d ɐ	false
+178	TAUADE-28-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	28	*skin	763	SKIN	kotsipe	kotsipe	k o t s i p e	false
+179	TAUADE_2-28-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	28	*skin	763	SKIN	kotipai	kotipai	k o t i p ɐ i	false
+180	BIANGAI-74-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	74	*star	1430	STAR	p3l3w3	p3l3w3	p ə l ə w ə	false
+181	FUYUG-74-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	74	*star	1430	STAR	hamadofa	hamadofa	h ɐ m ɐ d o f ɐ	false
+182	FUYUG_GAGAGRA-74-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	74	*star	1430	STAR	amadofa	amadofa	ɐ m ɐ d o f ɐ	false
+183	TAUADE-74-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	74	*star	1430	STAR	imuli	imuli	i m u l i	false
+184	TAUADE_2-74-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	74	*star	1430	STAR	tuwu	tuwu	t u w u	false
+185	BIANGAI-77-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	77	*stone	857	STONE	kiN	kiN	k i ŋ	false
+186	FUYUG-77-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	77	*stone	857	STONE	zo	zo	z o	false
+187	FUYUG_3-77-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	77	*stone	857	STONE	iyoy	iyoy	i j o j	false
+188	FUYUG_GAGAGRA-77-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	77	*stone	857	STONE	yoa	yoa	j o ɐ	false
+189	TAUADE-77-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	77	*stone	857	STONE	evite	evite	e v i t e	false
+190	TAUADE_2-77-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	77	*stone	857	STONE	eviti	eviti	e v i t i	false
+191	BIANGAI-72-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	72	*sun	1343	SUN	yokm3k	yokm3k	j o k m ə k	false
+192	FUYUG-72-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	72	*sun	1343	SUN	evuli	evuli	e v u l i	false
+193	FUYUG_3-72-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	72	*sun	1343	SUN	ev	ev	e v	false
+194	FUYUG_GAGAGRA-72-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	72	*sun	1343	SUN	ewulima	ewulima	e w u l i m ɐ	false
+195	KUNIMAIPA-72-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	72	*sun	1343	SUN	gitapu	gitapu	g i t ɐ p u	false
+196	TAUADE-72-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	72	*sun	1343	SUN	vatave	vatave	v ɐ t ɐ v e	false
+197	TAUADE_2-72-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	72	*sun	1343	SUN	vatava	vatava	v ɐ t ɐ v ɐ	false
+198	BIANGAI-44-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	44	*tongue	1205	TONGUE	LoNok	LoNok	ʎ o ŋ o k	false
+199	FUYUG-44-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	44	*tongue	1205	TONGUE	asese	asese	ɐ s e s e	false
+200	FUYUG_3-44-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	44	*tongue	1205	TONGUE	asesen	asesen	ɐ s e s e n	false
+201	FUYUG_GAGAGRA-44-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	44	*tongue	1205	TONGUE	asisi	asisi	ɐ s i s i	false
+202	TAUADE-44-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	44	*tongue	1205	TONGUE	aive	aive	ɐ i v e	false
+203	TAUADE_2-44-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	44	*tongue	1205	TONGUE	aivi	aivi	ɐ i v i	false
+204	BIANGAI-43-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	43	*tooth	1380	TOOTH	kili	kili	k i l i	false
+205	FUYUG-43-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	43	*tooth	1380	TOOTH	usi	usi	u s i	false
+206	FUYUG_3-43-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	43	*tooth	1380	TOOTH	asesen	asesen	ɐ s e s e n	false
+207	FUYUG_GAGAGRA-43-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	43	*tooth	1380	TOOTH	adori	adori	ɐ d o r i	false
+208	TAUADE-43-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	43	*tooth	1380	TOOTH	notoape	notoape	n o t o ɐ p e	false
+209	TAUADE_2-43-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	43	*tooth	1380	TOOTH	notovai	notovai	n o t o v ɐ i	false
+210	BIANGAI-23-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	23	*tree	906	TREE	y3N3Le	y3N3Le	j ə ŋ ə ʎ e	false
+211	BIANGAI-23-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	23	*tree	906	TREE	iNiLe	iNiLe	i ŋ i ʎ e	false
+212	BIANGAI-23-3	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	23	*tree	906	TREE	iLe	iLe	i ʎ e	false
+213	FUYUG-23-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	23	*tree	906	TREE	ii	ii	i i	false
+214	FUYUG_3-23-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	23	*tree	906	TREE	i	i	i	false
+215	FUYUG_GAGAGRA-23-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	23	*tree	906	TREE	gia	gia	g i ɐ	false
+216	KUNIMAIPA-23-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	23	*tree	906	TREE	zi	zi	z i	false
+217	TAUADE-23-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	23	*tree	906	TREE	eate	eate	e ɐ t e	false
+218	TAUADE_2-23-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	23	*tree	906	TREE	eata	eata	e ɐ t ɐ	false
+219	BIANGAI-12-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	12	*two	1498	TWO	yau	yau	j ɐ u	false
+220	FUYUG-12-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	12	*two	1498	TWO	Zuvalo	Zuvalo	ʒ u v ɐ l o	false
+221	FUYUG_3-12-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	12	*two	1498	TWO	yovalo	yovalo	j o v ɐ l o	false
+222	FUYUG_GAGAGRA-12-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	12	*two	1498	TWO	ruala	ruala	r u ɐ l ɐ	false
+223	KUNIMAIPA-12-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	12	*two	1498	TWO	naNarivi	naNarivi	n ɐ ŋ ɐ r i v i	false
+224	TAUADE-12-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	12	*two	1498	TWO	atoloai	atoloai	ɐ t o l o ɐ i	false
+225	TAUADE_2-12-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	12	*two	1498	TWO	kupaliai	kupaliai	k u p ɐ l i ɐ i	false
+226	BIANGAI-75-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	75	*water	948	WATER	kai	kai	k ɐ i	false
+227	FUYUG-75-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	75	*water	948	WATER	Zu	Zu	ʒ u	false
+228	FUYUG_3-75-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	75	*water	948	WATER	yuv	yuv	j u v	false
+229	FUYUG_GAGAGRA-75-1	FUYUG_GAGAGRA	FUYUG_GAGAGRA	fuyu1242	Fuyug	Goilalan			False	75	*water	948	WATER	yu	yu	j u	false
+230	KUNIMAIPA-75-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	75	*water	948	WATER	ivovo	ivovo	i v o v o	false
+231	TAUADE-75-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	75	*water	948	WATER	ipe	ipe	i p e	false
+232	TAUADE_2-75-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	75	*water	948	WATER	ipi	ipi	i p i	false
+233	BIANGAI-3-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	3	*we	1212	WE	t3ni	t3ni	t ə n i	false
+234	FUYUG_3-3-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	3	*we	1212	WE	di	di	d i	false
+235	KUNIMAIPA-3-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	3	*we	1212	WE	rei	rei	r e i	false
+236	TAUADE-3-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	3	*we	1212	WE	nanei	nanei	n ɐ n e i	false
+237	TAUADE-3-2	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	3	*we	1212	WE	nane	nane	n ɐ n e	false
+238	BIANGAI-2-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	2	*you	1215	THOU	ni	ni	n i	false
+239	FUYUG_3-2-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	2	*you	1215	THOU	nu	nu	n u	false
+240	KUNIMAIPA-2-1	KUNIMAIPA	KUNIMAIPA	kuni1267	Kunimaipa	Goilalan			False	2	*you	1215	THOU	ni	ni	n i	false
+241	TAUADE-2-1	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	2	*you	1215	THOU	nui	nui	n u i	false
+242	TAUADE-2-2	TAUADE	TAUADE	taua1242	Tauade	Goilalan			False	2	*you	1215	THOU	nu	nu	n u	false
+243	BIANGAI-9-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	9	all	98	ALL	mamorok	mamorok	m ɐ m o r o k	false
+244	FUYUG-9-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	9	all	98	ALL	antalu	antalu	ɐ n t ɐ l u	false
+245	FUYUG_3-9-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	9	all	98	ALL	halu	halu	h ɐ l u	false
+246	TAUADE_2-9-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	9	all	98	ALL	kuparima holopas	kuparima holopas	k u p ɐ r i m ɐ h o l o p ɐ s	false
+247	FUYUG-83-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	83	ash	646	ASH	ho	ho	h o	false
+248	FUYUG_3-83-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	83	ash	646	ASH	foy	foy	f o j	false
+249	TAUADE_2-83-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	83	ash	646	ASH	oete	oete	o e t e	false
+250	BIANGAI-27-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	27	bark	1204	BARK	k3l3	k3l3	k ə l ə	false
+251	FUYUG-27-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	27	bark	1204	BARK	hoda	hoda	h o d ɐ	false
+252	TAUADE_2-27-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	27	bark	1204	BARK	eakotipi	eakotipi	e ɐ k o t i p i	false
+253	FUYUG-49-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	49	belly	1251	BELLY	hombo	hombo	h o m b o	false
+254	FUYUG_2-49-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	49	belly	1251	BELLY	umbo	umbo	u m b o	false
+255	FUYUG_3-49-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	49	belly	1251	BELLY	fundud	fundud	f u n d u d	false
+256	TAUADE_2-49-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	49	belly	1251	BELLY	kutoto	kutoto	k u t o t o	false
+257	BIANGAI-13-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	13	big	1202	BIG	unatuba	unatuba	u n ɐ t u b ɐ	false
+258	BIANGAI-13-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	13	big	1202	BIG	y3man3	y3man3	j ə m ɐ n ə	false
+259	BIANGAI-13-3	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	13	big	1202	BIG	y3mizi	y3mizi	j ə m i z i	false
+260	FUYUG-13-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	13	big	1202	BIG	inoga	inoga	i n o g ɐ	false
+261	FUYUG_3-13-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	13	big	1202	BIG	inog	inog	i n o g	false
+262	TAUADE_2-13-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	13	big	1202	BIG	karu	karu	k ɐ r u	false
+263	BIANGAI-20-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	20	bird	937	BIRD	winak	winak	w i n ɐ k	false
+264	FUYUG-20-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	20	bird	937	BIRD	nemba	nemba	n e m b ɐ	false
+265	FUYUG_2-20-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	20	bird	937	BIRD	nembe	nembe	n e m b e	false
+266	FUYUG_3-20-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	20	bird	937	BIRD	nemb	nemb	n e m b	false
+267	TAUADE_2-20-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	20	bird	937	BIRD	kide	kide	k i d e	false
+268	FUYUG-56-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	56	bite	1403	BITE	idede	idede	i d e d e	false
+269	FUYUG_2-56-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	56	bite	1403	BITE	oi ida	oi ida	o i i d ɐ	false
+270	FUYUG_3-56-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	56	bite	1403	BITE	id	id	i d	false
+271	TAUADE_2-56-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	56	bite	1403	BITE	kovera poru kui	kovera poru kui	k o v e r ɐ p o r u k u i	false
+272	BIANGAI-91-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	91	black	163	BLACK	kusabanu	kusabanu	k u s ɐ b ɐ n u	false
+273	FUYUG-91-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	91	black	163	BLACK	duba fifi	duba fifi	d u b ɐ f i f i	false
+274	FUYUG_3-91-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	91	black	163	BLACK	dub ififi	dub ififi	d u b i f i f i	false
+275	TAUADE_2-91-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	91	black	163	BLACK	dorosu	dorosu	d o r o s u	false
+276	BIANGAI-84-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	84	burn	2102	BURN	Nori	Nori	ŋ o r i	false
+277	FUYUG-45-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	45	claw	72	CLAW	kosida	kosida	k o s i d ɐ	false
+278	TAUADE_2-45-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	45	claw	72	CLAW	sivi loipai	sivi loipai	s i v i l o i p ɐ i	false
+279	FUYUG-80-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	80	cloud	1489	CLOUD	hunu	hunu	h u n u	false
+280	TAUADE_2-80-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	80	cloud	1489	CLOUD	ponivi	ponivi	p o n i v i	false
+281	BIANGAI-94-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	94	cold	1287	COLD	kab3n3N	kab3n3N	k ɐ b ə n ə ŋ	false
+282	FUYUG-94-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	94	cold	1287	COLD	Zunda	Zunda	ʒ u n d ɐ	false
+283	FUYUG_3-94-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	94	cold	1287	COLD	sin	sin	s i n	false
+284	TAUADE_2-94-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	94	cold	1287	COLD	duvei	duvei	d u v e i	false
+285	BIANGAI-99-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	99	dry	1398	DRY	NaiNaiLiya	NaiNaiLiya	ŋ ɐ i ŋ ɐ i ʎ i j ɐ	false
+286	FUYUG-99-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	99	dry	1398	DRY	holo	holo	h o l o	false
+287	FUYUG_3-99-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	99	dry	1398	DRY	holon	holon	h o l o n	false
+288	FUYUG_3-99-2	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	99	dry	1398	DRY	lov	lov	l o v	false
+289	TAUADE_2-99-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	99	dry	1398	DRY	kare	kare	k ɐ r e	false
+290	BIANGAI-79-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	79	earth	1228	EARTH (SOIL)	Nab3Lak	Nab3Lak	ŋ ɐ b ə ʎ ɐ k	false
+291	FUYUG-79-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	79	earth	1228	EARTH (SOIL)	hova	hova	h o v ɐ	false
+292	FUYUG_3-79-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	79	earth	1228	EARTH (SOIL)	fal	fal	f ɐ l	false
+293	TAUADE_2-79-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	79	earth	1228	EARTH (SOIL)	amata	amata	ɐ m ɐ t ɐ	false
+294	BIANGAI-55-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	55	eat	1336	EAT	n	n	n	false
+295	FUYUG-55-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	55	eat	1336	EAT	nene	nene	n e n e	false
+296	FUYUG_3-55-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	55	eat	1336	EAT	n	n	n	false
+297	TAUADE_2-55-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	55	eat	1336	EAT	omei nai	omei nai	o m e i n ɐ i	false
+298	BIANGAI-33-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	33	egg	744	EGG	N3k	N3k	ŋ ə k	false
+299	FUYUG-33-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	33	egg	744	EGG	hulombo	hulombo	h u l o m b o	false
+300	FUYUG_3-33-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	33	egg	744	EGG	hombol	hombol	h o m b o l	false
+301	TAUADE_2-33-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	33	egg	744	EGG	mutuwu	mutuwu	m u t u w u	false
+302	FUYUG-36-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	36	feather	1201	FEATHER	nemba huma	nemba huma	n e m b ɐ h u m ɐ	false
+303	TAUADE_2-36-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	36	feather	1201	FEATHER	kirevalupu	kirevalupu	k i r e v ɐ l u p u	false
+304	BIANGAI-29-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	29	flesh	2259	FLESH	wata	wata	w ɐ t ɐ	false
+305	FUYUG-29-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	29	flesh	2259	FLESH	mada	mada	m ɐ d ɐ	false
+306	FUYUG_3-29-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	29	flesh	2259	FLESH	madam	madam	m ɐ d ɐ m	false
+307	TAUADE_2-29-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	29	flesh	2259	FLESH	poru	poru	p o r u	false
+308	TAUADE_2-29-2	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	29	flesh	2259	FLESH	milut	milut	m i l u t	false
+309	FUYUG-64-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	64	fly	1441	FLY (MOVE THROUGH AIR)	sumeme	sumeme	s u m e m e	false
+310	TAUADE_2-64-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	64	fly	1441	FLY (MOVE THROUGH AIR)	kilalai	kilalai	k i l ɐ l ɐ i	false
+311	BIANGAI-46-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	46	foot	1301	FOOT	iN3	iN3	i ŋ ə	false
+312	FUYUG-46-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	46	foot	1301	FOOT	soga	soga	s o g ɐ	false
+313	FUYUG_3-46-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	46	foot	1301	FOOT	sog	sog	s o g	false
+314	TAUADE_2-46-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	46	foot	1301	FOOT	lovai	lovai	l o v ɐ i	false
+315	BIANGAI-70-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	70	give	1447	GIVE	an	an	ɐ n	false
+316	FUYUG-70-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	70	give	1447	GIVE	nendidi	nendidi	n e n d i d i	false
+317	FUYUG_3-70-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	70	give	1447	GIVE	ind	ind	i n d	false
+318	TAUADE_2-70-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	70	give	1447	GIVE	naini	naini	n ɐ i n i	false
+319	BIANGAI-97-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	97	good	1035	GOOD	wazono	wazono	w ɐ z o n o	false
+320	FUYUG-97-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	97	good	1035	GOOD	ifa	ifa	i f ɐ	false
+321	FUYUG_3-97-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	97	good	1035	GOOD	ifan	ifan	i f ɐ n	false
+322	TAUADE_2-97-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	97	good	1035	GOOD	kato	kato	k ɐ t o	false
+323	TAUADE_2-97-2	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	97	good	1035	GOOD	oivalalai	oivalalai	o i v ɐ l ɐ l ɐ i	false
+324	FUYUG-32-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	hugu	hugu	h u g u	false
+325	TAUADE_2-32-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	tupiti	tupiti	t u p i t i	false
+326	FUYUG-88-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	88	green	1425	GREEN	duba	duba	d u b ɐ	false
+327	TAUADE_2-88-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	88	green	1425	GREEN	eavaluakilete	eavaluakilete	e ɐ v ɐ l u ɐ k i l e t e	false
+328	FUYUG-37-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	37	hair	1040	HAIR	haluma	haluma	h ɐ l u m ɐ	false
+329	FUYUG_2-37-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	37	hair	1040	HAIR	are	are	ɐ r e	false
+330	FUYUG_3-37-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	37	hair	1040	HAIR	al	al	ɐ l	false
+331	TAUADE_2-37-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	37	hair	1040	HAIR	awutu	awutu	ɐ w u t u	false
+332	BIANGAI-38-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	38	head	1256	HEAD	k3bi	k3bi	k ə b i	false
+333	FUYUG-38-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	38	head	1256	HEAD	ha	ha	h ɐ	false
+334	FUYUG_2-38-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	38	head	1256	HEAD	ondobe	ondobe	o n d o b e	false
+335	FUYUG_3-38-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	38	head	1256	HEAD	al	al	ɐ l	false
+336	TAUADE_2-38-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	38	head	1256	HEAD	koroto	koroto	k o r o t o	false
+337	BIANGAI-52-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	52	heart	1223	HEART	wiL3kai	wiL3kai	w i ʎ ə k ɐ i	false
+338	FUYUG-52-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	52	heart	1223	HEART	huva	huva	h u v ɐ	false
+339	FUYUG_3-52-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	52	heart	1223	HEART	uwal	uwal	u w ɐ l	false
+340	TAUADE_2-52-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	52	heart	1223	HEART	kimuv	kimuv	k i m u v	false
+341	BIANGAI-93-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	93	hot	1286	HOT	y3ziNe	y3ziNe	j ə z i ŋ e	false
+342	FUYUG_3-93-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	93	hot	1286	HOT	hololo	hololo	h o l o l o	false
+343	BIANGAI-62-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	62	kill	1417	KILL	3l	3l	ə l	false
+344	BIANGAI-62-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	62	kill	1417	KILL	ul	ul	u l	false
+345	FUYUG-62-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	62	kill	1417	KILL	hadede	hadede	h ɐ d e d e	false
+346	FUYUG_3-62-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	62	kill	1417	KILL	had	had	h ɐ d	false
+347	TAUADE_2-62-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	62	kill	1417	KILL	amui	amui	ɐ m u i	false
+348	BIANGAI-59-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	59	know	3626	KNOW	iwaka	iwaka	i w ɐ k ɐ	false
+349	FUYUG-59-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	59	know	3626	KNOW	sisiba	sisiba	s i s i b ɐ	false
+350	FUYUG_3-59-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	59	know	3626	KNOW	sisiban	sisiban	s i s i b ɐ n	false
+351	TAUADE_2-59-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	59	know	3626	KNOW	omei bari lau	omei bari lau	o m e i b ɐ r i l ɐ u	false
+352	FUYUG-67-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	67	lie	1411	LIE (REST)	idede	idede	i d e d e	false
+353	FUYUG_2-67-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	67	lie	1411	LIE (REST)	imarida	imarida	i m ɐ r i d ɐ	false
+354	FUYUG_3-67-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	67	lie	1411	LIE (REST)	id	id	i d	false
+355	TAUADE_2-67-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	67	lie	1411	LIE (REST)	gidai	gidai	g i d ɐ i	false
+356	BIANGAI-14-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	14	long	1203	LONG	yokoLoN	yokoLoN	j o k o ʎ o ŋ	false
+357	FUYUG-14-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	14	long	1203	LONG	sesa	sesa	s e s ɐ	false
+358	FUYUG_3-14-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	14	long	1203	LONG	sesada	sesada	s e s ɐ d ɐ	false
+359	TAUADE_2-14-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	14	long	1203	LONG	oruvu	oruvu	o r u v u	false
+360	TAUADE_2-14-2	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	14	long	1203	LONG	r3iani3	r3iani3	r ə i ɐ n i ə	false
+361	BIANGAI-17-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	17	man	1554	MAN	yompu	yompu	j o m p u	false
+362	FUYUG-17-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	17	man	1554	MAN	aa	aa	ɐ ɐ	false
+363	FUYUG_2-17-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	17	man	1554	MAN	an	an	ɐ n	false
+364	FUYUG_3-17-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	17	man	1554	MAN	an	an	ɐ n	false
+365	TAUADE_2-17-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	17	man	1554	MAN	bare	bare	b ɐ r e	false
+366	BIANGAI-10-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	10	many	1198	MANY	k3r3muNk3	k3r3muNk3	k ə r ə m u ŋ k ə	false
+367	FUYUG-10-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	10	many	1198	MANY	halulu	halulu	h ɐ l u l u	false
+368	FUYUG_3-10-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	10	many	1198	MANY	ukas	ukas	u k ɐ s	false
+369	TAUADE_2-10-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	10	many	1198	MANY	kuparima	kuparima	k u p ɐ r i m ɐ	false
+370	BIANGAI-73-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	73	moon	1313	MOON	NoN	NoN	ŋ o ŋ	false
+371	FUYUG-73-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	73	moon	1313	MOON	hama	hama	h ɐ m ɐ	false
+372	FUYUG_3-73-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	73	moon	1313	MOON	on	on	o n	false
+373	TAUADE_2-73-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	73	moon	1313	MOON	one	one	o n e	false
+374	FUYUG-42-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	42	mouth	674	MOUTH	uda	uda	u d ɐ	false
+375	FUYUG_2-42-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	42	mouth	674	MOUTH	uda	uda	u d ɐ	false
+376	FUYUG_3-42-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	42	mouth	674	MOUTH	goban	goban	g o b ɐ n	false
+377	TAUADE_2-42-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	42	mouth	674	MOUTH	ketapai	ketapai	k e t ɐ p ɐ i	false
+378	FUYUG-50-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	50	neck	1333	NECK	indu	indu	i n d u	false
+379	FUYUG_2-50-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	50	neck	1333	NECK	gurube	gurube	g u r u b e	false
+380	FUYUG_3-50-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	50	neck	1333	NECK	gulub	gulub	g u l u b	false
+381	TAUADE_2-50-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	50	neck	1333	NECK	kumurivi	kumurivi	k u m u r i v i	false
+382	BIANGAI-8-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	8	not	1240	NOT	ono	ono	o n o	false
+383	FUYUG-8-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	8	not	1240	NOT	huva susu	huva susu	h u v ɐ s u s u	false
+384	FUYUG_3-8-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	8	not	1240	NOT	mi	mi	m i	false
+385	FUYUG_3-8-2	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	8	not	1240	NOT	mem	mem	m e m	false
+386	TAUADE_2-8-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	8	not	1240	NOT	mui	mui	m u i	false
+387	BIANGAI-76-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	76	rain	2108	RAINING OR RAIN	kuli	kuli	k u l i	false
+388	BIANGAI-76-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	76	rain	2108	RAINING OR RAIN	mani	mani	m ɐ n i	false
+389	BIANGAI-76-3	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	76	rain	2108	RAINING OR RAIN	kobo	kobo	k o b o	false
+390	FUYUG-76-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	76	rain	2108	RAINING OR RAIN	ZaNosa	ZaNosa	ʒ ɐ ŋ o s ɐ	false
+391	FUYUG_3-76-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	76	rain	2108	RAINING OR RAIN	yaNgos	yaNgos	j ɐ ŋ g o s	false
+392	TAUADE_2-76-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	76	rain	2108	RAINING OR RAIN	itpanai	itpanai	i t p ɐ n ɐ i	false
+393	FUYUG-87-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	87	red	156	RED	tadana	tadana	t ɐ d ɐ n ɐ	false
+394	FUYUG_3-87-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	87	red	156	RED	tadana	tadana	t ɐ d ɐ n ɐ	false
+395	TAUADE_2-87-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	87	red	156	RED	iritu	iritu	i r i t u	false
+396	BIANGAI-26-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	26	root	670	ROOT	puLiLi	puLiLi	p u ʎ i ʎ i	false
+397	FUYUG-26-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	26	root	670	ROOT	kufuli	kufuli	k u f u l i	false
+398	FUYUG_3-26-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	26	root	670	ROOT	kufili	kufili	k u f i l i	false
+399	TAUADE_2-26-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	26	root	670	ROOT	inava	inava	i n ɐ v ɐ	false
+400	BIANGAI-98-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	98	round	1395	ROUND	l3k	l3k	l ə k	false
+401	FUYUG-98-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	98	round	1395	ROUND	kombofuda	kombofuda	k o m b o f u d ɐ	false
+402	FUYUG_3-98-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	98	round	1395	ROUND	kombofod	kombofod	k o m b o f o d	false
+403	TAUADE_2-98-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	98	round	1395	ROUND	kupariai	kupariai	k u p ɐ r i ɐ i	false
+404	BIANGAI-78-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	78	sand	671	SAND	kai	kai	k ɐ i	false
+405	FUYUG-78-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	78	sand	671	SAND	asaNa	asaNa	ɐ s ɐ ŋ ɐ	false
+406	FUYUG_3-78-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	78	sand	671	SAND	asaNg	asaNg	ɐ s ɐ ŋ g	false
+407	TAUADE_2-78-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	78	sand	671	SAND	ileluru	ileluru	i l e l u r u	false
+408	BIANGAI-71-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	71	say	1458	SAY	kai	kai	k ɐ i	false
+409	BIANGAI-71-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	71	say	1458	SAY	e	e	e	false
+410	BIANGAI-71-3	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	71	say	1458	SAY	me	me	m e	false
+411	FUYUG-71-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	71	say	1458	SAY	ete	ete	e t e	false
+412	FUYUG_3-71-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	71	say	1458	SAY	et	et	e t	false
+413	TAUADE_2-71-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	71	say	1458	SAY	oma kovtai	oma kovtai	o m ɐ k o v t ɐ i	false
+414	FUYUG-24-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	24	seed	714	SEED	deda	deda	d e d ɐ	false
+415	TAUADE_2-24-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	24	seed	714	SEED	peti	peti	p e t i	false
+416	BIANGAI-68-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	68	sit	1416	SIT	moxos	moxos	m o x o s	false
+417	FUYUG-68-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	68	sit	1416	SIT	andede	andede	ɐ n d e d e	false
+418	FUYUG_2-68-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	68	sit	1416	SIT	anda	anda	ɐ n d ɐ	false
+419	FUYUG_3-68-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	68	sit	1416	SIT	and	and	ɐ n d	false
+420	TAUADE_2-68-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	68	sit	1416	SIT	Enai	Enai	a n ɐ i	false
+421	BIANGAI-60-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	60	sleep	1585	SLEEP	wiy3k	wiy3k	w i j ə k	false
+422	FUYUG-60-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	60	sleep	1585	SLEEP	idede	idede	i d e d e	false
+423	FUYUG_3-60-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	60	sleep	1585	SLEEP	id	id	i d	false
+424	TAUADE_2-60-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	60	sleep	1585	SLEEP	gut boi dukato	gut boi dukato	g u t b o i d u k ɐ t o	false
+425	BIANGAI-15-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	15	small	1246	SMALL	soNoNo	soNoNo	s o ŋ o ŋ o	false
+426	BIANGAI-15-2	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	15	small	1246	SMALL	koru	koru	k o r u	false
+427	FUYUG-15-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	15	small	1246	SMALL	galiba	galiba	g ɐ l i b ɐ	false
+428	FUYUG_3-15-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	15	small	1246	SMALL	galib	galib	g ɐ l i b	false
+429	TAUADE_2-15-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	15	small	1246	SMALL	baupiti	baupiti	b ɐ u p i t i	false
+430	BIANGAI-81-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	81	smoke	778	SMOKE (EXHAUST)	y3Lakp3k	y3Lakp3k	j ə ʎ ɐ k p ə k	false
+431	FUYUG-81-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	81	smoke	778	SMOKE (EXHAUST)	iso	iso	i s o	false
+432	TAUADE_2-81-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	81	smoke	778	SMOKE (EXHAUST)	Emunete	Emunete	a m u n e t e	false
+433	BIANGAI-69-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	69	stand	1442	STAND	Luw3z	Luw3z	ʎ u w ə z	false
+434	FUYUG-69-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	69	stand	1442	STAND	zuZu	zuZu	z u ʒ u	false
+435	FUYUG_2-69-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	69	stand	1442	STAND	yuyanda	yuyanda	j u j ɐ n d ɐ	false
+436	FUYUG_3-69-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	69	stand	1442	STAND	yu	yu	j u	false
+437	TAUADE_2-69-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	69	stand	1442	STAND	kirai	kirai	k i r ɐ i	false
+438	BIANGAI-63-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	63	swim	1439	SWIM	kai kisi	kai kisi	k ɐ i k i s i	false
+439	FUYUG-63-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	63	swim	1439	SWIM	emodi	emodi	e m o d i	false
+440	FUYUG_3-63-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	63	swim	1439	SWIM	yuv aNg	yuv aNg	j u v ɐ ŋ g	false
+441	TAUADE_2-63-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	63	swim	1439	SWIM	ipokatovalai	ipokatovalai	i p o k ɐ t o v ɐ l ɐ i	false
+442	FUYUG-35-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	35	tail	1220	TAIL	tofa	tofa	t o f ɐ	false
+443	FUYUG_3-35-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	35	tail	1220	TAIL	tof	tof	t o f	false
+444	TAUADE_2-35-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	35	tail	1220	TAIL	ailava	ailava	ɐ i l ɐ v ɐ	false
+445	BIANGAI-5-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	5	that	78	THAT	pu	pu	p u	false
+446	FUYUG-5-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	5	that	78	THAT	vane	vane	v ɐ n e	false
+447	FUYUG_3-5-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	5	that	78	THAT	ome	ome	o m e	false
+448	TAUADE_2-5-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	5	that	78	THAT	epi munoupu	epi munoupu	e p i m u n o u p u	false
+449	BIANGAI-4-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	4	this	1214	THIS	pe	pe	p e	false
+450	FUYUG-4-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	4	this	1214	THIS	uvane	uvane	u v ɐ n e	false
+451	FUYUG_3-4-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	4	this	1214	THIS	ovo	ovo	o v o	false
+452	TAUADE_2-4-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	4	this	1214	THIS	epi oi	epi oi	e p i o i	false
+453	FUYUG-65-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	65	walk	1443	WALK	sumeme	sumeme	s u m e m e	false
+454	FUYUG_2-65-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	65	walk	1443	WALK	soso	soso	s o s o	false
+455	FUYUG_3-65-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	65	walk	1443	WALK	sum	sum	s u m	false
+456	TAUADE_2-65-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	65	walk	1443	WALK	tunuwdai	tunuwdai	t u n u w d ɐ i	false
+457	BIANGAI-7-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	7	what	1236	WHAT	taLik	taLik	t ɐ ʎ i k	false
+458	FUYUG-7-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	7	what	1236	WHAT	anda	anda	ɐ n d ɐ	false
+459	FUYUG_3-7-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	7	what	1236	WHAT	andal	andal	ɐ n d ɐ l	false
+460	TAUADE_2-7-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	7	what	1236	WHAT	doi daiyeva konaea	doi daiyeva konaea	d o i d ɐ i j e v ɐ k o n ɐ e ɐ	false
+461	BIANGAI-90-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	90	white	1335	WHITE	wiLaNka	wiLaNka	w i ʎ ɐ ŋ k ɐ	false
+462	FUYUG-90-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	90	white	1335	WHITE	keneke	keneke	k e n e k e	false
+463	FUYUG_3-90-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	90	white	1335	WHITE	foyofoy	foyofoy	f o j o f o j	false
+464	TAUADE_2-90-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	90	white	1335	WHITE	polatu	polatu	p o l ɐ t u	false
+465	BIANGAI-6-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	6	who	1235	WHO	ta	ta	t ɐ	false
+466	FUYUG-6-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	6	who	1235	WHO	da	da	d ɐ	false
+467	FUYUG_3-6-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	6	who	1235	WHO	dal	dal	d ɐ l	false
+468	TAUADE_2-6-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	6	who	1235	WHO	doi ka	doi ka	d o i k ɐ	false
+469	BIANGAI-16-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	16	woman	962	WOMAN	yoNok	yoNok	j o ŋ o k	false
+470	FUYUG-16-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	16	woman	962	WOMAN	amu	amu	ɐ m u	false
+471	FUYUG_2-16-1	FUYUG_2	FUYUG_2	fuyu1242	Fuyug	Goilalan			False	16	woman	962	WOMAN	amuri	amuri	ɐ m u r i	false
+472	FUYUG_3-16-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	16	woman	962	WOMAN	amul	amul	ɐ m u l	false
+473	TAUADE_2-16-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	16	woman	962	WOMAN	iva	iva	i v ɐ	false
+474	BIANGAI-89-1	BIANGAI	BIANGAI	bian1252	Biangai	Goilalan			False	89	yellow	1424	YELLOW	simaNkaim3	simaNkaim3	s i m ɐ ŋ k ɐ i m ə	false
+475	FUYUG-89-1	FUYUG	FUYUG	fuyu1242	Fuyug	Goilalan			False	89	yellow	1424	YELLOW	toZoto	toZoto	t o ʒ o t o	false
+476	FUYUG_3-89-1	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	89	yellow	1424	YELLOW	toyoto	toyoto	t o j o t o	false
+477	FUYUG_3-89-2	FUYUG_3	FUYUG_3	fuyu1242	Fuyug	Goilalan			False	89	yellow	1424	YELLOW	yaNgogne	yaNgogne	j ɐ ŋ g o g n e	false
+478	TAUADE_2-89-1	TAUADE_2	TAUADE_2	taua1242	Tauade	Goilalan			False	89	yellow	1424	YELLOW	rororo	rororo	r o r o r o	false
+479	AMAM-1-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	1	*I	1209	I	ne	ne	n e	false
+480	WERI-1-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	1	*I	1209	I	ne	ne	n e	false
+481	AMAM-30-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	30	*blood	946	BLOOD	i	i	i	false
+482	SINI-30-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	30	*blood	946	BLOOD	i7iara	i7iara	i ʔ i ɐ r ɐ	false
+483	SINI-31-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	31	*bone	1394	BONE	koZora	koZora	k o ʒ o r ɐ	false
+484	SINI-51-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	51	*breasts	1402	BREAST	kavada	kavada	k ɐ v ɐ d ɐ	false
+485	AMAM-66-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	66	*come	1446	COME	im	im	i m	false
+486	SINI-66-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	66	*come	1446	COME	wuliluli	wuliluli	w u l i l u l i	false
+487	WERI-66-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	66	*come	1446	COME	wais	wais	w ɐ i s	false
+488	AMAM-61-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	61	*die	1494	DIE	walwi	walwi	w ɐ l w i	false
+489	SINI-61-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	61	*die	1494	DIE	welvia	welvia	w e l v i ɐ	false
+490	AMAM-21-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	21	*dog	2009	DOG	kent	kent	k e n t	false
+491	WERI-21-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	21	*dog	2009	DOG	kent	kent	k e n t	false
+492	SINI-54-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	54	*drink	1401	DRINK	iwonoma	iwonoma	i w o n o m ɐ	false
+493	WERI-54-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	54	*drink	1401	DRINK	yen	yen	j e n	false
+494	AMAM-39-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	39	*ear	1247	EAR	kat	kat	k ɐ t	false
+495	SINI-39-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	39	*ear	1247	EAR	karab	karab	k ɐ r ɐ b	false
+496	WERI-39-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	39	*ear	1247	EAR	kat	kat	k ɐ t	false
+497	AMAM-40-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	40	*eye	1248	EYE	it	it	i t	false
+498	SINI-40-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	40	*eye	1248	EYE	numa	numa	n u m ɐ	false
+499	WERI-40-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	40	*eye	1248	EYE	it	it	i t	false
+500	AMAM-82-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	82	*fire	221	FIRE	is	is	i s	false
+501	SINI-82-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	82	*fire	221	FIRE	ijuis	ijuis	i dʒ u i s	false
+502	WERI-82-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	82	*fire	221	FIRE	es	es	e s	false
+503	AMAM-48-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	48	*hand	1277	HAND	mor	mor	m o r	false
+504	SINI-48-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	48	*hand	1277	HAND	moreZ	moreZ	m o r e ʒ	false
+505	WERI-48-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	48	*hand	1277	HAND	mor	mor	m o r	false
+506	AMAM-58-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	58	*hear	1408	HEAR	katwi	katwi	k ɐ t w i	false
+507	SINI-58-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	58	*hear	1408	HEAR	kataki tiNi katul	kataki tiNi katul	k ɐ t ɐ k i t i ŋ i k ɐ t u l	false
+508	WERI-58-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	58	*hear	1408	HEAR	kat wi	kat wi	k ɐ t w i	false
+509	SINI-47-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	47	*knee	1371	KNEE	laru	laru	l ɐ r u	false
+510	AMAM-25-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	25	*leaf	628	LEAF	keraoep	keraoep	k e r ɐ o e p	false
+511	AMAM-86-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	86	*mountain	639	MOUNTAIN	tomon	tomon	t o m o n	false
+512	SINI-86-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	86	*mountain	639	MOUNTAIN	lauiearo	lauiearo	l ɐ u i e ɐ r o	false
+513	AMAM-96-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	96	*new	1231	NEW	Nolop	Nolop	ŋ o l o p	false
+514	AMAM-92-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	92	*night	1233	NIGHT	kouta	kouta	k o u t ɐ	false
+515	SINI-92-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	92	*night	1233	NIGHT	jeitarawa	jeitarawa	dʒ e i t ɐ r ɐ w ɐ	false
+516	WERI-92-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	92	*night	1233	NIGHT	ru	ru	r u	false
+517	AMAM-41-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	41	*nose	1221	NOSE	woto	woto	w o t o	false
+518	SINI-41-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	41	*nose	1221	NOSE	wowora	wowora	w o w o r ɐ	false
+519	WERI-41-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	41	*nose	1221	NOSE	wot	wot	w o t	false
+520	AMAM-11-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	11	*one	1493	ONE	naar	naar	n ɐ ɐ r	false
+521	WERI-11-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	11	*one	1493	ONE	namp	namp	n ɐ m p	false
+522	AMAM-85-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	85	*path	2252	PATH	kan	kan	k ɐ n	false
+523	SINI-85-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	85	*path	2252	PATH	kaNara	kaNara	k ɐ ŋ ɐ r ɐ	false
+524	WERI-85-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	85	*path	2252	PATH	kan	kan	k ɐ n	false
+525	AMAM-18-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	18	*person	683	PERSON	omporoa	omporoa	o m p o r o ɐ	false
+526	SINI-18-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	18	*person	683	PERSON	ambobo	ambobo	ɐ m b o b o	false
+527	WERI-18-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	18	*person	683	PERSON	omin	omin	o m i n	false
+528	AMAM-57-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	57	*see	1409	SEE	ita	ita	i t ɐ	false
+529	SINI-57-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	57	*see	1409	SEE	idugalili	idugalili	i d u g ɐ l i l i	false
+530	WERI-57-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	57	*see	1409	SEE	itaNk	itaNk	i t ɐ ŋ k	false
+531	WERI-57-2	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	57	*see	1409	SEE	iten	iten	i t e n	false
+532	AMAM-28-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	28	*skin	763	SKIN	korop	korop	k o r o p	false
+533	SINI-28-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	28	*skin	763	SKIN	koropari	koropari	k o r o p ɐ r i	false
+534	WERI-28-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	28	*skin	763	SKIN	korup	korup	k o r u p	false
+535	AMAM-74-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	74	*star	1430	STAR	muri	muri	m u r i	false
+536	AMAM-77-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	77	*stone	857	STONE	kel	kel	k e l	false
+537	SINI-77-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	77	*stone	857	STONE	kaliaro	kaliaro	k ɐ l i ɐ r o	false
+538	AMAM-72-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	72	*sun	1343	SUN	kete	kete	k e t e	false
+539	SINI-72-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	72	*sun	1343	SUN	gadep	gadep	g ɐ d e p	false
+540	WERI-72-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	72	*sun	1343	SUN	kit	kit	k i t	false
+541	SINI-44-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	44	*tongue	1205	TONGUE	yangaueri	yangaueri	j ɐ n g ɐ u e r i	false
+542	AMAM-43-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	43	*tooth	1380	TOOTH	ke	ke	k e	false
+543	SINI-43-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	43	*tooth	1380	TOOTH	kera	kera	k e r ɐ	false
+544	AMAM-23-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	23	*tree	906	TREE	kerao	kerao	k e r ɐ o	false
+545	SINI-23-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	23	*tree	906	TREE	karamedi	karamedi	k ɐ r ɐ m e d i	false
+546	WERI-23-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	23	*tree	906	TREE	kira	kira	k i r ɐ	false
+547	AMAM-12-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	12	*two	1498	TWO	narar	narar	n ɐ r ɐ r	false
+548	WERI-12-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	12	*two	1498	TWO	nar	nar	n ɐ r	false
+549	AMAM-75-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	75	*water	948	WATER	i	i	i	false
+550	WERI-75-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	75	*water	948	WATER	i	i	i	false
+551	AMAM-3-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	3	*we	1212	WE	tiar	tiar	t i ɐ r	false
+552	WERI-3-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	3	*we	1212	WE	tiar	tiar	t i ɐ r	false
+553	AMAM-2-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	2	*you	1215	THOU	ni	ni	n i	false
+554	SINI-2-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	2	*you	1215	THOU	nine	nine	n i n e	false
+555	WERI-2-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	2	*you	1215	THOU	ni	ni	n i	false
+556	AMAM-9-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	9	all	98	ALL	pouroa	pouroa	p o u r o ɐ	false
+557	WERI-9-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	9	all	98	ALL	pou	pou	p o u	false
+558	SINI-49-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	49	belly	1251	BELLY	yada	yada	j ɐ d ɐ	false
+559	WERI-49-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	49	belly	1251	BELLY	ya	ya	j ɐ	false
+560	AMAM-13-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	13	big	1202	BIG	kesaNar	kesaNar	k e s ɐ ŋ ɐ r	false
+561	WERI-13-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	13	big	1202	BIG	kisaN	kisaN	k i s ɐ ŋ	false
+562	WERI-13-2	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	13	big	1202	BIG	kau	kau	k ɐ u	false
+563	AMAM-20-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	20	bird	937	BIRD	indek	indek	i n d e k	false
+564	SINI-20-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	20	bird	937	BIRD	indegep	indegep	i n d e g e p	false
+565	WERI-20-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	20	bird	937	BIRD	int	int	i n t	false
+566	AMAM-56-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	56	bite	1403	BITE	mu	mu	m u	false
+567	WERI-56-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	56	bite	1403	BITE	kant	kant	k ɐ n t	false
+568	AMAM-91-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	91	black	163	BLACK	kouar	kouar	k o u ɐ r	false
+569	AMAM-84-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	84	burn	2102	BURN	maNg	maNg	m ɐ ŋ g	false
+570	AMAM-94-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	94	cold	1287	COLD	siplok	siplok	s i p l o k	false
+571	SINI-94-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	94	cold	1287	COLD	ebiai	ebiai	e b i ɐ i	false
+572	WERI-94-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	94	cold	1287	COLD	ip	ip	i p	false
+573	AMAM-79-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	79	earth	1228	EARTH (SOIL)	yaNa	yaNa	j ɐ ŋ ɐ	false
+574	WERI-79-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	79	earth	1228	EARTH (SOIL)	yaN	yaN	j ɐ ŋ	false
+575	AMAM-55-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	55	eat	1336	EAT	ne	ne	n e	false
+576	AMAM-55-2	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	55	eat	1336	EAT	na	na	n ɐ	false
+577	SINI-55-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	55	eat	1336	EAT	namek	namek	n ɐ m e k	false
+578	WERI-55-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	55	eat	1336	EAT	ni	ni	n i	false
+579	AMAM-46-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	46	foot	1301	FOOT	iN	iN	i ŋ	false
+580	WERI-46-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	46	foot	1301	FOOT	iN	iN	i ŋ	false
+581	AMAM-70-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	70	give	1447	GIVE	aNg	aNg	ɐ ŋ g	false
+582	SINI-70-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	70	give	1447	GIVE	mani	mani	m ɐ n i	false
+583	WERI-70-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	70	give	1447	GIVE	n	n	n	false
+584	WERI-70-2	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	70	give	1447	GIVE	mp	mp	m p	false
+585	WERI-70-3	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	70	give	1447	GIVE	Nk	Nk	ŋ k	false
+586	WERI-70-4	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	70	give	1447	GIVE	in	in	i n	false
+587	AMAM-97-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	97	good	1035	GOOD	ompeaup	ompeaup	o m p e ɐ u p	false
+588	SINI-97-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	97	good	1035	GOOD	kilitu	kilitu	k i l i t u	false
+589	WERI-97-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	97	good	1035	GOOD	ompyau	ompyau	o m p j ɐ u	false
+590	AMAM-88-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	88	green	1425	GREEN	keraep yolsaiar	keraep yolsaiar	k e r ɐ e p j o l s ɐ i ɐ r	false
+591	SINI-37-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	37	hair	1040	HAIR	gaueri	gaueri	g ɐ u e r i	false
+592	WERI-37-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	37	hair	1040	HAIR	ip	ip	i p	false
+593	AMAM-38-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	38	head	1256	HEAD	kepo	kepo	k e p o	false
+594	SINI-38-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	38	head	1256	HEAD	gogomari	gogomari	g o g o m ɐ r i	false
+595	WERI-38-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	38	head	1256	HEAD	kepun	kepun	k e p u n	false
+596	AMAM-93-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	93	hot	1286	HOT	isNa	isNa	i s ŋ ɐ	false
+597	SINI-93-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	93	hot	1286	HOT	midiniai	midiniai	m i d i n i ɐ i	false
+598	WERI-93-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	93	hot	1286	HOT	es	es	e s	false
+599	SINI-62-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	62	kill	1417	KILL	ma	ma	m ɐ	false
+600	AMAM-14-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	14	long	1203	LONG	walau	walau	w ɐ l ɐ u	false
+601	WERI-14-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	14	long	1203	LONG	wali	wali	w ɐ l i	false
+602	AMAM-17-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	17	man	1554	MAN	omporoa	omporoa	o m p o r o ɐ	false
+603	SINI-17-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	17	man	1554	MAN	ambobo	ambobo	ɐ m b o b o	false
+604	WERI-17-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	17	man	1554	MAN	omp	omp	o m p	false
+605	AMAM-10-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	10	many	1198	MANY	sarar	sarar	s ɐ r ɐ r	false
+606	SINI-10-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	10	many	1198	MANY	borua	borua	b o r u ɐ	false
+607	AMAM-73-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	73	moon	1313	MOON	Nono	Nono	ŋ o n o	false
+608	SINI-73-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	73	moon	1313	MOON	gnoNa	gnoNa	g n o ŋ ɐ	false
+609	WERI-73-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	73	moon	1313	MOON	Non	Non	ŋ o n	false
+610	AMAM-42-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	42	mouth	674	MOUTH	kem	kem	k e m	false
+611	SINI-50-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	50	neck	1333	NECK	meZara	meZara	m e ʒ ɐ r ɐ	false
+612	WERI-50-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	50	neck	1333	NECK	mis	mis	m i s	false
+613	AMAM-8-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	8	not	1240	NOT	won	won	w o n	false
+614	AMAM-8-2	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	8	not	1240	NOT	na	na	n ɐ	false
+615	WERI-8-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	8	not	1240	NOT	won	won	w o n	false
+616	WERI-8-2	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	8	not	1240	NOT	na	na	n ɐ	false
+617	WERI-8-3	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	8	not	1240	NOT	n	n	n	false
+618	AMAM-76-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	76	rain	2108	RAINING OR RAIN	kopi	kopi	k o p i	false
+619	AMAM-76-2	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	76	rain	2108	RAINING OR RAIN	pel	pel	p e l	false
+620	SINI-76-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	76	rain	2108	RAINING OR RAIN	kovira	kovira	k o v i r ɐ	false
+621	WERI-76-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	76	rain	2108	RAINING OR RAIN	kopi	kopi	k o p i	false
+622	WERI-76-2	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	76	rain	2108	RAINING OR RAIN	pel	pel	p e l	false
+623	AMAM-87-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	87	red	156	RED	kopmoaiar	kopmoaiar	k o p m o ɐ i ɐ r	false
+624	WERI-87-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	87	red	156	RED	kup	kup	k u p	false
+625	WERI-71-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	71	say	1458	SAY	e	e	e	false
+626	WERI-71-2	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	71	say	1458	SAY	a	a	ɐ	false
+627	WERI-71-3	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	71	say	1458	SAY	i	i	i	false
+628	WERI-71-4	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	71	say	1458	SAY	ak	ak	ɐ k	false
+629	AMAM-24-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	24	seed	714	SEED	wop	wop	w o p	false
+630	AMAM-68-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	68	sit	1416	SIT	Nendi	Nendi	ŋ e n d i	false
+631	SINI-68-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	68	sit	1416	SIT	welZe	welZe	w e l ʒ e	false
+632	WERI-68-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	68	sit	1416	SIT	wel	wel	w e l	false
+633	WERI-68-2	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	68	sit	1416	SIT	aisi	aisi	ɐ i s i	false
+634	AMAM-60-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	60	sleep	1585	SLEEP	ao	ao	ɐ o	false
+635	AMAM-60-2	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	60	sleep	1585	SLEEP	aok	aok	ɐ o k	false
+636	SINI-60-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	60	sleep	1585	SLEEP	urakenorak	urakenorak	u r ɐ k e n o r ɐ k	false
+637	WERI-60-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	60	sleep	1585	SLEEP	ur	ur	u r	false
+638	WERI-60-2	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	60	sleep	1585	SLEEP	ka	ka	k ɐ	false
+639	AMAM-15-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	15	small	1246	SMALL	kotuta	kotuta	k o t u t ɐ	false
+640	SINI-15-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	15	small	1246	SMALL	kadupa	kadupa	k ɐ d u p ɐ	false
+641	WERI-15-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	15	small	1246	SMALL	kot	kot	k o t	false
+642	WERI-81-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	81	smoke	778	SMOKE (EXHAUST)	koulup	koulup	k o u l u p	false
+643	SINI-69-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	69	stand	1442	STAND	lavaka	lavaka	l ɐ v ɐ k ɐ	false
+644	WERI-69-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	69	stand	1442	STAND	tau	tau	t ɐ u	false
+645	AMAM-5-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	5	that	78	THAT	pipar	pipar	p i p ɐ r	false
+646	AMAM-5-2	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	5	that	78	THAT	eNgar	eNgar	e ŋ g ɐ r	false
+647	WERI-5-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	5	that	78	THAT	pip	pip	p i p	false
+648	WERI-5-2	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	5	that	78	THAT	pu	pu	p u	false
+649	AMAM-4-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	4	this	1214	THIS	epar	epar	e p ɐ r	false
+650	WERI-4-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	4	this	1214	THIS	ep	ep	e p	false
+651	AMAM-65-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	65	walk	1443	WALK	kaniN	kaniN	k ɐ n i ŋ	false
+652	AMAM-7-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	7	what	1236	WHAT	oropot	oropot	o r o p o t	false
+653	WERI-7-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	7	what	1236	WHAT	tol	tol	t o l	false
+654	AMAM-90-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	90	white	1335	WHITE	kolamar	kolamar	k o l ɐ m ɐ r	false
+655	AMAM-6-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	6	who	1235	WHO	talep	talep	t ɐ l e p	false
+656	SINI-6-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	6	who	1235	WHO	talip	talip	t ɐ l i p	false
+657	WERI-6-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	6	who	1235	WHO	tal	tal	t ɐ l	false
+658	AMAM-16-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	16	woman	962	WOMAN	oNo	oNo	o ŋ o	false
+659	SINI-16-1	SINI	SINI	weri1253	Weri	Goilalan	Weric		False	16	woman	962	WOMAN	aNopa	aNopa	ɐ ŋ o p ɐ	false
+660	WERI-16-1	WERI	WERI	weri1253	Weri	Goilalan	Weric		False	16	woman	962	WOMAN	uN	uN	u ŋ	false
+661	AMAM-89-1	AMAM	AMAM	amam1246	Amam	Goilalan	Weric		False	89	yellow	1424	YELLOW	koprendeNar	koprendeNar	k o p r e n d e ŋ ɐ r	false

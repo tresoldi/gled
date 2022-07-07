@@ -1,243 +1,602 @@
 ID	ASJP_ID	DOCULECT	LANGUAGE_NAME	GLOTTOCODE	GLOTTOLOG_NAME	LANGUAGE_LINEAGE_0	LANGUAGE_LINEAGE_1	LANGUAGE_LINEAGE_2	LANGUAGE_ISOLATE	PARAMETER_ID	CONCEPT	CONCEPTICON_ID	CONCEPTICON_GLOSS	VALUE	FORM	TOKENS	LOAN
 1	DAGA-1-1	DAGA	DAGA	daga1275	Daga	Dagan			False	1	*I	1209	I	ne	ne	n e	false
-2	DIMA-1-1	DIMA	DIMA	dima1252	Dima	Dagan			False	1	*I	1209	I	ne	ne	n e	false
-3	MAIWA-1-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	1	*I	1209	I	ne	ne	n e	false
-4	ONJOB-1-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	1	*I	1209	I	na	na	n ɐ	false
-5	UMANAKAINA_GWOIDEN-1-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	1	*I	1209	I	nau	nau	n ɐ u	false
-6	DIMA-30-1	DIMA	DIMA	dima1252	Dima	Dagan			False	30	*blood	946	BLOOD	tawayana	tawayana	t ɐ w ɐ j ɐ n ɐ	false
-7	MAIWA-30-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	30	*blood	946	BLOOD	hanigai	hanigai	h ɐ n i g ɐ i	false
-8	ONJOB-30-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	30	*blood	946	BLOOD	dila	dila	d i l ɐ	false
-9	UMANAKAINA_GIGAREBI-30-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	30	*blood	946	BLOOD	dara	dara	d ɐ r ɐ	false
-10	UMANAKAINA_GWOIDEN-30-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	30	*blood	946	BLOOD	tuana	tuana	t u ɐ n ɐ	false
-11	DAGA-31-1	DAGA	DAGA	daga1275	Daga	Dagan			False	31	*bone	1394	BONE	kaimewa	kaimewa	k ɐ i m e w ɐ	false
-12	DIMA-31-1	DIMA	DIMA	dima1252	Dima	Dagan			False	31	*bone	1394	BONE	eregura	eregura	e r e g u r ɐ	false
-13	MAIWA-31-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	31	*bone	1394	BONE	miridnawa	miridnawa	m i r i d n ɐ w ɐ	false
-14	ONJOB-31-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	31	*bone	1394	BONE	yarika	yarika	j ɐ r i k ɐ	false
-15	UMANAKAINA_GIGAREBI-31-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	31	*bone	1394	BONE	tuanai	tuanai	t u ɐ n ɐ i	false
-16	UMANAKAINA_GWOIDEN-31-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	31	*bone	1394	BONE	dogiana	dogiana	d o g i ɐ n ɐ	false
-17	DIMA-51-1	DIMA	DIMA	dima1252	Dima	Dagan			False	51	*breasts	1402	BREAST	ama	ama	ɐ m ɐ	false
-18	MAIWA-51-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	51	*breasts	1402	BREAST	am	am	ɐ m	false
-19	ONJOB-51-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	51	*breasts	1402	BREAST	tope	tope	t o p e	false
-20	UMANAKAINA_GIGAREBI-51-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	51	*breasts	1402	BREAST	am	am	ɐ m	false
-21	UMANAKAINA_GWOIDEN-51-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	51	*breasts	1402	BREAST	kataten	kataten	k ɐ t ɐ t e n	false
-22	DAGA-66-1	DAGA	DAGA	daga1275	Daga	Dagan			False	66	*come	1446	COME	onak	onak	o n ɐ k	false
-23	DIMA-66-1	DIMA	DIMA	dima1252	Dima	Dagan			False	66	*come	1446	COME	enai	enai	e n ɐ i	false
-24	DAGA-61-1	DAGA	DAGA	daga1275	Daga	Dagan			False	61	*die	1494	DIE	bo	bo	b o	false
-25	DIMA-61-1	DIMA	DIMA	dima1252	Dima	Dagan			False	61	*die	1494	DIE	boidi	boidi	b o i d i	false
-26	DAGA-21-1	DAGA	DAGA	daga1275	Daga	Dagan			False	21	*dog	2009	DOG	eao	eao	e ɐ o	false
-27	DIMA-21-1	DIMA	DIMA	dima1252	Dima	Dagan			False	21	*dog	2009	DOG	kwegawa	kwegawa	k w e g ɐ w ɐ	false
-28	MAIWA-21-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	21	*dog	2009	DOG	peau	peau	p e ɐ u	false
-29	MAIWA-21-2	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	21	*dog	2009	DOG	kueau	kueau	k u e ɐ u	false
-30	ONJOB-21-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	21	*dog	2009	DOG	kuku	kuku	k u k u	false
-31	UMANAKAINA_GIGAREBI-21-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	21	*dog	2009	DOG	takw	takw	t ɐ k w	false
-32	UMANAKAINA_GWOIDEN-21-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	21	*dog	2009	DOG	taku	taku	t ɐ k u	false
-33	DAGA-54-1	DAGA	DAGA	daga1275	Daga	Dagan			False	54	*drink	1401	DRINK	darine	darine	d ɐ r i n e	false
-34	DIMA-54-1	DIMA	DIMA	dima1252	Dima	Dagan			False	54	*drink	1401	DRINK	oanadi	oanadi	o ɐ n ɐ d i	false
-35	MAIWA-54-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	54	*drink	1401	DRINK	dudu	dudu	d u d u	false
-36	DIMA-39-1	DIMA	DIMA	dima1252	Dima	Dagan			False	39	*ear	1247	EAR	taiina	taiina	t ɐ i i n ɐ	false
-37	MAIWA-39-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	39	*ear	1247	EAR	nuinana	nuinana	n u i n ɐ n ɐ	false
-38	ONJOB-39-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	39	*ear	1247	EAR	ikara	ikara	i k ɐ r ɐ	false
-39	UMANAKAINA_GIGAREBI-39-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	39	*ear	1247	EAR	yenagu	yenagu	j e n ɐ g u	false
-40	UMANAKAINA_GWOIDEN-39-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	39	*ear	1247	EAR	wenaguni	wenaguni	w e n ɐ g u n i	false
-41	DAGA-40-1	DAGA	DAGA	daga1275	Daga	Dagan			False	40	*eye	1248	EYE	yam	yam	j ɐ m	false
-42	DIMA-40-1	DIMA	DIMA	dima1252	Dima	Dagan			False	40	*eye	1248	EYE	yamana	yamana	j ɐ m ɐ n ɐ	false
-43	MAIWA-40-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	40	*eye	1248	EYE	nagana	nagana	n ɐ g ɐ n ɐ	false
-44	ONJOB-40-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	40	*eye	1248	EYE	yama	yama	j ɐ m ɐ	false
-45	UMANAKAINA_GIGAREBI-40-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	40	*eye	1248	EYE	yabu	yabu	j ɐ b u	false
-46	UMANAKAINA_GWOIDEN-40-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	40	*eye	1248	EYE	yabi	yabi	j ɐ b i	false
-47	DIMA-82-1	DIMA	DIMA	dima1252	Dima	Dagan			False	82	*fire	221	FIRE	iarema	iarema	i ɐ r e m ɐ	false
-48	MAIWA-82-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	82	*fire	221	FIRE	kaiam	kaiam	k ɐ i ɐ m	false
-49	ONJOB-82-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	82	*fire	221	FIRE	oma	oma	o m ɐ	false
-50	UMANAKAINA_GIGAREBI-82-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	82	*fire	221	FIRE	mata	mata	m ɐ t ɐ	false
-51	UMANAKAINA_GWOIDEN-82-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	82	*fire	221	FIRE	mata	mata	m ɐ t ɐ	false
-52	DIMA-19-1	DIMA	DIMA	dima1252	Dima	Dagan			False	19	*fish	227	FISH	enagataia	enagataia	e n ɐ g ɐ t ɐ i ɐ	false
-53	MAIWA-19-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	19	*fish	227	FISH	torimai	torimai	t o r i m ɐ i	false
-54	ONJOB-19-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	19	*fish	227	FISH	iyana	iyana	i j ɐ n ɐ	false
-55	UMANAKAINA_GIGAREBI-19-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	19	*fish	227	FISH	kutakuta	kutakuta	k u t ɐ k u t ɐ	false
-56	UMANAKAINA_GWOIDEN-19-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	19	*fish	227	FISH	iapapa	iapapa	i ɐ p ɐ p ɐ	false
-57	DIMA-95-1	DIMA	DIMA	dima1252	Dima	Dagan			False	95	*full	1429	FULL	bunuain	bunuain	b u n u ɐ i n	false
-58	MAIWA-95-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	95	*full	1429	FULL	nosoponi	nosoponi	n o s o p o n i	false
-59	DAGA-48-1	DAGA	DAGA	daga1275	Daga	Dagan			False	48	*hand	1277	HAND	nanip	nanip	n ɐ n i p	false
-60	DIMA-48-1	DIMA	DIMA	dima1252	Dima	Dagan			False	48	*hand	1277	HAND	mabuna	mabuna	m ɐ b u n ɐ	false
-61	MAIWA-48-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	48	*hand	1277	HAND	nanigwainiwa	nanigwainiwa	n ɐ n i g w ɐ i n i w ɐ	false
-62	ONJOB-48-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	48	*hand	1277	HAND	yata	yata	j ɐ t ɐ	false
-63	UMANAKAINA_GIGAREBI-48-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	48	*hand	1277	HAND	idai	idai	i d ɐ i	false
-64	UMANAKAINA_GWOIDEN-48-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	48	*hand	1277	HAND	mabu	mabu	m ɐ b u	false
-65	DAGA-58-1	DAGA	DAGA	daga1275	Daga	Dagan			False	58	*hear	1408	HEAR	anu	anu	ɐ n u	false
-66	DIMA-58-1	DIMA	DIMA	dima1252	Dima	Dagan			False	58	*hear	1408	HEAR	atadi	atadi	ɐ t ɐ d i	false
-67	DIMA-34-1	DIMA	DIMA	dima1252	Dima	Dagan			False	34	*horn	1393	HORN (ANATOMY)	waripi	waripi	w ɐ r i p i	false
-68	DIMA-47-1	DIMA	DIMA	dima1252	Dima	Dagan			False	47	*knee	1371	KNEE	doramana	doramana	d o r ɐ m ɐ n ɐ	false
-69	MAIWA-47-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	47	*knee	1371	KNEE	dorumagano	dorumagano	d o r u m ɐ g ɐ n o	false
-70	DAGA-25-1	DAGA	DAGA	daga1275	Daga	Dagan			False	25	*leaf	628	LEAF	bae	bae	b ɐ e	false
-71	DIMA-25-1	DIMA	DIMA	dima1252	Dima	Dagan			False	25	*leaf	628	LEAF	kwarepi	kwarepi	k w ɐ r e p i	false
-72	MAIWA-25-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	25	*leaf	628	LEAF	kwaiaua	kwaiaua	k w ɐ i ɐ u ɐ	false
-73	ONJOB-25-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	25	*leaf	628	LEAF	ba	ba	b ɐ	false
-74	UMANAKAINA_GIGAREBI-25-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	25	*leaf	628	LEAF	lipi kwari	lipi kwari	l i p i k w ɐ r i	false
-75	UMANAKAINA_GWOIDEN-25-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	25	*leaf	628	LEAF	kwari	kwari	k w ɐ r i	false
-76	DAGA-53-1	DAGA	DAGA	daga1275	Daga	Dagan			False	53	*liver	1224	LIVER	goana	goana	g o ɐ n ɐ	false
-77	DIMA-53-1	DIMA	DIMA	dima1252	Dima	Dagan			False	53	*liver	1224	LIVER	kamokamo	kamokamo	k ɐ m o k ɐ m o	false
-78	ONJOB-53-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	53	*liver	1224	LIVER	uliga	uliga	u l i g ɐ	false
-79	UMANAKAINA_GIGAREBI-53-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	53	*liver	1224	LIVER	banoma	banoma	b ɐ n o m ɐ	false
-80	UMANAKAINA_GWOIDEN-53-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	53	*liver	1224	LIVER	tara	tara	t ɐ r ɐ	false
-81	DIMA-22-1	DIMA	DIMA	dima1252	Dima	Dagan			False	22	*louse	1392	LOUSE	igu	igu	i g u	false
-82	ONJOB-22-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	22	*louse	1392	LOUSE	kwina	kwina	k w i n ɐ	false
-83	UMANAKAINA_GIGAREBI-22-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	22	*louse	1392	LOUSE	siri	siri	s i r i	false
-84	UMANAKAINA_GWOIDEN-22-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	22	*louse	1392	LOUSE	tiri	tiri	t i r i	false
-85	DAGA-86-1	DAGA	DAGA	daga1275	Daga	Dagan			False	86	*mountain	639	MOUNTAIN	tunup	tunup	t u n u p	false
-86	DIMA-86-1	DIMA	DIMA	dima1252	Dima	Dagan			False	86	*mountain	639	MOUNTAIN	oiyapa	oiyapa	o i j ɐ p ɐ	false
-87	MAIWA-86-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	86	*mountain	639	MOUNTAIN	tuitouoto	tuitouoto	t u i t o u o t o	false
-88	ONJOB-86-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	86	*mountain	639	MOUNTAIN	oiyava	oiyava	o i j ɐ v ɐ	false
-89	UMANAKAINA_GIGAREBI-86-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	86	*mountain	639	MOUNTAIN	okwea	okwea	o k w e ɐ	false
-90	UMANAKAINA_GWOIDEN-86-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	86	*mountain	639	MOUNTAIN	oiapu	oiapu	o i ɐ p u	false
-91	DAGA-100-1	DAGA	DAGA	daga1275	Daga	Dagan			False	100	*name	1405	NAME	yau	yau	j ɐ u	false
-92	DIMA-100-1	DIMA	DIMA	dima1252	Dima	Dagan			False	100	*name	1405	NAME	ewani	ewani	e w ɐ n i	false
-93	MAIWA-100-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	100	*name	1405	NAME	ebura	ebura	e b u r ɐ	false
-94	DAGA-96-1	DAGA	DAGA	daga1275	Daga	Dagan			False	96	*new	1231	NEW	ewake	ewake	e w ɐ k e	false
-95	DIMA-96-1	DIMA	DIMA	dima1252	Dima	Dagan			False	96	*new	1231	NEW	ayaibi	ayaibi	ɐ j ɐ i b i	false
-96	MAIWA-96-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	96	*new	1231	NEW	eNwana	eNwana	e ŋ w ɐ n ɐ	false
-97	DAGA-92-1	DAGA	DAGA	daga1275	Daga	Dagan			False	92	*night	1233	NIGHT	mum	mum	m u m	false
-98	DIMA-92-1	DIMA	DIMA	dima1252	Dima	Dagan			False	92	*night	1233	NIGHT	nuba	nuba	n u b ɐ	false
-99	MAIWA-92-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	92	*night	1233	NIGHT	nubau	nubau	n u b ɐ u	false
-100	ONJOB-92-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	92	*night	1233	NIGHT	mume	mume	m u m e	false
-101	UMANAKAINA_GIGAREBI-92-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	92	*night	1233	NIGHT	didilauaga	didilauaga	d i d i l ɐ u ɐ g ɐ	false
-102	UMANAKAINA_GWOIDEN-92-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	92	*night	1233	NIGHT	nubawaga	nubawaga	n u b ɐ w ɐ g ɐ	false
-103	DIMA-41-1	DIMA	DIMA	dima1252	Dima	Dagan			False	41	*nose	1221	NOSE	giana	giana	g i ɐ n ɐ	false
-104	ONJOB-41-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	41	*nose	1221	NOSE	pia	pia	p i ɐ	false
-105	UMANAKAINA_GIGAREBI-41-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	41	*nose	1221	NOSE	kikat	kikat	k i k ɐ t	false
-106	UMANAKAINA_GWOIDEN-41-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	41	*nose	1221	NOSE	kibi	kibi	k i b i	false
-107	DAGA-11-1	DAGA	DAGA	daga1275	Daga	Dagan			False	11	*one	1493	ONE	da	da	d ɐ	false
-108	DIMA-11-1	DIMA	DIMA	dima1252	Dima	Dagan			False	11	*one	1493	ONE	daiida	daiida	d ɐ i i d ɐ	false
-109	MAIWA-11-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	11	*one	1493	ONE	desi	desi	d e s i	false
-110	ONJOB-11-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	11	*one	1493	ONE	kema	kema	k e m ɐ	false
-111	UMANAKAINA_GIGAREBI-11-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	11	*one	1493	ONE	eakanoko	eakanoko	e ɐ k ɐ n o k o	false
-112	UMANAKAINA_GWOIDEN-11-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	11	*one	1493	ONE	eakana	eakana	e ɐ k ɐ n ɐ	false
-113	DAGA-85-1	DAGA	DAGA	daga1275	Daga	Dagan			False	85	*path	2252	PATH	nain	nain	n ɐ i n	false
-114	DIMA-85-1	DIMA	DIMA	dima1252	Dima	Dagan			False	85	*path	2252	PATH	iyawa	iyawa	i j ɐ w ɐ	false
-115	MAIWA-85-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	85	*path	2252	PATH	etetin	etetin	e t e t i n	false
-116	ONJOB-85-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	85	*path	2252	PATH	eta	eta	e t ɐ	false
-117	UMANAKAINA_GIGAREBI-85-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	85	*path	2252	PATH	yawada	yawada	j ɐ w ɐ d ɐ	false
-118	UMANAKAINA_GWOIDEN-85-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	85	*path	2252	PATH	yawata	yawata	j ɐ w ɐ t ɐ	false
-119	DAGA-18-1	DAGA	DAGA	daga1275	Daga	Dagan			False	18	*person	683	PERSON	orup	orup	o r u p	false
-120	DIMA-18-1	DIMA	DIMA	dima1252	Dima	Dagan			False	18	*person	683	PERSON	apana	apana	ɐ p ɐ n ɐ	false
-121	ONJOB-18-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	18	*person	683	PERSON	yote	yote	j o t e	false
-122	UMANAKAINA_GIGAREBI-18-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	18	*person	683	PERSON	uratana	uratana	u r ɐ t ɐ n ɐ	false
-123	UMANAKAINA_GWOIDEN-18-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	18	*person	683	PERSON	yapana	yapana	j ɐ p ɐ n ɐ	false
-124	DAGA-57-1	DAGA	DAGA	daga1275	Daga	Dagan			False	57	*see	1409	SEE	yawa	yawa	j ɐ w ɐ	false
-125	DIMA-57-1	DIMA	DIMA	dima1252	Dima	Dagan			False	57	*see	1409	SEE	yawa	yawa	j ɐ w ɐ	false
-126	MAIWA-57-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	57	*see	1409	SEE	iauta	iauta	i ɐ u t ɐ	false
-127	DAGA-28-1	DAGA	DAGA	daga1275	Daga	Dagan			False	28	*skin	763	SKIN	epi	epi	e p i	false
-128	DIMA-28-1	DIMA	DIMA	dima1252	Dima	Dagan			False	28	*skin	763	SKIN	etona	etona	e t o n ɐ	false
-129	MAIWA-28-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	28	*skin	763	SKIN	kinapiwa	kinapiwa	k i n ɐ p i w ɐ	false
-130	ONJOB-28-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	28	*skin	763	SKIN	eta	eta	e t ɐ	false
-131	UMANAKAINA_GIGAREBI-28-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	28	*skin	763	SKIN	kwakwai	kwakwai	k w ɐ k w ɐ i	false
-132	UMANAKAINA_GWOIDEN-28-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	28	*skin	763	SKIN	midunga	midunga	m i d u n g ɐ	false
-133	DIMA-74-1	DIMA	DIMA	dima1252	Dima	Dagan			False	74	*star	1430	STAR	marabunua	marabunua	m ɐ r ɐ b u n u ɐ	false
-134	MAIWA-74-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	74	*star	1430	STAR	maranton	maranton	m ɐ r ɐ n t o n	false
-135	ONJOB-74-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	74	*star	1430	STAR	damota	damota	d ɐ m o t ɐ	false
-136	UMANAKAINA_GIGAREBI-74-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	74	*star	1430	STAR	tupana	tupana	t u p ɐ n ɐ	false
-137	UMANAKAINA_GWOIDEN-74-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	74	*star	1430	STAR	tuuwara	tuuwara	t u u w ɐ r ɐ	false
-138	DAGA-77-1	DAGA	DAGA	daga1275	Daga	Dagan			False	77	*stone	857	STONE	goat	goat	g o ɐ t	false
-139	DIMA-77-1	DIMA	DIMA	dima1252	Dima	Dagan			False	77	*stone	857	STONE	akima	akima	ɐ k i m ɐ	false
-140	MAIWA-77-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	77	*stone	857	STONE	an	an	ɐ n	false
-141	ONJOB-77-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	77	*stone	857	STONE	domoa	domoa	d o m o ɐ	false
-142	UMANAKAINA_GIGAREBI-77-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	77	*stone	857	STONE	boa	boa	b o ɐ	false
-143	UMANAKAINA_GWOIDEN-77-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	77	*stone	857	STONE	boa	boa	b o ɐ	false
-144	DAGA-72-1	DAGA	DAGA	daga1275	Daga	Dagan			False	72	*sun	1343	SUN	wan	wan	w ɐ n	false
-145	DIMA-72-1	DIMA	DIMA	dima1252	Dima	Dagan			False	72	*sun	1343	SUN	gabudara	gabudara	g ɐ b u d ɐ r ɐ	false
-146	MAIWA-72-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	72	*sun	1343	SUN	tari	tari	t ɐ r i	false
-147	ONJOB-72-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	72	*sun	1343	SUN	la	la	l ɐ	false
-148	UMANAKAINA_GIGAREBI-72-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	72	*sun	1343	SUN	madega	madega	m ɐ d e g ɐ	false
-149	UMANAKAINA_GWOIDEN-72-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	72	*sun	1343	SUN	maigara	maigara	m ɐ i g ɐ r ɐ	false
-150	DIMA-44-1	DIMA	DIMA	dima1252	Dima	Dagan			False	44	*tongue	1205	TONGUE	pepana	pepana	p e p ɐ n ɐ	false
-151	MAIWA-44-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	44	*tongue	1205	TONGUE	petnana	petnana	p e t n ɐ n ɐ	false
-152	ONJOB-44-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	44	*tongue	1205	TONGUE	peta	peta	p e t ɐ	false
-153	UMANAKAINA_GIGAREBI-44-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	44	*tongue	1205	TONGUE	tenewari	tenewari	t e n e w ɐ r i	false
-154	UMANAKAINA_GWOIDEN-44-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	44	*tongue	1205	TONGUE	pepan	pepan	p e p ɐ n	false
-155	DIMA-43-1	DIMA	DIMA	dima1252	Dima	Dagan			False	43	*tooth	1380	TOOTH	warina	warina	w ɐ r i n ɐ	false
-156	MAIWA-43-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	43	*tooth	1380	TOOTH	donana	donana	d o n ɐ n ɐ	false
-157	ONJOB-43-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	43	*tooth	1380	TOOTH	nosarika	nosarika	n o s ɐ r i k ɐ	false
-158	UMANAKAINA_GIGAREBI-43-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	43	*tooth	1380	TOOTH	uwari	uwari	u w ɐ r i	false
-159	UMANAKAINA_GWOIDEN-43-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	43	*tooth	1380	TOOTH	uari	uari	u ɐ r i	false
-160	DAGA-23-1	DAGA	DAGA	daga1275	Daga	Dagan			False	23	*tree	906	TREE	anop	anop	ɐ n o p	false
-161	DIMA-23-1	DIMA	DIMA	dima1252	Dima	Dagan			False	23	*tree	906	TREE	na	na	n ɐ	false
-162	MAIWA-23-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	23	*tree	906	TREE	itowoto	itowoto	i t o w o t o	false
-163	ONJOB-23-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	23	*tree	906	TREE	itu	itu	i t u	false
-164	UMANAKAINA_GIGAREBI-23-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	23	*tree	906	TREE	lipa	lipa	l i p ɐ	false
-165	UMANAKAINA_GWOIDEN-23-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	23	*tree	906	TREE	dipa	dipa	d i p ɐ	false
-166	DAGA-12-1	DAGA	DAGA	daga1275	Daga	Dagan			False	12	*two	1498	TWO	de	de	d e	false
-167	DIMA-12-1	DIMA	DIMA	dima1252	Dima	Dagan			False	12	*two	1498	TWO	uri	uri	u r i	false
-168	MAIWA-12-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	12	*two	1498	TWO	injivitin	injivitin	i n dʒ i v i t i n	false
-169	ONJOB-12-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	12	*two	1498	TWO	ame	ame	ɐ m e	false
-170	UMANAKAINA_GIGAREBI-12-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	12	*two	1498	TWO	ape	ape	ɐ p e	false
-171	UMANAKAINA_GWOIDEN-12-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	12	*two	1498	TWO	apea	apea	ɐ p e ɐ	false
-172	DAGA-75-1	DAGA	DAGA	daga1275	Daga	Dagan			False	75	*water	948	WATER	mea	mea	m e ɐ	false
-173	DIMA-75-1	DIMA	DIMA	dima1252	Dima	Dagan			False	75	*water	948	WATER	oa	oa	o ɐ	false
-174	MAIWA-75-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	75	*water	948	WATER	dudu	dudu	d u d u	false
-175	ONJOB-75-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	75	*water	948	WATER	saru	saru	s ɐ r u	false
-176	UMANAKAINA_GIGAREBI-75-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	75	*water	948	WATER	awana	awana	ɐ w ɐ n ɐ	false
-177	UMANAKAINA_GWOIDEN-75-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	75	*water	948	WATER	auwana	auwana	ɐ u w ɐ n ɐ	false
-178	DAGA-3-1	DAGA	DAGA	daga1275	Daga	Dagan			False	3	*we	1212	WE	nu	nu	n u	false
-179	ONJOB-3-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	3	*we	1212	WE	nu	nu	n u	false
-180	DAGA-2-1	DAGA	DAGA	daga1275	Daga	Dagan			False	2	*you	1215	THOU	ge	ge	g e	false
-181	MAIWA-2-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	2	*you	1215	THOU	gemita	gemita	g e m i t ɐ	false
-182	ONJOB-2-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	2	*you	1215	THOU	ga	ga	g ɐ	false
-183	UMANAKAINA_GWOIDEN-2-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	2	*you	1215	THOU	kau	kau	k ɐ u	false
-184	DIMA-9-1	DIMA	DIMA	dima1252	Dima	Dagan			False	9	all	98	ALL	minagadai	minagadai	m i n ɐ g ɐ d ɐ i	false
-185	DIMA-83-1	DIMA	DIMA	dima1252	Dima	Dagan			False	83	ash	646	ASH	popou	popou	p o p o u	false
-186	DIMA-27-1	DIMA	DIMA	dima1252	Dima	Dagan			False	27	bark	1204	BARK	ira etopi	ira etopi	i r ɐ e t o p i	false
-187	DIMA-49-1	DIMA	DIMA	dima1252	Dima	Dagan			False	49	belly	1251	BELLY	baguna	baguna	b ɐ g u n ɐ	false
-188	DIMA-13-1	DIMA	DIMA	dima1252	Dima	Dagan			False	13	big	1202	BIG	ratebi	ratebi	r ɐ t e b i	false
-189	DIMA-20-1	DIMA	DIMA	dima1252	Dima	Dagan			False	20	bird	937	BIRD	midiwari	midiwari	m i d i w ɐ r i	false
-190	DIMA-56-1	DIMA	DIMA	dima1252	Dima	Dagan			False	56	bite	1403	BITE	tarapi	tarapi	t ɐ r ɐ p i	false
-191	DIMA-91-1	DIMA	DIMA	dima1252	Dima	Dagan			False	91	black	163	BLACK	punubi	punubi	p u n u b i	false
-192	DIMA-45-1	DIMA	DIMA	dima1252	Dima	Dagan			False	45	claw	72	CLAW	wabi	wabi	w ɐ b i	false
-193	DIMA-80-1	DIMA	DIMA	dima1252	Dima	Dagan			False	80	cloud	1489	CLOUD	guba	guba	g u b ɐ	false
-194	DIMA-94-1	DIMA	DIMA	dima1252	Dima	Dagan			False	94	cold	1287	COLD	nuturu	nuturu	n u t u r u	false
-195	DIMA-99-1	DIMA	DIMA	dima1252	Dima	Dagan			False	99	dry	1398	DRY	kaobi	kaobi	k ɐ o b i	false
-196	DIMA-79-1	DIMA	DIMA	dima1252	Dima	Dagan			False	79	earth	1228	EARTH (SOIL)	pe	pe	p e	false
-197	DIMA-55-1	DIMA	DIMA	dima1252	Dima	Dagan			False	55	eat	1336	EAT	na	na	n ɐ	false
-198	DIMA-33-1	DIMA	DIMA	dima1252	Dima	Dagan			False	33	egg	744	EGG	dodopi	dodopi	d o d o p i	false
-199	DIMA-36-1	DIMA	DIMA	dima1252	Dima	Dagan			False	36	feather	1201	FEATHER	yaru	yaru	j ɐ r u	false
-200	DIMA-29-1	DIMA	DIMA	dima1252	Dima	Dagan			False	29	flesh	2259	FLESH	taripi	taripi	t ɐ r i p i	false
-201	DIMA-64-1	DIMA	DIMA	dima1252	Dima	Dagan			False	64	fly	1441	FLY (MOVE THROUGH AIR)	roboidi	roboidi	r o b o i d i	false
-202	DIMA-46-1	DIMA	DIMA	dima1252	Dima	Dagan			False	46	foot	1301	FOOT	wana	wana	w ɐ n ɐ	false
-203	DIMA-70-1	DIMA	DIMA	dima1252	Dima	Dagan			False	70	give	1447	GIVE	wanaga	wanaga	w ɐ n ɐ g ɐ	false
-204	DIMA-97-1	DIMA	DIMA	dima1252	Dima	Dagan			False	97	good	1035	GOOD	yamaibi	yamaibi	j ɐ m ɐ i b i	false
-205	DIMA-32-1	DIMA	DIMA	dima1252	Dima	Dagan			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	mone	mone	m o n e	false
-206	DIMA-88-1	DIMA	DIMA	dima1252	Dima	Dagan			False	88	green	1425	GREEN	kasikasigebi	kasikasigebi	k ɐ s i k ɐ s i g e b i	false
-207	DIMA-37-1	DIMA	DIMA	dima1252	Dima	Dagan			False	37	hair	1040	HAIR	deba	deba	d e b ɐ	false
-208	DIMA-38-1	DIMA	DIMA	dima1252	Dima	Dagan			False	38	head	1256	HEAD	una	una	u n ɐ	false
-209	DIMA-52-1	DIMA	DIMA	dima1252	Dima	Dagan			False	52	heart	1223	HEART	budimaga	budimaga	b u d i m ɐ g ɐ	false
-210	DIMA-62-1	DIMA	DIMA	dima1252	Dima	Dagan			False	62	kill	1417	KILL	raibunua	raibunua	r ɐ i b u n u ɐ	false
-211	DIMA-59-1	DIMA	DIMA	dima1252	Dima	Dagan			False	59	know	3626	KNOW	asini	asini	ɐ s i n i	false
-212	DIMA-67-1	DIMA	DIMA	dima1252	Dima	Dagan			False	67	lie	1411	LIE (REST)	ina	ina	i n ɐ	false
-213	DIMA-14-1	DIMA	DIMA	dima1252	Dima	Dagan			False	14	long	1203	LONG	eroaroaebi	eroaroaebi	e r o ɐ r o ɐ e b i	false
-214	DIMA-17-1	DIMA	DIMA	dima1252	Dima	Dagan			False	17	man	1554	MAN	apana	apana	ɐ p ɐ n ɐ	false
-215	DIMA-10-1	DIMA	DIMA	dima1252	Dima	Dagan			False	10	many	1198	MANY	utumabu	utumabu	u t u m ɐ b u	false
-216	DIMA-73-1	DIMA	DIMA	dima1252	Dima	Dagan			False	73	moon	1313	MOON	dede	dede	d e d e	false
-217	DIMA-42-1	DIMA	DIMA	dima1252	Dima	Dagan			False	42	mouth	674	MOUTH	noana	noana	n o ɐ n ɐ	false
-218	DIMA-50-1	DIMA	DIMA	dima1252	Dima	Dagan			False	50	neck	1333	NECK	mogama	mogama	m o g ɐ m ɐ	false
-219	DIMA-8-1	DIMA	DIMA	dima1252	Dima	Dagan			False	8	not	1240	NOT	iboi dai	iboi dai	i b o i d ɐ i	false
-220	DIMA-76-1	DIMA	DIMA	dima1252	Dima	Dagan			False	76	rain	2108	RAINING OR RAIN	uana	uana	u ɐ n ɐ	false
-221	DIMA-87-1	DIMA	DIMA	dima1252	Dima	Dagan			False	87	red	156	RED	derepi	derepi	d e r e p i	false
-222	DIMA-26-1	DIMA	DIMA	dima1252	Dima	Dagan			False	26	root	670	ROOT	wipi	wipi	w i p i	false
-223	DIMA-98-1	DIMA	DIMA	dima1252	Dima	Dagan			False	98	round	1395	ROUND	sipopobi	sipopobi	s i p o p o b i	false
-224	DIMA-78-1	DIMA	DIMA	dima1252	Dima	Dagan			False	78	sand	671	SAND	neana	neana	n e ɐ n ɐ	false
-225	DIMA-78-2	DIMA	DIMA	dima1252	Dima	Dagan			False	78	sand	671	SAND	neara	neara	n e ɐ r ɐ	false
-226	DIMA-71-1	DIMA	DIMA	dima1252	Dima	Dagan			False	71	say	1458	SAY	ana anaidi	ana anaidi	ɐ n ɐ ɐ n ɐ i d i	false
-227	DIMA-24-1	DIMA	DIMA	dima1252	Dima	Dagan			False	24	seed	714	SEED	eraibi	eraibi	e r ɐ i b i	false
-228	DIMA-68-1	DIMA	DIMA	dima1252	Dima	Dagan			False	68	sit	1416	SIT	miauturata	miauturata	m i ɐ u t u r ɐ t ɐ	false
-229	DIMA-60-1	DIMA	DIMA	dima1252	Dima	Dagan			False	60	sleep	1585	SLEEP	inadi	inadi	i n ɐ d i	false
-230	DIMA-15-1	DIMA	DIMA	dima1252	Dima	Dagan			False	15	small	1246	SMALL	susikidi	susikidi	s u s i k i d i	false
-231	DIMA-81-1	DIMA	DIMA	dima1252	Dima	Dagan			False	81	smoke	778	SMOKE (EXHAUST)	au	au	ɐ u	false
-232	DIMA-69-1	DIMA	DIMA	dima1252	Dima	Dagan			False	69	stand	1442	STAND	rora	rora	r o r ɐ	false
-233	DIMA-63-1	DIMA	DIMA	dima1252	Dima	Dagan			False	63	swim	1439	SWIM	ereredi	ereredi	e r e r e d i	false
-234	DIMA-35-1	DIMA	DIMA	dima1252	Dima	Dagan			False	35	tail	1220	TAIL	wedipi	wedipi	w e d i p i	false
-235	DIMA-5-1	DIMA	DIMA	dima1252	Dima	Dagan			False	5	that	78	THAT	ia	ia	i ɐ	false
-236	DIMA-4-1	DIMA	DIMA	dima1252	Dima	Dagan			False	4	this	1214	THIS	ma	ma	m ɐ	false
-237	DIMA-65-1	DIMA	DIMA	dima1252	Dima	Dagan			False	65	walk	1443	WALK	pepewaidi	pepewaidi	p e p e w ɐ i d i	false
-238	DIMA-7-1	DIMA	DIMA	dima1252	Dima	Dagan			False	7	what	1236	WHAT	dima	dima	d i m ɐ	false
-239	DIMA-90-1	DIMA	DIMA	dima1252	Dima	Dagan			False	90	white	1335	WHITE	poibi	poibi	p o i b i	false
-240	DIMA-6-1	DIMA	DIMA	dima1252	Dima	Dagan			False	6	who	1235	WHO	ida	ida	i d ɐ	false
-241	DIMA-16-1	DIMA	DIMA	dima1252	Dima	Dagan			False	16	woman	962	WOMAN	wawina	wawina	w ɐ w i n ɐ	false
-242	DIMA-89-1	DIMA	DIMA	dima1252	Dima	Dagan			False	89	yellow	1424	YELLOW	yanopi	yanopi	j ɐ n o p i	false
+2	DAGA_2-1-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	1	*I	1209	I	nE	nE	n a	false
+3	DIMA-1-1	DIMA	DIMA	dima1252	Dima	Dagan			False	1	*I	1209	I	ne	ne	n e	false
+4	DIMA_2-1-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	1	*I	1209	I	ne	ne	n e	false
+5	MAIWA-1-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	1	*I	1209	I	ne	ne	n e	false
+6	MAIWA_2-1-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	1	*I	1209	I	ne	ne	n e	false
+7	ONJOB-1-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	1	*I	1209	I	na	na	n ɐ	false
+8	UMANAKAINA_GWOIDEN-1-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	1	*I	1209	I	nau	nau	n ɐ u	false
+9	DAGA_2-30-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	30	*blood	946	BLOOD	dEnip	dEnip	d a n i p	false
+10	DIMA-30-1	DIMA	DIMA	dima1252	Dima	Dagan			False	30	*blood	946	BLOOD	tawayana	tawayana	t ɐ w ɐ j ɐ n ɐ	false
+11	DIMA_2-30-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	30	*blood	946	BLOOD	deri	deri	d e r i	false
+12	MAIWA-30-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	30	*blood	946	BLOOD	hanigai	hanigai	h ɐ n i g ɐ i	false
+13	MAIWA_2-30-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	30	*blood	946	BLOOD	di	di	d i	false
+14	MAIWA_GALEVA-30-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	30	*blood	946	BLOOD	uki	uki	u k i	false
+15	MAIWA_MANEAO-30-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	30	*blood	946	BLOOD	oki	oki	o k i	false
+16	MAIWA_PUE-30-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	30	*blood	946	BLOOD	ganigani	ganigani	g ɐ n i g ɐ n i	false
+17	ONJOB-30-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	30	*blood	946	BLOOD	dila	dila	d i l ɐ	false
+18	UMANAKAINA_GIGAREBI-30-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	30	*blood	946	BLOOD	dara	dara	d ɐ r ɐ	false
+19	UMANAKAINA_GWOIDEN-30-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	30	*blood	946	BLOOD	tuana	tuana	t u ɐ n ɐ	false
+20	DAGA-31-1	DAGA	DAGA	daga1275	Daga	Dagan			False	31	*bone	1394	BONE	kaimewa	kaimewa	k ɐ i m e w ɐ	false
+21	DAGA_2-31-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	31	*bone	1394	BONE	kaemewa	kaemewa	k ɐ e m e w ɐ	false
+22	DIMA-31-1	DIMA	DIMA	dima1252	Dima	Dagan			False	31	*bone	1394	BONE	eregura	eregura	e r e g u r ɐ	false
+23	DIMA_2-31-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	31	*bone	1394	BONE	legura	legura	l e g u r ɐ	false
+24	MAIWA-31-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	31	*bone	1394	BONE	miridnawa	miridnawa	m i r i d n ɐ w ɐ	false
+25	MAIWA_2-31-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	31	*bone	1394	BONE	marEtnawa	marEtnawa	m ɐ r a t n ɐ w ɐ	false
+26	MAIWA_GALEVA-31-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	31	*bone	1394	BONE	mareren	mareren	m ɐ r e r e n	false
+27	MAIWA_MANEAO-31-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	31	*bone	1394	BONE	marenumwa	marenumwa	m ɐ r e n u m w ɐ	false
+28	MAIWA_PUE-31-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	31	*bone	1394	BONE	malelen	malelen	m ɐ l e l e n	false
+29	ONJOB-31-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	31	*bone	1394	BONE	yarika	yarika	j ɐ r i k ɐ	false
+30	UMANAKAINA_GIGAREBI-31-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	31	*bone	1394	BONE	tuanai	tuanai	t u ɐ n ɐ i	false
+31	UMANAKAINA_GWOIDEN-31-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	31	*bone	1394	BONE	dogiana	dogiana	d o g i ɐ n ɐ	false
+32	DAGA_2-51-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	51	*breasts	1402	BREAST	amewa	amewa	ɐ m e w ɐ	false
+33	DIMA-51-1	DIMA	DIMA	dima1252	Dima	Dagan			False	51	*breasts	1402	BREAST	ama	ama	ɐ m ɐ	false
+34	DIMA_2-51-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	51	*breasts	1402	BREAST	ama	ama	ɐ m ɐ	false
+35	MAIWA-51-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	51	*breasts	1402	BREAST	am	am	ɐ m	false
+36	MAIWA_2-51-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	51	*breasts	1402	BREAST	am	am	ɐ m	false
+37	MAIWA_3-51-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	51	*breasts	1402	BREAST	am	am	ɐ m	false
+38	MAIWA_GALEVA-51-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	51	*breasts	1402	BREAST	amgunu	amgunu	ɐ m g u n u	false
+39	MAIWA_MANEAO-51-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	51	*breasts	1402	BREAST	am	am	ɐ m	false
+40	MAIWA_PUE-51-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	51	*breasts	1402	BREAST	angawa	angawa	ɐ n g ɐ w ɐ	false
+41	ONJOB-51-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	51	*breasts	1402	BREAST	tope	tope	t o p e	false
+42	UMANAKAINA_GIGAREBI-51-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	51	*breasts	1402	BREAST	am	am	ɐ m	false
+43	UMANAKAINA_GWOIDEN-51-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	51	*breasts	1402	BREAST	kataten	kataten	k ɐ t ɐ t e n	false
+44	DAGA-66-1	DAGA	DAGA	daga1275	Daga	Dagan			False	66	*come	1446	COME	onak	onak	o n ɐ k	false
+45	DAGA_2-66-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	66	*come	1446	COME	oniwan	oniwan	o n i w ɐ n	false
+46	DIMA-66-1	DIMA	DIMA	dima1252	Dima	Dagan			False	66	*come	1446	COME	enai	enai	e n ɐ i	false
+47	MAIWA_2-66-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	66	*come	1446	COME	me 3one	me 3one	m e ə o n e	false
+48	MAIWA_3-66-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	66	*come	1446	COME	ompe	ompe	o m p e	false
+49	DAGA-61-1	DAGA	DAGA	daga1275	Daga	Dagan			False	61	*die	1494	DIE	bo	bo	b o	false
+50	DAGA_2-61-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	61	*die	1494	DIE	boiwan	boiwan	b o i w ɐ n	false
+51	DIMA-61-1	DIMA	DIMA	dima1252	Dima	Dagan			False	61	*die	1494	DIE	boidi	boidi	b o i d i	false
+52	MAIWA_2-61-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	61	*die	1494	DIE	me boine	me boine	m e b o i n e	false
+53	DAGA-21-1	DAGA	DAGA	daga1275	Daga	Dagan			False	21	*dog	2009	DOG	eao	eao	e ɐ o	false
+54	DAGA_2-21-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	21	*dog	2009	DOG	eao	eao	e ɐ o	false
+55	DIMA-21-1	DIMA	DIMA	dima1252	Dima	Dagan			False	21	*dog	2009	DOG	kwegawa	kwegawa	k w e g ɐ w ɐ	false
+56	DIMA_2-21-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	21	*dog	2009	DOG	kweaoa	kweaoa	k w e ɐ o ɐ	false
+57	MAIWA-21-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	21	*dog	2009	DOG	peau	peau	p e ɐ u	false
+58	MAIWA-21-2	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	21	*dog	2009	DOG	kueau	kueau	k u e ɐ u	false
+59	MAIWA_2-21-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	21	*dog	2009	DOG	kwh~eau	kwh~eau	kʷʰ e ɐ u	false
+60	MAIWA_3-21-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	21	*dog	2009	DOG	kueyao	kueyao	k u e j ɐ o	false
+61	MAIWA_GALEVA-21-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	21	*dog	2009	DOG	kweao	kweao	k w e ɐ o	false
+62	MAIWA_MANEAO-21-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	21	*dog	2009	DOG	kweau	kweau	k w e ɐ u	false
+63	MAIWA_PUE-21-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	21	*dog	2009	DOG	kweao	kweao	k w e ɐ o	false
+64	ONJOB-21-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	21	*dog	2009	DOG	kuku	kuku	k u k u	false
+65	UMANAKAINA_GIGAREBI-21-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	21	*dog	2009	DOG	takw	takw	t ɐ k w	false
+66	UMANAKAINA_GWOIDEN-21-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	21	*dog	2009	DOG	taku	taku	t ɐ k u	false
+67	DAGA-54-1	DAGA	DAGA	daga1275	Daga	Dagan			False	54	*drink	1401	DRINK	darine	darine	d ɐ r i n e	false
+68	DAGA_2-54-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	54	*drink	1401	DRINK	naiwan	naiwan	n ɐ i w ɐ n	false
+69	DIMA-54-1	DIMA	DIMA	dima1252	Dima	Dagan			False	54	*drink	1401	DRINK	oanadi	oanadi	o ɐ n ɐ d i	false
+70	MAIWA-54-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	54	*drink	1401	DRINK	dudu	dudu	d u d u	false
+71	MAIWA_2-54-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	54	*drink	1401	DRINK	me nane	me nane	m e n ɐ n e	false
+72	DAGA_2-39-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	39	*ear	1247	EAR	darinewa	darinewa	d ɐ r i n e w ɐ	false
+73	DIMA-39-1	DIMA	DIMA	dima1252	Dima	Dagan			False	39	*ear	1247	EAR	taiina	taiina	t ɐ i i n ɐ	false
+74	DIMA_2-39-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	39	*ear	1247	EAR	taine	taine	t ɐ i n e	false
+75	MAIWA-39-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	39	*ear	1247	EAR	nuinana	nuinana	n u i n ɐ n ɐ	false
+76	MAIWA_2-39-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	39	*ear	1247	EAR	naunawa	naunawa	n ɐ u n ɐ w ɐ	false
+77	MAIWA_3-39-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	39	*ear	1247	EAR	naunawa	naunawa	n ɐ u n ɐ w ɐ	false
+78	MAIWA_GALEVA-39-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	39	*ear	1247	EAR	nanu	nanu	n ɐ n u	false
+79	MAIWA_GALEVA-39-2	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	39	*ear	1247	EAR	kopiru	kopiru	k o p i r u	false
+80	MAIWA_MANEAO-39-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	39	*ear	1247	EAR	naununwa	naununwa	n ɐ u n u n w ɐ	false
+81	MAIWA_PUE-39-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	39	*ear	1247	EAR	nonowa	nonowa	n o n o w ɐ	false
+82	ONJOB-39-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	39	*ear	1247	EAR	ikara	ikara	i k ɐ r ɐ	false
+83	UMANAKAINA_GIGAREBI-39-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	39	*ear	1247	EAR	yenagu	yenagu	j e n ɐ g u	false
+84	UMANAKAINA_GWOIDEN-39-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	39	*ear	1247	EAR	wenaguni	wenaguni	w e n ɐ g u n i	false
+85	DAGA-40-1	DAGA	DAGA	daga1275	Daga	Dagan			False	40	*eye	1248	EYE	yam	yam	j ɐ m	false
+86	DAGA_2-40-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	40	*eye	1248	EYE	yamewa	yamewa	j ɐ m e w ɐ	false
+87	DIMA-40-1	DIMA	DIMA	dima1252	Dima	Dagan			False	40	*eye	1248	EYE	yamana	yamana	j ɐ m ɐ n ɐ	false
+88	DIMA_2-40-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	40	*eye	1248	EYE	yame	yame	j ɐ m e	false
+89	MAIWA-40-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	40	*eye	1248	EYE	nagana	nagana	n ɐ g ɐ n ɐ	false
+90	MAIWA_3-40-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	40	*eye	1248	EYE	yaNganwa	yaNganwa	j ɐ ŋ g ɐ n w ɐ	false
+91	MAIWA_GALEVA-40-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	40	*eye	1248	EYE	naugunu	naugunu	n ɐ u g u n u	false
+92	MAIWA_MANEAO-40-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	40	*eye	1248	EYE	fagaunwa	fagaunwa	f ɐ g ɐ u n w ɐ	false
+93	MAIWA_PUE-40-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	40	*eye	1248	EYE	nangauwa	nangauwa	n ɐ n g ɐ u w ɐ	false
+94	ONJOB-40-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	40	*eye	1248	EYE	yama	yama	j ɐ m ɐ	false
+95	UMANAKAINA_GIGAREBI-40-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	40	*eye	1248	EYE	yabu	yabu	j ɐ b u	false
+96	UMANAKAINA_GWOIDEN-40-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	40	*eye	1248	EYE	yabi	yabi	j ɐ b i	false
+97	DAGA_2-82-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	82	*fire	221	FIRE	oma	oma	o m ɐ	false
+98	DIMA-82-1	DIMA	DIMA	dima1252	Dima	Dagan			False	82	*fire	221	FIRE	iarema	iarema	i ɐ r e m ɐ	false
+99	DIMA_2-82-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	82	*fire	221	FIRE	ilaremo	ilaremo	i l ɐ r e m o	false
+100	MAIWA-82-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	82	*fire	221	FIRE	kaiam	kaiam	k ɐ i ɐ m	false
+101	MAIWA_2-82-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	82	*fire	221	FIRE	yaNgawa	yaNgawa	j ɐ ŋ g ɐ w ɐ	false
+102	MAIWA_3-82-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	82	*fire	221	FIRE	iam	iam	i ɐ m	false
+103	MAIWA_GALEVA-82-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	82	*fire	221	FIRE	kaiyum	kaiyum	k ɐ i j u m	false
+104	MAIWA_MANEAO-82-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	82	*fire	221	FIRE	iyam	iyam	i j ɐ m	false
+105	MAIWA_PUE-82-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	82	*fire	221	FIRE	kaiyan	kaiyan	k ɐ i j ɐ n	false
+106	ONJOB-82-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	82	*fire	221	FIRE	oma	oma	o m ɐ	false
+107	UMANAKAINA_GIGAREBI-82-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	82	*fire	221	FIRE	mata	mata	m ɐ t ɐ	false
+108	UMANAKAINA_GWOIDEN-82-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	82	*fire	221	FIRE	mata	mata	m ɐ t ɐ	false
+109	DAGA_2-19-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	19	*fish	227	FISH	meo	meo	m e o	false
+110	DIMA-19-1	DIMA	DIMA	dima1252	Dima	Dagan			False	19	*fish	227	FISH	enagataia	enagataia	e n ɐ g ɐ t ɐ i ɐ	false
+111	DIMA_2-19-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	19	*fish	227	FISH	taiya	taiya	t ɐ i j ɐ	false
+112	MAIWA-19-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	19	*fish	227	FISH	torimai	torimai	t o r i m ɐ i	false
+113	MAIWA_2-19-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	19	*fish	227	FISH	gwambui	gwambui	g w ɐ m b u i	false
+114	MAIWA_GALEVA-19-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	19	*fish	227	FISH	toromai	toromai	t o r o m ɐ i	false
+115	MAIWA_MANEAO-19-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	19	*fish	227	FISH	gwambui	gwambui	g w ɐ m b u i	false
+116	MAIWA_PUE-19-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	19	*fish	227	FISH	mai	mai	m ɐ i	false
+117	ONJOB-19-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	19	*fish	227	FISH	iyana	iyana	i j ɐ n ɐ	false
+118	UMANAKAINA_GIGAREBI-19-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	19	*fish	227	FISH	kutakuta	kutakuta	k u t ɐ k u t ɐ	false
+119	UMANAKAINA_GWOIDEN-19-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	19	*fish	227	FISH	iapapa	iapapa	i ɐ p ɐ p ɐ	false
+120	DAGA_2-95-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	95	*full	1429	FULL	nodotouen	nodotouen	n o d o t o u e n	false
+121	DIMA-95-1	DIMA	DIMA	dima1252	Dima	Dagan			False	95	*full	1429	FULL	bunuain	bunuain	b u n u ɐ i n	false
+122	MAIWA-95-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	95	*full	1429	FULL	nosoponi	nosoponi	n o s o p o n i	false
+123	MAIWA_2-95-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	95	*full	1429	FULL	noidawane	noidawane	n o i d ɐ w ɐ n e	false
+124	DAGA-48-1	DAGA	DAGA	daga1275	Daga	Dagan			False	48	*hand	1277	HAND	nanip	nanip	n ɐ n i p	false
+125	DAGA_2-48-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	48	*hand	1277	HAND	naniwa	naniwa	n ɐ n i w ɐ	false
+126	DIMA-48-1	DIMA	DIMA	dima1252	Dima	Dagan			False	48	*hand	1277	HAND	mabuna	mabuna	m ɐ b u n ɐ	false
+127	DIMA_2-48-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	48	*hand	1277	HAND	mabe	mabe	m ɐ b e	false
+128	DIMA_2-48-2	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	48	*hand	1277	HAND	yani	yani	j ɐ n i	false
+129	MAIWA-48-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	48	*hand	1277	HAND	nanigwainiwa	nanigwainiwa	n ɐ n i g w ɐ i n i w ɐ	false
+130	MAIWA_2-48-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	48	*hand	1277	HAND	naniwa	naniwa	n ɐ n i w ɐ	false
+131	MAIWA_3-48-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	48	*hand	1277	HAND	naniguriwa	naniguriwa	n ɐ n i g u r i w ɐ	false
+132	MAIWA_GALEVA-48-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	48	*hand	1277	HAND	nanunu	nanunu	n ɐ n u n u	false
+133	MAIWA_MANEAO-48-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	48	*hand	1277	HAND	nanunwa	nanunwa	n ɐ n u n w ɐ	false
+134	MAIWA_PUE-48-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	48	*hand	1277	HAND	naniwa	naniwa	n ɐ n i w ɐ	false
+135	ONJOB-48-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	48	*hand	1277	HAND	yata	yata	j ɐ t ɐ	false
+136	UMANAKAINA_GIGAREBI-48-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	48	*hand	1277	HAND	idai	idai	i d ɐ i	false
+137	UMANAKAINA_GWOIDEN-48-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	48	*hand	1277	HAND	mabu	mabu	m ɐ b u	false
+138	DAGA-58-1	DAGA	DAGA	daga1275	Daga	Dagan			False	58	*hear	1408	HEAR	anu	anu	ɐ n u	false
+139	DAGA_2-58-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	58	*hear	1408	HEAR	anuiwan	anuiwan	ɐ n u i w ɐ n	false
+140	DIMA-58-1	DIMA	DIMA	dima1252	Dima	Dagan			False	58	*hear	1408	HEAR	atadi	atadi	ɐ t ɐ d i	false
+141	MAIWA_2-58-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	58	*hear	1408	HEAR	me anone	me anone	m e ɐ n o n e	false
+142	DAGA_2-34-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	34	*horn	1393	HORN (ANATOMY)	idonewa	idonewa	i d o n e w ɐ	false
+143	DIMA-34-1	DIMA	DIMA	dima1252	Dima	Dagan			False	34	*horn	1393	HORN (ANATOMY)	waripi	waripi	w ɐ r i p i	false
+144	MAIWA_2-34-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	34	*horn	1393	HORN (ANATOMY)	donawa	donawa	d o n ɐ w ɐ	false
+145	DAGA_2-47-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	47	*knee	1371	KNEE	omaniwa	omaniwa	o m ɐ n i w ɐ	false
+146	DIMA-47-1	DIMA	DIMA	dima1252	Dima	Dagan			False	47	*knee	1371	KNEE	doramana	doramana	d o r ɐ m ɐ n ɐ	false
+147	MAIWA-47-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	47	*knee	1371	KNEE	dorumagano	dorumagano	d o r u m ɐ g ɐ n o	false
+148	MAIWA_2-47-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	47	*knee	1371	KNEE	umunwa	umunwa	u m u n w ɐ	false
+149	MAIWA_3-47-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	47	*knee	1371	KNEE	uminwa	uminwa	u m i n w ɐ	false
+150	DAGA-25-1	DAGA	DAGA	daga1275	Daga	Dagan			False	25	*leaf	628	LEAF	bae	bae	b ɐ e	false
+151	DAGA_2-25-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	25	*leaf	628	LEAF	baewa	baewa	b ɐ e w ɐ	false
+152	DIMA-25-1	DIMA	DIMA	dima1252	Dima	Dagan			False	25	*leaf	628	LEAF	kwarepi	kwarepi	k w ɐ r e p i	false
+153	DIMA_2-25-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	25	*leaf	628	LEAF	kwarepi	kwarepi	k w ɐ r e p i	false
+154	MAIWA-25-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	25	*leaf	628	LEAF	kwaiaua	kwaiaua	k w ɐ i ɐ u ɐ	false
+155	MAIWA_2-25-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	25	*leaf	628	LEAF	kw~aeawa	kw~aeawa	kʷ ɐ e ɐ w ɐ	false
+156	MAIWA_3-25-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	25	*leaf	628	LEAF	koyawa	koyawa	k o j ɐ w ɐ	false
+157	MAIWA_GALEVA-25-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	25	*leaf	628	LEAF	i kwiyava	i kwiyava	i k w i j ɐ v ɐ	false
+158	MAIWA_MANEAO-25-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	25	*leaf	628	LEAF	kwaiwa	kwaiwa	k w ɐ i w ɐ	false
+159	MAIWA_PUE-25-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	25	*leaf	628	LEAF	kaiawa	kaiawa	k ɐ i ɐ w ɐ	false
+160	ONJOB-25-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	25	*leaf	628	LEAF	ba	ba	b ɐ	false
+161	UMANAKAINA_GIGAREBI-25-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	25	*leaf	628	LEAF	lipi kwari	lipi kwari	l i p i k w ɐ r i	false
+162	UMANAKAINA_GWOIDEN-25-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	25	*leaf	628	LEAF	kwari	kwari	k w ɐ r i	false
+163	DAGA-53-1	DAGA	DAGA	daga1275	Daga	Dagan			False	53	*liver	1224	LIVER	goana	goana	g o ɐ n ɐ	false
+164	DAGA_2-53-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	53	*liver	1224	LIVER	goanewa	goanewa	g o ɐ n e w ɐ	false
+165	DIMA-53-1	DIMA	DIMA	dima1252	Dima	Dagan			False	53	*liver	1224	LIVER	kamokamo	kamokamo	k ɐ m o k ɐ m o	false
+166	DIMA_2-53-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	53	*liver	1224	LIVER	atene	atene	ɐ t e n e	false
+167	DIMA_2-53-2	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	53	*liver	1224	LIVER	bede	bede	b e d e	false
+168	MAIWA_2-53-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	53	*liver	1224	LIVER	gwanawa	gwanawa	g w ɐ n ɐ w ɐ	false
+169	MAIWA_GALEVA-53-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	53	*liver	1224	LIVER	bokwopiva	bokwopiva	b o k w o p i v ɐ	false
+170	MAIWA_MANEAO-53-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	53	*liver	1224	LIVER	nunumtenawa	nunumtenawa	n u n u m t e n ɐ w ɐ	false
+171	MAIWA_PUE-53-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	53	*liver	1224	LIVER	pigi	pigi	p i g i	false
+172	MAIWA_PUE-53-2	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	53	*liver	1224	LIVER	pagawa	pagawa	p ɐ g ɐ w ɐ	false
+173	ONJOB-53-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	53	*liver	1224	LIVER	uliga	uliga	u l i g ɐ	false
+174	UMANAKAINA_GIGAREBI-53-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	53	*liver	1224	LIVER	banoma	banoma	b ɐ n o m ɐ	false
+175	UMANAKAINA_GWOIDEN-53-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	53	*liver	1224	LIVER	tara	tara	t ɐ r ɐ	false
+176	DAGA_2-22-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	22	*louse	1392	LOUSE	kuisin	kuisin	k u i s i n	false
+177	DIMA-22-1	DIMA	DIMA	dima1252	Dima	Dagan			False	22	*louse	1392	LOUSE	igu	igu	i g u	false
+178	DIMA_2-22-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	22	*louse	1392	LOUSE	igu	igu	i g u	false
+179	MAIWA_2-22-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	22	*louse	1392	LOUSE	kwh~isin	kwh~isin	kʷʰ i s i n	false
+180	MAIWA_3-22-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	22	*louse	1392	LOUSE	usiwa	usiwa	u s i w ɐ	false
+181	MAIWA_3-22-2	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	22	*louse	1392	LOUSE	nagam	nagam	n ɐ g ɐ m	false
+182	MAIWA_GALEVA-22-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	22	*louse	1392	LOUSE	kwin	kwin	k w i n	false
+183	MAIWA_MANEAO-22-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	22	*louse	1392	LOUSE	kwin	kwin	k w i n	false
+184	MAIWA_PUE-22-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	22	*louse	1392	LOUSE	kwin	kwin	k w i n	false
+185	ONJOB-22-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	22	*louse	1392	LOUSE	kwina	kwina	k w i n ɐ	false
+186	UMANAKAINA_GIGAREBI-22-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	22	*louse	1392	LOUSE	siri	siri	s i r i	false
+187	UMANAKAINA_GWOIDEN-22-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	22	*louse	1392	LOUSE	tiri	tiri	t i r i	false
+188	DAGA-86-1	DAGA	DAGA	daga1275	Daga	Dagan			False	86	*mountain	639	MOUNTAIN	tunup	tunup	t u n u p	false
+189	DAGA_2-86-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	86	*mountain	639	MOUNTAIN	tunup	tunup	t u n u p	false
+190	DIMA-86-1	DIMA	DIMA	dima1252	Dima	Dagan			False	86	*mountain	639	MOUNTAIN	oiyapa	oiyapa	o i j ɐ p ɐ	false
+191	DIMA_2-86-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	86	*mountain	639	MOUNTAIN	oiapu	oiapu	o i ɐ p u	false
+192	MAIWA-86-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	86	*mountain	639	MOUNTAIN	tuitouoto	tuitouoto	t u i t o u o t o	false
+193	MAIWA_2-86-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	86	*mountain	639	MOUNTAIN	th~ui	th~ui	tʰ u i	false
+194	MAIWA_GALEVA-86-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	86	*mountain	639	MOUNTAIN	tui	tui	t u i	false
+195	MAIWA_MANEAO-86-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	86	*mountain	639	MOUNTAIN	bewegi	bewegi	b e w e g i	false
+196	MAIWA_PUE-86-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	86	*mountain	639	MOUNTAIN	tui	tui	t u i	false
+197	ONJOB-86-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	86	*mountain	639	MOUNTAIN	oiyava	oiyava	o i j ɐ v ɐ	false
+198	UMANAKAINA_GIGAREBI-86-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	86	*mountain	639	MOUNTAIN	okwea	okwea	o k w e ɐ	false
+199	UMANAKAINA_GWOIDEN-86-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	86	*mountain	639	MOUNTAIN	oiapu	oiapu	o i ɐ p u	false
+200	DAGA-100-1	DAGA	DAGA	daga1275	Daga	Dagan			False	100	*name	1405	NAME	yau	yau	j ɐ u	false
+201	DAGA_2-100-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	100	*name	1405	NAME	yaoa	yaoa	j ɐ o ɐ	false
+202	DIMA-100-1	DIMA	DIMA	dima1252	Dima	Dagan			False	100	*name	1405	NAME	ewani	ewani	e w ɐ n i	false
+203	MAIWA-100-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	100	*name	1405	NAME	ebura	ebura	e b u r ɐ	false
+204	MAIWA_2-100-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	100	*name	1405	NAME	ivi wa	ivi wa	i v i w ɐ	false
+205	DAGA-96-1	DAGA	DAGA	daga1275	Daga	Dagan			False	96	*new	1231	NEW	ewake	ewake	e w ɐ k e	false
+206	DAGA_2-96-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	96	*new	1231	NEW	Ewake	Ewake	a w ɐ k e	false
+207	DIMA-96-1	DIMA	DIMA	dima1252	Dima	Dagan			False	96	*new	1231	NEW	ayaibi	ayaibi	ɐ j ɐ i b i	false
+208	MAIWA-96-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	96	*new	1231	NEW	eNwana	eNwana	e ŋ w ɐ n ɐ	false
+209	MAIWA_2-96-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	96	*new	1231	NEW	math~aiwa	math~aiwa	m ɐ tʰ ɐ i w ɐ	false
+210	DAGA-92-1	DAGA	DAGA	daga1275	Daga	Dagan			False	92	*night	1233	NIGHT	mum	mum	m u m	false
+211	DAGA_2-92-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	92	*night	1233	NIGHT	mum	mum	m u m	false
+212	DIMA-92-1	DIMA	DIMA	dima1252	Dima	Dagan			False	92	*night	1233	NIGHT	nuba	nuba	n u b ɐ	false
+213	DIMA_2-92-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	92	*night	1233	NIGHT	sisipu	sisipu	s i s i p u	false
+214	MAIWA-92-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	92	*night	1233	NIGHT	nubau	nubau	n u b ɐ u	false
+215	MAIWA_2-92-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	92	*night	1233	NIGHT	aram	aram	ɐ r ɐ m	false
+216	MAIWA_GALEVA-92-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	92	*night	1233	NIGHT	numbadn	numbadn	n u m b ɐ d n	false
+217	MAIWA_MANEAO-92-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	92	*night	1233	NIGHT	aram	aram	ɐ r ɐ m	false
+218	MAIWA_PUE-92-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	92	*night	1233	NIGHT	numbaru	numbaru	n u m b ɐ r u	false
+219	ONJOB-92-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	92	*night	1233	NIGHT	mume	mume	m u m e	false
+220	UMANAKAINA_GIGAREBI-92-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	92	*night	1233	NIGHT	didilauaga	didilauaga	d i d i l ɐ u ɐ g ɐ	false
+221	UMANAKAINA_GWOIDEN-92-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	92	*night	1233	NIGHT	nubawaga	nubawaga	n u b ɐ w ɐ g ɐ	false
+222	DAGA_2-41-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	41	*nose	1221	NOSE	ginewa	ginewa	g i n e w ɐ	false
+223	DIMA-41-1	DIMA	DIMA	dima1252	Dima	Dagan			False	41	*nose	1221	NOSE	giana	giana	g i ɐ n ɐ	false
+224	DIMA_2-41-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	41	*nose	1221	NOSE	gia	gia	g i ɐ	false
+225	MAIWA_2-41-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	41	*nose	1221	NOSE	ginunwa	ginunwa	g i n u n w ɐ	false
+226	MAIWA_3-41-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	41	*nose	1221	NOSE	ginawa	ginawa	g i n ɐ w ɐ	false
+227	MAIWA_GALEVA-41-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	41	*nose	1221	NOSE	ginunu	ginunu	g i n u n u	false
+228	MAIWA_MANEAO-41-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	41	*nose	1221	NOSE	ginunwa	ginunwa	g i n u n w ɐ	false
+229	MAIWA_PUE-41-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	41	*nose	1221	NOSE	ginawa	ginawa	g i n ɐ w ɐ	false
+230	ONJOB-41-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	41	*nose	1221	NOSE	pia	pia	p i ɐ	false
+231	UMANAKAINA_GIGAREBI-41-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	41	*nose	1221	NOSE	kikat	kikat	k i k ɐ t	false
+232	UMANAKAINA_GWOIDEN-41-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	41	*nose	1221	NOSE	kibi	kibi	k i b i	false
+233	DAGA-11-1	DAGA	DAGA	daga1275	Daga	Dagan			False	11	*one	1493	ONE	da	da	d ɐ	false
+234	DAGA_2-11-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	11	*one	1493	ONE	daiton	daiton	d ɐ i t o n	false
+235	DIMA-11-1	DIMA	DIMA	dima1252	Dima	Dagan			False	11	*one	1493	ONE	daiida	daiida	d ɐ i i d ɐ	false
+236	DIMA_2-11-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	11	*one	1493	ONE	daida	daida	d ɐ i d ɐ	false
+237	MAIWA-11-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	11	*one	1493	ONE	desi	desi	d e s i	false
+238	MAIWA_2-11-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	11	*one	1493	ONE	desiroe	desiroe	d e s i r o e	false
+239	MAIWA_3-11-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	11	*one	1493	ONE	deesirom	deesirom	d e e s i r o m	false
+240	MAIWA_GALEVA-11-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	11	*one	1493	ONE	desi	desi	d e s i	false
+241	MAIWA_MANEAO-11-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	11	*one	1493	ONE	desiroi	desiroi	d e s i r o i	false
+242	MAIWA_PUE-11-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	11	*one	1493	ONE	desi	desi	d e s i	false
+243	ONJOB-11-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	11	*one	1493	ONE	kema	kema	k e m ɐ	false
+244	UMANAKAINA_GIGAREBI-11-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	11	*one	1493	ONE	eakanoko	eakanoko	e ɐ k ɐ n o k o	false
+245	UMANAKAINA_GWOIDEN-11-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	11	*one	1493	ONE	eakana	eakana	e ɐ k ɐ n ɐ	false
+246	DAGA-85-1	DAGA	DAGA	daga1275	Daga	Dagan			False	85	*path	2252	PATH	nain	nain	n ɐ i n	false
+247	DAGA_2-85-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	85	*path	2252	PATH	neigin	neigin	n e i g i n	false
+248	DIMA-85-1	DIMA	DIMA	dima1252	Dima	Dagan			False	85	*path	2252	PATH	iyawa	iyawa	i j ɐ w ɐ	false
+249	DIMA_2-85-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	85	*path	2252	PATH	yava	yava	j ɐ v ɐ	false
+250	MAIWA-85-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	85	*path	2252	PATH	etetin	etetin	e t e t i n	false
+251	MAIWA_2-85-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	85	*path	2252	PATH	Ebu	Ebu	a b u	false
+252	MAIWA_3-85-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	85	*path	2252	PATH	Ebu	Ebu	a b u	false
+253	MAIWA_GALEVA-85-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	85	*path	2252	PATH	ibu	ibu	i b u	false
+254	MAIWA_MANEAO-85-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	85	*path	2252	PATH	ebu	ebu	e b u	false
+255	MAIWA_PUE-85-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	85	*path	2252	PATH	ibu	ibu	i b u	false
+256	ONJOB-85-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	85	*path	2252	PATH	eta	eta	e t ɐ	false
+257	UMANAKAINA_GIGAREBI-85-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	85	*path	2252	PATH	yawada	yawada	j ɐ w ɐ d ɐ	false
+258	UMANAKAINA_GWOIDEN-85-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	85	*path	2252	PATH	yawata	yawata	j ɐ w ɐ t ɐ	false
+259	DAGA-18-1	DAGA	DAGA	daga1275	Daga	Dagan			False	18	*person	683	PERSON	orup	orup	o r u p	false
+260	DAGA_2-18-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	18	*person	683	PERSON	apan da	apan da	ɐ p ɐ n d ɐ	false
+261	DIMA-18-1	DIMA	DIMA	dima1252	Dima	Dagan			False	18	*person	683	PERSON	apana	apana	ɐ p ɐ n ɐ	false
+262	DIMA_2-18-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	18	*person	683	PERSON	apana	apana	ɐ p ɐ n ɐ	false
+263	MAIWA_GALEVA-18-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	18	*person	683	PERSON	yarafan	yarafan	j ɐ r ɐ f ɐ n	false
+264	MAIWA_MANEAO-18-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	18	*person	683	PERSON	apan	apan	ɐ p ɐ n	false
+265	MAIWA_PUE-18-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	18	*person	683	PERSON	apan	apan	ɐ p ɐ n	false
+266	ONJOB-18-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	18	*person	683	PERSON	yote	yote	j o t e	false
+267	UMANAKAINA_GIGAREBI-18-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	18	*person	683	PERSON	uratana	uratana	u r ɐ t ɐ n ɐ	false
+268	UMANAKAINA_GWOIDEN-18-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	18	*person	683	PERSON	yapana	yapana	j ɐ p ɐ n ɐ	false
+269	DAGA-57-1	DAGA	DAGA	daga1275	Daga	Dagan			False	57	*see	1409	SEE	yawa	yawa	j ɐ w ɐ	false
+270	DAGA_2-57-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	57	*see	1409	SEE	yaviwan	yaviwan	j ɐ v i w ɐ n	false
+271	DIMA-57-1	DIMA	DIMA	dima1252	Dima	Dagan			False	57	*see	1409	SEE	yawa	yawa	j ɐ w ɐ	false
+272	MAIWA-57-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	57	*see	1409	SEE	iauta	iauta	i ɐ u t ɐ	false
+273	MAIWA_2-57-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	57	*see	1409	SEE	me yaune	me yaune	m e j ɐ u n e	false
+274	MAIWA_3-57-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	57	*see	1409	SEE	yavivi	yavivi	j ɐ v i v i	false
+275	DAGA-28-1	DAGA	DAGA	daga1275	Daga	Dagan			False	28	*skin	763	SKIN	epi	epi	e p i	false
+276	DAGA_2-28-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	28	*skin	763	SKIN	Epiwa	Epiwa	a p i w ɐ	false
+277	DIMA-28-1	DIMA	DIMA	dima1252	Dima	Dagan			False	28	*skin	763	SKIN	etona	etona	e t o n ɐ	false
+278	DIMA_2-28-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	28	*skin	763	SKIN	nibe	nibe	n i b e	false
+279	DIMA_2-28-2	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	28	*skin	763	SKIN	etopi	etopi	e t o p i	false
+280	MAIWA-28-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	28	*skin	763	SKIN	kinapiwa	kinapiwa	k i n ɐ p i w ɐ	false
+281	MAIWA_2-28-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	28	*skin	763	SKIN	ph~aph~unwa	ph~aph~unwa	pʰ ɐ pʰ u n w ɐ	false
+282	MAIWA_3-28-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	28	*skin	763	SKIN	koapiwa	koapiwa	k o ɐ p i w ɐ	false
+283	MAIWA_GALEVA-28-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	28	*skin	763	SKIN	kwadunu	kwadunu	k w ɐ d u n u	false
+284	MAIWA_MANEAO-28-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	28	*skin	763	SKIN	uwunwa	uwunwa	u w u n w ɐ	false
+285	MAIWA_PUE-28-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	28	*skin	763	SKIN	kwapiwa	kwapiwa	k w ɐ p i w ɐ	false
+286	ONJOB-28-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	28	*skin	763	SKIN	eta	eta	e t ɐ	false
+287	UMANAKAINA_GIGAREBI-28-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	28	*skin	763	SKIN	kwakwai	kwakwai	k w ɐ k w ɐ i	false
+288	UMANAKAINA_GWOIDEN-28-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	28	*skin	763	SKIN	midunga	midunga	m i d u n g ɐ	false
+289	DAGA_2-74-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	74	*star	1430	STAR	buanae	buanae	b u ɐ n ɐ e	false
+290	DIMA-74-1	DIMA	DIMA	dima1252	Dima	Dagan			False	74	*star	1430	STAR	marabunua	marabunua	m ɐ r ɐ b u n u ɐ	false
+291	DIMA_2-74-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	74	*star	1430	STAR	gwamigwami	gwamigwami	g w ɐ m i g w ɐ m i	false
+292	MAIWA-74-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	74	*star	1430	STAR	maranton	maranton	m ɐ r ɐ n t o n	false
+293	MAIWA_2-74-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	74	*star	1430	STAR	buanae	buanae	b u ɐ n ɐ e	false
+294	MAIWA_3-74-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	74	*star	1430	STAR	marantun	marantun	m ɐ r ɐ n t u n	false
+295	MAIWA_GALEVA-74-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	74	*star	1430	STAR	marabunua	marabunua	m ɐ r ɐ b u n u ɐ	false
+296	MAIWA_MANEAO-74-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	74	*star	1430	STAR	maratoni	maratoni	m ɐ r ɐ t o n i	false
+297	MAIWA_PUE-74-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	74	*star	1430	STAR	aran	aran	ɐ r ɐ n	false
+298	ONJOB-74-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	74	*star	1430	STAR	damota	damota	d ɐ m o t ɐ	false
+299	UMANAKAINA_GIGAREBI-74-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	74	*star	1430	STAR	tupana	tupana	t u p ɐ n ɐ	false
+300	UMANAKAINA_GWOIDEN-74-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	74	*star	1430	STAR	tuuwara	tuuwara	t u u w ɐ r ɐ	false
+301	DAGA-77-1	DAGA	DAGA	daga1275	Daga	Dagan			False	77	*stone	857	STONE	goat	goat	g o ɐ t	false
+302	DAGA_2-77-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	77	*stone	857	STONE	agim	agim	ɐ g i m	false
+303	DIMA-77-1	DIMA	DIMA	dima1252	Dima	Dagan			False	77	*stone	857	STONE	akima	akima	ɐ k i m ɐ	false
+304	DIMA_2-77-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	77	*stone	857	STONE	akima	akima	ɐ k i m ɐ	false
+305	DIMA_2-77-2	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	77	*stone	857	STONE	gwada	gwada	g w ɐ d ɐ	false
+306	MAIWA-77-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	77	*stone	857	STONE	an	an	ɐ n	false
+307	MAIWA_2-77-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	77	*stone	857	STONE	agim	agim	ɐ g i m	false
+308	MAIWA_3-77-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	77	*stone	857	STONE	agim	agim	ɐ g i m	false
+309	MAIWA_GALEVA-77-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	77	*stone	857	STONE	an	an	ɐ n	false
+310	MAIWA_MANEAO-77-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	77	*stone	857	STONE	an	an	ɐ n	false
+311	MAIWA_PUE-77-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	77	*stone	857	STONE	karau	karau	k ɐ r ɐ u	false
+312	ONJOB-77-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	77	*stone	857	STONE	domoa	domoa	d o m o ɐ	false
+313	UMANAKAINA_GIGAREBI-77-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	77	*stone	857	STONE	boa	boa	b o ɐ	false
+314	UMANAKAINA_GWOIDEN-77-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	77	*stone	857	STONE	boa	boa	b o ɐ	false
+315	DAGA-72-1	DAGA	DAGA	daga1275	Daga	Dagan			False	72	*sun	1343	SUN	wan	wan	w ɐ n	false
+316	DAGA_2-72-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	72	*sun	1343	SUN	oam	oam	o ɐ m	false
+317	DIMA-72-1	DIMA	DIMA	dima1252	Dima	Dagan			False	72	*sun	1343	SUN	gabudara	gabudara	g ɐ b u d ɐ r ɐ	false
+318	DIMA_2-72-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	72	*sun	1343	SUN	maigara	maigara	m ɐ i g ɐ r ɐ	false
+319	MAIWA-72-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	72	*sun	1343	SUN	tari	tari	t ɐ r i	false
+320	MAIWA_2-72-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	72	*sun	1343	SUN	kh~um	kh~um	kʰ u m	false
+321	MAIWA_3-72-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	72	*sun	1343	SUN	kum	kum	k u m	false
+322	MAIWA_GALEVA-72-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	72	*sun	1343	SUN	kum	kum	k u m	false
+323	MAIWA_MANEAO-72-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	72	*sun	1343	SUN	kum	kum	k u m	false
+324	MAIWA_PUE-72-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	72	*sun	1343	SUN	kum	kum	k u m	false
+325	ONJOB-72-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	72	*sun	1343	SUN	la	la	l ɐ	false
+326	UMANAKAINA_GIGAREBI-72-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	72	*sun	1343	SUN	madega	madega	m ɐ d e g ɐ	false
+327	UMANAKAINA_GWOIDEN-72-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	72	*sun	1343	SUN	maigara	maigara	m ɐ i g ɐ r ɐ	false
+328	DAGA_2-44-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	44	*tongue	1205	TONGUE	mEriwa	mEriwa	m a r i w ɐ	false
+329	DIMA-44-1	DIMA	DIMA	dima1252	Dima	Dagan			False	44	*tongue	1205	TONGUE	pepana	pepana	p e p ɐ n ɐ	false
+330	DIMA_2-44-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	44	*tongue	1205	TONGUE	pepe	pepe	p e p e	false
+331	MAIWA-44-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	44	*tongue	1205	TONGUE	petnana	petnana	p e t n ɐ n ɐ	false
+332	MAIWA_2-44-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	44	*tongue	1205	TONGUE	ph~ednawa	ph~ednawa	pʰ e d n ɐ w ɐ	false
+333	MAIWA_3-44-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	44	*tongue	1205	TONGUE	pedt nawa	pedt nawa	p e d t n ɐ w ɐ	false
+334	MAIWA_GALEVA-44-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	44	*tongue	1205	TONGUE	petnunu	petnunu	p e t n u n u	false
+335	MAIWA_MANEAO-44-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	44	*tongue	1205	TONGUE	petnunwa	petnunwa	p e t n u n w ɐ	false
+336	MAIWA_PUE-44-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	44	*tongue	1205	TONGUE	petnawa	petnawa	p e t n ɐ w ɐ	false
+337	ONJOB-44-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	44	*tongue	1205	TONGUE	peta	peta	p e t ɐ	false
+338	UMANAKAINA_GIGAREBI-44-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	44	*tongue	1205	TONGUE	tenewari	tenewari	t e n e w ɐ r i	false
+339	UMANAKAINA_GWOIDEN-44-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	44	*tongue	1205	TONGUE	pepan	pepan	p e p ɐ n	false
+340	DAGA_2-43-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	43	*tooth	1380	TOOTH	nodonewa	nodonewa	n o d o n e w ɐ	false
+341	DIMA-43-1	DIMA	DIMA	dima1252	Dima	Dagan			False	43	*tooth	1380	TOOTH	warina	warina	w ɐ r i n ɐ	false
+342	DIMA_2-43-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	43	*tooth	1380	TOOTH	ware	ware	w ɐ r e	false
+343	MAIWA-43-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	43	*tooth	1380	TOOTH	donana	donana	d o n ɐ n ɐ	false
+344	MAIWA_2-43-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	43	*tooth	1380	TOOTH	donawa	donawa	d o n ɐ w ɐ	false
+345	MAIWA_3-43-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	43	*tooth	1380	TOOTH	donawa	donawa	d o n ɐ w ɐ	false
+346	MAIWA_GALEVA-43-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	43	*tooth	1380	TOOTH	donunu	donunu	d o n u n u	false
+347	MAIWA_MANEAO-43-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	43	*tooth	1380	TOOTH	dnunwa	dnunwa	d n u n w ɐ	false
+348	MAIWA_PUE-43-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	43	*tooth	1380	TOOTH	donawa	donawa	d o n ɐ w ɐ	false
+349	ONJOB-43-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	43	*tooth	1380	TOOTH	nosarika	nosarika	n o s ɐ r i k ɐ	false
+350	UMANAKAINA_GIGAREBI-43-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	43	*tooth	1380	TOOTH	uwari	uwari	u w ɐ r i	false
+351	UMANAKAINA_GWOIDEN-43-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	43	*tooth	1380	TOOTH	uari	uari	u ɐ r i	false
+352	DAGA-23-1	DAGA	DAGA	daga1275	Daga	Dagan			False	23	*tree	906	TREE	anop	anop	ɐ n o p	false
+353	DAGA_2-23-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	23	*tree	906	TREE	oma	oma	o m ɐ	false
+354	DIMA-23-1	DIMA	DIMA	dima1252	Dima	Dagan			False	23	*tree	906	TREE	na	na	n ɐ	false
+355	DIMA_2-23-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	23	*tree	906	TREE	ira	ira	i r ɐ	false
+356	MAIWA-23-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	23	*tree	906	TREE	itowoto	itowoto	i t o w o t o	false
+357	MAIWA_2-23-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	23	*tree	906	TREE	i	i	i	false
+358	MAIWA_3-23-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	23	*tree	906	TREE	ioma	ioma	i o m ɐ	false
+359	MAIWA_GALEVA-23-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	23	*tree	906	TREE	i	i	i	false
+360	MAIWA_MANEAO-23-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	23	*tree	906	TREE	i	i	i	false
+361	MAIWA_PUE-23-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	23	*tree	906	TREE	i	i	i	false
+362	ONJOB-23-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	23	*tree	906	TREE	itu	itu	i t u	false
+363	UMANAKAINA_GIGAREBI-23-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	23	*tree	906	TREE	lipa	lipa	l i p ɐ	false
+364	UMANAKAINA_GWOIDEN-23-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	23	*tree	906	TREE	dipa	dipa	d i p ɐ	false
+365	DAGA-12-1	DAGA	DAGA	daga1275	Daga	Dagan			False	12	*two	1498	TWO	de	de	d e	false
+366	DAGA_2-12-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	12	*two	1498	TWO	dErE	dErE	d a r a	false
+367	DIMA-12-1	DIMA	DIMA	dima1252	Dima	Dagan			False	12	*two	1498	TWO	uri	uri	u r i	false
+368	DIMA_2-12-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	12	*two	1498	TWO	yuri	yuri	j u r i	false
+369	MAIWA-12-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	12	*two	1498	TWO	injivitin	injivitin	i n dʒ i v i t i n	false
+370	MAIWA_2-12-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	12	*two	1498	TWO	du3m	du3m	d u ə m	false
+371	MAIWA_3-12-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	12	*two	1498	TWO	duam	duam	d u ɐ m	false
+372	MAIWA_GALEVA-12-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	12	*two	1498	TWO	indivitani	indivitani	i n d i v i t ɐ n i	false
+373	MAIWA_MANEAO-12-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	12	*two	1498	TWO	duamet	duamet	d u ɐ m e t	false
+374	MAIWA_PUE-12-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	12	*two	1498	TWO	duam	duam	d u ɐ m	false
+375	ONJOB-12-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	12	*two	1498	TWO	ame	ame	ɐ m e	false
+376	UMANAKAINA_GIGAREBI-12-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	12	*two	1498	TWO	ape	ape	ɐ p e	false
+377	UMANAKAINA_GWOIDEN-12-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	12	*two	1498	TWO	apea	apea	ɐ p e ɐ	false
+378	DAGA-75-1	DAGA	DAGA	daga1275	Daga	Dagan			False	75	*water	948	WATER	mea	mea	m e ɐ	false
+379	DAGA_2-75-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	75	*water	948	WATER	kaum	kaum	k ɐ u m	false
+380	DIMA-75-1	DIMA	DIMA	dima1252	Dima	Dagan			False	75	*water	948	WATER	oa	oa	o ɐ	false
+381	DIMA_2-75-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	75	*water	948	WATER	owa	owa	o w ɐ	false
+382	MAIWA-75-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	75	*water	948	WATER	dudu	dudu	d u d u	false
+383	MAIWA_2-75-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	75	*water	948	WATER	yoi	yoi	j o i	false
+384	MAIWA_3-75-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	75	*water	948	WATER	ioi	ioi	i o i	false
+385	MAIWA_GALEVA-75-1	MAIWA_GALEVA	MAIWA_GALEVA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	75	*water	948	WATER	arevu	arevu	ɐ r e v u	false
+386	MAIWA_MANEAO-75-1	MAIWA_MANEAO	MAIWA_MANEAO	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	75	*water	948	WATER	yoi	yoi	j o i	false
+387	MAIWA_PUE-75-1	MAIWA_PUE	MAIWA_PUE	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	75	*water	948	WATER	hareva	hareva	h ɐ r e v ɐ	false
+388	ONJOB-75-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	75	*water	948	WATER	saru	saru	s ɐ r u	false
+389	UMANAKAINA_GIGAREBI-75-1	UMANAKAINA_GIGAREBI	UMANAKAINA_GIGAREBI	uman1240	Umanakaina	Dagan			False	75	*water	948	WATER	awana	awana	ɐ w ɐ n ɐ	false
+390	UMANAKAINA_GWOIDEN-75-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	75	*water	948	WATER	auwana	auwana	ɐ u w ɐ n ɐ	false
+391	DAGA-3-1	DAGA	DAGA	daga1275	Daga	Dagan			False	3	*we	1212	WE	nu	nu	n u	false
+392	DIMA_2-3-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	3	*we	1212	WE	no	no	n o	false
+393	ONJOB-3-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	3	*we	1212	WE	nu	nu	n u	false
+394	DAGA-2-1	DAGA	DAGA	daga1275	Daga	Dagan			False	2	*you	1215	THOU	ge	ge	g e	false
+395	DIMA_2-2-1	DIMA_2	DIMA_2	dima1252	Dima	Dagan			False	2	*you	1215	THOU	ge	ge	g e	false
+396	MAIWA-2-1	MAIWA	MAIWA	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	2	*you	1215	THOU	gemita	gemita	g e m i t ɐ	false
+397	ONJOB-2-1	ONJOB	ONJOB	onjo1240	Onjob	Dagan			False	2	*you	1215	THOU	ga	ga	g ɐ	false
+398	UMANAKAINA_GWOIDEN-2-1	UMANAKAINA_GWOIDEN	UMANAKAINA_GWOIDEN	uman1240	Umanakaina	Dagan			False	2	*you	1215	THOU	kau	kau	k ɐ u	false
+399	DAGA_2-9-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	9	all	98	ALL	iravi	iravi	i r ɐ v i	false
+400	DIMA-9-1	DIMA	DIMA	dima1252	Dima	Dagan			False	9	all	98	ALL	minagadai	minagadai	m i n ɐ g ɐ d ɐ i	false
+401	MAIWA_2-9-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	9	all	98	ALL	undakh~	undakh~	u n d ɐ kʰ	false
+402	DAGA_2-83-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	83	ash	646	ASH	atagin	atagin	ɐ t ɐ g i n	false
+403	DIMA-83-1	DIMA	DIMA	dima1252	Dima	Dagan			False	83	ash	646	ASH	popou	popou	p o p o u	false
+404	MAIWA_2-83-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	83	ash	646	ASH	ath~agin	ath~agin	ɐ tʰ ɐ g i n	false
+405	MAIWA_3-83-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	83	ash	646	ASH	yomomusiwa	yomomusiwa	j o m o m u s i w ɐ	false
+406	DAGA_2-27-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	27	bark	1204	BARK	oma Epiwa	oma Epiwa	o m ɐ a p i w ɐ	false
+407	DIMA-27-1	DIMA	DIMA	dima1252	Dima	Dagan			False	27	bark	1204	BARK	ira etopi	ira etopi	i r ɐ e t o p i	false
+408	MAIWA_2-27-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	27	bark	1204	BARK	kw~aph~iwa	kw~aph~iwa	kʷ ɐ pʰ i w ɐ	false
+409	DAGA_2-49-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	49	belly	1251	BELLY	bagua	bagua	b ɐ g u ɐ	false
+410	DIMA-49-1	DIMA	DIMA	dima1252	Dima	Dagan			False	49	belly	1251	BELLY	baguna	baguna	b ɐ g u n ɐ	false
+411	MAIWA_2-49-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	49	belly	1251	BELLY	dananwa	dananwa	d ɐ n ɐ n w ɐ	false
+412	MAIWA_3-49-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	49	belly	1251	BELLY	danawa	danawa	d ɐ n ɐ w ɐ	false
+413	DAGA_2-13-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	13	big	1202	BIG	arita	arita	ɐ r i t ɐ	false
+414	DIMA-13-1	DIMA	DIMA	dima1252	Dima	Dagan			False	13	big	1202	BIG	ratebi	ratebi	r ɐ t e b i	false
+415	MAIWA_2-13-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	13	big	1202	BIG	kh~okh~a	kh~okh~a	kʰ o kʰ ɐ	false
+416	MAIWA_3-13-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	13	big	1202	BIG	koka	koka	k o k ɐ	false
+417	DAGA_2-20-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	20	bird	937	BIRD	nEnip	nEnip	n a n i p	false
+418	DIMA-20-1	DIMA	DIMA	dima1252	Dima	Dagan			False	20	bird	937	BIRD	midiwari	midiwari	m i d i w ɐ r i	false
+419	MAIWA_2-20-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	20	bird	937	BIRD	vekh~Eth~u	vekh~Eth~u	v e kʰ a tʰ u	false
+420	MAIWA_3-20-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	20	bird	937	BIRD	nenip	nenip	n e n i p	false
+421	DAGA_2-56-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	56	bite	1403	BITE	ariwan	ariwan	ɐ r i w ɐ n	false
+422	DIMA-56-1	DIMA	DIMA	dima1252	Dima	Dagan			False	56	bite	1403	BITE	tarapi	tarapi	t ɐ r ɐ p i	false
+423	MAIWA_2-56-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	56	bite	1403	BITE	adne	adne	ɐ d n e	false
+424	MAIWA_3-56-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	56	bite	1403	BITE	at ne	at ne	ɐ t n e	false
+425	DAGA_2-91-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	91	black	163	BLACK	pumpuni	pumpuni	p u m p u n i	false
+426	DIMA-91-1	DIMA	DIMA	dima1252	Dima	Dagan			False	91	black	163	BLACK	punubi	punubi	p u n u b i	false
+427	MAIWA_2-91-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	91	black	163	BLACK	ph~umph~une	ph~umph~une	pʰ u m pʰ u n e	false
+428	DAGA_2-45-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	45	claw	72	CLAW	naniwa	naniwa	n ɐ n i w ɐ	false
+429	DIMA-45-1	DIMA	DIMA	dima1252	Dima	Dagan			False	45	claw	72	CLAW	wabi	wabi	w ɐ b i	false
+430	MAIWA_2-45-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	45	claw	72	CLAW	amawa	amawa	ɐ m ɐ w ɐ	false
+431	DAGA_2-80-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	80	cloud	1489	CLOUD	irikup	irikup	i r i k u p	false
+432	DIMA-80-1	DIMA	DIMA	dima1252	Dima	Dagan			False	80	cloud	1489	CLOUD	guba	guba	g u b ɐ	false
+433	MAIWA_2-80-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	80	cloud	1489	CLOUD	gw~aweru	gw~aweru	gʷ ɐ w e r u	false
+434	MAIWA_3-80-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	80	cloud	1489	CLOUD	goaveru	goaveru	g o ɐ v e r u	false
+435	DAGA_2-94-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	94	cold	1287	COLD	irot	irot	i r o t	false
+436	DIMA-94-1	DIMA	DIMA	dima1252	Dima	Dagan			False	94	cold	1287	COLD	nuturu	nuturu	n u t u r u	false
+437	MAIWA_2-94-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	94	cold	1287	COLD	yuth~one	yuth~one	j u tʰ o n e	false
+438	DAGA_2-99-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	99	dry	1398	DRY	darakaen	darakaen	d ɐ r ɐ k ɐ e n	false
+439	DIMA-99-1	DIMA	DIMA	dima1252	Dima	Dagan			False	99	dry	1398	DRY	kaobi	kaobi	k ɐ o b i	false
+440	MAIWA_2-99-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	99	dry	1398	DRY	kh~arawane	kh~arawane	kʰ ɐ r ɐ w ɐ n e	false
+441	DAGA_2-79-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	79	earth	1228	EARTH (SOIL)	piup	piup	p i u p	false
+442	DIMA-79-1	DIMA	DIMA	dima1252	Dima	Dagan			False	79	earth	1228	EARTH (SOIL)	pe	pe	p e	false
+443	MAIWA_2-79-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	79	earth	1228	EARTH (SOIL)	ph~iu	ph~iu	pʰ i u	false
+444	DAGA_2-55-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	55	eat	1336	EAT	naiwan	naiwan	n ɐ i w ɐ n	false
+445	DIMA-55-1	DIMA	DIMA	dima1252	Dima	Dagan			False	55	eat	1336	EAT	na	na	n ɐ	false
+446	MAIWA_2-55-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	55	eat	1336	EAT	mE nane	mE nane	m a n ɐ n e	false
+447	MAIWA_3-55-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	55	eat	1336	EAT	naiwi	naiwi	n ɐ i w i	false
+448	DAGA_2-33-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	33	egg	744	EGG	bagua	bagua	b ɐ g u ɐ	false
+449	DIMA-33-1	DIMA	DIMA	dima1252	Dima	Dagan			False	33	egg	744	EGG	dodopi	dodopi	d o d o p i	false
+450	MAIWA_2-33-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	33	egg	744	EGG	bagiwa	bagiwa	b ɐ g i w ɐ	false
+451	MAIWA_3-33-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	33	egg	744	EGG	gat toda	gat toda	g ɐ t t o d ɐ	false
+452	MAIWA_3-33-2	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	33	egg	744	EGG	kokorek bagiwa	kokorek bagiwa	k o k o r e k b ɐ g i w ɐ	false
+453	DAGA_2-36-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	36	feather	1201	FEATHER	gumewa	gumewa	g u m e w ɐ	false
+454	DIMA-36-1	DIMA	DIMA	dima1252	Dima	Dagan			False	36	feather	1201	FEATHER	yaru	yaru	j ɐ r u	false
+455	MAIWA_2-36-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	36	feather	1201	FEATHER	gummawa	gummawa	g u m m ɐ w ɐ	false
+456	DAGA_2-29-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	29	flesh	2259	FLESH	man	man	m ɐ n	false
+457	DIMA-29-1	DIMA	DIMA	dima1252	Dima	Dagan			False	29	flesh	2259	FLESH	taripi	taripi	t ɐ r i p i	false
+458	MAIWA_2-29-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	29	flesh	2259	FLESH	yaoba	yaoba	j ɐ o b ɐ	false
+459	MAIWA_3-29-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	29	flesh	2259	FLESH	mai	mai	m ɐ i	false
+460	DAGA_2-64-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	64	fly	1441	FLY (MOVE THROUGH AIR)	aewan	aewan	ɐ e w ɐ n	false
+461	DIMA-64-1	DIMA	DIMA	dima1252	Dima	Dagan			False	64	fly	1441	FLY (MOVE THROUGH AIR)	roboidi	roboidi	r o b o i d i	false
+462	MAIWA_2-64-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	64	fly	1441	FLY (MOVE THROUGH AIR)	me veregaine	me veregaine	m e v e r e g ɐ i n e	false
+463	DAGA_2-46-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	46	foot	1301	FOOT	pusiwa	pusiwa	p u s i w ɐ	false
+464	DIMA-46-1	DIMA	DIMA	dima1252	Dima	Dagan			False	46	foot	1301	FOOT	wana	wana	w ɐ n ɐ	false
+465	MAIWA_2-46-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	46	foot	1301	FOOT	amawa	amawa	ɐ m ɐ w ɐ	false
+466	MAIWA_3-46-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	46	foot	1301	FOOT	ama guriwa	ama guriwa	ɐ m ɐ g u r i w ɐ	false
+467	DAGA_2-70-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	70	give	1447	GIVE	nEniwan	nEniwan	n a n i w ɐ n	false
+468	DIMA-70-1	DIMA	DIMA	dima1252	Dima	Dagan			False	70	give	1447	GIVE	wanaga	wanaga	w ɐ n ɐ g ɐ	false
+469	MAIWA_2-70-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	70	give	1447	GIVE	mE nEgne	mE nEgne	m a n a g n e	false
+470	MAIWA_3-70-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	70	give	1447	GIVE	nega	nega	n e g ɐ	false
+471	DAGA_2-97-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	97	good	1035	GOOD	kakae	kakae	k ɐ k ɐ e	false
+472	DIMA-97-1	DIMA	DIMA	dima1252	Dima	Dagan			False	97	good	1035	GOOD	yamaibi	yamaibi	j ɐ m ɐ i b i	false
+473	MAIWA_2-97-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	97	good	1035	GOOD	oraemina	oraemina	o r ɐ e m i n ɐ	false
+474	DAGA_2-32-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	monewa	monewa	m o n e w ɐ	false
+475	DIMA-32-1	DIMA	DIMA	dima1252	Dima	Dagan			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	mone	mone	m o n e	false
+476	MAIWA_2-32-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	kh~atnawa	kh~atnawa	kʰ ɐ t n ɐ w ɐ	false
+477	MAIWA_3-32-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	katnawa	katnawa	k ɐ t n ɐ w ɐ	false
+478	DAGA_2-88-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	88	green	1425	GREEN	pumpuni	pumpuni	p u m p u n i	false
+479	DIMA-88-1	DIMA	DIMA	dima1252	Dima	Dagan			False	88	green	1425	GREEN	kasikasigebi	kasikasigebi	k ɐ s i k ɐ s i g e b i	false
+480	MAIWA_2-88-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	88	green	1425	GREEN	kh~ani	kh~ani	kʰ ɐ n i	false
+481	DAGA_2-37-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	37	hair	1040	HAIR	igumewa	igumewa	i g u m e w ɐ	false
+482	DIMA-37-1	DIMA	DIMA	dima1252	Dima	Dagan			False	37	hair	1040	HAIR	deba	deba	d e b ɐ	false
+483	MAIWA_2-37-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	37	hair	1040	HAIR	gumawa	gumawa	g u m ɐ w ɐ	false
+484	MAIWA_3-37-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	37	hair	1040	HAIR	huiawa	huiawa	h u i ɐ w ɐ	false
+485	DAGA_2-38-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	38	head	1256	HEAD	iwa	iwa	i w ɐ	false
+486	DIMA-38-1	DIMA	DIMA	dima1252	Dima	Dagan			False	38	head	1256	HEAD	una	una	u n ɐ	false
+487	MAIWA_2-38-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	38	head	1256	HEAD	kw~iunwa	kw~iunwa	kʷ i u n w ɐ	false
+488	MAIWA_3-38-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	38	head	1256	HEAD	kuiyunwa	kuiyunwa	k u i j u n w ɐ	false
+489	DAGA_2-52-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	52	heart	1223	HEART	bumagewa	bumagewa	b u m ɐ g e w ɐ	false
+490	DIMA-52-1	DIMA	DIMA	dima1252	Dima	Dagan			False	52	heart	1223	HEART	budimaga	budimaga	b u d i m ɐ g ɐ	false
+491	MAIWA_2-52-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	52	heart	1223	HEART	nonEn magawa	nonEn magawa	n o n a n m ɐ g ɐ w ɐ	false
+492	DAGA_2-62-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	62	kill	1417	KILL	toiwan	toiwan	t o i w ɐ n	false
+493	DIMA-62-1	DIMA	DIMA	dima1252	Dima	Dagan			False	62	kill	1417	KILL	raibunua	raibunua	r ɐ i b u n u ɐ	false
+494	MAIWA_2-62-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	62	kill	1417	KILL	me th~one	me th~one	m e tʰ o n e	false
+495	DAGA_2-59-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	59	know	3626	KNOW	anuiwan	anuiwan	ɐ n u i w ɐ n	false
+496	DIMA-59-1	DIMA	DIMA	dima1252	Dima	Dagan			False	59	know	3626	KNOW	asini	asini	ɐ s i n i	false
+497	MAIWA_2-59-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	59	know	3626	KNOW	me 3anone	me 3anone	m e ə ɐ n o n e	false
+498	DAGA_2-67-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	67	lie	1411	LIE (REST)	aup iniwan	aup iniwan	ɐ u p i n i w ɐ n	false
+499	DIMA-67-1	DIMA	DIMA	dima1252	Dima	Dagan			False	67	lie	1411	LIE (REST)	ina	ina	i n ɐ	false
+500	MAIWA_2-67-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	67	lie	1411	LIE (REST)	nevitna	nevitna	n e v i t n ɐ	false
+501	MAIWA_3-67-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	67	lie	1411	LIE (REST)	kubina	kubina	k u b i n ɐ	false
+502	DAGA_2-14-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	14	long	1203	LONG	nonoNa	nonoNa	n o n o ŋ ɐ	false
+503	DIMA-14-1	DIMA	DIMA	dima1252	Dima	Dagan			False	14	long	1203	LONG	eroaroaebi	eroaroaebi	e r o ɐ r o ɐ e b i	false
+504	MAIWA_2-14-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	14	long	1203	LONG	yobu	yobu	j o b u	false
+505	DAGA_2-17-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	17	man	1554	MAN	apan	apan	ɐ p ɐ n	false
+506	DIMA-17-1	DIMA	DIMA	dima1252	Dima	Dagan			False	17	man	1554	MAN	apana	apana	ɐ p ɐ n ɐ	false
+507	MAIWA_3-17-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	17	man	1554	MAN	apan	apan	ɐ p ɐ n	false
+508	DAGA_2-10-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	10	many	1198	MANY	aruga	aruga	ɐ r u g ɐ	false
+509	DIMA-10-1	DIMA	DIMA	dima1252	Dima	Dagan			False	10	many	1198	MANY	utumabu	utumabu	u t u m ɐ b u	false
+510	MAIWA_2-10-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	10	many	1198	MANY	kh~araph~oth~	kh~araph~oth~	kʰ ɐ r ɐ pʰ o tʰ	false
+511	DAGA_2-73-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	73	moon	1313	MOON	siragam	siragam	s i r ɐ g ɐ m	false
+512	DIMA-73-1	DIMA	DIMA	dima1252	Dima	Dagan			False	73	moon	1313	MOON	dede	dede	d e d e	false
+513	MAIWA_2-73-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	73	moon	1313	MOON	duth~	duth~	d u tʰ	false
+514	MAIWA_3-73-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	73	moon	1313	MOON	dut	dut	d u t	false
+515	DAGA_2-42-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	42	mouth	674	MOUTH	noa	noa	n o ɐ	false
+516	DIMA-42-1	DIMA	DIMA	dima1252	Dima	Dagan			False	42	mouth	674	MOUTH	noana	noana	n o ɐ n ɐ	false
+517	MAIWA_2-42-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	42	mouth	674	MOUTH	nonwa	nonwa	n o n w ɐ	false
+518	MAIWA_3-42-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	42	mouth	674	MOUTH	noiwa	noiwa	n o i w ɐ	false
+519	DAGA_2-50-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	50	neck	1333	NECK	mEgewa	mEgewa	m a g e w ɐ	false
+520	DIMA-50-1	DIMA	DIMA	dima1252	Dima	Dagan			False	50	neck	1333	NECK	mogama	mogama	m o g ɐ m ɐ	false
+521	MAIWA_2-50-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	50	neck	1333	NECK	meyanwa	meyanwa	m e j ɐ n w ɐ	false
+522	MAIWA_3-50-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	50	neck	1333	NECK	meiawa	meiawa	m e i ɐ w ɐ	false
+523	DAGA_2-8-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	8	not	1240	NOT	ya	ya	j ɐ	false
+524	DIMA-8-1	DIMA	DIMA	dima1252	Dima	Dagan			False	8	not	1240	NOT	iboi dai	iboi dai	i b o i d ɐ i	false
+525	MAIWA_2-8-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	8	not	1240	NOT	onan	onan	o n ɐ n	false
+526	DAGA_2-76-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	76	rain	2108	RAINING OR RAIN	ugin	ugin	u g i n	false
+527	DIMA-76-1	DIMA	DIMA	dima1252	Dima	Dagan			False	76	rain	2108	RAINING OR RAIN	uana	uana	u ɐ n ɐ	false
+528	MAIWA_2-76-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	76	rain	2108	RAINING OR RAIN	uin	uin	u i n	false
+529	MAIWA_3-76-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	76	rain	2108	RAINING OR RAIN	uwin	uwin	u w i n	false
+530	DAGA_2-87-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	87	red	156	RED	dEndEni	dEndEni	d a n d a n i	false
+531	DIMA-87-1	DIMA	DIMA	dima1252	Dima	Dagan			False	87	red	156	RED	derepi	derepi	d e r e p i	false
+532	MAIWA_2-87-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	87	red	156	RED	diyaph~am	diyaph~am	d i j ɐ pʰ ɐ m	false
+533	DAGA_2-26-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	26	root	670	ROOT	visiwa	visiwa	v i s i w ɐ	false
+534	DIMA-26-1	DIMA	DIMA	dima1252	Dima	Dagan			False	26	root	670	ROOT	wipi	wipi	w i p i	false
+535	MAIWA_2-26-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	26	root	670	ROOT	taiwa	taiwa	t ɐ i w ɐ	false
+536	MAIWA_3-26-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	26	root	670	ROOT	gueeaNkuataxen	gueeaNkuataxen	g u e e ɐ ŋ k u ɐ t ɐ x e n	false
+537	DAGA_2-98-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	98	round	1395	ROUND	ikukuk	ikukuk	i k u k u k	false
+538	DIMA-98-1	DIMA	DIMA	dima1252	Dima	Dagan			False	98	round	1395	ROUND	sipopobi	sipopobi	s i p o p o b i	false
+539	MAIWA_2-98-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	98	round	1395	ROUND	bubagu	bubagu	b u b ɐ g u	false
+540	DAGA_2-78-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	78	sand	671	SAND	gErat	gErat	g a r ɐ t	false
+541	DIMA-78-1	DIMA	DIMA	dima1252	Dima	Dagan			False	78	sand	671	SAND	neana	neana	n e ɐ n ɐ	false
+542	DIMA-78-2	DIMA	DIMA	dima1252	Dima	Dagan			False	78	sand	671	SAND	neara	neara	n e ɐ r ɐ	false
+543	MAIWA_2-78-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	78	sand	671	SAND	nuge	nuge	n u g e	false
+544	DAGA_2-71-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	71	say	1458	SAY	waiwan	waiwan	w ɐ i w ɐ n	false
+545	DIMA-71-1	DIMA	DIMA	dima1252	Dima	Dagan			False	71	say	1458	SAY	ana anaidi	ana anaidi	ɐ n ɐ ɐ n ɐ i d i	false
+546	MAIWA_2-71-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	71	say	1458	SAY	me wane	me wane	m e w ɐ n e	false
+547	DAGA_2-24-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	24	seed	714	SEED	makewa	makewa	m ɐ k e w ɐ	false
+548	DIMA-24-1	DIMA	DIMA	dima1252	Dima	Dagan			False	24	seed	714	SEED	eraibi	eraibi	e r ɐ i b i	false
+549	MAIWA_2-24-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	24	seed	714	SEED	yawa	yawa	j ɐ w ɐ	false
+550	DAGA_2-68-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	68	sit	1416	SIT	wandia	wandia	w ɐ n d i ɐ	false
+551	DIMA-68-1	DIMA	DIMA	dima1252	Dima	Dagan			False	68	sit	1416	SIT	miauturata	miauturata	m i ɐ u t u r ɐ t ɐ	false
+552	MAIWA_2-68-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	68	sit	1416	SIT	wainegni	wainegni	w ɐ i n e g n i	false
+553	MAIWA_3-68-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	68	sit	1416	SIT	wakea	wakea	w ɐ k e ɐ	false
+554	DAGA_2-60-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	60	sleep	1585	SLEEP	aup iniwan	aup iniwan	ɐ u p i n i w ɐ n	false
+555	DIMA-60-1	DIMA	DIMA	dima1252	Dima	Dagan			False	60	sleep	1585	SLEEP	inadi	inadi	i n ɐ d i	false
+556	MAIWA_2-60-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	60	sleep	1585	SLEEP	me vinne	me vinne	m e v i n n e	false
+557	DAGA_2-15-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	15	small	1246	SMALL	otukoentu	otukoentu	o t u k o e n t u	false
+558	DIMA-15-1	DIMA	DIMA	dima1252	Dima	Dagan			False	15	small	1246	SMALL	susikidi	susikidi	s u s i k i d i	false
+559	MAIWA_2-15-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	15	small	1246	SMALL	kh~ith~u	kh~ith~u	kʰ i tʰ u	false
+560	MAIWA_3-15-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	15	small	1246	SMALL	kusi	kusi	k u s i	false
+561	DAGA_2-81-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	81	smoke	778	SMOKE (EXHAUST)	dagin	dagin	d ɐ g i n	false
+562	DIMA-81-1	DIMA	DIMA	dima1252	Dima	Dagan			False	81	smoke	778	SMOKE (EXHAUST)	au	au	ɐ u	false
+563	MAIWA_2-81-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	81	smoke	778	SMOKE (EXHAUST)	dagin	dagin	d ɐ g i n	false
+564	MAIWA_3-81-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	81	smoke	778	SMOKE (EXHAUST)	dagin	dagin	d ɐ g i n	false
+565	DAGA_2-69-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	69	stand	1442	STAND	yoniwan	yoniwan	j o n i w ɐ n	false
+566	DIMA-69-1	DIMA	DIMA	dima1252	Dima	Dagan			False	69	stand	1442	STAND	rora	rora	r o r ɐ	false
+567	MAIWA_2-69-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	69	stand	1442	STAND	yoene	yoene	j o e n e	false
+568	MAIWA_3-69-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	69	stand	1442	STAND	wanyoya	wanyoya	w ɐ n j o j ɐ	false
+569	DAGA_2-63-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	63	swim	1439	SWIM	dEre taiwan	dEre taiwan	d a r e t ɐ i w ɐ n	false
+570	DAGA_2-63-2	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	63	swim	1439	SWIM	dEroe taiwan	dEroe taiwan	d a r o e t ɐ i w ɐ n	false
+571	DIMA-63-1	DIMA	DIMA	dima1252	Dima	Dagan			False	63	swim	1439	SWIM	ereredi	ereredi	e r e r e d i	false
+572	MAIWA_2-63-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	63	swim	1439	SWIM	me yoine	me yoine	m e j o i n e	false
+573	DAGA_2-35-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	35	tail	1220	TAIL	vEriwa	vEriwa	v a r i w ɐ	false
+574	DIMA-35-1	DIMA	DIMA	dima1252	Dima	Dagan			False	35	tail	1220	TAIL	wedipi	wedipi	w e d i p i	false
+575	MAIWA_2-35-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	35	tail	1220	TAIL	viriwa	viriwa	v i r i w ɐ	false
+576	DAGA_2-5-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	5	that	78	THAT	ame	ame	ɐ m e	false
+577	DIMA-5-1	DIMA	DIMA	dima1252	Dima	Dagan			False	5	that	78	THAT	ia	ia	i ɐ	false
+578	MAIWA_2-5-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	5	that	78	THAT	asime	asime	ɐ s i m e	false
+579	DAGA_2-4-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	4	this	1214	THIS	ma	ma	m ɐ	false
+580	DIMA-4-1	DIMA	DIMA	dima1252	Dima	Dagan			False	4	this	1214	THIS	ma	ma	m ɐ	false
+581	MAIWA_2-4-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	4	this	1214	THIS	mame	mame	m ɐ m e	false
+582	DAGA_2-65-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	65	walk	1443	WALK	aewan	aewan	ɐ e w ɐ n	false
+583	DIMA-65-1	DIMA	DIMA	dima1252	Dima	Dagan			False	65	walk	1443	WALK	pepewaidi	pepewaidi	p e p e w ɐ i d i	false
+584	MAIWA_2-65-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	65	walk	1443	WALK	mE aine	mE aine	m a ɐ i n e	false
+585	MAIWA_3-65-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	65	walk	1443	WALK	aga	aga	ɐ g ɐ	false
+586	DAGA_2-7-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	7	what	1236	WHAT	dim	dim	d i m	false
+587	DIMA-7-1	DIMA	DIMA	dima1252	Dima	Dagan			False	7	what	1236	WHAT	dima	dima	d i m ɐ	false
+588	MAIWA_2-7-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	7	what	1236	WHAT	dimbae	dimbae	d i m b ɐ e	false
+589	DAGA_2-90-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	90	white	1335	WHITE	pomponu	pomponu	p o m p o n u	false
+590	DIMA-90-1	DIMA	DIMA	dima1252	Dima	Dagan			False	90	white	1335	WHITE	poibi	poibi	p o i b i	false
+591	MAIWA_2-90-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	90	white	1335	WHITE	ph~uph~uyu	ph~uph~uyu	pʰ u pʰ u j u	false
+592	DAGA_2-6-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	6	who	1235	WHO	da	da	d ɐ	false
+593	DIMA-6-1	DIMA	DIMA	dima1252	Dima	Dagan			False	6	who	1235	WHO	ida	ida	i d ɐ	false
+594	MAIWA_2-6-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	6	who	1235	WHO	bira	bira	b i r ɐ	false
+595	DAGA_2-16-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	16	woman	962	WOMAN	oaen	oaen	o ɐ e n	false
+596	DIMA-16-1	DIMA	DIMA	dima1252	Dima	Dagan			False	16	woman	962	WOMAN	wawina	wawina	w ɐ w i n ɐ	false
+597	MAIWA_2-16-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	16	woman	962	WOMAN	vesin	vesin	v e s i n	false
+598	MAIWA_3-16-1	MAIWA_3	MAIWA_3	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	16	woman	962	WOMAN	wEsin	wEsin	w a s i n	false
+599	DAGA_2-89-1	DAGA_2	DAGA_2	daga1275	Daga	Dagan			False	89	yellow	1424	YELLOW	yananagaet	yananagaet	j ɐ n ɐ n ɐ g ɐ e t	false
+600	DIMA-89-1	DIMA	DIMA	dima1252	Dima	Dagan			False	89	yellow	1424	YELLOW	yanopi	yanopi	j ɐ n o p i	false
+601	MAIWA_2-89-1	MAIWA_2	MAIWA_2	maiw1251	Maiwa (Papua New Guinea)	Dagan			False	89	yellow	1424	YELLOW	yaneph~am	yaneph~am	j ɐ n e pʰ ɐ m	false

@@ -20,6 +20,7 @@ def main():
     # Grab all files and process one by one
     datafiles = glob.glob(str(BASE_PATH / "data" / "*.tsv"))
     datafiles = [filename for filename in datafiles if "FULL_DATA" not in filename]
+    datafiles = [filename for filename in datafiles if "gled." not in filename]
     for datafile in sorted(datafiles):
         base_name = datafile.split("/")[-1][:-4]
         logging.info("Clustering file `%s`...", base_name)

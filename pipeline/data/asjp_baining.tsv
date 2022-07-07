@@ -1,91 +1,546 @@
 ID	ASJP_ID	DOCULECT	LANGUAGE_NAME	GLOTTOCODE	GLOTTOLOG_NAME	LANGUAGE_LINEAGE_0	LANGUAGE_LINEAGE_1	LANGUAGE_LINEAGE_2	LANGUAGE_ISOLATE	PARAMETER_ID	CONCEPT	CONCEPTICON_ID	CONCEPTICON_GLOSS	VALUE	FORM	TOKENS	LOAN
 1	MALI-1-1	MALI	MALI	mali1284	Mali	Baining			False	1	*I	1209	I	Ngo	Ngo	ŋ g o	false
-2	QAQET-1-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	1	*I	1209	I	Nu	Nu	ŋ u	false
-3	URA_PNG-1-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	1	*I	1209	I	Nwa	Nwa	ŋ w ɐ	false
-4	MALI-30-1	MALI	MALI	mali1284	Mali	Baining			False	30	*blood	946	BLOOD	mbias	mbias	m b i ɐ s	false
-5	QAQET-30-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	30	*blood	946	BLOOD	mb~ias	mb~ias	ⁿb i ɐ s	false
-6	QAQET-30-2	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	30	*blood	946	BLOOD	mb~iEs	mb~iEs	ⁿb i a s	false
-7	URA_PNG-30-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	30	*blood	946	BLOOD	biaska	biaska	b i ɐ s k ɐ	false
-8	MALI-31-1	MALI	MALI	mali1284	Mali	Baining			False	31	*bone	1394	BONE	slepki	slepki	s l e p k i	false
-9	QAQET-31-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	31	*bone	1394	BONE	langi	langi	l ɐ n g i	false
-10	URA_PNG-31-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	31	*bone	1394	BONE	sl3pki	sl3pki	s l ə p k i	false
-11	MALI-51-1	MALI	MALI	mali1284	Mali	Baining			False	51	*breasts	1402	BREAST	Cemeka	Cemeka	tʃ e m e k ɐ	false
-12	MALI-66-1	MALI	MALI	mali1284	Mali	Baining			False	66	*come	1446	COME	den	den	d e n	false
-13	QAQET-66-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	66	*come	1446	COME	nd~3n	nd~3n	ⁿd ə n	false
-14	URA_PNG-66-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	66	*come	1446	COME	5aN	5aN	ɲ ɐ ŋ	false
-15	MALI-61-1	MALI	MALI	mali1284	Mali	Baining			False	61	*die	1494	DIE	iNip	iNip	i ŋ i p	false
-16	QAQET-61-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	61	*die	1494	DIE	Nip	Nip	ŋ i p	false
-17	QAQET-61-2	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	61	*die	1494	DIE	5ip	5ip	ɲ i p	false
-18	MALI-21-1	MALI	MALI	mali1284	Mali	Baining			False	21	*dog	2009	DOG	paimka	paimka	p ɐ i m k ɐ	false
-19	QAQET-21-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	21	*dog	2009	DOG	nd~aNga	nd~aNga	ⁿd ɐ ŋ g ɐ	false
-20	MALI-54-1	MALI	MALI	mali1284	Mali	Baining			False	54	*drink	1401	DRINK	tnaik	tnaik	t n ɐ i k	false
-21	QAQET-54-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	54	*drink	1401	DRINK	sup	sup	s u p	false
-22	MALI-39-1	MALI	MALI	mali1284	Mali	Baining			False	39	*ear	1247	EAR	asdemga	asdemga	ɐ s d e m g ɐ	false
-23	QAQET-39-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	39	*ear	1247	EAR	asnd~3mgi	asnd~3mgi	ɐ s ⁿd ə m g i	false
-24	URA_PNG-39-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	39	*ear	1247	EAR	sd3mgi	sd3mgi	s d ə m g i	false
-25	MALI-40-1	MALI	MALI	mali1284	Mali	Baining			False	40	*eye	1248	EYE	saCoN	saCoN	s ɐ tʃ o ŋ	false
-26	QAQET-40-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	40	*eye	1248	EYE	sakNaga	sakNaga	s ɐ k ŋ ɐ g ɐ	false
-27	URA_PNG-40-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	40	*eye	1248	EYE	saxoN	saxoN	s ɐ x o ŋ	false
-28	MALI-82-1	MALI	MALI	mali1284	Mali	Baining			False	82	*fire	221	FIRE	mundem	mundem	m u n d e m	false
-29	QAQET-82-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	82	*fire	221	FIRE	altiNgi	altiNgi	ɐ l t i ŋ g i	false
-30	QAQET-82-2	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	82	*fire	221	FIRE	EltiNgi	EltiNgi	a l t i ŋ g i	false
-31	URA_PNG-82-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	82	*fire	221	FIRE	mud3mgi	mud3mgi	m u d ə m g i	false
-32	MALI-19-1	MALI	MALI	mali1284	Mali	Baining			False	19	*fish	227	FISH	ath~inemka	ath~inemka	ɐ tʰ i n e m k ɐ	false
-33	URA_PNG-19-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	19	*fish	227	FISH	rin3mga	rin3mga	r i n ə m g ɐ	false
-34	MALI-95-1	MALI	MALI	mali1284	Mali	Baining			False	95	*full	1429	FULL	teCep	teCep	t e tʃ e p	false
-35	URA_PNG-95-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	95	*full	1429	FULL	r3x3pki	r3x3pki	r ə x ə p k i	false
-36	MALI-48-1	MALI	MALI	mali1284	Mali	Baining			False	48	*hand	1277	HAND	aNgetiki	aNgetiki	ɐ ŋ g e t i k i	false
-37	URA_PNG-48-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	48	*hand	1277	HAND	r3yet	r3yet	r ə j e t	false
-38	MALI-58-1	MALI	MALI	mali1284	Mali	Baining			False	58	*hear	1408	HEAR	nari	nari	n ɐ r i	false
-39	MALI-47-1	MALI	MALI	mali1284	Mali	Baining			False	47	*knee	1371	KNEE	Cumki	Cumki	tʃ u m k i	false
-40	URA_PNG-47-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	47	*knee	1371	KNEE	xum	xum	x u m	false
-41	MALI-25-1	MALI	MALI	mali1284	Mali	Baining			False	25	*leaf	628	LEAF	teleNves	teleNves	t e l e ŋ v e s	false
-42	QAQET-25-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	25	*leaf	628	LEAF	m3ran	m3ran	m ə r ɐ n	false
-43	MALI-53-1	MALI	MALI	mali1284	Mali	Baining			False	53	*liver	1224	LIVER	aniNilka	aniNilka	ɐ n i ŋ i l k ɐ	false
-44	URA_PNG-53-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	53	*liver	1224	LIVER	niTil3s	niTil3s	n i c i l ə s	false
-45	MALI-22-1	MALI	MALI	mali1284	Mali	Baining			False	22	*louse	1392	LOUSE	revereCiNgl	revereCiNgl	r e v e r e tʃ i ŋ g l	false
-46	URA_PNG-22-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	22	*louse	1392	LOUSE	irait	irait	i r ɐ i t	false
-47	MALI-86-1	MALI	MALI	mali1284	Mali	Baining			False	86	*mountain	639	MOUNTAIN	damki	damki	d ɐ m k i	false
-48	QAQET-86-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	86	*mountain	639	MOUNTAIN	nd~amga	nd~amga	ⁿd ɐ m g ɐ	false
-49	URA_PNG-86-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	86	*mountain	639	MOUNTAIN	damgi	damgi	d ɐ m g i	false
-50	MALI-100-1	MALI	MALI	mali1284	Mali	Baining			False	100	*name	1405	NAME	aNgerepki	aNgerepki	ɐ ŋ g e r e p k i	false
-51	MALI-96-1	MALI	MALI	mali1284	Mali	Baining			False	96	*new	1231	NEW	aiCeru	aiCeru	ɐ i tʃ e r u	false
-52	URA_PNG-96-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	96	*new	1231	NEW	iarxa	iarxa	i ɐ r x ɐ	false
-53	MALI-92-1	MALI	MALI	mali1284	Mali	Baining			False	92	*night	1233	NIGHT	baNgaNgi	baNgaNgi	b ɐ ŋ g ɐ ŋ g i	false
-54	URA_PNG-92-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	92	*night	1233	NIGHT	b3NaNit	b3NaNit	b ə ŋ ɐ ŋ i t	false
-55	MALI-41-1	MALI	MALI	mali1284	Mali	Baining			False	41	*nose	1221	NOSE	Culimgi	Culimgi	tʃ u l i m g i	false
-56	URA_PNG-41-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	41	*nose	1221	NOSE	xulimgi	xulimgi	x u l i m g i	false
-57	MALI-11-1	MALI	MALI	mali1284	Mali	Baining			False	11	*one	1493	ONE	asegeni	asegeni	ɐ s e g e n i	false
-58	URA_PNG-11-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	11	*one	1493	ONE	s3g3k	s3g3k	s ə g ə k	false
-59	MALI-85-1	MALI	MALI	mali1284	Mali	Baining			False	85	*path	2252	PATH	aisvet	aisvet	ɐ i s v e t	false
-60	QAQET-85-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	85	*path	2252	PATH	aiska	aiska	ɐ i s k ɐ	false
-61	URA_PNG-85-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	85	*path	2252	PATH	iska	iska	i s k ɐ	false
-62	MALI-18-1	MALI	MALI	mali1284	Mali	Baining			False	18	*person	683	PERSON	aru	aru	ɐ r u	false
-63	MALI-57-1	MALI	MALI	mali1284	Mali	Baining			False	57	*see	1409	SEE	lu	lu	l u	false
-64	QAQET-57-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	57	*see	1409	SEE	lu	lu	l u	false
-65	MALI-28-1	MALI	MALI	mali1284	Mali	Baining			False	28	*skin	763	SKIN	CendeNga	CendeNga	tʃ e n d e ŋ g ɐ	false
-66	QAQET-28-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	28	*skin	763	SKIN	gatnd~iNgi	gatnd~iNgi	g ɐ t ⁿd i ŋ g i	false
-67	MALI-74-1	MALI	MALI	mali1284	Mali	Baining			False	74	*star	1430	STAR	aliNka	aliNka	ɐ l i ŋ k ɐ	false
-68	QAQET-74-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	74	*star	1430	STAR	wEldaN	wEldaN	w a l d ɐ ŋ	false
-69	URA_PNG-74-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	74	*star	1430	STAR	xaiNit	xaiNit	x ɐ i ŋ i t	false
-70	MALI-77-1	MALI	MALI	mali1284	Mali	Baining			False	77	*stone	857	STONE	dulka	dulka	d u l k ɐ	false
-71	QAQET-77-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	77	*stone	857	STONE	nd~ulka	nd~ulka	ⁿd u l k ɐ	false
-72	URA_PNG-77-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	77	*stone	857	STONE	dui	dui	d u i	false
-73	MALI-72-1	MALI	MALI	mali1284	Mali	Baining			False	72	*sun	1343	SUN	CuneNka	CuneNka	tʃ u n e ŋ k ɐ	false
-74	MALI-44-1	MALI	MALI	mali1284	Mali	Baining			False	44	*tongue	1205	TONGUE	aCulbiNga	aCulbiNga	ɐ tʃ u l b i ŋ g ɐ	false
-75	URA_PNG-44-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	44	*tongue	1205	TONGUE	yoeb35ga	yoeb35ga	j o e b ə ɲ g ɐ	false
-76	MALI-43-1	MALI	MALI	mali1284	Mali	Baining			False	43	*tooth	1380	TOOTH	keNki	keNki	k e ŋ k i	false
-77	URA_PNG-43-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	43	*tooth	1380	TOOTH	xigi	xigi	x i g i	false
-78	MALI-23-1	MALI	MALI	mali1284	Mali	Baining			False	23	*tree	906	TREE	ameNki	ameNki	ɐ m e ŋ k i	false
-79	URA_PNG-23-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	23	*tree	906	TREE	N3muga	N3muga	ŋ ə m u g ɐ	false
-80	MALI-12-1	MALI	MALI	mali1284	Mali	Baining			False	12	*two	1498	TWO	aunbem	aunbem	ɐ u n b e m	false
-81	MALI-12-2	MALI	MALI	mali1284	Mali	Baining			False	12	*two	1498	TWO	aungium	aungium	ɐ u n g i u m	false
-82	URA_PNG-12-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	12	*two	1498	TWO	udiom	udiom	u d i o m	false
-83	MALI-75-1	MALI	MALI	mali1284	Mali	Baining			False	75	*water	948	WATER	areNgi	areNgi	ɐ r e ŋ g i	false
-84	QAQET-75-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	75	*water	948	WATER	kainayi	kainayi	k ɐ i n ɐ j i	false
-85	URA_PNG-75-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	75	*water	948	WATER	rigi	rigi	r i g i	false
-86	MALI-3-1	MALI	MALI	mali1284	Mali	Baining			False	3	*we	1212	WE	ut	ut	u t	false
-87	QAQET-3-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	3	*we	1212	WE	uret	uret	u r e t	false
-88	URA_PNG-3-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	3	*we	1212	WE	ut	ut	u t	false
-89	MALI-2-1	MALI	MALI	mali1284	Mali	Baining			False	2	*you	1215	THOU	Ngia	Ngia	ŋ g i ɐ	false
-90	QAQET-2-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	2	*you	1215	THOU	5i	5i	ɲ i	false
+2	QAGET-1-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	1	*I	1209	I	Nw~a	Nw~a	ŋʷ ɐ	false
+3	QAGET_2-1-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	1	*I	1209	I	Nu3	Nu3	ŋ u ə	false
+4	QAQET-1-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	1	*I	1209	I	Nu	Nu	ŋ u	false
+5	URA_PNG-1-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	1	*I	1209	I	Nwa	Nwa	ŋ w ɐ	false
+6	URA_PNG2-1-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	1	*I	1209	I	3iNo	3iNo	ə i ŋ o	false
+7	URA_PNG2_2-1-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	1	*I	1209	I	iNo	iNo	i ŋ o	false
+8	URA_PNG2_3-1-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	1	*I	1209	I	3iNE	3iNE	ə i ŋ a	false
+9	MALI-30-1	MALI	MALI	mali1284	Mali	Baining			False	30	*blood	946	BLOOD	mbias	mbias	m b i ɐ s	false
+10	QAGET-30-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	30	*blood	946	BLOOD	x3r3ka	x3r3ka	x ə r ə k ɐ	false
+11	QAGET_2-30-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	30	*blood	946	BLOOD	3x3r3k3	3x3r3k3	ə x ə r ə k ə	false
+12	QAQET-30-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	30	*blood	946	BLOOD	mb~ias	mb~ias	ⁿb i ɐ s	false
+13	QAQET-30-2	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	30	*blood	946	BLOOD	mb~iEs	mb~iEs	ⁿb i a s	false
+14	URA_PNG-30-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	30	*blood	946	BLOOD	biaska	biaska	b i ɐ s k ɐ	false
+15	URA_PNG2-30-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	30	*blood	946	BLOOD	bi3sk3	bi3sk3	b i ə s k ə	false
+16	URA_PNG2_2-30-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	30	*blood	946	BLOOD	a biaska	a biaska	ɐ b i ɐ s k ɐ	false
+17	URA_PNG2_3-30-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	30	*blood	946	BLOOD	bi3sk3	bi3sk3	b i ə s k ə	false
+18	MALI-31-1	MALI	MALI	mali1284	Mali	Baining			False	31	*bone	1394	BONE	slepki	slepki	s l e p k i	false
+19	QAGET-31-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	31	*bone	1394	BONE	lan	lan	l ɐ n	false
+20	QAGET_2-31-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	31	*bone	1394	BONE	sl3pki	sl3pki	s l ə p k i	false
+21	QAQET-31-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	31	*bone	1394	BONE	langi	langi	l ɐ n g i	false
+22	URA_PNG-31-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	31	*bone	1394	BONE	sl3pki	sl3pki	s l ə p k i	false
+23	URA_PNG2-31-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	31	*bone	1394	BONE	3 l3p	3 l3p	ə l ə p	false
+24	URA_PNG2_2-31-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	31	*bone	1394	BONE	o sl3pki	o sl3pki	o s l ə p k i	false
+25	URA_PNG2_3-31-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	31	*bone	1394	BONE	a l3p	a l3p	ɐ l ə p	false
+26	MALI-51-1	MALI	MALI	mali1284	Mali	Baining			False	51	*breasts	1402	BREAST	Cemeka	Cemeka	tʃ e m e k ɐ	false
+27	QAGET-51-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	51	*breasts	1402	BREAST	gom3k	gom3k	g o m ə k	false
+28	QAGET_2-51-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	51	*breasts	1402	BREAST	ox3m3k	ox3m3k	o x ə m ə k	false
+29	URA_PNG2-51-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	51	*breasts	1402	BREAST	at g3muk	at g3muk	ɐ t g ə m u k	false
+30	URA_PNG2_2-51-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	51	*breasts	1402	BREAST	atk3muk	atk3muk	ɐ t k ə m u k	false
+31	URA_PNG2_3-51-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	51	*breasts	1402	BREAST	at g3muk	at g3muk	ɐ t g ə m u k	false
+32	MALI-66-1	MALI	MALI	mali1284	Mali	Baining			False	66	*come	1446	COME	den	den	d e n	false
+33	QAGET-66-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	66	*come	1446	COME	katd3n	katd3n	k ɐ t d ə n	false
+34	QAGET_2-66-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	66	*come	1446	COME	lux3 k3t nd3n	lux3 k3t nd3n	l u x ə k ə t n d ə n	false
+35	QAQET-66-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	66	*come	1446	COME	nd~3n	nd~3n	ⁿd ə n	false
+36	URA_PNG-66-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	66	*come	1446	COME	5aN	5aN	ɲ ɐ ŋ	false
+37	URA_PNG2-66-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	66	*come	1446	COME	i3k n3muk	i3k n3muk	i ə k n ə m u k	false
+38	URA_PNG2_2-66-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	66	*come	1446	COME	xat d3n	xat d3n	x ɐ t d ə n	false
+39	URA_PNG2_3-66-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	66	*come	1446	COME	i3k n3muk	i3k n3muk	i ə k n ə m u k	false
+40	MALI-61-1	MALI	MALI	mali1284	Mali	Baining			False	61	*die	1494	DIE	iNip	iNip	i ŋ i p	false
+41	QAGET-61-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	61	*die	1494	DIE	ka nyip	ka nyip	k ɐ n j i p	false
+42	QAGET_2-61-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	61	*die	1494	DIE	k3n3ri k3p nyip	k3n3ri k3p nyip	k ə n ə r i k ə p n j i p	false
+43	QAQET-61-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	61	*die	1494	DIE	Nip	Nip	ŋ i p	false
+44	QAQET-61-2	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	61	*die	1494	DIE	5ip	5ip	ɲ i p	false
+45	URA_PNG2-61-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	61	*die	1494	DIE	n3ni3g3 b3 g3ny3p	n3ni3g3 b3 g3ny3p	n ə n i ə g ə b ə g ə n j ə p	false
+46	URA_PNG2_2-61-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	61	*die	1494	DIE	xat d3p	xat d3p	x ɐ t d ə p	false
+47	URA_PNG2_3-61-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	61	*die	1494	DIE	k3bENo	k3bENo	k ə b a ŋ o	false
+48	MALI-21-1	MALI	MALI	mali1284	Mali	Baining			False	21	*dog	2009	DOG	paimka	paimka	p ɐ i m k ɐ	false
+49	QAGET-21-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	21	*dog	2009	DOG	daNka	daNka	d ɐ ŋ k ɐ	false
+50	QAGET_2-21-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	21	*dog	2009	DOG	d3Ng3	d3Ng3	d ə ŋ g ə	false
+51	QAQET-21-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	21	*dog	2009	DOG	nd~aNga	nd~aNga	ⁿd ɐ ŋ g ɐ	false
+52	URA_PNG2-21-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	21	*dog	2009	DOG	mEmg3	mEmg3	m a m g ə	false
+53	URA_PNG2_2-21-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	21	*dog	2009	DOG	imga	imga	i m g ɐ	false
+54	URA_PNG2_3-21-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	21	*dog	2009	DOG	mEmg3	mEmg3	m a m g ə	false
+55	MALI-54-1	MALI	MALI	mali1284	Mali	Baining			False	54	*drink	1401	DRINK	tnaik	tnaik	t n ɐ i k	false
+56	QAGET-54-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	54	*drink	1401	DRINK	ka sup	ka sup	k ɐ s u p	false
+57	QAGET_2-54-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	54	*drink	1401	DRINK	kup suup	kup suup	k u p s u u p	false
+58	QAQET-54-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	54	*drink	1401	DRINK	sup	sup	s u p	false
+59	URA_PNG2-54-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	54	*drink	1401	DRINK	k3t n3it	k3t n3it	k ə t n ə i t	false
+60	URA_PNG2_2-54-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	54	*drink	1401	DRINK	x3t nad	x3t nad	x ə t n ɐ d	false
+61	URA_PNG2_3-54-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	54	*drink	1401	DRINK	k3t n3it	k3t n3it	k ə t n ə i t	false
+62	MALI-39-1	MALI	MALI	mali1284	Mali	Baining			False	39	*ear	1247	EAR	asdemga	asdemga	ɐ s d e m g ɐ	false
+63	QAGET-39-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	39	*ear	1247	EAR	s3d3mki	s3d3mki	s ə d ə m k i	false
+64	QAGET_2-39-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	39	*ear	1247	EAR	asnd3mgi	asnd3mgi	ɐ s n d ə m g i	false
+65	QAQET-39-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	39	*ear	1247	EAR	asnd~3mgi	asnd~3mgi	ɐ s ⁿd ə m g i	false
+66	URA_PNG-39-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	39	*ear	1247	EAR	sd3mgi	sd3mgi	s d ə m g i	false
+67	URA_PNG2-39-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	39	*ear	1247	EAR	d3sd3mgi	d3sd3mgi	d ə s d ə m g i	false
+68	URA_PNG2_2-39-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	39	*ear	1247	EAR	asd3mgi	asd3mgi	ɐ s d ə m g i	false
+69	URA_PNG2_3-39-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	39	*ear	1247	EAR	d3sd3mgi	d3sd3mgi	d ə s d ə m g i	false
+70	MALI-40-1	MALI	MALI	mali1284	Mali	Baining			False	40	*eye	1248	EYE	saCoN	saCoN	s ɐ tʃ o ŋ	false
+71	QAGET-40-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	40	*eye	1248	EYE	saknaga	saknaga	s ɐ k n ɐ g ɐ	false
+72	QAGET_2-40-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	40	*eye	1248	EYE	r3s3kNi3m	r3s3kNi3m	r ə s ə k ŋ i ə m	false
+73	QAQET-40-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	40	*eye	1248	EYE	sakNaga	sakNaga	s ɐ k ŋ ɐ g ɐ	false
+74	URA_PNG-40-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	40	*eye	1248	EYE	saxoN	saxoN	s ɐ x o ŋ	false
+75	URA_PNG2-40-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	40	*eye	1248	EYE	3 s3goN	3 s3goN	ə s ə g o ŋ	false
+76	URA_PNG2_2-40-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	40	*eye	1248	EYE	asauxoN	asauxoN	ɐ s ɐ u x o ŋ	false
+77	URA_PNG2_3-40-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	40	*eye	1248	EYE	3 s3gon	3 s3gon	ə s ə g o n	false
+78	MALI-82-1	MALI	MALI	mali1284	Mali	Baining			False	82	*fire	221	FIRE	mundem	mundem	m u n d e m	false
+79	QAGET-82-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	82	*fire	221	FIRE	altiNki	altiNki	ɐ l t i ŋ k i	false
+80	QAGET_2-82-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	82	*fire	221	FIRE	3ltiNgi	3ltiNgi	ə l t i ŋ g i	false
+81	QAQET-82-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	82	*fire	221	FIRE	altiNgi	altiNgi	ɐ l t i ŋ g i	false
+82	QAQET-82-2	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	82	*fire	221	FIRE	EltiNgi	EltiNgi	a l t i ŋ g i	false
+83	URA_PNG-82-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	82	*fire	221	FIRE	mud3mgi	mud3mgi	m u d ə m g i	false
+84	URA_PNG2-82-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	82	*fire	221	FIRE	mund3m	mund3m	m u n d ə m	false
+85	URA_PNG2_2-82-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	82	*fire	221	FIRE	mund3b3s	mund3b3s	m u n d ə b ə s	false
+86	URA_PNG2_3-82-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	82	*fire	221	FIRE	mund3m	mund3m	m u n d ə m	false
+87	MALI-19-1	MALI	MALI	mali1284	Mali	Baining			False	19	*fish	227	FISH	ath~inemka	ath~inemka	ɐ tʰ i n e m k ɐ	false
+88	QAGET-19-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	19	*fish	227	FISH	lumbi	lumbi	l u m b i	false
+89	QAGET-19-2	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	19	*fish	227	FISH	s3rik	s3rik	s ə r i k	false
+90	QAGET_2-19-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	19	*fish	227	FISH	s3li7k3	s3li7k3	s ə l i ʔ k ə	false
+91	URA_PNG-19-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	19	*fish	227	FISH	rin3mga	rin3mga	r i n ə m g ɐ	false
+92	URA_PNG2-19-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	19	*fish	227	FISH	a EEn	a EEn	ɐ a a n	false
+93	URA_PNG2_2-19-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	19	*fish	227	FISH	xin3Nga	xin3Nga	x i n ə ŋ g ɐ	false
+94	URA_PNG2_3-19-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	19	*fish	227	FISH	3 EEn	3 EEn	ə a a n	false
+95	MALI-95-1	MALI	MALI	mali1284	Mali	Baining			False	95	*full	1429	FULL	teCep	teCep	t e tʃ e p	false
+96	QAGET-95-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	95	*full	1429	FULL	mbup	mbup	m b u p	false
+97	QAGET_2-95-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	95	*full	1429	FULL	buupk3	buupk3	b u u p k ə	false
+98	URA_PNG-95-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	95	*full	1429	FULL	r3x3pki	r3x3pki	r ə x ə p k i	false
+99	URA_PNG2-95-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	95	*full	1429	FULL	t3g3pki	t3g3pki	t ə g ə p k i	false
+100	URA_PNG2_2-95-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	95	*full	1429	FULL	r3x3p	r3x3p	r ə x ə p	false
+101	URA_PNG2_3-95-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	95	*full	1429	FULL	t3g3pki	t3g3pki	t ə g ə p k i	false
+102	MALI-48-1	MALI	MALI	mali1284	Mali	Baining			False	48	*hand	1277	HAND	aNgetiki	aNgetiki	ɐ ŋ g e t i k i	false
+103	QAGET-48-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	48	*hand	1277	HAND	N3rikh~	N3rikh~	ŋ ə r i kʰ	false
+104	QAGET_2-48-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	48	*hand	1277	HAND	N3rith~	N3rith~	ŋ ə r i tʰ	false
+105	URA_PNG-48-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	48	*hand	1277	HAND	r3yet	r3yet	r ə j e t	false
+106	URA_PNG2-48-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	48	*hand	1277	HAND	a rit	a rit	ɐ r i t	false
+107	URA_PNG2_2-48-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	48	*hand	1277	HAND	arith	arith	ɐ r i t h	false
+108	URA_PNG2_3-48-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	48	*hand	1277	HAND	arit	arit	ɐ r i t	false
+109	MALI-58-1	MALI	MALI	mali1284	Mali	Baining			False	58	*hear	1408	HEAR	nari	nari	n ɐ r i	false
+110	QAGET-58-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	58	*hear	1408	HEAR	ka na	ka na	k ɐ n ɐ	false
+111	QAGET_2-58-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	58	*hear	1408	HEAR	k3 n3ri	k3 n3ri	k ə n ə r i	false
+112	URA_PNG2-58-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	58	*hear	1408	HEAR	k3t n3ri	k3t n3ri	k ə t n ə r i	false
+113	URA_PNG2_2-58-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	58	*hear	1408	HEAR	xat na ri	xat na ri	x ɐ t n ɐ r i	false
+114	URA_PNG2_3-58-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	58	*hear	1408	HEAR	kat n3ri	kat n3ri	k ɐ t n ə r i	false
+115	QAGET_2-34-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	34	*horn	1393	HORN (ANATOMY)	l3mgi	l3mgi	l ə m g i	false
+116	URA_PNG2-34-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	34	*horn	1393	HORN (ANATOMY)	aimiom	aimiom	ɐ i m i o m	false
+117	URA_PNG2_2-34-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	34	*horn	1393	HORN (ANATOMY)	aemgi	aemgi	ɐ e m g i	false
+118	URA_PNG2_3-34-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	34	*horn	1393	HORN (ANATOMY)	aimion	aimion	ɐ i m i o n	false
+119	MALI-47-1	MALI	MALI	mali1284	Mali	Baining			False	47	*knee	1371	KNEE	Cumki	Cumki	tʃ u m k i	false
+120	QAGET_2-47-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	47	*knee	1371	KNEE	r3bumbim	r3bumbim	r ə b u m b i m	false
+121	URA_PNG-47-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	47	*knee	1371	KNEE	xum	xum	x u m	false
+122	URA_PNG2-47-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	47	*knee	1371	KNEE	3 gumgi	3 gumgi	ə g u m g i	false
+123	URA_PNG2_2-47-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	47	*knee	1371	KNEE	axumgi	axumgi	ɐ x u m g i	false
+124	URA_PNG2_3-47-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	47	*knee	1371	KNEE	3 gumgi	3 gumgi	ə g u m g i	false
+125	MALI-25-1	MALI	MALI	mali1284	Mali	Baining			False	25	*leaf	628	LEAF	teleNves	teleNves	t e l e ŋ v e s	false
+126	QAGET-25-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	25	*leaf	628	LEAF	m3ranaus	m3ranaus	m ə r ɐ n ɐ u s	false
+127	QAGET_2-25-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	25	*leaf	628	LEAF	N3rit	N3rit	ŋ ə r i t	false
+128	QAQET-25-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	25	*leaf	628	LEAF	m3ran	m3ran	m ə r ɐ n	false
+129	URA_PNG2-25-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	25	*leaf	628	LEAF	m3rain	m3rain	m ə r ɐ i n	false
+130	URA_PNG2_2-25-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	25	*leaf	628	LEAF	x3lanaNit	x3lanaNit	x ə l ɐ n ɐ ŋ i t	false
+131	URA_PNG2_3-25-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	25	*leaf	628	LEAF	m3rain	m3rain	m ə r ɐ i n	false
+132	MALI-53-1	MALI	MALI	mali1284	Mali	Baining			False	53	*liver	1224	LIVER	aniNilka	aniNilka	ɐ n i ŋ i l k ɐ	false
+133	QAGET_2-53-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	53	*liver	1224	LIVER	niNgilk3	niNgilk3	n i ŋ g i l k ə	false
+134	URA_PNG-53-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	53	*liver	1224	LIVER	niTil3s	niTil3s	n i c i l ə s	false
+135	URA_PNG2-53-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	53	*liver	1224	LIVER	3gubugi	3gubugi	ə g u b u g i	false
+136	URA_PNG2_2-53-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	53	*liver	1224	LIVER	n3ngil3s	n3ngil3s	n ə n g i l ə s	false
+137	URA_PNG2_3-53-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	53	*liver	1224	LIVER	3gubugi	3gubugi	ə g u b u g i	false
+138	MALI-22-1	MALI	MALI	mali1284	Mali	Baining			False	22	*louse	1392	LOUSE	revereCiNgl	revereCiNgl	r e v e r e tʃ i ŋ g l	false
+139	QAGET-22-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	22	*louse	1392	LOUSE	LLait	LLait	ʎ ʎ ɐ i t	false
+140	QAGET_2-22-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	22	*louse	1392	LOUSE	EEtki	EEtki	a a t k i	false
+141	URA_PNG-22-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	22	*louse	1392	LOUSE	irait	irait	i r ɐ i t	false
+142	URA_PNG2-22-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	22	*louse	1392	LOUSE	m3ait	m3ait	m ə ɐ i t	false
+143	URA_PNG2_2-22-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	22	*louse	1392	LOUSE	irait	irait	i r ɐ i t	false
+144	URA_PNG2_3-22-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	22	*louse	1392	LOUSE	m3ait	m3ait	m ə ɐ i t	false
+145	MALI-86-1	MALI	MALI	mali1284	Mali	Baining			False	86	*mountain	639	MOUNTAIN	damki	damki	d ɐ m k i	false
+146	QAGET-86-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	86	*mountain	639	MOUNTAIN	dam	dam	d ɐ m	false
+147	QAGET_2-86-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	86	*mountain	639	MOUNTAIN	d3mgi	d3mgi	d ə m g i	false
+148	QAQET-86-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	86	*mountain	639	MOUNTAIN	nd~amga	nd~amga	ⁿd ɐ m g ɐ	false
+149	URA_PNG-86-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	86	*mountain	639	MOUNTAIN	damgi	damgi	d ɐ m g i	false
+150	URA_PNG2-86-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	86	*mountain	639	MOUNTAIN	d3mgi	d3mgi	d ə m g i	false
+151	URA_PNG2_2-86-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	86	*mountain	639	MOUNTAIN	damgi	damgi	d ɐ m g i	false
+152	URA_PNG2_3-86-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	86	*mountain	639	MOUNTAIN	d3mgi	d3mgi	d ə m g i	false
+153	MALI-100-1	MALI	MALI	mali1284	Mali	Baining			False	100	*name	1405	NAME	aNgerepki	aNgerepki	ɐ ŋ g e r e p k i	false
+154	QAGET-100-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	100	*name	1405	NAME	r3nki	r3nki	r ə n k i	false
+155	QAGET_2-100-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	100	*name	1405	NAME	dyi3riNi namgi	dyi3riNi namgi	d j i ə r i ŋ i n ɐ m g i	false
+156	URA_PNG2-100-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	100	*name	1405	NAME	diNyiripki	diNyiripki	d i ŋ j i r i p k i	false
+157	URA_PNG2_2-100-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	100	*name	1405	NAME	N3ri8ki	N3ri8ki	ŋ ə r i θ k i	false
+158	URA_PNG2_3-100-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	100	*name	1405	NAME	diNyiripki	diNyiripki	d i ŋ j i r i p k i	false
+159	MALI-96-1	MALI	MALI	mali1284	Mali	Baining			False	96	*new	1231	NEW	aiCeru	aiCeru	ɐ i tʃ e r u	false
+160	QAGET-96-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	96	*new	1231	NEW	yam3s	yam3s	j ɐ m ə s	false
+161	QAGET_2-96-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	96	*new	1231	NEW	3i3m3s	3i3m3s	ə i ə m ə s	false
+162	URA_PNG-96-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	96	*new	1231	NEW	iarxa	iarxa	i ɐ r x ɐ	false
+163	URA_PNG2-96-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	96	*new	1231	NEW	y3rini	y3rini	j ə r i n i	false
+164	URA_PNG2_2-96-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	96	*new	1231	NEW	iar3s	iar3s	i ɐ r ə s	false
+165	URA_PNG2_3-96-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	96	*new	1231	NEW	y3rini	y3rini	j ə r i n i	false
+166	MALI-92-1	MALI	MALI	mali1284	Mali	Baining			False	92	*night	1233	NIGHT	baNgaNgi	baNgaNgi	b ɐ ŋ g ɐ ŋ g i	false
+167	QAGET-92-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	92	*night	1233	NIGHT	ar3nki	ar3nki	ɐ r ə n k i	false
+168	QAGET_2-92-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	92	*night	1233	NIGHT	nir3x3	nir3x3	n i r ə x ə	false
+169	URA_PNG-92-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	92	*night	1233	NIGHT	b3NaNit	b3NaNit	b ə ŋ ɐ ŋ i t	false
+170	URA_PNG2-92-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	92	*night	1233	NIGHT	n3mbuN3gi	n3mbuN3gi	n ə m b u ŋ ə g i	false
+171	URA_PNG2_2-92-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	92	*night	1233	NIGHT	3Nagi	3Nagi	ə ŋ ɐ g i	false
+172	URA_PNG2_3-92-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	92	*night	1233	NIGHT	n3mbuN3gi	n3mbuN3gi	n ə m b u ŋ ə g i	false
+173	MALI-41-1	MALI	MALI	mali1284	Mali	Baining			False	41	*nose	1221	NOSE	Culimgi	Culimgi	tʃ u l i m g i	false
+174	QAGET-41-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	41	*nose	1221	NOSE	g3rimki	g3rimki	g ə r i m k i	false
+175	QAGET_2-41-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	41	*nose	1221	NOSE	r3x3rimgi	r3x3rimgi	r ə x ə r i m g i	false
+176	URA_PNG-41-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	41	*nose	1221	NOSE	xulimgi	xulimgi	x u l i m g i	false
+177	URA_PNG2-41-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	41	*nose	1221	NOSE	3 gulimgi	3 gulimgi	ə g u l i m g i	false
+178	URA_PNG2_2-41-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	41	*nose	1221	NOSE	aw3ly3mgi	aw3ly3mgi	ɐ w ə l j ə m g i	false
+179	URA_PNG2_3-41-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	41	*nose	1221	NOSE	3 gulimgi	3 gulimgi	ə g u l i m g i	false
+180	MALI-11-1	MALI	MALI	mali1284	Mali	Baining			False	11	*one	1493	ONE	asegeni	asegeni	ɐ s e g e n i	false
+181	QAGET-11-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	11	*one	1493	ONE	gw~anaska	gw~anaska	gʷ ɐ n ɐ s k ɐ	false
+182	QAGET_2-11-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	11	*one	1493	ONE	oxun3sk3	oxun3sk3	o x u n ə s k ə	false
+183	URA_PNG-11-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	11	*one	1493	ONE	s3g3k	s3g3k	s ə g ə k	false
+184	URA_PNG2-11-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	11	*one	1493	ONE	sig3k	sig3k	s i g ə k	false
+185	URA_PNG2_2-11-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	11	*one	1493	ONE	s3g3k	s3g3k	s ə g ə k	false
+186	URA_PNG2_3-11-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	11	*one	1493	ONE	sig3k	sig3k	s i g ə k	false
+187	MALI-85-1	MALI	MALI	mali1284	Mali	Baining			False	85	*path	2252	PATH	aisvet	aisvet	ɐ i s v e t	false
+188	QAGET-85-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	85	*path	2252	PATH	aiska	aiska	ɐ i s k ɐ	false
+189	QAGET_2-85-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	85	*path	2252	PATH	aisk3	aisk3	ɐ i s k ə	false
+190	QAQET-85-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	85	*path	2252	PATH	aiska	aiska	ɐ i s k ɐ	false
+191	URA_PNG-85-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	85	*path	2252	PATH	iska	iska	i s k ɐ	false
+192	URA_PNG2-85-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	85	*path	2252	PATH	m3isk3	m3isk3	m ə i s k ə	false
+193	URA_PNG2_2-85-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	85	*path	2252	PATH	iska	iska	i s k ɐ	false
+194	URA_PNG2_3-85-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	85	*path	2252	PATH	m3isk3	m3isk3	m ə i s k ə	false
+195	MALI-18-1	MALI	MALI	mali1284	Mali	Baining			False	18	*person	683	PERSON	aru	aru	ɐ r u	false
+196	URA_PNG2-18-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	18	*person	683	PERSON	oNiak na m3k	oNiak na m3k	o ŋ i ɐ k n ɐ m ə k	false
+197	URA_PNG2_2-18-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	18	*person	683	PERSON	uya	uya	u j ɐ	false
+198	URA_PNG2_3-18-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	18	*person	683	PERSON	oNi3kn3 m3k	oNi3kn3 m3k	o ŋ i ə k n ə m ə k	false
+199	MALI-57-1	MALI	MALI	mali1284	Mali	Baining			False	57	*see	1409	SEE	lu	lu	l u	false
+200	QAGET-57-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	57	*see	1409	SEE	ka lu	ka lu	k ɐ l u	false
+201	QAGET_2-57-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	57	*see	1409	SEE	NiNi3m	NiNi3m	ŋ i ŋ i ə m	false
+202	QAQET-57-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	57	*see	1409	SEE	lu	lu	l u	false
+203	URA_PNG2-57-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	57	*see	1409	SEE	k3t luNEE	k3t luNEE	k ə t l u ŋ a a	false
+204	URA_PNG2_2-57-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	57	*see	1409	SEE	xat lu	xat lu	x ɐ t l u	false
+205	URA_PNG2_3-57-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	57	*see	1409	SEE	k3t luNEE	k3t luNEE	k ə t l u ŋ a a	false
+206	MALI-28-1	MALI	MALI	mali1284	Mali	Baining			False	28	*skin	763	SKIN	CendeNga	CendeNga	tʃ e n d e ŋ g ɐ	false
+207	QAGET-28-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	28	*skin	763	SKIN	g3tdinki	g3tdinki	g ə t d i n k i	false
+208	QAGET_2-28-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	28	*skin	763	SKIN	3r3g3td3Nit	3r3g3td3Nit	ə r ə g ə t d ə ŋ i t	false
+209	QAQET-28-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	28	*skin	763	SKIN	gatnd~iNgi	gatnd~iNgi	g ɐ t ⁿd i ŋ g i	false
+210	URA_PNG2-28-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	28	*skin	763	SKIN	3 sliyigE	3 sliyigE	ə s l i j i g a	false
+211	URA_PNG2_2-28-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	28	*skin	763	SKIN	aslixige	aslixige	ɐ s l i x i g e	false
+212	URA_PNG2_3-28-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	28	*skin	763	SKIN	3 sliyigE	3 sliyigE	ə s l i j i g a	false
+213	MALI-74-1	MALI	MALI	mali1284	Mali	Baining			False	74	*star	1430	STAR	aliNka	aliNka	ɐ l i ŋ k ɐ	false
+214	QAGET-74-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	74	*star	1430	STAR	wald3Naga	wald3Naga	w ɐ l d ə ŋ ɐ g ɐ	false
+215	QAGET_2-74-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	74	*star	1430	STAR	w3ld3N3x3	w3ld3N3x3	w ə l d ə ŋ ə x ə	false
+216	QAQET-74-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	74	*star	1430	STAR	wEldaN	wEldaN	w a l d ɐ ŋ	false
+217	URA_PNG-74-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	74	*star	1430	STAR	xaiNit	xaiNit	x ɐ i ŋ i t	false
+218	URA_PNG2-74-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	74	*star	1430	STAR	g3r3iNg3	g3r3iNg3	g ə r ə i ŋ g ə	false
+219	URA_PNG2_2-74-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	74	*star	1430	STAR	xaeNga	xaeNga	x ɐ e ŋ g ɐ	false
+220	URA_PNG2_3-74-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	74	*star	1430	STAR	g3r3iNg3	g3r3iNg3	g ə r ə i ŋ g ə	false
+221	MALI-77-1	MALI	MALI	mali1284	Mali	Baining			False	77	*stone	857	STONE	dulka	dulka	d u l k ɐ	false
+222	QAGET-77-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	77	*stone	857	STONE	dulka	dulka	d u l k ɐ	false
+223	QAGET_2-77-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	77	*stone	857	STONE	dulk3	dulk3	d u l k ə	false
+224	QAQET-77-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	77	*stone	857	STONE	nd~ulka	nd~ulka	ⁿd u l k ɐ	false
+225	URA_PNG-77-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	77	*stone	857	STONE	dui	dui	d u i	false
+226	URA_PNG2-77-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	77	*stone	857	STONE	m3 dui	m3 dui	m ə d u i	false
+227	URA_PNG2_2-77-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	77	*stone	857	STONE	duixa	duixa	d u i x ɐ	false
+228	URA_PNG2_3-77-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	77	*stone	857	STONE	m3 dui	m3 dui	m ə d u i	false
+229	MALI-72-1	MALI	MALI	mali1284	Mali	Baining			False	72	*sun	1343	SUN	CuneNka	CuneNka	tʃ u n e ŋ k ɐ	false
+230	QAGET-72-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	72	*sun	1343	SUN	niraga	niraga	n i r ɐ g ɐ	false
+231	QAGET-72-2	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	72	*sun	1343	SUN	nilaga	nilaga	n i l ɐ g ɐ	false
+232	QAGET_2-72-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	72	*sun	1343	SUN	niraxa	niraxa	n i r ɐ x ɐ	false
+233	URA_PNG2-72-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	72	*sun	1343	SUN	wun3g3	wun3g3	w u n ə g ə	false
+234	URA_PNG2_2-72-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	72	*sun	1343	SUN	xun3ga	xun3ga	x u n ə g ɐ	false
+235	URA_PNG2_3-72-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	72	*sun	1343	SUN	wun3g3	wun3g3	w u n ə g ə	false
+236	MALI-44-1	MALI	MALI	mali1284	Mali	Baining			False	44	*tongue	1205	TONGUE	aCulbiNga	aCulbiNga	ɐ tʃ u l b i ŋ g ɐ	false
+237	QAGET-44-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	44	*tongue	1205	TONGUE	galbinka	galbinka	g ɐ l b i n k ɐ	false
+238	QAGET_2-44-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	44	*tongue	1205	TONGUE	oglbiNa	oglbiNa	o g l b i ŋ ɐ	false
+239	URA_PNG-44-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	44	*tongue	1205	TONGUE	yoeb35ga	yoeb35ga	j o e b ə ɲ g ɐ	false
+240	URA_PNG2-44-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	44	*tongue	1205	TONGUE	duEbiN3	duEbiN3	d u a b i ŋ ə	false
+241	URA_PNG2_2-44-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	44	*tongue	1205	TONGUE	axuebuNa	axuebuNa	ɐ x u e b u ŋ ɐ	false
+242	URA_PNG2_3-44-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	44	*tongue	1205	TONGUE	duEbiN3	duEbiN3	d u a b i ŋ ə	false
+243	MALI-43-1	MALI	MALI	mali1284	Mali	Baining			False	43	*tooth	1380	TOOTH	keNki	keNki	k e ŋ k i	false
+244	QAGET-43-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	43	*tooth	1380	TOOTH	arkiN	arkiN	ɐ r k i ŋ	false
+245	QAGET_2-43-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	43	*tooth	1380	TOOTH	arkiNi	arkiNi	ɐ r k i ŋ i	false
+246	URA_PNG-43-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	43	*tooth	1380	TOOTH	xigi	xigi	x i g i	false
+247	URA_PNG2-43-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	43	*tooth	1380	TOOTH	nEyEN	nEyEN	n a j a ŋ	false
+248	URA_PNG2-43-2	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	43	*tooth	1380	TOOTH	3 g3r3	3 g3r3	ə g ə r ə	false
+249	URA_PNG2_2-43-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	43	*tooth	1380	TOOTH	atkiNgi	atkiNgi	ɐ t k i ŋ g i	false
+250	URA_PNG2_3-43-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	43	*tooth	1380	TOOTH	naeyEN	naeyEN	n ɐ e j a ŋ	false
+251	MALI-23-1	MALI	MALI	mali1284	Mali	Baining			False	23	*tree	906	TREE	ameNki	ameNki	ɐ m e ŋ k i	false
+252	QAGET-23-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	23	*tree	906	TREE	m3Nkh~a	m3Nkh~a	m ə ŋ kʰ ɐ	false
+253	QAGET_2-23-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	23	*tree	906	TREE	munk3	munk3	m u n k ə	false
+254	URA_PNG-23-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	23	*tree	906	TREE	N3muga	N3muga	ŋ ə m u g ɐ	false
+255	URA_PNG2-23-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	23	*tree	906	TREE	3 muNg3	3 muNg3	ə m u ŋ g ə	false
+256	URA_PNG2_2-23-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	23	*tree	906	TREE	N3muga	N3muga	ŋ ə m u g ɐ	false
+257	URA_PNG2_3-23-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	23	*tree	906	TREE	3 muNg3	3 muNg3	ə m u ŋ g ə	false
+258	MALI-12-1	MALI	MALI	mali1284	Mali	Baining			False	12	*two	1498	TWO	aunbem	aunbem	ɐ u n b e m	false
+259	MALI-12-2	MALI	MALI	mali1284	Mali	Baining			False	12	*two	1498	TWO	aungium	aungium	ɐ u n g i u m	false
+260	QAGET-12-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	12	*two	1498	TWO	gw~anasiam	gw~anasiam	gʷ ɐ n ɐ s i ɐ m	false
+261	QAGET_2-12-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	12	*two	1498	TWO	oxun3si3m	oxun3si3m	o x u n ə s i ə m	false
+262	URA_PNG-12-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	12	*two	1498	TWO	udiom	udiom	u d i o m	false
+263	URA_PNG2-12-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	12	*two	1498	TWO	undiom	undiom	u n d i o m	false
+264	URA_PNG2_2-12-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	12	*two	1498	TWO	undiom	undiom	u n d i o m	false
+265	URA_PNG2_3-12-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	12	*two	1498	TWO	undiom	undiom	u n d i o m	false
+266	MALI-75-1	MALI	MALI	mali1284	Mali	Baining			False	75	*water	948	WATER	areNgi	areNgi	ɐ r e ŋ g i	false
+267	QAGET-75-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	75	*water	948	WATER	grapki	grapki	g r ɐ p k i	false
+268	QAGET_2-75-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	75	*water	948	WATER	k3in3xi	k3in3xi	k ə i n ə x i	false
+269	QAQET-75-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	75	*water	948	WATER	kainayi	kainayi	k ɐ i n ɐ j i	false
+270	URA_PNG-75-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	75	*water	948	WATER	rigi	rigi	r i g i	false
+271	URA_PNG2-75-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	75	*water	948	WATER	m3riNgi	m3riNgi	m ə r i ŋ g i	false
+272	URA_PNG2_2-75-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	75	*water	948	WATER	rigi	rigi	r i g i	false
+273	URA_PNG2_3-75-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	75	*water	948	WATER	m3riNgi	m3riNgi	m ə r i ŋ g i	false
+274	MALI-3-1	MALI	MALI	mali1284	Mali	Baining			False	3	*we	1212	WE	ut	ut	u t	false
+275	QAQET-3-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	3	*we	1212	WE	uret	uret	u r e t	false
+276	URA_PNG-3-1	URA_PNG	URA_PNG	urap1240	Ura (Papua New Guinea)	Baining			False	3	*we	1212	WE	ut	ut	u t	false
+277	MALI-2-1	MALI	MALI	mali1284	Mali	Baining			False	2	*you	1215	THOU	Ngia	Ngia	ŋ g i ɐ	false
+278	QAQET-2-1	QAQET	QAQET	qaqe1238	Qaqet	Baining			False	2	*you	1215	THOU	5i	5i	ɲ i	false
+279	QAGET_2-9-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	9	all	98	ALL	m3i	m3i	m ə i	false
+280	URA_PNG2-9-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	9	all	98	ALL	Numoi	Numoi	ŋ u m o i	false
+281	URA_PNG2_2-9-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	9	all	98	ALL	oed	oed	o e d	false
+282	URA_PNG2_3-9-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	9	all	98	ALL	Numoi	Numoi	ŋ u m o i	false
+283	QAGET-83-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	83	ash	646	ASH	w3lsaiN	w3lsaiN	w ə l s ɐ i ŋ	false
+284	QAGET_2-83-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	83	ash	646	ASH	x3Ni	x3Ni	x ə ŋ i	false
+285	URA_PNG2-83-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	83	ash	646	ASH	r3pt3pk3	r3pt3pk3	r ə p t ə p k ə	false
+286	URA_PNG2_2-83-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	83	ash	646	ASH	lig3tki	lig3tki	l i g ə t k i	false
+287	URA_PNG2_3-83-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	83	ash	646	ASH	r3pt3pk3	r3pt3pk3	r ə p t ə p k ə	false
+288	QAGET_2-27-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	27	bark	1204	BARK	x3t3Nit	x3t3Nit	x ə t ə ŋ i t	false
+289	URA_PNG2-27-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	27	bark	1204	BARK	3sn3Ngut	3sn3Ngut	ə s n ə ŋ g u t	false
+290	URA_PNG2_2-27-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	27	bark	1204	BARK	luat	luat	l u ɐ t	false
+291	URA_PNG2_2-27-2	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	27	bark	1204	BARK	lurait	lurait	l u r ɐ i t	false
+292	URA_PNG2_3-27-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	27	bark	1204	BARK	3sn3Ngut	3sn3Ngut	ə s n ə ŋ g u t	false
+293	QAGET-49-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	49	belly	1251	BELLY	rutka	rutka	r u t k ɐ	false
+294	QAGET_2-49-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	49	belly	1251	BELLY	rarutk3	rarutk3	r ɐ r u t k ə	false
+295	URA_PNG2-49-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	49	belly	1251	BELLY	3 s3rimgi	3 s3rimgi	ə s ə r i m g i	false
+296	URA_PNG2_2-49-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	49	belly	1251	BELLY	sarimgi	sarimgi	s ɐ r i m g i	false
+297	URA_PNG2_3-49-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	49	belly	1251	BELLY	3 s3rimgi	3 s3rimgi	ə s ə r i m g i	false
+298	QAGET-13-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	13	big	1202	BIG	s3lur3ka	s3lur3ka	s ə l u r ə k ɐ	false
+299	QAGET_2-13-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	13	big	1202	BIG	3m3urlka	3m3urlka	ə m ə u r l k ɐ	false
+300	URA_PNG2-13-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	13	big	1202	BIG	moro	moro	m o r o	false
+301	URA_PNG2_2-13-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	13	big	1202	BIG	mor	mor	m o r	false
+302	URA_PNG2_3-13-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	13	big	1202	BIG	moro	moro	m o r o	false
+303	QAGET-20-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	20	bird	937	BIRD	waitki	waitki	w ɐ i t k i	false
+304	QAGET_2-20-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	20	bird	937	BIRD	w3itka	w3itka	w ə i t k ɐ	false
+305	URA_PNG2-20-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	20	bird	937	BIRD	EEsumg3	EEsumg3	a a s u m g ə	false
+306	URA_PNG2_2-20-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	20	bird	937	BIRD	is3mga	is3mga	i s ə m g ɐ	false
+307	URA_PNG2_3-20-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	20	bird	937	BIRD	EEsumg3	EEsumg3	a a s u m g ə	false
+308	QAGET-56-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	56	bite	1403	BITE	ndaNka kanis ama watka	ndaNka kanis ama watka	n d ɐ ŋ k ɐ k ɐ n i s ɐ m ɐ w ɐ t k ɐ	false
+309	QAGET_2-56-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	56	bite	1403	BITE	d3Nk3 k3 ts	d3Nk3 k3 ts	d ə ŋ k ə k ə t s	false
+310	URA_PNG2-56-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	56	bite	1403	BITE	3 mEmg3 k3 ts 3m3 rug3	3 mEmg3 k3 ts 3m3 rug3	ə m a m g ə k ə t s ə m ə r u g ə	false
+311	URA_PNG2_2-56-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	56	bite	1403	BITE	x3tnEs	x3tnEs	x ə t n a s	false
+312	URA_PNG2_3-56-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	56	bite	1403	BITE	3 mEmg3 k3 t3s3m3 rug3	3 mEmg3 k3 t3s3m3 rug3	ə m a m g ə k ə t ə s ə m ə r u g ə	false
+313	QAGET-91-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	91	black	163	BLACK	asu	asu	ɐ s u	false
+314	QAGET_2-91-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	91	black	163	BLACK	sug3	sug3	s u g ə	false
+315	URA_PNG2-91-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	91	black	163	BLACK	iliNNit	iliNNit	i l i ŋ ŋ i t	false
+316	URA_PNG2_2-91-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	91	black	163	BLACK	il3n	il3n	i l ə n	false
+317	URA_PNG2_3-91-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	91	black	163	BLACK	iliNNit	iliNNit	i l i ŋ ŋ i t	false
+318	QAGET_2-45-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	45	claw	72	CLAW	3ibis	3ibis	ə i b i s	false
+319	URA_PNG2-45-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	45	claw	72	CLAW	3r3sit	3r3sit	ə r ə s i t	false
+320	URA_PNG2_2-45-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	45	claw	72	CLAW	wraras	wraras	w r ɐ r ɐ s	false
+321	URA_PNG2_3-45-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	45	claw	72	CLAW	3r3sit	3r3sit	ə r ə s i t	false
+322	QAGET-80-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	80	cloud	1489	CLOUD	at3m	at3m	ɐ t ə m	false
+323	QAGET_2-80-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	80	cloud	1489	CLOUD	uusupk3	uusupk3	u u s u p k ə	false
+324	URA_PNG2-80-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	80	cloud	1489	CLOUD	m3railEg3s	m3railEg3s	m ə r ɐ i l a g ə s	false
+325	URA_PNG2_2-80-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	80	cloud	1489	CLOUD	exuExi	exuExi	e x u a x i	false
+326	URA_PNG2_3-80-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	80	cloud	1489	CLOUD	m3railEg3s	m3railEg3s	m ə r ɐ i l a g ə s	false
+327	QAGET-94-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	94	cold	1287	COLD	wisis	wisis	w i s i s	false
+328	QAGET_2-94-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	94	cold	1287	COLD	uisis	uisis	u i s i s	false
+329	URA_PNG2-94-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	94	cold	1287	COLD	3isiNE	3isiNE	ə i s i ŋ a	false
+330	URA_PNG2_2-94-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	94	cold	1287	COLD	um3let	um3let	u m ə l e t	false
+331	URA_PNG2_3-94-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	94	cold	1287	COLD	3isiNE	3isiNE	ə i s i ŋ a	false
+332	QAGET-99-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	99	dry	1398	DRY	d3Ndum	d3Ndum	d ə ŋ d u m	false
+333	QAGET_2-99-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	99	dry	1398	DRY	l3Ng3n	l3Ng3n	l ə ŋ g ə n	false
+334	URA_PNG2-99-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	99	dry	1398	DRY	k3r3td3mgi	k3r3td3mgi	k ə r ə t d ə m g i	false
+335	URA_PNG2_2-99-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	99	dry	1398	DRY	x3r3k	x3r3k	x ə r ə k	false
+336	URA_PNG2_3-99-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	99	dry	1398	DRY	k3r3td3mgi	k3r3td3mgi	k ə r ə t d ə m g i	false
+337	QAGET-79-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	79	earth	1228	EARTH (SOIL)	ib3t	ib3t	i b ə t	false
+338	QAGET-79-2	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	79	earth	1228	EARTH (SOIL)	x3rikh~	x3rikh~	x ə r i kʰ	false
+339	QAGET_2-79-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	79	earth	1228	EARTH (SOIL)	Eib3r3m	Eib3r3m	a i b ə r ə m	false
+340	URA_PNG2-79-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	79	earth	1228	EARTH (SOIL)	ib3tki	ib3tki	i b ə t k i	false
+341	URA_PNG2_2-79-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	79	earth	1228	EARTH (SOIL)	iw3tki	iw3tki	i w ə t k i	false
+342	URA_PNG2_3-79-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	79	earth	1228	EARTH (SOIL)	i bEtki	i bEtki	i b a t k i	false
+343	QAGET-55-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	55	eat	1336	EAT	ka t3s	ka t3s	k ɐ t ə s	false
+344	QAGET_2-55-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	55	eat	1336	EAT	k3 t3s	k3 t3s	k ə t ə s	false
+345	URA_PNG2-55-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	55	eat	1336	EAT	ka ts	ka ts	k ɐ t s	false
+346	URA_PNG2_2-55-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	55	eat	1336	EAT	xat t3s	xat t3s	x ɐ t t ə s	false
+347	URA_PNG2_3-55-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	55	eat	1336	EAT	k3 t3s	k3 t3s	k ə t ə s	false
+348	QAGET-33-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	33	egg	744	EGG	luaga	luaga	l u ɐ g ɐ	false
+349	QAGET_2-33-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	33	egg	744	EGG	lu3x3	lu3x3	l u ə x ə	false
+350	URA_PNG2-33-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	33	egg	744	EGG	durait	durait	d u r ɐ i t	false
+351	URA_PNG2_2-33-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	33	egg	744	EGG	luaxa	luaxa	l u ɐ x ɐ	false
+352	URA_PNG2_3-33-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	33	egg	744	EGG	durait	durait	d u r ɐ i t	false
+353	QAGET_2-36-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	36	feather	1201	FEATHER	3siNg3s	3siNg3s	ə s i ŋ g ə s	false
+354	URA_PNG2-36-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	36	feather	1201	FEATHER	3g3sin3N	3g3sin3N	ə g ə s i n ə ŋ	false
+355	URA_PNG2_2-36-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	36	feather	1201	FEATHER	x3siNit	x3siNit	x ə s i ŋ i t	false
+356	URA_PNG2_3-36-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	36	feather	1201	FEATHER	3g3sin3N	3g3sin3N	ə g ə s i n ə ŋ	false
+357	QAGET-29-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	29	flesh	2259	FLESH	s3rik	s3rik	s ə r i k	false
+358	QAGET_2-29-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	29	flesh	2259	FLESH	sirikh~	sirikh~	s i r i kʰ	false
+359	URA_PNG2-29-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	29	flesh	2259	FLESH	mourigi	mourigi	m o u r i g i	false
+360	URA_PNG2_3-29-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	29	flesh	2259	FLESH	mourigi	mourigi	m o u r i g i	false
+361	QAGET_2-64-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	64	fly	1441	FLY (MOVE THROUGH AIR)	k3 m3r3n3s	k3 m3r3n3s	k ə m ə r ə n ə s	false
+362	URA_PNG2-64-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	64	fly	1441	FLY (MOVE THROUGH AIR)	k3b3r3p	k3b3r3p	k ə b ə r ə p	false
+363	URA_PNG2_2-64-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	64	fly	1441	FLY (MOVE THROUGH AIR)	ini Nriw3r3p	ini Nriw3r3p	i n i ŋ r i w ə r ə p	false
+364	URA_PNG2_3-64-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	64	fly	1441	FLY (MOVE THROUGH AIR)	k3b3r3p	k3b3r3p	k ə b ə r ə p	false
+365	QAGET_2-46-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	46	foot	1301	FOOT	Elain	Elain	a l ɐ i n	false
+366	URA_PNG2_2-46-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	46	foot	1301	FOOT	ax3rigE	ax3rigE	ɐ x ə r i g a	false
+367	URA_PNG2_3-46-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	46	foot	1301	FOOT	3 g3r3	3 g3r3	ə g ə r ə	false
+368	QAGET-70-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	70	give	1447	GIVE	ka uraNw~a	ka uraNw~a	k ɐ u r ɐ ŋʷ ɐ	false
+369	QAGET_2-70-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	70	give	1447	GIVE	NiurNu3	NiurNu3	ŋ i u r ŋ u ə	false
+370	URA_PNG2-70-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	70	give	1447	GIVE	k3t boniNE	k3t boniNE	k ə t b o n i ŋ a	false
+371	URA_PNG2_2-70-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	70	give	1447	GIVE	x3t bonNo r3mini	x3t bonNo r3mini	x ə t b o n ŋ o r ə m i n i	false
+372	URA_PNG2_3-70-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	70	give	1447	GIVE	k3t boniNE	k3t boniNE	k ə t b o n i ŋ a	false
+373	QAGET-97-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	97	good	1035	GOOD	atlu	atlu	ɐ t l u	false
+374	QAGET_2-97-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	97	good	1035	GOOD	3tlu	3tlu	ə t l u	false
+375	URA_PNG2-97-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	97	good	1035	GOOD	m3m3r	m3m3r	m ə m ə r	false
+376	URA_PNG2_2-97-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	97	good	1035	GOOD	mam3s	mam3s	m ɐ m ə s	false
+377	URA_PNG2_3-97-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	97	good	1035	GOOD	m3m3r	m3m3r	m ə m ə r	false
+378	QAGET-32-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	g3muN	g3muN	g ə m u ŋ	false
+379	QAGET_2-32-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	x3muN	x3muN	x ə m u ŋ	false
+380	URA_PNG2-32-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	m3m3tki	m3m3tki	m ə m ə t k i	false
+381	URA_PNG2_2-32-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	mam3tki	mam3tki	m ɐ m ə t k i	false
+382	URA_PNG2_3-32-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	32	grease	323	FAT (ORGANIC SUBSTANCE)	m3m3tki	m3m3tki	m ə m ə t k i	false
+383	QAGET_2-88-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	88	green	1425	GREEN	n3ski	n3ski	n ə s k i	false
+384	URA_PNG2-88-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	88	green	1425	GREEN	idiar	idiar	i d i ɐ r	false
+385	URA_PNG2_2-88-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	88	green	1425	GREEN	iriar	iriar	i r i ɐ r	false
+386	URA_PNG2_3-88-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	88	green	1425	GREEN	idiar	idiar	i d i ɐ r	false
+387	QAGET-37-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	37	hair	1040	HAIR	agsiN	agsiN	ɐ g s i ŋ	false
+388	QAGET_2-37-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	37	hair	1040	HAIR	3xasiN	3xasiN	ə x ɐ s i ŋ	false
+389	URA_PNG2-37-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	37	hair	1040	HAIR	k3siN	k3siN	k ə s i ŋ	false
+390	URA_PNG2_2-37-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	37	hair	1040	HAIR	ax3sEN	ax3sEN	ɐ x ə s a ŋ	false
+391	URA_PNG2_3-37-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	37	hair	1040	HAIR	k3siN	k3siN	k ə s i ŋ	false
+392	QAGET-38-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	38	head	1256	HEAD	niNaga	niNaga	n i ŋ ɐ g ɐ	false
+393	QAGET_2-38-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	38	head	1256	HEAD	niN3x3	niN3x3	n i ŋ ə x ə	false
+394	URA_PNG2-38-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	38	head	1256	HEAD	3m3 niN3gi	3m3 niN3gi	ə m ə n i ŋ ə g i	false
+395	URA_PNG2_2-38-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	38	head	1256	HEAD	auw3ski	auw3ski	ɐ u w ə s k i	false
+396	URA_PNG2_3-38-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	38	head	1256	HEAD	am3 niN3gi	am3 niN3gi	ɐ m ə n i ŋ ə g i	false
+397	QAGET_2-52-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	52	heart	1223	HEART	N3tr3x3	N3tr3x3	ŋ ə t r ə x ə	false
+398	URA_PNG2-52-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	52	heart	1223	HEART	3sn3N3g3	3sn3N3g3	ə s n ə ŋ ə g ə	false
+399	URA_PNG2_2-52-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	52	heart	1223	HEART	asn3Naxa	asn3Naxa	ɐ s n ə ŋ ɐ x ɐ	false
+400	URA_PNG2_3-52-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	52	heart	1223	HEART	3sn3N3g3	3sn3N3g3	ə s n ə ŋ ə g ə	false
+401	QAGET_2-62-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	62	kill	1417	KILL	k3 b3luNg3 b3gain y3p	k3 b3luNg3 b3gain y3p	k ə b ə l u ŋ g ə b ə g ɐ i n j ə p	false
+402	URA_PNG2-62-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	62	kill	1417	KILL	k3bEyo	k3bEyo	k ə b a j o	false
+403	URA_PNG2_2-62-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	62	kill	1417	KILL	x3 weN	x3 weN	x ə w e ŋ	false
+404	URA_PNG2_3-62-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	62	kill	1417	KILL	k3t n3m3s	k3t n3m3s	k ə t n ə m ə s	false
+405	QAGET_2-59-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	59	know	3626	KNOW	k3 ndl3m	k3 ndl3m	k ə n d l ə m	false
+406	URA_PNG2-59-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	59	know	3626	KNOW	k3t d3m	k3t d3m	k ə t d ə m	false
+407	URA_PNG2_2-59-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	59	know	3626	KNOW	xat d3r3m	xat d3r3m	x ɐ t d ə r ə m	false
+408	URA_PNG2_3-59-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	59	know	3626	KNOW	k3t d3m	k3t d3m	k ə t d ə m	false
+409	QAGET_2-67-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	67	lie	1411	LIE (REST)	i g3 br3in	i g3 br3in	i g ə b r ə i n	false
+410	URA_PNG2-67-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	67	lie	1411	LIE (REST)	k3t n3m3s	k3t n3m3s	k ə t n ə m ə s	false
+411	URA_PNG2_2-67-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	67	lie	1411	LIE (REST)	xatas	xatas	x ɐ t ɐ s	false
+412	URA_PNG2_3-67-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	67	lie	1411	LIE (REST)	k3t n3m3s	k3t n3m3s	k ə t n ə m ə s	false
+413	QAGET-14-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	14	long	1203	LONG	inkul	inkul	i n k u l	false
+414	QAGET_2-14-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	14	long	1203	LONG	Nulka	Nulka	ŋ u l k ɐ	false
+415	URA_PNG2-14-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	14	long	1203	LONG	uuyug3	uuyug3	u u j u g ə	false
+416	URA_PNG2_2-14-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	14	long	1203	LONG	unu	unu	u n u	false
+417	URA_PNG2_3-14-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	14	long	1203	LONG	uuyug3	uuyug3	u u j u g ə	false
+418	QAGET-17-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	17	man	1554	MAN	gw~atka	gw~atka	gʷ ɐ t k ɐ	false
+419	QAGET_2-17-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	17	man	1554	MAN	xw3tk3	xw3tk3	x w ə t k ə	false
+420	URA_PNG2-17-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	17	man	1554	MAN	g3muEg3	g3muEg3	g ə m u a g ə	false
+421	URA_PNG2_2-17-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	17	man	1554	MAN	gamoExa	gamoExa	g ɐ m o a x ɐ	false
+422	URA_PNG2_3-17-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	17	man	1554	MAN	g3muEg3	g3muEg3	g ə m u a g ə	false
+423	QAGET-10-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	10	many	1198	MANY	bup	bup	b u p	false
+424	QAGET_2-10-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	10	many	1198	MANY	buup	buup	b u u p	false
+425	URA_PNG2-10-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	10	many	1198	MANY	m3r3g3p	m3r3g3p	m ə r ə g ə p	false
+426	URA_PNG2_2-10-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	10	many	1198	MANY	masirat	masirat	m ɐ s i r ɐ t	false
+427	URA_PNG2_3-10-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	10	many	1198	MANY	m3r3g3p	m3r3g3p	m ə r ə g ə p	false
+428	QAGET-73-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	73	moon	1313	MOON	yagunki	yagunki	j ɐ g u n k i	false
+429	QAGET_2-73-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	73	moon	1313	MOON	yoxuNi	yoxuNi	j o x u ŋ i	false
+430	URA_PNG2-73-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	73	moon	1313	MOON	yaguNi	yaguNi	j ɐ g u ŋ i	false
+431	URA_PNG2_2-73-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	73	moon	1313	MOON	yaxuNi	yaxuNi	j ɐ x u ŋ i	false
+432	URA_PNG2_3-73-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	73	moon	1313	MOON	y3guNi	y3guNi	j ə g u ŋ i	false
+433	QAGET-42-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	42	mouth	674	MOUTH	amki	amki	ɐ m k i	false
+434	QAGET_2-42-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	42	mouth	674	MOUTH	3pmgi	3pmgi	ə p m g i	false
+435	URA_PNG2-42-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	42	mouth	674	MOUTH	3 bEmgi	3 bEmgi	ə b a m g i	false
+436	URA_PNG2_2-42-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	42	mouth	674	MOUTH	aw3mgi	aw3mgi	ɐ w ə m g i	false
+437	URA_PNG2_3-42-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	42	mouth	674	MOUTH	3 bEmgi	3 bEmgi	ə b a m g i	false
+438	QAGET-50-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	50	neck	1333	NECK	g3n3m	g3n3m	g ə n ə m	false
+439	QAGET_2-50-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	50	neck	1333	NECK	r3g3n3m	r3g3n3m	r ə g ə n ə m	false
+440	URA_PNG2-50-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	50	neck	1333	NECK	3 EgoiNi	3 EgoiNi	ə a g o i ŋ i	false
+441	URA_PNG2_2-50-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	50	neck	1333	NECK	aegoiNi	aegoiNi	ɐ e g o i ŋ i	false
+442	URA_PNG2_3-50-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	50	neck	1333	NECK	3 EgoiNi	3 EgoiNi	ə a g o i ŋ i	false
+443	QAGET_2-8-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	8	not	1240	NOT	kw~3sik	kw~3sik	kʷ ə s i k	false
+444	URA_PNG2-8-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	8	not	1240	NOT	k3ku	k3ku	k ə k u	false
+445	URA_PNG2_2-8-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	8	not	1240	NOT	xaku	xaku	x ɐ k u	false
+446	URA_PNG2_3-8-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	8	not	1240	NOT	k3ku	k3ku	k ə k u	false
+447	QAGET_2-76-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	76	rain	2108	RAINING OR RAIN	xaitki	xaitki	x ɐ i t k i	false
+448	URA_PNG2-76-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	76	rain	2108	RAINING OR RAIN	suiigi	suiigi	s u i i g i	false
+449	URA_PNG2_2-76-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	76	rain	2108	RAINING OR RAIN	suigi	suigi	s u i g i	false
+450	URA_PNG2_3-76-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	76	rain	2108	RAINING OR RAIN	suiigi	suiigi	s u i i g i	false
+451	QAGET-87-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	87	red	156	RED	mariaga	mariaga	m ɐ r i ɐ g ɐ	false
+452	QAGET_2-87-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	87	red	156	RED	g3r3k3	g3r3k3	g ə r ə k ə	false
+453	URA_PNG2-87-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	87	red	156	RED	m3gur3t	m3gur3t	m ə g u r ə t	false
+454	URA_PNG2_2-87-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	87	red	156	RED	yurat	yurat	j u r ɐ t	false
+455	URA_PNG2_3-87-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	87	red	156	RED	m3gur3t	m3gur3t	m ə g u r ə t	false
+456	QAGET-26-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	26	root	670	ROOT	s3nagut	s3nagut	s ə n ɐ g u t	false
+457	QAGET_2-26-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	26	root	670	ROOT	3Ng3lk3	3Ng3lk3	ə ŋ g ə l k ə	false
+458	URA_PNG2-26-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	26	root	670	ROOT	og3i	og3i	o g ə i	false
+459	URA_PNG2_2-26-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	26	root	670	ROOT	snagutka	snagutka	s n ɐ g u t k ɐ	false
+460	URA_PNG2_3-26-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	26	root	670	ROOT	ogai	ogai	o g ɐ i	false
+461	QAGET_2-98-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	98	round	1395	ROUND	b3img3	b3img3	b ə i m g ə	false
+462	URA_PNG2-98-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	98	round	1395	ROUND	m3Ngu3m	m3Ngu3m	m ə ŋ g u ə m	false
+463	URA_PNG2_2-98-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	98	round	1395	ROUND	namet	namet	n ɐ m e t	false
+464	URA_PNG2_3-98-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	98	round	1395	ROUND	m3Ngu3m	m3Ngu3m	m ə ŋ g u ə m	false
+465	QAGET_2-78-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	78	sand	671	SAND	xunx3	xunx3	x u n x ə	false
+466	URA_PNG2-78-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	78	sand	671	SAND	ow3n	ow3n	o w ə n	false
+467	URA_PNG2_2-78-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	78	sand	671	SAND	xungi	xungi	x u n g i	false
+468	URA_PNG2_3-78-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	78	sand	671	SAND	ow3n	ow3n	o w ə n	false
+469	QAGET_2-71-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	71	say	1458	SAY	k3m m3r3g3n	k3m m3r3g3n	k ə m m ə r ə g ə n	false
+470	URA_PNG2-71-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	71	say	1458	SAY	k3t3m3n	k3t3m3n	k ə t ə m ə n	false
+471	URA_PNG2_2-71-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	71	say	1458	SAY	xuar	xuar	x u ɐ r	false
+472	URA_PNG2_3-71-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	71	say	1458	SAY	k3t3m3n	k3t3m3n	k ə t ə m ə n	false
+473	QAGET-24-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	24	seed	714	SEED	agam	agam	ɐ g ɐ m	false
+474	URA_PNG2-24-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	24	seed	714	SEED	N3muNi3t	N3muNi3t	ŋ ə m u ŋ i ə t	false
+475	URA_PNG2_2-24-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	24	seed	714	SEED	qawam	qawam	q ɐ w ɐ m	false
+476	URA_PNG2_3-24-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	24	seed	714	SEED	N3muNiEt	N3muNiEt	ŋ ə m u ŋ i a t	false
+477	QAGET-68-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	68	sit	1416	SIT	ka mugun	ka mugun	k ɐ m u g u n	false
+478	QAGET_2-68-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	68	sit	1416	SIT	xw3tk3 k3mugun	xw3tk3 k3mugun	x w ə t k ə k ə m u g u n	false
+479	URA_PNG2-68-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	68	sit	1416	SIT	ni3t mugun	ni3t mugun	n i ə t m u g u n	false
+480	URA_PNG2_2-68-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	68	sit	1416	SIT	xatuxun	xatuxun	x ɐ t u x u n	false
+481	URA_PNG2_3-68-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	68	sit	1416	SIT	ni3t mugun	ni3t mugun	n i ə t m u g u n	false
+482	QAGET-60-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	60	sleep	1585	SLEEP	ka mbrain	ka mbrain	k ɐ m b r ɐ i n	false
+483	QAGET_2-60-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	60	sleep	1585	SLEEP	k3 mbrain	k3 mbrain	k ə m b r ɐ i n	false
+484	URA_PNG2-60-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	60	sleep	1585	SLEEP	k3t n3m3s	k3t n3m3s	k ə t n ə m ə s	false
+485	URA_PNG2_2-60-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	60	sleep	1585	SLEEP	xat namas	xat namas	x ɐ t n ɐ m ɐ s	false
+486	QAGET-15-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	15	small	1246	SMALL	gilka	gilka	g i l k ɐ	false
+487	QAGET_2-15-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	15	small	1246	SMALL	3gilini	3gilini	ə g i l i n i	false
+488	URA_PNG2-15-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	15	small	1246	SMALL	gaini	gaini	g ɐ i n i	false
+489	URA_PNG2_2-15-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	15	small	1246	SMALL	gaini	gaini	g ɐ i n i	false
+490	URA_PNG2_3-15-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	15	small	1246	SMALL	gaini	gaini	g ɐ i n i	false
+491	QAGET-81-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	81	smoke	778	SMOKE (EXHAUST)	naNas	naNas	n ɐ ŋ ɐ s	false
+492	QAGET_2-81-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	81	smoke	778	SMOKE (EXHAUST)	n3Nsayi	n3Nsayi	n ə ŋ s ɐ j i	false
+493	URA_PNG2-81-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	81	smoke	778	SMOKE (EXHAUST)	butbutki	butbutki	b u t b u t k i	false
+494	URA_PNG2_2-81-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	81	smoke	778	SMOKE (EXHAUST)	butbutki	butbutki	b u t b u t k i	false
+495	URA_PNG2_3-81-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	81	smoke	778	SMOKE (EXHAUST)	butbutki	butbutki	b u t b u t k i	false
+496	QAGET-69-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	69	stand	1442	STAND	ka mar3	ka mar3	k ɐ m ɐ r ə	false
+497	QAGET_2-69-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	69	stand	1442	STAND	i x3 m3r3	i x3 m3r3	i x ə m ə r ə	false
+498	URA_PNG2-69-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	69	stand	1442	STAND	k3t mair	k3t mair	k ə t m ɐ i r	false
+499	URA_PNG2_2-69-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	69	stand	1442	STAND	xatair	xatair	x ɐ t ɐ i r	false
+500	URA_PNG2_3-69-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	69	stand	1442	STAND	k3t mair	k3t mair	k ə t m ɐ i r	false
+501	QAGET_2-63-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	63	swim	1439	SWIM	kit t3r3	kit t3r3	k i t t ə r ə	false
+502	URA_PNG2-63-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	63	swim	1439	SWIM	k3t tort3m	k3t tort3m	k ə t t o r t ə m	false
+503	URA_PNG2_2-63-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	63	swim	1439	SWIM	xa tor	xa tor	x ɐ t o r	false
+504	URA_PNG2_3-63-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	63	swim	1439	SWIM	k3t tort3m	k3t tort3m	k ə t t o r t ə m	false
+505	QAGET-35-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	35	tail	1220	TAIL	bilaNka	bilaNka	b i l ɐ ŋ k ɐ	false
+506	QAGET_2-35-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	35	tail	1220	TAIL	k3niski	k3niski	k ə n i s k i	false
+507	URA_PNG2-35-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	35	tail	1220	TAIL	3 niski	3 niski	ə n i s k i	false
+508	URA_PNG2_2-35-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	35	tail	1220	TAIL	ixurit	ixurit	i x u r i t	false
+509	URA_PNG2_3-35-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	35	tail	1220	TAIL	3 niski	3 niski	ə n i s k i	false
+510	QAGET_2-5-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	5	that	78	THAT	lux3 muk	lux3 muk	l u x ə m u k	false
+511	URA_PNG2-5-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	5	that	78	THAT	i3k muk	i3k muk	i ə k m u k	false
+512	URA_PNG2_2-5-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	5	that	78	THAT	iak	iak	i ɐ k	false
+513	URA_PNG2_3-5-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	5	that	78	THAT	i3k muk	i3k muk	i ə k m u k	false
+514	QAGET_2-4-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	4	this	1214	THIS	lux3	lux3	l u x ə	false
+515	URA_PNG2-4-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	4	this	1214	THIS	Er3k	Er3k	a r ə k	false
+516	URA_PNG2_2-4-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	4	this	1214	THIS	rak	rak	r ɐ k	false
+517	URA_PNG2_3-4-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	4	this	1214	THIS	Er3k	Er3k	a r ə k	false
+518	QAGET_2-65-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	65	walk	1443	WALK	ix3 tit	ix3 tit	i x ə t i t	false
+519	URA_PNG2-65-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	65	walk	1443	WALK	k3 tit	k3 tit	k ə t i t	false
+520	URA_PNG2_2-65-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	65	walk	1443	WALK	xatet	xatet	x ɐ t e t	false
+521	URA_PNG2_3-65-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	65	walk	1443	WALK	k3 tit	k3 tit	k ə t i t	false
+522	QAGET-7-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	7	what	1236	WHAT	angi	angi	ɐ n g i	false
+523	QAGET-7-2	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	7	what	1236	WHAT	nan	nan	n ɐ n	false
+524	QAGET_2-7-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	7	what	1236	WHAT	n3n3	n3n3	n ə n ə	false
+525	URA_PNG2-7-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	7	what	1236	WHAT	3Ngig3	3Ngig3	ə ŋ g i g ə	false
+526	URA_PNG2_2-7-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	7	what	1236	WHAT	gixa	gixa	g i x ɐ	false
+527	URA_PNG2_3-7-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	7	what	1236	WHAT	3Ngig3	3Ngig3	ə ŋ g i g ə	false
+528	QAGET-90-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	90	white	1335	WHITE	alawil	alawil	ɐ l ɐ w i l	false
+529	QAGET_2-90-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	90	white	1335	WHITE	lauwil	lauwil	l ɐ u w i l	false
+530	URA_PNG2-90-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	90	white	1335	WHITE	gulumbith~	gulumbith~	g u l u m b i tʰ	false
+531	URA_PNG2_2-90-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	90	white	1335	WHITE	xulum	xulum	x u l u m	false
+532	URA_PNG2_3-90-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	90	white	1335	WHITE	gulumbith~	gulumbith~	g u l u m b i tʰ	false
+533	QAGET-6-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	6	who	1235	WHO	n3ma	n3ma	n ə m ɐ	false
+534	QAGET_2-6-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	6	who	1235	WHO	n3m3	n3m3	n ə m ə	false
+535	URA_PNG2-6-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	6	who	1235	WHO	3uNgu3gait	3uNgu3gait	ə u ŋ g u ə g ɐ i t	false
+536	URA_PNG2_2-6-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	6	who	1235	WHO	uge	uge	u g e	false
+537	URA_PNG2_3-6-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	6	who	1235	WHO	3uNgu3gait	3uNgu3gait	ə u ŋ g u ə g ɐ i t	false
+538	QAGET-16-1	QAGET	QAGET	qaqe1238	Qaqet	Baining			False	16	woman	962	WOMAN	nanki	nanki	n ɐ n k i	false
+539	QAGET_2-16-1	QAGET_2	QAGET_2	qaqe1238	Qaqet	Baining			False	16	woman	962	WOMAN	n3Ni	n3Ni	n ə ŋ i	false
+540	URA_PNG2-16-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	16	woman	962	WOMAN	Ew3pki	Ew3pki	a w ə p k i	false
+541	URA_PNG2_2-16-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	16	woman	962	WOMAN	wopki	wopki	w o p k i	false
+542	URA_PNG2_3-16-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	16	woman	962	WOMAN	Ew3pki	Ew3pki	a w ə p k i	false
+543	URA_PNG2-89-1	URA_PNG2	URA_PNG2	urap1240	Ura (Papua New Guinea)	Baining			False	89	yellow	1424	YELLOW	k3bus	k3bus	k ə b u s	false
+544	URA_PNG2_2-89-1	URA_PNG2_2	URA_PNG2_2	urap1240	Ura (Papua New Guinea)	Baining			False	89	yellow	1424	YELLOW	xabus	xabus	x ɐ b u s	false
+545	URA_PNG2_3-89-1	URA_PNG2_3	URA_PNG2_3	urap1240	Ura (Papua New Guinea)	Baining			False	89	yellow	1424	YELLOW	k3bus	k3bus	k ə b u s	false

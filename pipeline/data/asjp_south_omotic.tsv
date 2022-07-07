@@ -122,78 +122,189 @@ ID	ASJP_ID	DOCULECT	LANGUAGE_NAME	GLOTTOCODE	GLOTTOLOG_NAME	LANGUAGE_LINEAGE_0	L
 121	ARI-2-1	ARI	ARI	aari1239	Aari	South Omotic	AHK	Aari-Gayil	False	2	*you	1215	THOU	ana	ana	ɐ n ɐ	false
 122	GAYIL-2-1	GAYIL	GAYIL	gayi1237	Gayil	South Omotic	AHK	Aari-Gayil	False	2	*you	1215	THOU	yena	yena	j e n ɐ	false
 123	BANNA-1-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	1	*I	1209	I	int~a	int~a	i ⁿt ɐ	false
-124	KARO-1-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	1	*I	1209	I	inta	inta	i n t ɐ	false
-125	BANNA-30-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	30	*blood	946	BLOOD	maq3s	maq3s	m ɐ q ə s	false
-126	KARO-30-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	30	*blood	946	BLOOD	ma7asi	ma7asi	m ɐ ʔ ɐ s i	false
-127	BANNA-31-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	31	*bone	1394	BONE	lEfa	lEfa	l a f ɐ	false
-128	KARO-31-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	31	*bone	1394	BONE	lapo	lapo	l ɐ p o	false
-129	BANNA-51-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	51	*breasts	1402	BREAST	qaqa	qaqa	q ɐ q ɐ	false
-130	KARO-51-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	51	*breasts	1402	BREAST	ami	ami	ɐ m i	false
-131	BANNA-66-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	66	*come	1446	COME	ni7a	ni7a	n i ʔ ɐ	false
-132	KARO-66-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	66	*come	1446	COME	na7i	na7i	n ɐ ʔ i	false
-133	BANNA-61-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	61	*die	1494	DIE	di7idi	di7idi	d i ʔ i d i	false
-134	KARO-61-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	61	*die	1494	DIE	denbi	denbi	d e n b i	false
-135	BANNA-21-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	21	*dog	2009	DOG	qaski	qaski	q ɐ s k i	false
-136	KARO-21-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	21	*dog	2009	DOG	k"oski	k"oski	kʼ o s k i	false
-137	BANNA-54-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	54	*drink	1401	DRINK	wuC"a	wuC"a	w u tʃʼ ɐ	false
-138	KARO-54-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	54	*drink	1401	DRINK	wuC"i	wuC"i	w u tʃʼ i	false
-139	BANNA-39-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	39	*ear	1247	EAR	qami	qami	q ɐ m i	false
-140	KARO-39-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	39	*ear	1247	EAR	k"amo	k"amo	kʼ ɐ m o	false
-141	BANNA-40-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	40	*eye	1248	EYE	aei	aei	ɐ e i	false
-142	KARO-40-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	40	*eye	1248	EYE	api	api	ɐ p i	false
-143	BANNA-82-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	82	*fire	221	FIRE	nu	nu	n u	false
-144	KARO-82-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	82	*fire	221	FIRE	no	no	n o	false
-145	BANNA-19-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	19	*fish	227	FISH	kara	kara	k ɐ r ɐ	false
-146	KARO-19-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	19	*fish	227	FISH	kara	kara	k ɐ r ɐ	false
-147	KARO-95-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	95	*full	1429	FULL	posi	posi	p o s i	false
-148	BANNA-48-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	48	*hand	1277	HAND	ani	ani	ɐ n i	false
-149	KARO-48-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	48	*hand	1277	HAND	an	an	ɐ n	false
-150	BANNA-58-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	58	*hear	1408	HEAR	qansa	qansa	q ɐ n s ɐ	false
-151	KARO-58-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	58	*hear	1408	HEAR	Eser	Eser	a s e r	false
-152	BANNA-34-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	34	*horn	1393	HORN (ANATOMY)	qoSo	qoSo	q o ʃ o	false
-153	KARO-34-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	34	*horn	1393	HORN (ANATOMY)	k"uSumo	k"uSumo	kʼ u ʃ u m o	false
-154	BANNA-47-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	47	*knee	1371	KNEE	buko	buko	b u k o	false
-155	KARO-47-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	47	*knee	1371	KNEE	buk"o	buk"o	b u kʼ o	false
-156	BANNA-25-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	25	*leaf	628	LEAF	aCa	aCa	ɐ tʃ ɐ	false
-157	BANNA-53-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	53	*liver	1224	LIVER	torobo	torobo	t o r o b o	false
-158	KARO-53-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	53	*liver	1224	LIVER	t3rabo	t3rabo	t ə r ɐ b o	false
-159	BANNA-22-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	22	*louse	1392	LOUSE	qasa	qasa	q ɐ s ɐ	false
-160	KARO-22-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	22	*louse	1392	LOUSE	k"osa	k"osa	kʼ o s ɐ	false
-161	BANNA-86-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	86	*mountain	639	MOUNTAIN	Tuka	Tuka	c u k ɐ	false
-162	KARO-86-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	86	*mountain	639	MOUNTAIN	gomari	gomari	g o m ɐ r i	false
-163	BANNA-100-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	100	*name	1405	NAME	nabi	nabi	n ɐ b i	false
-164	KARO-100-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	100	*name	1405	NAME	nabi	nabi	n ɐ b i	false
-165	BANNA-96-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	96	*new	1231	NEW	hali	hali	h ɐ l i	false
-166	KARO-96-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	96	*new	1231	NEW	hali	hali	h ɐ l i	false
-167	BANNA-92-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	92	*night	1233	NIGHT	soti	soti	s o t i	false
-168	KARO-92-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	92	*night	1233	NIGHT	ibanin	ibanin	i b ɐ n i n	false
-169	BANNA-41-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	41	*nose	1221	NOSE	nuki	nuki	n u k i	false
-170	KARO-41-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	41	*nose	1221	NOSE	nuki	nuki	n u k i	false
-171	BANNA-11-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	11	*one	1493	ONE	kola	kola	k o l ɐ	false
-172	KARO-11-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	11	*one	1493	ONE	kala	kala	k ɐ l ɐ	false
-173	BANNA-85-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	85	*path	2252	PATH	qoti	qoti	q o t i	false
-174	BANNA-18-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	18	*person	683	PERSON	Edi	Edi	a d i	false
-175	BANNA-57-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	57	*see	1409	SEE	SEda	SEda	ʃ a d ɐ	false
-176	KARO-57-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	57	*see	1409	SEE	api	api	ɐ p i	false
-177	BANNA-28-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	28	*skin	763	SKIN	Ebe	Ebe	a b e	false
-178	KARO-28-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	28	*skin	763	SKIN	biSi	biSi	b i ʃ i	false
-179	BANNA-74-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	74	*star	1430	STAR	manka	manka	m ɐ n k ɐ	false
-180	KARO-74-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	74	*star	1430	STAR	Ezini	Ezini	a z i n i	false
-181	BANNA-77-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	77	*stone	857	STONE	seni	seni	s e n i	false
-182	KARO-77-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	77	*stone	857	STONE	suni	suni	s u n i	false
-183	BANNA-72-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	72	*sun	1343	SUN	hai	hai	h ɐ i	false
-184	KARO-72-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	72	*sun	1343	SUN	hayo	hayo	h ɐ j o	false
-185	BANNA-44-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	44	*tongue	1205	TONGUE	at3pa	at3pa	ɐ t ə p ɐ	false
-186	KARO-44-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	44	*tongue	1205	TONGUE	atabi	atabi	ɐ t ɐ b i	false
-187	BANNA-43-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	43	*tooth	1380	TOOTH	aci	aci	ɐ ts i	false
-188	KARO-43-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	43	*tooth	1380	TOOTH	atsi	atsi	ɐ t s i	false
-189	BANNA-23-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	23	*tree	906	TREE	haqa	haqa	h ɐ q ɐ	false
-190	KARO-23-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	23	*tree	906	TREE	hak"a	hak"a	h ɐ kʼ ɐ	false
-191	BANNA-12-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	12	*two	1498	TWO	lama	lama	l ɐ m ɐ	false
-192	KARO-12-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	12	*two	1498	TWO	lama	lama	l ɐ m ɐ	false
-193	BANNA-75-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	75	*water	948	WATER	noqo	noqo	n o q o	false
-194	KARO-75-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	75	*water	948	WATER	nunk"o	nunk"o	n u n kʼ o	false
-195	BANNA-3-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	3	*we	1212	WE	wodi	wodi	w o d i	false
-196	KARO-3-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	3	*we	1212	WE	wodi	wodi	w o d i	false
-197	BANNA-2-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	2	*you	1215	THOU	ya	ya	j ɐ	false
-198	KARO-2-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	2	*you	1215	THOU	ya	ya	j ɐ	false
+124	HAMER_BANNA-1-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	1	*I	1209	I	inta	inta	i n t ɐ	false
+125	KARO-1-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	1	*I	1209	I	inta	inta	i n t ɐ	false
+126	BANNA-30-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	30	*blood	946	BLOOD	maq3s	maq3s	m ɐ q ə s	false
+127	HAMER_BANNA-30-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	30	*blood	946	BLOOD	zomb"i	zomb"i	z o m b’ i	false
+128	KARO-30-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	30	*blood	946	BLOOD	ma7asi	ma7asi	m ɐ ʔ ɐ s i	false
+129	KARO_2-30-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	30	*blood	946	BLOOD	makasi	makasi	m ɐ k ɐ s i	false
+130	BANNA-31-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	31	*bone	1394	BONE	lEfa	lEfa	l a f ɐ	false
+131	HAMER_BANNA-31-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	31	*bone	1394	BONE	lepi	lepi	l e p i	false
+132	KARO-31-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	31	*bone	1394	BONE	lapo	lapo	l ɐ p o	false
+133	KARO_2-31-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	31	*bone	1394	BONE	lapo	lapo	l ɐ p o	false
+134	BANNA-51-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	51	*breasts	1402	BREAST	qaqa	qaqa	q ɐ q ɐ	false
+135	HAMER_BANNA-51-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	51	*breasts	1402	BREAST	ami	ami	ɐ m i	false
+136	KARO-51-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	51	*breasts	1402	BREAST	ami	ami	ɐ m i	false
+137	BANNA-66-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	66	*come	1446	COME	ni7a	ni7a	n i ʔ ɐ	false
+138	HAMER_BANNA-66-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	66	*come	1446	COME	ni7	ni7	n i ʔ	false
+139	KARO-66-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	66	*come	1446	COME	na7i	na7i	n ɐ ʔ i	false
+140	BANNA-61-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	61	*die	1494	DIE	di7idi	di7idi	d i ʔ i d i	false
+141	HAMER_BANNA-61-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	61	*die	1494	DIE	di	di	d i	false
+142	KARO-61-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	61	*die	1494	DIE	denbi	denbi	d e n b i	false
+143	BANNA-21-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	21	*dog	2009	DOG	qaski	qaski	q ɐ s k i	false
+144	HAMER_BANNA-21-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	21	*dog	2009	DOG	qaski	qaski	q ɐ s k i	false
+145	KARO-21-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	21	*dog	2009	DOG	k"oski	k"oski	kʼ o s k i	false
+146	KARO_2-21-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	21	*dog	2009	DOG	kaski	kaski	k ɐ s k i	false
+147	BANNA-54-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	54	*drink	1401	DRINK	wuC"a	wuC"a	w u tʃʼ ɐ	false
+148	HAMER_BANNA-54-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	54	*drink	1401	DRINK	wuC"	wuC"	w u tʃʼ	false
+149	KARO-54-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	54	*drink	1401	DRINK	wuC"i	wuC"i	w u tʃʼ i	false
+150	KARO_2-54-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	54	*drink	1401	DRINK	uCa	uCa	u tʃ ɐ	false
+151	BANNA-39-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	39	*ear	1247	EAR	qami	qami	q ɐ m i	false
+152	HAMER_BANNA-39-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	39	*ear	1247	EAR	qami	qami	q ɐ m i	false
+153	KARO-39-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	39	*ear	1247	EAR	k"amo	k"amo	kʼ ɐ m o	false
+154	KARO_2-39-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	39	*ear	1247	EAR	kamo	kamo	k ɐ m o	false
+155	BANNA-40-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	40	*eye	1248	EYE	aei	aei	ɐ e i	false
+156	HAMER_BANNA-40-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	40	*eye	1248	EYE	api	api	ɐ p i	false
+157	KARO-40-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	40	*eye	1248	EYE	api	api	ɐ p i	false
+158	KARO_2-40-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	40	*eye	1248	EYE	api	api	ɐ p i	false
+159	BANNA-82-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	82	*fire	221	FIRE	nu	nu	n u	false
+160	HAMER_BANNA-82-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	82	*fire	221	FIRE	nu	nu	n u	false
+161	KARO-82-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	82	*fire	221	FIRE	no	no	n o	false
+162	BANNA-19-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	19	*fish	227	FISH	kara	kara	k ɐ r ɐ	false
+163	HAMER_BANNA-19-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	19	*fish	227	FISH	kara	kara	k ɐ r ɐ	false
+164	KARO-19-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	19	*fish	227	FISH	kara	kara	k ɐ r ɐ	false
+165	KARO_2-19-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	19	*fish	227	FISH	kara	kara	k ɐ r ɐ	false
+166	HAMER_BANNA-95-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	95	*full	1429	FULL	miSS	miSS	m i ʃ ʃ	false
+167	KARO-95-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	95	*full	1429	FULL	posi	posi	p o s i	false
+168	BANNA-48-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	48	*hand	1277	HAND	ani	ani	ɐ n i	false
+169	HAMER_BANNA-48-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	48	*hand	1277	HAND	an	an	ɐ n	false
+170	KARO-48-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	48	*hand	1277	HAND	an	an	ɐ n	false
+171	KARO_2-48-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	48	*hand	1277	HAND	an	an	ɐ n	false
+172	BANNA-58-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	58	*hear	1408	HEAR	qansa	qansa	q ɐ n s ɐ	false
+173	KARO-58-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	58	*hear	1408	HEAR	Eser	Eser	a s e r	false
+174	KARO_2-58-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	58	*hear	1408	HEAR	esara	esara	e s ɐ r ɐ	false
+175	BANNA-34-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	34	*horn	1393	HORN (ANATOMY)	qoSo	qoSo	q o ʃ o	false
+176	HAMER_BANNA-34-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	34	*horn	1393	HORN (ANATOMY)	quSumb"a	quSumb"a	q u ʃ u m b’ ɐ	false
+177	KARO-34-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	34	*horn	1393	HORN (ANATOMY)	k"uSumo	k"uSumo	kʼ u ʃ u m o	false
+178	KARO_2-34-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	34	*horn	1393	HORN (ANATOMY)	koSumo	koSumo	k o ʃ u m o	false
+179	BANNA-47-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	47	*knee	1371	KNEE	buko	buko	b u k o	false
+180	HAMER_BANNA-47-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	47	*knee	1371	KNEE	buqo	buqo	b u q o	false
+181	KARO-47-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	47	*knee	1371	KNEE	buk"o	buk"o	b u kʼ o	false
+182	KARO_2-47-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	47	*knee	1371	KNEE	buko	buko	b u k o	false
+183	BANNA-25-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	25	*leaf	628	LEAF	aCa	aCa	ɐ tʃ ɐ	false
+184	HAMER_BANNA-25-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	25	*leaf	628	LEAF	qalbe	qalbe	q ɐ l b e	false
+185	BANNA-53-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	53	*liver	1224	LIVER	torobo	torobo	t o r o b o	false
+186	HAMER_BANNA-53-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	53	*liver	1224	LIVER	tirab"o	tirab"o	t i r ɐ b’ o	false
+187	KARO-53-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	53	*liver	1224	LIVER	t3rabo	t3rabo	t ə r ɐ b o	false
+188	KARO_2-53-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	53	*liver	1224	LIVER	torabo	torabo	t o r ɐ b o	false
+189	BANNA-22-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	22	*louse	1392	LOUSE	qasa	qasa	q ɐ s ɐ	false
+190	HAMER_BANNA-22-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	22	*louse	1392	LOUSE	qasa	qasa	q ɐ s ɐ	false
+191	KARO-22-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	22	*louse	1392	LOUSE	k"osa	k"osa	kʼ o s ɐ	false
+192	BANNA-86-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	86	*mountain	639	MOUNTAIN	Tuka	Tuka	c u k ɐ	false
+193	HAMER_BANNA-86-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	86	*mountain	639	MOUNTAIN	d"uka	d"uka	d’ u k ɐ	false
+194	KARO-86-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	86	*mountain	639	MOUNTAIN	gomari	gomari	g o m ɐ r i	false
+195	BANNA-100-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	100	*name	1405	NAME	nabi	nabi	n ɐ b i	false
+196	HAMER_BANNA-100-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	100	*name	1405	NAME	nabi	nabi	n ɐ b i	false
+197	KARO-100-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	100	*name	1405	NAME	nabi	nabi	n ɐ b i	false
+198	KARO_2-100-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	100	*name	1405	NAME	nabi	nabi	n ɐ b i	false
+199	BANNA-96-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	96	*new	1231	NEW	hali	hali	h ɐ l i	false
+200	HAMER_BANNA-96-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	96	*new	1231	NEW	hali	hali	h ɐ l i	false
+201	KARO-96-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	96	*new	1231	NEW	hali	hali	h ɐ l i	false
+202	BANNA-92-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	92	*night	1233	NIGHT	soti	soti	s o t i	false
+203	HAMER_BANNA-92-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	92	*night	1233	NIGHT	soti	soti	s o t i	false
+204	KARO-92-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	92	*night	1233	NIGHT	ibanin	ibanin	i b ɐ n i n	false
+205	BANNA-41-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	41	*nose	1221	NOSE	nuki	nuki	n u k i	false
+206	HAMER_BANNA-41-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	41	*nose	1221	NOSE	nuki	nuki	n u k i	false
+207	KARO-41-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	41	*nose	1221	NOSE	nuki	nuki	n u k i	false
+208	KARO_2-41-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	41	*nose	1221	NOSE	nukwi	nukwi	n u k w i	false
+209	BANNA-11-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	11	*one	1493	ONE	kola	kola	k o l ɐ	false
+210	HAMER_BANNA-11-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	11	*one	1493	ONE	kala	kala	k ɐ l ɐ	false
+211	KARO-11-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	11	*one	1493	ONE	kala	kala	k ɐ l ɐ	false
+212	BANNA-85-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	85	*path	2252	PATH	qoti	qoti	q o t i	false
+213	BANNA-18-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	18	*person	683	PERSON	Edi	Edi	a d i	false
+214	KARO_2-18-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	18	*person	683	PERSON	edi	edi	e d i	false
+215	BANNA-57-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	57	*see	1409	SEE	SEda	SEda	ʃ a d ɐ	false
+216	HAMER_BANNA-57-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	57	*see	1409	SEE	ap	ap	ɐ p	false
+217	KARO-57-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	57	*see	1409	SEE	api	api	ɐ p i	false
+218	KARO_2-57-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	57	*see	1409	SEE	apa	apa	ɐ p ɐ	false
+219	BANNA-28-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	28	*skin	763	SKIN	Ebe	Ebe	a b e	false
+220	HAMER_BANNA-28-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	28	*skin	763	SKIN	biSi	biSi	b i ʃ i	false
+221	HAMER_BANNA-28-2	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	28	*skin	763	SKIN	zara	zara	z ɐ r ɐ	false
+222	KARO-28-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	28	*skin	763	SKIN	biSi	biSi	b i ʃ i	false
+223	KARO_2-28-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	28	*skin	763	SKIN	kati	kati	k ɐ t i	false
+224	BANNA-74-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	74	*star	1430	STAR	manka	manka	m ɐ n k ɐ	false
+225	HAMER_BANNA-74-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	74	*star	1430	STAR	ezin	ezin	e z i n	false
+226	KARO-74-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	74	*star	1430	STAR	Ezini	Ezini	a z i n i	false
+227	BANNA-77-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	77	*stone	857	STONE	seni	seni	s e n i	false
+228	HAMER_BANNA-77-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	77	*stone	857	STONE	seni	seni	s e n i	false
+229	KARO-77-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	77	*stone	857	STONE	suni	suni	s u n i	false
+230	BANNA-72-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	72	*sun	1343	SUN	hai	hai	h ɐ i	false
+231	HAMER_BANNA-72-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	72	*sun	1343	SUN	hai	hai	h ɐ i	false
+232	KARO-72-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	72	*sun	1343	SUN	hayo	hayo	h ɐ j o	false
+233	BANNA-44-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	44	*tongue	1205	TONGUE	at3pa	at3pa	ɐ t ə p ɐ	false
+234	HAMER_BANNA-44-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	44	*tongue	1205	TONGUE	atab"	atab"	ɐ t ɐ b’	false
+235	KARO-44-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	44	*tongue	1205	TONGUE	atabi	atabi	ɐ t ɐ b i	false
+236	KARO_2-44-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	44	*tongue	1205	TONGUE	atab	atab	ɐ t ɐ b	false
+237	BANNA-43-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	43	*tooth	1380	TOOTH	aci	aci	ɐ ts i	false
+238	HAMER_BANNA-43-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	43	*tooth	1380	TOOTH	asi	asi	ɐ s i	false
+239	KARO-43-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	43	*tooth	1380	TOOTH	atsi	atsi	ɐ t s i	false
+240	BANNA-23-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	23	*tree	906	TREE	haqa	haqa	h ɐ q ɐ	false
+241	HAMER_BANNA-23-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	23	*tree	906	TREE	haqa	haqa	h ɐ q ɐ	false
+242	KARO-23-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	23	*tree	906	TREE	hak"a	hak"a	h ɐ kʼ ɐ	false
+243	BANNA-12-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	12	*two	1498	TWO	lama	lama	l ɐ m ɐ	false
+244	HAMER_BANNA-12-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	12	*two	1498	TWO	lama	lama	l ɐ m ɐ	false
+245	KARO-12-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	12	*two	1498	TWO	lama	lama	l ɐ m ɐ	false
+246	BANNA-75-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	75	*water	948	WATER	noqo	noqo	n o q o	false
+247	HAMER_BANNA-75-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	75	*water	948	WATER	noqo	noqo	n o q o	false
+248	KARO-75-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	75	*water	948	WATER	nunk"o	nunk"o	n u n kʼ o	false
+249	BANNA-3-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	3	*we	1212	WE	wodi	wodi	w o d i	false
+250	HAMER_BANNA-3-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	3	*we	1212	WE	wodi	wodi	w o d i	false
+251	KARO-3-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	3	*we	1212	WE	wodi	wodi	w o d i	false
+252	BANNA-2-1	BANNA	BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	2	*you	1215	THOU	ya	ya	j ɐ	false
+253	KARO-2-1	KARO	KARO	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	2	*you	1215	THOU	ya	ya	j ɐ	false
+254	HAMER_BANNA-9-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	9	all	98	ALL	wul	wul	w u l	false
+255	HAMER_BANNA-83-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	83	ash	646	ASH	dibini	dibini	d i b i n i	false
+256	KARO_2-27-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	27	bark	1204	BARK	gongo	gongo	g o n g o	false
+257	KARO_2-49-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	49	belly	1251	BELLY	i	i	i	false
+258	HAMER_BANNA-20-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	20	bird	937	BIRD	atti	atti	ɐ t t i	false
+259	HAMER_BANNA-56-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	56	bite	1403	BITE	ga7	ga7	g ɐ ʔ	false
+260	KARO_2-56-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	56	bite	1403	BITE	yeda	yeda	j e d ɐ	false
+261	KARO_2-84-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	84	burn	2102	BURN	reba	reba	r e b ɐ	false
+262	HAMER_BANNA-80-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	80	cloud	1489	CLOUD	polo	polo	p o l o	false
+263	KARO_2-94-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	94	cold	1287	COLD	gulfa	gulfa	g u l f ɐ	false
+264	HAMER_BANNA-99-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	99	dry	1398	DRY	bargad"	bargad"	b ɐ r g ɐ d’	false
+265	HAMER_BANNA-99-2	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	99	dry	1398	DRY	bond"	bond"	b o n d’	false
+266	HAMER_BANNA-55-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	55	eat	1336	EAT	is	is	i s	false
+267	HAMER_BANNA-55-2	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	55	eat	1336	EAT	kumm	kumm	k u m m	false
+268	KARO_2-55-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	55	eat	1336	EAT	ica	ica	i ts ɐ	false
+269	HAMER_BANNA-33-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	33	egg	744	EGG	b"ula	b"ula	b’ u l ɐ	false
+270	HAMER_BANNA-36-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	36	feather	1201	FEATHER	sile	sile	s i l e	false
+271	KARO_2-46-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	46	foot	1301	FOOT	rasa	rasa	r ɐ s ɐ	false
+272	HAMER_BANNA-70-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	70	give	1447	GIVE	im	im	i m	false
+273	HAMER_BANNA-97-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	97	good	1035	GOOD	paya	paya	p ɐ j ɐ	false
+274	HAMER_BANNA-88-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	88	green	1425	GREEN	C"agaj	C"agaj	tʃʼ ɐ g ɐ dʒ	false
+275	KARO_2-37-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	37	hair	1040	HAIR	siti	siti	s i t i	false
+276	HAMER_BANNA-38-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	38	head	1256	HEAD	mete	mete	m e t e	false
+277	KARO_2-38-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	38	head	1256	HEAD	mete	mete	m e t e	false
+278	KARO_2-52-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	52	heart	1223	HEART	owilam	owilam	o w i l ɐ m	false
+279	HAMER_BANNA-62-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	62	kill	1417	KILL	des	des	d e s	false
+280	KARO_2-62-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	62	kill	1417	KILL	desa	desa	d e s ɐ	false
+281	HAMER_BANNA-59-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	59	know	3626	KNOW	d"es	d"es	d’ e s	false
+282	HAMER_BANNA-17-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	17	man	1554	MAN	angi	angi	ɐ n g i	false
+283	HAMER_BANNA-17-2	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	17	man	1554	MAN	E	E	a	false
+284	KARO_2-17-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	17	man	1554	MAN	ange	ange	ɐ n g e	false
+285	HAMER_BANNA-73-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	73	moon	1313	MOON	arpi	arpi	ɐ r p i	false
+286	HAMER_BANNA-42-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	42	mouth	674	MOUTH	apo	apo	ɐ p o	false
+287	KARO_2-42-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	42	mouth	674	MOUTH	apo	apo	ɐ p o	false
+288	HAMER_BANNA-50-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	50	neck	1333	NECK	izaqe	izaqe	i z ɐ q e	false
+289	HAMER_BANNA-50-2	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	50	neck	1333	NECK	qorC"i	qorC"i	q o r tʃʼ i	false
+290	KARO_2-50-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	50	neck	1333	NECK	zagala	zagala	z ɐ g ɐ l ɐ	false
+291	HAMER_BANNA-76-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	76	rain	2108	RAINING OR RAIN	dobi	dobi	d o b i	false
+292	HAMER_BANNA-87-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	87	red	156	RED	zo	zo	z o	false
+293	HAMER_BANNA-26-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	26	root	670	ROOT	C"aC"i	C"aC"i	tʃʼ ɐ tʃʼ i	false
+294	HAMER_BANNA-78-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	78	sand	671	SAND	Sami	Sami	ʃ ɐ m i	false
+295	HAMER_BANNA-71-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	71	say	1458	SAY	gi	gi	g i	false
+296	HAMER_BANNA-71-2	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	71	say	1458	SAY	ham	ham	h ɐ m	false
+297	HAMER_BANNA-24-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	24	seed	714	SEED	b"Enta	b"Enta	b’ a n t ɐ	false
+298	HAMER_BANNA-60-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	60	sleep	1585	SLEEP	rat	rat	r ɐ t	false
+299	HAMER_BANNA-81-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	81	smoke	778	SMOKE (EXHAUST)	C"uba	C"uba	tʃʼ u b ɐ	false
+300	HAMER_BANNA-35-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	35	tail	1220	TAIL	dubana	dubana	d u b ɐ n ɐ	false
+301	HAMER_BANNA-5-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	5	that	78	THAT	aga	aga	ɐ g ɐ	false
+302	HAMER_BANNA-5-2	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	5	that	78	THAT	ogoro	ogoro	o g o r o	false
+303	HAMER_BANNA-4-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	4	this	1214	THIS	ka	ka	k ɐ	false
+304	HAMER_BANNA-4-2	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	4	this	1214	THIS	koro	koro	k o r o	false
+305	HAMER_BANNA-65-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	65	walk	1443	WALK	yay	yay	j ɐ j	false
+306	HAMER_BANNA-7-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	7	what	1236	WHAT	har	har	h ɐ r	false
+307	HAMER_BANNA-90-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	90	white	1335	WHITE	C"auli	C"auli	tʃʼ ɐ u l i	false
+308	HAMER_BANNA-6-1	HAMER_BANNA	HAMER_BANNA	hame1242	Hamer-Banna	South Omotic	AHK	Hamer-Karo	False	6	who	1235	WHO	haine	haine	h ɐ i n e	false
+309	KARO_2-16-1	KARO_2	KARO_2	karo1297	Karo (Ethiopia)	South Omotic	AHK	Hamer-Karo	False	16	woman	962	WOMAN	me	me	m e	false

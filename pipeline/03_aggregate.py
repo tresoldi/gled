@@ -45,7 +45,7 @@ def collect_data(filenames, id_field, parid_field, concept_map=None, lang_date=N
                 # If we have no information on the family as a column,
                 # extract it from the filename, allowing to compute
                 # the `cogset` id
-                if "LANGUAGE_LINEAGE_0" in row:
+                if row.get("LANGUAGE_LINEAGE_0"):
                     family = row["LANGUAGE_LINEAGE_0"]
                     cogset_fields = [
                         row[field]
