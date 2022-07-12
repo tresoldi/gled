@@ -343,7 +343,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--keep_loans",
         action="store_true",
-        help="Keep loans in data (default: remove loans)",
+        help="Keep loans in data (default: keep loans)",
     )
     ARGS = parser.parse_args()
 
