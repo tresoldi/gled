@@ -298,7 +298,8 @@ def write_data(data, args, per_lineage=False):
     # Write sublineage datasets
     for label, entries in lineage_0.items():
         if not "artificial" in label and not "unclassifiable" in label:
-            _write_lineage_data(entries, label, "asjp", args)
+            clabel = "_".join([tok.capitalize() for tok in label.split("_")])
+            _write_lineage_data(entries, clabel, "asjp", args)
     if per_lineage:
         for label, entries in lineage_1.items():
             _write_lineage_data(entries, label, "asjp", args)
