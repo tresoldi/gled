@@ -3,10 +3,12 @@ from pathlib import Path
 from typing import *
 import csv
 import logging
-import string
 import re
+import string
+from collections import defaultdict
 
 # Import 3rd-party labels
+import lingpy
 from unidecode import unidecode
 
 # Setup paths
@@ -187,21 +189,56 @@ def write_data(data):
                 "ASJP_FORM",
                 "TOKENS",
                 "COGID",
+                "ALIGNMENT",
             ],
         )
         writer.writeheader()
         writer.writerows(data)
 
 
+def add_alignments(data):
+    """
+    Add alignments based on the existing COGID mappings.
+    """
+
+    # Collect all forms in all cognate sets
+    cogsets = defaultdict(set)
+    for entry in data:
+        cogsets[entry["COGID"]].add(entry["TOKENS"])
+
+    # Collect aligned forms
+    alm_map = {}
+    cogset_size = len(cogsets)
+    for idx, (cogset, forms) in enumerate(cogsets.items()):
+        if idx % 1000 == 0:
+            logging.info(
+                "Collecting alignments for `%s` (%i/%i)", cogset, idx + 1, cogset_size
+            )
+
+        alm_forms = sorted(forms)
+        msa = lingpy.Multiple(alm_forms)
+        msa.prog_align()
+
+        for form, alm in zip(alm_forms, msa.alm_matrix):
+            alm_map[cogset, form] = " ".join(alm)
+
+    # Add alignments and return
+    for entry in data:
+        entry["ALIGNMENT"] = alm_map.get((entry["COGID"], entry["TOKENS"]))
+
+    return data
+
+
 def main():
     # Read data from Jäger, extending language information and adding
     # transcriptions
-    jaeger = read_jaeger()
+    data = read_jaeger()
 
-    # TODO: do some sorting
+    # Add alignments
+    data = add_alignments(data)
 
     # Write aggregated table to disk
-    write_data(jaeger)
+    write_data(data)
 
 
 if __name__ == "__main__":
