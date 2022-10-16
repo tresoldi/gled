@@ -12,38 +12,3 @@ $ pip install --upgrade pip setuptools wheel
 $ pip install -r requirements.txt
 $ cldfbench catconfig -q
 ```
-
-The first script will take the raw data for both the custom version of ASJP
-and NorthEuraLex, stored in `raw/`, and store it in `data/`. The data is
-separated in files according to the source and the linguistic family specified
-in the source. It is not necessary to run this script yourself, as the
-preprocessed data is distributed along with this repository.
-
-```bash
-$ python 01_prepare_data.py
-```
-
-The second and most computationally intensive script (potentially taking
-days to finish) will perform the
-cognate detection using the extended LexStat method here presented, taking
-the preprocessed data from `data/` and writing the results in the
-`cluster/` directory. As mentioned above, this can executed with only
-the "tidy requirements".
-
-```bash
-$ python 02_cluster.py
-```
-
-The results from the long clustering processing can be aggregated into
-simple long-table tabular files in `output/`.
-
-```bash
-$ python 03_aggregate.py
-```
-
-Datafiles for release, including statistics, can be generated with
-the last script:
-
-```bash
-$ python 04_prepare_release.py
-```
