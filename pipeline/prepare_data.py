@@ -1,10 +1,57 @@
 # Import Python standard libraries
-import csv
 from pathlib import Path
+from typing import *
+import csv
+import logging
+import string
+import re
+
+# Import 3rd-party labels
+from unidecode import unidecode
 
 # Setup paths
 BASE_PATH = Path(__file__).parent
 ROOT_PATH = BASE_PATH.parent
+
+
+def slug(label: str, level: str) -> str:
+    """
+    Return a slugged version of a label.
+    @param label: The text to be slugged. Note that, as this operates on
+        a single string, there is no guarantee of non-collision.
+    @param level: Define the level of slugging to be applied. Currently,
+        accepted levels are "none", "simple", and "full".
+    @return: The slugged version of the label.
+    """
+
+    if level not in ["none", "simple", "full"]:
+        raise ValueError(f"Unknown level of slugging `{level}`.")
+
+    logging.debug("Slugging label `%s` with level `%s`.", label, level)
+
+    # This implementation of the different levels of slugging seems a
+    # bit cumbersome at first, but makes it easy for us to explore alternatives
+    if level in ["simple", "full"]:
+        label = unidecode(label)
+    if level in ["full"]:
+        label = label.lower()
+    if level in ["simple"]:
+        label = "".join(
+            [
+                char
+                for char in label
+                if char in string.ascii_letters + string.digits + "-_"
+            ]
+        )
+    if level in ["full"]:
+        label = "".join([char for char in label if char in string.ascii_letters])
+    if level in ["simple", "full"]:
+        label = re.sub(r"\s+", "_", label.strip())
+
+    logging.debug("Label slugged to `%s`.", label)
+
+    return label
+
 
 # NOTE: This implements a custom implementation of orthographic profiles,
 # so that we don't need the full CLDF/CLLD dependency system
@@ -43,10 +90,23 @@ def read_jaeger():
     """
 
     # Read the language mapping provided by Jäger
+    logging.info("Reading language mapping data.")
     with open(BASE_PATH / "raw" / "languages.csv", encoding="utf-8") as handler:
         langmap = {row["ID"]: row for row in csv.DictReader(handler)}
 
+    # Read the concept mapping provided by us
+    logging.info("Reading concept mapping data.")
+    with open(BASE_PATH / "etc" / "concepts.csv", encoding="utf-8") as handler:
+        concmap = {
+            row["GLOSS"]: {
+                "CONCEPT": row["CONCEPT"],
+                "CONCEPTICON_ID": row["CONCEPTICON_ID"],
+            }
+            for row in csv.DictReader(handler)
+        }
+
     # Read and cache the custom orthographic profile
+    logging.info("Reading orthographic profile.")
     with open(BASE_PATH / "etc" / "orthography.tsv", encoding="utf-8") as handler:
         profile = {
             row["GRAPHEME"]: row["IPA"]
@@ -54,6 +114,7 @@ def read_jaeger():
         }
 
     # Read the source data
+    logging.info("Reading Jaeger 2021 clustered data.")
     data = []
     with open(BASE_PATH / "raw" / "asjp19Clustered.csv", encoding="utf-8") as handler:
         for row in csv.DictReader(handler):
@@ -66,26 +127,41 @@ def read_jaeger():
             glottocode = langmap[lang_id]["Glottocode"]
             glottoname = langmap[lang_id]["Glottolog_Name"]
             glottoclass = langmap[lang_id]["classification_glottolog"]
-            iso_code = langmap[lang_id]["ISO639P3code"]
 
-            # Extend the data with the current entry
-            # TODO: redo IDs so they are indeed unique
-            # TODO: use glottolog classification for the cogid
+            # Build additional information as needed
+            concept = concmap[row["concept"]]["CONCEPT"]
+            concepticon_id = concmap[row["concept"]]["CONCEPTICON_ID"]
+
+            glottolog_family = slug(glottoclass.split(",")[0], level="simple")
+            cogid_num = row["cc"].split("_")[-1]
+            cogid = f"{slug(glottolog_family, level='full')}.{concept}.{cogid_num}"
+
+            # Extend the data with the current entry; we keep track of the IDs
             # TODO: pick the "best" doculect for each glottocode
-            # TODO: map to concepticon-like
             data.append(
                 {
-                    "ID": f"{lang_id}_{row['concept']}",
+                    "ID": f"{lang_id}.{concept}",
                     "LANG_ID": lang_id,
                     "LANGUAGE_NAME": glottoname,
+                    "GLOTTOFAMILY": glottolog_family.replace("_", " "),
                     "GLOTTOCODE": glottocode,
-                    "ISOCODE": iso_code,
-                    "CONCEPT": row["concept"],
+                    "CONCEPT": concept,
+                    "CONCEPTICON_ID": concepticon_id,
                     "ASJP_FORM": row["word"],
                     "TOKENS": get_orthography(row["word"], profile),
-                    "COGID": f"{classification}_{row['cc']}",
+                    "COGID": cogid,
                 }
             )
+    logging.info(f"Read {len(data)} entries from Jaeger 2021.")
+
+    # Sort the data and add the row number to the existing ID, so that we make sure
+    # they are unique
+    logging.info("Sorting data and guaranteeing unique IDs.")
+    data = sorted(
+        data, key=lambda r: (r["CONCEPT"], r["GLOTTOFAMILY"], r["LANG_ID"], r["COGID"])
+    )
+    for idx, row in enumerate(data):
+        row["ID"] = f"{row['ID']}-{idx+1}"
 
     return data
 
@@ -95,6 +171,8 @@ def write_data(data):
     Write final aggregated single table to disk.
     """
 
+    logging.info(f"Writing full data ({len(data)} entries) to disk.")
+
     with open(BASE_PATH / "output" / "full_data.csv", "w", encoding="utf-8") as handler:
         writer = csv.DictWriter(
             handler,
@@ -102,9 +180,10 @@ def write_data(data):
                 "ID",
                 "LANG_ID",
                 "LANGUAGE_NAME",
+                "GLOTTOFAMILY",
                 "GLOTTOCODE",
-                "ISOCODE",
                 "CONCEPT",
+                "CONCEPTICON_ID",
                 "ASJP_FORM",
                 "TOKENS",
                 "COGID",
@@ -126,4 +205,5 @@ def main():
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     main()
