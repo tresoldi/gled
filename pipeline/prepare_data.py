@@ -1,11 +1,14 @@
+#!/usr/bin/env python3
+
 # Import Python standard libraries
+from collections import defaultdict
 from pathlib import Path
 from typing import *
 import csv
 import logging
+import random
 import re
 import string
-from collections import defaultdict
 
 # Import 3rd-party labels
 import lingpy
@@ -14,6 +17,9 @@ from unidecode import unidecode
 # Setup paths
 BASE_PATH = Path(__file__).parent
 ROOT_PATH = BASE_PATH.parent
+
+# Set a flag for development, leading to faster execution
+DEVEL = False
 
 
 def slug(label: str, level: str) -> str:
@@ -122,7 +128,7 @@ def read_jaeger():
         for row in csv.DictReader(handler):
             # Get language id and classification
             tokens = row["language"].split(".")
-            classification = ".".join(tokens[:-1])
+            classification = ".".join(tokens[:-1])  # TODO: use it in the output
             lang_id = tokens[-1]
 
             # Get language information
@@ -155,6 +161,14 @@ def read_jaeger():
                 }
             )
     logging.info(f"Read {len(data)} entries from Jaeger 2021.")
+
+    # If the global development flag was set, grab a random selection of the
+    # data for quick experimenting
+    if DEVEL:
+        sample_size = int(len(data) * 0.1)
+        logging.info(f"Getting a random sample of {sample_size} entries.")
+        random.seed("gled")
+        data = random.sample(data, sample_size)
 
     # Sort the data and add the row number to the existing ID, so that we make sure
     # they are unique
