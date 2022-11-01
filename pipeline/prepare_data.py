@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Import Python standard libraries
-from collections import defaultdict
+from collections import defaultdict, Counter
 from pathlib import Path
 from typing import *
 import csv
@@ -104,7 +104,7 @@ def read_jaeger():
     # Read the language mapping provided by Jäger
     logging.info("Reading language mapping data.")
     with open(BASE_PATH / "raw" / "languages.csv", encoding="utf-8") as handler:
-        langmap = {row["ID"]: row for row in csv.DictReader(handler)}
+        langmap = {row["ID"].upper(): row for row in csv.DictReader(handler)}
 
     # Read the concept mapping provided by us
     logging.info("Reading concept mapping data.")
@@ -133,7 +133,7 @@ def read_jaeger():
             # Get language id and classification
             tokens = row["language"].split(".")
             classification = ".".join(tokens[:-1])  # TODO: use it in the output
-            lang_id = tokens[-1]
+            lang_id = tokens[-1].upper()
 
             # Get language information
             glottocode = langmap[lang_id]["Glottocode"]
@@ -147,7 +147,7 @@ def read_jaeger():
             glottolog_family = slug(glottoclass.split(",")[0], level="simple").replace(
                 "_", " "
             )
-            cogid_num = row["cc"].split("_")[-1]
+            cogid_num = int(row["cc"].split("_")[-1])
             cogid = f"{slug(glottolog_family, level='full')}.{concept}.{cogid_num:04}"
 
             # Extend the data with the current entry; we keep track of the IDs
@@ -176,6 +176,31 @@ def read_jaeger():
         logging.info(f"Getting a random sample of {sample_size} entries.")
         random.seed("gled")
         data = random.sample(data, sample_size)
+
+    # There are many cases in which for the same language variety (=same ASJP name)
+    # we have more than one entry, identified by a trailing "_IDX" (which is almost
+    # never given for the first entry, i.e., no "_1"). For those
+    # cases, we are going to collect all entries and keep the largest lexical
+    # catalogs, or the one with the shortest name.
+    logging.info("Cleaning duplicate languages")
+    lexcatalog = defaultdict(Counter)
+    for entry in data:
+        match = re.match(
+            r"(?P<lang_id0>.+)_(?P<idx>\d)|(?P<lang_id1>.+)", entry["LANG_ID"]
+        )
+        if match.group("lang_id1"):
+            lexcatalog[match.group("lang_id1")].update(["!"])
+        else:
+            lexcatalog[match.group("lang_id0")].update([match.group("idx")])
+
+    lang_id_drop = []
+    for key, counter in lexcatalog.items():
+        if len(counter) > 1:
+            to_drop = [lang_id_idx for lang_id_idx, _ in counter.most_common()[1:]]
+            lang_id_drop += [f"{key}_{idx}" if idx != "!" else key for idx in to_drop]
+
+    data = [entry for entry in data if entry["LANG_ID"] not in lang_id_drop]
+    logging.info(f"Reduced to {len(data)} entries.")
 
     # Sort the data and add the row number to the existing ID, so that we make sure
     # they are unique
