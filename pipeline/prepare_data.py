@@ -3,6 +3,7 @@
 # Import Python standard libraries
 from collections import defaultdict, Counter
 from pathlib import Path
+from tempfile import NamedTemporaryFile
 from typing import *
 import csv
 import logging
@@ -12,6 +13,7 @@ import string
 
 # Import 3rd-party labels
 import lingpy
+from lingpy.compare.lexstat import LexStat
 from unidecode import unidecode
 
 # Setup paths
@@ -242,6 +244,97 @@ def write_data(data):
         writer.writerows(data)
 
 
+def add_lingpy_cogs(data):
+    """
+    Use lingpy for detecting cognate sets in small families.
+
+    This function replaces the cognates provided in Jäger 2021 by
+    those inferred by lingpy's Lexstat method (List and Forkel 2022).
+    It cannot be applied to families which are too large (over 10,000
+    entries) as the algorithm will eventually fail without enough
+    memory. The usage of lingpy, with intermediate files etc., is
+    made transparent by this function.
+    """
+
+    # Collect the data as necessary
+    lingpy_data = defaultdict(list)
+    for idx, entry in enumerate(data):
+        lingpy_data[entry["GLOTTOFAMILY"]].append(
+            {
+                "ID": str(idx + 1),
+                "DOCULECT": entry["LANG_ID"],
+                "CONCEPT": entry["CONCEPT"],
+                "FORM": entry["TOKENS"].replace(" ", ""),
+                "TOKENS": entry["TOKENS"],
+                "SOURCE_ID": entry["ID"],
+                "SOURCE_COGID": entry["COGID"],
+            }
+        )
+
+    # Collect data for each family
+    new_cogs = {}
+    for family, entries in lingpy_data.items():
+        # Break if the list is too big or if there is a single language
+        if len(entries) > 10000:
+            continue
+        if len(set([entry["DOCULECT"] for entry in entries])) == 1:
+            continue
+
+        logging.info(f"Running lingpy cognate detection for family {family}...")
+
+        # Write to a temporary file; we need to obtain a temporary name to feed lingpy
+        handler = NamedTemporaryFile(mode="w")
+        cogid_file = handler.name
+        handler.close()
+        with open(cogid_file, "w", encoding="utf-8") as handler:
+            writer = csv.DictWriter(
+                handler,
+                delimiter="\t",
+                fieldnames=[
+                    "ID",
+                    "DOCULECT",
+                    "CONCEPT",
+                    "FORM",
+                    "TOKENS",
+                    "SOURCE_ID",
+                    "SOURCE_COGID",
+                ],
+            )
+            writer.writeheader()
+            writer.writerows(entries)
+
+        # Run lexstat, write results to temporary file, and read back
+        lex = LexStat(cogid_file)
+        lex.get_scorer(runs=10000)
+        lex.cluster(
+            method="lexstat",
+            threshold=0.55,
+            ref="COGID",
+            mode="global",
+            gop=2.0,
+            cluster_method="infomap",
+        )
+        handler = NamedTemporaryFile(mode="w")
+        cogid_file = handler.name
+        handler.close()
+        lex.output("tsv", filename=cogid_file, prettify=False)
+        # note that lingpy adds a .tsv...
+        with open(f"{cogid_file}.tsv", encoding="utf-8") as handler:
+            cogid_data = list(csv.DictReader(handler, delimiter="\t"))
+            cogid_data = [row for row in cogid_data if row["ID"][0] != "#"]
+
+        # Expand the list of new cognates
+        for entry in cogid_data:
+            head = ".".join(entry["SOURCE_COGID"].split(".")[:-1])
+            new_cogs[entry["SOURCE_ID"]] = f"{head}.{int(entry['COGID']):04}"
+
+    # Apply new cognates to data
+    for entry in data:
+        entry["COGID"] = new_cogs.get(entry["ID"], entry["COGID"])
+
+    return data
+
+
 def add_alignments(data):
     """
     Add alignments based on the existing COGID mappings.
@@ -279,6 +372,9 @@ def main():
     # Read data from Jäger, extending language information and adding
     # transcriptions
     data = read_jaeger()
+
+    # Add lingpy cognates for families that are small enough
+    data = add_lingpy_cogs(data)
 
     # Add alignments
     data = add_alignments(data)
