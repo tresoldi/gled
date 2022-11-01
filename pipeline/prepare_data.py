@@ -21,6 +21,10 @@ ROOT_PATH = BASE_PATH.parent
 # Set a flag for development, leading to faster execution
 DEVEL = False
 
+# Glottolog family names (after normalization) to be dropped (note
+# that some have already been dropped in the source by Jaeger)
+DROP_FAMILY = ["MixedLanguage", "Spurious", "Unclassifiable kzw"]
+
 
 def slug(label: str, level: str) -> str:
     """
@@ -140,26 +144,29 @@ def read_jaeger():
             concept = concmap[row["concept"]]["CONCEPT"]
             concepticon_id = concmap[row["concept"]]["CONCEPTICON_ID"]
 
-            glottolog_family = slug(glottoclass.split(",")[0], level="simple")
+            glottolog_family = slug(glottoclass.split(",")[0], level="simple").replace(
+                "_", " "
+            )
             cogid_num = row["cc"].split("_")[-1]
-            cogid = f"{slug(glottolog_family, level='full')}.{concept}.{cogid_num}"
+            cogid = f"{slug(glottolog_family, level='full')}.{concept}.{cogid_num:04}"
 
             # Extend the data with the current entry; we keep track of the IDs
             # TODO: pick the "best" doculect for each glottocode
-            data.append(
-                {
-                    "ID": f"{lang_id}.{concept}",
-                    "LANG_ID": lang_id,
-                    "LANGUAGE_NAME": glottoname,
-                    "GLOTTOFAMILY": glottolog_family.replace("_", " "),
-                    "GLOTTOCODE": glottocode,
-                    "CONCEPT": concept,
-                    "CONCEPTICON_ID": concepticon_id,
-                    "ASJP_FORM": row["word"],
-                    "TOKENS": get_orthography(row["word"], profile),
-                    "COGID": cogid,
-                }
-            )
+            if glottolog_family not in DROP_FAMILY:
+                data.append(
+                    {
+                        "ID": f"{lang_id}.{concept}",
+                        "LANG_ID": lang_id,
+                        "LANGUAGE_NAME": glottoname,
+                        "GLOTTOFAMILY": glottolog_family,
+                        "GLOTTOCODE": glottocode,
+                        "CONCEPT": concept,
+                        "CONCEPTICON_ID": concepticon_id,
+                        "ASJP_FORM": row["word"],
+                        "TOKENS": get_orthography(row["word"], profile),
+                        "COGID": cogid,
+                    }
+                )
     logging.info(f"Read {len(data)} entries from Jaeger 2021.")
 
     # If the global development flag was set, grab a random selection of the
