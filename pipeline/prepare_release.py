@@ -126,16 +126,12 @@ def build_nexus(data):
         output_nexus(charstates, matrix, assumptions, family)
 
 
-def main():
-    """
-    Script entry point.
-    """
-
+def build_released_data():
     # Load data
     logging.info("Reading data...")
-    asjp_datafile = BASE_PATH / "output" / "full_data.tsv"
-    with open(asjp_datafile, encoding="utf-8") as handler:
-        data = list(csv.DictReader(handler, delimiter="\t"))
+    fulldata_file = BASE_PATH / "output" / "full_data.csv"
+    with open(fulldata_file, encoding="utf-8") as handler:
+        data = list(csv.DictReader(handler))
 
     # Collect fields as defined in the main released file and sort them
     logging.info("Processing and sorting data...")
@@ -143,12 +139,13 @@ def main():
         {
             "ID": entry["ID"],
             "DOCULECT": entry["LANG_ID"],
-            "LANGUAGE_NAME":entry["LANGUAGE_NAME"],
+            "LANGUAGE_NAME": entry["LANGUAGE_NAME"],
             "FAMILY": entry["GLOTTOFAMILY"],
             "GLOTTOCODE": entry["GLOTTOCODE"],
             "CONCEPT": entry["CONCEPT"],
             "CONCEPTICON_ID": entry["CONCEPTICON_ID"],
-            
+            "ASJP_FORM": entry["ASJP_FORM"],
+            "FORM": entry["TOKENS"].replace(" ", ""),
             "IPA": entry["TOKENS"],
             "ALIGNMENT": entry["ALIGNMENT"],
             "COGSET": entry["COGID"],
@@ -159,6 +156,10 @@ def main():
         release_data, key=lambda e: (e["FAMILY"], e["COGSET"], e["ID"])
     )
 
+    return release_data
+
+
+def write_release_data(release_data):
     # Write output file
     today = datetime.date.today()
     output_file = BASE_PATH.parent / "data" / f"gled.{today.strftime('%Y%m%d')}.tsv"
@@ -170,11 +171,13 @@ def main():
             fieldnames=[
                 "ID",
                 "DOCULECT",
-                "DOCULECT_DATE",
-                "GLOTTOCODE",
-                "GLOTTOLOG_NAME",
+                "LANGUAGE_NAME",
                 "FAMILY",
+                "GLOTTOCODE",
                 "CONCEPT",
+                "CONCEPTICON_ID",
+                "ASJP_FORM",
+                "FORM",
                 "IPA",
                 "ALIGNMENT",
                 "COGSET",
@@ -183,56 +186,57 @@ def main():
         writer.writeheader()
         writer.writerows(release_data)
 
+
+def build_readme(release_data):
     # Collect and show statistics
+    today = datetime.date.today()
     entries = len(release_data)
     doculects = len(set([e["DOCULECT"] for e in release_data]))
     families = len(set([e["FAMILY"] for e in release_data]))
     cogsets = len(set([e["COGSET"] for e in release_data]))
     tokens = sum([len(e["IPA"]) for e in release_data])
 
+    # Load template and do replacements
+    with open(BASE_PATH / "etc" / "README.template.md", encoding="utf-8") as handler:
+        readme = handler.read()
+
+    badges_str = f"""
+[![Release](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-informational)](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-informational)
+[![Lemmas](https://img.shields.io/badge/Lemmas-{entries}-success)](https://img.shields.io/badge/Lemmas-{entries}-success)
+[![Languages](https://img.shields.io/badge/Languages-{doculects}-success)](https://img.shields.io/badge/Languages-{doculects}-success)
+[![Families](https://img.shields.io/badge/Families-{families}-success)](https://img.shields.io/badge/Families-{families}-success)
+[![Cognatesets](https://img.shields.io/badge/Cognatesets-{cogsets}-success)](https://img.shields.io/badge/Cognatesets-{cogsets}-success)
+[![Tokens](https://img.shields.io/badge/Tokens-{tokens}-success)](https://img.shields.io/badge/Tokens-{tokens}-success)
+    """
+    readme = readme.replace("{{BADGES}}", badges_str)
+
+    stats_str = f"""
+The {today.strftime('%Y%m%d')} release comprises:
+    - Entries: {entries}
+    - Doculects: {doculects}
+    - Families: {families} (including isolates)
+    - Cognate sets: {cogsets}
+    - Tokens: {tokens}
+"""
+    readme = readme.replace("{{STATISTICS}}", stats_str)
+
+    # Replace README.md in the root
+    with open(BASE_PATH.parent / "README.md", "w", encoding="utf-8") as handler:
+        handler.write(readme)
+
+
+def main():
+    """
+    Script entry point.
+    """
+
+    release_data = build_released_data()
+    write_release_data(release_data)
+    build_readme(release_data)
+
     # Build nexus files
-    logging.info("Building NEXUS files...")
-    build_nexus(release_data)
-
-    # Show statistics as a last step
-    print("*** REMEMBER TO UPDATE STATISTICS!!! ***\n")
-
-    print("** BADGES\n")
-    print(
-        f"[![Release](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-informational)](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-informational)"
-    )
-    print(
-        f"[![Lemmas](https://img.shields.io/badge/Lemmas-{entries}-success)](https://img.shields.io/badge/Lemmas-{entries}-success)"
-    )
-    print(
-        f"[![Languages](https://img.shields.io/badge/Languages-{doculects}-success)](https://img.shields.io/badge/Languages-{doculects}-success)"
-    )
-    print(
-        f"[![Languages](https://img.shields.io/badge/Families-{families}-success)](https://img.shields.io/badge/Families-{families}-success)"
-    )
-    print(
-        f"[![Cognatesets](https://img.shields.io/badge/Cognatesets-{cogsets}-success)](https://img.shields.io/badge/Cognatesets-{cogsets}-success)"
-    )
-    print(
-        f"[![Tokens](https://img.shields.io/badge/Tokens-{tokens}-success)](https://img.shields.io/badge/Tokens-{tokens}-success)"
-    )
-    print(
-        f"\n[![CC-BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)"
-    )
-    print(
-        "[![DOI](https://zenodo.org/badge/452418748.svg)](https://zenodo.org/badge/latestdoi/452418748)"
-    )
-    print()
-
-    print("## Statistics\n")
-    print(f"The {today.strftime('%Y%m%d')} release comprises:\n")
-    print("  - Entries: %i" % entries)
-    print("  - Doculects: %i" % doculects)
-    print("  - Families: %i" % families)
-    print("  - Cognate sets: %i" % cogsets)
-    print("  - Tokens: %i" % tokens)
-    print("  - Mean cognate set size: %.2f" % (entries / cogsets))
-    print()
+    # logging.info("Building NEXUS files...")
+    # build_nexus(release_data)
 
 
 if __name__ == "__main__":

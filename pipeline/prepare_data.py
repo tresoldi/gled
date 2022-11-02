@@ -237,9 +237,12 @@ def add_lingpy_cogs(data):
     # Collect data for each family
     new_cogs = {}
     for family, entries in lingpy_data.items():
-        # Break if the list is too big or if there is a single language
+        # Break if the list is too big
         if len(entries) > 10000:
             continue
+
+        # Break if there is a single language
+        # TODO: should we keep this? lingpy might give better results here
         if len(set([entry["DOCULECT"] for entry in entries])) == 1:
             continue
 
