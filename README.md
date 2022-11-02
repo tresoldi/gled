@@ -16,11 +16,13 @@
 
 
 The 20221102 release comprises:
+
     - Entries: 263374
     - Doculects: 6586
     - Families: 344 (including isolates)
     - Cognate sets: 48622
     - Tokens: 1938322
+    
 
 
 ## Contents

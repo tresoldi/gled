@@ -212,11 +212,13 @@ def build_readme(release_data):
 
     stats_str = f"""
 The {today.strftime('%Y%m%d')} release comprises:
+
     - Entries: {entries}
     - Doculects: {doculects}
     - Families: {families} (including isolates)
     - Cognate sets: {cogsets}
     - Tokens: {tokens}
+    
 """
     readme = readme.replace("{{STATISTICS}}", stats_str)
 
