@@ -1,0 +1,226 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=170;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_mangarrayimaran.blood.0009,
+        3 blood_mangarrayimaran.blood.0010,
+        4 blood_mangarrayimaran.blood.0011,
+        5 bone_0ascertainment,
+        6 bone_mangarrayimaran.bone.0012,
+        7 bone_mangarrayimaran.bone.0013,
+        8 breast_0ascertainment,
+        9 breast_mangarrayimaran.breast.0014,
+        10 breast_mangarrayimaran.breast.0015,
+        11 come_0ascertainment,
+        12 come_mangarrayimaran.come.0016,
+        13 come_mangarrayimaran.come.0017,
+        14 come_mangarrayimaran.come.0018,
+        15 come_mangarrayimaran.come.0019,
+        16 die_0ascertainment,
+        17 die_mangarrayimaran.die.0020,
+        18 die_mangarrayimaran.die.0021,
+        19 die_mangarrayimaran.die.0022,
+        20 die_mangarrayimaran.die.0023,
+        21 die_mangarrayimaran.die.0024,
+        22 dog_0ascertainment,
+        23 dog_mangarrayimaran.dog.0025,
+        24 dog_mangarrayimaran.dog.0026,
+        25 dog_mangarrayimaran.dog.0027,
+        26 drink_0ascertainment,
+        27 drink_mangarrayimaran.drink.0028,
+        28 drink_mangarrayimaran.drink.0029,
+        29 ear_0ascertainment,
+        30 ear_mangarrayimaran.ear.0030,
+        31 ear_mangarrayimaran.ear.0031,
+        32 ear_mangarrayimaran.ear.0032,
+        33 ear_mangarrayimaran.ear.0033,
+        34 eye_0ascertainment,
+        35 eye_mangarrayimaran.eye.0034,
+        36 eye_mangarrayimaran.eye.0035,
+        37 fire_0ascertainment,
+        38 fire_mangarrayimaran.fire.0036,
+        39 fire_mangarrayimaran.fire.0037,
+        40 fire_mangarrayimaran.fire.0038,
+        41 fire_mangarrayimaran.fire.0039,
+        42 fire_mangarrayimaran.fire.0040,
+        43 fish_0ascertainment,
+        44 fish_mangarrayimaran.fish.0041,
+        45 fish_mangarrayimaran.fish.0042,
+        46 fish_mangarrayimaran.fish.0043,
+        47 fish_mangarrayimaran.fish.0044,
+        48 full_0ascertainment,
+        49 full_mangarrayimaran.full.0045,
+        50 full_mangarrayimaran.full.0046,
+        51 full_mangarrayimaran.full.0047,
+        52 full_mangarrayimaran.full.0048,
+        53 full_mangarrayimaran.full.0049,
+        54 full_mangarrayimaran.full.0050,
+        55 full_mangarrayimaran.full.0051,
+        56 hand_0ascertainment,
+        57 hand_mangarrayimaran.hand.0052,
+        58 hand_mangarrayimaran.hand.0053,
+        59 hand_mangarrayimaran.hand.0054,
+        60 hand_mangarrayimaran.hand.0055,
+        61 hear_0ascertainment,
+        62 hear_mangarrayimaran.hear.0056,
+        63 hear_mangarrayimaran.hear.0057,
+        64 hear_mangarrayimaran.hear.0058,
+        65 hear_mangarrayimaran.hear.0059,
+        66 hear_mangarrayimaran.hear.0060,
+        67 hear_mangarrayimaran.hear.0061,
+        68 horn_0ascertainment,
+        69 horn_mangarrayimaran.horn.0062,
+        70 knee_0ascertainment,
+        71 knee_mangarrayimaran.knee.0063,
+        72 knee_mangarrayimaran.knee.0064,
+        73 knee_mangarrayimaran.knee.0065,
+        74 leaf_0ascertainment,
+        75 leaf_mangarrayimaran.leaf.0066,
+        76 leaf_mangarrayimaran.leaf.0067,
+        77 leaf_mangarrayimaran.leaf.0068,
+        78 liver_0ascertainment,
+        79 liver_mangarrayimaran.liver.0069,
+        80 liver_mangarrayimaran.liver.0070,
+        81 louse_0ascertainment,
+        82 louse_mangarrayimaran.louse.0071,
+        83 louse_mangarrayimaran.louse.0072,
+        84 louse_mangarrayimaran.louse.0073,
+        85 mountain_0ascertainment,
+        86 mountain_mangarrayimaran.mountain.0074,
+        87 name_0ascertainment,
+        88 name_mangarrayimaran.name.0075,
+        89 name_mangarrayimaran.name.0076,
+        90 new_0ascertainment,
+        91 new_mangarrayimaran.new.0077,
+        92 night_0ascertainment,
+        93 night_mangarrayimaran.night.0078,
+        94 night_mangarrayimaran.night.0079,
+        95 night_mangarrayimaran.night.0080,
+        96 night_mangarrayimaran.night.0081,
+        97 nose_0ascertainment,
+        98 nose_mangarrayimaran.nose.0082,
+        99 nose_mangarrayimaran.nose.0083,
+        100 nose_mangarrayimaran.nose.0084,
+        101 nose_mangarrayimaran.nose.0085,
+        102 one_0ascertainment,
+        103 one_mangarrayimaran.one.0086,
+        104 one_mangarrayimaran.one.0087,
+        105 path_0ascertainment,
+        106 path_mangarrayimaran.path.0088,
+        107 path_mangarrayimaran.path.0089,
+        108 path_mangarrayimaran.path.0090,
+        109 person_0ascertainment,
+        110 person_mangarrayimaran.person.0091,
+        111 person_mangarrayimaran.person.0092,
+        112 pl_0ascertainment,
+        113 pl_mangarrayimaran.1pl.0001,
+        114 pl_mangarrayimaran.1pl.0002,
+        115 pl_mangarrayimaran.1pl.0003,
+        116 see_0ascertainment,
+        117 see_mangarrayimaran.see.0093,
+        118 see_mangarrayimaran.see.0094,
+        119 see_mangarrayimaran.see.0095,
+        120 see_mangarrayimaran.see.0096,
+        121 see_mangarrayimaran.see.0097,
+        122 see_mangarrayimaran.see.0098,
+        123 see_mangarrayimaran.see.0099,
+        124 sg_0ascertainment,
+        125 sg_mangarrayimaran.1sg.0004,
+        126 sg_mangarrayimaran.1sg.0005,
+        127 sg_mangarrayimaran.1sg.0006,
+        128 sg_mangarrayimaran.2sg.0007,
+        129 sg_mangarrayimaran.2sg.0008,
+        130 skin_0ascertainment,
+        131 skin_mangarrayimaran.skin.0100,
+        132 skin_mangarrayimaran.skin.0101,
+        133 star_0ascertainment,
+        134 star_mangarrayimaran.star.0102,
+        135 star_mangarrayimaran.star.0103,
+        136 stone_0ascertainment,
+        137 stone_mangarrayimaran.stone.0104,
+        138 stone_mangarrayimaran.stone.0105,
+        139 stone_mangarrayimaran.stone.0106,
+        140 stone_mangarrayimaran.stone.0107,
+        141 stone_mangarrayimaran.stone.0108,
+        142 stone_mangarrayimaran.stone.0109,
+        143 sun_0ascertainment,
+        144 sun_mangarrayimaran.sun.0110,
+        145 sun_mangarrayimaran.sun.0111,
+        146 tongue_0ascertainment,
+        147 tongue_mangarrayimaran.tongue.0112,
+        148 tongue_mangarrayimaran.tongue.0113,
+        149 tooth_0ascertainment,
+        150 tooth_mangarrayimaran.tooth.0114,
+        151 tooth_mangarrayimaran.tooth.0115,
+        152 tooth_mangarrayimaran.tooth.0116,
+        153 tree_0ascertainment,
+        154 tree_mangarrayimaran.tree.0117,
+        155 tree_mangarrayimaran.tree.0118,
+        156 tree_mangarrayimaran.tree.0119,
+        157 two_0ascertainment,
+        158 two_mangarrayimaran.two.0120,
+        159 two_mangarrayimaran.two.0121,
+        160 two_mangarrayimaran.two.0122,
+        161 water_0ascertainment,
+        162 water_mangarrayimaran.water.0123,
+        163 water_mangarrayimaran.water.0124,
+        164 water_mangarrayimaran.water.0125,
+        165 water_mangarrayimaran.water.0126,
+        166 water_mangarrayimaran.water.0127,
+        167 water_mangarrayimaran.water.0128,
+        168 water_mangarrayimaran.water.0129,
+        169 water_mangarrayimaran.water.0130,
+        170 water_mangarrayimaran.water.0131
+;
+
+MATRIX
+mangarayi 010001001001000010000010001001000010010000010000100000001000010000001010001000100100010100101000010000100???01001010100000001010001001001000000100100100010001000100000000
+mara      00110??001001000011110010001001000??00110100101001101110010000101010?0010001100100110?0010?001110010000101000??001000111111001010001001001111101000100100???00100101011111
+wandarang 00100010??0001100010000010010001100100011000010000110000001100010100?000100110010???0?0010?0010000011001011100101000010000000100100100100010000010010001001100010010100000
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-7;
+    charset breast = 8-10;
+    charset come = 11-15;
+    charset die = 16-21;
+    charset dog = 22-25;
+    charset drink = 26-28;
+    charset ear = 29-33;
+    charset eye = 34-36;
+    charset fire = 37-42;
+    charset fish = 43-47;
+    charset full = 48-55;
+    charset hand = 56-60;
+    charset hear = 61-67;
+    charset horn = 68-69;
+    charset knee = 70-73;
+    charset leaf = 74-77;
+    charset liver = 78-80;
+    charset louse = 81-84;
+    charset mountain = 85-86;
+    charset name = 87-89;
+    charset new = 90-91;
+    charset night = 92-96;
+    charset nose = 97-101;
+    charset one = 102-104;
+    charset path = 105-108;
+    charset person = 109-111;
+    charset pl = 112-115;
+    charset see = 116-123;
+    charset sg = 124-129;
+    charset skin = 130-132;
+    charset star = 133-135;
+    charset stone = 136-142;
+    charset sun = 143-145;
+    charset tongue = 146-148;
+    charset tooth = 149-152;
+    charset tree = 153-156;
+    charset two = 157-160;
+    charset water = 161-170;
+END;

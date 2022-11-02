@@ -1,0 +1,128 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=81;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_maybrat.blood.0055,
+        3 bone_0ascertainment,
+        4 bone_maybrat.bone.0240,
+        5 bone_maybrat.bone.0282,
+        6 breast_0ascertainment,
+        7 breast_maybrat.breast.0012,
+        8 come_0ascertainment,
+        9 come_maybrat.come.0471,
+        10 die_0ascertainment,
+        11 die_maybrat.die.0009,
+        12 die_maybrat.die.0603,
+        13 dog_0ascertainment,
+        14 dog_maybrat.dog.0020,
+        15 dog_maybrat.dog.0361,
+        16 drink_0ascertainment,
+        17 drink_maybrat.drink.0644,
+        18 ear_0ascertainment,
+        19 ear_maybrat.ear.0306,
+        20 fire_0ascertainment,
+        21 fire_maybrat.fire.0023,
+        22 fire_maybrat.fire.0042,
+        23 fish_0ascertainment,
+        24 fish_maybrat.fish.0435,
+        25 full_0ascertainment,
+        26 full_maybrat.full.0659,
+        27 hear_0ascertainment,
+        28 hear_maybrat.hear.0692,
+        29 leaf_0ascertainment,
+        30 leaf_maybrat.leaf.0017,
+        31 leaf_maybrat.leaf.0418,
+        32 louse_0ascertainment,
+        33 louse_maybrat.louse.0237,
+        34 louse_maybrat.louse.0499,
+        35 mountain_0ascertainment,
+        36 mountain_maybrat.mountain.0558,
+        37 mountain_maybrat.mountain.0559,
+        38 name_0ascertainment,
+        39 name_maybrat.name.0386,
+        40 night_0ascertainment,
+        41 night_maybrat.night.0462,
+        42 nose_0ascertainment,
+        43 nose_maybrat.nose.0042,
+        44 one_0ascertainment,
+        45 one_maybrat.one.0023,
+        46 one_maybrat.one.0409,
+        47 path_0ascertainment,
+        48 path_maybrat.path.0534,
+        49 person_0ascertainment,
+        50 person_maybrat.person.0683,
+        51 pl_0ascertainment,
+        52 pl_maybrat.1pl.0562,
+        53 pl_maybrat.1pl.0563,
+        54 see_0ascertainment,
+        55 see_maybrat.see.0433,
+        56 see_maybrat.see.0434,
+        57 sg_0ascertainment,
+        58 sg_maybrat.1sg.0329,
+        59 sg_maybrat.1sg.0330,
+        60 sg_maybrat.2sg.0392,
+        61 sg_maybrat.2sg.0393,
+        62 star_0ascertainment,
+        63 star_maybrat.star.0560,
+        64 stone_0ascertainment,
+        65 stone_maybrat.stone.0044,
+        66 sun_0ascertainment,
+        67 sun_maybrat.sun.0041,
+        68 sun_maybrat.sun.0430,
+        69 tongue_0ascertainment,
+        70 tongue_maybrat.tongue.0446,
+        71 tongue_maybrat.tongue.0447,
+        72 tooth_0ascertainment,
+        73 tooth_maybrat.tooth.0310,
+        74 tooth_maybrat.tooth.0517,
+        75 tree_0ascertainment,
+        76 tree_maybrat.tree.0078,
+        77 two_0ascertainment,
+        78 two_maybrat.two.0411,
+        79 two_maybrat.two.0412,
+        80 water_0ascertainment,
+        81 water_maybrat.water.0088
+;
+
+MATRIX
+mai_brat 010110101011011010101101010101101101101010101101010110110111101010110110110101101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-7;
+    charset come = 8-9;
+    charset die = 10-12;
+    charset dog = 13-15;
+    charset drink = 16-17;
+    charset ear = 18-19;
+    charset fire = 20-22;
+    charset fish = 23-24;
+    charset full = 25-26;
+    charset hear = 27-28;
+    charset leaf = 29-31;
+    charset louse = 32-34;
+    charset mountain = 35-37;
+    charset name = 38-39;
+    charset night = 40-41;
+    charset nose = 42-43;
+    charset one = 44-46;
+    charset path = 47-48;
+    charset person = 49-50;
+    charset pl = 51-53;
+    charset see = 54-56;
+    charset sg = 57-61;
+    charset star = 62-63;
+    charset stone = 64-65;
+    charset sun = 66-68;
+    charset tongue = 69-71;
+    charset tooth = 72-74;
+    charset tree = 75-76;
+    charset two = 77-79;
+    charset water = 80-81;
+END;

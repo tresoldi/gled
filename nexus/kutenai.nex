@@ -1,0 +1,133 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=79;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kutenai.blood.0396,
+        3 bone_0ascertainment,
+        4 bone_kutenai.bone.0009,
+        5 breast_0ascertainment,
+        6 breast_kutenai.breast.0123,
+        7 come_0ascertainment,
+        8 come_kutenai.come.0147,
+        9 die_0ascertainment,
+        10 die_kutenai.die.0568,
+        11 dog_0ascertainment,
+        12 dog_kutenai.dog.0234,
+        13 drink_0ascertainment,
+        14 drink_kutenai.drink.0609,
+        15 ear_0ascertainment,
+        16 ear_kutenai.ear.0035,
+        17 eye_0ascertainment,
+        18 eye_kutenai.eye.0477,
+        19 fire_0ascertainment,
+        20 fire_kutenai.fire.0501,
+        21 fish_0ascertainment,
+        22 fish_kutenai.fish.0098,
+        23 full_0ascertainment,
+        24 full_kutenai.full.0612,
+        25 hand_0ascertainment,
+        26 hand_kutenai.hand.0015,
+        27 hear_0ascertainment,
+        28 hear_kutenai.hear.0642,
+        29 horn_0ascertainment,
+        30 horn_kutenai.horn.0381,
+        31 knee_0ascertainment,
+        32 knee_kutenai.knee.0225,
+        33 leaf_0ascertainment,
+        34 leaf_kutenai.leaf.0393,
+        35 liver_0ascertainment,
+        36 liver_kutenai.liver.0552,
+        37 louse_0ascertainment,
+        38 louse_kutenai.louse.0471,
+        39 mountain_0ascertainment,
+        40 mountain_kutenai.mountain.0520,
+        41 name_0ascertainment,
+        42 name_kutenai.name.0366,
+        43 new_0ascertainment,
+        44 new_kutenai.new.0466,
+        45 night_0ascertainment,
+        46 night_kutenai.night.0437,
+        47 nose_0ascertainment,
+        48 nose_kutenai.nose.0515,
+        49 one_0ascertainment,
+        50 one_kutenai.one.0005,
+        51 path_0ascertainment,
+        52 path_kutenai.path.0508,
+        53 person_0ascertainment,
+        54 person_kutenai.person.0642,
+        55 pl_0ascertainment,
+        56 pl_kutenai.1pl.0530,
+        57 see_0ascertainment,
+        58 see_kutenai.see.0007,
+        59 sg_0ascertainment,
+        60 sg_kutenai.1sg.0008,
+        61 sg_kutenai.2sg.0373,
+        62 skin_0ascertainment,
+        63 skin_kutenai.skin.0079,
+        64 star_0ascertainment,
+        65 star_kutenai.star.0535,
+        66 stone_0ascertainment,
+        67 stone_kutenai.stone.0705,
+        68 sun_0ascertainment,
+        69 sun_kutenai.sun.0007,
+        70 tongue_0ascertainment,
+        71 tongue_kutenai.tongue.0423,
+        72 tooth_0ascertainment,
+        73 tooth_kutenai.tooth.0495,
+        74 tree_0ascertainment,
+        75 tree_kutenai.tree.0443,
+        76 two_0ascertainment,
+        77 two_kutenai.two.0387,
+        78 water_0ascertainment,
+        79 water_kutenai.water.0166
+;
+
+MATRIX
+kutenai 0101010101010101010101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset full = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-28;
+    charset horn = 29-30;
+    charset knee = 31-32;
+    charset leaf = 33-34;
+    charset liver = 35-36;
+    charset louse = 37-38;
+    charset mountain = 39-40;
+    charset name = 41-42;
+    charset new = 43-44;
+    charset night = 45-46;
+    charset nose = 47-48;
+    charset one = 49-50;
+    charset path = 51-52;
+    charset person = 53-54;
+    charset pl = 55-56;
+    charset see = 57-58;
+    charset sg = 59-61;
+    charset skin = 62-63;
+    charset star = 64-65;
+    charset stone = 66-67;
+    charset sun = 68-69;
+    charset tongue = 70-71;
+    charset tooth = 72-73;
+    charset tree = 74-75;
+    charset two = 76-77;
+    charset water = 78-79;
+END;

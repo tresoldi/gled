@@ -1,250 +1,239 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=7 NCHAR=189;
+    DIMENSIONS NTAX=6 NCHAR=180;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_7,
+        2 blood_yeniseian.blood.0014,
         3 bone_0ascertainment,
-        4 bone_8,
-        5 bone_9,
+        4 bone_yeniseian.bone.0015,
+        5 bone_yeniseian.bone.0016,
         6 breast_0ascertainment,
-        7 breast_10,
-        8 breast_11,
-        9 breast_12,
-        10 breast_13,
-        11 breast_14,
-        12 breast_15,
-        13 breast_16,
-        14 breast_17,
-        15 come_0ascertainment,
-        16 come_18,
-        17 come_19,
-        18 come_20,
-        19 die_0ascertainment,
-        20 die_21,
-        21 die_22,
-        22 die_23,
-        23 die_24,
-        24 die_25,
-        25 dog_0ascertainment,
-        26 dog_26,
-        27 dog_27,
-        28 dog_28,
-        29 drink_0ascertainment,
-        30 drink_29,
-        31 drink_30,
-        32 drink_31,
-        33 drink_32,
-        34 drink_33,
-        35 drink_34,
-        36 drink_35,
-        37 ear_0ascertainment,
-        38 ear_36,
-        39 ear_37,
-        40 ear_38,
+        7 breast_yeniseian.breast.0017,
+        8 breast_yeniseian.breast.0018,
+        9 breast_yeniseian.breast.0019,
+        10 breast_yeniseian.breast.0020,
+        11 breast_yeniseian.breast.0021,
+        12 breast_yeniseian.breast.0022,
+        13 come_0ascertainment,
+        14 come_yeniseian.come.0023,
+        15 come_yeniseian.come.0024,
+        16 come_yeniseian.come.0025,
+        17 die_0ascertainment,
+        18 die_yeniseian.die.0026,
+        19 die_yeniseian.die.0027,
+        20 die_yeniseian.die.0028,
+        21 die_yeniseian.die.0029,
+        22 die_yeniseian.die.0030,
+        23 dog_0ascertainment,
+        24 dog_yeniseian.dog.0031,
+        25 dog_yeniseian.dog.0032,
+        26 drink_0ascertainment,
+        27 drink_yeniseian.drink.0033,
+        28 drink_yeniseian.drink.0034,
+        29 drink_yeniseian.drink.0035,
+        30 drink_yeniseian.drink.0036,
+        31 drink_yeniseian.drink.0037,
+        32 drink_yeniseian.drink.0038,
+        33 drink_yeniseian.drink.0039,
+        34 ear_0ascertainment,
+        35 ear_yeniseian.ear.0040,
+        36 ear_yeniseian.ear.0041,
+        37 ear_yeniseian.ear.0042,
+        38 ear_yeniseian.ear.0043,
+        39 ear_yeniseian.ear.0044,
+        40 ear_yeniseian.ear.0045,
         41 eye_0ascertainment,
-        42 eye_39,
-        43 eye_40,
-        44 eye_41,
-        45 eye_42,
+        42 eye_yeniseian.eye.0046,
+        43 eye_yeniseian.eye.0047,
+        44 eye_yeniseian.eye.0048,
+        45 eye_yeniseian.eye.0049,
         46 fire_0ascertainment,
-        47 fire_43,
-        48 fire_44,
+        47 fire_yeniseian.fire.0050,
+        48 fire_yeniseian.fire.0051,
         49 fish_0ascertainment,
-        50 fish_45,
-        51 fish_46,
-        52 fish_47,
-        53 fish_48,
-        54 full_0ascertainment,
-        55 full_49,
-        56 full_50,
-        57 hand_0ascertainment,
-        58 hand_51,
-        59 hand_52,
-        60 hand_53,
-        61 hand_54,
-        62 hand_55,
-        63 hand_56,
-        64 hear_0ascertainment,
-        65 hear_57,
-        66 hear_58,
-        67 hear_59,
-        68 hear_60,
-        69 horn_0ascertainment,
-        70 horn_61,
-        71 horn_62,
-        72 horn_63,
-        73 horn_64,
-        74 i_0ascertainment,
-        75 i_1,
-        76 i_2,
-        77 i_3,
-        78 i_4,
-        79 i_5,
-        80 i_6,
-        81 knee_0ascertainment,
-        82 knee_65,
-        83 knee_66,
-        84 knee_67,
-        85 leaf_0ascertainment,
-        86 leaf_68,
-        87 leaf_69,
-        88 leaf_70,
-        89 leaf_71,
-        90 liver_0ascertainment,
-        91 liver_72,
-        92 liver_73,
-        93 louse_0ascertainment,
-        94 louse_74,
-        95 louse_75,
-        96 louse_76,
-        97 louse_77,
-        98 mountain_0ascertainment,
-        99 mountain_78,
-        100 mountain_79,
-        101 mountain_80,
-        102 mountain_81,
-        103 mountain_82,
-        104 mountain_83,
-        105 mountain_84,
-        106 mountain_85,
-        107 name_0ascertainment,
-        108 name_86,
-        109 new_0ascertainment,
-        110 new_87,
-        111 new_88,
-        112 new_89,
-        113 night_0ascertainment,
-        114 night_90,
-        115 night_91,
-        116 night_92,
-        117 night_93,
-        118 nose_0ascertainment,
-        119 nose_94,
-        120 nose_95,
-        121 nose_96,
-        122 one_0ascertainment,
-        123 one_100,
-        124 one_97,
-        125 one_98,
-        126 one_99,
-        127 path_0ascertainment,
-        128 path_101,
-        129 path_102,
-        130 path_103,
-        131 path_104,
-        132 path_105,
-        133 person_0ascertainment,
-        134 person_106,
-        135 person_107,
-        136 see_0ascertainment,
-        137 see_108,
-        138 see_109,
-        139 see_110,
-        140 see_111,
-        141 see_112,
-        142 skin_0ascertainment,
-        143 skin_113,
-        144 skin_114,
-        145 skin_115,
-        146 star_0ascertainment,
-        147 star_116,
-        148 star_117,
-        149 star_118,
-        150 star_119,
-        151 star_120,
-        152 star_121,
-        153 stone_0ascertainment,
-        154 stone_122,
+        50 fish_yeniseian.fish.0052,
+        51 fish_yeniseian.fish.0053,
+        52 fish_yeniseian.fish.0054,
+        53 full_0ascertainment,
+        54 full_yeniseian.full.0055,
+        55 hand_0ascertainment,
+        56 hand_yeniseian.hand.0056,
+        57 hand_yeniseian.hand.0057,
+        58 hand_yeniseian.hand.0058,
+        59 hand_yeniseian.hand.0059,
+        60 hand_yeniseian.hand.0060,
+        61 hand_yeniseian.hand.0061,
+        62 hand_yeniseian.hand.0062,
+        63 hear_0ascertainment,
+        64 hear_yeniseian.hear.0063,
+        65 hear_yeniseian.hear.0064,
+        66 hear_yeniseian.hear.0065,
+        67 horn_0ascertainment,
+        68 horn_yeniseian.horn.0066,
+        69 horn_yeniseian.horn.0067,
+        70 horn_yeniseian.horn.0068,
+        71 knee_0ascertainment,
+        72 knee_yeniseian.knee.0069,
+        73 knee_yeniseian.knee.0070,
+        74 knee_yeniseian.knee.0071,
+        75 leaf_0ascertainment,
+        76 leaf_yeniseian.leaf.0072,
+        77 leaf_yeniseian.leaf.0073,
+        78 leaf_yeniseian.leaf.0074,
+        79 liver_0ascertainment,
+        80 liver_yeniseian.liver.0075,
+        81 liver_yeniseian.liver.0076,
+        82 louse_0ascertainment,
+        83 louse_yeniseian.louse.0077,
+        84 louse_yeniseian.louse.0078,
+        85 louse_yeniseian.louse.0079,
+        86 mountain_0ascertainment,
+        87 mountain_yeniseian.mountain.0080,
+        88 mountain_yeniseian.mountain.0081,
+        89 mountain_yeniseian.mountain.0082,
+        90 mountain_yeniseian.mountain.0083,
+        91 mountain_yeniseian.mountain.0084,
+        92 mountain_yeniseian.mountain.0085,
+        93 mountain_yeniseian.mountain.0086,
+        94 mountain_yeniseian.mountain.0087,
+        95 mountain_yeniseian.mountain.0088,
+        96 mountain_yeniseian.mountain.0089,
+        97 name_0ascertainment,
+        98 name_yeniseian.name.0090,
+        99 new_0ascertainment,
+        100 new_yeniseian.new.0091,
+        101 new_yeniseian.new.0092,
+        102 new_yeniseian.new.0093,
+        103 new_yeniseian.new.0094,
+        104 night_0ascertainment,
+        105 night_yeniseian.night.0095,
+        106 night_yeniseian.night.0096,
+        107 nose_0ascertainment,
+        108 nose_yeniseian.nose.0097,
+        109 nose_yeniseian.nose.0098,
+        110 one_0ascertainment,
+        111 one_yeniseian.one.0099,
+        112 one_yeniseian.one.0100,
+        113 path_0ascertainment,
+        114 path_yeniseian.path.0101,
+        115 path_yeniseian.path.0102,
+        116 path_yeniseian.path.0103,
+        117 path_yeniseian.path.0104,
+        118 path_yeniseian.path.0105,
+        119 person_0ascertainment,
+        120 person_yeniseian.person.0106,
+        121 person_yeniseian.person.0107,
+        122 pl_0ascertainment,
+        123 pl_yeniseian.1pl.0001,
+        124 pl_yeniseian.1pl.0002,
+        125 pl_yeniseian.1pl.0003,
+        126 pl_yeniseian.1pl.0004,
+        127 pl_yeniseian.1pl.0005,
+        128 pl_yeniseian.1pl.0006,
+        129 see_0ascertainment,
+        130 see_yeniseian.see.0108,
+        131 see_yeniseian.see.0109,
+        132 see_yeniseian.see.0110,
+        133 see_yeniseian.see.0111,
+        134 see_yeniseian.see.0112,
+        135 sg_0ascertainment,
+        136 sg_yeniseian.1sg.0007,
+        137 sg_yeniseian.1sg.0008,
+        138 sg_yeniseian.1sg.0009,
+        139 sg_yeniseian.1sg.0010,
+        140 sg_yeniseian.1sg.0011,
+        141 sg_yeniseian.1sg.0012,
+        142 sg_yeniseian.2sg.0013,
+        143 skin_0ascertainment,
+        144 skin_yeniseian.skin.0113,
+        145 skin_yeniseian.skin.0114,
+        146 skin_yeniseian.skin.0115,
+        147 star_0ascertainment,
+        148 star_yeniseian.star.0116,
+        149 star_yeniseian.star.0117,
+        150 star_yeniseian.star.0118,
+        151 star_yeniseian.star.0119,
+        152 stone_0ascertainment,
+        153 stone_yeniseian.stone.0120,
+        154 stone_yeniseian.stone.0121,
         155 sun_0ascertainment,
-        156 sun_123,
-        157 sun_124,
-        158 sun_125,
-        159 sun_126,
-        160 sun_127,
-        161 sun_128,
-        162 sun_129,
-        163 thou_0ascertainment,
-        164 thou_149,
-        165 tongue_0ascertainment,
-        166 tongue_130,
-        167 tongue_131,
-        168 tongue_132,
-        169 tongue_133,
-        170 tongue_134,
-        171 tooth_0ascertainment,
-        172 tooth_135,
-        173 tooth_136,
-        174 tree_0ascertainment,
-        175 tree_137,
-        176 tree_138,
-        177 tree_139,
-        178 tree_140,
-        179 two_0ascertainment,
-        180 two_141,
-        181 two_142,
-        182 two_143,
-        183 water_0ascertainment,
-        184 water_144,
-        185 water_145,
-        186 water_146,
-        187 we_0ascertainment,
-        188 we_147,
-        189 we_148
+        156 sun_yeniseian.sun.0122,
+        157 sun_yeniseian.sun.0123,
+        158 sun_yeniseian.sun.0124,
+        159 sun_yeniseian.sun.0125,
+        160 sun_yeniseian.sun.0126,
+        161 tongue_0ascertainment,
+        162 tongue_yeniseian.tongue.0127,
+        163 tongue_yeniseian.tongue.0128,
+        164 tongue_yeniseian.tongue.0129,
+        165 tongue_yeniseian.tongue.0130,
+        166 tongue_yeniseian.tongue.0131,
+        167 tongue_yeniseian.tongue.0132,
+        168 tooth_0ascertainment,
+        169 tooth_yeniseian.tooth.0133,
+        170 tooth_yeniseian.tooth.0134,
+        171 tree_0ascertainment,
+        172 tree_yeniseian.tree.0135,
+        173 tree_yeniseian.tree.0136,
+        174 tree_yeniseian.tree.0137,
+        175 two_0ascertainment,
+        176 two_yeniseian.two.0138,
+        177 two_yeniseian.two.0139,
+        178 water_0ascertainment,
+        179 water_yeniseian.water.0140,
+        180 water_yeniseian.water.0141
 ;
 
 MATRIX
-arin                   010??0100000000???010000010101001000011001001010010000??0110000010000????0100100010001000010010000110000000?0100010000100001100100000100100000???01000100101000011010100000100100001010100010
-assan                  0?0??0010000000???0?????010000100000001000100010001000??00100000????0????00100100???010000??0????0010010000?0???001000011001000010010100010000???00100000101000000010100000??0110001110100010
-eighteenth_century_ket 010100001001000???0?????010000010100001100100001000100??00011010????0100100010010010010000??0????0010001000?0???010000010000100100000100?????010000111100100101000010010100??0100001000101010
-ket                    01010000010000010000100001000001000000010010000100010010001000000100001000001000001000100001001000010000000?00100100000100001100010001000010000100001000010???????0?0010000010100000010100010
-kott                   010010000010010010000101010000100010001001110010001000??0010000000100????0010010000101000010000100001000110?0010001000010011000010100110000100???00100000101000100010100000100110101010100010
-pumpokol               0?0??0000001000???0?????011000010001001000100010000010??00001000????0????00010000???010010??0????001010000010???000110???000100100000100100000???00010000100010000010010010??0101000100110011
-yugh                   010100000000100001000010010000010000001000100001000100010000010000010001000010000010000100??0000100100000001001101000001000010010000010000001000100001010100100000010001000010100000010100010
+arin                   010??01000000???0100000110100010001001000101001001000?0101001001000???010001000100100010000100000?010000100100100100000100100000010000010010010???0101001001001101000000100100011010
+eighteenth_century_ket 0101000100010???0?????0100010000100100100010000100100?001001010???0110001001000??0???001000010000?0????01000101001000001000100010?????0010001101000010001000100000100010??0100001011
+ket_2                  01010000100001000010000100001000000100000010000101100?000100000???0010001000100010???0001000000001001000100010100010000100011000001000001000010???0010001000100000010000010100010010
+kott                   01001000011000100001010100000101000010010011101000010?0001000000100???000101000100010000010001010?001000010010110001110110000100000100000101010???0010001100011001000000100111011010
+yugh                   0101000010000001000010010001000000010000001000010010010000100000010001001000100??000100000100000010010101000101001000001000000100000100010000100100010101000100000001000010100010010
+yugh_recent            0101000100000???0?????0100010000000100000010000100100?000010000???0001001000010??000100000100010010001001000101001000001000000100000010000000100010010001000100000000100110100010010
 ;
 END;
 
 BEGIN ASSUMPTIONS;
     charset blood = 1-2;
     charset bone = 3-5;
-    charset breast = 6-14;
-    charset come = 15-18;
-    charset die = 19-24;
-    charset dog = 25-28;
-    charset drink = 29-36;
-    charset ear = 37-40;
+    charset breast = 6-12;
+    charset come = 13-16;
+    charset die = 17-22;
+    charset dog = 23-25;
+    charset drink = 26-33;
+    charset ear = 34-40;
     charset eye = 41-45;
     charset fire = 46-48;
-    charset fish = 49-53;
-    charset full = 54-56;
-    charset hand = 57-63;
-    charset hear = 64-68;
-    charset horn = 69-73;
-    charset i = 74-80;
-    charset knee = 81-84;
-    charset leaf = 85-89;
-    charset liver = 90-92;
-    charset louse = 93-97;
-    charset mountain = 98-106;
-    charset name = 107-108;
-    charset new = 109-112;
-    charset night = 113-117;
-    charset nose = 118-121;
-    charset one = 122-126;
-    charset path = 127-132;
-    charset person = 133-135;
-    charset see = 136-141;
-    charset skin = 142-145;
-    charset star = 146-152;
-    charset stone = 153-154;
-    charset sun = 155-162;
-    charset thou = 163-164;
-    charset tongue = 165-170;
-    charset tooth = 171-173;
-    charset tree = 174-178;
-    charset two = 179-182;
-    charset water = 183-186;
-    charset we = 187-189;
+    charset fish = 49-52;
+    charset full = 53-54;
+    charset hand = 55-62;
+    charset hear = 63-66;
+    charset horn = 67-70;
+    charset knee = 71-74;
+    charset leaf = 75-78;
+    charset liver = 79-81;
+    charset louse = 82-85;
+    charset mountain = 86-96;
+    charset name = 97-98;
+    charset new = 99-103;
+    charset night = 104-106;
+    charset nose = 107-109;
+    charset one = 110-112;
+    charset path = 113-118;
+    charset person = 119-121;
+    charset pl = 122-128;
+    charset see = 129-134;
+    charset sg = 135-142;
+    charset skin = 143-146;
+    charset star = 147-151;
+    charset stone = 152-154;
+    charset sun = 155-160;
+    charset tongue = 161-167;
+    charset tooth = 168-170;
+    charset tree = 171-174;
+    charset two = 175-177;
+    charset water = 178-180;
 END;

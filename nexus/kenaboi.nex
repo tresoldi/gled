@@ -1,0 +1,105 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=60;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kenaboi.blood.0020,
+        3 bone_0ascertainment,
+        4 bone_kenaboi.bone.0001,
+        5 breast_0ascertainment,
+        6 breast_kenaboi.breast.0002,
+        7 come_0ascertainment,
+        8 come_kenaboi.come.0413,
+        9 die_0ascertainment,
+        10 die_kenaboi.die.0527,
+        11 dog_0ascertainment,
+        12 dog_kenaboi.dog.0021,
+        13 drink_0ascertainment,
+        14 drink_kenaboi.drink.0559,
+        15 ear_0ascertainment,
+        16 ear_kenaboi.ear.0020,
+        17 eye_0ascertainment,
+        18 eye_kenaboi.eye.0447,
+        19 fire_0ascertainment,
+        20 fire_kenaboi.fire.0468,
+        21 fish_0ascertainment,
+        22 fish_kenaboi.fish.0099,
+        23 hand_0ascertainment,
+        24 hand_kenaboi.hand.0360,
+        25 knee_0ascertainment,
+        26 knee_kenaboi.knee.0029,
+        27 leaf_0ascertainment,
+        28 leaf_kenaboi.leaf.0001,
+        29 mountain_0ascertainment,
+        30 mountain_kenaboi.mountain.0472,
+        31 new_0ascertainment,
+        32 new_kenaboi.new.0284,
+        33 night_0ascertainment,
+        34 night_kenaboi.night.0037,
+        35 nose_0ascertainment,
+        36 nose_kenaboi.nose.0480,
+        37 one_0ascertainment,
+        38 one_kenaboi.one.0006,
+        39 person_0ascertainment,
+        40 person_kenaboi.person.0591,
+        41 sg_0ascertainment,
+        42 sg_kenaboi.1sg.0289,
+        43 skin_0ascertainment,
+        44 skin_kenaboi.skin.0221,
+        45 star_0ascertainment,
+        46 star_kenaboi.star.0498,
+        47 stone_0ascertainment,
+        48 stone_kenaboi.stone.0015,
+        49 sun_0ascertainment,
+        50 sun_kenaboi.sun.0007,
+        51 tongue_0ascertainment,
+        52 tongue_kenaboi.tongue.0017,
+        53 tooth_0ascertainment,
+        54 tooth_kenaboi.tooth.0457,
+        55 tree_0ascertainment,
+        56 tree_kenaboi.tree.0416,
+        57 two_0ascertainment,
+        58 two_kenaboi.two.0364,
+        59 water_0ascertainment,
+        60 water_kenaboi.water.0007
+;
+
+MATRIX
+kenaboi_1 010101010101010101010101010101010101010101010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset hand = 23-24;
+    charset knee = 25-26;
+    charset leaf = 27-28;
+    charset mountain = 29-30;
+    charset new = 31-32;
+    charset night = 33-34;
+    charset nose = 35-36;
+    charset one = 37-38;
+    charset person = 39-40;
+    charset sg = 41-42;
+    charset skin = 43-44;
+    charset star = 45-46;
+    charset stone = 47-48;
+    charset sun = 49-50;
+    charset tongue = 51-52;
+    charset tooth = 53-54;
+    charset tree = 55-56;
+    charset two = 57-58;
+    charset water = 59-60;
+END;

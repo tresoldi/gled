@@ -1,0 +1,175 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=121;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_eastbirdshead.blood.0007,
+        3 blood_eastbirdshead.blood.0008,
+        4 bone_0ascertainment,
+        5 bone_eastbirdshead.bone.0009,
+        6 bone_eastbirdshead.bone.0010,
+        7 breast_0ascertainment,
+        8 breast_eastbirdshead.breast.0011,
+        9 breast_eastbirdshead.breast.0012,
+        10 come_0ascertainment,
+        11 come_eastbirdshead.come.0013,
+        12 come_eastbirdshead.come.0014,
+        13 die_0ascertainment,
+        14 die_eastbirdshead.die.0015,
+        15 die_eastbirdshead.die.0016,
+        16 dog_0ascertainment,
+        17 dog_eastbirdshead.dog.0017,
+        18 dog_eastbirdshead.dog.0018,
+        19 drink_0ascertainment,
+        20 drink_eastbirdshead.drink.0019,
+        21 drink_eastbirdshead.drink.0020,
+        22 ear_0ascertainment,
+        23 ear_eastbirdshead.ear.0021,
+        24 eye_0ascertainment,
+        25 eye_eastbirdshead.eye.0022,
+        26 eye_eastbirdshead.eye.0023,
+        27 fire_0ascertainment,
+        28 fire_eastbirdshead.fire.0024,
+        29 fire_eastbirdshead.fire.0025,
+        30 fish_0ascertainment,
+        31 fish_eastbirdshead.fish.0026,
+        32 fish_eastbirdshead.fish.0027,
+        33 full_0ascertainment,
+        34 full_eastbirdshead.full.0028,
+        35 full_eastbirdshead.full.0029,
+        36 hand_0ascertainment,
+        37 hand_eastbirdshead.hand.0030,
+        38 hand_eastbirdshead.hand.0031,
+        39 hear_0ascertainment,
+        40 hear_eastbirdshead.hear.0032,
+        41 hear_eastbirdshead.hear.0033,
+        42 horn_0ascertainment,
+        43 horn_eastbirdshead.horn.0034,
+        44 horn_eastbirdshead.horn.0035,
+        45 knee_0ascertainment,
+        46 knee_eastbirdshead.knee.0036,
+        47 knee_eastbirdshead.knee.0037,
+        48 leaf_0ascertainment,
+        49 leaf_eastbirdshead.leaf.0038,
+        50 leaf_eastbirdshead.leaf.0039,
+        51 liver_0ascertainment,
+        52 liver_eastbirdshead.liver.0040,
+        53 liver_eastbirdshead.liver.0041,
+        54 louse_0ascertainment,
+        55 louse_eastbirdshead.louse.0042,
+        56 louse_eastbirdshead.louse.0043,
+        57 louse_eastbirdshead.louse.0044,
+        58 mountain_0ascertainment,
+        59 mountain_eastbirdshead.mountain.0045,
+        60 mountain_eastbirdshead.mountain.0046,
+        61 mountain_eastbirdshead.mountain.0047,
+        62 mountain_eastbirdshead.mountain.0048,
+        63 name_0ascertainment,
+        64 name_eastbirdshead.name.0049,
+        65 name_eastbirdshead.name.0050,
+        66 new_0ascertainment,
+        67 new_eastbirdshead.new.0051,
+        68 new_eastbirdshead.new.0052,
+        69 night_0ascertainment,
+        70 night_eastbirdshead.night.0053,
+        71 night_eastbirdshead.night.0054,
+        72 nose_0ascertainment,
+        73 nose_eastbirdshead.nose.0055,
+        74 nose_eastbirdshead.nose.0056,
+        75 one_0ascertainment,
+        76 one_eastbirdshead.one.0057,
+        77 one_eastbirdshead.one.0058,
+        78 path_0ascertainment,
+        79 path_eastbirdshead.path.0059,
+        80 path_eastbirdshead.path.0060,
+        81 path_eastbirdshead.path.0061,
+        82 person_0ascertainment,
+        83 person_eastbirdshead.person.0062,
+        84 person_eastbirdshead.person.0063,
+        85 pl_0ascertainment,
+        86 pl_eastbirdshead.1pl.0001,
+        87 pl_eastbirdshead.1pl.0002,
+        88 see_0ascertainment,
+        89 see_eastbirdshead.see.0064,
+        90 see_eastbirdshead.see.0065,
+        91 sg_0ascertainment,
+        92 sg_eastbirdshead.1sg.0003,
+        93 sg_eastbirdshead.1sg.0004,
+        94 sg_eastbirdshead.2sg.0005,
+        95 sg_eastbirdshead.2sg.0006,
+        96 skin_0ascertainment,
+        97 skin_eastbirdshead.skin.0066,
+        98 skin_eastbirdshead.skin.0067,
+        99 skin_eastbirdshead.skin.0068,
+        100 star_0ascertainment,
+        101 star_eastbirdshead.star.0069,
+        102 star_eastbirdshead.star.0070,
+        103 stone_0ascertainment,
+        104 stone_eastbirdshead.stone.0071,
+        105 stone_eastbirdshead.stone.0072,
+        106 sun_0ascertainment,
+        107 sun_eastbirdshead.sun.0073,
+        108 sun_eastbirdshead.sun.0074,
+        109 tongue_0ascertainment,
+        110 tongue_eastbirdshead.tongue.0075,
+        111 tongue_eastbirdshead.tongue.0076,
+        112 tree_0ascertainment,
+        113 tree_eastbirdshead.tree.0077,
+        114 tree_eastbirdshead.tree.0078,
+        115 two_0ascertainment,
+        116 two_eastbirdshead.two.0079,
+        117 two_eastbirdshead.two.0080,
+        118 water_0ascertainment,
+        119 water_eastbirdshead.water.0081,
+        120 water_eastbirdshead.water.0082,
+        121 water_eastbirdshead.water.0083
+;
+
+MATRIX
+meyah 0100100100100100100100101001001001001001001001001001001000101001001001001001001010100100100101001000100100100100100100100
+sougb 0010010010010010010010100100100100100100100100100100100110010100100100100100100100010010010010100110010010010010010010011
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-9;
+    charset come = 10-12;
+    charset die = 13-15;
+    charset dog = 16-18;
+    charset drink = 19-21;
+    charset ear = 22-23;
+    charset eye = 24-26;
+    charset fire = 27-29;
+    charset fish = 30-32;
+    charset full = 33-35;
+    charset hand = 36-38;
+    charset hear = 39-41;
+    charset horn = 42-44;
+    charset knee = 45-47;
+    charset leaf = 48-50;
+    charset liver = 51-53;
+    charset louse = 54-57;
+    charset mountain = 58-62;
+    charset name = 63-65;
+    charset new = 66-68;
+    charset night = 69-71;
+    charset nose = 72-74;
+    charset one = 75-77;
+    charset path = 78-81;
+    charset person = 82-84;
+    charset pl = 85-87;
+    charset see = 88-90;
+    charset sg = 91-95;
+    charset skin = 96-99;
+    charset star = 100-102;
+    charset stone = 103-105;
+    charset sun = 106-108;
+    charset tongue = 109-111;
+    charset tree = 112-114;
+    charset two = 115-117;
+    charset water = 118-121;
+END;

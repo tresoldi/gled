@@ -1,0 +1,230 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=5 NCHAR=173;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_geelvinkbay.blood.0012,
+        3 blood_geelvinkbay.blood.0013,
+        4 blood_geelvinkbay.blood.0014,
+        5 blood_geelvinkbay.blood.0015,
+        6 bone_0ascertainment,
+        7 bone_geelvinkbay.bone.0016,
+        8 bone_geelvinkbay.bone.0017,
+        9 breast_0ascertainment,
+        10 breast_geelvinkbay.breast.0018,
+        11 breast_geelvinkbay.breast.0019,
+        12 breast_geelvinkbay.breast.0020,
+        13 breast_geelvinkbay.breast.0021,
+        14 breast_geelvinkbay.breast.0022,
+        15 come_0ascertainment,
+        16 come_geelvinkbay.come.0023,
+        17 come_geelvinkbay.come.0024,
+        18 come_geelvinkbay.come.0025,
+        19 come_geelvinkbay.come.0026,
+        20 come_geelvinkbay.come.0027,
+        21 die_0ascertainment,
+        22 die_geelvinkbay.die.0028,
+        23 die_geelvinkbay.die.0029,
+        24 die_geelvinkbay.die.0030,
+        25 die_geelvinkbay.die.0031,
+        26 dog_0ascertainment,
+        27 dog_geelvinkbay.dog.0032,
+        28 drink_0ascertainment,
+        29 drink_geelvinkbay.drink.0033,
+        30 drink_geelvinkbay.drink.0034,
+        31 drink_geelvinkbay.drink.0035,
+        32 drink_geelvinkbay.drink.0036,
+        33 drink_geelvinkbay.drink.0037,
+        34 drink_geelvinkbay.drink.0038,
+        35 ear_0ascertainment,
+        36 ear_geelvinkbay.ear.0039,
+        37 ear_geelvinkbay.ear.0040,
+        38 ear_geelvinkbay.ear.0041,
+        39 ear_geelvinkbay.ear.0042,
+        40 ear_geelvinkbay.ear.0043,
+        41 ear_geelvinkbay.ear.0044,
+        42 ear_geelvinkbay.ear.0045,
+        43 eye_0ascertainment,
+        44 eye_geelvinkbay.eye.0046,
+        45 eye_geelvinkbay.eye.0047,
+        46 eye_geelvinkbay.eye.0048,
+        47 fire_0ascertainment,
+        48 fire_geelvinkbay.fire.0049,
+        49 fire_geelvinkbay.fire.0050,
+        50 fire_geelvinkbay.fire.0051,
+        51 fire_geelvinkbay.fire.0052,
+        52 fire_geelvinkbay.fire.0053,
+        53 fish_0ascertainment,
+        54 fish_geelvinkbay.fish.0054,
+        55 fish_geelvinkbay.fish.0055,
+        56 fish_geelvinkbay.fish.0056,
+        57 full_0ascertainment,
+        58 full_geelvinkbay.full.0057,
+        59 full_geelvinkbay.full.0058,
+        60 hand_0ascertainment,
+        61 hand_geelvinkbay.hand.0059,
+        62 hear_0ascertainment,
+        63 hear_geelvinkbay.hear.0060,
+        64 hear_geelvinkbay.hear.0061,
+        65 hear_geelvinkbay.hear.0062,
+        66 hear_geelvinkbay.hear.0063,
+        67 hear_geelvinkbay.hear.0064,
+        68 hear_geelvinkbay.hear.0065,
+        69 knee_0ascertainment,
+        70 knee_geelvinkbay.knee.0066,
+        71 leaf_0ascertainment,
+        72 leaf_geelvinkbay.leaf.0067,
+        73 leaf_geelvinkbay.leaf.0068,
+        74 leaf_geelvinkbay.leaf.0069,
+        75 leaf_geelvinkbay.leaf.0070,
+        76 leaf_geelvinkbay.leaf.0071,
+        77 liver_0ascertainment,
+        78 liver_geelvinkbay.liver.0072,
+        79 liver_geelvinkbay.liver.0073,
+        80 liver_geelvinkbay.liver.0074,
+        81 liver_geelvinkbay.liver.0075,
+        82 liver_geelvinkbay.liver.0076,
+        83 louse_0ascertainment,
+        84 louse_geelvinkbay.louse.0077,
+        85 louse_geelvinkbay.louse.0078,
+        86 louse_geelvinkbay.louse.0079,
+        87 louse_geelvinkbay.louse.0080,
+        88 mountain_0ascertainment,
+        89 mountain_geelvinkbay.mountain.0081,
+        90 mountain_geelvinkbay.mountain.0082,
+        91 mountain_geelvinkbay.mountain.0083,
+        92 name_0ascertainment,
+        93 name_geelvinkbay.name.0084,
+        94 name_geelvinkbay.name.0085,
+        95 new_0ascertainment,
+        96 new_geelvinkbay.new.0086,
+        97 new_geelvinkbay.new.0087,
+        98 night_0ascertainment,
+        99 night_geelvinkbay.night.0088,
+        100 night_geelvinkbay.night.0089,
+        101 night_geelvinkbay.night.0090,
+        102 nose_0ascertainment,
+        103 nose_geelvinkbay.nose.0091,
+        104 one_0ascertainment,
+        105 one_geelvinkbay.one.0092,
+        106 one_geelvinkbay.one.0093,
+        107 one_geelvinkbay.one.0094,
+        108 one_geelvinkbay.one.0095,
+        109 one_geelvinkbay.one.0096,
+        110 path_0ascertainment,
+        111 path_geelvinkbay.path.0097,
+        112 path_geelvinkbay.path.0098,
+        113 person_0ascertainment,
+        114 person_geelvinkbay.person.0099,
+        115 person_geelvinkbay.person.0100,
+        116 person_geelvinkbay.person.0101,
+        117 person_geelvinkbay.person.0102,
+        118 pl_0ascertainment,
+        119 pl_geelvinkbay.1pl.0001,
+        120 pl_geelvinkbay.1pl.0002,
+        121 see_0ascertainment,
+        122 see_geelvinkbay.see.0103,
+        123 see_geelvinkbay.see.0104,
+        124 see_geelvinkbay.see.0105,
+        125 sg_0ascertainment,
+        126 sg_geelvinkbay.1sg.0003,
+        127 sg_geelvinkbay.1sg.0004,
+        128 sg_geelvinkbay.1sg.0005,
+        129 sg_geelvinkbay.1sg.0006,
+        130 sg_geelvinkbay.1sg.0007,
+        131 sg_geelvinkbay.2sg.0008,
+        132 sg_geelvinkbay.2sg.0009,
+        133 sg_geelvinkbay.2sg.0010,
+        134 sg_geelvinkbay.2sg.0011,
+        135 skin_0ascertainment,
+        136 skin_geelvinkbay.skin.0106,
+        137 skin_geelvinkbay.skin.0107,
+        138 skin_geelvinkbay.skin.0108,
+        139 skin_geelvinkbay.skin.0109,
+        140 star_0ascertainment,
+        141 star_geelvinkbay.star.0110,
+        142 star_geelvinkbay.star.0111,
+        143 star_geelvinkbay.star.0112,
+        144 stone_0ascertainment,
+        145 stone_geelvinkbay.stone.0113,
+        146 stone_geelvinkbay.stone.0114,
+        147 stone_geelvinkbay.stone.0115,
+        148 stone_geelvinkbay.stone.0116,
+        149 sun_0ascertainment,
+        150 sun_geelvinkbay.sun.0117,
+        151 sun_geelvinkbay.sun.0118,
+        152 sun_geelvinkbay.sun.0119,
+        153 sun_geelvinkbay.sun.0120,
+        154 sun_geelvinkbay.sun.0121,
+        155 tongue_0ascertainment,
+        156 tongue_geelvinkbay.tongue.0122,
+        157 tongue_geelvinkbay.tongue.0123,
+        158 tongue_geelvinkbay.tongue.0124,
+        159 tooth_0ascertainment,
+        160 tooth_geelvinkbay.tooth.0125,
+        161 tree_0ascertainment,
+        162 tree_geelvinkbay.tree.0126,
+        163 two_0ascertainment,
+        164 two_geelvinkbay.two.0127,
+        165 two_geelvinkbay.two.0128,
+        166 two_geelvinkbay.two.0129,
+        167 two_geelvinkbay.two.0130,
+        168 water_0ascertainment,
+        169 water_geelvinkbay.water.0131,
+        170 water_geelvinkbay.water.0132,
+        171 water_geelvinkbay.water.0133,
+        172 water_geelvinkbay.water.0134,
+        173 water_geelvinkbay.water.0135
+;
+
+MATRIX
+bauzi_2  010000100100000100000100001010000001000000010001000001000100101000000101000001000001000010001001001000101000001001000010010001000010000100001000100001000001000?0101000010000
+burate   001000010010000010000010001001000000100000001000100000100??0?00100000?0010000010000010000100??0??010001001000001001000??00100010000100001000010001000010000010010100100001000
+kofei    000100010001100001000001001000100000010000001000100100010??0100010010?0001000001010001001010010010011010001000010001100100010001000100000100001001100001010100010100010000100
+tefaro   000100010000100000100000101000010000001000000100010000010010100001000?0000100000100010000100010010100010001000010000101000010100001000000010001001000001000001010100001000010
+tunggare 00001001000001000001001000100000110000011100100000100???0??010000010010000010?????000010???0010??0100010000110??0????01000100000110011000100???000010000100???010100100000001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-8;
+    charset breast = 9-14;
+    charset come = 15-20;
+    charset die = 21-25;
+    charset dog = 26-27;
+    charset drink = 28-34;
+    charset ear = 35-42;
+    charset eye = 43-46;
+    charset fire = 47-52;
+    charset fish = 53-56;
+    charset full = 57-59;
+    charset hand = 60-61;
+    charset hear = 62-68;
+    charset knee = 69-70;
+    charset leaf = 71-76;
+    charset liver = 77-82;
+    charset louse = 83-87;
+    charset mountain = 88-91;
+    charset name = 92-94;
+    charset new = 95-97;
+    charset night = 98-101;
+    charset nose = 102-103;
+    charset one = 104-109;
+    charset path = 110-112;
+    charset person = 113-117;
+    charset pl = 118-120;
+    charset see = 121-124;
+    charset sg = 125-134;
+    charset skin = 135-139;
+    charset star = 140-143;
+    charset stone = 144-148;
+    charset sun = 149-154;
+    charset tongue = 155-158;
+    charset tooth = 159-160;
+    charset tree = 161-162;
+    charset two = 163-167;
+    charset water = 168-173;
+END;

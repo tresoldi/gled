@@ -1,0 +1,126 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=76;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kosare.blood.0389,
+        3 bone_0ascertainment,
+        4 bone_kosare.bone.0001,
+        5 come_0ascertainment,
+        6 come_kosare.come.0186,
+        7 die_0ascertainment,
+        8 die_kosare.die.0514,
+        9 dog_0ascertainment,
+        10 dog_kosare.dog.0011,
+        11 drink_0ascertainment,
+        12 drink_kosare.drink.0016,
+        13 ear_0ascertainment,
+        14 ear_kosare.ear.0037,
+        15 eye_0ascertainment,
+        16 eye_kosare.eye.0001,
+        17 fire_0ascertainment,
+        18 fire_kosare.fire.0294,
+        19 fish_0ascertainment,
+        20 fish_kosare.fish.0001,
+        21 hear_0ascertainment,
+        22 hear_kosare.hear.0594,
+        23 knee_0ascertainment,
+        24 knee_kosare.knee.0387,
+        25 leaf_0ascertainment,
+        26 leaf_kosare.leaf.0001,
+        27 liver_0ascertainment,
+        28 liver_kosare.liver.0540,
+        29 liver_kosare.liver.0541,
+        30 louse_0ascertainment,
+        31 louse_kosare.louse.0440,
+        32 mountain_0ascertainment,
+        33 mountain_kosare.mountain.0001,
+        34 name_0ascertainment,
+        35 name_kosare.name.0125,
+        36 new_0ascertainment,
+        37 new_kosare.new.0032,
+        38 new_kosare.new.0081,
+        39 night_0ascertainment,
+        40 night_kosare.night.0002,
+        41 night_kosare.night.0142,
+        42 nose_0ascertainment,
+        43 nose_kosare.nose.0069,
+        44 nose_kosare.nose.0501,
+        45 one_0ascertainment,
+        46 one_kosare.one.0385,
+        47 path_0ascertainment,
+        48 path_kosare.path.0003,
+        49 person_0ascertainment,
+        50 person_kosare.person.0585,
+        51 pl_0ascertainment,
+        52 pl_kosare.1pl.0048,
+        53 see_0ascertainment,
+        54 see_kosare.see.0026,
+        55 sg_0ascertainment,
+        56 sg_kosare.1sg.0007,
+        57 sg_kosare.2sg.0071,
+        58 skin_0ascertainment,
+        59 skin_kosare.skin.0539,
+        60 star_0ascertainment,
+        61 star_kosare.star.0068,
+        62 stone_0ascertainment,
+        63 stone_kosare.stone.0416,
+        64 stone_kosare.stone.0684,
+        65 sun_0ascertainment,
+        66 sun_kosare.sun.0007,
+        67 tongue_0ascertainment,
+        68 tongue_kosare.tongue.0024,
+        69 tooth_0ascertainment,
+        70 tooth_kosare.tooth.0481,
+        71 tree_0ascertainment,
+        72 tree_kosare.tree.0001,
+        73 two_0ascertainment,
+        74 two_kosare.two.0379,
+        75 water_0ascertainment,
+        76 water_kosare.water.0002
+;
+
+MATRIX
+kosare_2 0101010101010101010101010101101010101101101101010101010110101011010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset come = 5-6;
+    charset die = 7-8;
+    charset dog = 9-10;
+    charset drink = 11-12;
+    charset ear = 13-14;
+    charset eye = 15-16;
+    charset fire = 17-18;
+    charset fish = 19-20;
+    charset hear = 21-22;
+    charset knee = 23-24;
+    charset leaf = 25-26;
+    charset liver = 27-29;
+    charset louse = 30-31;
+    charset mountain = 32-33;
+    charset name = 34-35;
+    charset new = 36-38;
+    charset night = 39-41;
+    charset nose = 42-44;
+    charset one = 45-46;
+    charset path = 47-48;
+    charset person = 49-50;
+    charset pl = 51-52;
+    charset see = 53-54;
+    charset sg = 55-57;
+    charset skin = 58-59;
+    charset star = 60-61;
+    charset stone = 62-64;
+    charset sun = 65-66;
+    charset tongue = 67-68;
+    charset tooth = 69-70;
+    charset tree = 71-72;
+    charset two = 73-74;
+    charset water = 75-76;
+END;

@@ -1,0 +1,124 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=74;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_zuni.blood.0140,
+        3 bone_0ascertainment,
+        4 bone_zuni.bone.0001,
+        5 come_0ascertainment,
+        6 come_zuni.come.0001,
+        7 die_0ascertainment,
+        8 die_zuni.die.0940,
+        9 dog_0ascertainment,
+        10 dog_zuni.dog.0329,
+        11 drink_0ascertainment,
+        12 drink_zuni.drink.0967,
+        13 ear_0ascertainment,
+        14 ear_zuni.ear.0421,
+        15 eye_0ascertainment,
+        16 eye_zuni.eye.0474,
+        17 fire_0ascertainment,
+        18 fire_zuni.fire.0737,
+        19 fish_0ascertainment,
+        20 fish_zuni.fish.0688,
+        21 hand_0ascertainment,
+        22 hand_zuni.hand.0247,
+        23 hear_0ascertainment,
+        24 hear_zuni.hear.1043,
+        25 knee_0ascertainment,
+        26 knee_zuni.knee.0619,
+        27 leaf_0ascertainment,
+        28 leaf_zuni.leaf.0540,
+        29 liver_0ascertainment,
+        30 liver_zuni.liver.0860,
+        31 louse_0ascertainment,
+        32 louse_zuni.louse.0079,
+        33 mountain_0ascertainment,
+        34 mountain_zuni.mountain.0043,
+        35 name_0ascertainment,
+        36 name_zuni.name.0554,
+        37 night_0ascertainment,
+        38 night_zuni.night.0002,
+        39 nose_0ascertainment,
+        40 nose_zuni.nose.0002,
+        41 one_0ascertainment,
+        42 one_zuni.one.0064,
+        43 path_0ascertainment,
+        44 path_zuni.path.0773,
+        45 person_0ascertainment,
+        46 person_zuni.person.1014,
+        47 pl_0ascertainment,
+        48 pl_zuni.1pl.0854,
+        49 pl_zuni.1pl.0855,
+        50 see_0ascertainment,
+        51 see_zuni.see.0621,
+        52 sg_0ascertainment,
+        53 sg_zuni.1sg.0033,
+        54 sg_zuni.1sg.0462,
+        55 sg_zuni.2sg.0576,
+        56 sg_zuni.2sg.0577,
+        57 skin_0ascertainment,
+        58 skin_zuni.skin.0858,
+        59 star_0ascertainment,
+        60 star_zuni.star.0189,
+        61 stone_0ascertainment,
+        62 stone_zuni.stone.1105,
+        63 sun_0ascertainment,
+        64 sun_zuni.sun.0602,
+        65 tongue_0ascertainment,
+        66 tongue_zuni.tongue.0629,
+        67 tooth_0ascertainment,
+        68 tooth_zuni.tooth.0753,
+        69 tree_0ascertainment,
+        70 tree_zuni.tree.0657,
+        71 two_0ascertainment,
+        72 two_zuni.two.0001,
+        73 water_0ascertainment,
+        74 water_zuni.water.0566
+;
+
+MATRIX
+zuni 01010101010101010101010101010101010101010101010110101111010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset come = 5-6;
+    charset die = 7-8;
+    charset dog = 9-10;
+    charset drink = 11-12;
+    charset ear = 13-14;
+    charset eye = 15-16;
+    charset fire = 17-18;
+    charset fish = 19-20;
+    charset hand = 21-22;
+    charset hear = 23-24;
+    charset knee = 25-26;
+    charset leaf = 27-28;
+    charset liver = 29-30;
+    charset louse = 31-32;
+    charset mountain = 33-34;
+    charset name = 35-36;
+    charset night = 37-38;
+    charset nose = 39-40;
+    charset one = 41-42;
+    charset path = 43-44;
+    charset person = 45-46;
+    charset pl = 47-49;
+    charset see = 50-51;
+    charset sg = 52-56;
+    charset skin = 57-58;
+    charset star = 59-60;
+    charset stone = 61-62;
+    charset sun = 63-64;
+    charset tongue = 65-66;
+    charset tooth = 67-68;
+    charset tree = 69-70;
+    charset two = 71-72;
+    charset water = 73-74;
+END;

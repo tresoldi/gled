@@ -1,0 +1,169 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=114;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_mombumkoneraw.blood.0006,
+        3 bone_0ascertainment,
+        4 bone_mombumkoneraw.bone.0007,
+        5 bone_mombumkoneraw.bone.0008,
+        6 bone_mombumkoneraw.bone.0009,
+        7 breast_0ascertainment,
+        8 breast_mombumkoneraw.breast.0010,
+        9 breast_mombumkoneraw.breast.0011,
+        10 breast_mombumkoneraw.breast.0012,
+        11 breast_mombumkoneraw.breast.0013,
+        12 come_0ascertainment,
+        13 come_mombumkoneraw.come.0014,
+        14 come_mombumkoneraw.come.0015,
+        15 come_mombumkoneraw.come.0016,
+        16 die_0ascertainment,
+        17 die_mombumkoneraw.die.0017,
+        18 die_mombumkoneraw.die.0018,
+        19 dog_0ascertainment,
+        20 dog_mombumkoneraw.dog.0019,
+        21 drink_0ascertainment,
+        22 drink_mombumkoneraw.drink.0020,
+        23 drink_mombumkoneraw.drink.0021,
+        24 drink_mombumkoneraw.drink.0022,
+        25 drink_mombumkoneraw.drink.0023,
+        26 ear_0ascertainment,
+        27 ear_mombumkoneraw.ear.0024,
+        28 eye_0ascertainment,
+        29 eye_mombumkoneraw.eye.0025,
+        30 eye_mombumkoneraw.eye.0026,
+        31 fire_0ascertainment,
+        32 fire_mombumkoneraw.fire.0027,
+        33 fire_mombumkoneraw.fire.0028,
+        34 fire_mombumkoneraw.fire.0029,
+        35 fish_0ascertainment,
+        36 fish_mombumkoneraw.fish.0030,
+        37 fish_mombumkoneraw.fish.0031,
+        38 full_0ascertainment,
+        39 full_mombumkoneraw.full.0032,
+        40 hand_0ascertainment,
+        41 hand_mombumkoneraw.hand.0033,
+        42 hand_mombumkoneraw.hand.0034,
+        43 hand_mombumkoneraw.hand.0035,
+        44 hand_mombumkoneraw.hand.0036,
+        45 hear_0ascertainment,
+        46 hear_mombumkoneraw.hear.0037,
+        47 hear_mombumkoneraw.hear.0038,
+        48 hear_mombumkoneraw.hear.0039,
+        49 knee_0ascertainment,
+        50 knee_mombumkoneraw.knee.0040,
+        51 knee_mombumkoneraw.knee.0041,
+        52 knee_mombumkoneraw.knee.0042,
+        53 leaf_0ascertainment,
+        54 leaf_mombumkoneraw.leaf.0043,
+        55 liver_0ascertainment,
+        56 liver_mombumkoneraw.liver.0044,
+        57 louse_0ascertainment,
+        58 louse_mombumkoneraw.louse.0045,
+        59 mountain_0ascertainment,
+        60 mountain_mombumkoneraw.mountain.0046,
+        61 name_0ascertainment,
+        62 name_mombumkoneraw.name.0047,
+        63 name_mombumkoneraw.name.0048,
+        64 new_0ascertainment,
+        65 new_mombumkoneraw.new.0049,
+        66 new_mombumkoneraw.new.0050,
+        67 night_0ascertainment,
+        68 night_mombumkoneraw.night.0051,
+        69 night_mombumkoneraw.night.0052,
+        70 nose_0ascertainment,
+        71 nose_mombumkoneraw.nose.0053,
+        72 nose_mombumkoneraw.nose.0054,
+        73 one_0ascertainment,
+        74 one_mombumkoneraw.one.0055,
+        75 one_mombumkoneraw.one.0056,
+        76 one_mombumkoneraw.one.0057,
+        77 path_0ascertainment,
+        78 path_mombumkoneraw.path.0058,
+        79 path_mombumkoneraw.path.0059,
+        80 person_0ascertainment,
+        81 person_mombumkoneraw.person.0060,
+        82 person_mombumkoneraw.person.0061,
+        83 pl_0ascertainment,
+        84 pl_mombumkoneraw.1pl.0001,
+        85 pl_mombumkoneraw.1pl.0002,
+        86 see_0ascertainment,
+        87 see_mombumkoneraw.see.0062,
+        88 sg_0ascertainment,
+        89 sg_mombumkoneraw.1sg.0003,
+        90 sg_mombumkoneraw.1sg.0004,
+        91 sg_mombumkoneraw.2sg.0005,
+        92 skin_0ascertainment,
+        93 skin_mombumkoneraw.skin.0063,
+        94 star_0ascertainment,
+        95 star_mombumkoneraw.star.0064,
+        96 stone_0ascertainment,
+        97 stone_mombumkoneraw.stone.0065,
+        98 sun_0ascertainment,
+        99 sun_mombumkoneraw.sun.0066,
+        100 tongue_0ascertainment,
+        101 tongue_mombumkoneraw.tongue.0067,
+        102 tooth_0ascertainment,
+        103 tooth_mombumkoneraw.tooth.0068,
+        104 tooth_mombumkoneraw.tooth.0069,
+        105 tooth_mombumkoneraw.tooth.0070,
+        106 tooth_mombumkoneraw.tooth.0071,
+        107 tree_0ascertainment,
+        108 tree_mombumkoneraw.tree.0072,
+        109 two_0ascertainment,
+        110 two_mombumkoneraw.two.0073,
+        111 two_mombumkoneraw.two.0074,
+        112 water_0ascertainment,
+        113 water_mombumkoneraw.water.0075,
+        114 water_mombumkoneraw.water.0076
+;
+
+MATRIX
+komelomsch 01010001100010001001010010101001000100?0100001000100010?010?01001001001001010100110100?010101010101010100101010010
+konerawsch 01001000101001000101001000100100100010?0010100100010010?010?00100101000100100010100010?001101010101010010001001010
+mombun     0100010001000010100100010010100001010010001000010001010101010010100010??01000??01001001001101010101010001001010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-6;
+    charset breast = 7-11;
+    charset come = 12-15;
+    charset die = 16-18;
+    charset dog = 19-20;
+    charset drink = 21-25;
+    charset ear = 26-27;
+    charset eye = 28-30;
+    charset fire = 31-34;
+    charset fish = 35-37;
+    charset full = 38-39;
+    charset hand = 40-44;
+    charset hear = 45-48;
+    charset knee = 49-52;
+    charset leaf = 53-54;
+    charset liver = 55-56;
+    charset louse = 57-58;
+    charset mountain = 59-60;
+    charset name = 61-63;
+    charset new = 64-66;
+    charset night = 67-69;
+    charset nose = 70-72;
+    charset one = 73-76;
+    charset path = 77-79;
+    charset person = 80-82;
+    charset pl = 83-85;
+    charset see = 86-87;
+    charset sg = 88-91;
+    charset skin = 92-93;
+    charset star = 94-95;
+    charset stone = 96-97;
+    charset sun = 98-99;
+    charset tongue = 100-101;
+    charset tooth = 102-106;
+    charset tree = 107-108;
+    charset two = 109-111;
+    charset water = 112-114;
+END;

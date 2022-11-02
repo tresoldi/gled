@@ -1,0 +1,274 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=23 NCHAR=198;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_mixezoque.blood.0017,
+        3 bone_0ascertainment,
+        4 bone_mixezoque.bone.0018,
+        5 bone_mixezoque.bone.0019,
+        6 bone_mixezoque.bone.0020,
+        7 breast_0ascertainment,
+        8 breast_mixezoque.breast.0021,
+        9 breast_mixezoque.breast.0022,
+        10 breast_mixezoque.breast.0023,
+        11 breast_mixezoque.breast.0024,
+        12 breast_mixezoque.breast.0025,
+        13 breast_mixezoque.breast.0026,
+        14 breast_mixezoque.breast.0027,
+        15 breast_mixezoque.breast.0028,
+        16 breast_mixezoque.breast.0029,
+        17 come_0ascertainment,
+        18 come_mixezoque.come.0030,
+        19 come_mixezoque.come.0031,
+        20 come_mixezoque.come.0032,
+        21 die_0ascertainment,
+        22 die_mixezoque.die.0033,
+        23 die_mixezoque.die.0034,
+        24 dog_0ascertainment,
+        25 dog_mixezoque.dog.0035,
+        26 dog_mixezoque.dog.0036,
+        27 dog_mixezoque.dog.0037,
+        28 dog_mixezoque.dog.0038,
+        29 dog_mixezoque.dog.0039,
+        30 dog_mixezoque.dog.0040,
+        31 dog_mixezoque.dog.0041,
+        32 drink_0ascertainment,
+        33 drink_mixezoque.drink.0042,
+        34 drink_mixezoque.drink.0043,
+        35 drink_mixezoque.drink.0044,
+        36 ear_0ascertainment,
+        37 ear_mixezoque.ear.0045,
+        38 eye_0ascertainment,
+        39 eye_mixezoque.eye.0046,
+        40 eye_mixezoque.eye.0047,
+        41 eye_mixezoque.eye.0048,
+        42 eye_mixezoque.eye.0049,
+        43 eye_mixezoque.eye.0050,
+        44 fire_0ascertainment,
+        45 fire_mixezoque.fire.0051,
+        46 fire_mixezoque.fire.0052,
+        47 fire_mixezoque.fire.0053,
+        48 fish_0ascertainment,
+        49 fish_mixezoque.fish.0054,
+        50 fish_mixezoque.fish.0055,
+        51 fish_mixezoque.fish.0056,
+        52 fish_mixezoque.fish.0057,
+        53 fish_mixezoque.fish.0058,
+        54 fish_mixezoque.fish.0059,
+        55 fish_mixezoque.fish.0060,
+        56 fish_mixezoque.fish.0061,
+        57 full_0ascertainment,
+        58 full_mixezoque.full.0062,
+        59 full_mixezoque.full.0063,
+        60 full_mixezoque.full.0064,
+        61 full_mixezoque.full.0065,
+        62 full_mixezoque.full.0066,
+        63 full_mixezoque.full.0067,
+        64 full_mixezoque.full.0068,
+        65 full_mixezoque.full.0069,
+        66 full_mixezoque.full.0070,
+        67 full_mixezoque.full.0071,
+        68 full_mixezoque.full.0072,
+        69 hand_0ascertainment,
+        70 hand_mixezoque.hand.0073,
+        71 hand_mixezoque.hand.0074,
+        72 hand_mixezoque.hand.0075,
+        73 hear_0ascertainment,
+        74 hear_mixezoque.hear.0076,
+        75 hear_mixezoque.hear.0077,
+        76 horn_0ascertainment,
+        77 horn_mixezoque.horn.0078,
+        78 horn_mixezoque.horn.0079,
+        79 horn_mixezoque.horn.0080,
+        80 knee_0ascertainment,
+        81 knee_mixezoque.knee.0081,
+        82 knee_mixezoque.knee.0082,
+        83 knee_mixezoque.knee.0083,
+        84 knee_mixezoque.knee.0084,
+        85 knee_mixezoque.knee.0085,
+        86 knee_mixezoque.knee.0086,
+        87 knee_mixezoque.knee.0087,
+        88 leaf_0ascertainment,
+        89 leaf_mixezoque.leaf.0088,
+        90 liver_0ascertainment,
+        91 liver_mixezoque.liver.0089,
+        92 liver_mixezoque.liver.0090,
+        93 liver_mixezoque.liver.0091,
+        94 liver_mixezoque.liver.0092,
+        95 liver_mixezoque.liver.0093,
+        96 liver_mixezoque.liver.0094,
+        97 louse_0ascertainment,
+        98 louse_mixezoque.louse.0095,
+        99 louse_mixezoque.louse.0096,
+        100 louse_mixezoque.louse.0097,
+        101 louse_mixezoque.louse.0098,
+        102 louse_mixezoque.louse.0099,
+        103 mountain_0ascertainment,
+        104 mountain_mixezoque.mountain.0100,
+        105 mountain_mixezoque.mountain.0101,
+        106 mountain_mixezoque.mountain.0102,
+        107 name_0ascertainment,
+        108 name_mixezoque.name.0103,
+        109 name_mixezoque.name.0104,
+        110 name_mixezoque.name.0105,
+        111 name_mixezoque.name.0106,
+        112 new_0ascertainment,
+        113 new_mixezoque.new.0107,
+        114 new_mixezoque.new.0108,
+        115 new_mixezoque.new.0109,
+        116 new_mixezoque.new.0110,
+        117 night_0ascertainment,
+        118 night_mixezoque.night.0111,
+        119 night_mixezoque.night.0112,
+        120 night_mixezoque.night.0113,
+        121 nose_0ascertainment,
+        122 nose_mixezoque.nose.0114,
+        123 nose_mixezoque.nose.0115,
+        124 nose_mixezoque.nose.0116,
+        125 nose_mixezoque.nose.0117,
+        126 nose_mixezoque.nose.0118,
+        127 one_0ascertainment,
+        128 one_mixezoque.one.0119,
+        129 one_mixezoque.one.0120,
+        130 one_mixezoque.one.0121,
+        131 path_0ascertainment,
+        132 path_mixezoque.path.0122,
+        133 path_mixezoque.path.0123,
+        134 path_mixezoque.path.0124,
+        135 person_0ascertainment,
+        136 person_mixezoque.person.0125,
+        137 person_mixezoque.person.0126,
+        138 person_mixezoque.person.0127,
+        139 person_mixezoque.person.0128,
+        140 person_mixezoque.person.0129,
+        141 pl_0ascertainment,
+        142 pl_mixezoque.1pl.0001,
+        143 pl_mixezoque.1pl.0002,
+        144 pl_mixezoque.1pl.0003,
+        145 pl_mixezoque.1pl.0004,
+        146 pl_mixezoque.1pl.0005,
+        147 pl_mixezoque.1pl.0006,
+        148 pl_mixezoque.1pl.0007,
+        149 pl_mixezoque.1pl.0008,
+        150 pl_mixezoque.1pl.0009,
+        151 pl_mixezoque.1pl.0010,
+        152 pl_mixezoque.1pl.0011,
+        153 pl_mixezoque.1pl.0012,
+        154 see_0ascertainment,
+        155 see_mixezoque.see.0130,
+        156 see_mixezoque.see.0131,
+        157 see_mixezoque.see.0132,
+        158 see_mixezoque.see.0133,
+        159 see_mixezoque.see.0134,
+        160 see_mixezoque.see.0135,
+        161 sg_0ascertainment,
+        162 sg_mixezoque.1sg.0013,
+        163 sg_mixezoque.1sg.0014,
+        164 sg_mixezoque.1sg.0015,
+        165 sg_mixezoque.2sg.0016,
+        166 skin_0ascertainment,
+        167 skin_mixezoque.skin.0136,
+        168 skin_mixezoque.skin.0137,
+        169 star_0ascertainment,
+        170 star_mixezoque.star.0138,
+        171 star_mixezoque.star.0139,
+        172 star_mixezoque.star.0140,
+        173 stone_0ascertainment,
+        174 stone_mixezoque.stone.0141,
+        175 sun_0ascertainment,
+        176 sun_mixezoque.sun.0142,
+        177 sun_mixezoque.sun.0143,
+        178 sun_mixezoque.sun.0144,
+        179 tongue_0ascertainment,
+        180 tongue_mixezoque.tongue.0145,
+        181 tongue_mixezoque.tongue.0146,
+        182 tongue_mixezoque.tongue.0147,
+        183 tooth_0ascertainment,
+        184 tooth_mixezoque.tooth.0148,
+        185 tree_0ascertainment,
+        186 tree_mixezoque.tree.0149,
+        187 tree_mixezoque.tree.0150,
+        188 tree_mixezoque.tree.0151,
+        189 two_0ascertainment,
+        190 two_mixezoque.two.0152,
+        191 two_mixezoque.two.0153,
+        192 two_mixezoque.two.0154,
+        193 two_mixezoque.two.0155,
+        194 two_mixezoque.two.0156,
+        195 two_mixezoque.two.0157,
+        196 two_mixezoque.two.0158,
+        197 water_0ascertainment,
+        198 water_mixezoque.water.0159
+;
+
+MATRIX
+atitlan_mixe         0101000?????????0100010010000000100010100000100010000000010000000000010001001000???????010100000010000010001000010000110010000010001000100000100000000000010000001001011010001010001000101000100000001
+ayapaneco            0?0010010000000000100010010000001000100100000100010000000010000000000100010010001000000010010000010000010000100001000100001000001000100010000010000000000001000001000001010001001001000100100010000001
+ayutla_mixe          0?0001001000000001000100100000001000?01000001000100000000???????????010001001000???????010??????00100001000????0100000100001000100010001000000010000000000100000001010100???0101000???0?00010100000001
+chiapas_zoque        010100000100000001000010001000001000101000000100001000000001000000000100010010000100000010001000010000010000100001000100001000000100100001000000100000000010000001001001010001001001000100100100000001
+cotzocon_mixe        0101000?????????0100010010000000100010100000100010010000010000000000010001001000???????010001000010000011001000010000110010000010001000100000000010000000010000001001001010001010001000101000100000001
+guichicovi_mixe      0101000?????????0100010010000000100010100000100010000010010000000000010001000100???????010001000010000001001000010000010010000010001000100000000001000000010000001001001010001010001000101000100000001
+jaltepec_mixe        0101000?????????0100010010000000100010100000100000010000010000000000010001001000???????010001000010000010001000010000110010000010001000100000100000000000010000001001001010001010001000101000100000001
+juquila_mixe         0101000?????????01000100100000001000101000001000????????010000000000010001001000???????010001000010000010001000010000010010000010001000100000????????????0100000010010??01000?010000100?01000???????01
+lowland_mixe         010100000010000001000100100000001000?01000001000100000000000100000000100010000100010000010001000010000010001000010000100010000010001000100000000000100000010000001001010010001010001000101000100000001
+maria_chimalapa      0101000000010000010000100001000010001001000001000010000000000100000001000100???000010000100100000100000???00010001000100001000000100100?????0000000010000010000001001001010001001000010100100001000001
+matamoros_mixe       0101000?????????0100010010000000100010100000100010010000010000000000010001001000???????010001000010000010001000010000110010000010001000100000100000000000010000001001001010101010001000101000???????01
+miguel_chimalapa     010100000100000001000010000100001000100100000010001000000000001000000010010010000001000010001000010000010000010001000100001000000100100?????0000000001000010000001001001010001001001000100100001000001
+north_highland_mixe  010100000000100001000100100000001000101000001000100000000100000000000100010010000010000010000100000100010001000000100100010000010001000100000000000000100010000001001010010001010001000101000100000001
+oluta_popoluca       0101000?????????01000100001000001000101000001000001000000100000000000100010010000000100010000010010000010001000010000100010000010001000000100000010000000000100001001010010001010001000100100100000001
+puxmecatan_mixe      0?01000?????????0???010010000000100010100000100000010000010000000000010001001000???????0100010000100000100000010100000100100000???010001000001000000000000100000010000010100010???01000101000???????01
+sayula_popoluca      010100000000010001000100000010001000101000001000100000000000000100000100001010000010000010001000010000010000100010000100010000010000100100000000010000000010000101001010010001010001000100100100000001
+soteapan_zoque       0101000100000000010000100000010010001000100001000000100000000000100001000100???00000100010010000010000010000010001000100001000001000100?????0????????????010000001001001010001001001000100100000100001
+south_highland_mixe  010100001000000001000100100000001000101000001000100000000100000000000100010010000010000010001000010000010001000000010010010000010001000100000000000000100010000001001001010001010001000100010100000001
+tapachultec          010???000100000001000??0000000100100100010101000001000010???????????00010??0???00000010010??????00001000010????0????0001000010001000010?????00000000000110000100010110??001001000101000100100100000101
+texistepec_zoque     01010000000000100100001000000100100010001000010001000000000000001000010001001000000010001001000001000001000010000100010000000100010010000100000001000000001000000100101001000100100???0100100000010001
+ulterior_mixe_c      010100001000000001000100100000001000101000001000100000000100000000000100010010000000100010000001000001010001000000100100010000010001000100000100000000000010000001001001010001010001000100100100000001
+zoque_francisco_leon 0101000?????????01000010001000001000100100000100001000000000000001010100010010000000001010001000010000010000010001000100001000000100100001000000100000000011000001001001010001001001000100100000001001
+zoque_rayon          010100000100000101010010001000001010100001000100000001000000000000100100010010000000001010001000010000010000010001000100001000000101000000010000100000000000001001001001010001001001000100100000001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-6;
+    charset breast = 7-16;
+    charset come = 17-20;
+    charset die = 21-23;
+    charset dog = 24-31;
+    charset drink = 32-35;
+    charset ear = 36-37;
+    charset eye = 38-43;
+    charset fire = 44-47;
+    charset fish = 48-56;
+    charset full = 57-68;
+    charset hand = 69-72;
+    charset hear = 73-75;
+    charset horn = 76-79;
+    charset knee = 80-87;
+    charset leaf = 88-89;
+    charset liver = 90-96;
+    charset louse = 97-102;
+    charset mountain = 103-106;
+    charset name = 107-111;
+    charset new = 112-116;
+    charset night = 117-120;
+    charset nose = 121-126;
+    charset one = 127-130;
+    charset path = 131-134;
+    charset person = 135-140;
+    charset pl = 141-153;
+    charset see = 154-160;
+    charset sg = 161-165;
+    charset skin = 166-168;
+    charset star = 169-172;
+    charset stone = 173-174;
+    charset sun = 175-178;
+    charset tongue = 179-182;
+    charset tooth = 183-184;
+    charset tree = 185-188;
+    charset two = 189-196;
+    charset water = 197-198;
+END;

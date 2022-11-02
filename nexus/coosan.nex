@@ -1,87 +1,86 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=1 NCHAR=74;
+    DIMENSIONS NTAX=1 NCHAR=73;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_2,
+        2 blood_coosan.blood.0006,
         3 bone_0ascertainment,
-        4 bone_3,
+        4 bone_coosan.bone.0049,
         5 come_0ascertainment,
-        6 come_4,
+        6 come_coosan.come.0132,
         7 die_0ascertainment,
-        8 die_5,
+        8 die_coosan.die.0428,
         9 dog_0ascertainment,
-        10 dog_6,
+        10 dog_coosan.dog.0287,
         11 drink_0ascertainment,
-        12 drink_7,
+        12 drink_coosan.drink.0469,
         13 ear_0ascertainment,
-        14 ear_8,
+        14 ear_coosan.ear.0077,
         15 eye_0ascertainment,
-        16 eye_9,
+        16 eye_coosan.eye.0377,
         17 fire_0ascertainment,
-        18 fire_10,
+        18 fire_coosan.fire.0407,
         19 full_0ascertainment,
-        20 full_11,
+        20 full_coosan.full.0463,
         21 hand_0ascertainment,
-        22 hand_12,
+        22 hand_coosan.hand.0314,
         23 hear_0ascertainment,
-        24 hear_13,
+        24 hear_coosan.hear.0001,
         25 horn_0ascertainment,
-        26 horn_14,
-        27 i_0ascertainment,
-        28 i_1,
-        29 knee_0ascertainment,
-        30 knee_15,
-        31 leaf_0ascertainment,
-        32 leaf_16,
-        33 liver_0ascertainment,
-        34 liver_17,
-        35 louse_0ascertainment,
-        36 louse_18,
-        37 mountain_0ascertainment,
-        38 mountain_19,
-        39 name_0ascertainment,
-        40 name_20,
-        41 new_0ascertainment,
-        42 new_21,
-        43 night_0ascertainment,
-        44 night_22,
-        45 nose_0ascertainment,
-        46 nose_23,
-        47 one_0ascertainment,
-        48 one_24,
-        49 path_0ascertainment,
-        50 path_25,
-        51 person_0ascertainment,
-        52 person_26,
+        26 horn_coosan.horn.0303,
+        27 knee_0ascertainment,
+        28 knee_coosan.knee.0118,
+        29 leaf_0ascertainment,
+        30 leaf_coosan.leaf.0331,
+        31 liver_0ascertainment,
+        32 liver_coosan.liver.0429,
+        33 louse_0ascertainment,
+        34 louse_coosan.louse.0047,
+        35 mountain_0ascertainment,
+        36 mountain_coosan.mountain.0392,
+        37 name_0ascertainment,
+        38 name_coosan.name.0303,
+        39 new_0ascertainment,
+        40 new_coosan.new.0363,
+        41 night_0ascertainment,
+        42 night_coosan.night.0287,
+        43 nose_0ascertainment,
+        44 nose_coosan.nose.0415,
+        45 one_0ascertainment,
+        46 one_coosan.one.0320,
+        47 path_0ascertainment,
+        48 path_coosan.path.0406,
+        49 person_0ascertainment,
+        50 person_coosan.person.0493,
+        51 pl_0ascertainment,
+        52 pl_coosan.1pl.0400,
         53 see_0ascertainment,
-        54 see_27,
-        55 skin_0ascertainment,
-        56 skin_28,
-        57 star_0ascertainment,
-        58 star_29,
-        59 stone_0ascertainment,
-        60 stone_30,
-        61 sun_0ascertainment,
-        62 sun_31,
-        63 thou_0ascertainment,
-        64 thou_37,
-        65 tongue_0ascertainment,
-        66 tongue_32,
-        67 tooth_0ascertainment,
-        68 tooth_33,
-        69 two_0ascertainment,
-        70 two_34,
-        71 water_0ascertainment,
-        72 water_35,
-        73 we_0ascertainment,
-        74 we_36
+        54 see_coosan.see.0015,
+        55 sg_0ascertainment,
+        56 sg_coosan.1sg.0098,
+        57 sg_coosan.2sg.0042,
+        58 skin_0ascertainment,
+        59 skin_coosan.skin.0433,
+        60 star_0ascertainment,
+        61 star_coosan.star.0163,
+        62 stone_0ascertainment,
+        63 stone_coosan.stone.0547,
+        64 sun_0ascertainment,
+        65 sun_coosan.sun.0007,
+        66 tongue_0ascertainment,
+        67 tongue_coosan.tongue.0017,
+        68 tooth_0ascertainment,
+        69 tooth_coosan.tooth.0393,
+        70 two_0ascertainment,
+        71 two_coosan.two.0013,
+        72 water_0ascertainment,
+        73 water_coosan.water.0312
 ;
 
 MATRIX
-hanis_coos 01010101010101010101010101010101010101010101010101010101010101010101010101
+hanis_coos 0101010101010101010101010101010101010101010101010101010110101010101010101
 ;
 END;
 
@@ -99,28 +98,27 @@ BEGIN ASSUMPTIONS;
     charset hand = 21-22;
     charset hear = 23-24;
     charset horn = 25-26;
-    charset i = 27-28;
-    charset knee = 29-30;
-    charset leaf = 31-32;
-    charset liver = 33-34;
-    charset louse = 35-36;
-    charset mountain = 37-38;
-    charset name = 39-40;
-    charset new = 41-42;
-    charset night = 43-44;
-    charset nose = 45-46;
-    charset one = 47-48;
-    charset path = 49-50;
-    charset person = 51-52;
+    charset knee = 27-28;
+    charset leaf = 29-30;
+    charset liver = 31-32;
+    charset louse = 33-34;
+    charset mountain = 35-36;
+    charset name = 37-38;
+    charset new = 39-40;
+    charset night = 41-42;
+    charset nose = 43-44;
+    charset one = 45-46;
+    charset path = 47-48;
+    charset person = 49-50;
+    charset pl = 51-52;
     charset see = 53-54;
-    charset skin = 55-56;
-    charset star = 57-58;
-    charset stone = 59-60;
-    charset sun = 61-62;
-    charset thou = 63-64;
-    charset tongue = 65-66;
-    charset tooth = 67-68;
-    charset two = 69-70;
-    charset water = 71-72;
-    charset we = 73-74;
+    charset sg = 55-57;
+    charset skin = 58-59;
+    charset star = 60-61;
+    charset stone = 62-63;
+    charset sun = 64-65;
+    charset tongue = 66-67;
+    charset tooth = 68-69;
+    charset two = 70-71;
+    charset water = 72-73;
 END;

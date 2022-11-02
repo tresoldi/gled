@@ -1,0 +1,107 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=62;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_larrakiyan.blood.0402,
+        3 bone_0ascertainment,
+        4 bone_larrakiyan.bone.0093,
+        5 breast_0ascertainment,
+        6 breast_larrakiyan.breast.0467,
+        7 dog_0ascertainment,
+        8 dog_larrakiyan.dog.0051,
+        9 ear_0ascertainment,
+        10 ear_larrakiyan.ear.0071,
+        11 eye_0ascertainment,
+        12 eye_larrakiyan.eye.0485,
+        13 fire_0ascertainment,
+        14 fire_larrakiyan.fire.0345,
+        15 hand_0ascertainment,
+        16 hand_larrakiyan.hand.0388,
+        17 knee_0ascertainment,
+        18 knee_larrakiyan.knee.0003,
+        19 leaf_0ascertainment,
+        20 leaf_larrakiyan.leaf.0402,
+        21 liver_0ascertainment,
+        22 liver_larrakiyan.liver.0069,
+        23 louse_0ascertainment,
+        24 louse_larrakiyan.louse.0477,
+        25 mountain_0ascertainment,
+        26 mountain_larrakiyan.mountain.0536,
+        27 name_0ascertainment,
+        28 name_larrakiyan.name.0373,
+        29 new_0ascertainment,
+        30 new_larrakiyan.new.0477,
+        31 night_0ascertainment,
+        32 night_larrakiyan.night.0005,
+        33 nose_0ascertainment,
+        34 nose_larrakiyan.nose.0526,
+        35 one_0ascertainment,
+        36 one_larrakiyan.one.0079,
+        37 path_0ascertainment,
+        38 path_larrakiyan.path.0516,
+        39 pl_0ascertainment,
+        40 pl_larrakiyan.1pl.0539,
+        41 sg_0ascertainment,
+        42 sg_larrakiyan.1sg.0007,
+        43 sg_larrakiyan.2sg.0013,
+        44 skin_0ascertainment,
+        45 skin_larrakiyan.skin.0006,
+        46 star_0ascertainment,
+        47 star_larrakiyan.star.0530,
+        48 stone_0ascertainment,
+        49 stone_larrakiyan.stone.0721,
+        50 stone_larrakiyan.stone.0722,
+        51 sun_0ascertainment,
+        52 sun_larrakiyan.sun.0161,
+        53 tongue_0ascertainment,
+        54 tongue_larrakiyan.tongue.0007,
+        55 tooth_0ascertainment,
+        56 tooth_larrakiyan.tooth.0506,
+        57 tree_0ascertainment,
+        58 tree_larrakiyan.tree.0451,
+        59 two_0ascertainment,
+        60 two_larrakiyan.two.0069,
+        61 water_0ascertainment,
+        62 water_larrakiyan.water.0389
+;
+
+MATRIX
+larrakia 01010101010101010101010101010101010101010110101011010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset dog = 7-8;
+    charset ear = 9-10;
+    charset eye = 11-12;
+    charset fire = 13-14;
+    charset hand = 15-16;
+    charset knee = 17-18;
+    charset leaf = 19-20;
+    charset liver = 21-22;
+    charset louse = 23-24;
+    charset mountain = 25-26;
+    charset name = 27-28;
+    charset new = 29-30;
+    charset night = 31-32;
+    charset nose = 33-34;
+    charset one = 35-36;
+    charset path = 37-38;
+    charset pl = 39-40;
+    charset sg = 41-43;
+    charset skin = 44-45;
+    charset star = 46-47;
+    charset stone = 48-50;
+    charset sun = 51-52;
+    charset tongue = 53-54;
+    charset tooth = 55-56;
+    charset tree = 57-58;
+    charset two = 59-60;
+    charset water = 61-62;
+END;

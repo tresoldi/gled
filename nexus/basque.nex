@@ -1,0 +1,151 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=97;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_basque.blood.0167,
+        3 bone_0ascertainment,
+        4 bone_basque.bone.0003,
+        5 breast_0ascertainment,
+        6 breast_basque.breast.0165,
+        7 breast_basque.breast.0184,
+        8 come_0ascertainment,
+        9 come_basque.come.0172,
+        10 die_0ascertainment,
+        11 die_basque.die.0195,
+        12 die_basque.die.0196,
+        13 dog_0ascertainment,
+        14 dog_basque.dog.0156,
+        15 drink_0ascertainment,
+        16 drink_basque.drink.0184,
+        17 ear_0ascertainment,
+        18 ear_basque.ear.0131,
+        19 eye_0ascertainment,
+        20 eye_basque.eye.0174,
+        21 fire_0ascertainment,
+        22 fire_basque.fire.0021,
+        23 fire_basque.fire.0197,
+        24 fish_0ascertainment,
+        25 fish_basque.fish.0183,
+        26 fish_basque.fish.0184,
+        27 full_0ascertainment,
+        28 full_basque.full.0198,
+        29 hand_0ascertainment,
+        30 hand_basque.hand.0010,
+        31 hand_basque.hand.0155,
+        32 hear_0ascertainment,
+        33 hear_basque.hear.0219,
+        34 hear_basque.hear.0220,
+        35 horn_0ascertainment,
+        36 horn_basque.horn.0105,
+        37 horn_basque.horn.0146,
+        38 knee_0ascertainment,
+        39 knee_basque.knee.0003,
+        40 leaf_0ascertainment,
+        41 leaf_basque.leaf.0027,
+        42 leaf_basque.leaf.0176,
+        43 liver_0ascertainment,
+        44 liver_basque.liver.0010,
+        45 louse_0ascertainment,
+        46 louse_basque.louse.0164,
+        47 mountain_0ascertainment,
+        48 mountain_basque.mountain.0185,
+        49 name_0ascertainment,
+        50 name_basque.name.0001,
+        51 new_0ascertainment,
+        52 new_basque.new.0109,
+        53 night_0ascertainment,
+        54 night_basque.night.0167,
+        55 night_basque.night.0168,
+        56 nose_0ascertainment,
+        57 nose_basque.nose.0201,
+        58 one_0ascertainment,
+        59 one_basque.one.0167,
+        60 path_0ascertainment,
+        61 path_basque.path.0184,
+        62 path_basque.path.0185,
+        63 person_0ascertainment,
+        64 person_basque.person.0025,
+        65 person_basque.person.0239,
+        66 pl_0ascertainment,
+        67 pl_basque.1pl.0175,
+        68 see_0ascertainment,
+        69 see_basque.see.0017,
+        70 sg_0ascertainment,
+        71 sg_basque.1sg.0079,
+        72 sg_basque.1sg.0124,
+        73 sg_basque.2sg.0137,
+        74 sg_basque.2sg.0138,
+        75 skin_0ascertainment,
+        76 skin_basque.skin.0205,
+        77 skin_basque.skin.0206,
+        78 star_0ascertainment,
+        79 star_basque.star.0195,
+        80 star_basque.star.0196,
+        81 stone_0ascertainment,
+        82 stone_basque.stone.0218,
+        83 sun_0ascertainment,
+        84 sun_basque.sun.0029,
+        85 tongue_0ascertainment,
+        86 tongue_basque.tongue.0160,
+        87 tongue_basque.tongue.0161,
+        88 tooth_0ascertainment,
+        89 tooth_basque.tooth.0192,
+        90 tooth_basque.tooth.0193,
+        91 tree_0ascertainment,
+        92 tree_basque.tree.0175,
+        93 tree_basque.tree.0176,
+        94 two_0ascertainment,
+        95 two_basque.two.0142,
+        96 water_0ascertainment,
+        97 water_basque.water.0159
+;
+
+MATRIX
+basque 0101011010110101010101101101011011011010110101010101011010101101101010111101101101010110110110101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-9;
+    charset die = 10-12;
+    charset dog = 13-14;
+    charset drink = 15-16;
+    charset ear = 17-18;
+    charset eye = 19-20;
+    charset fire = 21-23;
+    charset fish = 24-26;
+    charset full = 27-28;
+    charset hand = 29-31;
+    charset hear = 32-34;
+    charset horn = 35-37;
+    charset knee = 38-39;
+    charset leaf = 40-42;
+    charset liver = 43-44;
+    charset louse = 45-46;
+    charset mountain = 47-48;
+    charset name = 49-50;
+    charset new = 51-52;
+    charset night = 53-55;
+    charset nose = 56-57;
+    charset one = 58-59;
+    charset path = 60-62;
+    charset person = 63-65;
+    charset pl = 66-67;
+    charset see = 68-69;
+    charset sg = 70-74;
+    charset skin = 75-77;
+    charset star = 78-80;
+    charset stone = 81-82;
+    charset sun = 83-84;
+    charset tongue = 85-87;
+    charset tooth = 88-90;
+    charset tree = 91-93;
+    charset two = 94-95;
+    charset water = 96-97;
+END;

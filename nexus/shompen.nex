@@ -1,0 +1,114 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=69;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_shompen.blood.0020,
+        3 blood_shompen.blood.0502,
+        4 bone_0ascertainment,
+        5 bone_shompen.bone.0013,
+        6 bone_shompen.bone.0018,
+        7 breast_0ascertainment,
+        8 breast_shompen.breast.0628,
+        9 come_0ascertainment,
+        10 come_shompen.come.0055,
+        11 dog_0ascertainment,
+        12 dog_shompen.dog.0056,
+        13 ear_0ascertainment,
+        14 ear_shompen.ear.0020,
+        15 eye_0ascertainment,
+        16 eye_shompen.eye.0006,
+        17 fire_0ascertainment,
+        18 fire_shompen.fire.0023,
+        19 full_0ascertainment,
+        20 full_shompen.full.0857,
+        21 full_shompen.full.0858,
+        22 hand_0ascertainment,
+        23 hand_shompen.hand.0492,
+        24 horn_0ascertainment,
+        25 horn_shompen.horn.0507,
+        26 knee_0ascertainment,
+        27 knee_shompen.knee.0123,
+        28 leaf_0ascertainment,
+        29 leaf_shompen.leaf.0015,
+        30 leaf_shompen.leaf.0052,
+        31 louse_0ascertainment,
+        32 louse_shompen.louse.0021,
+        33 night_0ascertainment,
+        34 night_shompen.night.0584,
+        35 nose_0ascertainment,
+        36 nose_shompen.nose.0697,
+        37 one_0ascertainment,
+        38 one_shompen.one.0023,
+        39 path_0ascertainment,
+        40 path_shompen.path.0679,
+        41 path_shompen.path.0680,
+        42 person_0ascertainment,
+        43 person_shompen.person.0025,
+        44 person_shompen.person.0051,
+        45 see_0ascertainment,
+        46 see_shompen.see.0548,
+        47 sg_0ascertainment,
+        48 sg_shompen.1sg.0007,
+        49 skin_0ascertainment,
+        50 skin_shompen.skin.0006,
+        51 skin_shompen.skin.0753,
+        52 star_0ascertainment,
+        53 star_shompen.star.0072,
+        54 stone_0ascertainment,
+        55 stone_shompen.stone.0644,
+        56 stone_shompen.stone.0959,
+        57 sun_0ascertainment,
+        58 sun_shompen.sun.0055,
+        59 tongue_0ascertainment,
+        60 tongue_shompen.tongue.0017,
+        61 tooth_0ascertainment,
+        62 tooth_shompen.tooth.0299,
+        63 tree_0ascertainment,
+        64 tree_shompen.tree.0035,
+        65 tree_shompen.tree.0062,
+        66 two_0ascertainment,
+        67 two_shompen.two.0013,
+        68 water_0ascertainment,
+        69 water_shompen.water.0009
+;
+
+MATRIX
+shom_peng 011011010101010101011010101011010101010110110101011010110101010110101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-8;
+    charset come = 9-10;
+    charset dog = 11-12;
+    charset ear = 13-14;
+    charset eye = 15-16;
+    charset fire = 17-18;
+    charset full = 19-21;
+    charset hand = 22-23;
+    charset horn = 24-25;
+    charset knee = 26-27;
+    charset leaf = 28-30;
+    charset louse = 31-32;
+    charset night = 33-34;
+    charset nose = 35-36;
+    charset one = 37-38;
+    charset path = 39-41;
+    charset person = 42-44;
+    charset see = 45-46;
+    charset sg = 47-48;
+    charset skin = 49-51;
+    charset star = 52-53;
+    charset stone = 54-56;
+    charset sun = 57-58;
+    charset tongue = 59-60;
+    charset tooth = 61-62;
+    charset tree = 63-65;
+    charset two = 66-67;
+    charset water = 68-69;
+END;

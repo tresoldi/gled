@@ -1,124 +1,118 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=3 NCHAR=109;
+    DIMENSIONS NTAX=2 NCHAR=104;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_3,
+        2 blood_tsimshian.blood.0007,
         3 bone_0ascertainment,
-        4 bone_4,
-        5 bone_5,
-        6 bone_6,
+        4 bone_tsimshian.bone.0008,
+        5 bone_tsimshian.bone.0009,
+        6 bone_tsimshian.bone.0010,
         7 breast_0ascertainment,
-        8 breast_7,
-        9 breast_8,
+        8 breast_tsimshian.breast.0011,
+        9 breast_tsimshian.breast.0012,
         10 come_0ascertainment,
-        11 come_10,
-        12 come_11,
-        13 come_9,
-        14 die_0ascertainment,
-        15 die_12,
-        16 die_13,
-        17 die_14,
-        18 dog_0ascertainment,
-        19 dog_15,
-        20 drink_0ascertainment,
-        21 drink_16,
-        22 drink_17,
-        23 drink_18,
-        24 ear_0ascertainment,
-        25 ear_19,
-        26 ear_20,
-        27 ear_21,
-        28 eye_0ascertainment,
-        29 eye_22,
-        30 fire_0ascertainment,
-        31 fire_23,
-        32 fire_24,
-        33 fish_0ascertainment,
-        34 fish_25,
-        35 fish_26,
-        36 full_0ascertainment,
-        37 full_27,
-        38 full_28,
-        39 hand_0ascertainment,
-        40 hand_29,
-        41 hand_30,
-        42 hand_31,
-        43 hear_0ascertainment,
-        44 hear_32,
-        45 hear_33,
-        46 horn_0ascertainment,
-        47 horn_34,
-        48 i_0ascertainment,
-        49 i_1,
-        50 i_2,
-        51 knee_0ascertainment,
-        52 knee_35,
-        53 knee_36,
-        54 leaf_0ascertainment,
-        55 leaf_37,
-        56 liver_0ascertainment,
-        57 liver_38,
-        58 louse_0ascertainment,
-        59 louse_39,
-        60 mountain_0ascertainment,
-        61 mountain_40,
-        62 name_0ascertainment,
-        63 name_41,
-        64 new_0ascertainment,
-        65 new_42,
-        66 night_0ascertainment,
-        67 night_43,
-        68 night_44,
-        69 nose_0ascertainment,
-        70 nose_45,
-        71 one_0ascertainment,
-        72 one_46,
-        73 path_0ascertainment,
-        74 path_47,
-        75 path_48,
-        76 person_0ascertainment,
-        77 person_49,
-        78 see_0ascertainment,
-        79 see_50,
-        80 see_51,
-        81 see_52,
-        82 skin_0ascertainment,
-        83 skin_53,
-        84 star_0ascertainment,
-        85 star_54,
-        86 star_55,
-        87 star_56,
-        88 stone_0ascertainment,
-        89 stone_57,
-        90 sun_0ascertainment,
-        91 sun_58,
-        92 sun_59,
-        93 thou_0ascertainment,
-        94 thou_68,
-        95 thou_69,
-        96 tongue_0ascertainment,
-        97 tongue_60,
-        98 tongue_61,
-        99 tooth_0ascertainment,
-        100 tooth_62,
-        101 tree_0ascertainment,
-        102 tree_63,
-        103 two_0ascertainment,
-        104 two_64,
-        105 two_65,
-        106 water_0ascertainment,
-        107 water_66,
-        108 we_0ascertainment,
-        109 we_67
+        11 come_tsimshian.come.0013,
+        12 come_tsimshian.come.0014,
+        13 die_0ascertainment,
+        14 die_tsimshian.die.0015,
+        15 die_tsimshian.die.0016,
+        16 die_tsimshian.die.0017,
+        17 dog_0ascertainment,
+        18 dog_tsimshian.dog.0018,
+        19 drink_0ascertainment,
+        20 drink_tsimshian.drink.0019,
+        21 drink_tsimshian.drink.0020,
+        22 ear_0ascertainment,
+        23 ear_tsimshian.ear.0021,
+        24 ear_tsimshian.ear.0022,
+        25 ear_tsimshian.ear.0023,
+        26 eye_0ascertainment,
+        27 eye_tsimshian.eye.0024,
+        28 fire_0ascertainment,
+        29 fire_tsimshian.fire.0025,
+        30 fire_tsimshian.fire.0026,
+        31 fish_0ascertainment,
+        32 fish_tsimshian.fish.0027,
+        33 full_0ascertainment,
+        34 full_tsimshian.full.0028,
+        35 full_tsimshian.full.0029,
+        36 hand_0ascertainment,
+        37 hand_tsimshian.hand.0030,
+        38 hand_tsimshian.hand.0031,
+        39 hear_0ascertainment,
+        40 hear_tsimshian.hear.0032,
+        41 hear_tsimshian.hear.0033,
+        42 horn_0ascertainment,
+        43 horn_tsimshian.horn.0034,
+        44 knee_0ascertainment,
+        45 knee_tsimshian.knee.0035,
+        46 knee_tsimshian.knee.0036,
+        47 leaf_0ascertainment,
+        48 leaf_tsimshian.leaf.0037,
+        49 liver_0ascertainment,
+        50 liver_tsimshian.liver.0038,
+        51 louse_0ascertainment,
+        52 louse_tsimshian.louse.0039,
+        53 mountain_0ascertainment,
+        54 mountain_tsimshian.mountain.0040,
+        55 name_0ascertainment,
+        56 name_tsimshian.name.0041,
+        57 new_0ascertainment,
+        58 new_tsimshian.new.0042,
+        59 night_0ascertainment,
+        60 night_tsimshian.night.0043,
+        61 night_tsimshian.night.0044,
+        62 nose_0ascertainment,
+        63 nose_tsimshian.nose.0045,
+        64 nose_tsimshian.nose.0046,
+        65 one_0ascertainment,
+        66 one_tsimshian.one.0047,
+        67 path_0ascertainment,
+        68 path_tsimshian.path.0048,
+        69 path_tsimshian.path.0049,
+        70 person_0ascertainment,
+        71 person_tsimshian.person.0050,
+        72 pl_0ascertainment,
+        73 pl_tsimshian.1pl.0001,
+        74 pl_tsimshian.1pl.0002,
+        75 see_0ascertainment,
+        76 see_tsimshian.see.0051,
+        77 see_tsimshian.see.0052,
+        78 see_tsimshian.see.0053,
+        79 sg_0ascertainment,
+        80 sg_tsimshian.1sg.0003,
+        81 sg_tsimshian.1sg.0004,
+        82 sg_tsimshian.2sg.0005,
+        83 sg_tsimshian.2sg.0006,
+        84 skin_0ascertainment,
+        85 skin_tsimshian.skin.0054,
+        86 star_0ascertainment,
+        87 star_tsimshian.star.0055,
+        88 star_tsimshian.star.0056,
+        89 stone_0ascertainment,
+        90 stone_tsimshian.stone.0057,
+        91 sun_0ascertainment,
+        92 sun_tsimshian.sun.0058,
+        93 sun_tsimshian.sun.0059,
+        94 tongue_0ascertainment,
+        95 tongue_tsimshian.tongue.0060,
+        96 tooth_0ascertainment,
+        97 tooth_tsimshian.tooth.0061,
+        98 tree_0ascertainment,
+        99 tree_tsimshian.tree.0062,
+        100 two_0ascertainment,
+        101 two_tsimshian.two.0063,
+        102 two_tsimshian.two.0064,
+        103 water_0ascertainment,
+        104 water_tsimshian.water.0065
 ;
 
 MATRIX
-coast_tsimshian 0101010100001010101010001010101001001001000100101001001010101010101001010100101010101000101001101001010100101
-gitxsan         0?0???0??01000???0?001001000?0100010??00100??0?0010??0?0?0?0?010?0??0?010??0?00100?00100?0??0010??0?010??0101
-nisgha          0100100010010001001000100100100101000100010010?00100101010101010100101010010100100100010100100100101010110101
+coast_tsimshian 01010101001001010101001010101001010010010010100101010101010100100101001010010101011010100101001010101001
+nisgha          010010001001001001001001001001010010010010?0010101010101010010010100101001001000101010010100101010101101
 ;
 END;
 
@@ -126,41 +120,40 @@ BEGIN ASSUMPTIONS;
     charset blood = 1-2;
     charset bone = 3-6;
     charset breast = 7-9;
-    charset come = 10-13;
-    charset die = 14-17;
-    charset dog = 18-19;
-    charset drink = 20-23;
-    charset ear = 24-27;
-    charset eye = 28-29;
-    charset fire = 30-32;
-    charset fish = 33-35;
-    charset full = 36-38;
-    charset hand = 39-42;
-    charset hear = 43-45;
-    charset horn = 46-47;
-    charset i = 48-50;
-    charset knee = 51-53;
-    charset leaf = 54-55;
-    charset liver = 56-57;
-    charset louse = 58-59;
-    charset mountain = 60-61;
-    charset name = 62-63;
-    charset new = 64-65;
-    charset night = 66-68;
-    charset nose = 69-70;
-    charset one = 71-72;
-    charset path = 73-75;
-    charset person = 76-77;
-    charset see = 78-81;
-    charset skin = 82-83;
-    charset star = 84-87;
-    charset stone = 88-89;
-    charset sun = 90-92;
-    charset thou = 93-95;
-    charset tongue = 96-98;
-    charset tooth = 99-100;
-    charset tree = 101-102;
-    charset two = 103-105;
-    charset water = 106-107;
-    charset we = 108-109;
+    charset come = 10-12;
+    charset die = 13-16;
+    charset dog = 17-18;
+    charset drink = 19-21;
+    charset ear = 22-25;
+    charset eye = 26-27;
+    charset fire = 28-30;
+    charset fish = 31-32;
+    charset full = 33-35;
+    charset hand = 36-38;
+    charset hear = 39-41;
+    charset horn = 42-43;
+    charset knee = 44-46;
+    charset leaf = 47-48;
+    charset liver = 49-50;
+    charset louse = 51-52;
+    charset mountain = 53-54;
+    charset name = 55-56;
+    charset new = 57-58;
+    charset night = 59-61;
+    charset nose = 62-64;
+    charset one = 65-66;
+    charset path = 67-69;
+    charset person = 70-71;
+    charset pl = 72-74;
+    charset see = 75-78;
+    charset sg = 79-83;
+    charset skin = 84-85;
+    charset star = 86-88;
+    charset stone = 89-90;
+    charset sun = 91-93;
+    charset tongue = 94-95;
+    charset tooth = 96-97;
+    charset tree = 98-99;
+    charset two = 100-102;
+    charset water = 103-104;
 END;

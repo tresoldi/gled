@@ -1,0 +1,114 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=66;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_molof.blood.0440,
+        3 bone_0ascertainment,
+        4 bone_molof.bone.0245,
+        5 breast_0ascertainment,
+        6 breast_molof.breast.0206,
+        7 come_0ascertainment,
+        8 come_molof.come.0515,
+        9 ear_0ascertainment,
+        10 ear_molof.ear.0221,
+        11 eye_0ascertainment,
+        12 eye_molof.eye.0541,
+        13 fire_0ascertainment,
+        14 fire_molof.fire.0036,
+        15 fish_0ascertainment,
+        16 fish_molof.fish.0527,
+        17 hand_0ascertainment,
+        18 hand_molof.hand.0289,
+        19 hear_0ascertainment,
+        20 hear_molof.hear.0753,
+        21 knee_0ascertainment,
+        22 knee_molof.knee.0474,
+        23 leaf_0ascertainment,
+        24 leaf_molof.leaf.0034,
+        25 louse_0ascertainment,
+        26 louse_molof.louse.0537,
+        27 mountain_0ascertainment,
+        28 mountain_molof.mountain.0253,
+        29 name_0ascertainment,
+        30 name_molof.name.0097,
+        31 new_0ascertainment,
+        32 new_molof.new.0532,
+        33 night_0ascertainment,
+        34 night_molof.night.0499,
+        35 nose_0ascertainment,
+        36 nose_molof.nose.0591,
+        37 one_0ascertainment,
+        38 one_molof.one.0023,
+        39 path_0ascertainment,
+        40 path_molof.path.0580,
+        41 person_0ascertainment,
+        42 person_molof.person.0742,
+        43 pl_0ascertainment,
+        44 pl_molof.1pl.0629,
+        45 see_0ascertainment,
+        46 see_molof.see.0113,
+        47 sg_0ascertainment,
+        48 sg_molof.1sg.0356,
+        49 skin_0ascertainment,
+        50 skin_molof.skin.0627,
+        51 star_0ascertainment,
+        52 star_molof.star.0321,
+        53 stone_0ascertainment,
+        54 stone_molof.stone.0814,
+        55 sun_0ascertainment,
+        56 sun_molof.sun.0456,
+        57 tongue_0ascertainment,
+        58 tongue_molof.tongue.0481,
+        59 tooth_0ascertainment,
+        60 tooth_molof.tooth.0554,
+        61 tree_0ascertainment,
+        62 tree_molof.tree.0390,
+        63 two_0ascertainment,
+        64 two_molof.two.0448,
+        65 water_0ascertainment,
+        66 water_molof.water.0432
+;
+
+MATRIX
+molof 010101010101010101010101010101010101010101010101010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset ear = 9-10;
+    charset eye = 11-12;
+    charset fire = 13-14;
+    charset fish = 15-16;
+    charset hand = 17-18;
+    charset hear = 19-20;
+    charset knee = 21-22;
+    charset leaf = 23-24;
+    charset louse = 25-26;
+    charset mountain = 27-28;
+    charset name = 29-30;
+    charset new = 31-32;
+    charset night = 33-34;
+    charset nose = 35-36;
+    charset one = 37-38;
+    charset path = 39-40;
+    charset person = 41-42;
+    charset pl = 43-44;
+    charset see = 45-46;
+    charset sg = 47-48;
+    charset skin = 49-50;
+    charset star = 51-52;
+    charset stone = 53-54;
+    charset sun = 55-56;
+    charset tongue = 57-58;
+    charset tooth = 59-60;
+    charset tree = 61-62;
+    charset two = 63-64;
+    charset water = 65-66;
+END;

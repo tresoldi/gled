@@ -1,0 +1,235 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=11 NCHAR=171;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_mongolic.blood.0007,
+        3 bone_0ascertainment,
+        4 bone_mongolic.bone.0008,
+        5 bone_mongolic.bone.0009,
+        6 breast_0ascertainment,
+        7 breast_mongolic.breast.0010,
+        8 breast_mongolic.breast.0011,
+        9 breast_mongolic.breast.0012,
+        10 breast_mongolic.breast.0013,
+        11 breast_mongolic.breast.0014,
+        12 come_0ascertainment,
+        13 come_mongolic.come.0015,
+        14 die_0ascertainment,
+        15 die_mongolic.die.0016,
+        16 die_mongolic.die.0017,
+        17 die_mongolic.die.0018,
+        18 die_mongolic.die.0019,
+        19 die_mongolic.die.0020,
+        20 die_mongolic.die.0021,
+        21 dog_0ascertainment,
+        22 dog_mongolic.dog.0022,
+        23 dog_mongolic.dog.0023,
+        24 drink_0ascertainment,
+        25 drink_mongolic.drink.0024,
+        26 drink_mongolic.drink.0025,
+        27 drink_mongolic.drink.0026,
+        28 drink_mongolic.drink.0027,
+        29 drink_mongolic.drink.0028,
+        30 drink_mongolic.drink.0029,
+        31 drink_mongolic.drink.0030,
+        32 ear_0ascertainment,
+        33 ear_mongolic.ear.0031,
+        34 eye_0ascertainment,
+        35 eye_mongolic.eye.0032,
+        36 eye_mongolic.eye.0033,
+        37 fire_0ascertainment,
+        38 fire_mongolic.fire.0034,
+        39 fire_mongolic.fire.0035,
+        40 fire_mongolic.fire.0036,
+        41 fire_mongolic.fire.0037,
+        42 fire_mongolic.fire.0038,
+        43 fish_0ascertainment,
+        44 fish_mongolic.fish.0039,
+        45 fish_mongolic.fish.0040,
+        46 full_0ascertainment,
+        47 full_mongolic.full.0041,
+        48 full_mongolic.full.0042,
+        49 full_mongolic.full.0043,
+        50 full_mongolic.full.0044,
+        51 full_mongolic.full.0045,
+        52 hand_0ascertainment,
+        53 hand_mongolic.hand.0046,
+        54 hand_mongolic.hand.0047,
+        55 hand_mongolic.hand.0048,
+        56 hand_mongolic.hand.0049,
+        57 hand_mongolic.hand.0050,
+        58 hand_mongolic.hand.0051,
+        59 hear_0ascertainment,
+        60 hear_mongolic.hear.0052,
+        61 hear_mongolic.hear.0053,
+        62 hear_mongolic.hear.0054,
+        63 hear_mongolic.hear.0055,
+        64 hear_mongolic.hear.0056,
+        65 horn_0ascertainment,
+        66 horn_mongolic.horn.0057,
+        67 horn_mongolic.horn.0058,
+        68 horn_mongolic.horn.0059,
+        69 horn_mongolic.horn.0060,
+        70 horn_mongolic.horn.0061,
+        71 knee_0ascertainment,
+        72 knee_mongolic.knee.0062,
+        73 knee_mongolic.knee.0063,
+        74 knee_mongolic.knee.0064,
+        75 knee_mongolic.knee.0065,
+        76 knee_mongolic.knee.0066,
+        77 knee_mongolic.knee.0067,
+        78 leaf_0ascertainment,
+        79 leaf_mongolic.leaf.0068,
+        80 leaf_mongolic.leaf.0069,
+        81 leaf_mongolic.leaf.0070,
+        82 leaf_mongolic.leaf.0071,
+        83 leaf_mongolic.leaf.0072,
+        84 leaf_mongolic.leaf.0073,
+        85 leaf_mongolic.leaf.0074,
+        86 leaf_mongolic.leaf.0075,
+        87 liver_0ascertainment,
+        88 liver_mongolic.liver.0076,
+        89 louse_0ascertainment,
+        90 louse_mongolic.louse.0077,
+        91 louse_mongolic.louse.0078,
+        92 mountain_0ascertainment,
+        93 mountain_mongolic.mountain.0079,
+        94 mountain_mongolic.mountain.0080,
+        95 mountain_mongolic.mountain.0081,
+        96 mountain_mongolic.mountain.0082,
+        97 mountain_mongolic.mountain.0083,
+        98 name_0ascertainment,
+        99 name_mongolic.name.0084,
+        100 name_mongolic.name.0085,
+        101 name_mongolic.name.0086,
+        102 new_0ascertainment,
+        103 new_mongolic.new.0087,
+        104 new_mongolic.new.0088,
+        105 night_0ascertainment,
+        106 night_mongolic.night.0089,
+        107 night_mongolic.night.0090,
+        108 night_mongolic.night.0091,
+        109 night_mongolic.night.0092,
+        110 night_mongolic.night.0093,
+        111 nose_0ascertainment,
+        112 nose_mongolic.nose.0094,
+        113 nose_mongolic.nose.0095,
+        114 one_0ascertainment,
+        115 one_mongolic.one.0096,
+        116 one_mongolic.one.0097,
+        117 one_mongolic.one.0098,
+        118 one_mongolic.one.0099,
+        119 path_0ascertainment,
+        120 path_mongolic.path.0100,
+        121 path_mongolic.path.0101,
+        122 path_mongolic.path.0102,
+        123 path_mongolic.path.0103,
+        124 path_mongolic.path.0104,
+        125 person_0ascertainment,
+        126 person_mongolic.person.0105,
+        127 person_mongolic.person.0106,
+        128 person_mongolic.person.0107,
+        129 pl_0ascertainment,
+        130 pl_mongolic.1pl.0001,
+        131 pl_mongolic.1pl.0002,
+        132 pl_mongolic.1pl.0003,
+        133 see_0ascertainment,
+        134 see_mongolic.see.0108,
+        135 see_mongolic.see.0109,
+        136 see_mongolic.see.0110,
+        137 see_mongolic.see.0111,
+        138 see_mongolic.see.0112,
+        139 sg_0ascertainment,
+        140 sg_mongolic.1sg.0004,
+        141 sg_mongolic.2sg.0005,
+        142 sg_mongolic.2sg.0006,
+        143 skin_0ascertainment,
+        144 skin_mongolic.skin.0113,
+        145 skin_mongolic.skin.0114,
+        146 star_0ascertainment,
+        147 star_mongolic.star.0115,
+        148 star_mongolic.star.0116,
+        149 star_mongolic.star.0117,
+        150 stone_0ascertainment,
+        151 stone_mongolic.stone.0118,
+        152 stone_mongolic.stone.0119,
+        153 stone_mongolic.stone.0120,
+        154 sun_0ascertainment,
+        155 sun_mongolic.sun.0121,
+        156 tongue_0ascertainment,
+        157 tongue_mongolic.tongue.0122,
+        158 tongue_mongolic.tongue.0123,
+        159 tooth_0ascertainment,
+        160 tooth_mongolic.tooth.0124,
+        161 tree_0ascertainment,
+        162 tree_mongolic.tree.0125,
+        163 tree_mongolic.tree.0126,
+        164 tree_mongolic.tree.0127,
+        165 two_0ascertainment,
+        166 two_mongolic.two.0128,
+        167 two_mongolic.two.0129,
+        168 two_mongolic.two.0130,
+        169 two_mongolic.two.0131,
+        170 water_0ascertainment,
+        171 water_mongolic.water.0132
+;
+
+MATRIX
+buriat_mongolia   01010010000010??????01001000000010100100000100?????01000000100000100000??????0????????0?0??01000001000100100000??01000010000010001000?????01100100???0100010??0101000100001
+buriat_russia_2   01010010001010100000010010000000101001000001001000001000000010000100000100000010000001010??01000001000100100000100100000100001000100010000011001001100100010100101000100001
+daur              0?0??0?????010010000010001000000?010001000010001000001000000100000100000100000010000000?0??00100001000??0?????0100100000100001000100001000011001000100100010110?01000100001
+kalaqin           010100?????01000100001000010000010100?????01001000001000000010000?????0??????0001000000?01000010001000??0100100100100001000001000110001000011001000100100010??0101000100001
+kalmyk_2          010100010000101001000100100000001010010000010010000000100000100000010000010000000100000101000001001000100010000100100000010001000010000100011001000100100010010101000100001
+khalkha_mongolian 010100010000101000010100100000001010010000010010000010010001000000010000010000000010000101000100001000100100000100100001100001000100000100011001000100100010010101000100001
+khamnigan_mongol  010100100000100000100100001000001010010000010010000010000001100001000000001000000010000101000100001100100100000100100001000001000101010100011001000100100010100101000100001
+moghol            01010001000010000010010000010010101101010000101000001000000001010?????0??????0????????0?01000000101010??0101000100010100001000110100000010011001000010010010??0100100110001
+mongolian         01011001100010??????0110000010001010010100010010100010000000100000010000010000000011000101100100001000110100010100100001000001000100010100011000100100100010010101000101001
+santa_mongolian   010100000100100000100100000001001010000010010000010000001000001000001000000100000000100?0100010000???01001000000100010000001010000100001000110010001000010?0100101000000101
+tacheng_dagur     010100010000101000000100100000001010010001010010001010000100100000000100000010010000000101000100001000100100000100100000100001000110000001011101000100100010010101010100001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-11;
+    charset come = 12-13;
+    charset die = 14-20;
+    charset dog = 21-23;
+    charset drink = 24-31;
+    charset ear = 32-33;
+    charset eye = 34-36;
+    charset fire = 37-42;
+    charset fish = 43-45;
+    charset full = 46-51;
+    charset hand = 52-58;
+    charset hear = 59-64;
+    charset horn = 65-70;
+    charset knee = 71-77;
+    charset leaf = 78-86;
+    charset liver = 87-88;
+    charset louse = 89-91;
+    charset mountain = 92-97;
+    charset name = 98-101;
+    charset new = 102-104;
+    charset night = 105-110;
+    charset nose = 111-113;
+    charset one = 114-118;
+    charset path = 119-124;
+    charset person = 125-128;
+    charset pl = 129-132;
+    charset see = 133-138;
+    charset sg = 139-142;
+    charset skin = 143-145;
+    charset star = 146-149;
+    charset stone = 150-153;
+    charset sun = 154-155;
+    charset tongue = 156-158;
+    charset tooth = 159-160;
+    charset tree = 161-164;
+    charset two = 165-169;
+    charset water = 170-171;
+END;

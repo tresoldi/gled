@@ -1,101 +1,100 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=2 NCHAR=87;
+    DIMENSIONS NTAX=2 NCHAR=86;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_2,
+        2 blood_huarpean.blood.0006,
         3 bone_0ascertainment,
-        4 bone_3,
+        4 bone_huarpean.bone.0007,
         5 breast_0ascertainment,
-        6 breast_4,
-        7 breast_5,
+        6 breast_huarpean.breast.0008,
+        7 breast_huarpean.breast.0009,
         8 come_0ascertainment,
-        9 come_10,
-        10 come_6,
-        11 come_7,
-        12 come_8,
-        13 come_9,
+        9 come_huarpean.come.0010,
+        10 come_huarpean.come.0011,
+        11 come_huarpean.come.0012,
+        12 come_huarpean.come.0013,
+        13 come_huarpean.come.0014,
         14 die_0ascertainment,
-        15 die_11,
-        16 die_12,
-        17 die_13,
+        15 die_huarpean.die.0015,
+        16 die_huarpean.die.0016,
+        17 die_huarpean.die.0017,
         18 dog_0ascertainment,
-        19 dog_14,
+        19 dog_huarpean.dog.0018,
         20 drink_0ascertainment,
-        21 drink_15,
+        21 drink_huarpean.drink.0019,
         22 ear_0ascertainment,
-        23 ear_16,
-        24 ear_17,
+        23 ear_huarpean.ear.0020,
+        24 ear_huarpean.ear.0021,
         25 eye_0ascertainment,
-        26 eye_18,
+        26 eye_huarpean.eye.0022,
         27 fire_0ascertainment,
-        28 fire_19,
+        28 fire_huarpean.fire.0023,
         29 fish_0ascertainment,
-        30 fish_20,
+        30 fish_huarpean.fish.0024,
         31 full_0ascertainment,
-        32 full_21,
+        32 full_huarpean.full.0025,
         33 hand_0ascertainment,
-        34 hand_22,
-        35 hand_23,
+        34 hand_huarpean.hand.0026,
+        35 hand_huarpean.hand.0027,
         36 hear_0ascertainment,
-        37 hear_24,
-        38 hear_25,
-        39 i_0ascertainment,
-        40 i_1,
-        41 knee_0ascertainment,
-        42 knee_26,
-        43 mountain_0ascertainment,
-        44 mountain_27,
-        45 mountain_28,
-        46 mountain_29,
-        47 name_0ascertainment,
-        48 name_30,
-        49 new_0ascertainment,
-        50 new_31,
-        51 nose_0ascertainment,
-        52 nose_32,
-        53 one_0ascertainment,
-        54 one_33,
-        55 path_0ascertainment,
-        56 path_34,
-        57 see_0ascertainment,
-        58 see_35,
-        59 see_36,
-        60 star_0ascertainment,
-        61 star_37,
-        62 stone_0ascertainment,
-        63 stone_38,
-        64 sun_0ascertainment,
-        65 sun_39,
-        66 sun_40,
-        67 sun_41,
-        68 thou_0ascertainment,
-        69 thou_54,
-        70 tongue_0ascertainment,
-        71 tongue_42,
-        72 tooth_0ascertainment,
-        73 tooth_43,
-        74 tooth_44,
-        75 tree_0ascertainment,
-        76 tree_45,
-        77 tree_46,
-        78 two_0ascertainment,
-        79 two_47,
-        80 water_0ascertainment,
-        81 water_48,
-        82 water_49,
-        83 water_50,
-        84 we_0ascertainment,
-        85 we_51,
-        86 we_52,
-        87 we_53
+        37 hear_huarpean.hear.0028,
+        38 hear_huarpean.hear.0029,
+        39 knee_0ascertainment,
+        40 knee_huarpean.knee.0030,
+        41 mountain_0ascertainment,
+        42 mountain_huarpean.mountain.0031,
+        43 mountain_huarpean.mountain.0032,
+        44 mountain_huarpean.mountain.0033,
+        45 name_0ascertainment,
+        46 name_huarpean.name.0034,
+        47 new_0ascertainment,
+        48 new_huarpean.new.0035,
+        49 nose_0ascertainment,
+        50 nose_huarpean.nose.0036,
+        51 one_0ascertainment,
+        52 one_huarpean.one.0037,
+        53 path_0ascertainment,
+        54 path_huarpean.path.0038,
+        55 pl_0ascertainment,
+        56 pl_huarpean.1pl.0001,
+        57 pl_huarpean.1pl.0002,
+        58 pl_huarpean.1pl.0003,
+        59 see_0ascertainment,
+        60 see_huarpean.see.0039,
+        61 see_huarpean.see.0040,
+        62 sg_0ascertainment,
+        63 sg_huarpean.1sg.0004,
+        64 sg_huarpean.2sg.0005,
+        65 star_0ascertainment,
+        66 star_huarpean.star.0041,
+        67 stone_0ascertainment,
+        68 stone_huarpean.stone.0042,
+        69 sun_0ascertainment,
+        70 sun_huarpean.sun.0043,
+        71 sun_huarpean.sun.0044,
+        72 sun_huarpean.sun.0045,
+        73 tongue_0ascertainment,
+        74 tongue_huarpean.tongue.0046,
+        75 tooth_0ascertainment,
+        76 tooth_huarpean.tooth.0047,
+        77 tooth_huarpean.tooth.0048,
+        78 tree_0ascertainment,
+        79 tree_huarpean.tree.0049,
+        80 tree_huarpean.tree.0050,
+        81 two_0ascertainment,
+        82 two_huarpean.two.0051,
+        83 water_0ascertainment,
+        84 water_huarpean.water.0052,
+        85 water_huarpean.water.0053,
+        86 water_huarpean.water.0054
 ;
 
 MATRIX
-allentiac 0101010011010010001010100101010?0100100101010001010101010100101010101010100100101000111
-millcayac 010?0110001010011010100101010101001011010?0011010?0101010010101001001010010010100110010
+allentiac 0101010010101010001010100101010?010010010100010101010101110100110101010101010010010100
+millcayac 010?01100101000110101001010101010010110?0011010?01010100100010110101001001001001010011
 ;
 END;
 
@@ -114,23 +113,22 @@ BEGIN ASSUMPTIONS;
     charset full = 31-32;
     charset hand = 33-35;
     charset hear = 36-38;
-    charset i = 39-40;
-    charset knee = 41-42;
-    charset mountain = 43-46;
-    charset name = 47-48;
-    charset new = 49-50;
-    charset nose = 51-52;
-    charset one = 53-54;
-    charset path = 55-56;
-    charset see = 57-59;
-    charset star = 60-61;
-    charset stone = 62-63;
-    charset sun = 64-67;
-    charset thou = 68-69;
-    charset tongue = 70-71;
-    charset tooth = 72-74;
-    charset tree = 75-77;
-    charset two = 78-79;
-    charset water = 80-83;
-    charset we = 84-87;
+    charset knee = 39-40;
+    charset mountain = 41-44;
+    charset name = 45-46;
+    charset new = 47-48;
+    charset nose = 49-50;
+    charset one = 51-52;
+    charset path = 53-54;
+    charset pl = 55-58;
+    charset see = 59-61;
+    charset sg = 62-64;
+    charset star = 65-66;
+    charset stone = 67-68;
+    charset sun = 69-72;
+    charset tongue = 73-74;
+    charset tooth = 75-77;
+    charset tree = 78-80;
+    charset two = 81-82;
+    charset water = 83-86;
 END;

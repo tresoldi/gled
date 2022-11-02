@@ -1,123 +1,122 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=3 NCHAR=108;
+    DIMENSIONS NTAX=3 NCHAR=107;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_2,
-        3 blood_3,
+        2 blood_mairasic.blood.0006,
+        3 blood_mairasic.blood.0007,
         4 bone_0ascertainment,
-        5 bone_4,
-        6 bone_5,
+        5 bone_mairasic.bone.0008,
+        6 bone_mairasic.bone.0009,
         7 breast_0ascertainment,
-        8 breast_6,
+        8 breast_mairasic.breast.0010,
         9 come_0ascertainment,
-        10 come_7,
-        11 come_8,
-        12 come_9,
+        10 come_mairasic.come.0011,
+        11 come_mairasic.come.0012,
+        12 come_mairasic.come.0013,
         13 die_0ascertainment,
-        14 die_10,
-        15 die_11,
-        16 die_12,
+        14 die_mairasic.die.0014,
+        15 die_mairasic.die.0015,
+        16 die_mairasic.die.0016,
         17 dog_0ascertainment,
-        18 dog_13,
+        18 dog_mairasic.dog.0017,
         19 drink_0ascertainment,
-        20 drink_14,
+        20 drink_mairasic.drink.0018,
         21 ear_0ascertainment,
-        22 ear_15,
+        22 ear_mairasic.ear.0019,
         23 eye_0ascertainment,
-        24 eye_16,
+        24 eye_mairasic.eye.0020,
         25 fire_0ascertainment,
-        26 fire_17,
+        26 fire_mairasic.fire.0021,
         27 fish_0ascertainment,
-        28 fish_18,
-        29 fish_19,
+        28 fish_mairasic.fish.0022,
+        29 fish_mairasic.fish.0023,
         30 full_0ascertainment,
-        31 full_20,
-        32 full_21,
-        33 full_22,
+        31 full_mairasic.full.0024,
+        32 full_mairasic.full.0025,
+        33 full_mairasic.full.0026,
         34 hand_0ascertainment,
-        35 hand_23,
-        36 hand_24,
+        35 hand_mairasic.hand.0027,
+        36 hand_mairasic.hand.0028,
         37 hear_0ascertainment,
-        38 hear_25,
-        39 i_0ascertainment,
-        40 i_1,
-        41 leaf_0ascertainment,
-        42 leaf_26,
-        43 liver_0ascertainment,
-        44 liver_27,
-        45 liver_28,
-        46 louse_0ascertainment,
-        47 louse_29,
-        48 mountain_0ascertainment,
-        49 mountain_30,
-        50 mountain_31,
-        51 mountain_32,
-        52 name_0ascertainment,
-        53 name_33,
-        54 name_34,
-        55 new_0ascertainment,
-        56 new_35,
-        57 new_36,
-        58 new_37,
-        59 night_0ascertainment,
-        60 night_38,
-        61 night_39,
-        62 night_40,
-        63 nose_0ascertainment,
-        64 nose_41,
-        65 nose_42,
-        66 one_0ascertainment,
-        67 one_43,
-        68 one_44,
-        69 one_45,
-        70 path_0ascertainment,
-        71 path_46,
-        72 person_0ascertainment,
-        73 person_47,
-        74 person_48,
-        75 see_0ascertainment,
-        76 see_49,
-        77 see_50,
-        78 see_51,
-        79 skin_0ascertainment,
-        80 skin_52,
-        81 skin_53,
-        82 skin_54,
-        83 star_0ascertainment,
-        84 star_55,
-        85 stone_0ascertainment,
-        86 stone_56,
-        87 stone_57,
-        88 sun_0ascertainment,
-        89 sun_58,
-        90 sun_59,
-        91 thou_0ascertainment,
-        92 thou_69,
-        93 thou_70,
-        94 tongue_0ascertainment,
-        95 tongue_60,
-        96 tooth_0ascertainment,
-        97 tooth_61,
-        98 tree_0ascertainment,
-        99 tree_62,
-        100 tree_63,
-        101 two_0ascertainment,
-        102 two_64,
-        103 water_0ascertainment,
-        104 water_65,
-        105 water_66,
-        106 we_0ascertainment,
-        107 we_67,
-        108 we_68
+        38 hear_mairasic.hear.0029,
+        39 leaf_0ascertainment,
+        40 leaf_mairasic.leaf.0030,
+        41 liver_0ascertainment,
+        42 liver_mairasic.liver.0031,
+        43 liver_mairasic.liver.0032,
+        44 louse_0ascertainment,
+        45 louse_mairasic.louse.0033,
+        46 mountain_0ascertainment,
+        47 mountain_mairasic.mountain.0034,
+        48 mountain_mairasic.mountain.0035,
+        49 mountain_mairasic.mountain.0036,
+        50 name_0ascertainment,
+        51 name_mairasic.name.0037,
+        52 name_mairasic.name.0038,
+        53 new_0ascertainment,
+        54 new_mairasic.new.0039,
+        55 new_mairasic.new.0040,
+        56 new_mairasic.new.0041,
+        57 night_0ascertainment,
+        58 night_mairasic.night.0042,
+        59 night_mairasic.night.0043,
+        60 night_mairasic.night.0044,
+        61 nose_0ascertainment,
+        62 nose_mairasic.nose.0045,
+        63 nose_mairasic.nose.0046,
+        64 one_0ascertainment,
+        65 one_mairasic.one.0047,
+        66 one_mairasic.one.0048,
+        67 one_mairasic.one.0049,
+        68 path_0ascertainment,
+        69 path_mairasic.path.0050,
+        70 person_0ascertainment,
+        71 person_mairasic.person.0051,
+        72 person_mairasic.person.0052,
+        73 pl_0ascertainment,
+        74 pl_mairasic.1pl.0001,
+        75 pl_mairasic.1pl.0002,
+        76 see_0ascertainment,
+        77 see_mairasic.see.0053,
+        78 see_mairasic.see.0054,
+        79 see_mairasic.see.0055,
+        80 sg_0ascertainment,
+        81 sg_mairasic.1sg.0003,
+        82 sg_mairasic.2sg.0004,
+        83 sg_mairasic.2sg.0005,
+        84 skin_0ascertainment,
+        85 skin_mairasic.skin.0056,
+        86 skin_mairasic.skin.0057,
+        87 skin_mairasic.skin.0058,
+        88 star_0ascertainment,
+        89 star_mairasic.star.0059,
+        90 stone_0ascertainment,
+        91 stone_mairasic.stone.0060,
+        92 stone_mairasic.stone.0061,
+        93 sun_0ascertainment,
+        94 sun_mairasic.sun.0062,
+        95 sun_mairasic.sun.0063,
+        96 tongue_0ascertainment,
+        97 tongue_mairasic.tongue.0064,
+        98 tooth_0ascertainment,
+        99 tooth_mairasic.tooth.0065,
+        100 tree_0ascertainment,
+        101 tree_mairasic.tree.0066,
+        102 tree_mairasic.tree.0067,
+        103 two_0ascertainment,
+        104 two_mairasic.two.0068,
+        105 water_0ascertainment,
+        106 water_mairasic.water.0069,
+        107 water_mairasic.water.0070
 ;
 
 MATRIX
-mairasi 010010010100010001010101010100100010010101010010100010010001000100100010100100010001010010010010101001010010
-mer     010001010010001001010101010010010001010101001010010001001000100010010010010010001001001001001010100101001001
-semimi  001010010001000101010101010100001001010101010010001010000100010100001010010001000101010010010010100101010001
+mairasi 01001001010001000101010101010010001001010100101000100100010001001000101001001000110010001010010010101001010
+mer     01000101001000100101010101001001000101010010100100010010001000100100100100100100101001001001001010100101001
+semimi  00101001000100010101010101010000100101010100100010100001000101000010100100100010110000101010010010100101010
 ;
 END;
 
@@ -136,28 +135,27 @@ BEGIN ASSUMPTIONS;
     charset full = 30-33;
     charset hand = 34-36;
     charset hear = 37-38;
-    charset i = 39-40;
-    charset leaf = 41-42;
-    charset liver = 43-45;
-    charset louse = 46-47;
-    charset mountain = 48-51;
-    charset name = 52-54;
-    charset new = 55-58;
-    charset night = 59-62;
-    charset nose = 63-65;
-    charset one = 66-69;
-    charset path = 70-71;
-    charset person = 72-74;
-    charset see = 75-78;
-    charset skin = 79-82;
-    charset star = 83-84;
-    charset stone = 85-87;
-    charset sun = 88-90;
-    charset thou = 91-93;
-    charset tongue = 94-95;
-    charset tooth = 96-97;
-    charset tree = 98-100;
-    charset two = 101-102;
-    charset water = 103-105;
-    charset we = 106-108;
+    charset leaf = 39-40;
+    charset liver = 41-43;
+    charset louse = 44-45;
+    charset mountain = 46-49;
+    charset name = 50-52;
+    charset new = 53-56;
+    charset night = 57-60;
+    charset nose = 61-63;
+    charset one = 64-67;
+    charset path = 68-69;
+    charset person = 70-72;
+    charset pl = 73-75;
+    charset see = 76-79;
+    charset sg = 80-83;
+    charset skin = 84-87;
+    charset star = 88-89;
+    charset stone = 90-92;
+    charset sun = 93-95;
+    charset tongue = 96-97;
+    charset tooth = 98-99;
+    charset tree = 100-102;
+    charset two = 103-104;
+    charset water = 105-107;
 END;

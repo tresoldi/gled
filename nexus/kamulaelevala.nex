@@ -1,0 +1,161 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=108;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kamulaelevala.blood.0006,
+        3 blood_kamulaelevala.blood.0007,
+        4 bone_0ascertainment,
+        5 bone_kamulaelevala.bone.0008,
+        6 bone_kamulaelevala.bone.0009,
+        7 breast_0ascertainment,
+        8 breast_kamulaelevala.breast.0010,
+        9 breast_kamulaelevala.breast.0011,
+        10 come_0ascertainment,
+        11 come_kamulaelevala.come.0012,
+        12 come_kamulaelevala.come.0013,
+        13 die_0ascertainment,
+        14 die_kamulaelevala.die.0014,
+        15 dog_0ascertainment,
+        16 dog_kamulaelevala.dog.0015,
+        17 dog_kamulaelevala.dog.0016,
+        18 drink_0ascertainment,
+        19 drink_kamulaelevala.drink.0017,
+        20 ear_0ascertainment,
+        21 ear_kamulaelevala.ear.0018,
+        22 ear_kamulaelevala.ear.0019,
+        23 eye_0ascertainment,
+        24 eye_kamulaelevala.eye.0020,
+        25 fire_0ascertainment,
+        26 fire_kamulaelevala.fire.0021,
+        27 fire_kamulaelevala.fire.0022,
+        28 fish_0ascertainment,
+        29 fish_kamulaelevala.fish.0023,
+        30 fish_kamulaelevala.fish.0024,
+        31 full_0ascertainment,
+        32 full_kamulaelevala.full.0025,
+        33 hand_0ascertainment,
+        34 hand_kamulaelevala.hand.0026,
+        35 hand_kamulaelevala.hand.0027,
+        36 hear_0ascertainment,
+        37 hear_kamulaelevala.hear.0028,
+        38 hear_kamulaelevala.hear.0029,
+        39 knee_0ascertainment,
+        40 knee_kamulaelevala.knee.0030,
+        41 knee_kamulaelevala.knee.0031,
+        42 leaf_0ascertainment,
+        43 leaf_kamulaelevala.leaf.0032,
+        44 leaf_kamulaelevala.leaf.0033,
+        45 louse_0ascertainment,
+        46 louse_kamulaelevala.louse.0034,
+        47 louse_kamulaelevala.louse.0035,
+        48 mountain_0ascertainment,
+        49 mountain_kamulaelevala.mountain.0036,
+        50 mountain_kamulaelevala.mountain.0037,
+        51 name_0ascertainment,
+        52 name_kamulaelevala.name.0038,
+        53 name_kamulaelevala.name.0039,
+        54 new_0ascertainment,
+        55 new_kamulaelevala.new.0040,
+        56 new_kamulaelevala.new.0041,
+        57 night_0ascertainment,
+        58 night_kamulaelevala.night.0042,
+        59 night_kamulaelevala.night.0043,
+        60 nose_0ascertainment,
+        61 nose_kamulaelevala.nose.0044,
+        62 nose_kamulaelevala.nose.0045,
+        63 one_0ascertainment,
+        64 one_kamulaelevala.one.0046,
+        65 one_kamulaelevala.one.0047,
+        66 path_0ascertainment,
+        67 path_kamulaelevala.path.0048,
+        68 path_kamulaelevala.path.0049,
+        69 person_0ascertainment,
+        70 person_kamulaelevala.person.0050,
+        71 person_kamulaelevala.person.0051,
+        72 pl_0ascertainment,
+        73 pl_kamulaelevala.1pl.0001,
+        74 pl_kamulaelevala.1pl.0002,
+        75 see_0ascertainment,
+        76 see_kamulaelevala.see.0052,
+        77 see_kamulaelevala.see.0053,
+        78 sg_0ascertainment,
+        79 sg_kamulaelevala.1sg.0003,
+        80 sg_kamulaelevala.2sg.0004,
+        81 sg_kamulaelevala.2sg.0005,
+        82 skin_0ascertainment,
+        83 skin_kamulaelevala.skin.0054,
+        84 skin_kamulaelevala.skin.0055,
+        85 star_0ascertainment,
+        86 star_kamulaelevala.star.0056,
+        87 star_kamulaelevala.star.0057,
+        88 stone_0ascertainment,
+        89 stone_kamulaelevala.stone.0058,
+        90 stone_kamulaelevala.stone.0059,
+        91 sun_0ascertainment,
+        92 sun_kamulaelevala.sun.0060,
+        93 sun_kamulaelevala.sun.0061,
+        94 tongue_0ascertainment,
+        95 tongue_kamulaelevala.tongue.0062,
+        96 tongue_kamulaelevala.tongue.0063,
+        97 tooth_0ascertainment,
+        98 tooth_kamulaelevala.tooth.0064,
+        99 tooth_kamulaelevala.tooth.0065,
+        100 tree_0ascertainment,
+        101 tree_kamulaelevala.tree.0066,
+        102 tree_kamulaelevala.tree.0067,
+        103 two_0ascertainment,
+        104 two_kamulaelevala.two.0068,
+        105 two_kamulaelevala.two.0069,
+        106 water_0ascertainment,
+        107 water_kamulaelevala.water.0070,
+        108 water_kamulaelevala.water.0071
+;
+
+MATRIX
+kamula   0100100100100?0100?010010100100?0100100100100100100100100100100100100100100100110010010010010010010010010010
+pare_png 001001001001010010100101001001010010010010010010010010010010010010010010010010101001001001001001001001001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-9;
+    charset come = 10-12;
+    charset die = 13-14;
+    charset dog = 15-17;
+    charset drink = 18-19;
+    charset ear = 20-22;
+    charset eye = 23-24;
+    charset fire = 25-27;
+    charset fish = 28-30;
+    charset full = 31-32;
+    charset hand = 33-35;
+    charset hear = 36-38;
+    charset knee = 39-41;
+    charset leaf = 42-44;
+    charset louse = 45-47;
+    charset mountain = 48-50;
+    charset name = 51-53;
+    charset new = 54-56;
+    charset night = 57-59;
+    charset nose = 60-62;
+    charset one = 63-65;
+    charset path = 66-68;
+    charset person = 69-71;
+    charset pl = 72-74;
+    charset see = 75-77;
+    charset sg = 78-81;
+    charset skin = 82-84;
+    charset star = 85-87;
+    charset stone = 88-90;
+    charset sun = 91-93;
+    charset tongue = 94-96;
+    charset tooth = 97-99;
+    charset tree = 100-102;
+    charset two = 103-105;
+    charset water = 106-108;
+END;

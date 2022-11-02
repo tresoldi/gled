@@ -1,0 +1,222 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=4 NCHAR=165;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_bluenilemao.blood.0010,
+        3 blood_bluenilemao.blood.0011,
+        4 blood_bluenilemao.blood.0012,
+        5 bone_0ascertainment,
+        6 bone_bluenilemao.bone.0013,
+        7 bone_bluenilemao.bone.0014,
+        8 bone_bluenilemao.bone.0015,
+        9 breast_0ascertainment,
+        10 breast_bluenilemao.breast.0016,
+        11 breast_bluenilemao.breast.0017,
+        12 breast_bluenilemao.breast.0018,
+        13 come_0ascertainment,
+        14 come_bluenilemao.come.0019,
+        15 come_bluenilemao.come.0020,
+        16 come_bluenilemao.come.0021,
+        17 die_0ascertainment,
+        18 die_bluenilemao.die.0022,
+        19 die_bluenilemao.die.0023,
+        20 die_bluenilemao.die.0024,
+        21 dog_0ascertainment,
+        22 dog_bluenilemao.dog.0025,
+        23 dog_bluenilemao.dog.0026,
+        24 dog_bluenilemao.dog.0027,
+        25 drink_0ascertainment,
+        26 drink_bluenilemao.drink.0028,
+        27 drink_bluenilemao.drink.0029,
+        28 drink_bluenilemao.drink.0030,
+        29 ear_0ascertainment,
+        30 ear_bluenilemao.ear.0031,
+        31 ear_bluenilemao.ear.0032,
+        32 ear_bluenilemao.ear.0033,
+        33 eye_0ascertainment,
+        34 eye_bluenilemao.eye.0034,
+        35 eye_bluenilemao.eye.0035,
+        36 eye_bluenilemao.eye.0036,
+        37 eye_bluenilemao.eye.0037,
+        38 fire_0ascertainment,
+        39 fire_bluenilemao.fire.0038,
+        40 fire_bluenilemao.fire.0039,
+        41 fish_0ascertainment,
+        42 fish_bluenilemao.fish.0040,
+        43 fish_bluenilemao.fish.0041,
+        44 fish_bluenilemao.fish.0042,
+        45 full_0ascertainment,
+        46 full_bluenilemao.full.0043,
+        47 full_bluenilemao.full.0044,
+        48 hand_0ascertainment,
+        49 hand_bluenilemao.hand.0045,
+        50 hand_bluenilemao.hand.0046,
+        51 hear_0ascertainment,
+        52 hear_bluenilemao.hear.0047,
+        53 hear_bluenilemao.hear.0048,
+        54 hear_bluenilemao.hear.0049,
+        55 hear_bluenilemao.hear.0050,
+        56 horn_0ascertainment,
+        57 horn_bluenilemao.horn.0051,
+        58 horn_bluenilemao.horn.0052,
+        59 horn_bluenilemao.horn.0053,
+        60 horn_bluenilemao.horn.0054,
+        61 knee_0ascertainment,
+        62 knee_bluenilemao.knee.0055,
+        63 knee_bluenilemao.knee.0056,
+        64 leaf_0ascertainment,
+        65 leaf_bluenilemao.leaf.0057,
+        66 leaf_bluenilemao.leaf.0058,
+        67 leaf_bluenilemao.leaf.0059,
+        68 leaf_bluenilemao.leaf.0060,
+        69 liver_0ascertainment,
+        70 liver_bluenilemao.liver.0061,
+        71 liver_bluenilemao.liver.0062,
+        72 liver_bluenilemao.liver.0063,
+        73 liver_bluenilemao.liver.0064,
+        74 louse_0ascertainment,
+        75 louse_bluenilemao.louse.0065,
+        76 louse_bluenilemao.louse.0066,
+        77 louse_bluenilemao.louse.0067,
+        78 louse_bluenilemao.louse.0068,
+        79 mountain_0ascertainment,
+        80 mountain_bluenilemao.mountain.0069,
+        81 mountain_bluenilemao.mountain.0070,
+        82 mountain_bluenilemao.mountain.0071,
+        83 mountain_bluenilemao.mountain.0072,
+        84 name_0ascertainment,
+        85 name_bluenilemao.name.0073,
+        86 name_bluenilemao.name.0074,
+        87 name_bluenilemao.name.0075,
+        88 name_bluenilemao.name.0076,
+        89 new_0ascertainment,
+        90 new_bluenilemao.new.0077,
+        91 new_bluenilemao.new.0078,
+        92 new_bluenilemao.new.0079,
+        93 new_bluenilemao.new.0080,
+        94 night_0ascertainment,
+        95 night_bluenilemao.night.0081,
+        96 night_bluenilemao.night.0082,
+        97 night_bluenilemao.night.0083,
+        98 nose_0ascertainment,
+        99 nose_bluenilemao.nose.0084,
+        100 nose_bluenilemao.nose.0085,
+        101 nose_bluenilemao.nose.0086,
+        102 one_0ascertainment,
+        103 one_bluenilemao.one.0087,
+        104 one_bluenilemao.one.0088,
+        105 one_bluenilemao.one.0089,
+        106 path_0ascertainment,
+        107 path_bluenilemao.path.0090,
+        108 path_bluenilemao.path.0091,
+        109 path_bluenilemao.path.0092,
+        110 path_bluenilemao.path.0093,
+        111 person_0ascertainment,
+        112 person_bluenilemao.person.0094,
+        113 person_bluenilemao.person.0095,
+        114 pl_0ascertainment,
+        115 pl_bluenilemao.1pl.0001,
+        116 see_0ascertainment,
+        117 see_bluenilemao.see.0096,
+        118 see_bluenilemao.see.0097,
+        119 sg_0ascertainment,
+        120 sg_bluenilemao.1sg.0002,
+        121 sg_bluenilemao.1sg.0003,
+        122 sg_bluenilemao.1sg.0004,
+        123 sg_bluenilemao.1sg.0005,
+        124 sg_bluenilemao.2sg.0006,
+        125 sg_bluenilemao.2sg.0007,
+        126 sg_bluenilemao.2sg.0008,
+        127 sg_bluenilemao.2sg.0009,
+        128 skin_0ascertainment,
+        129 skin_bluenilemao.skin.0098,
+        130 skin_bluenilemao.skin.0099,
+        131 skin_bluenilemao.skin.0100,
+        132 skin_bluenilemao.skin.0101,
+        133 skin_bluenilemao.skin.0102,
+        134 star_0ascertainment,
+        135 star_bluenilemao.star.0103,
+        136 star_bluenilemao.star.0104,
+        137 star_bluenilemao.star.0105,
+        138 stone_0ascertainment,
+        139 stone_bluenilemao.stone.0106,
+        140 stone_bluenilemao.stone.0107,
+        141 stone_bluenilemao.stone.0108,
+        142 sun_0ascertainment,
+        143 sun_bluenilemao.sun.0109,
+        144 sun_bluenilemao.sun.0110,
+        145 sun_bluenilemao.sun.0111,
+        146 sun_bluenilemao.sun.0112,
+        147 tongue_0ascertainment,
+        148 tongue_bluenilemao.tongue.0113,
+        149 tongue_bluenilemao.tongue.0114,
+        150 tongue_bluenilemao.tongue.0115,
+        151 tongue_bluenilemao.tongue.0116,
+        152 tooth_0ascertainment,
+        153 tooth_bluenilemao.tooth.0117,
+        154 tooth_bluenilemao.tooth.0118,
+        155 tree_0ascertainment,
+        156 tree_bluenilemao.tree.0119,
+        157 tree_bluenilemao.tree.0120,
+        158 two_0ascertainment,
+        159 two_bluenilemao.two.0121,
+        160 two_bluenilemao.two.0122,
+        161 two_bluenilemao.two.0123,
+        162 water_0ascertainment,
+        163 water_bluenilemao.water.0124,
+        164 water_bluenilemao.water.0125,
+        165 water_bluenilemao.water.0126
+;
+
+MATRIX
+ganza        0100010001000???0???01000???01000100001001000??0100????010000100100001000010000100001000010000???01000100010000100?0??0100010000100010100010001000010000??01001000100
+hozo_2       001100100010010001000010010000100010001000100100010100000100001001000010000100001000010000100010000100010001000??0?01000100010000100000100010001000010001000100100010
+northern_mao 010000010001001100100001001001000010000100010??0010010000010001000100100000010000100001000010001000010001000100010100100010001000010000010001000100001001001000010001
+seze_2       001000100010010000010010000100010001101000100010010001100101001000010001100001000010000100001000100010010000010??0?01000001000100101000100010000010000101101000100010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-8;
+    charset breast = 9-12;
+    charset come = 13-16;
+    charset die = 17-20;
+    charset dog = 21-24;
+    charset drink = 25-28;
+    charset ear = 29-32;
+    charset eye = 33-37;
+    charset fire = 38-40;
+    charset fish = 41-44;
+    charset full = 45-47;
+    charset hand = 48-50;
+    charset hear = 51-55;
+    charset horn = 56-60;
+    charset knee = 61-63;
+    charset leaf = 64-68;
+    charset liver = 69-73;
+    charset louse = 74-78;
+    charset mountain = 79-83;
+    charset name = 84-88;
+    charset new = 89-93;
+    charset night = 94-97;
+    charset nose = 98-101;
+    charset one = 102-105;
+    charset path = 106-110;
+    charset person = 111-113;
+    charset pl = 114-115;
+    charset see = 116-118;
+    charset sg = 119-127;
+    charset skin = 128-133;
+    charset star = 134-137;
+    charset stone = 138-141;
+    charset sun = 142-146;
+    charset tongue = 147-151;
+    charset tooth = 152-154;
+    charset tree = 155-157;
+    charset two = 158-161;
+    charset water = 162-165;
+END;

@@ -1,192 +1,243 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=4 NCHAR=136;
+    DIMENSIONS NTAX=8 NCHAR=184;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_3,
-        3 blood_4,
-        4 blood_5,
-        5 bone_0ascertainment,
-        6 bone_6,
-        7 bone_7,
-        8 bone_8,
-        9 breast_0ascertainment,
-        10 breast_10,
-        11 breast_9,
-        12 come_0ascertainment,
-        13 come_11,
-        14 come_12,
-        15 come_13,
-        16 come_14,
-        17 die_0ascertainment,
-        18 die_15,
-        19 die_16,
-        20 dog_0ascertainment,
-        21 dog_17,
-        22 dog_18,
-        23 drink_0ascertainment,
-        24 drink_19,
-        25 drink_20,
-        26 ear_0ascertainment,
-        27 ear_21,
-        28 ear_22,
-        29 ear_23,
-        30 eye_0ascertainment,
-        31 eye_24,
-        32 eye_25,
-        33 eye_26,
-        34 eye_27,
-        35 fire_0ascertainment,
-        36 fire_28,
-        37 fire_29,
-        38 fire_30,
-        39 fish_0ascertainment,
-        40 fish_31,
-        41 fish_32,
-        42 full_0ascertainment,
-        43 full_33,
-        44 hand_0ascertainment,
-        45 hand_34,
-        46 hand_35,
-        47 hear_0ascertainment,
-        48 hear_36,
-        49 hear_37,
-        50 hear_38,
-        51 i_0ascertainment,
-        52 i_1,
-        53 i_2,
-        54 knee_0ascertainment,
-        55 knee_39,
-        56 leaf_0ascertainment,
-        57 leaf_40,
-        58 leaf_41,
-        59 leaf_42,
-        60 louse_0ascertainment,
-        61 louse_43,
-        62 louse_44,
-        63 mountain_0ascertainment,
-        64 mountain_45,
-        65 mountain_46,
-        66 name_0ascertainment,
-        67 name_47,
-        68 name_48,
-        69 name_49,
-        70 new_0ascertainment,
-        71 new_50,
-        72 night_0ascertainment,
-        73 night_51,
-        74 night_52,
-        75 night_53,
-        76 nose_0ascertainment,
-        77 nose_54,
-        78 one_0ascertainment,
-        79 one_55,
-        80 one_56,
-        81 one_57,
-        82 one_58,
-        83 path_0ascertainment,
-        84 path_59,
-        85 person_0ascertainment,
-        86 person_60,
-        87 person_61,
-        88 see_0ascertainment,
-        89 see_62,
-        90 see_63,
-        91 see_64,
-        92 see_65,
-        93 skin_0ascertainment,
-        94 skin_66,
-        95 skin_67,
-        96 skin_68,
-        97 skin_69,
-        98 star_0ascertainment,
-        99 star_70,
-        100 stone_0ascertainment,
-        101 stone_71,
-        102 stone_72,
-        103 sun_0ascertainment,
-        104 sun_73,
-        105 sun_74,
-        106 sun_75,
-        107 sun_76,
-        108 thou_0ascertainment,
-        109 thou_96,
-        110 thou_97,
-        111 thou_98,
-        112 tongue_0ascertainment,
-        113 tongue_77,
-        114 tongue_78,
-        115 tongue_79,
-        116 tooth_0ascertainment,
-        117 tooth_80,
-        118 tooth_81,
-        119 tooth_82,
-        120 tree_0ascertainment,
-        121 tree_83,
-        122 tree_84,
-        123 tree_85,
-        124 tree_86,
-        125 two_0ascertainment,
-        126 two_87,
-        127 two_88,
-        128 water_0ascertainment,
-        129 water_89,
-        130 water_90,
-        131 we_0ascertainment,
-        132 we_91,
-        133 we_92,
-        134 we_93,
-        135 we_94,
-        136 we_95
+        2 blood_sentanic.blood.0019,
+        3 blood_sentanic.blood.0020,
+        4 blood_sentanic.blood.0021,
+        5 blood_sentanic.blood.0022,
+        6 blood_sentanic.blood.0023,
+        7 bone_0ascertainment,
+        8 bone_sentanic.bone.0024,
+        9 bone_sentanic.bone.0025,
+        10 bone_sentanic.bone.0026,
+        11 bone_sentanic.bone.0027,
+        12 bone_sentanic.bone.0028,
+        13 breast_0ascertainment,
+        14 breast_sentanic.breast.0029,
+        15 breast_sentanic.breast.0030,
+        16 breast_sentanic.breast.0031,
+        17 come_0ascertainment,
+        18 come_sentanic.come.0032,
+        19 come_sentanic.come.0033,
+        20 come_sentanic.come.0034,
+        21 come_sentanic.come.0035,
+        22 come_sentanic.come.0036,
+        23 die_0ascertainment,
+        24 die_sentanic.die.0037,
+        25 die_sentanic.die.0038,
+        26 die_sentanic.die.0039,
+        27 die_sentanic.die.0040,
+        28 die_sentanic.die.0041,
+        29 die_sentanic.die.0042,
+        30 dog_0ascertainment,
+        31 dog_sentanic.dog.0043,
+        32 dog_sentanic.dog.0044,
+        33 drink_0ascertainment,
+        34 drink_sentanic.drink.0045,
+        35 drink_sentanic.drink.0046,
+        36 drink_sentanic.drink.0047,
+        37 drink_sentanic.drink.0048,
+        38 drink_sentanic.drink.0049,
+        39 drink_sentanic.drink.0050,
+        40 ear_0ascertainment,
+        41 ear_sentanic.ear.0051,
+        42 ear_sentanic.ear.0052,
+        43 ear_sentanic.ear.0053,
+        44 eye_0ascertainment,
+        45 eye_sentanic.eye.0054,
+        46 eye_sentanic.eye.0055,
+        47 eye_sentanic.eye.0056,
+        48 fire_0ascertainment,
+        49 fire_sentanic.fire.0057,
+        50 fire_sentanic.fire.0058,
+        51 fish_0ascertainment,
+        52 fish_sentanic.fish.0059,
+        53 fish_sentanic.fish.0060,
+        54 full_0ascertainment,
+        55 full_sentanic.full.0061,
+        56 full_sentanic.full.0062,
+        57 full_sentanic.full.0063,
+        58 full_sentanic.full.0064,
+        59 full_sentanic.full.0065,
+        60 full_sentanic.full.0066,
+        61 hand_0ascertainment,
+        62 hand_sentanic.hand.0067,
+        63 hand_sentanic.hand.0068,
+        64 hand_sentanic.hand.0069,
+        65 hear_0ascertainment,
+        66 hear_sentanic.hear.0070,
+        67 hear_sentanic.hear.0071,
+        68 hear_sentanic.hear.0072,
+        69 hear_sentanic.hear.0073,
+        70 knee_0ascertainment,
+        71 knee_sentanic.knee.0074,
+        72 knee_sentanic.knee.0075,
+        73 knee_sentanic.knee.0076,
+        74 leaf_0ascertainment,
+        75 leaf_sentanic.leaf.0077,
+        76 leaf_sentanic.leaf.0078,
+        77 leaf_sentanic.leaf.0079,
+        78 leaf_sentanic.leaf.0080,
+        79 louse_0ascertainment,
+        80 louse_sentanic.louse.0081,
+        81 louse_sentanic.louse.0082,
+        82 mountain_0ascertainment,
+        83 mountain_sentanic.mountain.0083,
+        84 mountain_sentanic.mountain.0084,
+        85 mountain_sentanic.mountain.0085,
+        86 mountain_sentanic.mountain.0086,
+        87 name_0ascertainment,
+        88 name_sentanic.name.0087,
+        89 name_sentanic.name.0088,
+        90 name_sentanic.name.0089,
+        91 new_0ascertainment,
+        92 new_sentanic.new.0090,
+        93 new_sentanic.new.0091,
+        94 new_sentanic.new.0092,
+        95 new_sentanic.new.0093,
+        96 new_sentanic.new.0094,
+        97 new_sentanic.new.0095,
+        98 night_0ascertainment,
+        99 night_sentanic.night.0096,
+        100 night_sentanic.night.0097,
+        101 night_sentanic.night.0098,
+        102 nose_0ascertainment,
+        103 nose_sentanic.nose.0099,
+        104 nose_sentanic.nose.0100,
+        105 nose_sentanic.nose.0101,
+        106 one_0ascertainment,
+        107 one_sentanic.one.0102,
+        108 one_sentanic.one.0103,
+        109 one_sentanic.one.0104,
+        110 one_sentanic.one.0105,
+        111 one_sentanic.one.0106,
+        112 path_0ascertainment,
+        113 path_sentanic.path.0107,
+        114 path_sentanic.path.0108,
+        115 path_sentanic.path.0109,
+        116 person_0ascertainment,
+        117 person_sentanic.person.0110,
+        118 person_sentanic.person.0111,
+        119 person_sentanic.person.0112,
+        120 person_sentanic.person.0113,
+        121 pl_0ascertainment,
+        122 pl_sentanic.1pl.0001,
+        123 pl_sentanic.1pl.0002,
+        124 pl_sentanic.1pl.0003,
+        125 pl_sentanic.1pl.0004,
+        126 pl_sentanic.1pl.0005,
+        127 pl_sentanic.1pl.0006,
+        128 pl_sentanic.1pl.0007,
+        129 pl_sentanic.1pl.0008,
+        130 see_0ascertainment,
+        131 see_sentanic.see.0114,
+        132 see_sentanic.see.0115,
+        133 see_sentanic.see.0116,
+        134 see_sentanic.see.0117,
+        135 see_sentanic.see.0118,
+        136 see_sentanic.see.0119,
+        137 sg_0ascertainment,
+        138 sg_sentanic.1sg.0009,
+        139 sg_sentanic.1sg.0010,
+        140 sg_sentanic.1sg.0011,
+        141 sg_sentanic.1sg.0012,
+        142 sg_sentanic.2sg.0013,
+        143 sg_sentanic.2sg.0014,
+        144 sg_sentanic.2sg.0015,
+        145 sg_sentanic.2sg.0016,
+        146 sg_sentanic.2sg.0017,
+        147 sg_sentanic.2sg.0018,
+        148 skin_0ascertainment,
+        149 skin_sentanic.skin.0120,
+        150 skin_sentanic.skin.0121,
+        151 skin_sentanic.skin.0122,
+        152 skin_sentanic.skin.0123,
+        153 star_0ascertainment,
+        154 star_sentanic.star.0124,
+        155 star_sentanic.star.0125,
+        156 star_sentanic.star.0126,
+        157 star_sentanic.star.0127,
+        158 stone_0ascertainment,
+        159 stone_sentanic.stone.0128,
+        160 stone_sentanic.stone.0129,
+        161 sun_0ascertainment,
+        162 sun_sentanic.sun.0130,
+        163 sun_sentanic.sun.0131,
+        164 sun_sentanic.sun.0132,
+        165 tongue_0ascertainment,
+        166 tongue_sentanic.tongue.0133,
+        167 tongue_sentanic.tongue.0134,
+        168 tongue_sentanic.tongue.0135,
+        169 tongue_sentanic.tongue.0136,
+        170 tooth_0ascertainment,
+        171 tooth_sentanic.tooth.0137,
+        172 tree_0ascertainment,
+        173 tree_sentanic.tree.0138,
+        174 tree_sentanic.tree.0139,
+        175 tree_sentanic.tree.0140,
+        176 tree_sentanic.tree.0141,
+        177 tree_sentanic.tree.0142,
+        178 tree_sentanic.tree.0143,
+        179 two_0ascertainment,
+        180 two_sentanic.two.0144,
+        181 two_sentanic.two.0145,
+        182 water_0ascertainment,
+        183 water_sentanic.water.0146,
+        184 water_sentanic.water.0147
 ;
 
 MATRIX
-demta   01000100001010000??01001001000100001000100?01001000100?010001001001000?01000?010000?01001010010000?0100100001010100010001010010010010000
-nafri   001001000??001000??0010??0???0010000100??0?0010???0010?0???0010??00100?00100?001000?0??00100001000?0010010001100???0010001000010??001010
-sentani 00010010010000100100010010010000100???0010?0010010001010010001001001001001001000100100100100001000100100010001000100???00100001001000100
-tabla   001000010??000110010010??00010000100010010100100010010?00010010??00010?00110?00101010??00101000110?0100001101000001000100101001001001001
+demta              01000001000001000100000??????0100100000010001000100100??????0100010000???010000100100001000??????01000???0100000???01000010000000010000001000110000010000????010010001000010100001010010
+demta_ambora       01000001000001000100000??????0100100000010001000100100??????0100010000100010000100100001000100000010001000100010100010000100000000100000010000100000100001100010010001000010010000010010
+demta_muris        0100000100000100010000010000001000100000100010001001001000000100010000100010000100100001000010000010001000100000100001000010000000100000010000100000010000100010010001000010001000010010
+sentani            001000001000001000100000100000010001000001000100??0010??????00100010000100010001000100001000010000010001000100000100001000010000000100000010000100000010000100010010001000?0000100001001
+tabla              0001000001000???00110001000000010??????0001000100100100100000010001000???000100010????00010??????00110???00011000100????000100100001100000010100000000010????010001100010010000110001001
+tabla_c            000100000010000100010100010000??000100000010???0010010001000000100010001000010001000100???00001000010000100001000100????0000100000000100000100001000000100001010001000010010000100001001
+tabla_unknown_dial 0001100000010001000010000010100100001100001000100100100001000011001000011000110??0001000110001100001000010001100010000010001000100001001000100000100000100001010001100011010000010001001
+tabla_w            0001010?????000100001000000100??000010100010001001001000001100010000100100001001100011000100000110010000100001000110????0000010010001010000110000010000100001010000100010010000010001001
 ;
 END;
 
 BEGIN ASSUMPTIONS;
-    charset blood = 1-4;
-    charset bone = 5-8;
-    charset breast = 9-11;
-    charset come = 12-16;
-    charset die = 17-19;
-    charset dog = 20-22;
-    charset drink = 23-25;
-    charset ear = 26-29;
-    charset eye = 30-34;
-    charset fire = 35-38;
-    charset fish = 39-41;
-    charset full = 42-43;
-    charset hand = 44-46;
-    charset hear = 47-50;
-    charset i = 51-53;
-    charset knee = 54-55;
-    charset leaf = 56-59;
-    charset louse = 60-62;
-    charset mountain = 63-65;
-    charset name = 66-69;
-    charset new = 70-71;
-    charset night = 72-75;
-    charset nose = 76-77;
-    charset one = 78-82;
-    charset path = 83-84;
-    charset person = 85-87;
-    charset see = 88-92;
-    charset skin = 93-97;
-    charset star = 98-99;
-    charset stone = 100-102;
-    charset sun = 103-107;
-    charset thou = 108-111;
-    charset tongue = 112-115;
-    charset tooth = 116-119;
-    charset tree = 120-124;
-    charset two = 125-127;
-    charset water = 128-130;
-    charset we = 131-136;
+    charset blood = 1-6;
+    charset bone = 7-12;
+    charset breast = 13-16;
+    charset come = 17-22;
+    charset die = 23-29;
+    charset dog = 30-32;
+    charset drink = 33-39;
+    charset ear = 40-43;
+    charset eye = 44-47;
+    charset fire = 48-50;
+    charset fish = 51-53;
+    charset full = 54-60;
+    charset hand = 61-64;
+    charset hear = 65-69;
+    charset knee = 70-73;
+    charset leaf = 74-78;
+    charset louse = 79-81;
+    charset mountain = 82-86;
+    charset name = 87-90;
+    charset new = 91-97;
+    charset night = 98-101;
+    charset nose = 102-105;
+    charset one = 106-111;
+    charset path = 112-115;
+    charset person = 116-120;
+    charset pl = 121-129;
+    charset see = 130-136;
+    charset sg = 137-147;
+    charset skin = 148-152;
+    charset star = 153-157;
+    charset stone = 158-160;
+    charset sun = 161-164;
+    charset tongue = 165-169;
+    charset tooth = 170-171;
+    charset tree = 172-178;
+    charset two = 179-181;
+    charset water = 182-184;
 END;

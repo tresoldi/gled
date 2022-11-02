@@ -1,0 +1,104 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=60;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_payagua.blood.0476,
+        3 breast_0ascertainment,
+        4 breast_payagua.breast.0072,
+        5 die_0ascertainment,
+        6 die_payagua.die.0734,
+        7 dog_0ascertainment,
+        8 dog_payagua.dog.0015,
+        9 drink_0ascertainment,
+        10 drink_payagua.drink.0782,
+        11 ear_0ascertainment,
+        12 ear_payagua.ear.0357,
+        13 eye_0ascertainment,
+        14 eye_payagua.eye.0598,
+        15 fire_0ascertainment,
+        16 fire_payagua.fire.0023,
+        17 fish_0ascertainment,
+        18 fish_payagua.fish.0573,
+        19 full_0ascertainment,
+        20 full_payagua.full.0806,
+        21 hand_0ascertainment,
+        22 hand_payagua.hand.0113,
+        23 hear_0ascertainment,
+        24 hear_payagua.hear.0849,
+        25 knee_0ascertainment,
+        26 knee_payagua.knee.0522,
+        27 liver_0ascertainment,
+        28 liver_payagua.liver.0717,
+        29 night_0ascertainment,
+        30 night_payagua.night.0005,
+        31 nose_0ascertainment,
+        32 nose_payagua.nose.0069,
+        33 one_0ascertainment,
+        34 one_payagua.one.0118,
+        35 person_0ascertainment,
+        36 person_payagua.person.0835,
+        37 pl_0ascertainment,
+        38 pl_payagua.1pl.0704,
+        39 see_0ascertainment,
+        40 see_payagua.see.0001,
+        41 sg_0ascertainment,
+        42 sg_payagua.1sg.0184,
+        43 sg_payagua.2sg.0098,
+        44 star_0ascertainment,
+        45 star_payagua.star.0670,
+        46 stone_0ascertainment,
+        47 stone_payagua.stone.0903,
+        48 sun_0ascertainment,
+        49 sun_payagua.sun.0515,
+        50 tongue_0ascertainment,
+        51 tongue_payagua.tongue.0113,
+        52 tooth_0ascertainment,
+        53 tooth_payagua.tooth.0078,
+        54 tree_0ascertainment,
+        55 tree_payagua.tree.0551,
+        56 two_0ascertainment,
+        57 two_payagua.two.0498,
+        58 water_0ascertainment,
+        59 water_payagua.water.0448,
+        60 water_payagua.water.0470
+;
+
+MATRIX
+payagua 010101010101010101010101010101010101010101101010101010101011
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset breast = 3-4;
+    charset die = 5-6;
+    charset dog = 7-8;
+    charset drink = 9-10;
+    charset ear = 11-12;
+    charset eye = 13-14;
+    charset fire = 15-16;
+    charset fish = 17-18;
+    charset full = 19-20;
+    charset hand = 21-22;
+    charset hear = 23-24;
+    charset knee = 25-26;
+    charset liver = 27-28;
+    charset night = 29-30;
+    charset nose = 31-32;
+    charset one = 33-34;
+    charset person = 35-36;
+    charset pl = 37-38;
+    charset see = 39-40;
+    charset sg = 41-43;
+    charset star = 44-45;
+    charset stone = 46-47;
+    charset sun = 48-49;
+    charset tongue = 50-51;
+    charset tooth = 52-53;
+    charset tree = 54-55;
+    charset two = 56-57;
+    charset water = 58-60;
+END;

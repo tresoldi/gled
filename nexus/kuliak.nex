@@ -1,145 +1,144 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=3 NCHAR=130;
+    DIMENSIONS NTAX=3 NCHAR=129;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_4,
+        2 blood_kuliak.blood.0007,
         3 bone_0ascertainment,
-        4 bone_5,
+        4 bone_kuliak.bone.0008,
         5 breast_0ascertainment,
-        6 breast_6,
-        7 breast_7,
-        8 breast_8,
+        6 breast_kuliak.breast.0009,
+        7 breast_kuliak.breast.0010,
+        8 breast_kuliak.breast.0011,
         9 come_0ascertainment,
-        10 come_9,
+        10 come_kuliak.come.0012,
         11 die_0ascertainment,
-        12 die_10,
+        12 die_kuliak.die.0013,
         13 dog_0ascertainment,
-        14 dog_11,
-        15 dog_12,
-        16 dog_13,
+        14 dog_kuliak.dog.0014,
+        15 dog_kuliak.dog.0015,
+        16 dog_kuliak.dog.0016,
         17 drink_0ascertainment,
-        18 drink_14,
-        19 drink_15,
+        18 drink_kuliak.drink.0017,
+        19 drink_kuliak.drink.0018,
         20 ear_0ascertainment,
-        21 ear_16,
+        21 ear_kuliak.ear.0019,
         22 eye_0ascertainment,
-        23 eye_17,
-        24 eye_18,
+        23 eye_kuliak.eye.0020,
+        24 eye_kuliak.eye.0021,
         25 fire_0ascertainment,
-        26 fire_19,
+        26 fire_kuliak.fire.0022,
         27 fish_0ascertainment,
-        28 fish_20,
-        29 fish_21,
-        30 fish_22,
+        28 fish_kuliak.fish.0023,
+        29 fish_kuliak.fish.0024,
+        30 fish_kuliak.fish.0025,
         31 full_0ascertainment,
-        32 full_23,
-        33 full_24,
-        34 full_25,
-        35 full_26,
+        32 full_kuliak.full.0026,
+        33 full_kuliak.full.0027,
+        34 full_kuliak.full.0028,
+        35 full_kuliak.full.0029,
         36 hand_0ascertainment,
-        37 hand_27,
-        38 hand_28,
-        39 hand_29,
+        37 hand_kuliak.hand.0030,
+        38 hand_kuliak.hand.0031,
+        39 hand_kuliak.hand.0032,
         40 hear_0ascertainment,
-        41 hear_30,
-        42 hear_31,
-        43 hear_32,
-        44 hear_33,
+        41 hear_kuliak.hear.0033,
+        42 hear_kuliak.hear.0034,
+        43 hear_kuliak.hear.0035,
+        44 hear_kuliak.hear.0036,
         45 horn_0ascertainment,
-        46 horn_34,
-        47 horn_35,
-        48 i_0ascertainment,
-        49 i_1,
-        50 i_2,
-        51 i_3,
-        52 knee_0ascertainment,
-        53 knee_36,
-        54 leaf_0ascertainment,
-        55 leaf_37,
-        56 leaf_38,
-        57 leaf_39,
-        58 liver_0ascertainment,
-        59 liver_40,
-        60 liver_41,
-        61 liver_42,
-        62 louse_0ascertainment,
-        63 louse_43,
-        64 louse_44,
-        65 mountain_0ascertainment,
-        66 mountain_45,
-        67 mountain_46,
-        68 mountain_47,
-        69 mountain_48,
-        70 name_0ascertainment,
-        71 name_49,
-        72 name_50,
-        73 name_51,
-        74 new_0ascertainment,
-        75 new_52,
-        76 night_0ascertainment,
-        77 night_53,
-        78 night_54,
-        79 night_55,
-        80 night_56,
-        81 nose_0ascertainment,
-        82 nose_57,
-        83 nose_58,
-        84 nose_59,
-        85 one_0ascertainment,
-        86 one_60,
-        87 path_0ascertainment,
-        88 path_61,
-        89 path_62,
-        90 path_63,
-        91 person_0ascertainment,
-        92 person_64,
-        93 person_65,
-        94 see_0ascertainment,
-        95 see_66,
-        96 see_67,
-        97 see_68,
-        98 skin_0ascertainment,
-        99 skin_69,
-        100 skin_70,
-        101 skin_71,
-        102 star_0ascertainment,
-        103 star_72,
-        104 star_73,
-        105 stone_0ascertainment,
-        106 stone_74,
-        107 stone_75,
-        108 sun_0ascertainment,
-        109 sun_76,
-        110 sun_77,
-        111 thou_0ascertainment,
-        112 thou_90,
-        113 tongue_0ascertainment,
-        114 tongue_78,
-        115 tongue_79,
-        116 tooth_0ascertainment,
-        117 tooth_80,
-        118 tooth_81,
-        119 tree_0ascertainment,
-        120 tree_82,
-        121 tree_83,
-        122 two_0ascertainment,
-        123 two_84,
-        124 water_0ascertainment,
-        125 water_85,
-        126 water_86,
-        127 water_87,
-        128 we_0ascertainment,
-        129 we_88,
-        130 we_89
+        46 horn_kuliak.horn.0037,
+        47 horn_kuliak.horn.0038,
+        48 knee_0ascertainment,
+        49 knee_kuliak.knee.0039,
+        50 leaf_0ascertainment,
+        51 leaf_kuliak.leaf.0040,
+        52 leaf_kuliak.leaf.0041,
+        53 leaf_kuliak.leaf.0042,
+        54 liver_0ascertainment,
+        55 liver_kuliak.liver.0043,
+        56 liver_kuliak.liver.0044,
+        57 liver_kuliak.liver.0045,
+        58 louse_0ascertainment,
+        59 louse_kuliak.louse.0046,
+        60 louse_kuliak.louse.0047,
+        61 mountain_0ascertainment,
+        62 mountain_kuliak.mountain.0048,
+        63 mountain_kuliak.mountain.0049,
+        64 mountain_kuliak.mountain.0050,
+        65 mountain_kuliak.mountain.0051,
+        66 name_0ascertainment,
+        67 name_kuliak.name.0052,
+        68 name_kuliak.name.0053,
+        69 name_kuliak.name.0054,
+        70 new_0ascertainment,
+        71 new_kuliak.new.0055,
+        72 night_0ascertainment,
+        73 night_kuliak.night.0056,
+        74 night_kuliak.night.0057,
+        75 night_kuliak.night.0058,
+        76 night_kuliak.night.0059,
+        77 nose_0ascertainment,
+        78 nose_kuliak.nose.0060,
+        79 nose_kuliak.nose.0061,
+        80 nose_kuliak.nose.0062,
+        81 one_0ascertainment,
+        82 one_kuliak.one.0063,
+        83 path_0ascertainment,
+        84 path_kuliak.path.0064,
+        85 path_kuliak.path.0065,
+        86 path_kuliak.path.0066,
+        87 person_0ascertainment,
+        88 person_kuliak.person.0067,
+        89 person_kuliak.person.0068,
+        90 pl_0ascertainment,
+        91 pl_kuliak.1pl.0001,
+        92 pl_kuliak.1pl.0002,
+        93 see_0ascertainment,
+        94 see_kuliak.see.0069,
+        95 see_kuliak.see.0070,
+        96 see_kuliak.see.0071,
+        97 sg_0ascertainment,
+        98 sg_kuliak.1sg.0003,
+        99 sg_kuliak.1sg.0004,
+        100 sg_kuliak.1sg.0005,
+        101 sg_kuliak.2sg.0006,
+        102 skin_0ascertainment,
+        103 skin_kuliak.skin.0072,
+        104 skin_kuliak.skin.0073,
+        105 skin_kuliak.skin.0074,
+        106 star_0ascertainment,
+        107 star_kuliak.star.0075,
+        108 star_kuliak.star.0076,
+        109 stone_0ascertainment,
+        110 stone_kuliak.stone.0077,
+        111 stone_kuliak.stone.0078,
+        112 sun_0ascertainment,
+        113 sun_kuliak.sun.0079,
+        114 sun_kuliak.sun.0080,
+        115 tongue_0ascertainment,
+        116 tongue_kuliak.tongue.0081,
+        117 tongue_kuliak.tongue.0082,
+        118 tooth_0ascertainment,
+        119 tooth_kuliak.tooth.0083,
+        120 tooth_kuliak.tooth.0084,
+        121 tree_0ascertainment,
+        122 tree_kuliak.tree.0085,
+        123 tree_kuliak.tree.0086,
+        124 two_0ascertainment,
+        125 two_kuliak.two.0087,
+        126 water_0ascertainment,
+        127 water_kuliak.water.0088,
+        128 water_kuliak.water.0089,
+        129 water_kuliak.water.0090
 ;
 
 MATRIX
-ik     0101010001010100010010100101000111101000101101001000101000100010010000100010101001000101010100100010001001001001010010010010101010
-nyangi 01010010010?0010001010010100100????00100010000100100?001000100010011000100?0010000100?0010001001000100??0010010?0010??001010010010
-tepes  01010001010?0001001010010100010????00010????00100010?000100010??0010100010?0010100010?0010001000100110010??0010?001001001010010001
+ik     010101000101010001001010010100011110100010110100101000100010010000100010100101000101010100100100010010100010010010010010010010101
+nyangi 01010010010?0010001010010100100????0010001000010?001000100010011000100?0010000100?001000101000100010000100??0010010010??001010010
+tepes  01010001010?0001001010010100010????00010????0010?000100010??0010100010?0011000010?001000100100010001000110010??001001001001010010
 ;
 END;
 
@@ -159,29 +158,28 @@ BEGIN ASSUMPTIONS;
     charset hand = 36-39;
     charset hear = 40-44;
     charset horn = 45-47;
-    charset i = 48-51;
-    charset knee = 52-53;
-    charset leaf = 54-57;
-    charset liver = 58-61;
-    charset louse = 62-64;
-    charset mountain = 65-69;
-    charset name = 70-73;
-    charset new = 74-75;
-    charset night = 76-80;
-    charset nose = 81-84;
-    charset one = 85-86;
-    charset path = 87-90;
-    charset person = 91-93;
-    charset see = 94-97;
-    charset skin = 98-101;
-    charset star = 102-104;
-    charset stone = 105-107;
-    charset sun = 108-110;
-    charset thou = 111-112;
-    charset tongue = 113-115;
-    charset tooth = 116-118;
-    charset tree = 119-121;
-    charset two = 122-123;
-    charset water = 124-127;
-    charset we = 128-130;
+    charset knee = 48-49;
+    charset leaf = 50-53;
+    charset liver = 54-57;
+    charset louse = 58-60;
+    charset mountain = 61-65;
+    charset name = 66-69;
+    charset new = 70-71;
+    charset night = 72-76;
+    charset nose = 77-80;
+    charset one = 81-82;
+    charset path = 83-86;
+    charset person = 87-89;
+    charset pl = 90-92;
+    charset see = 93-96;
+    charset sg = 97-101;
+    charset skin = 102-105;
+    charset star = 106-108;
+    charset stone = 109-111;
+    charset sun = 112-114;
+    charset tongue = 115-117;
+    charset tooth = 118-120;
+    charset tree = 121-123;
+    charset two = 124-125;
+    charset water = 126-129;
 END;

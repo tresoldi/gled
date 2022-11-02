@@ -1,111 +1,99 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=2 NCHAR=97;
+    DIMENSIONS NTAX=1 NCHAR=86;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_3,
+        2 blood_haida.blood.0329,
         3 bone_0ascertainment,
-        4 bone_4,
+        4 bone_haida.bone.0001,
         5 breast_0ascertainment,
-        6 breast_5,
+        6 breast_haida.breast.0197,
         7 come_0ascertainment,
-        8 come_6,
-        9 come_7,
-        10 die_0ascertainment,
-        11 die_8,
-        12 dog_0ascertainment,
-        13 dog_9,
-        14 drink_0ascertainment,
-        15 drink_10,
-        16 ear_0ascertainment,
-        17 ear_11,
-        18 eye_0ascertainment,
-        19 eye_12,
-        20 fire_0ascertainment,
-        21 fire_13,
-        22 fish_0ascertainment,
-        23 fish_14,
-        24 fish_15,
-        25 fish_16,
-        26 full_0ascertainment,
-        27 full_17,
-        28 full_18,
-        29 full_19,
-        30 hand_0ascertainment,
-        31 hand_20,
-        32 hear_0ascertainment,
-        33 hear_21,
-        34 horn_0ascertainment,
-        35 horn_22,
-        36 horn_23,
-        37 i_0ascertainment,
-        38 i_1,
-        39 i_2,
-        40 knee_0ascertainment,
-        41 knee_24,
-        42 knee_25,
-        43 knee_26,
-        44 leaf_0ascertainment,
-        45 leaf_27,
-        46 liver_0ascertainment,
-        47 liver_28,
-        48 louse_0ascertainment,
-        49 louse_29,
-        50 louse_30,
-        51 mountain_0ascertainment,
-        52 mountain_31,
-        53 mountain_32,
-        54 name_0ascertainment,
-        55 name_33,
-        56 name_34,
-        57 new_0ascertainment,
-        58 new_35,
-        59 night_0ascertainment,
-        60 night_36,
-        61 night_37,
-        62 nose_0ascertainment,
-        63 nose_38,
-        64 one_0ascertainment,
-        65 one_39,
-        66 one_40,
-        67 path_0ascertainment,
-        68 path_41,
-        69 person_0ascertainment,
-        70 person_42,
-        71 person_43,
-        72 see_0ascertainment,
-        73 see_44,
-        74 skin_0ascertainment,
-        75 skin_45,
-        76 star_0ascertainment,
-        77 star_46,
-        78 stone_0ascertainment,
-        79 stone_47,
-        80 stone_48,
-        81 sun_0ascertainment,
-        82 sun_49,
-        83 thou_0ascertainment,
-        84 thou_57,
-        85 tongue_0ascertainment,
-        86 tongue_50,
-        87 tooth_0ascertainment,
-        88 tooth_51,
-        89 tree_0ascertainment,
-        90 tree_52,
-        91 two_0ascertainment,
-        92 two_53,
-        93 water_0ascertainment,
-        94 water_54,
-        95 we_0ascertainment,
-        96 we_55,
-        97 we_56
+        8 come_haida.come.0359,
+        9 die_0ascertainment,
+        10 die_haida.die.0237,
+        11 dog_0ascertainment,
+        12 dog_haida.dog.0286,
+        13 drink_0ascertainment,
+        14 drink_haida.drink.0411,
+        15 ear_0ascertainment,
+        16 ear_haida.ear.0244,
+        17 eye_0ascertainment,
+        18 eye_haida.eye.0373,
+        19 fire_0ascertainment,
+        20 fire_haida.fire.0404,
+        21 fish_0ascertainment,
+        22 fish_haida.fish.0070,
+        23 fish_haida.fish.0384,
+        24 full_0ascertainment,
+        25 full_haida.full.0001,
+        26 full_haida.full.0460,
+        27 hand_0ascertainment,
+        28 hand_haida.hand.0013,
+        29 hear_0ascertainment,
+        30 hear_haida.hear.0121,
+        31 horn_0ascertainment,
+        32 horn_haida.horn.0002,
+        33 knee_0ascertainment,
+        34 knee_haida.knee.0003,
+        35 knee_haida.knee.0338,
+        36 leaf_0ascertainment,
+        37 leaf_haida.leaf.0329,
+        38 liver_0ascertainment,
+        39 liver_haida.liver.0427,
+        40 louse_0ascertainment,
+        41 louse_haida.louse.0237,
+        42 mountain_0ascertainment,
+        43 mountain_haida.mountain.0390,
+        44 name_0ascertainment,
+        45 name_haida.name.0214,
+        46 name_haida.name.0300,
+        47 new_0ascertainment,
+        48 new_haida.new.0362,
+        49 night_0ascertainment,
+        50 night_haida.night.0353,
+        51 nose_0ascertainment,
+        52 nose_haida.nose.0412,
+        53 one_0ascertainment,
+        54 one_haida.one.0316,
+        55 path_0ascertainment,
+        56 path_haida.path.0403,
+        57 person_0ascertainment,
+        58 person_haida.person.0314,
+        59 person_haida.person.0489,
+        60 pl_0ascertainment,
+        61 pl_haida.1pl.0018,
+        62 pl_haida.1pl.0398,
+        63 see_0ascertainment,
+        64 see_haida.see.0318,
+        65 sg_0ascertainment,
+        66 sg_haida.1sg.0232,
+        67 sg_haida.2sg.0223,
+        68 sg_haida.2sg.0289,
+        69 skin_0ascertainment,
+        70 skin_haida.skin.0183,
+        71 star_0ascertainment,
+        72 star_haida.star.0420,
+        73 stone_0ascertainment,
+        74 stone_haida.stone.0542,
+        75 sun_0ascertainment,
+        76 sun_haida.sun.0004,
+        77 tongue_0ascertainment,
+        78 tongue_haida.tongue.0336,
+        79 tooth_0ascertainment,
+        80 tooth_haida.tooth.0299,
+        81 tree_0ascertainment,
+        82 tree_haida.tree.0362,
+        83 two_0ascertainment,
+        84 two_haida.two.0296,
+        85 water_0ascertainment,
+        86 water_haida.water.0310
 ;
 
 MATRIX
-haida   0101010100101010101010101010101010100100101010101001101101010010100101101010101001010101010101011
-haida_2 0101010010101010101010010001001010010010010010100101000101001010010100101010100101010101010101010
+haida 01010101010101010101011011010101011010101010110101010101011011010111010101010101010101
 ;
 END;
 
@@ -113,41 +101,40 @@ BEGIN ASSUMPTIONS;
     charset blood = 1-2;
     charset bone = 3-4;
     charset breast = 5-6;
-    charset come = 7-9;
-    charset die = 10-11;
-    charset dog = 12-13;
-    charset drink = 14-15;
-    charset ear = 16-17;
-    charset eye = 18-19;
-    charset fire = 20-21;
-    charset fish = 22-25;
-    charset full = 26-29;
-    charset hand = 30-31;
-    charset hear = 32-33;
-    charset horn = 34-36;
-    charset i = 37-39;
-    charset knee = 40-43;
-    charset leaf = 44-45;
-    charset liver = 46-47;
-    charset louse = 48-50;
-    charset mountain = 51-53;
-    charset name = 54-56;
-    charset new = 57-58;
-    charset night = 59-61;
-    charset nose = 62-63;
-    charset one = 64-66;
-    charset path = 67-68;
-    charset person = 69-71;
-    charset see = 72-73;
-    charset skin = 74-75;
-    charset star = 76-77;
-    charset stone = 78-80;
-    charset sun = 81-82;
-    charset thou = 83-84;
-    charset tongue = 85-86;
-    charset tooth = 87-88;
-    charset tree = 89-90;
-    charset two = 91-92;
-    charset water = 93-94;
-    charset we = 95-97;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-23;
+    charset full = 24-26;
+    charset hand = 27-28;
+    charset hear = 29-30;
+    charset horn = 31-32;
+    charset knee = 33-35;
+    charset leaf = 36-37;
+    charset liver = 38-39;
+    charset louse = 40-41;
+    charset mountain = 42-43;
+    charset name = 44-46;
+    charset new = 47-48;
+    charset night = 49-50;
+    charset nose = 51-52;
+    charset one = 53-54;
+    charset path = 55-56;
+    charset person = 57-59;
+    charset pl = 60-62;
+    charset see = 63-64;
+    charset sg = 65-68;
+    charset skin = 69-70;
+    charset star = 71-72;
+    charset stone = 73-74;
+    charset sun = 75-76;
+    charset tongue = 77-78;
+    charset tooth = 79-80;
+    charset tree = 81-82;
+    charset two = 83-84;
+    charset water = 85-86;
 END;

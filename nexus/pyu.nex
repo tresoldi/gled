@@ -1,0 +1,125 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=75;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_pyu.blood.0004,
+        3 bone_0ascertainment,
+        4 bone_pyu.bone.0029,
+        5 breast_0ascertainment,
+        6 breast_pyu.breast.0002,
+        7 come_0ascertainment,
+        8 come_pyu.come.0600,
+        9 die_0ascertainment,
+        10 die_pyu.die.0032,
+        11 dog_0ascertainment,
+        12 dog_pyu.dog.0436,
+        13 drink_0ascertainment,
+        14 drink_pyu.drink.0001,
+        15 ear_0ascertainment,
+        16 ear_pyu.ear.0363,
+        17 eye_0ascertainment,
+        18 eye_pyu.eye.0616,
+        19 fire_0ascertainment,
+        20 fire_pyu.fire.0626,
+        21 fish_0ascertainment,
+        22 fish_pyu.fish.0106,
+        23 hand_0ascertainment,
+        24 hand_pyu.hand.0042,
+        25 hear_0ascertainment,
+        26 hear_pyu.hear.0152,
+        27 hear_pyu.hear.0867,
+        28 knee_0ascertainment,
+        29 knee_pyu.knee.0130,
+        30 leaf_0ascertainment,
+        31 leaf_pyu.leaf.0476,
+        32 louse_0ascertainment,
+        33 louse_pyu.louse.0615,
+        34 mountain_0ascertainment,
+        35 mountain_pyu.mountain.0159,
+        36 new_0ascertainment,
+        37 new_pyu.new.0061,
+        38 night_0ascertainment,
+        39 night_pyu.night.0564,
+        40 nose_0ascertainment,
+        41 nose_pyu.nose.0665,
+        42 one_0ascertainment,
+        43 one_pyu.one.0058,
+        44 path_0ascertainment,
+        45 path_pyu.path.0653,
+        46 person_0ascertainment,
+        47 person_pyu.person.0848,
+        48 pl_0ascertainment,
+        49 pl_pyu.1pl.0718,
+        50 see_0ascertainment,
+        51 see_pyu.see.0529,
+        52 see_pyu.see.0530,
+        53 sg_0ascertainment,
+        54 sg_pyu.1sg.0402,
+        55 sg_pyu.2sg.0023,
+        56 skin_0ascertainment,
+        57 skin_pyu.skin.0719,
+        58 skin_pyu.skin.0720,
+        59 star_0ascertainment,
+        60 star_pyu.star.0684,
+        61 stone_0ascertainment,
+        62 stone_pyu.stone.0926,
+        63 sun_0ascertainment,
+        64 sun_pyu.sun.0525,
+        65 tongue_0ascertainment,
+        66 tongue_pyu.tongue.0536,
+        67 tooth_0ascertainment,
+        68 tooth_pyu.tooth.0626,
+        69 tree_0ascertainment,
+        70 tree_pyu.tree.0061,
+        71 tree_pyu.tree.0560,
+        72 two_0ascertainment,
+        73 two_pyu.two.0044,
+        74 water_0ascertainment,
+        75 water_pyu.water.0002
+;
+
+MATRIX
+pyu_2 010101010101010101010101011010101010101010101010101101101101010101010110101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset hand = 23-24;
+    charset hear = 25-27;
+    charset knee = 28-29;
+    charset leaf = 30-31;
+    charset louse = 32-33;
+    charset mountain = 34-35;
+    charset new = 36-37;
+    charset night = 38-39;
+    charset nose = 40-41;
+    charset one = 42-43;
+    charset path = 44-45;
+    charset person = 46-47;
+    charset pl = 48-49;
+    charset see = 50-52;
+    charset sg = 53-55;
+    charset skin = 56-58;
+    charset star = 59-60;
+    charset stone = 61-62;
+    charset sun = 63-64;
+    charset tongue = 65-66;
+    charset tooth = 67-68;
+    charset tree = 69-71;
+    charset two = 72-73;
+    charset water = 74-75;
+END;

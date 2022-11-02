@@ -1,0 +1,138 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=84;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_lule.blood.0410,
+        3 bone_0ascertainment,
+        4 bone_lule.bone.0002,
+        5 bone_lule.bone.0043,
+        6 breast_0ascertainment,
+        7 breast_lule.breast.0012,
+        8 come_0ascertainment,
+        9 come_lule.come.0468,
+        10 die_0ascertainment,
+        11 die_lule.die.0597,
+        12 dog_0ascertainment,
+        13 dog_lule.dog.0031,
+        14 drink_0ascertainment,
+        15 drink_lule.drink.0635,
+        16 ear_0ascertainment,
+        17 ear_lule.ear.0303,
+        18 eye_0ascertainment,
+        19 eye_lule.eye.0497,
+        20 fire_0ascertainment,
+        21 fire_lule.fire.0521,
+        22 fish_0ascertainment,
+        23 fish_lule.fish.0486,
+        24 full_0ascertainment,
+        25 full_lule.full.0646,
+        26 hand_0ascertainment,
+        27 hand_lule.hand.0013,
+        28 hear_0ascertainment,
+        29 hear_lule.hear.0678,
+        30 horn_0ascertainment,
+        31 horn_lule.horn.0396,
+        32 knee_0ascertainment,
+        33 knee_lule.knee.0440,
+        34 leaf_0ascertainment,
+        35 leaf_lule.leaf.0001,
+        36 leaf_lule.leaf.0413,
+        37 liver_0ascertainment,
+        38 liver_lule.liver.0582,
+        39 louse_0ascertainment,
+        40 louse_lule.louse.0050,
+        41 louse_lule.louse.0493,
+        42 mountain_0ascertainment,
+        43 mountain_lule.mountain.0154,
+        44 name_0ascertainment,
+        45 name_lule.name.0092,
+        46 new_0ascertainment,
+        47 new_lule.new.0249,
+        48 night_0ascertainment,
+        49 night_lule.night.0002,
+        50 night_lule.night.0459,
+        51 nose_0ascertainment,
+        52 nose_lule.nose.0538,
+        53 one_0ascertainment,
+        54 one_lule.one.0405,
+        55 path_0ascertainment,
+        56 path_lule.path.0529,
+        57 person_0ascertainment,
+        58 person_lule.person.0678,
+        59 pl_0ascertainment,
+        60 pl_lule.1pl.0554,
+        61 see_0ascertainment,
+        62 see_lule.see.0427,
+        63 sg_0ascertainment,
+        64 sg_lule.1sg.0325,
+        65 sg_lule.2sg.0008,
+        66 skin_0ascertainment,
+        67 skin_lule.skin.0575,
+        68 star_0ascertainment,
+        69 star_lule.star.0303,
+        70 stone_0ascertainment,
+        71 stone_lule.stone.0742,
+        72 stone_lule.stone.0743,
+        73 sun_0ascertainment,
+        74 sun_lule.sun.0131,
+        75 tongue_0ascertainment,
+        76 tongue_lule.tongue.0055,
+        77 tooth_0ascertainment,
+        78 tooth_lule.tooth.0513,
+        79 tree_0ascertainment,
+        80 tree_lule.tree.0458,
+        81 two_0ascertainment,
+        82 two_lule.two.0405,
+        83 water_0ascertainment,
+        84 water_lule.water.0045
+;
+
+MATRIX
+lule_and_tonocote 010110101010101010101010101010101011010110101010110101010101010110101011010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-7;
+    charset come = 8-9;
+    charset die = 10-11;
+    charset dog = 12-13;
+    charset drink = 14-15;
+    charset ear = 16-17;
+    charset eye = 18-19;
+    charset fire = 20-21;
+    charset fish = 22-23;
+    charset full = 24-25;
+    charset hand = 26-27;
+    charset hear = 28-29;
+    charset horn = 30-31;
+    charset knee = 32-33;
+    charset leaf = 34-36;
+    charset liver = 37-38;
+    charset louse = 39-41;
+    charset mountain = 42-43;
+    charset name = 44-45;
+    charset new = 46-47;
+    charset night = 48-50;
+    charset nose = 51-52;
+    charset one = 53-54;
+    charset path = 55-56;
+    charset person = 57-58;
+    charset pl = 59-60;
+    charset see = 61-62;
+    charset sg = 63-65;
+    charset skin = 66-67;
+    charset star = 68-69;
+    charset stone = 70-72;
+    charset sun = 73-74;
+    charset tongue = 75-76;
+    charset tooth = 77-78;
+    charset tree = 79-80;
+    charset two = 81-82;
+    charset water = 83-84;
+END;

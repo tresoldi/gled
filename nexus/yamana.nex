@@ -1,0 +1,134 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=81;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_yamana.blood.0147,
+        3 bone_0ascertainment,
+        4 bone_yamana.bone.0067,
+        5 breast_0ascertainment,
+        6 breast_yamana.breast.0699,
+        7 come_0ascertainment,
+        8 come_yamana.come.0054,
+        9 die_0ascertainment,
+        10 die_yamana.die.0907,
+        11 dog_0ascertainment,
+        12 dog_yamana.dog.0026,
+        13 drink_0ascertainment,
+        14 drink_yamana.drink.0932,
+        15 ear_0ascertainment,
+        16 ear_yamana.ear.0022,
+        17 eye_0ascertainment,
+        18 eye_yamana.eye.0713,
+        19 fire_0ascertainment,
+        20 fire_yamana.fire.0714,
+        21 fish_0ascertainment,
+        22 fish_yamana.fish.0672,
+        23 full_0ascertainment,
+        24 full_yamana.full.0997,
+        25 hand_0ascertainment,
+        26 hand_yamana.hand.0546,
+        27 hear_0ascertainment,
+        28 hear_yamana.hear.1017,
+        29 hear_yamana.hear.1018,
+        30 knee_0ascertainment,
+        31 knee_yamana.knee.0607,
+        32 leaf_0ascertainment,
+        33 leaf_yamana.leaf.0028,
+        34 liver_0ascertainment,
+        35 liver_yamana.liver.0846,
+        36 liver_yamana.liver.0847,
+        37 louse_0ascertainment,
+        38 louse_yamana.louse.0707,
+        39 mountain_0ascertainment,
+        40 mountain_yamana.mountain.0081,
+        41 name_0ascertainment,
+        42 name_yamana.name.0538,
+        43 new_0ascertainment,
+        44 new_yamana.new.0031,
+        45 night_0ascertainment,
+        46 night_yamana.night.0649,
+        47 nose_0ascertainment,
+        48 nose_yamana.nose.0788,
+        49 one_0ascertainment,
+        50 one_yamana.one.0066,
+        51 path_0ascertainment,
+        52 path_yamana.path.0757,
+        53 person_0ascertainment,
+        54 person_yamana.person.0993,
+        55 pl_0ascertainment,
+        56 pl_yamana.1pl.0056,
+        57 see_0ascertainment,
+        58 see_yamana.see.0602,
+        59 sg_0ascertainment,
+        60 sg_yamana.1sg.0456,
+        61 sg_yamana.2sg.0564,
+        62 skin_0ascertainment,
+        63 skin_yamana.skin.0838,
+        64 star_0ascertainment,
+        65 star_yamana.star.0793,
+        66 stone_0ascertainment,
+        67 stone_yamana.stone.1074,
+        68 stone_yamana.stone.1075,
+        69 sun_0ascertainment,
+        70 sun_yamana.sun.0449,
+        71 tongue_0ascertainment,
+        72 tongue_yamana.tongue.0064,
+        73 tooth_0ascertainment,
+        74 tooth_yamana.tooth.0736,
+        75 tree_0ascertainment,
+        76 tree_yamana.tree.0646,
+        77 tree_yamana.tree.0647,
+        78 two_0ascertainment,
+        79 two_yamana.two.0574,
+        80 water_0ascertainment,
+        81 water_yamana.water.0552
+;
+
+MATRIX
+yamana 010101010101010101010101010110101011010101010101010101010101101010110101010110101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset full = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-29;
+    charset knee = 30-31;
+    charset leaf = 32-33;
+    charset liver = 34-36;
+    charset louse = 37-38;
+    charset mountain = 39-40;
+    charset name = 41-42;
+    charset new = 43-44;
+    charset night = 45-46;
+    charset nose = 47-48;
+    charset one = 49-50;
+    charset path = 51-52;
+    charset person = 53-54;
+    charset pl = 55-56;
+    charset see = 57-58;
+    charset sg = 59-61;
+    charset skin = 62-63;
+    charset star = 64-65;
+    charset stone = 66-68;
+    charset sun = 69-70;
+    charset tongue = 71-72;
+    charset tooth = 73-74;
+    charset tree = 75-77;
+    charset two = 78-79;
+    charset water = 80-81;
+END;

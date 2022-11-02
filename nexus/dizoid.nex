@@ -1,238 +1,182 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=4 NCHAR=161;
+    DIMENSIONS NTAX=4 NCHAR=126;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
-        1 ash_0ascertainment,
-        2 ash_83,
-        3 bark_0ascertainment,
-        4 bark_84,
-        5 bird_0ascertainment,
-        6 bird_85,
-        7 bite_0ascertainment,
-        8 bite_86,
-        9 black_0ascertainment,
-        10 black_87,
-        11 blood_0ascertainment,
-        12 blood_4,
-        13 blood_5,
-        14 bone_0ascertainment,
-        15 bone_6,
-        16 bone_7,
-        17 breast_0ascertainment,
-        18 breast_8,
-        19 cloud_0ascertainment,
-        20 cloud_88,
-        21 cold_0ascertainment,
-        22 cold_89,
-        23 come_0ascertainment,
-        24 come_10,
-        25 come_9,
-        26 die_0ascertainment,
-        27 die_11,
-        28 dog_0ascertainment,
-        29 dog_12,
-        30 drink_0ascertainment,
-        31 drink_13,
-        32 drink_14,
-        33 drink_15,
-        34 ear_0ascertainment,
-        35 ear_16,
-        36 ear_17,
-        37 ear_18,
-        38 ear_19,
-        39 earth_0ascertainment,
-        40 earth_90,
-        41 eat_0ascertainment,
-        42 eat_91,
-        43 eye_0ascertainment,
-        44 eye_20,
-        45 fire_0ascertainment,
-        46 fire_21,
-        47 fire_22,
-        48 fish_0ascertainment,
-        49 fish_23,
-        50 fish_24,
-        51 fish_25,
-        52 full_0ascertainment,
-        53 full_26,
-        54 green_0ascertainment,
-        55 green_92,
-        56 hand_0ascertainment,
-        57 hand_27,
-        58 hear_0ascertainment,
-        59 hear_28,
-        60 heart_0ascertainment,
-        61 heart_93,
-        62 heart_94,
-        63 horn_0ascertainment,
-        64 horn_29,
-        65 horn_30,
-        66 horn_31,
-        67 i_0ascertainment,
-        68 i_1,
-        69 i_2,
-        70 i_3,
-        71 knee_0ascertainment,
-        72 knee_32,
-        73 knee_33,
-        74 know_0ascertainment,
-        75 know_95,
-        76 leaf_0ascertainment,
-        77 leaf_34,
-        78 leaf_35,
-        79 liver_0ascertainment,
-        80 liver_36,
-        81 liver_37,
-        82 liver_38,
-        83 louse_0ascertainment,
-        84 louse_39,
-        85 man_0ascertainment,
-        86 man_96,
-        87 mountain_0ascertainment,
-        88 mountain_40,
-        89 mountain_41,
-        90 mountain_42,
-        91 mouth_0ascertainment,
-        92 mouth_97,
-        93 name_0ascertainment,
-        94 name_43,
-        95 new_0ascertainment,
-        96 new_44,
-        97 new_45,
-        98 night_0ascertainment,
-        99 night_46,
-        100 nose_0ascertainment,
-        101 nose_47,
-        102 nose_48,
-        103 one_0ascertainment,
-        104 one_49,
-        105 one_50,
-        106 path_0ascertainment,
-        107 path_51,
-        108 path_52,
-        109 path_53,
-        110 person_0ascertainment,
-        111 person_54,
-        112 raining_or_rain_0ascertainment,
-        113 raining_or_rain_98,
-        114 say_0ascertainment,
-        115 say_99,
-        116 see_0ascertainment,
-        117 see_55,
-        118 see_56,
-        119 skin_0ascertainment,
-        120 skin_57,
-        121 skin_58,
-        122 skin_59,
-        123 smoke_0ascertainment,
-        124 smoke_100,
-        125 star_0ascertainment,
-        126 star_60,
-        127 star_61,
-        128 star_62,
-        129 star_63,
-        130 stone_0ascertainment,
-        131 stone_64,
-        132 sun_0ascertainment,
-        133 sun_65,
-        134 sun_66,
-        135 sun_67,
-        136 sun_68,
-        137 thou_0ascertainment,
-        138 thou_81,
-        139 thou_82,
-        140 tongue_0ascertainment,
-        141 tongue_69,
-        142 tongue_70,
-        143 tongue_71,
-        144 tooth_0ascertainment,
-        145 tooth_72,
-        146 tree_0ascertainment,
-        147 tree_73,
-        148 two_0ascertainment,
-        149 two_74,
-        150 two_75,
-        151 water_0ascertainment,
-        152 water_76,
-        153 water_77,
-        154 we_0ascertainment,
-        155 we_78,
-        156 we_79,
-        157 we_80,
-        158 white_0ascertainment,
-        159 white_101,
-        160 who_0ascertainment,
-        161 who_102
+        1 blood_0ascertainment,
+        2 blood_dizoid.blood.0009,
+        3 bone_0ascertainment,
+        4 bone_dizoid.bone.0010,
+        5 breast_0ascertainment,
+        6 breast_dizoid.breast.0011,
+        7 come_0ascertainment,
+        8 come_dizoid.come.0012,
+        9 die_0ascertainment,
+        10 die_dizoid.die.0013,
+        11 die_dizoid.die.0014,
+        12 dog_0ascertainment,
+        13 dog_dizoid.dog.0015,
+        14 drink_0ascertainment,
+        15 drink_dizoid.drink.0016,
+        16 drink_dizoid.drink.0017,
+        17 drink_dizoid.drink.0018,
+        18 ear_0ascertainment,
+        19 ear_dizoid.ear.0019,
+        20 ear_dizoid.ear.0020,
+        21 ear_dizoid.ear.0021,
+        22 ear_dizoid.ear.0022,
+        23 eye_0ascertainment,
+        24 eye_dizoid.eye.0023,
+        25 fire_0ascertainment,
+        26 fire_dizoid.fire.0024,
+        27 fire_dizoid.fire.0025,
+        28 fish_0ascertainment,
+        29 fish_dizoid.fish.0026,
+        30 fish_dizoid.fish.0027,
+        31 fish_dizoid.fish.0028,
+        32 fish_dizoid.fish.0029,
+        33 hand_0ascertainment,
+        34 hand_dizoid.hand.0030,
+        35 hear_0ascertainment,
+        36 hear_dizoid.hear.0031,
+        37 horn_0ascertainment,
+        38 horn_dizoid.horn.0032,
+        39 horn_dizoid.horn.0033,
+        40 horn_dizoid.horn.0034,
+        41 horn_dizoid.horn.0035,
+        42 knee_0ascertainment,
+        43 knee_dizoid.knee.0036,
+        44 knee_dizoid.knee.0037,
+        45 leaf_0ascertainment,
+        46 leaf_dizoid.leaf.0038,
+        47 leaf_dizoid.leaf.0039,
+        48 leaf_dizoid.leaf.0040,
+        49 liver_0ascertainment,
+        50 liver_dizoid.liver.0041,
+        51 liver_dizoid.liver.0042,
+        52 liver_dizoid.liver.0043,
+        53 louse_0ascertainment,
+        54 louse_dizoid.louse.0044,
+        55 mountain_0ascertainment,
+        56 mountain_dizoid.mountain.0045,
+        57 mountain_dizoid.mountain.0046,
+        58 mountain_dizoid.mountain.0047,
+        59 name_0ascertainment,
+        60 name_dizoid.name.0048,
+        61 name_dizoid.name.0049,
+        62 new_0ascertainment,
+        63 new_dizoid.new.0050,
+        64 new_dizoid.new.0051,
+        65 new_dizoid.new.0052,
+        66 night_0ascertainment,
+        67 night_dizoid.night.0053,
+        68 nose_0ascertainment,
+        69 nose_dizoid.nose.0054,
+        70 nose_dizoid.nose.0055,
+        71 one_0ascertainment,
+        72 one_dizoid.one.0056,
+        73 one_dizoid.one.0057,
+        74 path_0ascertainment,
+        75 path_dizoid.path.0058,
+        76 path_dizoid.path.0059,
+        77 path_dizoid.path.0060,
+        78 person_0ascertainment,
+        79 person_dizoid.person.0061,
+        80 pl_0ascertainment,
+        81 pl_dizoid.1pl.0001,
+        82 pl_dizoid.1pl.0002,
+        83 pl_dizoid.1pl.0003,
+        84 see_0ascertainment,
+        85 see_dizoid.see.0062,
+        86 see_dizoid.see.0063,
+        87 sg_0ascertainment,
+        88 sg_dizoid.1sg.0004,
+        89 sg_dizoid.1sg.0005,
+        90 sg_dizoid.1sg.0006,
+        91 sg_dizoid.2sg.0007,
+        92 sg_dizoid.2sg.0008,
+        93 skin_0ascertainment,
+        94 skin_dizoid.skin.0064,
+        95 skin_dizoid.skin.0065,
+        96 skin_dizoid.skin.0066,
+        97 star_0ascertainment,
+        98 star_dizoid.star.0067,
+        99 star_dizoid.star.0068,
+        100 star_dizoid.star.0069,
+        101 star_dizoid.star.0070,
+        102 star_dizoid.star.0071,
+        103 stone_0ascertainment,
+        104 stone_dizoid.stone.0072,
+        105 sun_0ascertainment,
+        106 sun_dizoid.sun.0073,
+        107 sun_dizoid.sun.0074,
+        108 sun_dizoid.sun.0075,
+        109 tongue_0ascertainment,
+        110 tongue_dizoid.tongue.0076,
+        111 tongue_dizoid.tongue.0077,
+        112 tongue_dizoid.tongue.0078,
+        113 tongue_dizoid.tongue.0079,
+        114 tooth_0ascertainment,
+        115 tooth_dizoid.tooth.0080,
+        116 tree_0ascertainment,
+        117 tree_dizoid.tree.0081,
+        118 tree_dizoid.tree.0082,
+        119 tree_dizoid.tree.0083,
+        120 tree_dizoid.tree.0084,
+        121 two_0ascertainment,
+        122 two_dizoid.two.0085,
+        123 two_dizoid.two.0086,
+        124 water_0ascertainment,
+        125 water_dizoid.water.0087,
+        126 water_dizoid.water.0088
 ;
 
 MATRIX
-dizi  01010101010??0100?01010??01010???010000101010??0???0101010?01101000???0??010??0???01010???010?0??0?0??0??0???0?01010??0???010????0?010000100???01010100100???0101
-maji  0?0?0?0?0?010001010?0?00101010100001000?0?0101001000?0?01010??010001000100?0100100010?01000?01010010100100100010?0?01001100?0100101001010100100010101000101000?0?
-nao   0?0?0?0?0?001001010?0?01001010010000100?0?0100100100?0?01010??001000100010?0100010010?00100?01001010100010010010?0?00100100?0010001000100010010010101000100100?0?
-sheko 0?0?0?0?0?010001010?0?01001010001010010?0?0100100010?0?01010??000100010010?0010101010?00010?01010010010100001010?0?00100010?0001001001000100001010101100100010?0?
+dizi_2 01010101010010100010000101001000010101100010010001000101000110100010100100???0?01000100100100100010000010100010000101000010010
+maji   010101010010101000010001010001000101001000100010010001010001001000101001001000101000010100100110001001010101001000100100010001
+nao    010101010010100100001001001000100101000100010010001001001001000100101000100100100100100010010100000100010010000100100010010001
+sheko  010101010010100010100101001000010101000010010001010101000101000010100101000010100010100001100001000010010100000010100001011001
 ;
 END;
 
 BEGIN ASSUMPTIONS;
-    charset ash = 1-2;
-    charset bark = 3-4;
-    charset bird = 5-6;
-    charset bite = 7-8;
-    charset black = 9-10;
-    charset blood = 11-13;
-    charset bone = 14-16;
-    charset breast = 17-18;
-    charset cloud = 19-20;
-    charset cold = 21-22;
-    charset come = 23-25;
-    charset die = 26-27;
-    charset dog = 28-29;
-    charset drink = 30-33;
-    charset ear = 34-38;
-    charset earth = 39-40;
-    charset eat = 41-42;
-    charset eye = 43-44;
-    charset fire = 45-47;
-    charset fish = 48-51;
-    charset full = 52-53;
-    charset green = 54-55;
-    charset hand = 56-57;
-    charset hear = 58-59;
-    charset heart = 60-62;
-    charset horn = 63-66;
-    charset i = 67-70;
-    charset knee = 71-73;
-    charset know = 74-75;
-    charset leaf = 76-78;
-    charset liver = 79-82;
-    charset louse = 83-84;
-    charset man = 85-86;
-    charset mountain = 87-90;
-    charset mouth = 91-92;
-    charset name = 93-94;
-    charset new = 95-97;
-    charset night = 98-99;
-    charset nose = 100-102;
-    charset one = 103-105;
-    charset path = 106-109;
-    charset person = 110-111;
-    charset raining_or_rain = 112-113;
-    charset say = 114-115;
-    charset see = 116-118;
-    charset skin = 119-122;
-    charset smoke = 123-124;
-    charset star = 125-129;
-    charset stone = 130-131;
-    charset sun = 132-136;
-    charset thou = 137-139;
-    charset tongue = 140-143;
-    charset tooth = 144-145;
-    charset tree = 146-147;
-    charset two = 148-150;
-    charset water = 151-153;
-    charset we = 154-157;
-    charset white = 158-159;
-    charset who = 160-161;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-11;
+    charset dog = 12-13;
+    charset drink = 14-17;
+    charset ear = 18-22;
+    charset eye = 23-24;
+    charset fire = 25-27;
+    charset fish = 28-32;
+    charset hand = 33-34;
+    charset hear = 35-36;
+    charset horn = 37-41;
+    charset knee = 42-44;
+    charset leaf = 45-48;
+    charset liver = 49-52;
+    charset louse = 53-54;
+    charset mountain = 55-58;
+    charset name = 59-61;
+    charset new = 62-65;
+    charset night = 66-67;
+    charset nose = 68-70;
+    charset one = 71-73;
+    charset path = 74-77;
+    charset person = 78-79;
+    charset pl = 80-83;
+    charset see = 84-86;
+    charset sg = 87-92;
+    charset skin = 93-96;
+    charset star = 97-102;
+    charset stone = 103-104;
+    charset sun = 105-108;
+    charset tongue = 109-113;
+    charset tooth = 114-115;
+    charset tree = 116-120;
+    charset two = 121-123;
+    charset water = 124-126;
 END;

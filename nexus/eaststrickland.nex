@@ -1,0 +1,210 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=8 NCHAR=150;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_eaststrickland.blood.0013,
+        3 blood_eaststrickland.blood.0014,
+        4 blood_eaststrickland.blood.0015,
+        5 blood_eaststrickland.blood.0016,
+        6 bone_0ascertainment,
+        7 bone_eaststrickland.bone.0017,
+        8 bone_eaststrickland.bone.0018,
+        9 breast_0ascertainment,
+        10 breast_eaststrickland.breast.0019,
+        11 breast_eaststrickland.breast.0020,
+        12 come_0ascertainment,
+        13 come_eaststrickland.come.0021,
+        14 come_eaststrickland.come.0022,
+        15 come_eaststrickland.come.0023,
+        16 come_eaststrickland.come.0024,
+        17 come_eaststrickland.come.0025,
+        18 die_0ascertainment,
+        19 die_eaststrickland.die.0026,
+        20 dog_0ascertainment,
+        21 dog_eaststrickland.dog.0027,
+        22 drink_0ascertainment,
+        23 drink_eaststrickland.drink.0028,
+        24 ear_0ascertainment,
+        25 ear_eaststrickland.ear.0029,
+        26 ear_eaststrickland.ear.0030,
+        27 eye_0ascertainment,
+        28 eye_eaststrickland.eye.0031,
+        29 eye_eaststrickland.eye.0032,
+        30 eye_eaststrickland.eye.0033,
+        31 fire_0ascertainment,
+        32 fire_eaststrickland.fire.0034,
+        33 fish_0ascertainment,
+        34 fish_eaststrickland.fish.0035,
+        35 fish_eaststrickland.fish.0036,
+        36 full_0ascertainment,
+        37 full_eaststrickland.full.0037,
+        38 full_eaststrickland.full.0038,
+        39 full_eaststrickland.full.0039,
+        40 full_eaststrickland.full.0040,
+        41 hand_0ascertainment,
+        42 hand_eaststrickland.hand.0041,
+        43 hand_eaststrickland.hand.0042,
+        44 hear_0ascertainment,
+        45 hear_eaststrickland.hear.0043,
+        46 knee_0ascertainment,
+        47 knee_eaststrickland.knee.0044,
+        48 knee_eaststrickland.knee.0045,
+        49 knee_eaststrickland.knee.0046,
+        50 knee_eaststrickland.knee.0047,
+        51 leaf_0ascertainment,
+        52 leaf_eaststrickland.leaf.0048,
+        53 leaf_eaststrickland.leaf.0049,
+        54 liver_0ascertainment,
+        55 liver_eaststrickland.liver.0050,
+        56 louse_0ascertainment,
+        57 louse_eaststrickland.louse.0051,
+        58 louse_eaststrickland.louse.0052,
+        59 louse_eaststrickland.louse.0053,
+        60 louse_eaststrickland.louse.0054,
+        61 mountain_0ascertainment,
+        62 mountain_eaststrickland.mountain.0055,
+        63 mountain_eaststrickland.mountain.0056,
+        64 mountain_eaststrickland.mountain.0057,
+        65 mountain_eaststrickland.mountain.0058,
+        66 mountain_eaststrickland.mountain.0059,
+        67 mountain_eaststrickland.mountain.0060,
+        68 mountain_eaststrickland.mountain.0061,
+        69 name_0ascertainment,
+        70 name_eaststrickland.name.0062,
+        71 new_0ascertainment,
+        72 new_eaststrickland.new.0063,
+        73 new_eaststrickland.new.0064,
+        74 new_eaststrickland.new.0065,
+        75 new_eaststrickland.new.0066,
+        76 new_eaststrickland.new.0067,
+        77 night_0ascertainment,
+        78 night_eaststrickland.night.0068,
+        79 night_eaststrickland.night.0069,
+        80 nose_0ascertainment,
+        81 nose_eaststrickland.nose.0070,
+        82 nose_eaststrickland.nose.0071,
+        83 nose_eaststrickland.nose.0072,
+        84 nose_eaststrickland.nose.0073,
+        85 one_0ascertainment,
+        86 one_eaststrickland.one.0074,
+        87 one_eaststrickland.one.0075,
+        88 one_eaststrickland.one.0076,
+        89 one_eaststrickland.one.0077,
+        90 path_0ascertainment,
+        91 path_eaststrickland.path.0078,
+        92 path_eaststrickland.path.0079,
+        93 path_eaststrickland.path.0080,
+        94 person_0ascertainment,
+        95 person_eaststrickland.person.0081,
+        96 person_eaststrickland.person.0082,
+        97 person_eaststrickland.person.0083,
+        98 person_eaststrickland.person.0084,
+        99 person_eaststrickland.person.0085,
+        100 pl_0ascertainment,
+        101 pl_eaststrickland.1pl.0001,
+        102 pl_eaststrickland.1pl.0002,
+        103 pl_eaststrickland.1pl.0003,
+        104 pl_eaststrickland.1pl.0004,
+        105 pl_eaststrickland.1pl.0005,
+        106 see_0ascertainment,
+        107 see_eaststrickland.see.0086,
+        108 see_eaststrickland.see.0087,
+        109 sg_0ascertainment,
+        110 sg_eaststrickland.1sg.0006,
+        111 sg_eaststrickland.1sg.0007,
+        112 sg_eaststrickland.1sg.0008,
+        113 sg_eaststrickland.2sg.0009,
+        114 sg_eaststrickland.2sg.0010,
+        115 sg_eaststrickland.2sg.0011,
+        116 sg_eaststrickland.2sg.0012,
+        117 skin_0ascertainment,
+        118 skin_eaststrickland.skin.0088,
+        119 skin_eaststrickland.skin.0089,
+        120 skin_eaststrickland.skin.0090,
+        121 skin_eaststrickland.skin.0091,
+        122 star_0ascertainment,
+        123 star_eaststrickland.star.0092,
+        124 star_eaststrickland.star.0093,
+        125 star_eaststrickland.star.0094,
+        126 stone_0ascertainment,
+        127 stone_eaststrickland.stone.0095,
+        128 stone_eaststrickland.stone.0096,
+        129 stone_eaststrickland.stone.0097,
+        130 sun_0ascertainment,
+        131 sun_eaststrickland.sun.0098,
+        132 sun_eaststrickland.sun.0099,
+        133 sun_eaststrickland.sun.0100,
+        134 tongue_0ascertainment,
+        135 tongue_eaststrickland.tongue.0101,
+        136 tongue_eaststrickland.tongue.0102,
+        137 tongue_eaststrickland.tongue.0103,
+        138 tooth_0ascertainment,
+        139 tooth_eaststrickland.tooth.0104,
+        140 tree_0ascertainment,
+        141 tree_eaststrickland.tree.0105,
+        142 tree_eaststrickland.tree.0106,
+        143 two_0ascertainment,
+        144 two_eaststrickland.two.0107,
+        145 two_eaststrickland.two.0108,
+        146 two_eaststrickland.two.0109,
+        147 two_eaststrickland.two.0110,
+        148 two_eaststrickland.two.0111,
+        149 water_0ascertainment,
+        150 water_eaststrickland.water.0112
+;
+
+MATRIX
+agala   010000100100100000?010?0100100010100100001001010000100?01000010000000101000001001000010000100010000010000010010010000100001000100010001000101001000001
+gebusi  001000010010010000?010?0100010010010010000101001000100?00100001000000100100001000100001000010001000001000001001001000010000100100001000100100100100001
+honibo  001000010100001000?010?0100010010010010000101000100100?00010000100000100100001000100001000010000100001000001000101000010000100100010000100100100010001
+konai   000100100100100000?010?001000101010000100??01000010010?010000000100001000100001000100001000010?????000100010000101000001001000100010001000101000010001
+kubo    010000100100100000?010?0100001010010000101001000100100?01000000001000100001001000100000100010010000001000010000101000001000100100010001000100100010001
+odoodee 001000010010000100101010100010010010010000101000100100101000000000100100000101000001000010010000010000010001000100100010000010010010001000100100001001
+oibae   000010010010000010?010?0100010010010010000101000100100?00001000000010100100001000100001000010000001000001001000100010000100100001000100100100100000101
+samo    010000010100100000?010?0100010010010010001001000100100?01000000001000100100001000100001000010000100001000001000101000010000100100010000010100100010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-8;
+    charset breast = 9-11;
+    charset come = 12-17;
+    charset die = 18-19;
+    charset dog = 20-21;
+    charset drink = 22-23;
+    charset ear = 24-26;
+    charset eye = 27-30;
+    charset fire = 31-32;
+    charset fish = 33-35;
+    charset full = 36-40;
+    charset hand = 41-43;
+    charset hear = 44-45;
+    charset knee = 46-50;
+    charset leaf = 51-53;
+    charset liver = 54-55;
+    charset louse = 56-60;
+    charset mountain = 61-68;
+    charset name = 69-70;
+    charset new = 71-76;
+    charset night = 77-79;
+    charset nose = 80-84;
+    charset one = 85-89;
+    charset path = 90-93;
+    charset person = 94-99;
+    charset pl = 100-105;
+    charset see = 106-108;
+    charset sg = 109-116;
+    charset skin = 117-121;
+    charset star = 122-125;
+    charset stone = 126-129;
+    charset sun = 130-133;
+    charset tongue = 134-137;
+    charset tooth = 138-139;
+    charset tree = 140-142;
+    charset two = 143-148;
+    charset water = 149-150;
+END;

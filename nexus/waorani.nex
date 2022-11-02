@@ -1,0 +1,130 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=77;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_waorani.blood.0536,
+        3 bone_0ascertainment,
+        4 bone_waorani.bone.0117,
+        5 breast_0ascertainment,
+        6 breast_waorani.breast.0683,
+        7 come_0ascertainment,
+        8 come_waorani.come.0678,
+        9 die_0ascertainment,
+        10 die_waorani.die.0865,
+        11 dog_0ascertainment,
+        12 dog_waorani.dog.0478,
+        13 drink_0ascertainment,
+        14 drink_waorani.drink.0905,
+        15 ear_0ascertainment,
+        16 ear_waorani.ear.0126,
+        17 eye_0ascertainment,
+        18 eye_waorani.eye.0689,
+        19 fire_0ascertainment,
+        20 fire_waorani.fire.0699,
+        21 fish_0ascertainment,
+        22 fish_waorani.fish.0648,
+        23 full_0ascertainment,
+        24 full_waorani.full.0958,
+        25 hand_0ascertainment,
+        26 hand_waorani.hand.0536,
+        27 hear_0ascertainment,
+        28 hear_waorani.hear.0990,
+        29 horn_0ascertainment,
+        30 horn_waorani.horn.0551,
+        31 knee_0ascertainment,
+        32 knee_waorani.knee.0051,
+        33 leaf_0ascertainment,
+        34 leaf_waorani.leaf.0525,
+        35 liver_0ascertainment,
+        36 liver_waorani.liver.0433,
+        37 louse_0ascertainment,
+        38 louse_waorani.louse.0691,
+        39 mountain_0ascertainment,
+        40 mountain_waorani.mountain.0753,
+        41 name_0ascertainment,
+        42 name_waorani.name.0524,
+        43 new_0ascertainment,
+        44 new_waorani.new.0659,
+        45 night_0ascertainment,
+        46 night_waorani.night.0632,
+        47 nose_0ascertainment,
+        48 nose_waorani.nose.0763,
+        49 one_0ascertainment,
+        50 one_waorani.one.0523,
+        51 path_0ascertainment,
+        52 path_waorani.path.0740,
+        53 person_0ascertainment,
+        54 person_waorani.person.0957,
+        55 pl_0ascertainment,
+        56 pl_waorani.1pl.0808,
+        57 sg_0ascertainment,
+        58 sg_waorani.1sg.0446,
+        59 sg_waorani.2sg.0543,
+        60 skin_0ascertainment,
+        61 skin_waorani.skin.0817,
+        62 star_0ascertainment,
+        63 star_waorani.star.0769,
+        64 stone_0ascertainment,
+        65 stone_waorani.stone.1042,
+        66 sun_0ascertainment,
+        67 sun_waorani.sun.0581,
+        68 tongue_0ascertainment,
+        69 tongue_waorani.tongue.0597,
+        70 tooth_0ascertainment,
+        71 tooth_waorani.tooth.0394,
+        72 tree_0ascertainment,
+        73 tree_waorani.tree.0159,
+        74 two_0ascertainment,
+        75 two_waorani.two.0559,
+        76 water_0ascertainment,
+        77 water_waorani.water.0533
+;
+
+MATRIX
+waorani 01010101010101010101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset full = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-28;
+    charset horn = 29-30;
+    charset knee = 31-32;
+    charset leaf = 33-34;
+    charset liver = 35-36;
+    charset louse = 37-38;
+    charset mountain = 39-40;
+    charset name = 41-42;
+    charset new = 43-44;
+    charset night = 45-46;
+    charset nose = 47-48;
+    charset one = 49-50;
+    charset path = 51-52;
+    charset person = 53-54;
+    charset pl = 55-56;
+    charset sg = 57-59;
+    charset skin = 60-61;
+    charset star = 62-63;
+    charset stone = 64-65;
+    charset sun = 66-67;
+    charset tongue = 68-69;
+    charset tooth = 70-71;
+    charset tree = 72-73;
+    charset two = 74-75;
+    charset water = 76-77;
+END;

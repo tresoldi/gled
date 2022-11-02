@@ -1,129 +1,128 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=2 NCHAR=115;
+    DIMENSIONS NTAX=2 NCHAR=114;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_3,
-        3 blood_4,
+        2 blood_furan.blood.0006,
+        3 blood_furan.blood.0007,
         4 bone_0ascertainment,
-        5 bone_5,
-        6 bone_6,
+        5 bone_furan.bone.0008,
+        6 bone_furan.bone.0009,
         7 breast_0ascertainment,
-        8 breast_7,
+        8 breast_furan.breast.0010,
         9 come_0ascertainment,
-        10 come_8,
-        11 come_9,
+        10 come_furan.come.0011,
+        11 come_furan.come.0012,
         12 die_0ascertainment,
-        13 die_10,
-        14 die_11,
-        15 die_12,
-        16 die_13,
+        13 die_furan.die.0013,
+        14 die_furan.die.0014,
+        15 die_furan.die.0015,
+        16 die_furan.die.0016,
         17 dog_0ascertainment,
-        18 dog_14,
-        19 dog_15,
+        18 dog_furan.dog.0017,
+        19 dog_furan.dog.0018,
         20 drink_0ascertainment,
-        21 drink_16,
-        22 drink_17,
-        23 drink_18,
+        21 drink_furan.drink.0019,
+        22 drink_furan.drink.0020,
+        23 drink_furan.drink.0021,
         24 ear_0ascertainment,
-        25 ear_19,
-        26 ear_20,
+        25 ear_furan.ear.0022,
+        26 ear_furan.ear.0023,
         27 eye_0ascertainment,
-        28 eye_21,
-        29 eye_22,
+        28 eye_furan.eye.0024,
+        29 eye_furan.eye.0025,
         30 fire_0ascertainment,
-        31 fire_23,
-        32 fire_24,
+        31 fire_furan.fire.0026,
+        32 fire_furan.fire.0027,
         33 fish_0ascertainment,
-        34 fish_25,
-        35 fish_26,
+        34 fish_furan.fish.0028,
+        35 fish_furan.fish.0029,
         36 full_0ascertainment,
-        37 full_27,
-        38 full_28,
+        37 full_furan.full.0030,
+        38 full_furan.full.0031,
         39 hand_0ascertainment,
-        40 hand_29,
-        41 hand_30,
+        40 hand_furan.hand.0032,
+        41 hand_furan.hand.0033,
         42 hear_0ascertainment,
-        43 hear_31,
-        44 hear_32,
+        43 hear_furan.hear.0034,
+        44 hear_furan.hear.0035,
         45 horn_0ascertainment,
-        46 horn_33,
-        47 horn_34,
-        48 i_0ascertainment,
-        49 i_1,
-        50 i_2,
-        51 knee_0ascertainment,
-        52 knee_35,
-        53 leaf_0ascertainment,
-        54 leaf_36,
-        55 leaf_37,
-        56 liver_0ascertainment,
-        57 liver_38,
-        58 louse_0ascertainment,
-        59 louse_39,
-        60 mountain_0ascertainment,
-        61 mountain_40,
-        62 name_0ascertainment,
-        63 name_41,
-        64 name_42,
-        65 new_0ascertainment,
-        66 new_43,
-        67 night_0ascertainment,
-        68 night_44,
-        69 night_45,
-        70 nose_0ascertainment,
-        71 nose_46,
-        72 nose_47,
-        73 one_0ascertainment,
-        74 one_48,
-        75 one_49,
-        76 path_0ascertainment,
-        77 path_50,
-        78 path_51,
-        79 person_0ascertainment,
-        80 person_52,
-        81 see_0ascertainment,
-        82 see_53,
-        83 see_54,
-        84 see_55,
-        85 skin_0ascertainment,
-        86 skin_56,
-        87 star_0ascertainment,
-        88 star_57,
-        89 star_58,
-        90 stone_0ascertainment,
-        91 stone_59,
-        92 stone_60,
-        93 sun_0ascertainment,
-        94 sun_61,
-        95 sun_62,
-        96 thou_0ascertainment,
-        97 thou_74,
-        98 thou_75,
-        99 tongue_0ascertainment,
-        100 tongue_63,
-        101 tongue_64,
-        102 tooth_0ascertainment,
-        103 tooth_65,
-        104 tooth_66,
-        105 tree_0ascertainment,
-        106 tree_67,
-        107 tree_68,
-        108 two_0ascertainment,
-        109 two_69,
-        110 two_70,
-        111 water_0ascertainment,
-        112 water_71,
-        113 water_72,
-        114 we_0ascertainment,
-        115 we_73
+        46 horn_furan.horn.0036,
+        47 horn_furan.horn.0037,
+        48 knee_0ascertainment,
+        49 knee_furan.knee.0038,
+        50 leaf_0ascertainment,
+        51 leaf_furan.leaf.0039,
+        52 leaf_furan.leaf.0040,
+        53 liver_0ascertainment,
+        54 liver_furan.liver.0041,
+        55 louse_0ascertainment,
+        56 louse_furan.louse.0042,
+        57 mountain_0ascertainment,
+        58 mountain_furan.mountain.0043,
+        59 name_0ascertainment,
+        60 name_furan.name.0044,
+        61 name_furan.name.0045,
+        62 new_0ascertainment,
+        63 new_furan.new.0046,
+        64 night_0ascertainment,
+        65 night_furan.night.0047,
+        66 night_furan.night.0048,
+        67 nose_0ascertainment,
+        68 nose_furan.nose.0049,
+        69 nose_furan.nose.0050,
+        70 one_0ascertainment,
+        71 one_furan.one.0051,
+        72 one_furan.one.0052,
+        73 path_0ascertainment,
+        74 path_furan.path.0053,
+        75 path_furan.path.0054,
+        76 person_0ascertainment,
+        77 person_furan.person.0055,
+        78 pl_0ascertainment,
+        79 pl_furan.1pl.0001,
+        80 see_0ascertainment,
+        81 see_furan.see.0056,
+        82 see_furan.see.0057,
+        83 see_furan.see.0058,
+        84 sg_0ascertainment,
+        85 sg_furan.1sg.0002,
+        86 sg_furan.1sg.0003,
+        87 sg_furan.2sg.0004,
+        88 sg_furan.2sg.0005,
+        89 skin_0ascertainment,
+        90 skin_furan.skin.0059,
+        91 star_0ascertainment,
+        92 star_furan.star.0060,
+        93 star_furan.star.0061,
+        94 stone_0ascertainment,
+        95 stone_furan.stone.0062,
+        96 stone_furan.stone.0063,
+        97 sun_0ascertainment,
+        98 sun_furan.sun.0064,
+        99 sun_furan.sun.0065,
+        100 tongue_0ascertainment,
+        101 tongue_furan.tongue.0066,
+        102 tongue_furan.tongue.0067,
+        103 tooth_0ascertainment,
+        104 tooth_furan.tooth.0068,
+        105 tooth_furan.tooth.0069,
+        106 tree_0ascertainment,
+        107 tree_furan.tree.0070,
+        108 tree_furan.tree.0071,
+        109 two_0ascertainment,
+        110 two_furan.two.0072,
+        111 two_furan.two.0073,
+        112 water_0ascertainment,
+        113 water_furan.water.0074,
+        114 water_furan.water.0075
 ;
 
 MATRIX
-amdang 01001001010010000100100011010010010010010010010010010100?010?01001010010010010010100010100100100100100100100100100?
-fur    0010010100100111001001101000100100100100100100100101001010101001010010010010010?00110?00100100100100100100100100101
+amdang 01001001010010000100100011010010010010010010010010100?010?01001010010010010010?01000101001010010010010010010010010
+fur    0010010100100111001001100100100100100100100100101001010101001010010010010010?010011001010?001001001001001001001001
 ;
 END;
 
@@ -143,29 +142,28 @@ BEGIN ASSUMPTIONS;
     charset hand = 39-41;
     charset hear = 42-44;
     charset horn = 45-47;
-    charset i = 48-50;
-    charset knee = 51-52;
-    charset leaf = 53-55;
-    charset liver = 56-57;
-    charset louse = 58-59;
-    charset mountain = 60-61;
-    charset name = 62-64;
-    charset new = 65-66;
-    charset night = 67-69;
-    charset nose = 70-72;
-    charset one = 73-75;
-    charset path = 76-78;
-    charset person = 79-80;
-    charset see = 81-84;
-    charset skin = 85-86;
-    charset star = 87-89;
-    charset stone = 90-92;
-    charset sun = 93-95;
-    charset thou = 96-98;
-    charset tongue = 99-101;
-    charset tooth = 102-104;
-    charset tree = 105-107;
-    charset two = 108-110;
-    charset water = 111-113;
-    charset we = 114-115;
+    charset knee = 48-49;
+    charset leaf = 50-52;
+    charset liver = 53-54;
+    charset louse = 55-56;
+    charset mountain = 57-58;
+    charset name = 59-61;
+    charset new = 62-63;
+    charset night = 64-66;
+    charset nose = 67-69;
+    charset one = 70-72;
+    charset path = 73-75;
+    charset person = 76-77;
+    charset pl = 78-79;
+    charset see = 80-83;
+    charset sg = 84-88;
+    charset skin = 89-90;
+    charset star = 91-93;
+    charset stone = 94-96;
+    charset sun = 97-99;
+    charset tongue = 100-102;
+    charset tooth = 103-105;
+    charset tree = 106-108;
+    charset two = 109-111;
+    charset water = 112-114;
 END;

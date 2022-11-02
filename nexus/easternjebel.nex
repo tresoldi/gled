@@ -1,0 +1,118 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=69;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_easternjebel.blood.0284,
+        3 breast_0ascertainment,
+        4 breast_easternjebel.breast.0142,
+        5 come_0ascertainment,
+        6 come_easternjebel.come.0005,
+        7 die_0ascertainment,
+        8 die_easternjebel.die.0451,
+        9 dog_0ascertainment,
+        10 dog_easternjebel.dog.0298,
+        11 drink_0ascertainment,
+        12 drink_easternjebel.drink.0022,
+        13 ear_0ascertainment,
+        14 ear_easternjebel.ear.0003,
+        15 eye_0ascertainment,
+        16 eye_easternjebel.eye.0398,
+        17 fire_0ascertainment,
+        18 fire_easternjebel.fire.0036,
+        19 fish_0ascertainment,
+        20 fish_easternjebel.fish.0145,
+        21 hand_0ascertainment,
+        22 hand_easternjebel.hand.0129,
+        23 hear_0ascertainment,
+        24 hear_easternjebel.hear.0060,
+        25 horn_0ascertainment,
+        26 horn_easternjebel.horn.0023,
+        27 knee_0ascertainment,
+        28 knee_easternjebel.knee.0007,
+        29 leaf_0ascertainment,
+        30 leaf_easternjebel.leaf.0343,
+        31 louse_0ascertainment,
+        32 louse_easternjebel.louse.0384,
+        33 mountain_0ascertainment,
+        34 mountain_easternjebel.mountain.0417,
+        35 name_0ascertainment,
+        36 name_easternjebel.name.0316,
+        37 night_0ascertainment,
+        38 night_easternjebel.night.0369,
+        39 nose_0ascertainment,
+        40 nose_easternjebel.nose.0432,
+        41 one_0ascertainment,
+        42 one_easternjebel.one.0117,
+        43 path_0ascertainment,
+        44 path_easternjebel.path.0429,
+        45 person_0ascertainment,
+        46 person_easternjebel.person.0030,
+        47 see_0ascertainment,
+        48 see_easternjebel.see.0145,
+        49 sg_0ascertainment,
+        50 sg_easternjebel.1sg.0133,
+        51 sg_easternjebel.2sg.0141,
+        52 skin_0ascertainment,
+        53 skin_easternjebel.skin.0458,
+        54 star_0ascertainment,
+        55 star_easternjebel.star.0007,
+        56 stone_0ascertainment,
+        57 stone_easternjebel.stone.0576,
+        58 sun_0ascertainment,
+        59 sun_easternjebel.sun.0031,
+        60 tongue_0ascertainment,
+        61 tongue_easternjebel.tongue.0131,
+        62 tooth_0ascertainment,
+        63 tooth_easternjebel.tooth.0148,
+        64 tree_0ascertainment,
+        65 tree_easternjebel.tree.0382,
+        66 two_0ascertainment,
+        67 two_easternjebel.two.0074,
+        68 water_0ascertainment,
+        69 water_easternjebel.water.0025
+;
+
+MATRIX
+ingassana 010101010101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset breast = 3-4;
+    charset come = 5-6;
+    charset die = 7-8;
+    charset dog = 9-10;
+    charset drink = 11-12;
+    charset ear = 13-14;
+    charset eye = 15-16;
+    charset fire = 17-18;
+    charset fish = 19-20;
+    charset hand = 21-22;
+    charset hear = 23-24;
+    charset horn = 25-26;
+    charset knee = 27-28;
+    charset leaf = 29-30;
+    charset louse = 31-32;
+    charset mountain = 33-34;
+    charset name = 35-36;
+    charset night = 37-38;
+    charset nose = 39-40;
+    charset one = 41-42;
+    charset path = 43-44;
+    charset person = 45-46;
+    charset see = 47-48;
+    charset sg = 49-51;
+    charset skin = 52-53;
+    charset star = 54-55;
+    charset stone = 56-57;
+    charset sun = 58-59;
+    charset tongue = 60-61;
+    charset tooth = 62-63;
+    charset tree = 64-65;
+    charset two = 66-67;
+    charset water = 68-69;
+END;

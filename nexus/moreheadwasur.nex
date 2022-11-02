@@ -1,0 +1,318 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=10 NCHAR=256;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_moreheadwasur.blood.0015,
+        3 blood_moreheadwasur.blood.0016,
+        4 blood_moreheadwasur.blood.0017,
+        5 blood_moreheadwasur.blood.0018,
+        6 blood_moreheadwasur.blood.0019,
+        7 blood_moreheadwasur.blood.0020,
+        8 blood_moreheadwasur.blood.0021,
+        9 bone_0ascertainment,
+        10 bone_moreheadwasur.bone.0022,
+        11 bone_moreheadwasur.bone.0023,
+        12 bone_moreheadwasur.bone.0024,
+        13 bone_moreheadwasur.bone.0025,
+        14 bone_moreheadwasur.bone.0026,
+        15 breast_0ascertainment,
+        16 breast_moreheadwasur.breast.0027,
+        17 breast_moreheadwasur.breast.0028,
+        18 breast_moreheadwasur.breast.0029,
+        19 breast_moreheadwasur.breast.0030,
+        20 breast_moreheadwasur.breast.0031,
+        21 breast_moreheadwasur.breast.0032,
+        22 come_0ascertainment,
+        23 come_moreheadwasur.come.0033,
+        24 come_moreheadwasur.come.0034,
+        25 come_moreheadwasur.come.0035,
+        26 come_moreheadwasur.come.0036,
+        27 come_moreheadwasur.come.0037,
+        28 die_0ascertainment,
+        29 die_moreheadwasur.die.0038,
+        30 die_moreheadwasur.die.0039,
+        31 die_moreheadwasur.die.0040,
+        32 die_moreheadwasur.die.0041,
+        33 die_moreheadwasur.die.0042,
+        34 die_moreheadwasur.die.0043,
+        35 dog_0ascertainment,
+        36 dog_moreheadwasur.dog.0044,
+        37 dog_moreheadwasur.dog.0045,
+        38 dog_moreheadwasur.dog.0046,
+        39 dog_moreheadwasur.dog.0047,
+        40 dog_moreheadwasur.dog.0048,
+        41 dog_moreheadwasur.dog.0049,
+        42 dog_moreheadwasur.dog.0050,
+        43 dog_moreheadwasur.dog.0051,
+        44 dog_moreheadwasur.dog.0052,
+        45 drink_0ascertainment,
+        46 drink_moreheadwasur.drink.0053,
+        47 drink_moreheadwasur.drink.0054,
+        48 drink_moreheadwasur.drink.0055,
+        49 drink_moreheadwasur.drink.0056,
+        50 ear_0ascertainment,
+        51 ear_moreheadwasur.ear.0057,
+        52 ear_moreheadwasur.ear.0058,
+        53 ear_moreheadwasur.ear.0059,
+        54 ear_moreheadwasur.ear.0060,
+        55 ear_moreheadwasur.ear.0061,
+        56 ear_moreheadwasur.ear.0062,
+        57 ear_moreheadwasur.ear.0063,
+        58 eye_0ascertainment,
+        59 eye_moreheadwasur.eye.0064,
+        60 eye_moreheadwasur.eye.0065,
+        61 eye_moreheadwasur.eye.0066,
+        62 eye_moreheadwasur.eye.0067,
+        63 eye_moreheadwasur.eye.0068,
+        64 fire_0ascertainment,
+        65 fire_moreheadwasur.fire.0069,
+        66 fire_moreheadwasur.fire.0070,
+        67 fire_moreheadwasur.fire.0071,
+        68 fire_moreheadwasur.fire.0072,
+        69 fire_moreheadwasur.fire.0073,
+        70 fish_0ascertainment,
+        71 fish_moreheadwasur.fish.0074,
+        72 fish_moreheadwasur.fish.0075,
+        73 fish_moreheadwasur.fish.0076,
+        74 fish_moreheadwasur.fish.0077,
+        75 fish_moreheadwasur.fish.0078,
+        76 fish_moreheadwasur.fish.0079,
+        77 full_0ascertainment,
+        78 full_moreheadwasur.full.0080,
+        79 full_moreheadwasur.full.0081,
+        80 full_moreheadwasur.full.0082,
+        81 full_moreheadwasur.full.0083,
+        82 hand_0ascertainment,
+        83 hand_moreheadwasur.hand.0084,
+        84 hand_moreheadwasur.hand.0085,
+        85 hand_moreheadwasur.hand.0086,
+        86 hand_moreheadwasur.hand.0087,
+        87 hand_moreheadwasur.hand.0088,
+        88 hand_moreheadwasur.hand.0089,
+        89 hand_moreheadwasur.hand.0090,
+        90 hear_0ascertainment,
+        91 hear_moreheadwasur.hear.0091,
+        92 hear_moreheadwasur.hear.0092,
+        93 hear_moreheadwasur.hear.0093,
+        94 hear_moreheadwasur.hear.0094,
+        95 knee_0ascertainment,
+        96 knee_moreheadwasur.knee.0095,
+        97 knee_moreheadwasur.knee.0096,
+        98 knee_moreheadwasur.knee.0097,
+        99 knee_moreheadwasur.knee.0098,
+        100 knee_moreheadwasur.knee.0099,
+        101 knee_moreheadwasur.knee.0100,
+        102 leaf_0ascertainment,
+        103 leaf_moreheadwasur.leaf.0101,
+        104 leaf_moreheadwasur.leaf.0102,
+        105 leaf_moreheadwasur.leaf.0103,
+        106 leaf_moreheadwasur.leaf.0104,
+        107 leaf_moreheadwasur.leaf.0105,
+        108 leaf_moreheadwasur.leaf.0106,
+        109 leaf_moreheadwasur.leaf.0107,
+        110 liver_0ascertainment,
+        111 liver_moreheadwasur.liver.0108,
+        112 liver_moreheadwasur.liver.0109,
+        113 liver_moreheadwasur.liver.0110,
+        114 liver_moreheadwasur.liver.0111,
+        115 louse_0ascertainment,
+        116 louse_moreheadwasur.louse.0112,
+        117 louse_moreheadwasur.louse.0113,
+        118 louse_moreheadwasur.louse.0114,
+        119 louse_moreheadwasur.louse.0115,
+        120 louse_moreheadwasur.louse.0116,
+        121 mountain_0ascertainment,
+        122 mountain_moreheadwasur.mountain.0117,
+        123 mountain_moreheadwasur.mountain.0118,
+        124 mountain_moreheadwasur.mountain.0119,
+        125 mountain_moreheadwasur.mountain.0120,
+        126 mountain_moreheadwasur.mountain.0121,
+        127 name_0ascertainment,
+        128 name_moreheadwasur.name.0122,
+        129 name_moreheadwasur.name.0123,
+        130 name_moreheadwasur.name.0124,
+        131 name_moreheadwasur.name.0125,
+        132 name_moreheadwasur.name.0126,
+        133 name_moreheadwasur.name.0127,
+        134 new_0ascertainment,
+        135 new_moreheadwasur.new.0128,
+        136 new_moreheadwasur.new.0129,
+        137 new_moreheadwasur.new.0130,
+        138 new_moreheadwasur.new.0131,
+        139 new_moreheadwasur.new.0132,
+        140 new_moreheadwasur.new.0133,
+        141 new_moreheadwasur.new.0134,
+        142 night_0ascertainment,
+        143 night_moreheadwasur.night.0135,
+        144 night_moreheadwasur.night.0136,
+        145 night_moreheadwasur.night.0137,
+        146 night_moreheadwasur.night.0138,
+        147 night_moreheadwasur.night.0139,
+        148 night_moreheadwasur.night.0140,
+        149 night_moreheadwasur.night.0141,
+        150 night_moreheadwasur.night.0142,
+        151 nose_0ascertainment,
+        152 nose_moreheadwasur.nose.0143,
+        153 nose_moreheadwasur.nose.0144,
+        154 nose_moreheadwasur.nose.0145,
+        155 nose_moreheadwasur.nose.0146,
+        156 nose_moreheadwasur.nose.0147,
+        157 nose_moreheadwasur.nose.0148,
+        158 nose_moreheadwasur.nose.0149,
+        159 one_0ascertainment,
+        160 one_moreheadwasur.one.0150,
+        161 one_moreheadwasur.one.0151,
+        162 path_0ascertainment,
+        163 path_moreheadwasur.path.0152,
+        164 path_moreheadwasur.path.0153,
+        165 path_moreheadwasur.path.0154,
+        166 path_moreheadwasur.path.0155,
+        167 path_moreheadwasur.path.0156,
+        168 path_moreheadwasur.path.0157,
+        169 person_0ascertainment,
+        170 person_moreheadwasur.person.0158,
+        171 person_moreheadwasur.person.0159,
+        172 person_moreheadwasur.person.0160,
+        173 person_moreheadwasur.person.0161,
+        174 person_moreheadwasur.person.0162,
+        175 pl_0ascertainment,
+        176 pl_moreheadwasur.1pl.0001,
+        177 pl_moreheadwasur.1pl.0002,
+        178 pl_moreheadwasur.1pl.0003,
+        179 pl_moreheadwasur.1pl.0004,
+        180 see_0ascertainment,
+        181 see_moreheadwasur.see.0163,
+        182 see_moreheadwasur.see.0164,
+        183 see_moreheadwasur.see.0165,
+        184 sg_0ascertainment,
+        185 sg_moreheadwasur.1sg.0005,
+        186 sg_moreheadwasur.1sg.0006,
+        187 sg_moreheadwasur.1sg.0007,
+        188 sg_moreheadwasur.1sg.0008,
+        189 sg_moreheadwasur.1sg.0009,
+        190 sg_moreheadwasur.1sg.0010,
+        191 sg_moreheadwasur.1sg.0011,
+        192 sg_moreheadwasur.2sg.0012,
+        193 sg_moreheadwasur.2sg.0013,
+        194 sg_moreheadwasur.2sg.0014,
+        195 skin_0ascertainment,
+        196 skin_moreheadwasur.skin.0166,
+        197 skin_moreheadwasur.skin.0167,
+        198 skin_moreheadwasur.skin.0168,
+        199 skin_moreheadwasur.skin.0169,
+        200 skin_moreheadwasur.skin.0170,
+        201 skin_moreheadwasur.skin.0171,
+        202 star_0ascertainment,
+        203 star_moreheadwasur.star.0172,
+        204 star_moreheadwasur.star.0173,
+        205 star_moreheadwasur.star.0174,
+        206 star_moreheadwasur.star.0175,
+        207 star_moreheadwasur.star.0176,
+        208 star_moreheadwasur.star.0177,
+        209 stone_0ascertainment,
+        210 stone_moreheadwasur.stone.0178,
+        211 stone_moreheadwasur.stone.0179,
+        212 stone_moreheadwasur.stone.0180,
+        213 stone_moreheadwasur.stone.0181,
+        214 stone_moreheadwasur.stone.0182,
+        215 stone_moreheadwasur.stone.0183,
+        216 stone_moreheadwasur.stone.0184,
+        217 stone_moreheadwasur.stone.0185,
+        218 stone_moreheadwasur.stone.0186,
+        219 stone_moreheadwasur.stone.0187,
+        220 sun_0ascertainment,
+        221 sun_moreheadwasur.sun.0188,
+        222 sun_moreheadwasur.sun.0189,
+        223 sun_moreheadwasur.sun.0190,
+        224 sun_moreheadwasur.sun.0191,
+        225 sun_moreheadwasur.sun.0192,
+        226 sun_moreheadwasur.sun.0193,
+        227 sun_moreheadwasur.sun.0194,
+        228 tongue_0ascertainment,
+        229 tongue_moreheadwasur.tongue.0195,
+        230 tongue_moreheadwasur.tongue.0196,
+        231 tongue_moreheadwasur.tongue.0197,
+        232 tongue_moreheadwasur.tongue.0198,
+        233 tongue_moreheadwasur.tongue.0199,
+        234 tooth_0ascertainment,
+        235 tooth_moreheadwasur.tooth.0200,
+        236 tooth_moreheadwasur.tooth.0201,
+        237 tooth_moreheadwasur.tooth.0202,
+        238 tree_0ascertainment,
+        239 tree_moreheadwasur.tree.0203,
+        240 tree_moreheadwasur.tree.0204,
+        241 tree_moreheadwasur.tree.0205,
+        242 two_0ascertainment,
+        243 two_moreheadwasur.two.0206,
+        244 two_moreheadwasur.two.0207,
+        245 two_moreheadwasur.two.0208,
+        246 two_moreheadwasur.two.0209,
+        247 two_moreheadwasur.two.0210,
+        248 two_moreheadwasur.two.0211,
+        249 water_0ascertainment,
+        250 water_moreheadwasur.water.0212,
+        251 water_moreheadwasur.water.0213,
+        252 water_moreheadwasur.water.0214,
+        253 water_moreheadwasur.water.0215,
+        254 water_moreheadwasur.water.0216,
+        255 water_moreheadwasur.water.0217,
+        256 water_moreheadwasur.water.0218
+;
+
+MATRIX
+jeisch     01000000010000010000101000001000000100000000010000100000001000001000001000000????01000000010000100000010000000????0100000?????010000001000000010000000010000000100100000010000010000???0100000010001000000100000010000000000100000001000001000100010000001000000
+komnzo     00100000001000001000000100000100000010000000001000010000000100000100000100000????0010000000100001000000100000010000010000100010010000001000000010000000010000001000100000010000010001000010000001000100000010000001000000100010000000100001000010001000000100000
+nambo      00010000000100000100000010000010000001000000000100001000001000001000000010000????000100000001000010000???????001000001000?????00010000???????0001000000001000000100010000?????000100???0001000000100010000??????0??????????0001000000010001000100000100000010000
+namo       0000100000010000010000000100000100000010000000010000010000100000100000000100010000???????0????0000100000100000001000001000100000001000???????0000100000000100001000001000?????0????0???0000100000100001000??????000100000000000100000001000100001000100000001000
+peremka    0000010000100000001000000100000010000001000000001000001000001000010000000010001000???????0????0000010000010000100000100000010000000100???????0010000000000010001000100000?????0????0???0000010000000100000??????000010000000000010000000101000010001000000100000
+rawa_biru  0000001000001000000100?????0??????00000010000????00000010010000000100000000100010000010000????0??????000001000????0000010?????000001000010000000001000000000100100000010000100001000???0000001001000000100001000000001000000000001000100001000100000010000000100
+sota       0000001000000100000100?????0??????00000010000????00000010000010000010000000100001000001000????0??????000000100????0000010?????000001000001000000000100000000010100000010000010001000???0000001001000000100000100000000100000000001000100001000100000001000000100
+tomer      0000000100000100000100?????0??????00000001000????00000001000010000010000000100001000000100????0??????000000010????0000010?????000001000000100000000010000000010100000001000001001000???0000001001000000010001000000000010000000000100100001000100000000100000010
+yanggandur 0000000100000100000100?????0??????00000001000????00000001000010000001000000100001000000100????0??????000000010????0000010?????000001000000010000000010000000010100000001000001001000???0000001001000000010001000000000001000000000100100001000100000000100000010
+yey        01000000000010000000101000101000010000000011010000100000001000101000001000000????0100000101001010000100100000000010100000000100100001010000010100000010100000001001000000100000100100110100000110101000000000011010000000010100000001000001010100010000001000001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-8;
+    charset bone = 9-14;
+    charset breast = 15-21;
+    charset come = 22-27;
+    charset die = 28-34;
+    charset dog = 35-44;
+    charset drink = 45-49;
+    charset ear = 50-57;
+    charset eye = 58-63;
+    charset fire = 64-69;
+    charset fish = 70-76;
+    charset full = 77-81;
+    charset hand = 82-89;
+    charset hear = 90-94;
+    charset knee = 95-101;
+    charset leaf = 102-109;
+    charset liver = 110-114;
+    charset louse = 115-120;
+    charset mountain = 121-126;
+    charset name = 127-133;
+    charset new = 134-141;
+    charset night = 142-150;
+    charset nose = 151-158;
+    charset one = 159-161;
+    charset path = 162-168;
+    charset person = 169-174;
+    charset pl = 175-179;
+    charset see = 180-183;
+    charset sg = 184-194;
+    charset skin = 195-201;
+    charset star = 202-208;
+    charset stone = 209-219;
+    charset sun = 220-227;
+    charset tongue = 228-233;
+    charset tooth = 234-237;
+    charset tree = 238-241;
+    charset two = 242-248;
+    charset water = 249-256;
+END;

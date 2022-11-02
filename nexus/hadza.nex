@@ -1,0 +1,139 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=85;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_hadza.blood.0060,
+        3 bone_0ascertainment,
+        4 bone_hadza.bone.0123,
+        5 breast_0ascertainment,
+        6 breast_hadza.breast.0002,
+        7 breast_hadza.breast.0374,
+        8 come_0ascertainment,
+        9 come_hadza.come.0001,
+        10 die_0ascertainment,
+        11 die_hadza.die.0001,
+        12 die_hadza.die.0056,
+        13 dog_0ascertainment,
+        14 dog_hadza.dog.0188,
+        15 dog_hadza.dog.0285,
+        16 drink_0ascertainment,
+        17 drink_hadza.drink.0001,
+        18 ear_0ascertainment,
+        19 ear_hadza.ear.0243,
+        20 eye_0ascertainment,
+        21 eye_hadza.eye.0372,
+        22 fire_0ascertainment,
+        23 fire_hadza.fire.0257,
+        24 fish_0ascertainment,
+        25 fish_hadza.fish.0001,
+        26 fish_hadza.fish.0151,
+        27 full_0ascertainment,
+        28 full_hadza.full.0459,
+        29 hand_0ascertainment,
+        30 hand_hadza.hand.0195,
+        31 hear_0ascertainment,
+        32 hear_hadza.hear.0497,
+        33 horn_0ascertainment,
+        34 horn_hadza.horn.0001,
+        35 knee_0ascertainment,
+        36 knee_hadza.knee.0003,
+        37 leaf_0ascertainment,
+        38 leaf_hadza.leaf.0046,
+        39 liver_0ascertainment,
+        40 liver_hadza.liver.0426,
+        41 louse_0ascertainment,
+        42 louse_hadza.louse.0364,
+        43 mountain_0ascertainment,
+        44 mountain_hadza.mountain.0389,
+        45 name_0ascertainment,
+        46 name_hadza.name.0232,
+        47 new_0ascertainment,
+        48 new_hadza.new.0239,
+        49 night_0ascertainment,
+        50 night_hadza.night.0002,
+        51 nose_0ascertainment,
+        52 nose_hadza.nose.0411,
+        53 one_0ascertainment,
+        54 one_hadza.one.0315,
+        55 path_0ascertainment,
+        56 path_hadza.path.0404,
+        57 person_0ascertainment,
+        58 person_hadza.person.0001,
+        59 pl_0ascertainment,
+        60 pl_hadza.1pl.0397,
+        61 see_0ascertainment,
+        62 see_hadza.see.0147,
+        63 see_hadza.see.0317,
+        64 sg_0ascertainment,
+        65 sg_hadza.1sg.0019,
+        66 sg_hadza.1sg.0049,
+        67 sg_hadza.2sg.0008,
+        68 skin_0ascertainment,
+        69 skin_hadza.skin.0429,
+        70 star_0ascertainment,
+        71 star_hadza.star.0262,
+        72 stone_0ascertainment,
+        73 stone_hadza.stone.0541,
+        74 sun_0ascertainment,
+        75 sun_hadza.sun.0071,
+        76 tongue_0ascertainment,
+        77 tongue_hadza.tongue.0156,
+        78 tooth_0ascertainment,
+        79 tooth_hadza.tooth.0003,
+        80 tree_0ascertainment,
+        81 tree_hadza.tree.0001,
+        82 two_0ascertainment,
+        83 two_hadza.two.0001,
+        84 water_0ascertainment,
+        85 water_hadza.water.0002
+;
+
+MATRIX
+hadza 0101011010110110101010101101010101010101010101010101010101010110111010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-9;
+    charset die = 10-12;
+    charset dog = 13-15;
+    charset drink = 16-17;
+    charset ear = 18-19;
+    charset eye = 20-21;
+    charset fire = 22-23;
+    charset fish = 24-26;
+    charset full = 27-28;
+    charset hand = 29-30;
+    charset hear = 31-32;
+    charset horn = 33-34;
+    charset knee = 35-36;
+    charset leaf = 37-38;
+    charset liver = 39-40;
+    charset louse = 41-42;
+    charset mountain = 43-44;
+    charset name = 45-46;
+    charset new = 47-48;
+    charset night = 49-50;
+    charset nose = 51-52;
+    charset one = 53-54;
+    charset path = 55-56;
+    charset person = 57-58;
+    charset pl = 59-60;
+    charset see = 61-63;
+    charset sg = 64-67;
+    charset skin = 68-69;
+    charset star = 70-71;
+    charset stone = 72-73;
+    charset sun = 74-75;
+    charset tongue = 76-77;
+    charset tooth = 78-79;
+    charset tree = 80-81;
+    charset two = 82-83;
+    charset water = 84-85;
+END;

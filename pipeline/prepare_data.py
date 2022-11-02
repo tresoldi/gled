@@ -22,7 +22,7 @@ BASE_PATH = Path(__file__).parent
 ROOT_PATH = BASE_PATH.parent
 
 # Set a flag for development, leading to faster execution
-DEVEL = True
+DEVEL = False
 
 # Glottolog family names (after normalization) to be dropped (note
 # that some have already been dropped in the source by Jaeger)

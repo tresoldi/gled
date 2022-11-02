@@ -1,0 +1,128 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=77;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kapauri.blood.0003,
+        3 bone_0ascertainment,
+        4 bone_kapauri.bone.0057,
+        5 breast_0ascertainment,
+        6 breast_kapauri.breast.0156,
+        7 come_0ascertainment,
+        8 come_kapauri.come.0402,
+        9 die_0ascertainment,
+        10 die_kapauri.die.0501,
+        11 dog_0ascertainment,
+        12 dog_kapauri.dog.0128,
+        13 drink_0ascertainment,
+        14 drink_kapauri.drink.0541,
+        15 ear_0ascertainment,
+        16 ear_kapauri.ear.0002,
+        17 eye_0ascertainment,
+        18 eye_kapauri.eye.0429,
+        19 fire_0ascertainment,
+        20 fire_kapauri.fire.0452,
+        21 fish_0ascertainment,
+        22 fish_kapauri.fish.0105,
+        23 hear_0ascertainment,
+        24 hear_kapauri.hear.0574,
+        25 hear_kapauri.hear.0575,
+        26 knee_0ascertainment,
+        27 knee_kapauri.knee.0295,
+        28 leaf_0ascertainment,
+        29 leaf_kapauri.leaf.0366,
+        30 liver_0ascertainment,
+        31 liver_kapauri.liver.0486,
+        32 louse_0ascertainment,
+        33 louse_kapauri.louse.0165,
+        34 louse_kapauri.louse.0431,
+        35 mountain_0ascertainment,
+        36 mountain_kapauri.mountain.0096,
+        37 mountain_kapauri.mountain.0457,
+        38 name_0ascertainment,
+        39 name_kapauri.name.0091,
+        40 new_0ascertainment,
+        41 new_kapauri.new.0417,
+        42 night_0ascertainment,
+        43 night_kapauri.night.0002,
+        44 nose_0ascertainment,
+        45 nose_kapauri.nose.0464,
+        46 one_0ascertainment,
+        47 one_kapauri.one.0023,
+        48 path_0ascertainment,
+        49 path_kapauri.path.0464,
+        50 person_0ascertainment,
+        51 person_kapauri.person.0567,
+        52 pl_0ascertainment,
+        53 pl_kapauri.1pl.0086,
+        54 pl_kapauri.1pl.0464,
+        55 see_0ascertainment,
+        56 see_kapauri.see.0380,
+        57 sg_0ascertainment,
+        58 sg_kapauri.1sg.0007,
+        59 sg_kapauri.2sg.0340,
+        60 skin_0ascertainment,
+        61 skin_kapauri.skin.0497,
+        62 star_0ascertainment,
+        63 star_kapauri.star.0481,
+        64 stone_0ascertainment,
+        65 stone_kapauri.stone.0631,
+        66 sun_0ascertainment,
+        67 sun_kapauri.sun.0287,
+        68 tongue_0ascertainment,
+        69 tongue_kapauri.tongue.0383,
+        70 tooth_0ascertainment,
+        71 tooth_kapauri.tooth.0032,
+        72 tree_0ascertainment,
+        73 tree_kapauri.tree.0155,
+        74 two_0ascertainment,
+        75 two_kapauri.two.0015,
+        76 water_0ascertainment,
+        77 water_kapauri.water.0009
+;
+
+MATRIX
+kapauri 01010101010101010101010110101010110110101010101010101101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset hear = 23-25;
+    charset knee = 26-27;
+    charset leaf = 28-29;
+    charset liver = 30-31;
+    charset louse = 32-34;
+    charset mountain = 35-37;
+    charset name = 38-39;
+    charset new = 40-41;
+    charset night = 42-43;
+    charset nose = 44-45;
+    charset one = 46-47;
+    charset path = 48-49;
+    charset person = 50-51;
+    charset pl = 52-54;
+    charset see = 55-56;
+    charset sg = 57-59;
+    charset skin = 60-61;
+    charset star = 62-63;
+    charset stone = 64-65;
+    charset sun = 66-67;
+    charset tongue = 68-69;
+    charset tooth = 70-71;
+    charset tree = 72-73;
+    charset two = 74-75;
+    charset water = 76-77;
+END;

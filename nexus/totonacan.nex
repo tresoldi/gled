@@ -1,496 +1,202 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=14 NCHAR=368;
+    DIMENSIONS NTAX=14 NCHAR=135;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
-        1 all_0ascertainment,
-        2 all_100,
-        3 all_101,
-        4 all_102,
-        5 all_103,
-        6 all_104,
-        7 all_105,
-        8 all_99,
-        9 ash_0ascertainment,
-        10 ash_106,
-        11 bark_0ascertainment,
-        12 bark_107,
-        13 bark_108,
-        14 bark_109,
-        15 belly_0ascertainment,
-        16 belly_110,
-        17 big_0ascertainment,
-        18 big_111,
-        19 big_112,
-        20 big_113,
-        21 big_114,
-        22 bird_0ascertainment,
-        23 bird_115,
-        24 bird_116,
-        25 bite_0ascertainment,
-        26 bite_117,
-        27 black_0ascertainment,
-        28 black_118,
-        29 black_119,
-        30 black_120,
-        31 blood_0ascertainment,
-        32 blood_3,
-        33 bone_0ascertainment,
-        34 bone_4,
-        35 breast_0ascertainment,
-        36 breast_5,
-        37 breast_6,
-        38 burn_0ascertainment,
-        39 burn_121,
-        40 burn_122,
-        41 burn_123,
-        42 burn_124,
-        43 claw_0ascertainment,
-        44 claw_125,
-        45 claw_126,
-        46 claw_127,
-        47 claw_128,
-        48 cloud_0ascertainment,
-        49 cloud_129,
-        50 cloud_130,
-        51 cloud_131,
-        52 cold_0ascertainment,
-        53 cold_132,
-        54 cold_133,
-        55 cold_134,
-        56 cold_135,
-        57 come_0ascertainment,
-        58 come_7,
-        59 come_8,
-        60 die_0ascertainment,
-        61 die_9,
-        62 dog_0ascertainment,
-        63 dog_10,
-        64 dog_11,
-        65 drink_0ascertainment,
-        66 drink_12,
-        67 drink_13,
-        68 drink_14,
-        69 drink_15,
-        70 dry_0ascertainment,
-        71 dry_136,
-        72 dry_137,
-        73 dry_138,
-        74 dry_139,
-        75 dry_140,
-        76 ear_0ascertainment,
-        77 ear_16,
-        78 ear_17,
-        79 ear_18,
-        80 earth_0ascertainment,
-        81 earth_141,
-        82 earth_142,
-        83 earth_143,
-        84 eat_0ascertainment,
-        85 eat_144,
-        86 eat_145,
-        87 egg_0ascertainment,
-        88 egg_146,
-        89 egg_147,
-        90 eye_0ascertainment,
-        91 eye_19,
-        92 eye_20,
-        93 eye_21,
-        94 fat_0ascertainment,
-        95 fat_168,
-        96 fat_169,
-        97 fat_170,
-        98 feather_0ascertainment,
-        99 feather_148,
-        100 feather_149,
-        101 feather_150,
-        102 feather_151,
-        103 fire_0ascertainment,
-        104 fire_22,
-        105 fire_23,
-        106 fire_24,
-        107 fish_0ascertainment,
-        108 fish_25,
-        109 fish_26,
-        110 fish_27,
-        111 fish_28,
-        112 flesh_0ascertainment,
-        113 flesh_152,
-        114 flesh_153,
-        115 flesh_154,
-        116 flesh_155,
-        117 fly_0ascertainment,
-        118 fly_156,
-        119 fly_157,
-        120 fly_158,
-        121 foot_0ascertainment,
-        122 foot_159,
-        123 foot_160,
-        124 foot_161,
-        125 full_0ascertainment,
-        126 full_29,
-        127 give_0ascertainment,
-        128 give_162,
-        129 give_163,
-        130 good_0ascertainment,
-        131 good_164,
-        132 good_165,
-        133 good_166,
-        134 good_167,
-        135 green_0ascertainment,
-        136 green_171,
-        137 green_172,
-        138 green_173,
-        139 hair_0ascertainment,
-        140 hair_174,
-        141 hair_175,
-        142 hair_176,
-        143 hair_177,
-        144 hand_0ascertainment,
-        145 hand_30,
-        146 head_0ascertainment,
-        147 head_178,
-        148 head_179,
-        149 head_180,
-        150 hear_0ascertainment,
-        151 hear_31,
-        152 heart_0ascertainment,
-        153 heart_181,
-        154 heart_182,
-        155 heart_183,
-        156 heart_184,
-        157 heart_185,
-        158 horn_0ascertainment,
-        159 horn_32,
-        160 hot_0ascertainment,
-        161 hot_186,
-        162 hot_187,
-        163 hot_188,
-        164 i_0ascertainment,
-        165 i_1,
-        166 i_2,
-        167 kill_0ascertainment,
-        168 kill_189,
-        169 knee_0ascertainment,
-        170 knee_33,
-        171 know_0ascertainment,
-        172 know_190,
-        173 leaf_0ascertainment,
-        174 leaf_34,
-        175 leaf_35,
-        176 leaf_36,
-        177 leaf_37,
-        178 leaf_38,
-        179 leaf_39,
-        180 lie_0ascertainment,
-        181 lie_191,
-        182 liver_0ascertainment,
-        183 liver_40,
-        184 liver_41,
-        185 long_0ascertainment,
-        186 long_192,
-        187 louse_0ascertainment,
-        188 louse_42,
-        189 man_0ascertainment,
-        190 man_193,
-        191 man_194,
-        192 man_195,
-        193 many_0ascertainment,
-        194 many_196,
-        195 many_197,
-        196 many_198,
-        197 moon_0ascertainment,
-        198 moon_199,
-        199 moon_200,
-        200 moon_201,
-        201 mountain_0ascertainment,
-        202 mountain_43,
-        203 mountain_44,
-        204 mountain_45,
-        205 mountain_46,
-        206 mountain_47,
-        207 mouth_0ascertainment,
-        208 mouth_202,
-        209 name_0ascertainment,
-        210 name_48,
-        211 name_49,
-        212 neck_0ascertainment,
-        213 neck_203,
-        214 new_0ascertainment,
-        215 new_50,
-        216 night_0ascertainment,
-        217 night_51,
-        218 nose_0ascertainment,
-        219 nose_52,
-        220 nose_53,
-        221 nose_54,
-        222 nose_55,
-        223 not_0ascertainment,
-        224 not_204,
-        225 not_205,
-        226 not_206,
-        227 not_207,
-        228 not_208,
-        229 one_0ascertainment,
-        230 one_56,
-        231 one_57,
-        232 one_58,
-        233 one_59,
-        234 one_60,
-        235 one_61,
-        236 path_0ascertainment,
-        237 path_62,
-        238 path_63,
-        239 path_64,
-        240 path_65,
-        241 path_66,
-        242 person_0ascertainment,
-        243 person_67,
-        244 person_68,
-        245 person_69,
-        246 person_70,
-        247 person_71,
-        248 raining_or_rain_0ascertainment,
-        249 raining_or_rain_209,
-        250 raining_or_rain_210,
-        251 raining_or_rain_211,
-        252 red_0ascertainment,
-        253 red_212,
-        254 red_213,
-        255 red_214,
-        256 red_215,
-        257 root_0ascertainment,
-        258 root_216,
-        259 root_217,
-        260 root_218,
-        261 root_219,
-        262 round_0ascertainment,
-        263 round_220,
-        264 round_221,
-        265 sand_0ascertainment,
-        266 sand_222,
-        267 sand_223,
-        268 say_0ascertainment,
-        269 say_224,
-        270 see_0ascertainment,
-        271 see_72,
-        272 see_73,
-        273 seed_0ascertainment,
-        274 seed_225,
-        275 seed_226,
-        276 sit_0ascertainment,
-        277 sit_227,
-        278 sit_228,
-        279 skin_0ascertainment,
-        280 skin_74,
-        281 skin_75,
-        282 skin_76,
-        283 skin_77,
-        284 skin_78,
-        285 sleep_0ascertainment,
-        286 sleep_229,
-        287 sleep_230,
-        288 small_0ascertainment,
-        289 small_231,
-        290 small_232,
-        291 small_233,
-        292 small_234,
-        293 small_235,
-        294 small_236,
-        295 smoke_0ascertainment,
-        296 smoke_237,
-        297 smoke_238,
-        298 stand_0ascertainment,
-        299 stand_239,
-        300 star_0ascertainment,
-        301 star_79,
-        302 stone_0ascertainment,
-        303 stone_80,
-        304 sun_0ascertainment,
-        305 sun_81,
-        306 sun_82,
-        307 swim_0ascertainment,
-        308 swim_240,
-        309 swim_241,
-        310 tail_0ascertainment,
-        311 tail_242,
-        312 tail_243,
-        313 tail_244,
-        314 that_0ascertainment,
-        315 that_245,
-        316 that_246,
-        317 that_247,
-        318 that_248,
-        319 this_0ascertainment,
-        320 this_249,
-        321 this_250,
-        322 this_251,
-        323 this_252,
-        324 this_253,
-        325 thou_0ascertainment,
-        326 thou_97,
-        327 thou_98,
-        328 tongue_0ascertainment,
-        329 tongue_83,
-        330 tooth_0ascertainment,
-        331 tooth_84,
-        332 tree_0ascertainment,
-        333 tree_85,
-        334 tree_86,
-        335 tree_87,
-        336 two_0ascertainment,
-        337 two_88,
-        338 two_89,
-        339 two_90,
-        340 two_91,
-        341 two_92,
-        342 two_93,
-        343 walk_0ascertainment,
-        344 walk_254,
-        345 walk_255,
-        346 water_0ascertainment,
-        347 water_94,
-        348 water_95,
-        349 we_0ascertainment,
-        350 we_96,
-        351 what_0ascertainment,
-        352 what_256,
-        353 what_257,
-        354 white_0ascertainment,
-        355 white_258,
-        356 white_259,
-        357 white_260,
-        358 who_0ascertainment,
-        359 who_261,
-        360 woman_0ascertainment,
-        361 woman_262,
-        362 woman_263,
-        363 woman_264,
-        364 woman_265,
-        365 yellow_0ascertainment,
-        366 yellow_266,
-        367 yellow_267,
-        368 yellow_268
+        1 blood_0ascertainment,
+        2 blood_totonacan.blood.0005,
+        3 bone_0ascertainment,
+        4 bone_totonacan.bone.0006,
+        5 breast_0ascertainment,
+        6 breast_totonacan.breast.0007,
+        7 breast_totonacan.breast.0008,
+        8 come_0ascertainment,
+        9 come_totonacan.come.0009,
+        10 come_totonacan.come.0010,
+        11 die_0ascertainment,
+        12 die_totonacan.die.0011,
+        13 dog_0ascertainment,
+        14 dog_totonacan.dog.0012,
+        15 dog_totonacan.dog.0013,
+        16 drink_0ascertainment,
+        17 drink_totonacan.drink.0014,
+        18 drink_totonacan.drink.0015,
+        19 drink_totonacan.drink.0016,
+        20 drink_totonacan.drink.0017,
+        21 ear_0ascertainment,
+        22 ear_totonacan.ear.0018,
+        23 ear_totonacan.ear.0019,
+        24 ear_totonacan.ear.0020,
+        25 eye_0ascertainment,
+        26 eye_totonacan.eye.0021,
+        27 eye_totonacan.eye.0022,
+        28 eye_totonacan.eye.0023,
+        29 fire_0ascertainment,
+        30 fire_totonacan.fire.0024,
+        31 fire_totonacan.fire.0025,
+        32 fire_totonacan.fire.0026,
+        33 fish_0ascertainment,
+        34 fish_totonacan.fish.0027,
+        35 fish_totonacan.fish.0028,
+        36 fish_totonacan.fish.0029,
+        37 fish_totonacan.fish.0030,
+        38 full_0ascertainment,
+        39 full_totonacan.full.0031,
+        40 hand_0ascertainment,
+        41 hand_totonacan.hand.0032,
+        42 hear_0ascertainment,
+        43 hear_totonacan.hear.0033,
+        44 horn_0ascertainment,
+        45 horn_totonacan.horn.0034,
+        46 knee_0ascertainment,
+        47 knee_totonacan.knee.0035,
+        48 leaf_0ascertainment,
+        49 leaf_totonacan.leaf.0036,
+        50 leaf_totonacan.leaf.0037,
+        51 leaf_totonacan.leaf.0038,
+        52 leaf_totonacan.leaf.0039,
+        53 leaf_totonacan.leaf.0040,
+        54 liver_0ascertainment,
+        55 liver_totonacan.liver.0041,
+        56 liver_totonacan.liver.0042,
+        57 louse_0ascertainment,
+        58 louse_totonacan.louse.0043,
+        59 mountain_0ascertainment,
+        60 mountain_totonacan.mountain.0044,
+        61 mountain_totonacan.mountain.0045,
+        62 mountain_totonacan.mountain.0046,
+        63 mountain_totonacan.mountain.0047,
+        64 mountain_totonacan.mountain.0048,
+        65 name_0ascertainment,
+        66 name_totonacan.name.0049,
+        67 name_totonacan.name.0050,
+        68 new_0ascertainment,
+        69 new_totonacan.new.0051,
+        70 night_0ascertainment,
+        71 night_totonacan.night.0052,
+        72 nose_0ascertainment,
+        73 nose_totonacan.nose.0053,
+        74 nose_totonacan.nose.0054,
+        75 nose_totonacan.nose.0055,
+        76 nose_totonacan.nose.0056,
+        77 one_0ascertainment,
+        78 one_totonacan.one.0057,
+        79 one_totonacan.one.0058,
+        80 one_totonacan.one.0059,
+        81 one_totonacan.one.0060,
+        82 one_totonacan.one.0061,
+        83 one_totonacan.one.0062,
+        84 one_totonacan.one.0063,
+        85 path_0ascertainment,
+        86 path_totonacan.path.0064,
+        87 path_totonacan.path.0065,
+        88 path_totonacan.path.0066,
+        89 path_totonacan.path.0067,
+        90 path_totonacan.path.0068,
+        91 person_0ascertainment,
+        92 person_totonacan.person.0069,
+        93 person_totonacan.person.0070,
+        94 person_totonacan.person.0071,
+        95 person_totonacan.person.0072,
+        96 person_totonacan.person.0073,
+        97 pl_0ascertainment,
+        98 pl_totonacan.1pl.0001,
+        99 see_0ascertainment,
+        100 see_totonacan.see.0074,
+        101 see_totonacan.see.0075,
+        102 sg_0ascertainment,
+        103 sg_totonacan.1sg.0002,
+        104 sg_totonacan.2sg.0003,
+        105 sg_totonacan.2sg.0004,
+        106 skin_0ascertainment,
+        107 skin_totonacan.skin.0076,
+        108 skin_totonacan.skin.0077,
+        109 skin_totonacan.skin.0078,
+        110 skin_totonacan.skin.0079,
+        111 star_0ascertainment,
+        112 star_totonacan.star.0080,
+        113 stone_0ascertainment,
+        114 stone_totonacan.stone.0081,
+        115 stone_totonacan.stone.0082,
+        116 sun_0ascertainment,
+        117 sun_totonacan.sun.0083,
+        118 sun_totonacan.sun.0084,
+        119 tongue_0ascertainment,
+        120 tongue_totonacan.tongue.0085,
+        121 tooth_0ascertainment,
+        122 tooth_totonacan.tooth.0086,
+        123 tooth_totonacan.tooth.0087,
+        124 tree_0ascertainment,
+        125 tree_totonacan.tree.0088,
+        126 tree_totonacan.tree.0089,
+        127 tree_totonacan.tree.0090,
+        128 two_0ascertainment,
+        129 two_totonacan.two.0091,
+        130 two_totonacan.two.0092,
+        131 two_totonacan.two.0093,
+        132 two_totonacan.two.0094,
+        133 water_0ascertainment,
+        134 water_totonacan.water.0095,
+        135 water_totonacan.water.0096
 ;
 
 MATRIX
-papantla_totonac      00000001010100010100001001010001010100100001000010001010010010100100001100001010100010010010001000100001000100001000010001000101001000010001000010100010100000?010001001010?0100000010100101010001000100010000010100101010100001000001000000100000100000100010000100001001001010010010010000010010000001001010101001001000100001000001001010100010000001001001010010001010000100
-tepehua_huehuetla     0???????0?0???0?0????0??0?0???01010100????0????0???0????01001001010000?????00100???0??0??00100???0????0010001000????0???0???010??0????0???0????010???010?????010???0010?010?00100000?0100?010???0???0???0010000?0100?0101001000?????00100000010000010000???0????0????0??0??0?0010??0??0010000??0??????0??0?01010010??0???0????0?????0010101001000100010??001010??0???0?0????0???
-tepehua_pisa_flores   0???????0?0???0?0????0??0?0???01010110????0????0???0????01001001001000?????00100???0??0??00100???0????0010000100????0???0???010??0????0???0????010???010?????010???0010?010?00100000?0100?010???0???0???0001000?0100?0101001000?????00010000010000010000???0????0????0??0??0?0010??0??0010000??0??????0??0?01010010??0???0????0?????0010101010001000000??001010??0???0?0????0???
-tepehua_tlachichilco  01000010010???01001000010100100101001001010010000100010001101001010000?????00100010001001001000100010000100001000100001000110100100100010000100010010010010000100100010101010010000010100101001101100010000010010100101010010000100000001000010000010000100001000010000100101001010010001000001001000000101010100100100100010000100000101010001001000000100101001001001001010010
-totonac_coatepec      00100000010???01010000100?010001010100????000100???010000100101001000001000010001000100??01000???0????01000000101010010000100?0100100000100????010100010100000101000100101010100000010100101010001000001010000010100101010100001000000000100001000?????01000????000100??001010100??01001000000101000000100101010100100100010000001000100?010100001000001001001010010001010000100
-totonac_coyutla       00100000010???01010000100101000101010010100????01000101001001010010000100000100010001001001000???01000010000001010000100000101010010000???01000010100010100000101000100101010001000010??010?01000100010001000001010010101010000100000100000010000010000010001000010000??01001010010010010000001010000001001010101001001000100000011001001010100001000001001001010010001010000100
-totonac_filomena_mata 0001000001010001010000100101000101010010000????01000100001001010010000100000100010001001001000001000100100000010100001000001010100001000010100001010001010000010100010010101000100001010010101000100010001000001010010101010000100000000001000100010000010001000010000??0010100101001000010000100010010100101010100??01000100000010001001010100010000001001001010010001010000100
-totonac_highland      00100000010010010100001001010001010100100000001010001010010010100100000100001000100010010010001000001001000000101000010001000101001000010000010010100010100000101000100101010100000010100101010001000100010000010100101010100001000001000000100000001000100010000100001000101010010010010000001010010001001010101001001000100000010001001010100010000001001001010010001010000100
-totonac_misantla      0000100001010001000100100?010001010100100000001000100001010010100001000010100100001010010000101000000100010000101000000101000?0100????010000001010001010001000?0001010010101000010001001010101000001010001000001001010101000100001000000001000010010000001000010000010??001010010010100000100010??????01001010101001000010001000000101001010100000100000100101010010001000100001
-totonac_olintla       0???????0?0???0?0????0??0?0???01010100????0????0???0????01001010010000?????01000???0??0??01000???0????0100000010????0???0???010??0????0???0????010???010?????010???0100?010?01000000?0100?010???0???0???0100000?0100?0101010000?????01000000000010100000???0????0????0??0??0?0100??0??0100000??0??????0??0?01010100??0???0????0?????0100101010000001000??010010??0???0?0????0???
-totonac_ozelonacaxtla 0???????0?0???0?0????0??0?0???01010100????0????0???0????01001010000010?????01000???0??0??01000???0????0100000010????0???0???010??0????0???0????010???010?????010???0100?010?01000000?0100?010???0???0???0100000?0100?0101010000?????01000000001000100100???0????0????0??0??0?0100??0??0100000??0??????0??0?01010100??0???0????0?????0100101010000000100??010010??0???0?0????0???
-totonac_tejeria       0???????0?0???0?0????0??0?0???01010100????0????0???0????01001010010000?????00100???0??0??01000???0????0001000010????0???0???010??0????0???0????010???010?????010???0100?010?00000100?0100?010???0???0???0000010?0100?0101000010?????00000010000010000010???0????0????0??0??0?0010??0??0000010??0??????0??0?01010100??0???0????0?????0100101010001000000??001010??0???0?0????0???
-totonac_upper_nexaca  00000100010001010000101001000101010100100000001010000010010010100100001000000100100010010010001000001000010000100001010001000101000010000100001010100010000100101000100101010000001010100101010001000010010000010100101010000100001000000010000100100000001010000100001000101001010010000001001000010001001010101001001000100000010001001010100010000001000101010000101010000100
-xicotepec_totonac     00000001010???01000010100101000101010010000000101000001001001010010000000100010010001001001000???0100000010000100001010001000101000001000100001010100010000010101000100101010000010010100101010001000010000001010100101010000100000100000010000100100000011000010100001000101001010001000001001000001001001010101001001000000100010001001010100010000001000101010010001010000100
+papantla_totonac      01010100100101001000010101000100010000101010?010100000100101000001001010100001000000010000010000010100110010000101001001010010001000010
+tepehua_huehuetla     010101001001001010000010001000100010001010101010010000100100100001001010010000100000001000001000010010101010000101000101001001001100001
+tepehua_pisa_flores   010101101001001001000010001000100001001010101010010000100100010001001010010000010000001000001000010010101010000101000101001010001000001
+tepehua_tlachichilco  010100101101001010000010001000100001001010101010010000100100001001001010010000001000001000001000010010101010000100100101001000100010001
+totonac_coatepec      01010100100101001000000101000100000010?0101010101000001001010000010010101000000001000010000?????01010011001000010100100?010010000010010
+totonac_coyutla       010101001001010010000001010001000000101010101010001000??0?01000001001010100001000000000100010000010100110010000101001001010010000010010
+totonac_filomena_mata 010101001001010010000001010001000000101010101010001000100101000001001010100000000010000010010000010010110001000101001001010010001000010
+totonac_highland      010101001001010010000001010001000000101010101010100000100101000001001010100001000000000100000100010100110010000101001001010010001000010
+totonac_misantla      01010100100101000010001000010001000010?01010?010000100010101000000101010001000000001000001010000010010110000100101001001001010000001001
+totonac_olintla       010101001001010010000001010001000000101010101010100000100101000001001010100001000000001000010000010100110010000101001001010010000010010
+totonac_ozelonacaxtla 010101001001010000010001010001000000101010101010100000100101000001001010100001000000000010010001010100110010000101001001010010001000010
+totonac_tejeria       010101001001010010000010010000010000101010101010100000100100000101001010000100000001001000000010010010110000010101001001010010001000001
+totonac_upper_nexaca  010101001001010010000010010000010000101010101010000010100101000001001010000100000001001000010000010010110000010101001001010010001000001
+xicotepec_totonac     010101001001010010000010010000010000101010101010100000100100000101001010000100000001001000010000010010110000010101001001010010001000001
 ;
 END;
 
 BEGIN ASSUMPTIONS;
-    charset all = 1-8;
-    charset ash = 9-10;
-    charset bark = 11-14;
-    charset belly = 15-16;
-    charset big = 17-21;
-    charset bird = 22-24;
-    charset bite = 25-26;
-    charset black = 27-30;
-    charset blood = 31-32;
-    charset bone = 33-34;
-    charset breast = 35-37;
-    charset burn = 38-42;
-    charset claw = 43-47;
-    charset cloud = 48-51;
-    charset cold = 52-56;
-    charset come = 57-59;
-    charset die = 60-61;
-    charset dog = 62-64;
-    charset drink = 65-69;
-    charset dry = 70-75;
-    charset ear = 76-79;
-    charset earth = 80-83;
-    charset eat = 84-86;
-    charset egg = 87-89;
-    charset eye = 90-93;
-    charset fat = 94-97;
-    charset feather = 98-102;
-    charset fire = 103-106;
-    charset fish = 107-111;
-    charset flesh = 112-116;
-    charset fly = 117-120;
-    charset foot = 121-124;
-    charset full = 125-126;
-    charset give = 127-129;
-    charset good = 130-134;
-    charset green = 135-138;
-    charset hair = 139-143;
-    charset hand = 144-145;
-    charset head = 146-149;
-    charset hear = 150-151;
-    charset heart = 152-157;
-    charset horn = 158-159;
-    charset hot = 160-163;
-    charset i = 164-166;
-    charset kill = 167-168;
-    charset knee = 169-170;
-    charset know = 171-172;
-    charset leaf = 173-179;
-    charset lie = 180-181;
-    charset liver = 182-184;
-    charset long = 185-186;
-    charset louse = 187-188;
-    charset man = 189-192;
-    charset many = 193-196;
-    charset moon = 197-200;
-    charset mountain = 201-206;
-    charset mouth = 207-208;
-    charset name = 209-211;
-    charset neck = 212-213;
-    charset new = 214-215;
-    charset night = 216-217;
-    charset nose = 218-222;
-    charset not = 223-228;
-    charset one = 229-235;
-    charset path = 236-241;
-    charset person = 242-247;
-    charset raining_or_rain = 248-251;
-    charset red = 252-256;
-    charset root = 257-261;
-    charset round = 262-264;
-    charset sand = 265-267;
-    charset say = 268-269;
-    charset see = 270-272;
-    charset seed = 273-275;
-    charset sit = 276-278;
-    charset skin = 279-284;
-    charset sleep = 285-287;
-    charset small = 288-294;
-    charset smoke = 295-297;
-    charset stand = 298-299;
-    charset star = 300-301;
-    charset stone = 302-303;
-    charset sun = 304-306;
-    charset swim = 307-309;
-    charset tail = 310-313;
-    charset that = 314-318;
-    charset this = 319-324;
-    charset thou = 325-327;
-    charset tongue = 328-329;
-    charset tooth = 330-331;
-    charset tree = 332-335;
-    charset two = 336-342;
-    charset walk = 343-345;
-    charset water = 346-348;
-    charset we = 349-350;
-    charset what = 351-353;
-    charset white = 354-357;
-    charset who = 358-359;
-    charset woman = 360-364;
-    charset yellow = 365-368;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-10;
+    charset die = 11-12;
+    charset dog = 13-15;
+    charset drink = 16-20;
+    charset ear = 21-24;
+    charset eye = 25-28;
+    charset fire = 29-32;
+    charset fish = 33-37;
+    charset full = 38-39;
+    charset hand = 40-41;
+    charset hear = 42-43;
+    charset horn = 44-45;
+    charset knee = 46-47;
+    charset leaf = 48-53;
+    charset liver = 54-56;
+    charset louse = 57-58;
+    charset mountain = 59-64;
+    charset name = 65-67;
+    charset new = 68-69;
+    charset night = 70-71;
+    charset nose = 72-76;
+    charset one = 77-84;
+    charset path = 85-90;
+    charset person = 91-96;
+    charset pl = 97-98;
+    charset see = 99-101;
+    charset sg = 102-105;
+    charset skin = 106-110;
+    charset star = 111-112;
+    charset stone = 113-115;
+    charset sun = 116-118;
+    charset tongue = 119-120;
+    charset tooth = 121-123;
+    charset tree = 124-127;
+    charset two = 128-132;
+    charset water = 133-135;
 END;

@@ -1,0 +1,137 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=83;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_puelche.blood.0327,
+        3 bone_0ascertainment,
+        4 bone_puelche.bone.0074,
+        5 breast_0ascertainment,
+        6 breast_puelche.breast.0012,
+        7 breast_puelche.breast.0371,
+        8 come_0ascertainment,
+        9 come_puelche.come.0138,
+        10 die_0ascertainment,
+        11 die_puelche.die.0422,
+        12 dog_0ascertainment,
+        13 dog_puelche.dog.0021,
+        14 dog_puelche.dog.0283,
+        15 drink_0ascertainment,
+        16 drink_puelche.drink.0458,
+        17 ear_0ascertainment,
+        18 ear_puelche.ear.0103,
+        19 eye_0ascertainment,
+        20 eye_puelche.eye.0368,
+        21 fire_0ascertainment,
+        22 fire_puelche.fire.0399,
+        23 fish_0ascertainment,
+        24 fish_puelche.fish.0008,
+        25 fish_puelche.fish.0380,
+        26 full_0ascertainment,
+        27 full_puelche.full.0455,
+        28 hand_0ascertainment,
+        29 hand_puelche.hand.0310,
+        30 hear_0ascertainment,
+        31 hear_puelche.hear.0492,
+        32 horn_0ascertainment,
+        33 horn_puelche.horn.0078,
+        34 knee_0ascertainment,
+        35 knee_puelche.knee.0335,
+        36 leaf_0ascertainment,
+        37 leaf_puelche.leaf.0328,
+        38 liver_0ascertainment,
+        39 liver_puelche.liver.0422,
+        40 louse_0ascertainment,
+        41 louse_puelche.louse.0258,
+        42 mountain_0ascertainment,
+        43 mountain_puelche.mountain.0014,
+        44 name_0ascertainment,
+        45 name_puelche.name.0014,
+        46 new_0ascertainment,
+        47 new_puelche.new.0358,
+        48 night_0ascertainment,
+        49 night_puelche.night.0142,
+        50 nose_0ascertainment,
+        51 nose_puelche.nose.0407,
+        52 one_0ascertainment,
+        53 one_puelche.one.0312,
+        54 path_0ascertainment,
+        55 path_puelche.path.0399,
+        56 person_0ascertainment,
+        57 person_puelche.person.0051,
+        58 pl_0ascertainment,
+        59 pl_puelche.1pl.0394,
+        60 see_0ascertainment,
+        61 see_puelche.see.0044,
+        62 sg_0ascertainment,
+        63 sg_puelche.1sg.0223,
+        64 sg_puelche.2sg.0284,
+        65 skin_0ascertainment,
+        66 skin_puelche.skin.0127,
+        67 star_0ascertainment,
+        68 star_puelche.star.0416,
+        69 stone_0ascertainment,
+        70 stone_puelche.stone.0515,
+        71 sun_0ascertainment,
+        72 sun_puelche.sun.0027,
+        73 sun_puelche.sun.0336,
+        74 tongue_0ascertainment,
+        75 tongue_puelche.tongue.0243,
+        76 tooth_0ascertainment,
+        77 tooth_puelche.tooth.0390,
+        78 tree_0ascertainment,
+        79 tree_puelche.tree.0022,
+        80 two_0ascertainment,
+        81 two_puelche.two.0292,
+        82 water_0ascertainment,
+        83 water_puelche.water.0116
+;
+
+MATRIX
+gununa_kune_2 01010110101011010101010110101010101010101010101010101010101010110101010110101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-9;
+    charset die = 10-11;
+    charset dog = 12-14;
+    charset drink = 15-16;
+    charset ear = 17-18;
+    charset eye = 19-20;
+    charset fire = 21-22;
+    charset fish = 23-25;
+    charset full = 26-27;
+    charset hand = 28-29;
+    charset hear = 30-31;
+    charset horn = 32-33;
+    charset knee = 34-35;
+    charset leaf = 36-37;
+    charset liver = 38-39;
+    charset louse = 40-41;
+    charset mountain = 42-43;
+    charset name = 44-45;
+    charset new = 46-47;
+    charset night = 48-49;
+    charset nose = 50-51;
+    charset one = 52-53;
+    charset path = 54-55;
+    charset person = 56-57;
+    charset pl = 58-59;
+    charset see = 60-61;
+    charset sg = 62-64;
+    charset skin = 65-66;
+    charset star = 67-68;
+    charset stone = 69-70;
+    charset sun = 71-73;
+    charset tongue = 74-75;
+    charset tooth = 76-77;
+    charset tree = 78-79;
+    charset two = 80-81;
+    charset water = 82-83;
+END;

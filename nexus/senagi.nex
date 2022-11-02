@@ -1,130 +1,126 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=3 NCHAR=115;
+    DIMENSIONS NTAX=3 NCHAR=111;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_5,
-        3 blood_6,
+        2 blood_senagi.blood.0008,
+        3 blood_senagi.blood.0009,
         4 bone_0ascertainment,
-        5 bone_7,
-        6 bone_8,
+        5 bone_senagi.bone.0010,
+        6 bone_senagi.bone.0011,
         7 breast_0ascertainment,
-        8 breast_9,
+        8 breast_senagi.breast.0012,
         9 come_0ascertainment,
-        10 come_10,
-        11 come_11,
-        12 come_12,
+        10 come_senagi.come.0013,
+        11 come_senagi.come.0014,
+        12 come_senagi.come.0015,
         13 die_0ascertainment,
-        14 die_13,
-        15 die_14,
+        14 die_senagi.die.0016,
+        15 die_senagi.die.0017,
         16 dog_0ascertainment,
-        17 dog_15,
+        17 dog_senagi.dog.0018,
         18 drink_0ascertainment,
-        19 drink_16,
+        19 drink_senagi.drink.0019,
         20 ear_0ascertainment,
-        21 ear_17,
+        21 ear_senagi.ear.0020,
         22 eye_0ascertainment,
-        23 eye_18,
-        24 eye_19,
-        25 fire_0ascertainment,
-        26 fire_20,
-        27 fish_0ascertainment,
-        28 fish_21,
-        29 fish_22,
-        30 fish_23,
-        31 hand_0ascertainment,
-        32 hand_24,
-        33 hand_25,
-        34 hand_26,
-        35 hear_0ascertainment,
-        36 hear_27,
-        37 hear_28,
-        38 horn_0ascertainment,
-        39 horn_29,
-        40 i_0ascertainment,
-        41 i_1,
-        42 i_2,
-        43 i_3,
-        44 i_4,
-        45 knee_0ascertainment,
-        46 knee_30,
-        47 knee_31,
-        48 leaf_0ascertainment,
-        49 leaf_32,
-        50 leaf_33,
-        51 leaf_34,
-        52 louse_0ascertainment,
-        53 louse_35,
-        54 louse_36,
-        55 mountain_0ascertainment,
-        56 mountain_37,
-        57 name_0ascertainment,
-        58 name_38,
-        59 name_39,
-        60 new_0ascertainment,
-        61 new_40,
-        62 new_41,
-        63 night_0ascertainment,
-        64 night_42,
-        65 night_43,
-        66 nose_0ascertainment,
-        67 nose_44,
-        68 nose_45,
-        69 one_0ascertainment,
-        70 one_46,
-        71 one_47,
-        72 one_48,
-        73 path_0ascertainment,
-        74 path_49,
-        75 path_50,
-        76 person_0ascertainment,
-        77 person_51,
-        78 person_52,
-        79 person_53,
-        80 see_0ascertainment,
-        81 see_54,
-        82 see_55,
-        83 skin_0ascertainment,
-        84 skin_56,
-        85 skin_57,
-        86 skin_58,
-        87 star_0ascertainment,
-        88 star_59,
-        89 star_60,
-        90 star_61,
-        91 stone_0ascertainment,
-        92 stone_62,
-        93 sun_0ascertainment,
-        94 sun_63,
-        95 sun_64,
-        96 thou_0ascertainment,
-        97 thou_77,
-        98 tongue_0ascertainment,
-        99 tongue_65,
-        100 tongue_66,
-        101 tooth_0ascertainment,
-        102 tooth_67,
-        103 tooth_68,
-        104 tooth_69,
-        105 tree_0ascertainment,
-        106 tree_70,
-        107 tree_71,
-        108 two_0ascertainment,
-        109 two_72,
-        110 water_0ascertainment,
-        111 water_73,
-        112 water_74,
-        113 we_0ascertainment,
-        114 we_75,
-        115 we_76
+        23 eye_senagi.eye.0021,
+        24 fire_0ascertainment,
+        25 fire_senagi.fire.0022,
+        26 fish_0ascertainment,
+        27 fish_senagi.fish.0023,
+        28 fish_senagi.fish.0024,
+        29 fish_senagi.fish.0025,
+        30 hand_0ascertainment,
+        31 hand_senagi.hand.0026,
+        32 hand_senagi.hand.0027,
+        33 hand_senagi.hand.0028,
+        34 hear_0ascertainment,
+        35 hear_senagi.hear.0029,
+        36 horn_0ascertainment,
+        37 horn_senagi.horn.0030,
+        38 knee_0ascertainment,
+        39 knee_senagi.knee.0031,
+        40 knee_senagi.knee.0032,
+        41 leaf_0ascertainment,
+        42 leaf_senagi.leaf.0033,
+        43 leaf_senagi.leaf.0034,
+        44 leaf_senagi.leaf.0035,
+        45 louse_0ascertainment,
+        46 louse_senagi.louse.0036,
+        47 louse_senagi.louse.0037,
+        48 mountain_0ascertainment,
+        49 mountain_senagi.mountain.0038,
+        50 name_0ascertainment,
+        51 name_senagi.name.0039,
+        52 name_senagi.name.0040,
+        53 new_0ascertainment,
+        54 new_senagi.new.0041,
+        55 night_0ascertainment,
+        56 night_senagi.night.0042,
+        57 night_senagi.night.0043,
+        58 nose_0ascertainment,
+        59 nose_senagi.nose.0044,
+        60 nose_senagi.nose.0045,
+        61 one_0ascertainment,
+        62 one_senagi.one.0046,
+        63 one_senagi.one.0047,
+        64 one_senagi.one.0048,
+        65 path_0ascertainment,
+        66 path_senagi.path.0049,
+        67 path_senagi.path.0050,
+        68 person_0ascertainment,
+        69 person_senagi.person.0051,
+        70 person_senagi.person.0052,
+        71 person_senagi.person.0053,
+        72 pl_0ascertainment,
+        73 pl_senagi.1pl.0001,
+        74 pl_senagi.1pl.0002,
+        75 see_0ascertainment,
+        76 see_senagi.see.0054,
+        77 see_senagi.see.0055,
+        78 sg_0ascertainment,
+        79 sg_senagi.1sg.0003,
+        80 sg_senagi.1sg.0004,
+        81 sg_senagi.1sg.0005,
+        82 sg_senagi.1sg.0006,
+        83 sg_senagi.2sg.0007,
+        84 skin_0ascertainment,
+        85 skin_senagi.skin.0056,
+        86 skin_senagi.skin.0057,
+        87 skin_senagi.skin.0058,
+        88 star_0ascertainment,
+        89 star_senagi.star.0059,
+        90 star_senagi.star.0060,
+        91 star_senagi.star.0061,
+        92 stone_0ascertainment,
+        93 stone_senagi.stone.0062,
+        94 sun_0ascertainment,
+        95 sun_senagi.sun.0063,
+        96 sun_senagi.sun.0064,
+        97 tongue_0ascertainment,
+        98 tongue_senagi.tongue.0065,
+        99 tongue_senagi.tongue.0066,
+        100 tooth_0ascertainment,
+        101 tooth_senagi.tooth.0067,
+        102 tooth_senagi.tooth.0068,
+        103 tooth_senagi.tooth.0069,
+        104 tree_0ascertainment,
+        105 tree_senagi.tree.0070,
+        106 tree_senagi.tree.0071,
+        107 two_0ascertainment,
+        108 two_senagi.two.0072,
+        109 water_0ascertainment,
+        110 water_senagi.water.0073,
+        111 water_senagi.water.0074
 ;
 
 MATRIX
-amgotro  010010010100010010?0101001010001000100?010010100100010010??01001001001010100100010010001000101001010010001001010010
-angor    0010100100100??01010?001010010001000101001000??00100100?0100010??0??0???0010010001001000100100101010001001001010001
-mongowar 0010010100010010?0?0101001000100010010?0001000100010010?0010??00100100100??000101000010001010100?0010001001010010??
+amgotro  010010010100010010?01010101000100010?0100100010010??01010010010101001000100100100110100010001010010010001001010
+angor    0010100100100??01010?01010010001001010??00100100?010010??0??0???00100100010010010010010001001001010001001001010
+mongowar 0010010100010010?0?01010100010001010?00100010010?0010?00100100100??00010??0100001000001000101010001000100101001
 ;
 END;
 
@@ -137,34 +133,33 @@ BEGIN ASSUMPTIONS;
     charset dog = 16-17;
     charset drink = 18-19;
     charset ear = 20-21;
-    charset eye = 22-24;
-    charset fire = 25-26;
-    charset fish = 27-30;
-    charset hand = 31-34;
-    charset hear = 35-37;
-    charset horn = 38-39;
-    charset i = 40-44;
-    charset knee = 45-47;
-    charset leaf = 48-51;
-    charset louse = 52-54;
-    charset mountain = 55-56;
-    charset name = 57-59;
-    charset new = 60-62;
-    charset night = 63-65;
-    charset nose = 66-68;
-    charset one = 69-72;
-    charset path = 73-75;
-    charset person = 76-79;
-    charset see = 80-82;
-    charset skin = 83-86;
-    charset star = 87-90;
-    charset stone = 91-92;
-    charset sun = 93-95;
-    charset thou = 96-97;
-    charset tongue = 98-100;
-    charset tooth = 101-104;
-    charset tree = 105-107;
-    charset two = 108-109;
-    charset water = 110-112;
-    charset we = 113-115;
+    charset eye = 22-23;
+    charset fire = 24-25;
+    charset fish = 26-29;
+    charset hand = 30-33;
+    charset hear = 34-35;
+    charset horn = 36-37;
+    charset knee = 38-40;
+    charset leaf = 41-44;
+    charset louse = 45-47;
+    charset mountain = 48-49;
+    charset name = 50-52;
+    charset new = 53-54;
+    charset night = 55-57;
+    charset nose = 58-60;
+    charset one = 61-64;
+    charset path = 65-67;
+    charset person = 68-71;
+    charset pl = 72-74;
+    charset see = 75-77;
+    charset sg = 78-83;
+    charset skin = 84-87;
+    charset star = 88-91;
+    charset stone = 92-93;
+    charset sun = 94-96;
+    charset tongue = 97-99;
+    charset tooth = 100-103;
+    charset tree = 104-106;
+    charset two = 107-108;
+    charset water = 109-111;
 END;

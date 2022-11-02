@@ -1,0 +1,106 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=61;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_dosoturumsa.blood.0047,
+        3 bone_0ascertainment,
+        4 bone_dosoturumsa.bone.0001,
+        5 breast_0ascertainment,
+        6 breast_dosoturumsa.breast.0153,
+        7 come_0ascertainment,
+        8 come_dosoturumsa.come.0139,
+        9 dog_0ascertainment,
+        10 dog_dosoturumsa.dog.0184,
+        11 ear_0ascertainment,
+        12 ear_dosoturumsa.ear.0213,
+        13 eye_0ascertainment,
+        14 eye_dosoturumsa.eye.0310,
+        15 fire_0ascertainment,
+        16 fire_dosoturumsa.fire.0353,
+        17 fish_0ascertainment,
+        18 fish_dosoturumsa.fish.0098,
+        19 hand_0ascertainment,
+        20 hand_dosoturumsa.hand.0036,
+        21 hear_0ascertainment,
+        22 hear_dosoturumsa.hear.0150,
+        23 knee_0ascertainment,
+        24 knee_dosoturumsa.knee.0294,
+        25 leaf_0ascertainment,
+        26 leaf_dosoturumsa.leaf.0290,
+        27 louse_0ascertainment,
+        28 louse_dosoturumsa.louse.0306,
+        29 mountain_0ascertainment,
+        30 mountain_dosoturumsa.mountain.0335,
+        31 name_0ascertainment,
+        32 name_dosoturumsa.name.0053,
+        33 nose_0ascertainment,
+        34 nose_dosoturumsa.nose.0002,
+        35 path_0ascertainment,
+        36 path_dosoturumsa.path.0064,
+        37 person_0ascertainment,
+        38 person_dosoturumsa.person.0412,
+        39 pl_0ascertainment,
+        40 pl_dosoturumsa.1pl.0018,
+        41 see_0ascertainment,
+        42 see_dosoturumsa.see.0001,
+        43 sg_0ascertainment,
+        44 sg_dosoturumsa.1sg.0019,
+        45 sg_dosoturumsa.2sg.0013,
+        46 skin_0ascertainment,
+        47 skin_dosoturumsa.skin.0006,
+        48 star_0ascertainment,
+        49 star_dosoturumsa.star.0072,
+        50 stone_0ascertainment,
+        51 stone_dosoturumsa.stone.0439,
+        52 sun_0ascertainment,
+        53 sun_dosoturumsa.sun.0298,
+        54 tongue_0ascertainment,
+        55 tongue_dosoturumsa.tongue.0088,
+        56 tooth_0ascertainment,
+        57 tooth_dosoturumsa.tooth.0337,
+        58 tree_0ascertainment,
+        59 tree_dosoturumsa.tree.0317,
+        60 water_0ascertainment,
+        61 water_dosoturumsa.water.0016
+;
+
+MATRIX
+doso 0101010101010101010101010101010101010101010110101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset dog = 9-10;
+    charset ear = 11-12;
+    charset eye = 13-14;
+    charset fire = 15-16;
+    charset fish = 17-18;
+    charset hand = 19-20;
+    charset hear = 21-22;
+    charset knee = 23-24;
+    charset leaf = 25-26;
+    charset louse = 27-28;
+    charset mountain = 29-30;
+    charset name = 31-32;
+    charset nose = 33-34;
+    charset path = 35-36;
+    charset person = 37-38;
+    charset pl = 39-40;
+    charset see = 41-42;
+    charset sg = 43-45;
+    charset skin = 46-47;
+    charset star = 48-49;
+    charset stone = 50-51;
+    charset sun = 52-53;
+    charset tongue = 54-55;
+    charset tooth = 56-57;
+    charset tree = 58-59;
+    charset water = 60-61;
+END;

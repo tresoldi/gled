@@ -1,226 +1,233 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=6 NCHAR=208;
+    DIMENSIONS NTAX=8 NCHAR=213;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_4,
-        3 blood_5,
-        4 blood_6,
+        2 blood_matacoan.blood.0011,
+        3 blood_matacoan.blood.0012,
+        4 blood_matacoan.blood.0013,
         5 bone_0ascertainment,
-        6 bone_10,
-        7 bone_7,
-        8 bone_8,
-        9 bone_9,
+        6 bone_matacoan.bone.0014,
+        7 bone_matacoan.bone.0015,
+        8 bone_matacoan.bone.0016,
+        9 bone_matacoan.bone.0017,
         10 breast_0ascertainment,
-        11 breast_11,
-        12 breast_12,
-        13 breast_13,
-        14 breast_14,
-        15 breast_15,
+        11 breast_matacoan.breast.0018,
+        12 breast_matacoan.breast.0019,
+        13 breast_matacoan.breast.0020,
+        14 breast_matacoan.breast.0021,
+        15 breast_matacoan.breast.0022,
         16 come_0ascertainment,
-        17 come_16,
-        18 come_17,
-        19 come_18,
-        20 come_19,
-        21 come_20,
-        22 die_0ascertainment,
-        23 die_21,
-        24 die_22,
-        25 die_23,
-        26 die_24,
-        27 die_25,
-        28 die_26,
-        29 die_27,
-        30 dog_0ascertainment,
-        31 dog_28,
-        32 dog_29,
-        33 dog_30,
-        34 dog_31,
-        35 drink_0ascertainment,
-        36 drink_32,
-        37 drink_33,
-        38 drink_34,
-        39 drink_35,
+        17 come_matacoan.come.0023,
+        18 come_matacoan.come.0024,
+        19 come_matacoan.come.0025,
+        20 come_matacoan.come.0026,
+        21 come_matacoan.come.0027,
+        22 come_matacoan.come.0028,
+        23 die_0ascertainment,
+        24 die_matacoan.die.0029,
+        25 die_matacoan.die.0030,
+        26 die_matacoan.die.0031,
+        27 die_matacoan.die.0032,
+        28 die_matacoan.die.0033,
+        29 die_matacoan.die.0034,
+        30 die_matacoan.die.0035,
+        31 dog_0ascertainment,
+        32 dog_matacoan.dog.0036,
+        33 dog_matacoan.dog.0037,
+        34 dog_matacoan.dog.0038,
+        35 dog_matacoan.dog.0039,
+        36 drink_0ascertainment,
+        37 drink_matacoan.drink.0040,
+        38 drink_matacoan.drink.0041,
+        39 drink_matacoan.drink.0042,
         40 ear_0ascertainment,
-        41 ear_36,
-        42 ear_37,
-        43 ear_38,
+        41 ear_matacoan.ear.0043,
+        42 ear_matacoan.ear.0044,
+        43 ear_matacoan.ear.0045,
         44 eye_0ascertainment,
-        45 eye_39,
-        46 eye_40,
-        47 eye_41,
-        48 eye_42,
-        49 eye_43,
-        50 eye_44,
-        51 fire_0ascertainment,
-        52 fire_45,
-        53 fire_46,
-        54 fire_47,
-        55 fish_0ascertainment,
-        56 fish_48,
-        57 fish_49,
-        58 fish_50,
-        59 fish_51,
-        60 fish_52,
-        61 full_0ascertainment,
-        62 full_53,
-        63 full_54,
-        64 full_55,
-        65 full_56,
-        66 hand_0ascertainment,
-        67 hand_57,
-        68 hand_58,
-        69 hand_59,
-        70 hand_60,
-        71 hand_61,
-        72 hand_62,
-        73 hand_63,
-        74 hand_64,
-        75 hear_0ascertainment,
-        76 hear_65,
-        77 hear_66,
-        78 hear_67,
-        79 hear_68,
-        80 hear_69,
-        81 horn_0ascertainment,
-        82 horn_70,
-        83 horn_71,
-        84 horn_72,
-        85 horn_73,
-        86 i_0ascertainment,
-        87 i_1,
-        88 i_2,
-        89 i_3,
-        90 knee_0ascertainment,
-        91 knee_74,
-        92 knee_75,
-        93 knee_76,
-        94 knee_77,
-        95 knee_78,
-        96 leaf_0ascertainment,
-        97 leaf_79,
-        98 leaf_80,
-        99 leaf_81,
-        100 liver_0ascertainment,
-        101 liver_82,
-        102 liver_83,
-        103 liver_84,
-        104 liver_85,
-        105 liver_86,
-        106 louse_0ascertainment,
-        107 louse_87,
-        108 louse_88,
-        109 louse_89,
-        110 louse_90,
-        111 mountain_0ascertainment,
-        112 mountain_91,
-        113 mountain_92,
-        114 mountain_93,
-        115 mountain_94,
-        116 mountain_95,
-        117 name_0ascertainment,
-        118 name_96,
-        119 name_97,
-        120 name_98,
-        121 name_99,
-        122 new_0ascertainment,
-        123 new_100,
-        124 new_101,
-        125 new_102,
-        126 night_0ascertainment,
-        127 night_103,
-        128 night_104,
-        129 night_105,
-        130 night_106,
-        131 night_107,
-        132 night_108,
-        133 night_109,
-        134 nose_0ascertainment,
-        135 nose_110,
-        136 nose_111,
-        137 one_0ascertainment,
-        138 one_112,
-        139 one_113,
-        140 one_114,
-        141 one_115,
-        142 one_116,
-        143 one_117,
-        144 path_0ascertainment,
-        145 path_118,
-        146 path_119,
+        45 eye_matacoan.eye.0046,
+        46 eye_matacoan.eye.0047,
+        47 eye_matacoan.eye.0048,
+        48 eye_matacoan.eye.0049,
+        49 fire_0ascertainment,
+        50 fire_matacoan.fire.0050,
+        51 fire_matacoan.fire.0051,
+        52 fire_matacoan.fire.0052,
+        53 fish_0ascertainment,
+        54 fish_matacoan.fish.0053,
+        55 fish_matacoan.fish.0054,
+        56 fish_matacoan.fish.0055,
+        57 fish_matacoan.fish.0056,
+        58 fish_matacoan.fish.0057,
+        59 full_0ascertainment,
+        60 full_matacoan.full.0058,
+        61 full_matacoan.full.0059,
+        62 full_matacoan.full.0060,
+        63 full_matacoan.full.0061,
+        64 hand_0ascertainment,
+        65 hand_matacoan.hand.0062,
+        66 hand_matacoan.hand.0063,
+        67 hand_matacoan.hand.0064,
+        68 hand_matacoan.hand.0065,
+        69 hand_matacoan.hand.0066,
+        70 hand_matacoan.hand.0067,
+        71 hear_0ascertainment,
+        72 hear_matacoan.hear.0068,
+        73 hear_matacoan.hear.0069,
+        74 hear_matacoan.hear.0070,
+        75 hear_matacoan.hear.0071,
+        76 hear_matacoan.hear.0072,
+        77 hear_matacoan.hear.0073,
+        78 hear_matacoan.hear.0074,
+        79 horn_0ascertainment,
+        80 horn_matacoan.horn.0075,
+        81 horn_matacoan.horn.0076,
+        82 horn_matacoan.horn.0077,
+        83 horn_matacoan.horn.0078,
+        84 horn_matacoan.horn.0079,
+        85 horn_matacoan.horn.0080,
+        86 knee_0ascertainment,
+        87 knee_matacoan.knee.0081,
+        88 knee_matacoan.knee.0082,
+        89 knee_matacoan.knee.0083,
+        90 knee_matacoan.knee.0084,
+        91 knee_matacoan.knee.0085,
+        92 knee_matacoan.knee.0086,
+        93 leaf_0ascertainment,
+        94 leaf_matacoan.leaf.0087,
+        95 leaf_matacoan.leaf.0088,
+        96 leaf_matacoan.leaf.0089,
+        97 liver_0ascertainment,
+        98 liver_matacoan.liver.0090,
+        99 liver_matacoan.liver.0091,
+        100 liver_matacoan.liver.0092,
+        101 liver_matacoan.liver.0093,
+        102 liver_matacoan.liver.0094,
+        103 louse_0ascertainment,
+        104 louse_matacoan.louse.0095,
+        105 louse_matacoan.louse.0096,
+        106 louse_matacoan.louse.0097,
+        107 louse_matacoan.louse.0098,
+        108 louse_matacoan.louse.0099,
+        109 louse_matacoan.louse.0100,
+        110 mountain_0ascertainment,
+        111 mountain_matacoan.mountain.0101,
+        112 mountain_matacoan.mountain.0102,
+        113 mountain_matacoan.mountain.0103,
+        114 mountain_matacoan.mountain.0104,
+        115 name_0ascertainment,
+        116 name_matacoan.name.0105,
+        117 name_matacoan.name.0106,
+        118 name_matacoan.name.0107,
+        119 name_matacoan.name.0108,
+        120 name_matacoan.name.0109,
+        121 new_0ascertainment,
+        122 new_matacoan.new.0110,
+        123 new_matacoan.new.0111,
+        124 night_0ascertainment,
+        125 night_matacoan.night.0112,
+        126 night_matacoan.night.0113,
+        127 night_matacoan.night.0114,
+        128 night_matacoan.night.0115,
+        129 night_matacoan.night.0116,
+        130 night_matacoan.night.0117,
+        131 nose_0ascertainment,
+        132 nose_matacoan.nose.0118,
+        133 nose_matacoan.nose.0119,
+        134 one_0ascertainment,
+        135 one_matacoan.one.0120,
+        136 one_matacoan.one.0121,
+        137 one_matacoan.one.0122,
+        138 one_matacoan.one.0123,
+        139 one_matacoan.one.0124,
+        140 one_matacoan.one.0125,
+        141 one_matacoan.one.0126,
+        142 one_matacoan.one.0127,
+        143 path_0ascertainment,
+        144 path_matacoan.path.0128,
+        145 path_matacoan.path.0129,
+        146 path_matacoan.path.0130,
         147 person_0ascertainment,
-        148 person_120,
-        149 person_121,
-        150 person_122,
-        151 person_123,
-        152 see_0ascertainment,
-        153 see_124,
-        154 see_125,
-        155 skin_0ascertainment,
-        156 skin_126,
-        157 skin_127,
-        158 skin_128,
-        159 skin_129,
-        160 star_0ascertainment,
-        161 star_130,
-        162 star_131,
-        163 stone_0ascertainment,
-        164 stone_132,
-        165 stone_133,
-        166 stone_134,
-        167 stone_135,
-        168 stone_136,
-        169 sun_0ascertainment,
-        170 sun_137,
-        171 sun_138,
-        172 sun_139,
-        173 thou_0ascertainment,
-        174 thou_165,
-        175 thou_166,
-        176 thou_167,
-        177 thou_168,
-        178 tongue_0ascertainment,
-        179 tongue_140,
-        180 tongue_141,
-        181 tongue_142,
-        182 tongue_143,
-        183 tongue_144,
-        184 tooth_0ascertainment,
-        185 tooth_145,
-        186 tooth_146,
-        187 tooth_147,
-        188 tooth_148,
-        189 tooth_149,
-        190 tooth_150,
-        191 tree_0ascertainment,
-        192 tree_151,
-        193 tree_152,
-        194 tree_153,
-        195 two_0ascertainment,
-        196 two_154,
-        197 two_155,
-        198 two_156,
-        199 two_157,
-        200 water_0ascertainment,
-        201 water_158,
-        202 water_159,
-        203 water_160,
-        204 water_161,
-        205 we_0ascertainment,
-        206 we_162,
-        207 we_163,
-        208 we_164
+        148 person_matacoan.person.0131,
+        149 person_matacoan.person.0132,
+        150 person_matacoan.person.0133,
+        151 person_matacoan.person.0134,
+        152 person_matacoan.person.0135,
+        153 person_matacoan.person.0136,
+        154 pl_0ascertainment,
+        155 pl_matacoan.1pl.0001,
+        156 pl_matacoan.1pl.0002,
+        157 pl_matacoan.1pl.0003,
+        158 pl_matacoan.1pl.0004,
+        159 see_0ascertainment,
+        160 see_matacoan.see.0137,
+        161 see_matacoan.see.0138,
+        162 sg_0ascertainment,
+        163 sg_matacoan.1sg.0005,
+        164 sg_matacoan.1sg.0006,
+        165 sg_matacoan.2sg.0007,
+        166 sg_matacoan.2sg.0008,
+        167 sg_matacoan.2sg.0009,
+        168 sg_matacoan.2sg.0010,
+        169 skin_0ascertainment,
+        170 skin_matacoan.skin.0139,
+        171 skin_matacoan.skin.0140,
+        172 skin_matacoan.skin.0141,
+        173 skin_matacoan.skin.0142,
+        174 star_0ascertainment,
+        175 star_matacoan.star.0143,
+        176 star_matacoan.star.0144,
+        177 stone_0ascertainment,
+        178 stone_matacoan.stone.0145,
+        179 stone_matacoan.stone.0146,
+        180 stone_matacoan.stone.0147,
+        181 stone_matacoan.stone.0148,
+        182 stone_matacoan.stone.0149,
+        183 sun_0ascertainment,
+        184 sun_matacoan.sun.0150,
+        185 sun_matacoan.sun.0151,
+        186 sun_matacoan.sun.0152,
+        187 sun_matacoan.sun.0153,
+        188 tongue_0ascertainment,
+        189 tongue_matacoan.tongue.0154,
+        190 tongue_matacoan.tongue.0155,
+        191 tongue_matacoan.tongue.0156,
+        192 tongue_matacoan.tongue.0157,
+        193 tongue_matacoan.tongue.0158,
+        194 tooth_0ascertainment,
+        195 tooth_matacoan.tooth.0159,
+        196 tooth_matacoan.tooth.0160,
+        197 tooth_matacoan.tooth.0161,
+        198 tooth_matacoan.tooth.0162,
+        199 tree_0ascertainment,
+        200 tree_matacoan.tree.0163,
+        201 tree_matacoan.tree.0164,
+        202 tree_matacoan.tree.0165,
+        203 two_0ascertainment,
+        204 two_matacoan.two.0166,
+        205 two_matacoan.two.0167,
+        206 two_matacoan.two.0168,
+        207 two_matacoan.two.0169,
+        208 water_0ascertainment,
+        209 water_matacoan.water.0170,
+        210 water_matacoan.water.0171,
+        211 water_matacoan.water.0172,
+        212 water_matacoan.water.0173,
+        213 water_matacoan.water.0174
 ;
 
 MATRIX
-chorote          0100001000100010100000100010001000010000100010001001100100010110001000001001000001010010001000001000100000100001000001001010001000001010011000001001000010010100100100100100010000100000100001010001000010000100
-chorote_iyowujwa 0100000100010000110000???????01000001000100010000000100100000????0010000000?????0010001000100000100001000001000?????0010001000010000001000100000??0????001010000100100000100010000100000010000010001000010000100
-maca             001000001000100001000001000000010000100001000100000001001000010000001000000100000001000100010000010000100010000010000????00100001000000100010000100????010010000010010000010001000010000001000001000100001000010
-mataco           0100001000?????01110100010011000100001100010001001001100010000101000010001001101000010100000100010000001100010000100000100???00001000001000010001100100011010000100001010100010110001000??????010001010010010010
-nivacle          00010100101000000001000001000000010010000100??????0001000010000100000010000100100????00010000100001000100000010010000????0???000001000010000010010000100100010101000100000010????0100010000100000100001000100001
-wichi_lhamtes    0100001000000100100000???????000100????0001000010000010001000????0000001000010000????01000000010???0?????0????00001100010000100000010001000010101000001010010000100?????0100010000000100000010010001000010000010
+chorote               010001000010001010000001000010010000100010001100010101000101000010000101000000010000101000000100010000010000001000010010010010000101001000001001000100000010000100101000010100100100100100001000001001010001000010000
+chorote_iyowujwa      01000010000100001100000???????01000010001000010000100100000????00100000???????00100000100000010000100000100000????00100000100100000100010000000???0??????010000100100100010000100100000100001000001000010001000010000
+maca                  0010000100001000010000001000000010001000010000100010001000010000001000010000000001000001000000100001000001000001000?????001000100000100010000001000??????001000100100100010000010010000010000100001000001000100001000
+mataco                0100010000?????0011011010100010001001100001000110011000100010010000100001010010000100000100001000000110000100000100100000??00001000010000100000101001000000010011010101101000010000101000100001000????010001000010001
+nivacle               00010001101000000001000000100000001010000100????0010000010001000000010010001000??????000010000010001000000010001000?????0??000001000100000100001000001000000010100010000001010100010000000101000100100000100010000100
+wichi_lhamtes         01000100000001000010000???????000100???00010010000100001000????0000100001000000??????00000100???0?????0??????00011010000001000010000100001000101000000100000100100101000010000100?????0001000001000010010001000010000
+wichi_lhamtes_guisnay 010001000010000000100001000000000100100000100010001000010001000000010000010000000001000000010100000010000100000010000100001000010000100000010101100000010000100100101000010000100001000001000010000010010000001010000
+wichi_lhamtes_vejoz   0100010000100000001000010001000001001010001000100010000100000100000100001000100000100000001001000000100000001000100100010010000100001000010000010000000010001001001010000????0100001000001000010000010010001000000010
 ;
 END;
 
@@ -228,41 +235,40 @@ BEGIN ASSUMPTIONS;
     charset blood = 1-4;
     charset bone = 5-9;
     charset breast = 10-15;
-    charset come = 16-21;
-    charset die = 22-29;
-    charset dog = 30-34;
-    charset drink = 35-39;
+    charset come = 16-22;
+    charset die = 23-30;
+    charset dog = 31-35;
+    charset drink = 36-39;
     charset ear = 40-43;
-    charset eye = 44-50;
-    charset fire = 51-54;
-    charset fish = 55-60;
-    charset full = 61-65;
-    charset hand = 66-74;
-    charset hear = 75-80;
-    charset horn = 81-85;
-    charset i = 86-89;
-    charset knee = 90-95;
-    charset leaf = 96-99;
-    charset liver = 100-105;
-    charset louse = 106-110;
-    charset mountain = 111-116;
-    charset name = 117-121;
-    charset new = 122-125;
-    charset night = 126-133;
-    charset nose = 134-136;
-    charset one = 137-143;
-    charset path = 144-146;
-    charset person = 147-151;
-    charset see = 152-154;
-    charset skin = 155-159;
-    charset star = 160-162;
-    charset stone = 163-168;
-    charset sun = 169-172;
-    charset thou = 173-177;
-    charset tongue = 178-183;
-    charset tooth = 184-190;
-    charset tree = 191-194;
-    charset two = 195-199;
-    charset water = 200-204;
-    charset we = 205-208;
+    charset eye = 44-48;
+    charset fire = 49-52;
+    charset fish = 53-58;
+    charset full = 59-63;
+    charset hand = 64-70;
+    charset hear = 71-78;
+    charset horn = 79-85;
+    charset knee = 86-92;
+    charset leaf = 93-96;
+    charset liver = 97-102;
+    charset louse = 103-109;
+    charset mountain = 110-114;
+    charset name = 115-120;
+    charset new = 121-123;
+    charset night = 124-130;
+    charset nose = 131-133;
+    charset one = 134-142;
+    charset path = 143-146;
+    charset person = 147-153;
+    charset pl = 154-158;
+    charset see = 159-161;
+    charset sg = 162-168;
+    charset skin = 169-173;
+    charset star = 174-176;
+    charset stone = 177-182;
+    charset sun = 183-187;
+    charset tongue = 188-193;
+    charset tooth = 194-198;
+    charset tree = 199-202;
+    charset two = 203-207;
+    charset water = 208-213;
 END;

@@ -1,0 +1,130 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=77;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kanoe.blood.0375,
+        3 bone_0ascertainment,
+        4 bone_kanoe.bone.0256,
+        5 breast_0ascertainment,
+        6 breast_kanoe.breast.0415,
+        7 come_0ascertainment,
+        8 come_kanoe.come.0400,
+        9 die_0ascertainment,
+        10 die_kanoe.die.0499,
+        11 dog_0ascertainment,
+        12 dog_kanoe.dog.0319,
+        13 drink_0ascertainment,
+        14 drink_kanoe.drink.0539,
+        15 ear_0ascertainment,
+        16 ear_kanoe.ear.0271,
+        17 eye_0ascertainment,
+        18 eye_kanoe.eye.0427,
+        19 fire_0ascertainment,
+        20 fire_kanoe.fire.0053,
+        21 fish_0ascertainment,
+        22 fish_kanoe.fish.0037,
+        23 full_0ascertainment,
+        24 full_kanoe.full.0002,
+        25 hand_0ascertainment,
+        26 hand_kanoe.hand.0354,
+        27 hear_0ascertainment,
+        28 hear_kanoe.hear.0571,
+        29 horn_0ascertainment,
+        30 horn_kanoe.horn.0042,
+        31 knee_0ascertainment,
+        32 knee_kanoe.knee.0041,
+        33 leaf_0ascertainment,
+        34 leaf_kanoe.leaf.0364,
+        35 liver_0ascertainment,
+        36 liver_kanoe.liver.0481,
+        37 louse_0ascertainment,
+        38 louse_kanoe.louse.0014,
+        39 mountain_0ascertainment,
+        40 mountain_kanoe.mountain.0456,
+        41 name_0ascertainment,
+        42 name_kanoe.name.0342,
+        43 new_0ascertainment,
+        44 new_kanoe.new.0415,
+        45 night_0ascertainment,
+        46 night_kanoe.night.0398,
+        47 nose_0ascertainment,
+        48 nose_kanoe.nose.0462,
+        49 one_0ascertainment,
+        50 one_kanoe.one.0363,
+        51 path_0ascertainment,
+        52 path_kanoe.path.0097,
+        53 pl_0ascertainment,
+        54 pl_kanoe.1pl.0462,
+        55 see_0ascertainment,
+        56 see_kanoe.see.0076,
+        57 sg_0ascertainment,
+        58 sg_kanoe.1sg.0281,
+        59 sg_kanoe.2sg.0337,
+        60 skin_0ascertainment,
+        61 skin_kanoe.skin.0494,
+        62 star_0ascertainment,
+        63 star_kanoe.star.0476,
+        64 stone_0ascertainment,
+        65 stone_kanoe.stone.0629,
+        66 sun_0ascertainment,
+        67 sun_kanoe.sun.0379,
+        68 tongue_0ascertainment,
+        69 tongue_kanoe.tongue.0381,
+        70 tooth_0ascertainment,
+        71 tooth_kanoe.tooth.0439,
+        72 tree_0ascertainment,
+        73 tree_kanoe.tree.0057,
+        74 two_0ascertainment,
+        75 two_kanoe.two.0345,
+        76 water_0ascertainment,
+        77 water_kanoe.water.0348
+;
+
+MATRIX
+kanoe 01010101010101010101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset full = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-28;
+    charset horn = 29-30;
+    charset knee = 31-32;
+    charset leaf = 33-34;
+    charset liver = 35-36;
+    charset louse = 37-38;
+    charset mountain = 39-40;
+    charset name = 41-42;
+    charset new = 43-44;
+    charset night = 45-46;
+    charset nose = 47-48;
+    charset one = 49-50;
+    charset path = 51-52;
+    charset pl = 53-54;
+    charset see = 55-56;
+    charset sg = 57-59;
+    charset skin = 60-61;
+    charset star = 62-63;
+    charset stone = 64-65;
+    charset sun = 66-67;
+    charset tongue = 68-69;
+    charset tooth = 70-71;
+    charset tree = 72-73;
+    charset two = 74-75;
+    charset water = 76-77;
+END;

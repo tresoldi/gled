@@ -1,0 +1,121 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=71;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_duna.blood.0002,
+        3 bone_0ascertainment,
+        4 bone_duna.bone.0207,
+        5 breast_0ascertainment,
+        6 breast_duna.breast.0002,
+        7 come_0ascertainment,
+        8 come_duna.come.0003,
+        9 dog_0ascertainment,
+        10 dog_duna.dog.0026,
+        11 ear_0ascertainment,
+        12 ear_duna.ear.0082,
+        13 eye_0ascertainment,
+        14 eye_duna.eye.0315,
+        15 fire_0ascertainment,
+        16 fire_duna.fire.0354,
+        17 fish_0ascertainment,
+        18 fish_duna.fish.0105,
+        19 full_0ascertainment,
+        20 full_duna.full.0124,
+        21 hand_0ascertainment,
+        22 hand_duna.hand.0085,
+        23 hear_0ascertainment,
+        24 hear_duna.hear.0001,
+        25 knee_0ascertainment,
+        26 knee_duna.knee.0003,
+        27 leaf_0ascertainment,
+        28 leaf_duna.leaf.0004,
+        29 louse_0ascertainment,
+        30 louse_duna.louse.0021,
+        31 mountain_0ascertainment,
+        32 mountain_duna.mountain.0096,
+        33 name_0ascertainment,
+        34 name_duna.name.0242,
+        35 new_0ascertainment,
+        36 new_duna.new.0011,
+        37 night_0ascertainment,
+        38 night_duna.night.0303,
+        39 nose_0ascertainment,
+        40 nose_duna.nose.0022,
+        41 one_0ascertainment,
+        42 one_duna.one.0135,
+        43 path_0ascertainment,
+        44 path_duna.path.0355,
+        45 person_0ascertainment,
+        46 person_duna.person.0415,
+        47 pl_0ascertainment,
+        48 pl_duna.1pl.0086,
+        49 see_0ascertainment,
+        50 see_duna.see.0001,
+        51 sg_0ascertainment,
+        52 sg_duna.1sg.0068,
+        53 sg_duna.2sg.0061,
+        54 skin_0ascertainment,
+        55 skin_duna.skin.0006,
+        56 star_0ascertainment,
+        57 star_duna.star.0361,
+        58 stone_0ascertainment,
+        59 stone_duna.stone.0108,
+        60 sun_0ascertainment,
+        61 sun_duna.sun.0004,
+        62 tongue_0ascertainment,
+        63 tongue_duna.tongue.0288,
+        64 tooth_0ascertainment,
+        65 tooth_duna.tooth.0340,
+        66 tree_0ascertainment,
+        67 tree_duna.tree.0218,
+        68 two_0ascertainment,
+        69 two_duna.two.0261,
+        70 water_0ascertainment,
+        71 water_duna.water.0273
+;
+
+MATRIX
+duna 01010101010101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset dog = 9-10;
+    charset ear = 11-12;
+    charset eye = 13-14;
+    charset fire = 15-16;
+    charset fish = 17-18;
+    charset full = 19-20;
+    charset hand = 21-22;
+    charset hear = 23-24;
+    charset knee = 25-26;
+    charset leaf = 27-28;
+    charset louse = 29-30;
+    charset mountain = 31-32;
+    charset name = 33-34;
+    charset new = 35-36;
+    charset night = 37-38;
+    charset nose = 39-40;
+    charset one = 41-42;
+    charset path = 43-44;
+    charset person = 45-46;
+    charset pl = 47-48;
+    charset see = 49-50;
+    charset sg = 51-53;
+    charset skin = 54-55;
+    charset star = 56-57;
+    charset stone = 58-59;
+    charset sun = 60-61;
+    charset tongue = 62-63;
+    charset tooth = 64-65;
+    charset tree = 66-67;
+    charset two = 68-69;
+    charset water = 70-71;
+END;

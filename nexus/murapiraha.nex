@@ -1,0 +1,118 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=69;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_murapiraha.blood.0482,
+        3 breast_0ascertainment,
+        4 breast_murapiraha.breast.0002,
+        5 come_0ascertainment,
+        6 come_murapiraha.come.0584,
+        7 die_0ascertainment,
+        8 die_murapiraha.die.0739,
+        9 dog_0ascertainment,
+        10 dog_murapiraha.dog.0243,
+        11 drink_0ascertainment,
+        12 drink_murapiraha.drink.0789,
+        13 eye_0ascertainment,
+        14 eye_murapiraha.eye.0606,
+        15 fire_0ascertainment,
+        16 fire_murapiraha.fire.0012,
+        17 fish_0ascertainment,
+        18 fish_murapiraha.fish.0578,
+        19 full_0ascertainment,
+        20 full_murapiraha.full.0817,
+        21 hear_0ascertainment,
+        22 hear_murapiraha.hear.0856,
+        23 horn_0ascertainment,
+        24 horn_murapiraha.horn.0482,
+        25 knee_0ascertainment,
+        26 knee_murapiraha.knee.0527,
+        27 leaf_0ascertainment,
+        28 leaf_murapiraha.leaf.0127,
+        29 liver_0ascertainment,
+        30 liver_murapiraha.liver.0723,
+        31 louse_0ascertainment,
+        32 louse_murapiraha.louse.0605,
+        33 mountain_0ascertainment,
+        34 mountain_murapiraha.mountain.0661,
+        35 name_0ascertainment,
+        36 name_murapiraha.name.0464,
+        37 new_0ascertainment,
+        38 new_murapiraha.new.0017,
+        39 night_0ascertainment,
+        40 night_murapiraha.night.0556,
+        41 nose_0ascertainment,
+        42 nose_murapiraha.nose.0658,
+        43 one_0ascertainment,
+        44 one_murapiraha.one.0481,
+        45 path_0ascertainment,
+        46 path_murapiraha.path.0649,
+        47 pl_0ascertainment,
+        48 pl_murapiraha.1pl.0713,
+        49 see_0ascertainment,
+        50 see_murapiraha.see.0003,
+        51 sg_0ascertainment,
+        52 sg_murapiraha.1sg.0398,
+        53 sg_murapiraha.2sg.0476,
+        54 skin_0ascertainment,
+        55 skin_murapiraha.skin.0709,
+        56 star_0ascertainment,
+        57 star_murapiraha.star.0677,
+        58 stone_0ascertainment,
+        59 stone_murapiraha.stone.0909,
+        60 sun_0ascertainment,
+        61 sun_murapiraha.sun.0457,
+        62 tongue_0ascertainment,
+        63 tongue_murapiraha.tongue.0530,
+        64 tooth_0ascertainment,
+        65 tooth_murapiraha.tooth.0616,
+        66 two_0ascertainment,
+        67 two_murapiraha.two.0168,
+        68 water_0ascertainment,
+        69 water_murapiraha.water.0009
+;
+
+MATRIX
+piraha 010101010101010101010101010101010101010101010101010110101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset breast = 3-4;
+    charset come = 5-6;
+    charset die = 7-8;
+    charset dog = 9-10;
+    charset drink = 11-12;
+    charset eye = 13-14;
+    charset fire = 15-16;
+    charset fish = 17-18;
+    charset full = 19-20;
+    charset hear = 21-22;
+    charset horn = 23-24;
+    charset knee = 25-26;
+    charset leaf = 27-28;
+    charset liver = 29-30;
+    charset louse = 31-32;
+    charset mountain = 33-34;
+    charset name = 35-36;
+    charset new = 37-38;
+    charset night = 39-40;
+    charset nose = 41-42;
+    charset one = 43-44;
+    charset path = 45-46;
+    charset pl = 47-48;
+    charset see = 49-50;
+    charset sg = 51-53;
+    charset skin = 54-55;
+    charset star = 56-57;
+    charset stone = 58-59;
+    charset sun = 60-61;
+    charset tongue = 62-63;
+    charset tooth = 64-65;
+    charset two = 66-67;
+    charset water = 68-69;
+END;

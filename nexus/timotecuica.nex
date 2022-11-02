@@ -1,0 +1,107 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=62;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_timotecuica.blood.0166,
+        3 bone_0ascertainment,
+        4 bone_timotecuica.bone.0187,
+        5 breast_0ascertainment,
+        6 breast_timotecuica.breast.0291,
+        7 come_0ascertainment,
+        8 come_timotecuica.come.0013,
+        9 die_0ascertainment,
+        10 die_timotecuica.die.0315,
+        11 die_timotecuica.die.0316,
+        12 dog_0ascertainment,
+        13 dog_timotecuica.dog.0237,
+        14 drink_0ascertainment,
+        15 drink_timotecuica.drink.0016,
+        16 ear_0ascertainment,
+        17 ear_timotecuica.ear.0193,
+        18 eye_0ascertainment,
+        19 eye_timotecuica.eye.0279,
+        20 fire_0ascertainment,
+        21 fire_timotecuica.fire.0023,
+        22 full_0ascertainment,
+        23 full_timotecuica.full.0334,
+        24 hand_0ascertainment,
+        25 hand_timotecuica.hand.0249,
+        26 hear_0ascertainment,
+        27 hear_timotecuica.hear.0371,
+        28 horn_0ascertainment,
+        29 horn_timotecuica.horn.0243,
+        30 leaf_0ascertainment,
+        31 leaf_timotecuica.leaf.0265,
+        32 louse_0ascertainment,
+        33 louse_timotecuica.louse.0276,
+        34 new_0ascertainment,
+        35 new_timotecuica.new.0105,
+        36 nose_0ascertainment,
+        37 nose_timotecuica.nose.0309,
+        38 one_0ascertainment,
+        39 one_timotecuica.one.0023,
+        40 pl_0ascertainment,
+        41 pl_timotecuica.1pl.0298,
+        42 see_0ascertainment,
+        43 see_timotecuica.see.0017,
+        44 sg_0ascertainment,
+        45 sg_timotecuica.1sg.0055,
+        46 sg_timotecuica.2sg.0233,
+        47 star_0ascertainment,
+        48 star_timotecuica.star.0317,
+        49 stone_0ascertainment,
+        50 stone_timotecuica.stone.0385,
+        51 sun_0ascertainment,
+        52 sun_timotecuica.sun.0263,
+        53 tongue_0ascertainment,
+        54 tongue_timotecuica.tongue.0259,
+        55 tooth_0ascertainment,
+        56 tooth_timotecuica.tooth.0312,
+        57 tree_0ascertainment,
+        58 tree_timotecuica.tree.0113,
+        59 two_0ascertainment,
+        60 two_timotecuica.two.0228,
+        61 water_0ascertainment,
+        62 water_timotecuica.water.0244
+;
+
+MATRIX
+cuica 01010101011010101010101010101010101010101010110101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-11;
+    charset dog = 12-13;
+    charset drink = 14-15;
+    charset ear = 16-17;
+    charset eye = 18-19;
+    charset fire = 20-21;
+    charset full = 22-23;
+    charset hand = 24-25;
+    charset hear = 26-27;
+    charset horn = 28-29;
+    charset leaf = 30-31;
+    charset louse = 32-33;
+    charset new = 34-35;
+    charset nose = 36-37;
+    charset one = 38-39;
+    charset pl = 40-41;
+    charset see = 42-43;
+    charset sg = 44-46;
+    charset star = 47-48;
+    charset stone = 49-50;
+    charset sun = 51-52;
+    charset tongue = 53-54;
+    charset tooth = 55-56;
+    charset tree = 57-58;
+    charset two = 59-60;
+    charset water = 61-62;
+END;

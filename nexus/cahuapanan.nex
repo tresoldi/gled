@@ -5,106 +5,106 @@ BEGIN DATA;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_2,
-        3 blood_3,
+        2 blood_cahuapanan.blood.0004,
+        3 blood_cahuapanan.blood.0005,
         4 bone_0ascertainment,
-        5 bone_4,
+        5 bone_cahuapanan.bone.0006,
         6 breast_0ascertainment,
-        7 breast_5,
-        8 breast_6,
+        7 breast_cahuapanan.breast.0007,
+        8 breast_cahuapanan.breast.0008,
         9 come_0ascertainment,
-        10 come_7,
-        11 die_0ascertainment,
-        12 die_8,
-        13 dog_0ascertainment,
-        14 dog_9,
-        15 drink_0ascertainment,
-        16 drink_10,
-        17 drink_11,
-        18 ear_0ascertainment,
-        19 ear_12,
-        20 ear_13,
-        21 eye_0ascertainment,
-        22 eye_14,
-        23 eye_15,
-        24 fire_0ascertainment,
-        25 fire_16,
-        26 fish_0ascertainment,
-        27 fish_17,
-        28 full_0ascertainment,
-        29 full_18,
-        30 full_19,
-        31 hand_0ascertainment,
-        32 hand_20,
-        33 hand_21,
-        34 hear_0ascertainment,
-        35 hear_22,
-        36 hear_23,
-        37 horn_0ascertainment,
-        38 horn_24,
-        39 horn_25,
-        40 i_0ascertainment,
-        41 i_1,
-        42 knee_0ascertainment,
-        43 knee_26,
-        44 leaf_0ascertainment,
-        45 leaf_27,
-        46 leaf_28,
-        47 liver_0ascertainment,
-        48 liver_29,
-        49 louse_0ascertainment,
-        50 louse_30,
-        51 mountain_0ascertainment,
-        52 mountain_31,
-        53 name_0ascertainment,
-        54 name_32,
-        55 new_0ascertainment,
-        56 new_33,
-        57 night_0ascertainment,
-        58 night_34,
-        59 nose_0ascertainment,
-        60 nose_35,
-        61 nose_36,
-        62 one_0ascertainment,
-        63 one_37,
-        64 path_0ascertainment,
-        65 path_38,
-        66 path_39,
-        67 person_0ascertainment,
-        68 person_40,
-        69 person_41,
-        70 see_0ascertainment,
-        71 see_42,
-        72 skin_0ascertainment,
-        73 skin_43,
-        74 skin_44,
-        75 star_0ascertainment,
-        76 star_45,
-        77 star_46,
-        78 stone_0ascertainment,
-        79 stone_47,
-        80 sun_0ascertainment,
-        81 sun_48,
-        82 sun_49,
-        83 thou_0ascertainment,
-        84 thou_56,
-        85 tongue_0ascertainment,
-        86 tongue_50,
-        87 tooth_0ascertainment,
-        88 tooth_51,
-        89 tree_0ascertainment,
-        90 tree_52,
-        91 two_0ascertainment,
-        92 two_53,
-        93 water_0ascertainment,
-        94 water_54,
-        95 we_0ascertainment,
-        96 we_55
+        10 come_cahuapanan.come.0009,
+        11 come_cahuapanan.come.0010,
+        12 die_0ascertainment,
+        13 die_cahuapanan.die.0011,
+        14 dog_0ascertainment,
+        15 dog_cahuapanan.dog.0012,
+        16 drink_0ascertainment,
+        17 drink_cahuapanan.drink.0013,
+        18 drink_cahuapanan.drink.0014,
+        19 ear_0ascertainment,
+        20 ear_cahuapanan.ear.0015,
+        21 ear_cahuapanan.ear.0016,
+        22 eye_0ascertainment,
+        23 eye_cahuapanan.eye.0017,
+        24 eye_cahuapanan.eye.0018,
+        25 fire_0ascertainment,
+        26 fire_cahuapanan.fire.0019,
+        27 fish_0ascertainment,
+        28 fish_cahuapanan.fish.0020,
+        29 full_0ascertainment,
+        30 full_cahuapanan.full.0021,
+        31 full_cahuapanan.full.0022,
+        32 hand_0ascertainment,
+        33 hand_cahuapanan.hand.0023,
+        34 hand_cahuapanan.hand.0024,
+        35 hear_0ascertainment,
+        36 hear_cahuapanan.hear.0025,
+        37 hear_cahuapanan.hear.0026,
+        38 horn_0ascertainment,
+        39 horn_cahuapanan.horn.0027,
+        40 horn_cahuapanan.horn.0028,
+        41 knee_0ascertainment,
+        42 knee_cahuapanan.knee.0029,
+        43 leaf_0ascertainment,
+        44 leaf_cahuapanan.leaf.0030,
+        45 leaf_cahuapanan.leaf.0031,
+        46 liver_0ascertainment,
+        47 liver_cahuapanan.liver.0032,
+        48 louse_0ascertainment,
+        49 louse_cahuapanan.louse.0033,
+        50 mountain_0ascertainment,
+        51 mountain_cahuapanan.mountain.0034,
+        52 name_0ascertainment,
+        53 name_cahuapanan.name.0035,
+        54 new_0ascertainment,
+        55 new_cahuapanan.new.0036,
+        56 night_0ascertainment,
+        57 night_cahuapanan.night.0037,
+        58 nose_0ascertainment,
+        59 nose_cahuapanan.nose.0038,
+        60 nose_cahuapanan.nose.0039,
+        61 one_0ascertainment,
+        62 one_cahuapanan.one.0040,
+        63 path_0ascertainment,
+        64 path_cahuapanan.path.0041,
+        65 path_cahuapanan.path.0042,
+        66 person_0ascertainment,
+        67 person_cahuapanan.person.0043,
+        68 person_cahuapanan.person.0044,
+        69 pl_0ascertainment,
+        70 pl_cahuapanan.1pl.0001,
+        71 see_0ascertainment,
+        72 see_cahuapanan.see.0045,
+        73 sg_0ascertainment,
+        74 sg_cahuapanan.1sg.0002,
+        75 sg_cahuapanan.2sg.0003,
+        76 skin_0ascertainment,
+        77 skin_cahuapanan.skin.0046,
+        78 skin_cahuapanan.skin.0047,
+        79 star_0ascertainment,
+        80 star_cahuapanan.star.0048,
+        81 star_cahuapanan.star.0049,
+        82 stone_0ascertainment,
+        83 stone_cahuapanan.stone.0050,
+        84 sun_0ascertainment,
+        85 sun_cahuapanan.sun.0051,
+        86 sun_cahuapanan.sun.0052,
+        87 tongue_0ascertainment,
+        88 tongue_cahuapanan.tongue.0053,
+        89 tooth_0ascertainment,
+        90 tooth_cahuapanan.tooth.0054,
+        91 tree_0ascertainment,
+        92 tree_cahuapanan.tree.0055,
+        93 two_0ascertainment,
+        94 two_cahuapanan.two.0056,
+        95 water_0ascertainment,
+        96 water_cahuapanan.water.0057
 ;
 
 MATRIX
-chayahuita 010010100101010100100100101010010010010010101001010101010101001010010010100100101001010101010?01
-jebero     001010010101010010010010101001001001001010100101010101010?00101001001010010010100101010101010101
+chayahuita 01001010010010101001001001010100100100100101001010101010101001010010010101101001001010010101010?
+jebero     00101001001010100100100101010010010010010100101010101010?001010010010101011001001010010101010101
 ;
 END;
 
@@ -112,41 +112,40 @@ BEGIN ASSUMPTIONS;
     charset blood = 1-3;
     charset bone = 4-5;
     charset breast = 6-8;
-    charset come = 9-10;
-    charset die = 11-12;
-    charset dog = 13-14;
-    charset drink = 15-17;
-    charset ear = 18-20;
-    charset eye = 21-23;
-    charset fire = 24-25;
-    charset fish = 26-27;
-    charset full = 28-30;
-    charset hand = 31-33;
-    charset hear = 34-36;
-    charset horn = 37-39;
-    charset i = 40-41;
-    charset knee = 42-43;
-    charset leaf = 44-46;
-    charset liver = 47-48;
-    charset louse = 49-50;
-    charset mountain = 51-52;
-    charset name = 53-54;
-    charset new = 55-56;
-    charset night = 57-58;
-    charset nose = 59-61;
-    charset one = 62-63;
-    charset path = 64-66;
-    charset person = 67-69;
-    charset see = 70-71;
-    charset skin = 72-74;
-    charset star = 75-77;
-    charset stone = 78-79;
-    charset sun = 80-82;
-    charset thou = 83-84;
-    charset tongue = 85-86;
-    charset tooth = 87-88;
-    charset tree = 89-90;
-    charset two = 91-92;
-    charset water = 93-94;
-    charset we = 95-96;
+    charset come = 9-11;
+    charset die = 12-13;
+    charset dog = 14-15;
+    charset drink = 16-18;
+    charset ear = 19-21;
+    charset eye = 22-24;
+    charset fire = 25-26;
+    charset fish = 27-28;
+    charset full = 29-31;
+    charset hand = 32-34;
+    charset hear = 35-37;
+    charset horn = 38-40;
+    charset knee = 41-42;
+    charset leaf = 43-45;
+    charset liver = 46-47;
+    charset louse = 48-49;
+    charset mountain = 50-51;
+    charset name = 52-53;
+    charset new = 54-55;
+    charset night = 56-57;
+    charset nose = 58-60;
+    charset one = 61-62;
+    charset path = 63-65;
+    charset person = 66-68;
+    charset pl = 69-70;
+    charset see = 71-72;
+    charset sg = 73-75;
+    charset skin = 76-78;
+    charset star = 79-81;
+    charset stone = 82-83;
+    charset sun = 84-86;
+    charset tongue = 87-88;
+    charset tooth = 89-90;
+    charset tree = 91-92;
+    charset two = 93-94;
+    charset water = 95-96;
 END;

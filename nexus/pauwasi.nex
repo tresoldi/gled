@@ -1,382 +1,286 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=7 NCHAR=286;
+    DIMENSIONS NTAX=7 NCHAR=226;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
-        1 ash_0ascertainment,
-        2 ash_176,
-        3 bark_0ascertainment,
-        4 bark_177,
-        5 belly_0ascertainment,
-        6 belly_178,
-        7 big_0ascertainment,
-        8 big_179,
-        9 bird_0ascertainment,
-        10 bird_180,
-        11 bite_0ascertainment,
-        12 bite_181,
-        13 black_0ascertainment,
-        14 black_182,
-        15 blood_0ascertainment,
-        16 blood_6,
-        17 blood_7,
-        18 blood_8,
-        19 blood_9,
-        20 bone_0ascertainment,
-        21 bone_10,
-        22 bone_11,
-        23 bone_12,
-        24 bone_13,
-        25 breast_0ascertainment,
-        26 breast_14,
-        27 cloud_0ascertainment,
-        28 cloud_183,
-        29 cold_0ascertainment,
-        30 cold_184,
-        31 come_0ascertainment,
-        32 come_15,
-        33 come_16,
-        34 come_17,
-        35 come_18,
-        36 come_19,
-        37 come_20,
-        38 come_21,
-        39 die_0ascertainment,
-        40 die_22,
-        41 die_23,
-        42 die_24,
-        43 die_25,
-        44 die_26,
-        45 die_27,
-        46 die_28,
-        47 dog_0ascertainment,
-        48 dog_29,
-        49 dog_30,
-        50 dog_31,
-        51 dog_32,
-        52 drink_0ascertainment,
-        53 drink_33,
-        54 drink_34,
-        55 drink_35,
-        56 drink_36,
-        57 ear_0ascertainment,
-        58 ear_37,
-        59 ear_38,
-        60 ear_39,
-        61 ear_40,
-        62 ear_41,
-        63 ear_42,
-        64 eat_0ascertainment,
-        65 eat_185,
-        66 egg_0ascertainment,
-        67 egg_186,
-        68 eye_0ascertainment,
-        69 eye_43,
-        70 eye_44,
-        71 eye_45,
-        72 eye_46,
-        73 eye_47,
-        74 eye_48,
-        75 eye_49,
-        76 fire_0ascertainment,
-        77 fire_50,
-        78 fire_51,
-        79 fire_52,
-        80 fish_0ascertainment,
-        81 fish_53,
-        82 fish_54,
-        83 fish_55,
-        84 fly_0ascertainment,
-        85 fly_187,
-        86 full_0ascertainment,
-        87 full_56,
-        88 full_57,
-        89 give_0ascertainment,
-        90 give_188,
-        91 good_0ascertainment,
-        92 good_189,
-        93 hair_0ascertainment,
-        94 hair_190,
-        95 hand_0ascertainment,
-        96 hand_58,
-        97 hand_59,
-        98 hand_60,
-        99 head_0ascertainment,
-        100 head_191,
-        101 hear_0ascertainment,
-        102 hear_61,
-        103 hear_62,
-        104 hear_63,
-        105 hear_64,
-        106 hear_65,
-        107 horn_0ascertainment,
-        108 horn_66,
-        109 horn_67,
-        110 hot_0ascertainment,
-        111 hot_192,
-        112 i_0ascertainment,
-        113 i_1,
-        114 i_2,
-        115 i_3,
-        116 i_4,
-        117 i_5,
-        118 kill_0ascertainment,
-        119 kill_193,
-        120 kill_194,
-        121 knee_0ascertainment,
-        122 knee_68,
-        123 knee_69,
-        124 knee_70,
-        125 knee_71,
-        126 knee_72,
-        127 leaf_0ascertainment,
-        128 leaf_73,
-        129 leaf_74,
-        130 leaf_75,
-        131 liver_0ascertainment,
-        132 liver_76,
-        133 long_0ascertainment,
-        134 long_195,
-        135 louse_0ascertainment,
-        136 louse_77,
-        137 louse_78,
-        138 louse_79,
-        139 moon_0ascertainment,
-        140 moon_196,
-        141 mountain_0ascertainment,
-        142 mountain_80,
-        143 mountain_81,
-        144 mountain_82,
-        145 mountain_83,
-        146 mountain_84,
-        147 mountain_85,
-        148 mouth_0ascertainment,
-        149 mouth_197,
-        150 name_0ascertainment,
-        151 name_86,
-        152 name_87,
-        153 name_88,
-        154 name_89,
-        155 name_90,
-        156 new_0ascertainment,
-        157 new_91,
-        158 new_92,
-        159 new_93,
-        160 new_94,
-        161 new_95,
-        162 new_96,
-        163 night_0ascertainment,
-        164 night_100,
-        165 night_101,
-        166 night_97,
-        167 night_98,
-        168 night_99,
-        169 nose_0ascertainment,
-        170 nose_102,
-        171 nose_103,
-        172 nose_104,
-        173 nose_105,
-        174 one_0ascertainment,
-        175 one_106,
-        176 one_107,
-        177 one_108,
-        178 one_109,
-        179 one_110,
-        180 path_0ascertainment,
-        181 path_111,
-        182 path_112,
-        183 path_113,
-        184 path_114,
-        185 person_0ascertainment,
-        186 person_115,
-        187 person_116,
-        188 raining_or_rain_0ascertainment,
-        189 raining_or_rain_198,
-        190 red_0ascertainment,
-        191 red_199,
-        192 root_0ascertainment,
-        193 root_200,
-        194 sand_0ascertainment,
-        195 sand_201,
-        196 say_0ascertainment,
-        197 say_202,
-        198 see_0ascertainment,
-        199 see_117,
-        200 see_118,
-        201 see_119,
-        202 see_120,
-        203 see_121,
-        204 see_122,
-        205 sit_0ascertainment,
-        206 sit_203,
-        207 skin_0ascertainment,
-        208 skin_123,
-        209 skin_124,
-        210 skin_125,
-        211 skin_126,
-        212 skin_127,
-        213 sleep_0ascertainment,
-        214 sleep_204,
-        215 small_0ascertainment,
-        216 small_205,
-        217 smoke_0ascertainment,
-        218 smoke_206,
-        219 stand_0ascertainment,
-        220 stand_207,
-        221 star_0ascertainment,
-        222 star_128,
-        223 star_129,
-        224 stone_0ascertainment,
-        225 stone_130,
-        226 stone_131,
-        227 stone_132,
-        228 stone_133,
-        229 stone_134,
-        230 sun_0ascertainment,
-        231 sun_135,
-        232 sun_136,
-        233 swim_0ascertainment,
-        234 swim_208,
-        235 tail_0ascertainment,
-        236 tail_209,
-        237 thou_0ascertainment,
-        238 thou_171,
-        239 thou_172,
-        240 thou_173,
-        241 thou_174,
-        242 thou_175,
-        243 tongue_0ascertainment,
-        244 tongue_137,
-        245 tongue_138,
-        246 tongue_139,
-        247 tongue_140,
-        248 tongue_141,
-        249 tongue_142,
-        250 tooth_0ascertainment,
-        251 tooth_143,
-        252 tooth_144,
-        253 tooth_145,
-        254 tooth_146,
-        255 tooth_147,
-        256 tooth_148,
-        257 tooth_149,
-        258 tree_0ascertainment,
-        259 tree_150,
-        260 tree_151,
-        261 tree_152,
-        262 tree_153,
-        263 tree_154,
-        264 tree_155,
-        265 tree_156,
-        266 tree_157,
-        267 tree_158,
-        268 two_0ascertainment,
-        269 two_159,
-        270 two_160,
-        271 two_161,
-        272 water_0ascertainment,
-        273 water_162,
-        274 water_163,
-        275 water_164,
-        276 water_165,
-        277 water_166,
-        278 we_0ascertainment,
-        279 we_167,
-        280 we_168,
-        281 we_169,
-        282 we_170,
-        283 white_0ascertainment,
-        284 white_210,
-        285 woman_0ascertainment,
-        286 woman_211
+        1 blood_0ascertainment,
+        2 blood_pauwasi.blood.0015,
+        3 blood_pauwasi.blood.0016,
+        4 blood_pauwasi.blood.0017,
+        5 blood_pauwasi.blood.0018,
+        6 blood_pauwasi.blood.0019,
+        7 bone_0ascertainment,
+        8 bone_pauwasi.bone.0020,
+        9 bone_pauwasi.bone.0021,
+        10 bone_pauwasi.bone.0022,
+        11 bone_pauwasi.bone.0023,
+        12 bone_pauwasi.bone.0024,
+        13 breast_0ascertainment,
+        14 breast_pauwasi.breast.0025,
+        15 come_0ascertainment,
+        16 come_pauwasi.come.0026,
+        17 come_pauwasi.come.0027,
+        18 come_pauwasi.come.0028,
+        19 come_pauwasi.come.0029,
+        20 come_pauwasi.come.0030,
+        21 come_pauwasi.come.0031,
+        22 die_0ascertainment,
+        23 die_pauwasi.die.0032,
+        24 die_pauwasi.die.0033,
+        25 die_pauwasi.die.0034,
+        26 die_pauwasi.die.0035,
+        27 die_pauwasi.die.0036,
+        28 die_pauwasi.die.0037,
+        29 die_pauwasi.die.0038,
+        30 dog_0ascertainment,
+        31 dog_pauwasi.dog.0039,
+        32 dog_pauwasi.dog.0040,
+        33 dog_pauwasi.dog.0041,
+        34 dog_pauwasi.dog.0042,
+        35 dog_pauwasi.dog.0043,
+        36 dog_pauwasi.dog.0044,
+        37 drink_0ascertainment,
+        38 drink_pauwasi.drink.0045,
+        39 drink_pauwasi.drink.0046,
+        40 drink_pauwasi.drink.0047,
+        41 drink_pauwasi.drink.0048,
+        42 drink_pauwasi.drink.0049,
+        43 drink_pauwasi.drink.0050,
+        44 ear_0ascertainment,
+        45 ear_pauwasi.ear.0051,
+        46 ear_pauwasi.ear.0052,
+        47 ear_pauwasi.ear.0053,
+        48 ear_pauwasi.ear.0054,
+        49 ear_pauwasi.ear.0055,
+        50 ear_pauwasi.ear.0056,
+        51 eye_0ascertainment,
+        52 eye_pauwasi.eye.0057,
+        53 eye_pauwasi.eye.0058,
+        54 eye_pauwasi.eye.0059,
+        55 eye_pauwasi.eye.0060,
+        56 eye_pauwasi.eye.0061,
+        57 eye_pauwasi.eye.0062,
+        58 fire_0ascertainment,
+        59 fire_pauwasi.fire.0063,
+        60 fire_pauwasi.fire.0064,
+        61 fire_pauwasi.fire.0065,
+        62 fire_pauwasi.fire.0066,
+        63 fish_0ascertainment,
+        64 fish_pauwasi.fish.0067,
+        65 fish_pauwasi.fish.0068,
+        66 fish_pauwasi.fish.0069,
+        67 full_0ascertainment,
+        68 full_pauwasi.full.0070,
+        69 full_pauwasi.full.0071,
+        70 full_pauwasi.full.0072,
+        71 hand_0ascertainment,
+        72 hand_pauwasi.hand.0073,
+        73 hand_pauwasi.hand.0074,
+        74 hand_pauwasi.hand.0075,
+        75 hear_0ascertainment,
+        76 hear_pauwasi.hear.0076,
+        77 hear_pauwasi.hear.0077,
+        78 hear_pauwasi.hear.0078,
+        79 hear_pauwasi.hear.0079,
+        80 hear_pauwasi.hear.0080,
+        81 hear_pauwasi.hear.0081,
+        82 hear_pauwasi.hear.0082,
+        83 horn_0ascertainment,
+        84 horn_pauwasi.horn.0083,
+        85 horn_pauwasi.horn.0084,
+        86 horn_pauwasi.horn.0085,
+        87 knee_0ascertainment,
+        88 knee_pauwasi.knee.0086,
+        89 knee_pauwasi.knee.0087,
+        90 knee_pauwasi.knee.0088,
+        91 knee_pauwasi.knee.0089,
+        92 knee_pauwasi.knee.0090,
+        93 leaf_0ascertainment,
+        94 leaf_pauwasi.leaf.0091,
+        95 leaf_pauwasi.leaf.0092,
+        96 liver_0ascertainment,
+        97 liver_pauwasi.liver.0093,
+        98 liver_pauwasi.liver.0094,
+        99 louse_0ascertainment,
+        100 louse_pauwasi.louse.0095,
+        101 louse_pauwasi.louse.0096,
+        102 louse_pauwasi.louse.0097,
+        103 mountain_0ascertainment,
+        104 mountain_pauwasi.mountain.0098,
+        105 mountain_pauwasi.mountain.0099,
+        106 mountain_pauwasi.mountain.0100,
+        107 mountain_pauwasi.mountain.0101,
+        108 mountain_pauwasi.mountain.0102,
+        109 mountain_pauwasi.mountain.0103,
+        110 mountain_pauwasi.mountain.0104,
+        111 name_0ascertainment,
+        112 name_pauwasi.name.0105,
+        113 name_pauwasi.name.0106,
+        114 name_pauwasi.name.0107,
+        115 name_pauwasi.name.0108,
+        116 name_pauwasi.name.0109,
+        117 name_pauwasi.name.0110,
+        118 new_0ascertainment,
+        119 new_pauwasi.new.0111,
+        120 new_pauwasi.new.0112,
+        121 new_pauwasi.new.0113,
+        122 new_pauwasi.new.0114,
+        123 night_0ascertainment,
+        124 night_pauwasi.night.0115,
+        125 night_pauwasi.night.0116,
+        126 night_pauwasi.night.0117,
+        127 night_pauwasi.night.0118,
+        128 night_pauwasi.night.0119,
+        129 nose_0ascertainment,
+        130 nose_pauwasi.nose.0120,
+        131 nose_pauwasi.nose.0121,
+        132 nose_pauwasi.nose.0122,
+        133 nose_pauwasi.nose.0123,
+        134 one_0ascertainment,
+        135 one_pauwasi.one.0124,
+        136 one_pauwasi.one.0125,
+        137 one_pauwasi.one.0126,
+        138 one_pauwasi.one.0127,
+        139 one_pauwasi.one.0128,
+        140 path_0ascertainment,
+        141 path_pauwasi.path.0129,
+        142 path_pauwasi.path.0130,
+        143 path_pauwasi.path.0131,
+        144 path_pauwasi.path.0132,
+        145 path_pauwasi.path.0133,
+        146 person_0ascertainment,
+        147 person_pauwasi.person.0134,
+        148 person_pauwasi.person.0135,
+        149 pl_0ascertainment,
+        150 pl_pauwasi.1pl.0001,
+        151 pl_pauwasi.1pl.0002,
+        152 pl_pauwasi.1pl.0003,
+        153 see_0ascertainment,
+        154 see_pauwasi.see.0136,
+        155 see_pauwasi.see.0137,
+        156 see_pauwasi.see.0138,
+        157 see_pauwasi.see.0139,
+        158 see_pauwasi.see.0140,
+        159 see_pauwasi.see.0141,
+        160 see_pauwasi.see.0142,
+        161 sg_0ascertainment,
+        162 sg_pauwasi.1sg.0004,
+        163 sg_pauwasi.1sg.0005,
+        164 sg_pauwasi.1sg.0006,
+        165 sg_pauwasi.1sg.0007,
+        166 sg_pauwasi.1sg.0008,
+        167 sg_pauwasi.2sg.0009,
+        168 sg_pauwasi.2sg.0010,
+        169 sg_pauwasi.2sg.0011,
+        170 sg_pauwasi.2sg.0012,
+        171 sg_pauwasi.2sg.0013,
+        172 sg_pauwasi.2sg.0014,
+        173 skin_0ascertainment,
+        174 skin_pauwasi.skin.0143,
+        175 skin_pauwasi.skin.0144,
+        176 skin_pauwasi.skin.0145,
+        177 skin_pauwasi.skin.0146,
+        178 skin_pauwasi.skin.0147,
+        179 star_0ascertainment,
+        180 star_pauwasi.star.0148,
+        181 star_pauwasi.star.0149,
+        182 star_pauwasi.star.0150,
+        183 stone_0ascertainment,
+        184 stone_pauwasi.stone.0151,
+        185 stone_pauwasi.stone.0152,
+        186 stone_pauwasi.stone.0153,
+        187 stone_pauwasi.stone.0154,
+        188 stone_pauwasi.stone.0155,
+        189 sun_0ascertainment,
+        190 sun_pauwasi.sun.0156,
+        191 sun_pauwasi.sun.0157,
+        192 tongue_0ascertainment,
+        193 tongue_pauwasi.tongue.0158,
+        194 tongue_pauwasi.tongue.0159,
+        195 tongue_pauwasi.tongue.0160,
+        196 tongue_pauwasi.tongue.0161,
+        197 tongue_pauwasi.tongue.0162,
+        198 tooth_0ascertainment,
+        199 tooth_pauwasi.tooth.0163,
+        200 tooth_pauwasi.tooth.0164,
+        201 tooth_pauwasi.tooth.0165,
+        202 tooth_pauwasi.tooth.0166,
+        203 tooth_pauwasi.tooth.0167,
+        204 tooth_pauwasi.tooth.0168,
+        205 tooth_pauwasi.tooth.0169,
+        206 tree_0ascertainment,
+        207 tree_pauwasi.tree.0170,
+        208 tree_pauwasi.tree.0171,
+        209 tree_pauwasi.tree.0172,
+        210 tree_pauwasi.tree.0173,
+        211 tree_pauwasi.tree.0174,
+        212 tree_pauwasi.tree.0175,
+        213 tree_pauwasi.tree.0176,
+        214 tree_pauwasi.tree.0177,
+        215 two_0ascertainment,
+        216 two_pauwasi.two.0178,
+        217 two_pauwasi.two.0179,
+        218 two_pauwasi.two.0180,
+        219 water_0ascertainment,
+        220 water_pauwasi.water.0181,
+        221 water_pauwasi.water.0182,
+        222 water_pauwasi.water.0183,
+        223 water_pauwasi.water.0184,
+        224 water_pauwasi.water.0185,
+        225 water_pauwasi.water.0186,
+        226 water_pauwasi.water.0187
 ;
 
 MATRIX
-dubu       0?0?0?0?0?0?0?0100001000010?0?01000000010000000????0????01000000?0?01000000010001000?0??0?0?0?01000?0100000??0?0100000??01000001000?0?01000?01000000?010000010000000010001000010000010000100?0?0?0?0?01000000?0100000?0?0?0?0100100000100?0?0?????01000000100000001000000000100010000010000?0?
-emem       0?0?0?0?0?0?0?0010000100010?0?00100000001000000????0100000100000?0?00100000001000100?0??0?0?0?00100?0010000??0?0010000??00100000100?0?00100?00100000?00100000100000?????00100001000001000??0?0?0?0?0?00100000?0010000?0?0?0?0100010000010?0?01000000100000010000000100000000010001000001000?0?
-emem_umuaf 01010101010101010000001001010100100000000100000100000100000100001010001000000010010010??0101010???010100000??01001000011000100001001010010010001000010?????00010000000100001000010000100001010101010100010000100100001010101010000100001010100100000010000001000000010000100010001000000100101
-emumu      0?0?0?0?0?0?0?00100001000?0?0?000100000???????010000????0??????0?0?0000100000010???0?0??0?0?0?00100?0?????0??0?0?????0??0?????0???0?0?00100?0??????0?0010000??????0000100????0010000????0??0?0?0?0?0?00100000?0010000?0?0?0?0??0010000010?0?0010000??????0010000000101000000010001000000010?0?
-jafi       0?0?0?0?0?0?0?0001000001010?0?0000100000001000001000????00001000?0?0001000000100???0?0??0?0?0?00100?0001000??0?0001000??00001000100?0?00100?00001000?000100001000000000100001000010001000010?0?0?0?0?00001000?0001000?0?0?0?0010000100010?0?0?????00100000000100000000100000010000100000010?0?
-towei      0?0?0?0?0?0?0?0000101000010?0?00000100000001000????0001000000100?0?00000100010000010?0??0?0?0?00010?0100000??0?0000100??00000101000?0?01000?00000100?00001000001000?????01000000001000100??0?0?0?0?0?00000100?0000100?0?0?0?0100000010010?0?00010000001000000010000000010000001000010010000?0?
-yuri       0?0?0?0?0?0?0?0100000010010?0?0000001100000011000110100100010010?0?00000011000100100?0110?0?0?00100?0000110110?0010010??0000010011010?00110?00010010?00100100000110110000????000010001010010?0?0?0?0?00000010?0010010?0?0?0?0100011000010?0?000011000001100000011000000010100100010010????0?0?
+dubu_2      0100000100000101000000100000001000000100000010000001000000100001000???0???010000100???01000001001001000100000001000000100001000001000010000010000010010001000000010000100000010000010001000001001000001000000010000000010001000000
+emem        001000001000010010000001000000??????0010000001000000100000010000100???0100001000000???0010000010??0010001000000010000001000?????001000010000010000??001000100000001000010000001000010000100000100100000100000001000000001000100000
+emem_umuaf  0001000001000100100000001000000100000001000000100000010000001000100???0???000100000???0001000010010010000100000??????0001000100000010000100001000001010000010000001000001000001000010000010000100010000010000000100010001000010000
+jafi        0000100000100100010000000100000010000??????00001000001000001000???0???0100010000000???0000100010??00100000100000010000010000010000001000010001000001000100001000000100000000000100001000001000100100000001000000010000001000001000
+karkar_yuri 000100000100010000100000001000000100000010000010000001000000010010010000100000100001000000010010010010000001000000100000100010000????0000100001000010???000001000???????????001000010000100000100001000100000000001000001000000100
+towei       000001000001010000010010000000??????0000010000001000001000100000010???0001010000000???0000010100??0100000000100000010000010?????010000000010000100??010000000010000010000100000010000100000100100000100000100010000000000100000010
+yuri        000100000100010000101000000110000011001000100010010000011000010010001101000000010100110000010010010011000100010010001000100000110????0000100010010010???00000001001001000011001001010000110000100001000000011000000101001000100001
 ;
 END;
 
 BEGIN ASSUMPTIONS;
-    charset ash = 1-2;
-    charset bark = 3-4;
-    charset belly = 5-6;
-    charset big = 7-8;
-    charset bird = 9-10;
-    charset bite = 11-12;
-    charset black = 13-14;
-    charset blood = 15-19;
-    charset bone = 20-24;
-    charset breast = 25-26;
-    charset cloud = 27-28;
-    charset cold = 29-30;
-    charset come = 31-38;
-    charset die = 39-46;
-    charset dog = 47-51;
-    charset drink = 52-56;
-    charset ear = 57-63;
-    charset eat = 64-65;
-    charset egg = 66-67;
-    charset eye = 68-75;
-    charset fire = 76-79;
-    charset fish = 80-83;
-    charset fly = 84-85;
-    charset full = 86-88;
-    charset give = 89-90;
-    charset good = 91-92;
-    charset hair = 93-94;
-    charset hand = 95-98;
-    charset head = 99-100;
-    charset hear = 101-106;
-    charset horn = 107-109;
-    charset hot = 110-111;
-    charset i = 112-117;
-    charset kill = 118-120;
-    charset knee = 121-126;
-    charset leaf = 127-130;
-    charset liver = 131-132;
-    charset long = 133-134;
-    charset louse = 135-138;
-    charset moon = 139-140;
-    charset mountain = 141-147;
-    charset mouth = 148-149;
-    charset name = 150-155;
-    charset new = 156-162;
-    charset night = 163-168;
-    charset nose = 169-173;
-    charset one = 174-179;
-    charset path = 180-184;
-    charset person = 185-187;
-    charset raining_or_rain = 188-189;
-    charset red = 190-191;
-    charset root = 192-193;
-    charset sand = 194-195;
-    charset say = 196-197;
-    charset see = 198-204;
-    charset sit = 205-206;
-    charset skin = 207-212;
-    charset sleep = 213-214;
-    charset small = 215-216;
-    charset smoke = 217-218;
-    charset stand = 219-220;
-    charset star = 221-223;
-    charset stone = 224-229;
-    charset sun = 230-232;
-    charset swim = 233-234;
-    charset tail = 235-236;
-    charset thou = 237-242;
-    charset tongue = 243-249;
-    charset tooth = 250-257;
-    charset tree = 258-267;
-    charset two = 268-271;
-    charset water = 272-277;
-    charset we = 278-282;
-    charset white = 283-284;
-    charset woman = 285-286;
+    charset blood = 1-6;
+    charset bone = 7-12;
+    charset breast = 13-14;
+    charset come = 15-21;
+    charset die = 22-29;
+    charset dog = 30-36;
+    charset drink = 37-43;
+    charset ear = 44-50;
+    charset eye = 51-57;
+    charset fire = 58-62;
+    charset fish = 63-66;
+    charset full = 67-70;
+    charset hand = 71-74;
+    charset hear = 75-82;
+    charset horn = 83-86;
+    charset knee = 87-92;
+    charset leaf = 93-95;
+    charset liver = 96-98;
+    charset louse = 99-102;
+    charset mountain = 103-110;
+    charset name = 111-117;
+    charset new = 118-122;
+    charset night = 123-128;
+    charset nose = 129-133;
+    charset one = 134-139;
+    charset path = 140-145;
+    charset person = 146-148;
+    charset pl = 149-152;
+    charset see = 153-160;
+    charset sg = 161-172;
+    charset skin = 173-178;
+    charset star = 179-182;
+    charset stone = 183-188;
+    charset sun = 189-191;
+    charset tongue = 192-197;
+    charset tooth = 198-205;
+    charset tree = 206-214;
+    charset two = 215-218;
+    charset water = 219-226;
 END;

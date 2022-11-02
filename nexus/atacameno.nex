@@ -1,0 +1,148 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=96;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_atacameno.blood.0020,
+        3 blood_atacameno.blood.0394,
+        4 bone_0ascertainment,
+        5 bone_atacameno.bone.0003,
+        6 breast_0ascertainment,
+        7 breast_atacameno.breast.0024,
+        8 breast_atacameno.breast.0144,
+        9 come_0ascertainment,
+        10 come_atacameno.come.0442,
+        11 die_0ascertainment,
+        12 die_atacameno.die.0011,
+        13 die_atacameno.die.0563,
+        14 dog_0ascertainment,
+        15 dog_atacameno.dog.0349,
+        16 dog_atacameno.dog.0350,
+        17 drink_0ascertainment,
+        18 drink_atacameno.drink.0058,
+        19 drink_atacameno.drink.0604,
+        20 ear_0ascertainment,
+        21 ear_atacameno.ear.0289,
+        22 ear_atacameno.ear.0290,
+        23 eye_0ascertainment,
+        24 eye_atacameno.eye.0472,
+        25 fire_0ascertainment,
+        26 fire_atacameno.fire.0194,
+        27 fire_atacameno.fire.0498,
+        28 fish_0ascertainment,
+        29 fish_atacameno.fish.0464,
+        30 full_0ascertainment,
+        31 full_atacameno.full.0606,
+        32 full_atacameno.full.0607,
+        33 hand_0ascertainment,
+        34 hand_atacameno.hand.0379,
+        35 hear_0ascertainment,
+        36 hear_atacameno.hear.0638,
+        37 knee_0ascertainment,
+        38 knee_atacameno.knee.0125,
+        39 knee_atacameno.knee.0419,
+        40 leaf_0ascertainment,
+        41 leaf_atacameno.leaf.0001,
+        42 liver_0ascertainment,
+        43 liver_atacameno.liver.0548,
+        44 louse_0ascertainment,
+        45 louse_atacameno.louse.0468,
+        46 mountain_0ascertainment,
+        47 mountain_atacameno.mountain.0514,
+        48 mountain_atacameno.mountain.0515,
+        49 name_0ascertainment,
+        50 name_atacameno.name.0053,
+        51 name_atacameno.name.0365,
+        52 new_0ascertainment,
+        53 new_atacameno.new.0133,
+        54 night_0ascertainment,
+        55 night_atacameno.night.0002,
+        56 night_atacameno.night.0005,
+        57 nose_0ascertainment,
+        58 nose_atacameno.nose.0510,
+        59 nose_atacameno.nose.0511,
+        60 one_0ascertainment,
+        61 one_atacameno.one.0391,
+        62 path_0ascertainment,
+        63 path_atacameno.path.0003,
+        64 pl_0ascertainment,
+        65 pl_atacameno.1pl.0526,
+        66 see_0ascertainment,
+        67 see_atacameno.see.0016,
+        68 sg_0ascertainment,
+        69 sg_atacameno.1sg.0304,
+        70 sg_atacameno.1sg.0305,
+        71 sg_atacameno.2sg.0370,
+        72 skin_0ascertainment,
+        73 skin_atacameno.skin.0544,
+        74 skin_atacameno.skin.0545,
+        75 star_0ascertainment,
+        76 star_atacameno.star.0083,
+        77 star_atacameno.star.0531,
+        78 stone_0ascertainment,
+        79 stone_atacameno.stone.0030,
+        80 stone_atacameno.stone.0699,
+        81 sun_0ascertainment,
+        82 sun_atacameno.sun.0234,
+        83 sun_atacameno.sun.0407,
+        84 tongue_0ascertainment,
+        85 tongue_atacameno.tongue.0001,
+        86 tongue_atacameno.tongue.0415,
+        87 tooth_0ascertainment,
+        88 tooth_atacameno.tooth.0490,
+        89 tooth_atacameno.tooth.0491,
+        90 tree_0ascertainment,
+        91 tree_atacameno.tree.0001,
+        92 two_0ascertainment,
+        93 two_atacameno.two.0001,
+        94 water_0ascertainment,
+        95 water_atacameno.water.0025,
+        96 water_atacameno.water.0381
+;
+
+MATRIX
+kunza 011010110101101101101101011010110101011010101011011010110110101010101110110110110110110110101011
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-5;
+    charset breast = 6-8;
+    charset come = 9-10;
+    charset die = 11-13;
+    charset dog = 14-16;
+    charset drink = 17-19;
+    charset ear = 20-22;
+    charset eye = 23-24;
+    charset fire = 25-27;
+    charset fish = 28-29;
+    charset full = 30-32;
+    charset hand = 33-34;
+    charset hear = 35-36;
+    charset knee = 37-39;
+    charset leaf = 40-41;
+    charset liver = 42-43;
+    charset louse = 44-45;
+    charset mountain = 46-48;
+    charset name = 49-51;
+    charset new = 52-53;
+    charset night = 54-56;
+    charset nose = 57-59;
+    charset one = 60-61;
+    charset path = 62-63;
+    charset pl = 64-65;
+    charset see = 66-67;
+    charset sg = 68-71;
+    charset skin = 72-74;
+    charset star = 75-77;
+    charset stone = 78-80;
+    charset sun = 81-83;
+    charset tongue = 84-86;
+    charset tooth = 87-89;
+    charset tree = 90-91;
+    charset two = 92-93;
+    charset water = 94-96;
+END;

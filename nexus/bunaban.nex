@@ -1,110 +1,109 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=2 NCHAR=96;
+    DIMENSIONS NTAX=2 NCHAR=95;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_2,
-        3 blood_3,
+        2 blood_bunaban.blood.0005,
+        3 blood_bunaban.blood.0006,
         4 bone_0ascertainment,
-        5 bone_4,
-        6 bone_5,
+        5 bone_bunaban.bone.0007,
+        6 bone_bunaban.bone.0008,
         7 breast_0ascertainment,
-        8 breast_6,
+        8 breast_bunaban.breast.0009,
         9 come_0ascertainment,
-        10 come_7,
+        10 come_bunaban.come.0010,
         11 die_0ascertainment,
-        12 die_8,
+        12 die_bunaban.die.0011,
         13 dog_0ascertainment,
-        14 dog_9,
+        14 dog_bunaban.dog.0012,
         15 drink_0ascertainment,
-        16 drink_10,
-        17 drink_11,
+        16 drink_bunaban.drink.0013,
+        17 drink_bunaban.drink.0014,
         18 ear_0ascertainment,
-        19 ear_12,
-        20 ear_13,
+        19 ear_bunaban.ear.0015,
+        20 ear_bunaban.ear.0016,
         21 eye_0ascertainment,
-        22 eye_14,
+        22 eye_bunaban.eye.0017,
         23 fire_0ascertainment,
-        24 fire_15,
-        25 fire_16,
+        24 fire_bunaban.fire.0018,
+        25 fire_bunaban.fire.0019,
         26 fish_0ascertainment,
-        27 fish_17,
+        27 fish_bunaban.fish.0020,
         28 full_0ascertainment,
-        29 full_18,
+        29 full_bunaban.full.0021,
         30 hand_0ascertainment,
-        31 hand_19,
+        31 hand_bunaban.hand.0022,
         32 hear_0ascertainment,
-        33 hear_20,
-        34 hear_21,
-        35 i_0ascertainment,
-        36 i_1,
-        37 knee_0ascertainment,
-        38 knee_22,
-        39 leaf_0ascertainment,
-        40 leaf_23,
-        41 leaf_24,
-        42 liver_0ascertainment,
-        43 liver_25,
-        44 louse_0ascertainment,
-        45 louse_26,
-        46 louse_27,
-        47 mountain_0ascertainment,
-        48 mountain_28,
-        49 name_0ascertainment,
-        50 name_29,
-        51 new_0ascertainment,
-        52 new_30,
-        53 night_0ascertainment,
-        54 night_31,
-        55 nose_0ascertainment,
-        56 nose_32,
-        57 nose_33,
-        58 one_0ascertainment,
-        59 one_34,
-        60 path_0ascertainment,
-        61 path_35,
-        62 path_36,
-        63 person_0ascertainment,
-        64 person_37,
-        65 person_38,
-        66 see_0ascertainment,
-        67 see_39,
-        68 skin_0ascertainment,
-        69 skin_40,
-        70 skin_41,
-        71 star_0ascertainment,
-        72 star_42,
-        73 stone_0ascertainment,
-        74 stone_43,
-        75 sun_0ascertainment,
-        76 sun_44,
-        77 sun_45,
-        78 thou_0ascertainment,
-        79 thou_57,
-        80 tongue_0ascertainment,
-        81 tongue_46,
-        82 tongue_47,
-        83 tooth_0ascertainment,
-        84 tooth_48,
-        85 tree_0ascertainment,
-        86 tree_49,
-        87 tree_50,
-        88 two_0ascertainment,
-        89 two_51,
-        90 two_52,
-        91 water_0ascertainment,
-        92 water_53,
-        93 water_54,
-        94 we_0ascertainment,
-        95 we_55,
-        96 we_56
+        33 hear_bunaban.hear.0023,
+        34 hear_bunaban.hear.0024,
+        35 knee_0ascertainment,
+        36 knee_bunaban.knee.0025,
+        37 leaf_0ascertainment,
+        38 leaf_bunaban.leaf.0026,
+        39 leaf_bunaban.leaf.0027,
+        40 liver_0ascertainment,
+        41 liver_bunaban.liver.0028,
+        42 louse_0ascertainment,
+        43 louse_bunaban.louse.0029,
+        44 louse_bunaban.louse.0030,
+        45 mountain_0ascertainment,
+        46 mountain_bunaban.mountain.0031,
+        47 name_0ascertainment,
+        48 name_bunaban.name.0032,
+        49 new_0ascertainment,
+        50 new_bunaban.new.0033,
+        51 night_0ascertainment,
+        52 night_bunaban.night.0034,
+        53 nose_0ascertainment,
+        54 nose_bunaban.nose.0035,
+        55 nose_bunaban.nose.0036,
+        56 one_0ascertainment,
+        57 one_bunaban.one.0037,
+        58 path_0ascertainment,
+        59 path_bunaban.path.0038,
+        60 path_bunaban.path.0039,
+        61 person_0ascertainment,
+        62 person_bunaban.person.0040,
+        63 person_bunaban.person.0041,
+        64 pl_0ascertainment,
+        65 pl_bunaban.1pl.0001,
+        66 pl_bunaban.1pl.0002,
+        67 see_0ascertainment,
+        68 see_bunaban.see.0042,
+        69 sg_0ascertainment,
+        70 sg_bunaban.1sg.0003,
+        71 sg_bunaban.2sg.0004,
+        72 skin_0ascertainment,
+        73 skin_bunaban.skin.0043,
+        74 skin_bunaban.skin.0044,
+        75 star_0ascertainment,
+        76 star_bunaban.star.0045,
+        77 stone_0ascertainment,
+        78 stone_bunaban.stone.0046,
+        79 sun_0ascertainment,
+        80 sun_bunaban.sun.0047,
+        81 sun_bunaban.sun.0048,
+        82 tongue_0ascertainment,
+        83 tongue_bunaban.tongue.0049,
+        84 tongue_bunaban.tongue.0050,
+        85 tooth_0ascertainment,
+        86 tooth_bunaban.tooth.0051,
+        87 tree_0ascertainment,
+        88 tree_bunaban.tree.0052,
+        89 tree_bunaban.tree.0053,
+        90 two_0ascertainment,
+        91 two_bunaban.two.0054,
+        92 two_bunaban.two.0055,
+        93 water_0ascertainment,
+        94 water_bunaban.water.0056,
+        95 water_bunaban.water.0057
 ;
 
 MATRIX
-bunaba     01001001010?01010010010100101010100101010010100?0?010?0100101001001010010?0100101001010010010010
-gooniyandi 001001010?010100100101001010?0100101010010100101010101001010010010100101010010100101001001001001
+bunaba     01001001010?010100100101001010101001010010100?0?010?0100101001001001011010010?01001001010010010
+gooniyandi 001001010?010100100101001010?010010100101001010101010010100100100101011001010100100101001001001
 ;
 END;
 
@@ -123,29 +122,28 @@ BEGIN ASSUMPTIONS;
     charset full = 28-29;
     charset hand = 30-31;
     charset hear = 32-34;
-    charset i = 35-36;
-    charset knee = 37-38;
-    charset leaf = 39-41;
-    charset liver = 42-43;
-    charset louse = 44-46;
-    charset mountain = 47-48;
-    charset name = 49-50;
-    charset new = 51-52;
-    charset night = 53-54;
-    charset nose = 55-57;
-    charset one = 58-59;
-    charset path = 60-62;
-    charset person = 63-65;
-    charset see = 66-67;
-    charset skin = 68-70;
-    charset star = 71-72;
-    charset stone = 73-74;
-    charset sun = 75-77;
-    charset thou = 78-79;
-    charset tongue = 80-82;
-    charset tooth = 83-84;
-    charset tree = 85-87;
-    charset two = 88-90;
-    charset water = 91-93;
-    charset we = 94-96;
+    charset knee = 35-36;
+    charset leaf = 37-39;
+    charset liver = 40-41;
+    charset louse = 42-44;
+    charset mountain = 45-46;
+    charset name = 47-48;
+    charset new = 49-50;
+    charset night = 51-52;
+    charset nose = 53-55;
+    charset one = 56-57;
+    charset path = 58-60;
+    charset person = 61-63;
+    charset pl = 64-66;
+    charset see = 67-68;
+    charset sg = 69-71;
+    charset skin = 72-74;
+    charset star = 75-76;
+    charset stone = 77-78;
+    charset sun = 79-81;
+    charset tongue = 82-84;
+    charset tooth = 85-86;
+    charset tree = 87-89;
+    charset two = 90-92;
+    charset water = 93-95;
 END;

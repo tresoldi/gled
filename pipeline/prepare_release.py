@@ -4,13 +4,15 @@
 Script for preparing data for release.
 """
 
+# TODO: have a global reference to the day, so there are no issues if running during midnight
+
 # Import Python standard libraries
-from pathlib import Path
 from collections import defaultdict
+from pathlib import Path
+import copy
+import csv
 import datetime
 import logging
-import csv
-import copy
 
 # Import other modules
 import common

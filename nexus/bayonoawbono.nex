@@ -1,0 +1,120 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=71;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_bayonoawbono.blood.0172,
+        3 bone_0ascertainment,
+        4 bone_bayonoawbono.bone.0079,
+        5 breast_0ascertainment,
+        6 breast_bayonoawbono.breast.0132,
+        7 come_0ascertainment,
+        8 come_bayonoawbono.come.0013,
+        9 die_0ascertainment,
+        10 die_bayonoawbono.die.0094,
+        11 dog_0ascertainment,
+        12 dog_bayonoawbono.dog.0158,
+        13 drink_0ascertainment,
+        14 drink_bayonoawbono.drink.0189,
+        15 ear_0ascertainment,
+        16 ear_bayonoawbono.ear.0074,
+        17 eye_0ascertainment,
+        18 eye_bayonoawbono.eye.0001,
+        19 fire_0ascertainment,
+        20 fire_bayonoawbono.fire.0163,
+        21 fish_0ascertainment,
+        22 fish_bayonoawbono.fish.0193,
+        23 hear_0ascertainment,
+        24 hear_bayonoawbono.hear.0225,
+        25 knee_0ascertainment,
+        26 knee_bayonoawbono.knee.0168,
+        27 leaf_0ascertainment,
+        28 leaf_bayonoawbono.leaf.0015,
+        29 leaf_bayonoawbono.leaf.0178,
+        30 liver_0ascertainment,
+        31 liver_bayonoawbono.liver.0197,
+        32 louse_0ascertainment,
+        33 louse_bayonoawbono.louse.0026,
+        34 mountain_0ascertainment,
+        35 mountain_bayonoawbono.mountain.0014,
+        36 name_0ascertainment,
+        37 name_bayonoawbono.name.0104,
+        38 new_0ascertainment,
+        39 new_bayonoawbono.new.0189,
+        40 night_0ascertainment,
+        41 night_bayonoawbono.night.0003,
+        42 night_bayonoawbono.night.0175,
+        43 nose_0ascertainment,
+        44 nose_bayonoawbono.nose.0204,
+        45 path_0ascertainment,
+        46 path_bayonoawbono.path.0188,
+        47 person_0ascertainment,
+        48 person_bayonoawbono.person.0242,
+        49 pl_0ascertainment,
+        50 pl_bayonoawbono.1pl.0089,
+        51 see_0ascertainment,
+        52 see_bayonoawbono.see.0005,
+        53 sg_0ascertainment,
+        54 sg_bayonoawbono.1sg.0128,
+        55 sg_bayonoawbono.2sg.0143,
+        56 skin_0ascertainment,
+        57 skin_bayonoawbono.skin.0001,
+        58 star_0ascertainment,
+        59 star_bayonoawbono.star.0163,
+        60 stone_0ascertainment,
+        61 stone_bayonoawbono.stone.0112,
+        62 sun_0ascertainment,
+        63 sun_bayonoawbono.sun.0178,
+        64 tongue_0ascertainment,
+        65 tongue_bayonoawbono.tongue.0165,
+        66 tooth_0ascertainment,
+        67 tooth_bayonoawbono.tooth.0199,
+        68 tree_0ascertainment,
+        69 tree_bayonoawbono.tree.0181,
+        70 water_0ascertainment,
+        71 water_bayonoawbono.water.0059
+;
+
+MATRIX
+bayono 01010101010101010101010101011010101010101101010101010110101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset hear = 23-24;
+    charset knee = 25-26;
+    charset leaf = 27-29;
+    charset liver = 30-31;
+    charset louse = 32-33;
+    charset mountain = 34-35;
+    charset name = 36-37;
+    charset new = 38-39;
+    charset night = 40-42;
+    charset nose = 43-44;
+    charset path = 45-46;
+    charset person = 47-48;
+    charset pl = 49-50;
+    charset see = 51-52;
+    charset sg = 53-55;
+    charset skin = 56-57;
+    charset star = 58-59;
+    charset stone = 60-61;
+    charset sun = 62-63;
+    charset tongue = 64-65;
+    charset tooth = 66-67;
+    charset tree = 68-69;
+    charset water = 70-71;
+END;

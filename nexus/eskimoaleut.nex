@@ -1,0 +1,291 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=13 NCHAR=225;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_eskimoaleut.blood.0014,
+        3 blood_eskimoaleut.blood.0015,
+        4 blood_eskimoaleut.blood.0016,
+        5 blood_eskimoaleut.blood.0017,
+        6 blood_eskimoaleut.blood.0018,
+        7 bone_0ascertainment,
+        8 bone_eskimoaleut.bone.0019,
+        9 bone_eskimoaleut.bone.0020,
+        10 bone_eskimoaleut.bone.0021,
+        11 bone_eskimoaleut.bone.0022,
+        12 bone_eskimoaleut.bone.0023,
+        13 breast_0ascertainment,
+        14 breast_eskimoaleut.breast.0024,
+        15 breast_eskimoaleut.breast.0025,
+        16 breast_eskimoaleut.breast.0026,
+        17 breast_eskimoaleut.breast.0027,
+        18 breast_eskimoaleut.breast.0028,
+        19 breast_eskimoaleut.breast.0029,
+        20 breast_eskimoaleut.breast.0030,
+        21 breast_eskimoaleut.breast.0031,
+        22 come_0ascertainment,
+        23 come_eskimoaleut.come.0032,
+        24 come_eskimoaleut.come.0033,
+        25 come_eskimoaleut.come.0034,
+        26 come_eskimoaleut.come.0035,
+        27 come_eskimoaleut.come.0036,
+        28 come_eskimoaleut.come.0037,
+        29 come_eskimoaleut.come.0038,
+        30 come_eskimoaleut.come.0039,
+        31 die_0ascertainment,
+        32 die_eskimoaleut.die.0040,
+        33 die_eskimoaleut.die.0041,
+        34 die_eskimoaleut.die.0042,
+        35 die_eskimoaleut.die.0043,
+        36 die_eskimoaleut.die.0044,
+        37 die_eskimoaleut.die.0045,
+        38 die_eskimoaleut.die.0046,
+        39 die_eskimoaleut.die.0047,
+        40 dog_0ascertainment,
+        41 dog_eskimoaleut.dog.0048,
+        42 dog_eskimoaleut.dog.0049,
+        43 dog_eskimoaleut.dog.0050,
+        44 dog_eskimoaleut.dog.0051,
+        45 drink_0ascertainment,
+        46 drink_eskimoaleut.drink.0052,
+        47 drink_eskimoaleut.drink.0053,
+        48 drink_eskimoaleut.drink.0054,
+        49 ear_0ascertainment,
+        50 ear_eskimoaleut.ear.0055,
+        51 ear_eskimoaleut.ear.0056,
+        52 ear_eskimoaleut.ear.0057,
+        53 eye_0ascertainment,
+        54 eye_eskimoaleut.eye.0058,
+        55 eye_eskimoaleut.eye.0059,
+        56 eye_eskimoaleut.eye.0060,
+        57 eye_eskimoaleut.eye.0061,
+        58 fire_0ascertainment,
+        59 fire_eskimoaleut.fire.0062,
+        60 fire_eskimoaleut.fire.0063,
+        61 fire_eskimoaleut.fire.0064,
+        62 fire_eskimoaleut.fire.0065,
+        63 fish_0ascertainment,
+        64 fish_eskimoaleut.fish.0066,
+        65 fish_eskimoaleut.fish.0067,
+        66 fish_eskimoaleut.fish.0068,
+        67 fish_eskimoaleut.fish.0069,
+        68 fish_eskimoaleut.fish.0070,
+        69 full_0ascertainment,
+        70 full_eskimoaleut.full.0071,
+        71 full_eskimoaleut.full.0072,
+        72 full_eskimoaleut.full.0073,
+        73 full_eskimoaleut.full.0074,
+        74 full_eskimoaleut.full.0075,
+        75 full_eskimoaleut.full.0076,
+        76 full_eskimoaleut.full.0077,
+        77 full_eskimoaleut.full.0078,
+        78 full_eskimoaleut.full.0079,
+        79 hand_0ascertainment,
+        80 hand_eskimoaleut.hand.0080,
+        81 hand_eskimoaleut.hand.0081,
+        82 hand_eskimoaleut.hand.0082,
+        83 hand_eskimoaleut.hand.0083,
+        84 hand_eskimoaleut.hand.0084,
+        85 hand_eskimoaleut.hand.0085,
+        86 hear_0ascertainment,
+        87 hear_eskimoaleut.hear.0086,
+        88 hear_eskimoaleut.hear.0087,
+        89 hear_eskimoaleut.hear.0088,
+        90 horn_0ascertainment,
+        91 horn_eskimoaleut.horn.0089,
+        92 horn_eskimoaleut.horn.0090,
+        93 horn_eskimoaleut.horn.0091,
+        94 knee_0ascertainment,
+        95 knee_eskimoaleut.knee.0092,
+        96 knee_eskimoaleut.knee.0093,
+        97 knee_eskimoaleut.knee.0094,
+        98 knee_eskimoaleut.knee.0095,
+        99 knee_eskimoaleut.knee.0096,
+        100 leaf_0ascertainment,
+        101 leaf_eskimoaleut.leaf.0097,
+        102 leaf_eskimoaleut.leaf.0098,
+        103 leaf_eskimoaleut.leaf.0099,
+        104 leaf_eskimoaleut.leaf.0100,
+        105 leaf_eskimoaleut.leaf.0101,
+        106 leaf_eskimoaleut.leaf.0102,
+        107 leaf_eskimoaleut.leaf.0103,
+        108 leaf_eskimoaleut.leaf.0104,
+        109 liver_0ascertainment,
+        110 liver_eskimoaleut.liver.0105,
+        111 liver_eskimoaleut.liver.0106,
+        112 liver_eskimoaleut.liver.0107,
+        113 louse_0ascertainment,
+        114 louse_eskimoaleut.louse.0108,
+        115 louse_eskimoaleut.louse.0109,
+        116 louse_eskimoaleut.louse.0110,
+        117 louse_eskimoaleut.louse.0111,
+        118 mountain_0ascertainment,
+        119 mountain_eskimoaleut.mountain.0112,
+        120 mountain_eskimoaleut.mountain.0113,
+        121 mountain_eskimoaleut.mountain.0114,
+        122 mountain_eskimoaleut.mountain.0115,
+        123 mountain_eskimoaleut.mountain.0116,
+        124 name_0ascertainment,
+        125 name_eskimoaleut.name.0117,
+        126 name_eskimoaleut.name.0118,
+        127 new_0ascertainment,
+        128 new_eskimoaleut.new.0119,
+        129 new_eskimoaleut.new.0120,
+        130 night_0ascertainment,
+        131 night_eskimoaleut.night.0121,
+        132 nose_0ascertainment,
+        133 nose_eskimoaleut.nose.0122,
+        134 nose_eskimoaleut.nose.0123,
+        135 nose_eskimoaleut.nose.0124,
+        136 one_0ascertainment,
+        137 one_eskimoaleut.one.0125,
+        138 one_eskimoaleut.one.0126,
+        139 path_0ascertainment,
+        140 path_eskimoaleut.path.0127,
+        141 path_eskimoaleut.path.0128,
+        142 path_eskimoaleut.path.0129,
+        143 path_eskimoaleut.path.0130,
+        144 person_0ascertainment,
+        145 person_eskimoaleut.person.0131,
+        146 person_eskimoaleut.person.0132,
+        147 person_eskimoaleut.person.0133,
+        148 person_eskimoaleut.person.0134,
+        149 person_eskimoaleut.person.0135,
+        150 person_eskimoaleut.person.0136,
+        151 person_eskimoaleut.person.0137,
+        152 pl_0ascertainment,
+        153 pl_eskimoaleut.1pl.0001,
+        154 pl_eskimoaleut.1pl.0002,
+        155 pl_eskimoaleut.1pl.0003,
+        156 pl_eskimoaleut.1pl.0004,
+        157 see_0ascertainment,
+        158 see_eskimoaleut.see.0138,
+        159 see_eskimoaleut.see.0139,
+        160 see_eskimoaleut.see.0140,
+        161 see_eskimoaleut.see.0141,
+        162 see_eskimoaleut.see.0142,
+        163 see_eskimoaleut.see.0143,
+        164 sg_0ascertainment,
+        165 sg_eskimoaleut.1sg.0005,
+        166 sg_eskimoaleut.1sg.0006,
+        167 sg_eskimoaleut.1sg.0007,
+        168 sg_eskimoaleut.2sg.0008,
+        169 sg_eskimoaleut.2sg.0009,
+        170 sg_eskimoaleut.2sg.0010,
+        171 sg_eskimoaleut.2sg.0011,
+        172 sg_eskimoaleut.2sg.0012,
+        173 sg_eskimoaleut.2sg.0013,
+        174 skin_0ascertainment,
+        175 skin_eskimoaleut.skin.0144,
+        176 skin_eskimoaleut.skin.0145,
+        177 skin_eskimoaleut.skin.0146,
+        178 skin_eskimoaleut.skin.0147,
+        179 skin_eskimoaleut.skin.0148,
+        180 skin_eskimoaleut.skin.0149,
+        181 star_0ascertainment,
+        182 star_eskimoaleut.star.0150,
+        183 star_eskimoaleut.star.0151,
+        184 star_eskimoaleut.star.0152,
+        185 star_eskimoaleut.star.0153,
+        186 star_eskimoaleut.star.0154,
+        187 star_eskimoaleut.star.0155,
+        188 stone_0ascertainment,
+        189 stone_eskimoaleut.stone.0156,
+        190 stone_eskimoaleut.stone.0157,
+        191 stone_eskimoaleut.stone.0158,
+        192 stone_eskimoaleut.stone.0159,
+        193 stone_eskimoaleut.stone.0160,
+        194 stone_eskimoaleut.stone.0161,
+        195 sun_0ascertainment,
+        196 sun_eskimoaleut.sun.0162,
+        197 sun_eskimoaleut.sun.0163,
+        198 sun_eskimoaleut.sun.0164,
+        199 sun_eskimoaleut.sun.0165,
+        200 tongue_0ascertainment,
+        201 tongue_eskimoaleut.tongue.0166,
+        202 tongue_eskimoaleut.tongue.0167,
+        203 tongue_eskimoaleut.tongue.0168,
+        204 tongue_eskimoaleut.tongue.0169,
+        205 tongue_eskimoaleut.tongue.0170,
+        206 tongue_eskimoaleut.tongue.0171,
+        207 tooth_0ascertainment,
+        208 tooth_eskimoaleut.tooth.0172,
+        209 tooth_eskimoaleut.tooth.0173,
+        210 tooth_eskimoaleut.tooth.0174,
+        211 tree_0ascertainment,
+        212 tree_eskimoaleut.tree.0175,
+        213 tree_eskimoaleut.tree.0176,
+        214 tree_eskimoaleut.tree.0177,
+        215 tree_eskimoaleut.tree.0178,
+        216 tree_eskimoaleut.tree.0179,
+        217 two_0ascertainment,
+        218 two_eskimoaleut.two.0180,
+        219 two_eskimoaleut.two.0181,
+        220 two_eskimoaleut.two.0182,
+        221 water_0ascertainment,
+        222 water_eskimoaleut.water.0183,
+        223 water_eskimoaleut.water.0184,
+        224 water_eskimoaleut.water.0185,
+        225 water_eskimoaleut.water.0186
+;
+
+MATRIX
+aleut                           010000010000010000000010000000010000000010000100010001000010000100000100000000010000001000???010000010000000010001000010000010010010100010010000100000001000010000001001000000100000010000001000000100001000010100010000010001000
+central_siberian_yupik          0010000?????0????????0010000000010000000001000010???00100001000001000?????????0010000001001000?????0????????00100????0001000100010100100010????0010000000100000100000010010000??????00010000001000000100001000010000110000100????
+c_yupik                         001000001000001000000001000000001000000001000010001000100001000010000?????????001000000100???00100000100000000100010000100001000101001000100100001000000????0010000001001000000100000010000001000000100001000000100010000???00100
+east_greenlandic                001000000100000100000000100100001000100000100001001100010000100000100010000000000110001110010000100000100000000100010000010011001010010001000100001000000010001000000010001000001000000010000001000001000001000001001000000100100
+inuktitut_eastern_canadian      001000001010000011000000010000000100000000100???00100000100101000100000100000000001000???00010010000000100010010000010000010100??0100100010001000001000000100??????00010001000010000000001000010000001000000100010000010001000100
+inupiaq                         0010000010000001000000001001000010000000001000010010000010010000010000001000010000010010000010010010000010000010000010010000??0010100010010????0000100000010000010000010001000010010000001000010000001000000100010000010001000100
+kalaallisut                     001000001000000001000000001100001000000000100001001000001001000000100010000000000010001000001001000000000100001000001000010010001010???001000100000101000010000001000010001000000100000001000010000001000000100010000001001000100
+kangiryuarmiutun                001000001000000001000000000100001000000000100001001000001001000001000001000000000010001000???001000000010000001000001001000010001010010001000100000100000010001000000010001000010010000001000010000001000000100010000010001000100
+northwest_alaska_inupiatun      001000001000000100000000100010001010011000100001001000001001000001000000110000000011001000001001000000001100001000001001000010001010010001001100000100000010000010100010001000000010000001000010000001000000100010000010001000110
+st_lawrence_yupik               000100000010010010000001000000001001000000100001001000100001000001010000001000001000001100???001000000000010001000001000100010001010010001000010010000100001000100000000000100010010000100000010010001000010000100001000001000100
+west_greenlandic                001000001000000001100000100001001000000000100001001000001001000000100010000000000010001000001001000000000100001000001000010010001010010001000100000100000010001000000010001000010000000001000010000001000000100010000001001000101
+yupik_central_siberian_chaplino 0000100000100000000100010000000010000000001000010010001000010000010000000001000000001001001000000100????????00100????00010001000101001000100001001000000010000010000001000010001000000010000001000000100001000010000100000100????
+yupik_sirenik                   0010010000010000000010????????0????????00001000100100010000100000100000000001000001000???01000010000????????0010000010001000??0010100100010000100000100000100??????000100000100000010000001000001000001000100001000?????001000100
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-6;
+    charset bone = 7-12;
+    charset breast = 13-21;
+    charset come = 22-30;
+    charset die = 31-39;
+    charset dog = 40-44;
+    charset drink = 45-48;
+    charset ear = 49-52;
+    charset eye = 53-57;
+    charset fire = 58-62;
+    charset fish = 63-68;
+    charset full = 69-78;
+    charset hand = 79-85;
+    charset hear = 86-89;
+    charset horn = 90-93;
+    charset knee = 94-99;
+    charset leaf = 100-108;
+    charset liver = 109-112;
+    charset louse = 113-117;
+    charset mountain = 118-123;
+    charset name = 124-126;
+    charset new = 127-129;
+    charset night = 130-131;
+    charset nose = 132-135;
+    charset one = 136-138;
+    charset path = 139-143;
+    charset person = 144-151;
+    charset pl = 152-156;
+    charset see = 157-163;
+    charset sg = 164-173;
+    charset skin = 174-180;
+    charset star = 181-187;
+    charset stone = 188-194;
+    charset sun = 195-199;
+    charset tongue = 200-206;
+    charset tooth = 207-210;
+    charset tree = 211-216;
+    charset two = 217-220;
+    charset water = 221-225;
+END;

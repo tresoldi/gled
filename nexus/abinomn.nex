@@ -1,0 +1,106 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=61;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_abinomn.blood.0010,
+        3 bone_0ascertainment,
+        4 bone_abinomn.bone.0010,
+        5 dog_0ascertainment,
+        6 dog_abinomn.dog.0009,
+        7 ear_0ascertainment,
+        8 ear_abinomn.ear.0009,
+        9 eye_0ascertainment,
+        10 eye_abinomn.eye.0011,
+        11 fire_0ascertainment,
+        12 fire_abinomn.fire.0013,
+        13 fish_0ascertainment,
+        14 fish_abinomn.fish.0009,
+        15 hand_0ascertainment,
+        16 hand_abinomn.hand.0011,
+        17 knee_0ascertainment,
+        18 knee_abinomn.knee.0003,
+        19 leaf_0ascertainment,
+        20 leaf_abinomn.leaf.0011,
+        21 liver_0ascertainment,
+        22 liver_abinomn.liver.0012,
+        23 louse_0ascertainment,
+        24 louse_abinomn.louse.0011,
+        25 mountain_0ascertainment,
+        26 mountain_abinomn.mountain.0008,
+        27 name_0ascertainment,
+        28 name_abinomn.name.0008,
+        29 night_0ascertainment,
+        30 night_abinomn.night.0002,
+        31 nose_0ascertainment,
+        32 nose_abinomn.nose.0011,
+        33 one_0ascertainment,
+        34 one_abinomn.one.0012,
+        35 path_0ascertainment,
+        36 path_abinomn.path.0010,
+        37 person_0ascertainment,
+        38 person_abinomn.person.0011,
+        39 pl_0ascertainment,
+        40 pl_abinomn.1pl.0004,
+        41 sg_0ascertainment,
+        42 sg_abinomn.1sg.0004,
+        43 sg_abinomn.2sg.0004,
+        44 skin_0ascertainment,
+        45 skin_abinomn.skin.0009,
+        46 star_0ascertainment,
+        47 star_abinomn.star.0012,
+        48 stone_0ascertainment,
+        49 stone_abinomn.stone.0013,
+        50 sun_0ascertainment,
+        51 sun_abinomn.sun.0012,
+        52 tongue_0ascertainment,
+        53 tongue_abinomn.tongue.0001,
+        54 tooth_0ascertainment,
+        55 tooth_abinomn.tooth.0010,
+        56 tree_0ascertainment,
+        57 tree_abinomn.tree.0008,
+        58 two_0ascertainment,
+        59 two_abinomn.two.0009,
+        60 water_0ascertainment,
+        61 water_abinomn.water.0009
+;
+
+MATRIX
+abinomn 0101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset dog = 5-6;
+    charset ear = 7-8;
+    charset eye = 9-10;
+    charset fire = 11-12;
+    charset fish = 13-14;
+    charset hand = 15-16;
+    charset knee = 17-18;
+    charset leaf = 19-20;
+    charset liver = 21-22;
+    charset louse = 23-24;
+    charset mountain = 25-26;
+    charset name = 27-28;
+    charset night = 29-30;
+    charset nose = 31-32;
+    charset one = 33-34;
+    charset path = 35-36;
+    charset person = 37-38;
+    charset pl = 39-40;
+    charset sg = 41-43;
+    charset skin = 44-45;
+    charset star = 46-47;
+    charset stone = 48-49;
+    charset sun = 50-51;
+    charset tongue = 52-53;
+    charset tooth = 54-55;
+    charset tree = 56-57;
+    charset two = 58-59;
+    charset water = 60-61;
+END;

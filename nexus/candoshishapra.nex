@@ -1,0 +1,122 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=72;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_candoshishapra.blood.0221,
+        3 bone_0ascertainment,
+        4 bone_candoshishapra.bone.0165,
+        5 breast_0ascertainment,
+        6 breast_candoshishapra.breast.0188,
+        7 come_0ascertainment,
+        8 come_candoshishapra.come.0226,
+        9 die_0ascertainment,
+        10 die_candoshishapra.die.0262,
+        11 dog_0ascertainment,
+        12 dog_candoshishapra.dog.0201,
+        13 drink_0ascertainment,
+        14 drink_candoshishapra.drink.0273,
+        15 ear_0ascertainment,
+        16 ear_candoshishapra.ear.0065,
+        17 eye_0ascertainment,
+        18 eye_candoshishapra.eye.0230,
+        19 fire_0ascertainment,
+        20 fire_candoshishapra.fire.0264,
+        21 fish_0ascertainment,
+        22 fish_candoshishapra.fish.0059,
+        23 hand_0ascertainment,
+        24 hand_candoshishapra.hand.0026,
+        25 hear_0ascertainment,
+        26 hear_candoshishapra.hear.0307,
+        27 knee_0ascertainment,
+        28 knee_candoshishapra.knee.0220,
+        29 leaf_0ascertainment,
+        30 leaf_candoshishapra.leaf.0068,
+        31 leaf_candoshishapra.leaf.0228,
+        32 liver_0ascertainment,
+        33 liver_candoshishapra.liver.0265,
+        34 louse_0ascertainment,
+        35 louse_candoshishapra.louse.0036,
+        36 mountain_0ascertainment,
+        37 mountain_candoshishapra.mountain.0244,
+        38 name_0ascertainment,
+        39 name_candoshishapra.name.0185,
+        40 new_0ascertainment,
+        41 new_candoshishapra.new.0243,
+        42 nose_0ascertainment,
+        43 nose_candoshishapra.nose.0259,
+        44 one_0ascertainment,
+        45 one_candoshishapra.one.0210,
+        46 path_0ascertainment,
+        47 path_candoshishapra.path.0256,
+        48 person_0ascertainment,
+        49 person_candoshishapra.person.0316,
+        50 pl_0ascertainment,
+        51 pl_candoshishapra.1pl.0247,
+        52 see_0ascertainment,
+        53 see_candoshishapra.see.0215,
+        54 sg_0ascertainment,
+        55 sg_candoshishapra.1sg.0014,
+        56 sg_candoshishapra.2sg.0185,
+        57 star_0ascertainment,
+        58 star_candoshishapra.star.0251,
+        59 stone_0ascertainment,
+        60 stone_candoshishapra.stone.0313,
+        61 sun_0ascertainment,
+        62 sun_candoshishapra.sun.0044,
+        63 tongue_0ascertainment,
+        64 tongue_candoshishapra.tongue.0213,
+        65 tooth_0ascertainment,
+        66 tooth_candoshishapra.tooth.0256,
+        67 tree_0ascertainment,
+        68 tree_candoshishapra.tree.0238,
+        69 two_0ascertainment,
+        70 two_candoshishapra.two.0186,
+        71 water_0ascertainment,
+        72 water_candoshishapra.water.0205
+;
+
+MATRIX
+candoshi 010101010101010101010101010101101010101010101010101010110101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset hand = 23-24;
+    charset hear = 25-26;
+    charset knee = 27-28;
+    charset leaf = 29-31;
+    charset liver = 32-33;
+    charset louse = 34-35;
+    charset mountain = 36-37;
+    charset name = 38-39;
+    charset new = 40-41;
+    charset nose = 42-43;
+    charset one = 44-45;
+    charset path = 46-47;
+    charset person = 48-49;
+    charset pl = 50-51;
+    charset see = 52-53;
+    charset sg = 54-56;
+    charset star = 57-58;
+    charset stone = 59-60;
+    charset sun = 61-62;
+    charset tongue = 63-64;
+    charset tooth = 65-66;
+    charset tree = 67-68;
+    charset two = 69-70;
+    charset water = 71-72;
+END;

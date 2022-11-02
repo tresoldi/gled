@@ -1,0 +1,219 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=6 NCHAR=160;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_chukotkokamchatkan.blood.0007,
+        3 bone_0ascertainment,
+        4 bone_chukotkokamchatkan.bone.0008,
+        5 bone_chukotkokamchatkan.bone.0009,
+        6 breast_0ascertainment,
+        7 breast_chukotkokamchatkan.breast.0010,
+        8 breast_chukotkokamchatkan.breast.0011,
+        9 breast_chukotkokamchatkan.breast.0012,
+        10 come_0ascertainment,
+        11 come_chukotkokamchatkan.come.0013,
+        12 come_chukotkokamchatkan.come.0014,
+        13 come_chukotkokamchatkan.come.0015,
+        14 come_chukotkokamchatkan.come.0016,
+        15 come_chukotkokamchatkan.come.0017,
+        16 die_0ascertainment,
+        17 die_chukotkokamchatkan.die.0018,
+        18 die_chukotkokamchatkan.die.0019,
+        19 die_chukotkokamchatkan.die.0020,
+        20 die_chukotkokamchatkan.die.0021,
+        21 die_chukotkokamchatkan.die.0022,
+        22 die_chukotkokamchatkan.die.0023,
+        23 dog_0ascertainment,
+        24 dog_chukotkokamchatkan.dog.0024,
+        25 dog_chukotkokamchatkan.dog.0025,
+        26 dog_chukotkokamchatkan.dog.0026,
+        27 dog_chukotkokamchatkan.dog.0027,
+        28 dog_chukotkokamchatkan.dog.0028,
+        29 dog_chukotkokamchatkan.dog.0029,
+        30 dog_chukotkokamchatkan.dog.0030,
+        31 drink_0ascertainment,
+        32 drink_chukotkokamchatkan.drink.0031,
+        33 drink_chukotkokamchatkan.drink.0032,
+        34 drink_chukotkokamchatkan.drink.0033,
+        35 drink_chukotkokamchatkan.drink.0034,
+        36 drink_chukotkokamchatkan.drink.0035,
+        37 drink_chukotkokamchatkan.drink.0036,
+        38 ear_0ascertainment,
+        39 ear_chukotkokamchatkan.ear.0037,
+        40 ear_chukotkokamchatkan.ear.0038,
+        41 eye_0ascertainment,
+        42 eye_chukotkokamchatkan.eye.0039,
+        43 eye_chukotkokamchatkan.eye.0040,
+        44 eye_chukotkokamchatkan.eye.0041,
+        45 eye_chukotkokamchatkan.eye.0042,
+        46 fire_0ascertainment,
+        47 fire_chukotkokamchatkan.fire.0043,
+        48 fire_chukotkokamchatkan.fire.0044,
+        49 fire_chukotkokamchatkan.fire.0045,
+        50 fish_0ascertainment,
+        51 fish_chukotkokamchatkan.fish.0046,
+        52 fish_chukotkokamchatkan.fish.0047,
+        53 fish_chukotkokamchatkan.fish.0048,
+        54 full_0ascertainment,
+        55 full_chukotkokamchatkan.full.0049,
+        56 full_chukotkokamchatkan.full.0050,
+        57 full_chukotkokamchatkan.full.0051,
+        58 hand_0ascertainment,
+        59 hand_chukotkokamchatkan.hand.0052,
+        60 hand_chukotkokamchatkan.hand.0053,
+        61 hear_0ascertainment,
+        62 hear_chukotkokamchatkan.hear.0054,
+        63 hear_chukotkokamchatkan.hear.0055,
+        64 horn_0ascertainment,
+        65 horn_chukotkokamchatkan.horn.0056,
+        66 horn_chukotkokamchatkan.horn.0057,
+        67 knee_0ascertainment,
+        68 knee_chukotkokamchatkan.knee.0058,
+        69 knee_chukotkokamchatkan.knee.0059,
+        70 leaf_0ascertainment,
+        71 leaf_chukotkokamchatkan.leaf.0060,
+        72 leaf_chukotkokamchatkan.leaf.0061,
+        73 liver_0ascertainment,
+        74 liver_chukotkokamchatkan.liver.0062,
+        75 liver_chukotkokamchatkan.liver.0063,
+        76 louse_0ascertainment,
+        77 louse_chukotkokamchatkan.louse.0064,
+        78 louse_chukotkokamchatkan.louse.0065,
+        79 mountain_0ascertainment,
+        80 mountain_chukotkokamchatkan.mountain.0066,
+        81 mountain_chukotkokamchatkan.mountain.0067,
+        82 mountain_chukotkokamchatkan.mountain.0068,
+        83 mountain_chukotkokamchatkan.mountain.0069,
+        84 mountain_chukotkokamchatkan.mountain.0070,
+        85 name_0ascertainment,
+        86 name_chukotkokamchatkan.name.0071,
+        87 name_chukotkokamchatkan.name.0072,
+        88 name_chukotkokamchatkan.name.0073,
+        89 new_0ascertainment,
+        90 new_chukotkokamchatkan.new.0074,
+        91 new_chukotkokamchatkan.new.0075,
+        92 night_0ascertainment,
+        93 night_chukotkokamchatkan.night.0076,
+        94 night_chukotkokamchatkan.night.0077,
+        95 night_chukotkokamchatkan.night.0078,
+        96 nose_0ascertainment,
+        97 nose_chukotkokamchatkan.nose.0079,
+        98 nose_chukotkokamchatkan.nose.0080,
+        99 nose_chukotkokamchatkan.nose.0081,
+        100 nose_chukotkokamchatkan.nose.0082,
+        101 one_0ascertainment,
+        102 one_chukotkokamchatkan.one.0083,
+        103 one_chukotkokamchatkan.one.0084,
+        104 path_0ascertainment,
+        105 path_chukotkokamchatkan.path.0085,
+        106 path_chukotkokamchatkan.path.0086,
+        107 path_chukotkokamchatkan.path.0087,
+        108 person_0ascertainment,
+        109 person_chukotkokamchatkan.person.0088,
+        110 person_chukotkokamchatkan.person.0089,
+        111 person_chukotkokamchatkan.person.0090,
+        112 pl_0ascertainment,
+        113 pl_chukotkokamchatkan.1pl.0001,
+        114 see_0ascertainment,
+        115 see_chukotkokamchatkan.see.0091,
+        116 see_chukotkokamchatkan.see.0092,
+        117 see_chukotkokamchatkan.see.0093,
+        118 see_chukotkokamchatkan.see.0094,
+        119 sg_0ascertainment,
+        120 sg_chukotkokamchatkan.1sg.0002,
+        121 sg_chukotkokamchatkan.2sg.0003,
+        122 sg_chukotkokamchatkan.2sg.0004,
+        123 sg_chukotkokamchatkan.2sg.0005,
+        124 sg_chukotkokamchatkan.2sg.0006,
+        125 skin_0ascertainment,
+        126 skin_chukotkokamchatkan.skin.0095,
+        127 skin_chukotkokamchatkan.skin.0096,
+        128 skin_chukotkokamchatkan.skin.0097,
+        129 skin_chukotkokamchatkan.skin.0098,
+        130 star_0ascertainment,
+        131 star_chukotkokamchatkan.star.0099,
+        132 star_chukotkokamchatkan.star.0100,
+        133 star_chukotkokamchatkan.star.0101,
+        134 star_chukotkokamchatkan.star.0102,
+        135 stone_0ascertainment,
+        136 stone_chukotkokamchatkan.stone.0103,
+        137 stone_chukotkokamchatkan.stone.0104,
+        138 stone_chukotkokamchatkan.stone.0105,
+        139 stone_chukotkokamchatkan.stone.0106,
+        140 stone_chukotkokamchatkan.stone.0107,
+        141 sun_0ascertainment,
+        142 sun_chukotkokamchatkan.sun.0108,
+        143 sun_chukotkokamchatkan.sun.0109,
+        144 sun_chukotkokamchatkan.sun.0110,
+        145 tongue_0ascertainment,
+        146 tongue_chukotkokamchatkan.tongue.0111,
+        147 tongue_chukotkokamchatkan.tongue.0112,
+        148 tooth_0ascertainment,
+        149 tooth_chukotkokamchatkan.tooth.0113,
+        150 tooth_chukotkokamchatkan.tooth.0114,
+        151 tree_0ascertainment,
+        152 tree_chukotkokamchatkan.tree.0115,
+        153 tree_chukotkokamchatkan.tree.0116,
+        154 tree_chukotkokamchatkan.tree.0117,
+        155 two_0ascertainment,
+        156 two_chukotkokamchatkan.two.0118,
+        157 two_chukotkokamchatkan.two.0119,
+        158 water_0ascertainment,
+        159 water_chukotkokamchatkan.water.0120,
+        160 water_chukotkokamchatkan.water.0121
+;
+
+MATRIX
+alutor    0101001000100100100010010000000100010010010000100010001000100100100100100100100100000100010010001000010010001000101010011010010000100001000001000100100100010010
+chukchee  0100101000100000010000010000000100001010010000010010001000100100100100100100100010000100010001000100010001000100101001011001010000110000100001000100100010010010
+itelmen   010100???0010000??????00100010001000000100100000100100???0010??0010010010010??00100000100010???000100010???00010100100010100001000001000010000100010010001001001
+koryak    0101001000100010101000000100000100001010010000100010000100100100100100100100100001100100010010001000010011001000101001011010010000000100100001000100100100010010
+n_itelmen 010100010000100000010000001001000110001000010000100100???0010010010010010010110010010011001000100010001000100010100100011100000100001000001000010010010001001001
+s_itelmen 01010000100010000001010000010000001000100000100010001000100100100100100100101000100000100??00010000100100010001010010001110000101000100001010???0010010001001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-9;
+    charset come = 10-15;
+    charset die = 16-22;
+    charset dog = 23-30;
+    charset drink = 31-37;
+    charset ear = 38-40;
+    charset eye = 41-45;
+    charset fire = 46-49;
+    charset fish = 50-53;
+    charset full = 54-57;
+    charset hand = 58-60;
+    charset hear = 61-63;
+    charset horn = 64-66;
+    charset knee = 67-69;
+    charset leaf = 70-72;
+    charset liver = 73-75;
+    charset louse = 76-78;
+    charset mountain = 79-84;
+    charset name = 85-88;
+    charset new = 89-91;
+    charset night = 92-95;
+    charset nose = 96-100;
+    charset one = 101-103;
+    charset path = 104-107;
+    charset person = 108-111;
+    charset pl = 112-113;
+    charset see = 114-118;
+    charset sg = 119-124;
+    charset skin = 125-129;
+    charset star = 130-134;
+    charset stone = 135-140;
+    charset sun = 141-144;
+    charset tongue = 145-147;
+    charset tooth = 148-150;
+    charset tree = 151-154;
+    charset two = 155-157;
+    charset water = 158-160;
+END;

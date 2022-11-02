@@ -1,0 +1,170 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=115;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_yukiwappo.blood.0007,
+        3 blood_yukiwappo.blood.0008,
+        4 bone_0ascertainment,
+        5 bone_yukiwappo.bone.0009,
+        6 bone_yukiwappo.bone.0010,
+        7 breast_0ascertainment,
+        8 breast_yukiwappo.breast.0011,
+        9 breast_yukiwappo.breast.0012,
+        10 come_0ascertainment,
+        11 come_yukiwappo.come.0013,
+        12 come_yukiwappo.come.0014,
+        13 die_0ascertainment,
+        14 die_yukiwappo.die.0015,
+        15 die_yukiwappo.die.0016,
+        16 die_yukiwappo.die.0017,
+        17 dog_0ascertainment,
+        18 dog_yukiwappo.dog.0018,
+        19 dog_yukiwappo.dog.0019,
+        20 drink_0ascertainment,
+        21 drink_yukiwappo.drink.0020,
+        22 drink_yukiwappo.drink.0021,
+        23 ear_0ascertainment,
+        24 ear_yukiwappo.ear.0022,
+        25 eye_0ascertainment,
+        26 eye_yukiwappo.eye.0023,
+        27 eye_yukiwappo.eye.0024,
+        28 fire_0ascertainment,
+        29 fire_yukiwappo.fire.0025,
+        30 fire_yukiwappo.fire.0026,
+        31 fish_0ascertainment,
+        32 fish_yukiwappo.fish.0027,
+        33 full_0ascertainment,
+        34 full_yukiwappo.full.0028,
+        35 hand_0ascertainment,
+        36 hand_yukiwappo.hand.0029,
+        37 hand_yukiwappo.hand.0030,
+        38 hear_0ascertainment,
+        39 hear_yukiwappo.hear.0031,
+        40 hear_yukiwappo.hear.0032,
+        41 horn_0ascertainment,
+        42 horn_yukiwappo.horn.0033,
+        43 knee_0ascertainment,
+        44 knee_yukiwappo.knee.0034,
+        45 knee_yukiwappo.knee.0035,
+        46 leaf_0ascertainment,
+        47 leaf_yukiwappo.leaf.0036,
+        48 leaf_yukiwappo.leaf.0037,
+        49 liver_0ascertainment,
+        50 liver_yukiwappo.liver.0038,
+        51 liver_yukiwappo.liver.0039,
+        52 liver_yukiwappo.liver.0040,
+        53 louse_0ascertainment,
+        54 louse_yukiwappo.louse.0041,
+        55 louse_yukiwappo.louse.0042,
+        56 mountain_0ascertainment,
+        57 mountain_yukiwappo.mountain.0043,
+        58 mountain_yukiwappo.mountain.0044,
+        59 name_0ascertainment,
+        60 name_yukiwappo.name.0045,
+        61 name_yukiwappo.name.0046,
+        62 new_0ascertainment,
+        63 new_yukiwappo.new.0047,
+        64 new_yukiwappo.new.0048,
+        65 night_0ascertainment,
+        66 night_yukiwappo.night.0049,
+        67 night_yukiwappo.night.0050,
+        68 nose_0ascertainment,
+        69 nose_yukiwappo.nose.0051,
+        70 nose_yukiwappo.nose.0052,
+        71 one_0ascertainment,
+        72 one_yukiwappo.one.0053,
+        73 one_yukiwappo.one.0054,
+        74 path_0ascertainment,
+        75 path_yukiwappo.path.0055,
+        76 path_yukiwappo.path.0056,
+        77 person_0ascertainment,
+        78 person_yukiwappo.person.0057,
+        79 pl_0ascertainment,
+        80 pl_yukiwappo.1pl.0001,
+        81 pl_yukiwappo.1pl.0002,
+        82 pl_yukiwappo.1pl.0003,
+        83 see_0ascertainment,
+        84 see_yukiwappo.see.0058,
+        85 see_yukiwappo.see.0059,
+        86 sg_0ascertainment,
+        87 sg_yukiwappo.1sg.0004,
+        88 sg_yukiwappo.1sg.0005,
+        89 sg_yukiwappo.2sg.0006,
+        90 skin_0ascertainment,
+        91 skin_yukiwappo.skin.0060,
+        92 skin_yukiwappo.skin.0061,
+        93 star_0ascertainment,
+        94 star_yukiwappo.star.0062,
+        95 star_yukiwappo.star.0063,
+        96 stone_0ascertainment,
+        97 stone_yukiwappo.stone.0064,
+        98 stone_yukiwappo.stone.0065,
+        99 sun_0ascertainment,
+        100 sun_yukiwappo.sun.0066,
+        101 sun_yukiwappo.sun.0067,
+        102 tongue_0ascertainment,
+        103 tongue_yukiwappo.tongue.0068,
+        104 tongue_yukiwappo.tongue.0069,
+        105 tooth_0ascertainment,
+        106 tooth_yukiwappo.tooth.0070,
+        107 tooth_yukiwappo.tooth.0071,
+        108 tree_0ascertainment,
+        109 tree_yukiwappo.tree.0072,
+        110 tree_yukiwappo.tree.0073,
+        111 two_0ascertainment,
+        112 two_yukiwappo.two.0074,
+        113 water_0ascertainment,
+        114 water_yukiwappo.water.0075,
+        115 water_yukiwappo.water.0076
+;
+
+MATRIX
+wappo 0100100100100101010010010100100101010010010100100100010010010010010010010010010100010010101001001001001001001001010
+yuki  001001001001001000100101001001010?0010010100100100110010010010010010010110010?0011001001100100100100100100101101001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-9;
+    charset come = 10-12;
+    charset die = 13-16;
+    charset dog = 17-19;
+    charset drink = 20-22;
+    charset ear = 23-24;
+    charset eye = 25-27;
+    charset fire = 28-30;
+    charset fish = 31-32;
+    charset full = 33-34;
+    charset hand = 35-37;
+    charset hear = 38-40;
+    charset horn = 41-42;
+    charset knee = 43-45;
+    charset leaf = 46-48;
+    charset liver = 49-52;
+    charset louse = 53-55;
+    charset mountain = 56-58;
+    charset name = 59-61;
+    charset new = 62-64;
+    charset night = 65-67;
+    charset nose = 68-70;
+    charset one = 71-73;
+    charset path = 74-76;
+    charset person = 77-78;
+    charset pl = 79-82;
+    charset see = 83-85;
+    charset sg = 86-89;
+    charset skin = 90-92;
+    charset star = 93-95;
+    charset stone = 96-98;
+    charset sun = 99-101;
+    charset tongue = 102-104;
+    charset tooth = 105-107;
+    charset tree = 108-110;
+    charset two = 111-112;
+    charset water = 113-115;
+END;

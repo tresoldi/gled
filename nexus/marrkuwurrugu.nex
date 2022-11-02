@@ -1,0 +1,124 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=74;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_marrkuwurrugu.blood.0317,
+        3 bone_0ascertainment,
+        4 bone_marrkuwurrugu.bone.0039,
+        5 come_0ascertainment,
+        6 come_marrkuwurrugu.come.0484,
+        7 die_0ascertainment,
+        8 die_marrkuwurrugu.die.0088,
+        9 dog_0ascertainment,
+        10 dog_marrkuwurrugu.dog.0015,
+        11 drink_0ascertainment,
+        12 drink_marrkuwurrugu.drink.0664,
+        13 ear_0ascertainment,
+        14 ear_marrkuwurrugu.ear.0312,
+        15 eye_0ascertainment,
+        16 eye_marrkuwurrugu.eye.0406,
+        17 fire_0ascertainment,
+        18 fire_marrkuwurrugu.fire.0012,
+        19 fish_0ascertainment,
+        20 fish_marrkuwurrugu.fish.0287,
+        21 full_0ascertainment,
+        22 full_marrkuwurrugu.full.0083,
+        23 hand_0ascertainment,
+        24 hand_marrkuwurrugu.hand.0413,
+        25 hear_0ascertainment,
+        26 hear_marrkuwurrugu.hear.0291,
+        27 knee_0ascertainment,
+        28 knee_marrkuwurrugu.knee.0450,
+        29 leaf_0ascertainment,
+        30 leaf_marrkuwurrugu.leaf.0002,
+        31 liver_0ascertainment,
+        32 liver_marrkuwurrugu.liver.0096,
+        33 louse_0ascertainment,
+        34 louse_marrkuwurrugu.louse.0211,
+        35 mountain_0ascertainment,
+        36 mountain_marrkuwurrugu.mountain.0014,
+        37 name_0ascertainment,
+        38 name_marrkuwurrugu.name.0019,
+        39 new_0ascertainment,
+        40 new_marrkuwurrugu.new.0508,
+        41 one_0ascertainment,
+        42 one_marrkuwurrugu.one.0010,
+        43 path_0ascertainment,
+        44 path_marrkuwurrugu.path.0017,
+        45 person_0ascertainment,
+        46 person_marrkuwurrugu.person.0702,
+        47 pl_0ascertainment,
+        48 pl_marrkuwurrugu.1pl.0083,
+        49 see_0ascertainment,
+        50 see_marrkuwurrugu.see.0315,
+        51 sg_0ascertainment,
+        52 sg_marrkuwurrugu.1sg.0070,
+        53 sg_marrkuwurrugu.1sg.0340,
+        54 sg_marrkuwurrugu.2sg.0082,
+        55 sg_marrkuwurrugu.2sg.0408,
+        56 skin_0ascertainment,
+        57 skin_marrkuwurrugu.skin.0593,
+        58 star_0ascertainment,
+        59 star_marrkuwurrugu.star.0575,
+        60 stone_0ascertainment,
+        61 stone_marrkuwurrugu.stone.0767,
+        62 sun_0ascertainment,
+        63 sun_marrkuwurrugu.sun.0027,
+        64 tongue_0ascertainment,
+        65 tongue_marrkuwurrugu.tongue.0091,
+        66 tooth_0ascertainment,
+        67 tooth_marrkuwurrugu.tooth.0532,
+        68 tree_0ascertainment,
+        69 tree_marrkuwurrugu.tree.0473,
+        70 two_0ascertainment,
+        71 two_marrkuwurrugu.two.0421,
+        72 two_marrkuwurrugu.two.0422,
+        73 water_0ascertainment,
+        74 water_marrkuwurrugu.water.0009
+;
+
+MATRIX
+margu 01010101010101010101010101010101010101010101010101011110101010101010101101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset come = 5-6;
+    charset die = 7-8;
+    charset dog = 9-10;
+    charset drink = 11-12;
+    charset ear = 13-14;
+    charset eye = 15-16;
+    charset fire = 17-18;
+    charset fish = 19-20;
+    charset full = 21-22;
+    charset hand = 23-24;
+    charset hear = 25-26;
+    charset knee = 27-28;
+    charset leaf = 29-30;
+    charset liver = 31-32;
+    charset louse = 33-34;
+    charset mountain = 35-36;
+    charset name = 37-38;
+    charset new = 39-40;
+    charset one = 41-42;
+    charset path = 43-44;
+    charset person = 45-46;
+    charset pl = 47-48;
+    charset see = 49-50;
+    charset sg = 51-55;
+    charset skin = 56-57;
+    charset star = 58-59;
+    charset stone = 60-61;
+    charset sun = 62-63;
+    charset tongue = 64-65;
+    charset tooth = 66-67;
+    charset tree = 68-69;
+    charset two = 70-72;
+    charset water = 73-74;
+END;

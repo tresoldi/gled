@@ -1,0 +1,236 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=8 NCHAR=175;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kiowatanoan.blood.0011,
+        3 blood_kiowatanoan.blood.0012,
+        4 blood_kiowatanoan.blood.0013,
+        5 blood_kiowatanoan.blood.0014,
+        6 blood_kiowatanoan.blood.0015,
+        7 blood_kiowatanoan.blood.0016,
+        8 bone_0ascertainment,
+        9 bone_kiowatanoan.bone.0017,
+        10 bone_kiowatanoan.bone.0018,
+        11 bone_kiowatanoan.bone.0019,
+        12 bone_kiowatanoan.bone.0020,
+        13 breast_0ascertainment,
+        14 breast_kiowatanoan.breast.0021,
+        15 breast_kiowatanoan.breast.0022,
+        16 breast_kiowatanoan.breast.0023,
+        17 come_0ascertainment,
+        18 come_kiowatanoan.come.0024,
+        19 come_kiowatanoan.come.0025,
+        20 come_kiowatanoan.come.0026,
+        21 die_0ascertainment,
+        22 die_kiowatanoan.die.0027,
+        23 die_kiowatanoan.die.0028,
+        24 die_kiowatanoan.die.0029,
+        25 die_kiowatanoan.die.0030,
+        26 die_kiowatanoan.die.0031,
+        27 dog_0ascertainment,
+        28 dog_kiowatanoan.dog.0032,
+        29 dog_kiowatanoan.dog.0033,
+        30 dog_kiowatanoan.dog.0034,
+        31 dog_kiowatanoan.dog.0035,
+        32 drink_0ascertainment,
+        33 drink_kiowatanoan.drink.0036,
+        34 drink_kiowatanoan.drink.0037,
+        35 drink_kiowatanoan.drink.0038,
+        36 drink_kiowatanoan.drink.0039,
+        37 drink_kiowatanoan.drink.0040,
+        38 drink_kiowatanoan.drink.0041,
+        39 ear_0ascertainment,
+        40 ear_kiowatanoan.ear.0042,
+        41 ear_kiowatanoan.ear.0043,
+        42 ear_kiowatanoan.ear.0044,
+        43 eye_0ascertainment,
+        44 eye_kiowatanoan.eye.0045,
+        45 eye_kiowatanoan.eye.0046,
+        46 fire_0ascertainment,
+        47 fire_kiowatanoan.fire.0047,
+        48 fish_0ascertainment,
+        49 fish_kiowatanoan.fish.0048,
+        50 fish_kiowatanoan.fish.0049,
+        51 full_0ascertainment,
+        52 full_kiowatanoan.full.0050,
+        53 full_kiowatanoan.full.0051,
+        54 full_kiowatanoan.full.0052,
+        55 full_kiowatanoan.full.0053,
+        56 hand_0ascertainment,
+        57 hand_kiowatanoan.hand.0054,
+        58 hear_0ascertainment,
+        59 hear_kiowatanoan.hear.0055,
+        60 hear_kiowatanoan.hear.0056,
+        61 horn_0ascertainment,
+        62 horn_kiowatanoan.horn.0057,
+        63 horn_kiowatanoan.horn.0058,
+        64 horn_kiowatanoan.horn.0059,
+        65 horn_kiowatanoan.horn.0060,
+        66 knee_0ascertainment,
+        67 knee_kiowatanoan.knee.0061,
+        68 knee_kiowatanoan.knee.0062,
+        69 knee_kiowatanoan.knee.0063,
+        70 knee_kiowatanoan.knee.0064,
+        71 leaf_0ascertainment,
+        72 leaf_kiowatanoan.leaf.0065,
+        73 leaf_kiowatanoan.leaf.0066,
+        74 leaf_kiowatanoan.leaf.0067,
+        75 leaf_kiowatanoan.leaf.0068,
+        76 liver_0ascertainment,
+        77 liver_kiowatanoan.liver.0069,
+        78 liver_kiowatanoan.liver.0070,
+        79 liver_kiowatanoan.liver.0071,
+        80 liver_kiowatanoan.liver.0072,
+        81 louse_0ascertainment,
+        82 louse_kiowatanoan.louse.0073,
+        83 louse_kiowatanoan.louse.0074,
+        84 louse_kiowatanoan.louse.0075,
+        85 louse_kiowatanoan.louse.0076,
+        86 louse_kiowatanoan.louse.0077,
+        87 mountain_0ascertainment,
+        88 mountain_kiowatanoan.mountain.0078,
+        89 mountain_kiowatanoan.mountain.0079,
+        90 name_0ascertainment,
+        91 name_kiowatanoan.name.0080,
+        92 name_kiowatanoan.name.0081,
+        93 new_0ascertainment,
+        94 new_kiowatanoan.new.0082,
+        95 new_kiowatanoan.new.0083,
+        96 new_kiowatanoan.new.0084,
+        97 new_kiowatanoan.new.0085,
+        98 new_kiowatanoan.new.0086,
+        99 night_0ascertainment,
+        100 night_kiowatanoan.night.0087,
+        101 night_kiowatanoan.night.0088,
+        102 night_kiowatanoan.night.0089,
+        103 nose_0ascertainment,
+        104 nose_kiowatanoan.nose.0090,
+        105 nose_kiowatanoan.nose.0091,
+        106 nose_kiowatanoan.nose.0092,
+        107 nose_kiowatanoan.nose.0093,
+        108 one_0ascertainment,
+        109 one_kiowatanoan.one.0094,
+        110 one_kiowatanoan.one.0095,
+        111 one_kiowatanoan.one.0096,
+        112 one_kiowatanoan.one.0097,
+        113 path_0ascertainment,
+        114 path_kiowatanoan.path.0098,
+        115 path_kiowatanoan.path.0099,
+        116 person_0ascertainment,
+        117 person_kiowatanoan.person.0100,
+        118 person_kiowatanoan.person.0101,
+        119 pl_0ascertainment,
+        120 pl_kiowatanoan.1pl.0001,
+        121 pl_kiowatanoan.1pl.0002,
+        122 pl_kiowatanoan.1pl.0003,
+        123 pl_kiowatanoan.1pl.0004,
+        124 pl_kiowatanoan.1pl.0005,
+        125 see_0ascertainment,
+        126 see_kiowatanoan.see.0102,
+        127 see_kiowatanoan.see.0103,
+        128 sg_0ascertainment,
+        129 sg_kiowatanoan.1sg.0006,
+        130 sg_kiowatanoan.2sg.0007,
+        131 sg_kiowatanoan.2sg.0008,
+        132 sg_kiowatanoan.2sg.0009,
+        133 sg_kiowatanoan.2sg.0010,
+        134 skin_0ascertainment,
+        135 skin_kiowatanoan.skin.0104,
+        136 skin_kiowatanoan.skin.0105,
+        137 skin_kiowatanoan.skin.0106,
+        138 skin_kiowatanoan.skin.0107,
+        139 star_0ascertainment,
+        140 star_kiowatanoan.star.0108,
+        141 star_kiowatanoan.star.0109,
+        142 star_kiowatanoan.star.0110,
+        143 stone_0ascertainment,
+        144 stone_kiowatanoan.stone.0111,
+        145 stone_kiowatanoan.stone.0112,
+        146 stone_kiowatanoan.stone.0113,
+        147 stone_kiowatanoan.stone.0114,
+        148 sun_0ascertainment,
+        149 sun_kiowatanoan.sun.0115,
+        150 sun_kiowatanoan.sun.0116,
+        151 sun_kiowatanoan.sun.0117,
+        152 sun_kiowatanoan.sun.0118,
+        153 sun_kiowatanoan.sun.0119,
+        154 tongue_0ascertainment,
+        155 tongue_kiowatanoan.tongue.0120,
+        156 tongue_kiowatanoan.tongue.0121,
+        157 tongue_kiowatanoan.tongue.0122,
+        158 tongue_kiowatanoan.tongue.0123,
+        159 tooth_0ascertainment,
+        160 tooth_kiowatanoan.tooth.0124,
+        161 tooth_kiowatanoan.tooth.0125,
+        162 tooth_kiowatanoan.tooth.0126,
+        163 tree_0ascertainment,
+        164 tree_kiowatanoan.tree.0127,
+        165 tree_kiowatanoan.tree.0128,
+        166 tree_kiowatanoan.tree.0129,
+        167 tree_kiowatanoan.tree.0130,
+        168 two_0ascertainment,
+        169 two_kiowatanoan.two.0131,
+        170 two_kiowatanoan.two.0132,
+        171 two_kiowatanoan.two.0133,
+        172 two_kiowatanoan.two.0134,
+        173 water_0ascertainment,
+        174 water_kiowatanoan.water.0135,
+        175 water_kiowatanoan.water.0136
+;
+
+MATRIX
+jemez                 0100001010000100010001000001000010000001000100101001000010100100001000010010100001000001001001000001000100001000010010010001010011000010000100010000100000100001000100001000010
+kiowa                 0010000010010010001000100000110001000000100010101000100010010010000100001000101001000000101000100000100010001000001001001000001010100001010010001000010000010000100010000100001
+tewa_arizona          0001000001000001000100010000010000100000010010100100010010010001000010000100010000100001000100010000100001000100010010000100010010010000100001000100001000010000010001000010010
+tewa_santa_clara      0000100001000001001000001000010000010000010010101000010010010001000010000100010000100101000100001000100001000100010010000100010010010000100001000100000100010000010001000010010
+tewa_san_juan_pueblo  0000100001000001001000001000010000010000010010101000010010010001000010000100010001100101000100001000100001000100010010000100010010010000100001000100001100010000010001000010010
+tiwa_northern_picuris 0000010000100001001000000100001000001000100010101000100010010000100001000010100101010001001000000100010000100010010010000010010010001000100001000010001000001000010000100001010
+tiwa_northern_taos    0000010000100001001000000100010000000100100010101000001010010000100001000010100000001001001000000100010000100010010010000010010010001000100001000010001000001000010001001000010
+tiwa_southern         0000010000100001001000000100001000001000100100101000100010010000100001000010100000010001001000000100010000100001010010000010010010001000100001000010000010000100010001000001010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-7;
+    charset bone = 8-12;
+    charset breast = 13-16;
+    charset come = 17-20;
+    charset die = 21-26;
+    charset dog = 27-31;
+    charset drink = 32-38;
+    charset ear = 39-42;
+    charset eye = 43-45;
+    charset fire = 46-47;
+    charset fish = 48-50;
+    charset full = 51-55;
+    charset hand = 56-57;
+    charset hear = 58-60;
+    charset horn = 61-65;
+    charset knee = 66-70;
+    charset leaf = 71-75;
+    charset liver = 76-80;
+    charset louse = 81-86;
+    charset mountain = 87-89;
+    charset name = 90-92;
+    charset new = 93-98;
+    charset night = 99-102;
+    charset nose = 103-107;
+    charset one = 108-112;
+    charset path = 113-115;
+    charset person = 116-118;
+    charset pl = 119-124;
+    charset see = 125-127;
+    charset sg = 128-133;
+    charset skin = 134-138;
+    charset star = 139-142;
+    charset stone = 143-147;
+    charset sun = 148-153;
+    charset tongue = 154-158;
+    charset tooth = 159-162;
+    charset tree = 163-167;
+    charset two = 168-172;
+    charset water = 173-175;
+END;

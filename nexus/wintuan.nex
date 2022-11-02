@@ -1,135 +1,134 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=2 NCHAR=121;
+    DIMENSIONS NTAX=2 NCHAR=120;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_3,
-        3 blood_4,
+        2 blood_wintuan.blood.0007,
+        3 blood_wintuan.blood.0008,
         4 bone_0ascertainment,
-        5 bone_5,
+        5 bone_wintuan.bone.0009,
         6 breast_0ascertainment,
-        7 breast_6,
-        8 breast_7,
-        9 breast_8,
+        7 breast_wintuan.breast.0010,
+        8 breast_wintuan.breast.0011,
+        9 breast_wintuan.breast.0012,
         10 come_0ascertainment,
-        11 come_10,
-        12 come_11,
-        13 come_9,
+        11 come_wintuan.come.0013,
+        12 come_wintuan.come.0014,
+        13 come_wintuan.come.0015,
         14 die_0ascertainment,
-        15 die_12,
-        16 die_13,
-        17 die_14,
+        15 die_wintuan.die.0016,
+        16 die_wintuan.die.0017,
+        17 die_wintuan.die.0018,
         18 dog_0ascertainment,
-        19 dog_15,
-        20 dog_16,
-        21 dog_17,
+        19 dog_wintuan.dog.0019,
+        20 dog_wintuan.dog.0020,
+        21 dog_wintuan.dog.0021,
         22 drink_0ascertainment,
-        23 drink_18,
-        24 drink_19,
-        25 drink_20,
+        23 drink_wintuan.drink.0022,
+        24 drink_wintuan.drink.0023,
+        25 drink_wintuan.drink.0024,
         26 ear_0ascertainment,
-        27 ear_21,
+        27 ear_wintuan.ear.0025,
         28 eye_0ascertainment,
-        29 eye_22,
-        30 eye_23,
+        29 eye_wintuan.eye.0026,
+        30 eye_wintuan.eye.0027,
         31 fire_0ascertainment,
-        32 fire_24,
-        33 fire_25,
+        32 fire_wintuan.fire.0028,
+        33 fire_wintuan.fire.0029,
         34 fish_0ascertainment,
-        35 fish_26,
-        36 fish_27,
+        35 fish_wintuan.fish.0030,
+        36 fish_wintuan.fish.0031,
         37 full_0ascertainment,
-        38 full_28,
-        39 full_29,
-        40 full_30,
+        38 full_wintuan.full.0032,
+        39 full_wintuan.full.0033,
+        40 full_wintuan.full.0034,
         41 hand_0ascertainment,
-        42 hand_31,
-        43 hand_32,
+        42 hand_wintuan.hand.0035,
+        43 hand_wintuan.hand.0036,
         44 hear_0ascertainment,
-        45 hear_33,
-        46 hear_34,
+        45 hear_wintuan.hear.0037,
+        46 hear_wintuan.hear.0038,
         47 horn_0ascertainment,
-        48 horn_35,
-        49 horn_36,
-        50 i_0ascertainment,
-        51 i_1,
-        52 i_2,
-        53 knee_0ascertainment,
-        54 knee_37,
-        55 knee_38,
-        56 knee_39,
-        57 leaf_0ascertainment,
-        58 leaf_40,
-        59 liver_0ascertainment,
-        60 liver_41,
-        61 liver_42,
-        62 louse_0ascertainment,
-        63 louse_43,
-        64 louse_44,
-        65 mountain_0ascertainment,
-        66 mountain_45,
-        67 mountain_46,
-        68 name_0ascertainment,
-        69 name_47,
-        70 new_0ascertainment,
-        71 new_48,
-        72 night_0ascertainment,
-        73 night_49,
-        74 night_50,
-        75 night_51,
-        76 nose_0ascertainment,
-        77 nose_52,
-        78 nose_53,
-        79 one_0ascertainment,
-        80 one_54,
-        81 one_55,
-        82 path_0ascertainment,
-        83 path_56,
-        84 person_0ascertainment,
-        85 person_57,
-        86 see_0ascertainment,
-        87 see_58,
-        88 skin_0ascertainment,
-        89 skin_59,
-        90 skin_60,
-        91 skin_61,
-        92 star_0ascertainment,
-        93 star_62,
-        94 star_63,
-        95 star_64,
-        96 stone_0ascertainment,
-        97 stone_65,
-        98 stone_66,
-        99 sun_0ascertainment,
-        100 sun_67,
-        101 sun_68,
-        102 thou_0ascertainment,
-        103 thou_81,
-        104 tongue_0ascertainment,
-        105 tongue_69,
-        106 tongue_70,
-        107 tooth_0ascertainment,
-        108 tooth_71,
-        109 tree_0ascertainment,
-        110 tree_72,
-        111 tree_73,
-        112 tree_74,
-        113 two_0ascertainment,
-        114 two_75,
-        115 two_76,
-        116 water_0ascertainment,
-        117 water_77,
-        118 we_0ascertainment,
-        119 we_78,
-        120 we_79,
-        121 we_80
+        48 horn_wintuan.horn.0039,
+        49 horn_wintuan.horn.0040,
+        50 knee_0ascertainment,
+        51 knee_wintuan.knee.0041,
+        52 knee_wintuan.knee.0042,
+        53 knee_wintuan.knee.0043,
+        54 leaf_0ascertainment,
+        55 leaf_wintuan.leaf.0044,
+        56 liver_0ascertainment,
+        57 liver_wintuan.liver.0045,
+        58 liver_wintuan.liver.0046,
+        59 louse_0ascertainment,
+        60 louse_wintuan.louse.0047,
+        61 mountain_0ascertainment,
+        62 mountain_wintuan.mountain.0048,
+        63 mountain_wintuan.mountain.0049,
+        64 mountain_wintuan.mountain.0050,
+        65 name_0ascertainment,
+        66 name_wintuan.name.0051,
+        67 new_0ascertainment,
+        68 new_wintuan.new.0052,
+        69 night_0ascertainment,
+        70 night_wintuan.night.0053,
+        71 night_wintuan.night.0054,
+        72 night_wintuan.night.0055,
+        73 nose_0ascertainment,
+        74 nose_wintuan.nose.0056,
+        75 nose_wintuan.nose.0057,
+        76 one_0ascertainment,
+        77 one_wintuan.one.0058,
+        78 one_wintuan.one.0059,
+        79 path_0ascertainment,
+        80 path_wintuan.path.0060,
+        81 person_0ascertainment,
+        82 person_wintuan.person.0061,
+        83 pl_0ascertainment,
+        84 pl_wintuan.1pl.0001,
+        85 pl_wintuan.1pl.0002,
+        86 pl_wintuan.1pl.0003,
+        87 see_0ascertainment,
+        88 see_wintuan.see.0062,
+        89 sg_0ascertainment,
+        90 sg_wintuan.1sg.0004,
+        91 sg_wintuan.1sg.0005,
+        92 sg_wintuan.2sg.0006,
+        93 skin_0ascertainment,
+        94 skin_wintuan.skin.0063,
+        95 skin_wintuan.skin.0064,
+        96 skin_wintuan.skin.0065,
+        97 star_0ascertainment,
+        98 star_wintuan.star.0066,
+        99 star_wintuan.star.0067,
+        100 star_wintuan.star.0068,
+        101 stone_0ascertainment,
+        102 stone_wintuan.stone.0069,
+        103 stone_wintuan.stone.0070,
+        104 sun_0ascertainment,
+        105 sun_wintuan.sun.0071,
+        106 sun_wintuan.sun.0072,
+        107 tongue_0ascertainment,
+        108 tongue_wintuan.tongue.0073,
+        109 tongue_wintuan.tongue.0074,
+        110 tooth_0ascertainment,
+        111 tooth_wintuan.tooth.0075,
+        112 tree_0ascertainment,
+        113 tree_wintuan.tree.0076,
+        114 tree_wintuan.tree.0077,
+        115 tree_wintuan.tree.0078,
+        116 two_0ascertainment,
+        117 two_wintuan.two.0079,
+        118 two_wintuan.two.0080,
+        119 water_0ascertainment,
+        120 water_wintuan.water.0081
 ;
 
 MATRIX
-patwin 010010100000101000100010001010010010010001001001001101000?010010011010?01000100100101010100010001001001010010100010010100
-wintu  0010100110110001100110011010010110010011001001001001001101001001010010100110010010101010011001100100101001010011001010011
+patwin 010010100010001000100010001010010010010001001001001000?010010101010?0100010010010101000101110100010001001001001010001001
+wintu  001010011001100110011001101001011001001100100100100110100101011001010011001001010100110101010011001100100100101001100101
 ;
 END;
 
@@ -149,29 +148,28 @@ BEGIN ASSUMPTIONS;
     charset hand = 41-43;
     charset hear = 44-46;
     charset horn = 47-49;
-    charset i = 50-52;
-    charset knee = 53-56;
-    charset leaf = 57-58;
-    charset liver = 59-61;
-    charset louse = 62-64;
-    charset mountain = 65-67;
-    charset name = 68-69;
-    charset new = 70-71;
-    charset night = 72-75;
-    charset nose = 76-78;
-    charset one = 79-81;
-    charset path = 82-83;
-    charset person = 84-85;
-    charset see = 86-87;
-    charset skin = 88-91;
-    charset star = 92-95;
-    charset stone = 96-98;
-    charset sun = 99-101;
-    charset thou = 102-103;
-    charset tongue = 104-106;
-    charset tooth = 107-108;
-    charset tree = 109-112;
-    charset two = 113-115;
-    charset water = 116-117;
-    charset we = 118-121;
+    charset knee = 50-53;
+    charset leaf = 54-55;
+    charset liver = 56-58;
+    charset louse = 59-60;
+    charset mountain = 61-64;
+    charset name = 65-66;
+    charset new = 67-68;
+    charset night = 69-72;
+    charset nose = 73-75;
+    charset one = 76-78;
+    charset path = 79-80;
+    charset person = 81-82;
+    charset pl = 83-86;
+    charset see = 87-88;
+    charset sg = 89-92;
+    charset skin = 93-96;
+    charset star = 97-100;
+    charset stone = 101-103;
+    charset sun = 104-106;
+    charset tongue = 107-109;
+    charset tooth = 110-111;
+    charset tree = 112-115;
+    charset two = 116-118;
+    charset water = 119-120;
 END;

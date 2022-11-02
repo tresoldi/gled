@@ -1,0 +1,282 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=13 NCHAR=217;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_tororya.blood.0023,
+        3 blood_tororya.blood.0024,
+        4 blood_tororya.blood.0025,
+        5 blood_tororya.blood.0026,
+        6 blood_tororya.blood.0027,
+        7 blood_tororya.blood.0028,
+        8 blood_tororya.blood.0029,
+        9 blood_tororya.blood.0030,
+        10 bone_0ascertainment,
+        11 bone_tororya.bone.0031,
+        12 bone_tororya.bone.0032,
+        13 breast_0ascertainment,
+        14 breast_tororya.breast.0033,
+        15 breast_tororya.breast.0034,
+        16 come_0ascertainment,
+        17 come_tororya.come.0035,
+        18 come_tororya.come.0036,
+        19 come_tororya.come.0037,
+        20 come_tororya.come.0038,
+        21 come_tororya.come.0039,
+        22 come_tororya.come.0040,
+        23 come_tororya.come.0041,
+        24 die_0ascertainment,
+        25 die_tororya.die.0042,
+        26 die_tororya.die.0043,
+        27 dog_0ascertainment,
+        28 dog_tororya.dog.0044,
+        29 dog_tororya.dog.0045,
+        30 dog_tororya.dog.0046,
+        31 dog_tororya.dog.0047,
+        32 dog_tororya.dog.0048,
+        33 dog_tororya.dog.0049,
+        34 drink_0ascertainment,
+        35 drink_tororya.drink.0050,
+        36 drink_tororya.drink.0051,
+        37 drink_tororya.drink.0052,
+        38 ear_0ascertainment,
+        39 ear_tororya.ear.0053,
+        40 ear_tororya.ear.0054,
+        41 ear_tororya.ear.0055,
+        42 ear_tororya.ear.0056,
+        43 ear_tororya.ear.0057,
+        44 ear_tororya.ear.0058,
+        45 eye_0ascertainment,
+        46 eye_tororya.eye.0059,
+        47 eye_tororya.eye.0060,
+        48 eye_tororya.eye.0061,
+        49 eye_tororya.eye.0062,
+        50 eye_tororya.eye.0063,
+        51 eye_tororya.eye.0064,
+        52 eye_tororya.eye.0065,
+        53 eye_tororya.eye.0066,
+        54 fire_0ascertainment,
+        55 fire_tororya.fire.0067,
+        56 fire_tororya.fire.0068,
+        57 fire_tororya.fire.0069,
+        58 fire_tororya.fire.0070,
+        59 fire_tororya.fire.0071,
+        60 fire_tororya.fire.0072,
+        61 fire_tororya.fire.0073,
+        62 fire_tororya.fire.0074,
+        63 fish_0ascertainment,
+        64 fish_tororya.fish.0075,
+        65 fish_tororya.fish.0076,
+        66 fish_tororya.fish.0077,
+        67 fish_tororya.fish.0078,
+        68 fish_tororya.fish.0079,
+        69 fish_tororya.fish.0080,
+        70 fish_tororya.fish.0081,
+        71 full_0ascertainment,
+        72 full_tororya.full.0082,
+        73 full_tororya.full.0083,
+        74 hand_0ascertainment,
+        75 hand_tororya.hand.0084,
+        76 hear_0ascertainment,
+        77 hear_tororya.hear.0085,
+        78 hear_tororya.hear.0086,
+        79 hear_tororya.hear.0087,
+        80 hear_tororya.hear.0088,
+        81 hear_tororya.hear.0089,
+        82 knee_0ascertainment,
+        83 knee_tororya.knee.0090,
+        84 knee_tororya.knee.0091,
+        85 knee_tororya.knee.0092,
+        86 knee_tororya.knee.0093,
+        87 knee_tororya.knee.0094,
+        88 knee_tororya.knee.0095,
+        89 leaf_0ascertainment,
+        90 leaf_tororya.leaf.0096,
+        91 liver_0ascertainment,
+        92 liver_tororya.liver.0097,
+        93 liver_tororya.liver.0098,
+        94 liver_tororya.liver.0099,
+        95 liver_tororya.liver.0100,
+        96 liver_tororya.liver.0101,
+        97 liver_tororya.liver.0102,
+        98 liver_tororya.liver.0103,
+        99 louse_0ascertainment,
+        100 louse_tororya.louse.0104,
+        101 louse_tororya.louse.0105,
+        102 mountain_0ascertainment,
+        103 mountain_tororya.mountain.0106,
+        104 mountain_tororya.mountain.0107,
+        105 mountain_tororya.mountain.0108,
+        106 name_0ascertainment,
+        107 name_tororya.name.0109,
+        108 new_0ascertainment,
+        109 new_tororya.new.0110,
+        110 new_tororya.new.0111,
+        111 new_tororya.new.0112,
+        112 new_tororya.new.0113,
+        113 new_tororya.new.0114,
+        114 new_tororya.new.0115,
+        115 new_tororya.new.0116,
+        116 night_0ascertainment,
+        117 night_tororya.night.0117,
+        118 night_tororya.night.0118,
+        119 night_tororya.night.0119,
+        120 night_tororya.night.0120,
+        121 night_tororya.night.0121,
+        122 night_tororya.night.0122,
+        123 night_tororya.night.0123,
+        124 night_tororya.night.0124,
+        125 nose_0ascertainment,
+        126 nose_tororya.nose.0125,
+        127 nose_tororya.nose.0126,
+        128 one_0ascertainment,
+        129 one_tororya.one.0127,
+        130 one_tororya.one.0128,
+        131 one_tororya.one.0129,
+        132 path_0ascertainment,
+        133 path_tororya.path.0130,
+        134 path_tororya.path.0131,
+        135 path_tororya.path.0132,
+        136 path_tororya.path.0133,
+        137 person_0ascertainment,
+        138 person_tororya.person.0134,
+        139 person_tororya.person.0135,
+        140 person_tororya.person.0136,
+        141 person_tororya.person.0137,
+        142 person_tororya.person.0138,
+        143 person_tororya.person.0139,
+        144 person_tororya.person.0140,
+        145 pl_0ascertainment,
+        146 pl_tororya.1pl.0001,
+        147 pl_tororya.1pl.0002,
+        148 pl_tororya.1pl.0003,
+        149 pl_tororya.1pl.0004,
+        150 pl_tororya.1pl.0005,
+        151 pl_tororya.1pl.0006,
+        152 pl_tororya.1pl.0007,
+        153 pl_tororya.1pl.0008,
+        154 pl_tororya.1pl.0009,
+        155 pl_tororya.1pl.0010,
+        156 pl_tororya.1pl.0011,
+        157 see_0ascertainment,
+        158 see_tororya.see.0141,
+        159 see_tororya.see.0142,
+        160 see_tororya.see.0143,
+        161 see_tororya.see.0144,
+        162 see_tororya.see.0145,
+        163 see_tororya.see.0146,
+        164 see_tororya.see.0147,
+        165 see_tororya.see.0148,
+        166 see_tororya.see.0149,
+        167 see_tororya.see.0150,
+        168 sg_0ascertainment,
+        169 sg_tororya.1sg.0012,
+        170 sg_tororya.1sg.0013,
+        171 sg_tororya.1sg.0014,
+        172 sg_tororya.1sg.0015,
+        173 sg_tororya.1sg.0016,
+        174 sg_tororya.2sg.0017,
+        175 sg_tororya.2sg.0018,
+        176 sg_tororya.2sg.0019,
+        177 sg_tororya.2sg.0020,
+        178 sg_tororya.2sg.0021,
+        179 sg_tororya.2sg.0022,
+        180 skin_0ascertainment,
+        181 skin_tororya.skin.0151,
+        182 skin_tororya.skin.0152,
+        183 star_0ascertainment,
+        184 star_tororya.star.0153,
+        185 star_tororya.star.0154,
+        186 star_tororya.star.0155,
+        187 star_tororya.star.0156,
+        188 star_tororya.star.0157,
+        189 star_tororya.star.0158,
+        190 stone_0ascertainment,
+        191 stone_tororya.stone.0159,
+        192 stone_tororya.stone.0160,
+        193 stone_tororya.stone.0161,
+        194 stone_tororya.stone.0162,
+        195 stone_tororya.stone.0163,
+        196 stone_tororya.stone.0164,
+        197 sun_0ascertainment,
+        198 sun_tororya.sun.0165,
+        199 sun_tororya.sun.0166,
+        200 sun_tororya.sun.0167,
+        201 sun_tororya.sun.0168,
+        202 sun_tororya.sun.0169,
+        203 tongue_0ascertainment,
+        204 tongue_tororya.tongue.0170,
+        205 tooth_0ascertainment,
+        206 tooth_tororya.tooth.0171,
+        207 tooth_tororya.tooth.0172,
+        208 tooth_tororya.tooth.0173,
+        209 tree_0ascertainment,
+        210 tree_tororya.tree.0174,
+        211 tree_tororya.tree.0175,
+        212 two_0ascertainment,
+        213 two_tororya.two.0176,
+        214 two_tororya.two.0177,
+        215 two_tororya.two.0178,
+        216 water_0ascertainment,
+        217 water_tororya.water.0179
+;
+
+MATRIX
+benaraf   01000000001001001000000010010000001000100000010000000010000000010000000??0?0100000100000010100000001001000101000000010000000010010001000010000000100000000000100000000001000010000001001000000100000010000010100010010001
+berik_3   0010000000100100010000000100100000100001000000100000000100000000100000010010010000010000010010000001001000100100000010000000010001001000001000000010010000000100000010001000111000001000100000100000010000010010010001001
+betaf     00010000001001001000000001010000001000100000010000000000100000000100000??0?0100000100000010001000001001000101000000001000000010000101000010000000001000000000100000000001000001000001001000000100000010000010001010010001
+dabe      00010000001001001000000001010000001000100000000100000000010000010000000??0?0100000010000010100000001001000101000000010000000010000101000010000000100000000000010000000001000000100001001000000010000010000010010010010001
+dineor    00001000001001000010000010000100001000100000000010000000001000000010000??0?0001000001000010000100001001000100010000000100000010000101000000100000000100000000001000000000100000010001000010000001000001000010001010010001
+itik_2    000001001010010000010000100??????01000100000000001000000000100010000000??010000110000101010???????01001000100001000010010000010000101001010000000000010000000100000000001000001000001001000000100000000100010010010010001
+jofotek   00000100001001000000100010000010001000100000001000000000000010000010000??0?0010000100000010100000001000100100001000000001000010000101000010000000000001000000000100000000010001000001001000000000100000100010010010010001
+keder     01000010001001001000000001010000001000001000000100000000010000000001000??0?0100000100000010000010001001000101000000010000000010000101000000010000001000000000000010000001000000001001000001000000010010000010010010010001
+kwesten_2 00000010001001001000000001000001000100000100000000100000010000000000100??0?0100000010000010000001001001000?00000100000000100001000101000000001000000000100000000001000001000001000001001000000100000000010010010010010001
+kwinsu    00010000000101001000000001010000001000000010010000000000010000010000000??0?0100000010000010000001001001000100000010010000010010000101000010000000000000010000000000100000001000000101000000100100000010000010001010010001
+mander_2  000001000010001000000100100??????01000100000001000000000000010000010000??010100000100000010???????01000100100001000000001000010000100100010000010000000001000000000010001000001000001001000000000100000100010010001010001
+orya      0000000100010100000000100100000010001001000000000001000000000100000001001010010000000010010000000100100010100000001000000001010000100010000000100000000000100000000001001000010000000100000010000001000001010???010000101
+vitou     01000000001001001000000001010000001000000001000000001000100000000100000??0?0100000100000010001000001001000101000000001000000010000101000010000000000000000010000000000101000001000001000000100010000010000010001010010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-9;
+    charset bone = 10-12;
+    charset breast = 13-15;
+    charset come = 16-23;
+    charset die = 24-26;
+    charset dog = 27-33;
+    charset drink = 34-37;
+    charset ear = 38-44;
+    charset eye = 45-53;
+    charset fire = 54-62;
+    charset fish = 63-70;
+    charset full = 71-73;
+    charset hand = 74-75;
+    charset hear = 76-81;
+    charset knee = 82-88;
+    charset leaf = 89-90;
+    charset liver = 91-98;
+    charset louse = 99-101;
+    charset mountain = 102-105;
+    charset name = 106-107;
+    charset new = 108-115;
+    charset night = 116-124;
+    charset nose = 125-127;
+    charset one = 128-131;
+    charset path = 132-136;
+    charset person = 137-144;
+    charset pl = 145-156;
+    charset see = 157-167;
+    charset sg = 168-179;
+    charset skin = 180-182;
+    charset star = 183-189;
+    charset stone = 190-196;
+    charset sun = 197-202;
+    charset tongue = 203-204;
+    charset tooth = 205-208;
+    charset tree = 209-211;
+    charset two = 212-215;
+    charset water = 216-217;
+END;

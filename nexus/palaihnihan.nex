@@ -5,147 +5,147 @@ BEGIN DATA;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
-        2 blood_3,
+        2 blood_palaihnihan.blood.0008,
         3 bone_0ascertainment,
-        4 bone_4,
-        5 bone_5,
+        4 bone_palaihnihan.bone.0009,
+        5 bone_palaihnihan.bone.0010,
         6 breast_0ascertainment,
-        7 breast_6,
-        8 breast_7,
+        7 breast_palaihnihan.breast.0011,
+        8 breast_palaihnihan.breast.0012,
         9 come_0ascertainment,
-        10 come_10,
-        11 come_11,
-        12 come_8,
-        13 come_9,
+        10 come_palaihnihan.come.0013,
+        11 come_palaihnihan.come.0014,
+        12 come_palaihnihan.come.0015,
+        13 come_palaihnihan.come.0016,
         14 die_0ascertainment,
-        15 die_12,
-        16 die_13,
-        17 die_14,
+        15 die_palaihnihan.die.0017,
+        16 die_palaihnihan.die.0018,
+        17 die_palaihnihan.die.0019,
         18 dog_0ascertainment,
-        19 dog_15,
-        20 dog_16,
-        21 dog_17,
+        19 dog_palaihnihan.dog.0020,
+        20 dog_palaihnihan.dog.0021,
+        21 dog_palaihnihan.dog.0022,
         22 drink_0ascertainment,
-        23 drink_18,
-        24 drink_19,
-        25 drink_20,
-        26 ear_0ascertainment,
-        27 ear_21,
-        28 ear_22,
-        29 eye_0ascertainment,
-        30 eye_23,
-        31 eye_24,
-        32 fire_0ascertainment,
-        33 fire_25,
-        34 fire_26,
-        35 fire_27,
-        36 fish_0ascertainment,
-        37 fish_28,
-        38 fish_29,
-        39 full_0ascertainment,
-        40 full_30,
-        41 hand_0ascertainment,
-        42 hand_31,
-        43 hand_32,
-        44 hand_33,
+        23 drink_palaihnihan.drink.0023,
+        24 drink_palaihnihan.drink.0024,
+        25 drink_palaihnihan.drink.0025,
+        26 drink_palaihnihan.drink.0026,
+        27 ear_0ascertainment,
+        28 ear_palaihnihan.ear.0027,
+        29 ear_palaihnihan.ear.0028,
+        30 eye_0ascertainment,
+        31 eye_palaihnihan.eye.0029,
+        32 eye_palaihnihan.eye.0030,
+        33 fire_0ascertainment,
+        34 fire_palaihnihan.fire.0031,
+        35 fire_palaihnihan.fire.0032,
+        36 fire_palaihnihan.fire.0033,
+        37 fish_0ascertainment,
+        38 fish_palaihnihan.fish.0034,
+        39 fish_palaihnihan.fish.0035,
+        40 full_0ascertainment,
+        41 full_palaihnihan.full.0036,
+        42 hand_0ascertainment,
+        43 hand_palaihnihan.hand.0037,
+        44 hand_palaihnihan.hand.0038,
         45 hear_0ascertainment,
-        46 hear_34,
-        47 hear_35,
-        48 hear_36,
+        46 hear_palaihnihan.hear.0039,
+        47 hear_palaihnihan.hear.0040,
+        48 hear_palaihnihan.hear.0041,
         49 horn_0ascertainment,
-        50 horn_37,
-        51 horn_38,
-        52 i_0ascertainment,
-        53 i_1,
-        54 i_2,
-        55 knee_0ascertainment,
-        56 knee_39,
-        57 knee_40,
-        58 leaf_0ascertainment,
-        59 leaf_41,
-        60 leaf_42,
-        61 leaf_43,
-        62 liver_0ascertainment,
-        63 liver_44,
-        64 liver_45,
-        65 louse_0ascertainment,
-        66 louse_46,
-        67 louse_47,
-        68 mountain_0ascertainment,
-        69 mountain_48,
-        70 mountain_49,
-        71 name_0ascertainment,
-        72 name_50,
-        73 name_51,
-        74 name_52,
-        75 new_0ascertainment,
-        76 new_53,
-        77 new_54,
-        78 new_55,
-        79 night_0ascertainment,
-        80 night_56,
-        81 night_57,
-        82 night_58,
-        83 nose_0ascertainment,
-        84 nose_59,
-        85 nose_60,
-        86 nose_61,
-        87 one_0ascertainment,
-        88 one_62,
-        89 one_63,
-        90 one_64,
-        91 path_0ascertainment,
-        92 path_65,
-        93 path_66,
-        94 person_0ascertainment,
-        95 person_67,
-        96 person_68,
+        50 horn_palaihnihan.horn.0042,
+        51 horn_palaihnihan.horn.0043,
+        52 knee_0ascertainment,
+        53 knee_palaihnihan.knee.0044,
+        54 knee_palaihnihan.knee.0045,
+        55 knee_palaihnihan.knee.0046,
+        56 leaf_0ascertainment,
+        57 leaf_palaihnihan.leaf.0047,
+        58 leaf_palaihnihan.leaf.0048,
+        59 leaf_palaihnihan.leaf.0049,
+        60 liver_0ascertainment,
+        61 liver_palaihnihan.liver.0050,
+        62 liver_palaihnihan.liver.0051,
+        63 louse_0ascertainment,
+        64 louse_palaihnihan.louse.0052,
+        65 louse_palaihnihan.louse.0053,
+        66 mountain_0ascertainment,
+        67 mountain_palaihnihan.mountain.0054,
+        68 mountain_palaihnihan.mountain.0055,
+        69 name_0ascertainment,
+        70 name_palaihnihan.name.0056,
+        71 name_palaihnihan.name.0057,
+        72 name_palaihnihan.name.0058,
+        73 new_0ascertainment,
+        74 new_palaihnihan.new.0059,
+        75 new_palaihnihan.new.0060,
+        76 new_palaihnihan.new.0061,
+        77 night_0ascertainment,
+        78 night_palaihnihan.night.0062,
+        79 night_palaihnihan.night.0063,
+        80 night_palaihnihan.night.0064,
+        81 nose_0ascertainment,
+        82 nose_palaihnihan.nose.0065,
+        83 nose_palaihnihan.nose.0066,
+        84 one_0ascertainment,
+        85 one_palaihnihan.one.0067,
+        86 one_palaihnihan.one.0068,
+        87 one_palaihnihan.one.0069,
+        88 path_0ascertainment,
+        89 path_palaihnihan.path.0070,
+        90 path_palaihnihan.path.0071,
+        91 person_0ascertainment,
+        92 person_palaihnihan.person.0072,
+        93 person_palaihnihan.person.0073,
+        94 pl_0ascertainment,
+        95 pl_palaihnihan.1pl.0001,
+        96 pl_palaihnihan.1pl.0002,
         97 see_0ascertainment,
-        98 see_69,
-        99 see_70,
-        100 see_71,
-        101 skin_0ascertainment,
-        102 skin_72,
-        103 skin_73,
-        104 skin_74,
-        105 star_0ascertainment,
-        106 star_75,
-        107 star_76,
-        108 stone_0ascertainment,
-        109 stone_77,
-        110 stone_78,
-        111 stone_79,
-        112 sun_0ascertainment,
-        113 sun_80,
-        114 sun_81,
-        115 sun_82,
-        116 thou_0ascertainment,
-        117 thou_96,
-        118 thou_97,
-        119 tongue_0ascertainment,
-        120 tongue_83,
-        121 tooth_0ascertainment,
-        122 tooth_84,
-        123 tooth_85,
-        124 tree_0ascertainment,
-        125 tree_86,
-        126 tree_87,
-        127 tree_88,
-        128 tree_89,
-        129 two_0ascertainment,
-        130 two_90,
-        131 water_0ascertainment,
-        132 water_91,
-        133 water_92,
-        134 we_0ascertainment,
-        135 we_93,
-        136 we_94,
-        137 we_95
+        98 see_palaihnihan.see.0074,
+        99 see_palaihnihan.see.0075,
+        100 see_palaihnihan.see.0076,
+        101 sg_0ascertainment,
+        102 sg_palaihnihan.1sg.0003,
+        103 sg_palaihnihan.1sg.0004,
+        104 sg_palaihnihan.1sg.0005,
+        105 sg_palaihnihan.2sg.0006,
+        106 sg_palaihnihan.2sg.0007,
+        107 skin_0ascertainment,
+        108 skin_palaihnihan.skin.0077,
+        109 skin_palaihnihan.skin.0078,
+        110 skin_palaihnihan.skin.0079,
+        111 star_0ascertainment,
+        112 star_palaihnihan.star.0080,
+        113 star_palaihnihan.star.0081,
+        114 stone_0ascertainment,
+        115 stone_palaihnihan.stone.0082,
+        116 stone_palaihnihan.stone.0083,
+        117 stone_palaihnihan.stone.0084,
+        118 sun_0ascertainment,
+        119 sun_palaihnihan.sun.0085,
+        120 sun_palaihnihan.sun.0086,
+        121 sun_palaihnihan.sun.0087,
+        122 sun_palaihnihan.sun.0088,
+        123 tongue_0ascertainment,
+        124 tongue_palaihnihan.tongue.0089,
+        125 tongue_palaihnihan.tongue.0090,
+        126 tooth_0ascertainment,
+        127 tooth_palaihnihan.tooth.0091,
+        128 tooth_palaihnihan.tooth.0092,
+        129 tree_0ascertainment,
+        130 tree_palaihnihan.tree.0093,
+        131 tree_palaihnihan.tree.0094,
+        132 tree_palaihnihan.tree.0095,
+        133 two_0ascertainment,
+        134 two_palaihnihan.two.0096,
+        135 water_0ascertainment,
+        136 water_palaihnihan.water.0097,
+        137 water_palaihnihan.water.0098
 ;
 
 MATRIX
-achumawi 01011010010100101010101010100100100010010100010101001001101000110100100101010101010100010001001001000101010010001000100101001010010100100
-atsugewi 010100010010100100010001000100100110010?0011001000100100100110010010010010001000100011001100100100110010001001100110010100100101010010011
+achumawi 01011010010100101010101010010010010001001010010101001010100011010010010101010101010010001001001001000100100101010010001010010010010101010
+atsugewi 0101000100101001000100010100100100110010?001001000100100011001001001001000100010001001100100100100110011010010001001100101001001001001001
 ;
 END;
 
@@ -156,38 +156,37 @@ BEGIN ASSUMPTIONS;
     charset come = 9-13;
     charset die = 14-17;
     charset dog = 18-21;
-    charset drink = 22-25;
-    charset ear = 26-28;
-    charset eye = 29-31;
-    charset fire = 32-35;
-    charset fish = 36-38;
-    charset full = 39-40;
-    charset hand = 41-44;
+    charset drink = 22-26;
+    charset ear = 27-29;
+    charset eye = 30-32;
+    charset fire = 33-36;
+    charset fish = 37-39;
+    charset full = 40-41;
+    charset hand = 42-44;
     charset hear = 45-48;
     charset horn = 49-51;
-    charset i = 52-54;
-    charset knee = 55-57;
-    charset leaf = 58-61;
-    charset liver = 62-64;
-    charset louse = 65-67;
-    charset mountain = 68-70;
-    charset name = 71-74;
-    charset new = 75-78;
-    charset night = 79-82;
-    charset nose = 83-86;
-    charset one = 87-90;
-    charset path = 91-93;
-    charset person = 94-96;
+    charset knee = 52-55;
+    charset leaf = 56-59;
+    charset liver = 60-62;
+    charset louse = 63-65;
+    charset mountain = 66-68;
+    charset name = 69-72;
+    charset new = 73-76;
+    charset night = 77-80;
+    charset nose = 81-83;
+    charset one = 84-87;
+    charset path = 88-90;
+    charset person = 91-93;
+    charset pl = 94-96;
     charset see = 97-100;
-    charset skin = 101-104;
-    charset star = 105-107;
-    charset stone = 108-111;
-    charset sun = 112-115;
-    charset thou = 116-118;
-    charset tongue = 119-120;
-    charset tooth = 121-123;
-    charset tree = 124-128;
-    charset two = 129-130;
-    charset water = 131-133;
-    charset we = 134-137;
+    charset sg = 101-106;
+    charset skin = 107-110;
+    charset star = 111-113;
+    charset stone = 114-117;
+    charset sun = 118-122;
+    charset tongue = 123-125;
+    charset tooth = 126-128;
+    charset tree = 129-132;
+    charset two = 133-134;
+    charset water = 135-137;
 END;
