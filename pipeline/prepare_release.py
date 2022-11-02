@@ -54,7 +54,7 @@ def output_nexus(charstates, matrix, assumptions, family):
     buffer.append("END;")
 
     # Open file and write
-    nexus_file = BASE_PATH.parent / "nexus" / f"{common.slug(family)}.nex"
+    nexus_file = BASE_PATH.parent / "nexus" / f"{common.slug(family, level='full')}.nex"
     with open(nexus_file, "w", encoding="utf-8") as handler:
         handler.write("\n".join(buffer))
         handler.write("\n")
@@ -65,7 +65,7 @@ def build_nexus(data):
     # most efficient implementation, but works fine for this purpose
     data = copy.copy(data)
     for entry in data:
-        entry["CONCEPT"] = common.slug(entry["CONCEPT"], drop_parentheses=True)
+        entry["CONCEPT"] = common.slug(entry["CONCEPT"], level="full")
 
     # Collect cogset and language info for building NEXUS files as sorted lists
     logging.info("Collecting data for NEXUS files...")
@@ -286,8 +286,8 @@ def main():
     build_metadata()
 
     # Build nexus files
-    # logging.info("Building NEXUS files...")
-    # build_nexus(release_data)
+    logging.info("Building NEXUS files...")
+    build_nexus(release_data)
 
 
 if __name__ == "__main__":
