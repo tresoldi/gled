@@ -9,12 +9,10 @@ import csv
 import logging
 import random
 import re
-import string
 
 # Import 3rd-party labels
 import lingpy
 from lingpy.compare.lexstat import LexStat
-from unidecode import unidecode
 
 # Import local modules and functions
 from common import slug
@@ -24,7 +22,7 @@ BASE_PATH = Path(__file__).parent
 ROOT_PATH = BASE_PATH.parent
 
 # Set a flag for development, leading to faster execution
-DEVEL = False
+DEVEL = True
 
 # Glottolog family names (after normalization) to be dropped (note
 # that some have already been dropped in the source by Jaeger)
@@ -118,11 +116,17 @@ def read_jaeger():
             # Extend the data with the current entry; we keep track of the IDs
             # TODO: pick the "best" doculect for each glottocode
             if glottolog_family not in DROP_FAMILY:
+                # If no glottolog name is provided, repeat the ASJP name
+                if not glottoname:
+                    lang_name = lang_id
+                else:
+                    lang_name = glottoname
+
                 data.append(
                     {
                         "ID": f"{lang_id}.{concept}",
                         "LANG_ID": lang_id,
-                        "LANGUAGE_NAME": glottoname,
+                        "LANGUAGE_NAME": lang_name,
                         "GLOTTOFAMILY": glottolog_family,
                         "GLOTTOCODE": glottocode,
                         "CONCEPT": concept,
@@ -236,10 +240,19 @@ def add_lingpy_cogs(data):
 
     # Collect data for each family
     new_cogs = {}
+    count = 0  # only used when the DEVEL flag is true
     for family, entries in lingpy_data.items():
         # Break if the list is too big
         if len(entries) > 10000:
             continue
+
+        # If running when the DEVEL flag is true, for quick running,
+        # make sure to only perform lingpy detection for the first
+        # families
+        if DEVEL:
+            count += 1
+            if count == 5:
+                break
 
         # Break if there is a single language
         # TODO: should we keep this? lingpy might give better results here

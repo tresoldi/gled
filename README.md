@@ -2,11 +2,11 @@
 
 
 [![Release](https://img.shields.io/badge/Release-20221102-informational)](https://img.shields.io/badge/Release-20221102-informational)
-[![Lemmas](https://img.shields.io/badge/Lemmas-263374-success)](https://img.shields.io/badge/Lemmas-263374-success)
-[![Languages](https://img.shields.io/badge/Languages-6586-success)](https://img.shields.io/badge/Languages-6586-success)
-[![Families](https://img.shields.io/badge/Families-344-success)](https://img.shields.io/badge/Families-344-success)
-[![Cognatesets](https://img.shields.io/badge/Cognatesets-48622-success)](https://img.shields.io/badge/Cognatesets-48622-success)
-[![Tokens](https://img.shields.io/badge/Tokens-1938322-success)](https://img.shields.io/badge/Tokens-1938322-success)
+[![Lemmas](https://img.shields.io/badge/Lemmas-26951-success)](https://img.shields.io/badge/Lemmas-26951-success)
+[![Languages](https://img.shields.io/badge/Languages-6454-success)](https://img.shields.io/badge/Languages-6454-success)
+[![Families](https://img.shields.io/badge/Families-341-success)](https://img.shields.io/badge/Families-341-success)
+[![Cognatesets](https://img.shields.io/badge/Cognatesets-11495-success)](https://img.shields.io/badge/Cognatesets-11495-success)
+[![Tokens](https://img.shields.io/badge/Tokens-197731-success)](https://img.shields.io/badge/Tokens-197731-success)
     
 
 [![CC-BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
@@ -17,11 +17,11 @@
 
 The 20221102 release comprises:
 
-  - Entries: 263374
-  - Doculects: 6586
-  - Families: 344 (including isolates)
-  - Cognate sets: 48622
-  - Tokens: 1938322
+  - Entries: 26951
+  - Doculects: 6454
+  - Families: 341 (including isolates)
+  - Cognate sets: 11495
+  - Tokens: 197731
 
 
 

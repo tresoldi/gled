@@ -7,7 +7,7 @@ import re
 import string
 
 # Import 3rd-party libraries
-import unidecode
+from unidecode import unidecode
 
 # Import MPI-SHH libraries
 from pyglottolog import Glottolog
@@ -26,6 +26,7 @@ def get_glottolog(glottolog_path=None):
     glottolog = Glottolog(glottolog_path)
 
     return glottolog
+
 
 def slug(label: str, level: str) -> str:
     """

@@ -133,6 +133,12 @@ def build_released_data(languoids):
     with open(fulldata_file, encoding="utf-8") as handler:
         data = list(csv.DictReader(handler))
 
+    # Collect all COGIDs to provide a purely numerical index
+    cogid_map = {
+        cogid: idx + 1
+        for idx, cogid in enumerate(sorted(set([row["COGID"] for row in data])))
+    }
+
     # Collect fields as defined in the main released file and sort them
     logging.info("Processing and sorting data...")
     release_data = []
@@ -159,6 +165,7 @@ def build_released_data(languoids):
                 "IPA": entry["TOKENS"],
                 "ALIGNMENT": entry["ALIGNMENT"],
                 "COGSET": entry["COGID"],
+                "COGSET_INT": cogid_map[entry["COGID"]],
             }
         )
 
@@ -196,6 +203,7 @@ def write_release_data(release_data):
                 "IPA",
                 "ALIGNMENT",
                 "COGSET",
+                "COGSET_INT",
             ],
         )
         writer.writeheader()
@@ -242,6 +250,22 @@ The {today.strftime('%Y%m%d')} release comprises:
         handler.write(readme)
 
 
+def build_metadata():
+    with open(BASE_PATH / "etc" / "gled.template.resource.yaml") as handler:
+        source = handler.read()
+
+    today = datetime.date.today()
+    release = today.strftime("%Y%m%d")
+    source = source.replace("{{RELEASE}}", release)
+
+    with open(
+        BASE_PATH.parent / "data" / f"gled.{release}.resource.yaml",
+        "w",
+        encoding="utf-8",
+    ) as handler:
+        handler.write(source)
+
+
 def main():
     """
     Script entry point.
@@ -259,6 +283,7 @@ def main():
     release_data = build_released_data(languoids)
     write_release_data(release_data)
     build_readme(release_data)
+    build_metadata()
 
     # Build nexus files
     # logging.info("Building NEXUS files...")
