@@ -1,12 +1,31 @@
 # Functions and data shared among different scripts
 
 # Import Python standard libraries
+from pathlib import Path
 import logging
-import string
 import re
+import string
 
 # Import 3rd-party libraries
 import unidecode
+
+# Import MPI-SHH libraries
+from pyglottolog import Glottolog
+
+
+def get_glottolog(glottolog_path=None):
+    """
+    Instantiates and returns a Glottolog object.
+    """
+
+    # If glottolog path was not provided, default to ~/.config/cldf/glottolog
+    if not glottolog_path:
+        glottolog_path = Path.home() / ".config" / "cldf" / "glottolog"
+        glottolog_path = glottolog_path.as_posix()
+
+    glottolog = Glottolog(glottolog_path)
+
+    return glottolog
 
 def slug(label: str, level: str) -> str:
     """

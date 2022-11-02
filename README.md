@@ -22,7 +22,7 @@ The 20221102 release comprises:
   - Families: 344 (including isolates)
   - Cognate sets: 48622
   - Tokens: 1938322
-    
+
 
 
 ## Contents

@@ -126,7 +126,7 @@ def build_nexus(data):
         output_nexus(charstates, matrix, assumptions, family)
 
 
-def build_released_data():
+def build_released_data(languoids):
     # Load data
     logging.info("Reading data...")
     fulldata_file = BASE_PATH / "output" / "full_data.csv"
@@ -135,23 +135,33 @@ def build_released_data():
 
     # Collect fields as defined in the main released file and sort them
     logging.info("Processing and sorting data...")
-    release_data = [
-        {
-            "ID": entry["ID"],
-            "DOCULECT": entry["LANG_ID"],
-            "LANGUAGE_NAME": entry["LANGUAGE_NAME"],
-            "FAMILY": entry["GLOTTOFAMILY"],
-            "GLOTTOCODE": entry["GLOTTOCODE"],
-            "CONCEPT": entry["CONCEPT"],
-            "CONCEPTICON_ID": entry["CONCEPTICON_ID"],
-            "ASJP_FORM": entry["ASJP_FORM"],
-            "FORM": entry["TOKENS"].replace(" ", ""),
-            "IPA": entry["TOKENS"],
-            "ALIGNMENT": entry["ALIGNMENT"],
-            "COGSET": entry["COGID"],
-        }
-        for entry in data
-    ]
+    release_data = []
+    for entry in data:
+        # Get Glottolog name, if any
+        if entry["GLOTTOCODE"] in languoids:
+            glottolog_name = languoids[entry["GLOTTOCODE"]].name
+        else:
+            glottolog_name = ""
+
+        # Append data
+        release_data.append(
+            {
+                "ID": entry["ID"],
+                "DOCULECT": entry["LANG_ID"],
+                "LANGUAGE_NAME": entry["LANGUAGE_NAME"],
+                "GLOTTOCODE": entry["GLOTTOCODE"],
+                "GLOTTOLOG_NAME": glottolog_name,
+                "FAMILY": entry["GLOTTOFAMILY"],
+                "CONCEPT": entry["CONCEPT"],
+                "CONCEPTICON_ID": entry["CONCEPTICON_ID"],
+                "ASJP_FORM": entry["ASJP_FORM"],
+                "FORM": entry["TOKENS"].replace(" ", ""),
+                "IPA": entry["TOKENS"],
+                "ALIGNMENT": entry["ALIGNMENT"],
+                "COGSET": entry["COGID"],
+            }
+        )
+
     release_data = sorted(
         release_data, key=lambda e: (e["FAMILY"], e["COGSET"], e["ID"])
     )
@@ -160,6 +170,10 @@ def build_released_data():
 
 
 def write_release_data(release_data):
+    """
+    Write release data to disk.
+    """
+
     # Write output file
     today = datetime.date.today()
     output_file = BASE_PATH.parent / "data" / f"gled.{today.strftime('%Y%m%d')}.tsv"
@@ -172,8 +186,9 @@ def write_release_data(release_data):
                 "ID",
                 "DOCULECT",
                 "LANGUAGE_NAME",
-                "FAMILY",
                 "GLOTTOCODE",
+                "GLOTTOLOG_NAME",
+                "FAMILY",
                 "CONCEPT",
                 "CONCEPTICON_ID",
                 "ASJP_FORM",
@@ -232,7 +247,16 @@ def main():
     Script entry point.
     """
 
-    release_data = build_released_data()
+    # Instantiate `glottolog` object and cache languoids
+    logging.info("Caching Glottolog languoids...")
+    glottolog = common.get_glottolog()
+    languoids = {}
+    for lang in glottolog.languoids():
+        languoids[lang.glottocode] = lang
+    logging.info(f"Cached {len(languoids)} languoids.")
+
+    # Actually build the data and files
+    release_data = build_released_data(languoids)
     write_release_data(release_data)
     build_readme(release_data)
 
