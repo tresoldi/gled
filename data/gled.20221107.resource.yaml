@@ -1,0 +1,68 @@
+# --------
+# metadata: gled.20221107.tsv
+# --------
+
+path: gled.20221107.tsv
+name: gled.20221107
+profile: tabular-data-resource
+scheme: file
+format: tsv
+hashing: md5
+dialect:
+  delimiter: "\t"
+encoding: utf-8
+schema:
+  fields:
+    - constraints:
+        required: true
+        unique: true
+      type: string
+      name: ID
+    - constraints:
+        required: true
+      type: string
+      name: DOCULECT
+    - constraints:
+        required: true
+      type: string
+      name: LANGUAGE_NAME
+    - type: string
+      name: GLOTTOCODE
+    - type: string
+      name: GLOTTOLOG_NAME
+    - constraints:
+        required: true
+      type: string
+      name: FAMILY
+    - constraints:
+        required: true
+      type: string
+      name: CONCEPT
+    - constraints:
+        required: true
+      type: integer
+      name: CONCEPTICON_ID
+    - constraints:
+        required: true
+      type: string
+      name: ASJP_FORM
+    - constraints:
+        required: true
+      type: string
+      name: FORM
+    - constraints:
+        required: true
+      type: string
+      name: IPA
+    - constraints:
+        required: true
+      type: string
+      name: ALIGNMENT
+    - constraints:
+        required: true
+      type: string
+      name: COGSET
+    - constraints:
+        required: true
+      type: integer
+      name: COGSET_INT

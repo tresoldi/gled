@@ -15,45 +15,47 @@ The dataset is offered as a single textual tabular file, supported by
 [Frictionless](https://frictionlessdata.io/) metadata,
 to simplify its usage. It is released with the full pipeline for processing, allowing to
 replicate the data and generate future versions. A complementary version following the
-[CLDF standard](https://cldf.clld.org/) (Forkel et al. 2018) will be available on the next releases.
+[CLDF standard](https://cldf.clld.org/) (Forkel et al. 2018) is planned for the next releases.
 
 The main file released by this project is `data/gled.{releasedate}.tsv`.
 This tabular source is
 accompanied by a dataset schema description following the Frictionless
-standard in `gled.yaml`, but the latter is not necessary if you
+standard in `gled.{releasedate}.yaml`, but the latter is not necessary if you
 open the main file as a tabular source within a programming
-language or a spreadsheet program. In most environment for analysis and
+language or a spreadsheet program. In most environments for analysis and
 development, it should be enough to read the data as a tabular (`"CSV"`)
 file, specifying tabulations (`"\t"`) as delimiters. The encoding is UTF-8.
 
 Field names are all in uppercase strict ASCII. The file is sorted
 in ascending order following the value of fields `FAMILY`, `COGSET`, and `ID`.
-Concepts are linked to the [Concepticon](https://concepticon.clld.org/) (List et al. 2021) reference catalog
+Concepts are linked to the [Concepticon](https://concepticon.clld.org/) (List et al. 2022) reference catalog
 for comparative concepts, and language varieties are linked to 
-[Glottolog](http://glottolog.org/) (Hammarström et al. 2021)
+[Glottolog](http://glottolog.org/) (Hammarström et al. 2022)
 
 | Field name     | Type     | Description                                                                                                                                                                                                                                                  |
 |----------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ID             | String   | A unique identifier for the lemma, as used in ASJP. E.g.: `ADYGHE-34-2`, `KABARDIAN-34-1`.                                                                                                                                                                   |
-| DOCULECT       | String   | The name of the doculect ("language"), in uppercase. E.g.: `ADYGHE`, `KABARDIAN`.                                                                                                                                                                            |
-| DOCULECT_DATE  | Integer  | The year associated with the doculect; empty fields should be assumed as living languages. E.g.: `1992`.                                                                                                                                                     |
-| GLOTTOCODE     | String   | The languoid associated to the doculect in the Glottolog catalog. E.g.: `adyg1241`, `kaba1278`.                                                                                                                                                              |
-| GLOTTOLOG_NAME | String   | The language name associated with the `GLOTTOCODE` languoid in the Glottolog catalog. Please note that the mapping between ASJP and Glottolog doculects is not guaranteed to be bijective. E.g.: `Adyghe`, `Kabardian`.                                      |
-| FAMILY         | String   | The language family for the `DOCULECT`, as specified in ASJP (note that Glottolog's classification might disagree). E.g.: `Abkhaz-Adyge`, `Dravidian`.                                                                                                       |
-| CONCEPT        | String   | The normalized gloss for the lemma's concept, as specified in the Concepticon project. E.g.: `HORN (ANATOMY)`, `KNEE`.                                                                                                                                       |
-| IPA            | String   | A sequence of normalized CLTS BIPA graphemes (i.e., phonemes), separated by spaces. E.g.: `b ʒ ə`, `b ʒ ɐ qʼʷ ə`.                                                                                                                                            |
-| ALIGNMENT      | String   | A sequence of BIPA graphemes and dashes (representing gaps) expressing the lemma's alignment in its cognate set. E.g.: `b ʒ ə - -`, `b ʒ ɐ qʼʷ ə`.                                                                                                           |
-| COGSET         | String   | A label identifying the cognate set to which the lemma belongs, also carrying information on linguistic family and concept. All in lowercase, with the cognate set index expressed by trailing digits. E.g.: `abkhaz_adyge_horn_47`, `abkhaz_adyge_knee_49`. |
+| ID             | String   | A unique identifier for the lemma, including information on the language name, concept, and a unique numerical index. E.g.: `DHOFARI_ARABIC.bone-25610`, `AKUNNU.ear-67416`.                                                                                                                                                                   |
+| DOCULECT       | String   | A mandory field with the name of the doculect ("language"), in uppercase with underscores for separating words. E.g.: `DHOFARI_ARABIC`, `AKUNNU`.                                                                                                                                                                            |
+| LANGUAGE_NAME  | String  | A mandatory field with a name associated to the doculect; in all cases without hard-coded exceptions, it is either the Glottolog name or, if not available, a version of the doculect name. E.g.: `Dhofari Arabic`, `Akpes`.                                                                                                                                                     |
+| GLOTTOCODE     | String   | The languoid associated to the doculect in the Glottolog catalog, if any. E.g.: `dhof1235`, `akpe1248`.                                                                                                                                                              |
+| GLOTTOLOG_NAME | String   | The language name associated with the `GLOTTOCODE` languoid in the Glottolog catalog, if any. Please note that the mapping between ASJP and Glottolog doculects is not guaranteed to be bijective. E.g.: `Dhofari Arabic`, `Akpes`.                                      |
+| FAMILY         | String   | A mandatory field with the language family name for the `DOCULECT`, as specified in ASJP (note that Glottolog's classification might disagree). E.g.: `Afro-Asiatic`, `Atlantic-Congo`.                                                                                                       |
+| CONCEPT        | String   | A mandatory field with the normalized gloss for the lemma's concept. E.g.: `bone`, `hear`.                                                                                                                                       |
+| CONCEPTICON_ID        | Integer   | A mandatory field with the concept ID as mapped by the Concepticon project. E.g.: `1394`, `1247`.                                                                                                                                       |
+| ASJP_FORM        | String   | A mandatory field with the normalized form for the lemma as reported in the source ASJP (using normalized ASJP_CODE). E.g.: `Xa8im`, `anSu`.                                                                                                                                       |
+| FORM            | String   | A mandatory field with the sequence of normalized CLTS BIPA graphemes (i.e., phonemes). E.g.: `χɐθim`, `ɐnʃu`.                                                                                                                                            |
+| IPA            | String   | A mandatory field with the sequence of normalized CLTS BIPA graphemes (i.e., phonemes), with tokens separated by spaces. E.g.: `χ ɐ θ i m`, `ɐ n ʃ u`.                                                                                                                                            |
+| ALIGNMENT      | String   | A mandatory field with the sequence of BIPA graphemes and dashes (representing gaps), expressing the lemma's alignment in its cognate set. E.g.: `χ ɐ θ - i m - -`, `ɐ n ʃ u -`.                                                                                                           |
+| COGSET         | String   | A mandatory label identifying the cognate set to which the lemma belongs, also carrying information on linguistic family and concept. All in lowercase, with the cognate set index expressed by trailing digits. E.g.: `afroasiatic.bone.0054`, `atlanticcongo.ear.0056`. |
+| COGSET_INT         | Integer   | A mandatory label identifying the cognate set to which the lemma belongs, mapping to a unique global 1-based index for all cognate sets. It is provided to ease the usage of software that mandates purely numeric cognate set identifiers. E.g.: `312`, `5254`. |
 
 The `nexus/` directory carries individual per-family NEXUS files encoding the
-presence or absence of each applicable cognate set. All the characters have an
+presence or absence of each applicable cognate set. All the characters include an
 ascertainment correction.
 
 The software pipeline for downloading, processing, and
 releasing new versions of the dataset is available in the `pipeline/`
-directory. Please note that, due to the processing time necessary for
-the core step of automatic cognate detection, the entire process
-can take days on a normal desktop or laptop computer.
+directory. 
 
 ## Background
 
@@ -89,7 +91,7 @@ resulting cognate sets phonologically aligned. I have also prepared the collecti
 remove spurious cognate sets and to obtain a more feasible volume of data-points, producing
 a single dataset that is suitable for testing hypotheses on language evolution. It allows
 to prototype studies and benchmark methods that can later apply to higher quality
-datasets, such as those provided by the Lexibank project (List et al. under review).
+datasets, such as those provided by the Lexibank project (List et al. 2022).
 Remember to consider all the limitations of these data before making any claims
 in terms of language evolution or relationship.
 
@@ -129,15 +131,6 @@ and families highlighted noticeable inaccuracies, which were not amended to pres
 reproducibility, to avert any human bias, and to ensure a global comparability. Third,
 automatic alignment is likewise subject to errors, even more when an alignment includes
 lemmas which don't appear to fit to their cognate set.
-
-## Changelog
-
-Release 20220706:
-  - Second public release, improvements to language mapping and to pipeline in line
-    with future work.
-
-Release 20220127:
-  - First public release.
 
 ## Community guidelines
 
