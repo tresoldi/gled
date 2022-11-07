@@ -12,3 +12,12 @@ $ pip install --upgrade pip setuptools wheel
 $ pip install -r requirements.txt
 $ cldfbench catconfig -q
 ```
+
+## Running
+
+Two steps are necessary for a new release: the data preparation from the raw sources, includign cognate detection and analysis, and the data release that build the files to be distributed. The two steps can be carried from the command line:
+
+```bash
+$ pipeline/prepare_data.py
+$ pipeline/prepare_release.py
+```

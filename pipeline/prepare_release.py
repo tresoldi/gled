@@ -12,6 +12,7 @@ from pathlib import Path
 import copy
 import csv
 import datetime
+import itertools
 import logging
 
 # Import other modules
@@ -21,6 +22,10 @@ BASE_PATH = Path(__file__).parent
 
 
 def output_nexus(charstates, matrix, assumptions, family):
+    """
+    Output the NEXUS file for an given family.
+    """
+
     # Confirm that all vectors have the same length
     lengths = set([len(vector) for _, vector in matrix.items()])
     if len(lengths) != 1:
@@ -63,6 +68,10 @@ def output_nexus(charstates, matrix, assumptions, family):
 
 
 def build_nexus(data):
+    """
+    Build a NEXUS file for each family in the current release.
+    """
+
     # Make sure the cognates are good for IDs and for NEXUS -- this is not the
     # most efficient implementation, but works fine for this purpose
     data = copy.copy(data)
@@ -129,6 +138,10 @@ def build_nexus(data):
 
 
 def build_released_data(languoids):
+    """
+    Build the release tabular file from the processed one.
+    """
+
     # Load data
     logging.info("Reading data...")
     fulldata_file = BASE_PATH / "output" / "full_data.csv"
@@ -213,6 +226,10 @@ def write_release_data(release_data):
 
 
 def build_readme(release_data):
+    """
+    Build the root README.md file for the current release.
+    """
+
     # Collect and show statistics
     today = datetime.date.today()
     entries = len(release_data)
@@ -253,6 +270,10 @@ The {today.strftime('%Y%m%d')} release comprises:
 
 
 def build_metadata():
+    """
+    Build the frictionless metadata for the current release.
+    """
+
     with open(BASE_PATH / "etc" / "gled.template.resource.yaml") as handler:
         source = handler.read()
 
@@ -266,6 +287,66 @@ def build_metadata():
         encoding="utf-8",
     ) as handler:
         handler.write(source)
+
+
+def build_distance_matrices(data):
+    """
+    Build a distance matrix for each family in the released data.
+    """
+
+    # Collect per-family information (as well as information on isolates,
+    # on the same pass, so that we can skip them)
+    cogsets = defaultdict(lambda: defaultdict(set))
+    for entry in data:
+        logging.info("Collecting matrix distance data...")
+        cogsets[entry["FAMILY"]][entry["DOCULECT"]].add(entry["COGSET"])
+
+    for family, entries in cogsets.items():
+        logging.info(f"Generating matrix distance for family `{family}`.")
+        # Collect list of languages and skip over isolates
+        langs = sorted(entries.keys())
+        if len(langs) == 1:
+            continue
+
+        # Get all pairwise distances; to account for distances of zero,
+        # we perform a small correction by using the lowest value
+        dists = {}
+        for lang1, lang2 in itertools.combinations(langs, 2):
+            union_len = len(entries[lang1].union(entries[lang2]))
+            intersect = entries[lang1].intersection(entries[lang2])
+            dists[lang1, lang2] = len(intersect) / union_len
+
+        min_dist = min([dist for dist in dists.values() if dist > 0])
+        dists = {
+            (lang1, lang2): (dist + min_dist) / (1.0 + min_dist)
+            for (lang1, lang2), dist in dists.items()
+        }
+
+        # Output the distance matrix
+        dst_file = BASE_PATH.parent / "dst" / f"{common.slug(family, level='full')}.dst"
+        with open(dst_file, "w", encoding="utf-8") as handler:
+            # Write header with the number of languages
+            handler.write(" %i\n" % len(langs))
+
+            # Get the length of the language name for padding
+            langlen = max([len(lang) for lang in langs]) + 2
+
+            # Write one language per row
+            for lang1 in langs:
+                vector = []
+                for lang2 in langs:
+                    if (lang1, lang2) in dists:
+                        dist = 1.0 - dists[lang1, lang2]
+                    elif (lang2, lang1) in dists:
+                        dist = 1.0 - dists[lang2, lang1]
+                    else:
+                        dist = 0.0
+
+                    vector.append("%.04f" % dist)
+
+                handler.write(lang1.ljust(langlen))
+                handler.write(" ".join(vector))
+                handler.write("\n")
 
 
 def main():
@@ -286,6 +367,7 @@ def main():
     write_release_data(release_data)
     build_readme(release_data)
     build_metadata()
+    build_distance_matrices(release_data)
 
     # Build nexus files
     logging.info("Building NEXUS files...")
