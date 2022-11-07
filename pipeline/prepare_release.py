@@ -14,6 +14,11 @@ import csv
 import datetime
 import itertools
 import logging
+import re
+
+# Import 3rd party modules
+from Bio.Phylo.TreeConstruction import DistanceMatrix
+from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
 
 # Import other modules
 import common
@@ -289,20 +294,20 @@ def build_metadata():
         handler.write(source)
 
 
-def build_distance_matrices(data):
+def build_distance_matrices_and_trees(data):
     """
-    Build a distance matrix for each family in the released data.
+    Build a distance matrix and an NJ tree for each family in the released data.
     """
 
     # Collect per-family information (as well as information on isolates,
     # on the same pass, so that we can skip them)
     cogsets = defaultdict(lambda: defaultdict(set))
+    logging.info("Collecting matrix distance data...")
     for entry in data:
-        logging.info("Collecting matrix distance data...")
         cogsets[entry["FAMILY"]][entry["DOCULECT"]].add(entry["COGSET"])
 
     for family, entries in cogsets.items():
-        logging.info(f"Generating matrix distance for family `{family}`.")
+        logging.info(f"Generating matrix distance (if possible) for family `{family}`.")
         # Collect list of languages and skip over isolates
         langs = sorted(entries.keys())
         if len(langs) == 1:
@@ -323,7 +328,9 @@ def build_distance_matrices(data):
         }
 
         # Output the distance matrix
-        dst_file = BASE_PATH.parent / "dst" / f"{common.slug(family, level='full')}.dst"
+        dst_file = (
+            BASE_PATH.parent / "phylo" / f"{common.slug(family, level='full')}.dst"
+        )
         with open(dst_file, "w", encoding="utf-8") as handler:
             # Write header with the number of languages
             handler.write(" %i\n" % len(langs))
@@ -333,7 +340,7 @@ def build_distance_matrices(data):
 
             # Write one language per row
             for lang1 in langs:
-                vector = []
+                str_vector = []
                 for lang2 in langs:
                     if (lang1, lang2) in dists:
                         dist = 1.0 - dists[lang1, lang2]
@@ -342,11 +349,36 @@ def build_distance_matrices(data):
                     else:
                         dist = 0.0
 
-                    vector.append("%.04f" % dist)
+                    str_vector.append("%.04f" % dist)
 
                 handler.write(lang1.ljust(langlen))
-                handler.write(" ".join(vector))
+                handler.write(" ".join(str_vector))
                 handler.write("\n")
+
+        # Build the tree
+        logging.info(f"Generating NJ tree for family `{family}`.")
+        triang_matrix = []
+        for lang1 in langs:
+            row = []
+            for lang2 in langs:
+                if (lang2, lang1) in dists:
+                    row.append(1.0 - dists[lang2, lang1])
+                elif lang1 == lang2:
+                    row.append(0.0)
+            triang_matrix.append(row)
+
+        # Obtain the tree from BioPython, removing the "inner" labels
+        constructor = DistanceTreeConstructor()
+        tree = constructor.nj(DistanceMatrix(langs, triang_matrix))
+        newick = tree.format("newick")
+        newick = re.sub(r"Inner\d+", "", newick)
+
+        # Output the tree
+        tree_file = (
+            BASE_PATH.parent / "phylo" / f"{common.slug(family, level='full')}.tree"
+        )
+        with open(tree_file, "w", encoding="utf-8") as handler:
+            handler.write(newick)
 
 
 def main():
@@ -367,7 +399,7 @@ def main():
     write_release_data(release_data)
     build_readme(release_data)
     build_metadata()
-    build_distance_matrices(release_data)
+    build_distance_matrices_and_trees(release_data)
 
     # Build nexus files
     logging.info("Building NEXUS files...")
