@@ -155,7 +155,7 @@ def read_jaeger():
     lexcatalog = defaultdict(Counter)
     for entry in data:
         match = re.match(
-            r"(?P<lang_id0>.+)_(?P<idx>\d)|(?P<lang_id1>.+)", entry["LANG_ID"]
+            r"(?P<lang_id0>.+)_(?P<idx>\d+)|(?P<lang_id1>.+)", entry["LANG_ID"]
         )
         if match.group("lang_id1"):
             lexcatalog[match.group("lang_id1")].update(["!"])

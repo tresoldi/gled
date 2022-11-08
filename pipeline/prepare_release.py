@@ -329,7 +329,10 @@ def build_distance_matrices_and_trees(data):
 
         # Output the distance matrix
         dst_file = (
-            BASE_PATH.parent / "phylo" / f"{common.slug(family, level='full')}.dst"
+            BASE_PATH.parent
+            / "data"
+            / "phylo"
+            / f"{common.slug(family, level='full')}.dst"
         )
         with open(dst_file, "w", encoding="utf-8") as handler:
             # Write header with the number of languages
@@ -375,7 +378,10 @@ def build_distance_matrices_and_trees(data):
 
         # Output the tree
         tree_file = (
-            BASE_PATH.parent / "phylo" / f"{common.slug(family, level='full')}.tree"
+            BASE_PATH.parent
+            / "data"
+            / "phylo"
+            / f"{common.slug(family, level='full')}.tree"
         )
         with open(tree_file, "w", encoding="utf-8") as handler:
             handler.write(newick)
