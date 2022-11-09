@@ -24,6 +24,9 @@ ROOT_PATH = BASE_PATH.parent
 # Set a flag for development, leading to faster execution
 DEVEL = False
 
+# Maximum number of entries per family in order to try to run LexStat
+LINGPY_LIMIT = 18000
+
 # Glottolog family names (after normalization) to be dropped (note
 # that some have already been dropped in the source by Jaeger)
 DROP_FAMILY = ["MixedLanguage", "Spurious", "Unclassifiable kzw"]
@@ -243,7 +246,7 @@ def add_lingpy_cogs(data):
     count = 0  # only used when the DEVEL flag is true
     for family, entries in lingpy_data.items():
         # Break if the list is too big
-        if len(entries) > 10000:
+        if len(entries) > LINGPY_LIMIT:
             continue
 
         # If running when the DEVEL flag is true, for quick running,

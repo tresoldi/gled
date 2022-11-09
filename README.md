@@ -1,12 +1,12 @@
 # A Global Lexical Dataset (GLED) with cognate annotation and phonological alignments
 
 
-[![Release](https://img.shields.io/badge/Release-20221107-informational)](https://img.shields.io/badge/Release-20221107-informational)
-[![Lemmas](https://img.shields.io/badge/Lemmas-263374-success)](https://img.shields.io/badge/Lemmas-263374-success)
-[![Languages](https://img.shields.io/badge/Languages-6586-success)](https://img.shields.io/badge/Languages-6586-success)
+[![Release](https://img.shields.io/badge/Release-20221109-informational)](https://img.shields.io/badge/Release-20221109-informational)
+[![Lemmas](https://img.shields.io/badge/Lemmas-262859-success)](https://img.shields.io/badge/Lemmas-262859-success)
+[![Languages](https://img.shields.io/badge/Languages-6572-success)](https://img.shields.io/badge/Languages-6572-success)
 [![Families](https://img.shields.io/badge/Families-344-success)](https://img.shields.io/badge/Families-344-success)
-[![Cognatesets](https://img.shields.io/badge/Cognatesets-48626-success)](https://img.shields.io/badge/Cognatesets-48626-success)
-[![Tokens](https://img.shields.io/badge/Tokens-1938322-success)](https://img.shields.io/badge/Tokens-1938322-success)
+[![Cognatesets](https://img.shields.io/badge/Cognatesets-48116-success)](https://img.shields.io/badge/Cognatesets-48116-success)
+[![Tokens](https://img.shields.io/badge/Tokens-1934833-success)](https://img.shields.io/badge/Tokens-1934833-success)
     
 
 [![CC-BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
@@ -15,13 +15,13 @@
 ## Statistics
 
 
-The 20221107 release comprises:
+The 20221109 release comprises:
 
-  - Entries: 263374
-  - Doculects: 6586
+  - Entries: 262859
+  - Doculects: 6572
   - Families: 344 (including isolates)
-  - Cognate sets: 48626
-  - Tokens: 1938322
+  - Cognate sets: 48116
+  - Tokens: 1934833
 
 
 

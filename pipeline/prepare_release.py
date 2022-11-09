@@ -66,7 +66,7 @@ def output_nexus(charstates, matrix, assumptions, family):
     buffer.append("END;")
 
     # Open file and write
-    nexus_file = BASE_PATH.parent / "nexus" / f"{common.slug(family, level='full')}.nex"
+    nexus_file = BASE_PATH.parent / "data" / "nexus" / f"{common.slug(family, level='full')}.nex"
     with open(nexus_file, "w", encoding="utf-8") as handler:
         handler.write("\n".join(buffer))
         handler.write("\n")

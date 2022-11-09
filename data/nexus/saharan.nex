@@ -1,7 +1,7 @@
 #NEXUS
 
 BEGIN DATA;
-    DIMENSIONS NTAX=6 NCHAR=204;
+    DIMENSIONS NTAX=6 NCHAR=203;
     FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
     CHARSTATELABELS
         1 blood_0ascertainment,
@@ -134,39 +134,39 @@ BEGIN DATA;
         128 path_saharan.path.0113,
         129 path_saharan.path.0114,
         130 path_saharan.path.0115,
-        131 path_saharan.path.0116,
-        132 person_0ascertainment,
+        131 person_0ascertainment,
+        132 person_saharan.person.0116,
         133 person_saharan.person.0117,
         134 person_saharan.person.0118,
-        135 person_saharan.person.0119,
-        136 pl_0ascertainment,
-        137 pl_saharan.1pl.0001,
-        138 pl_saharan.1pl.0002,
-        139 pl_saharan.1pl.0003,
-        140 see_0ascertainment,
+        135 pl_0ascertainment,
+        136 pl_saharan.1pl.0001,
+        137 pl_saharan.1pl.0002,
+        138 pl_saharan.1pl.0003,
+        139 see_0ascertainment,
+        140 see_saharan.see.0119,
         141 see_saharan.see.0120,
-        142 see_saharan.see.0121,
-        143 sg_0ascertainment,
-        144 sg_saharan.1sg.0004,
-        145 sg_saharan.1sg.0005,
-        146 sg_saharan.1sg.0006,
-        147 sg_saharan.1sg.0007,
-        148 sg_saharan.1sg.0008,
-        149 sg_saharan.1sg.0009,
-        150 sg_saharan.2sg.0010,
-        151 sg_saharan.2sg.0011,
-        152 skin_0ascertainment,
+        142 sg_0ascertainment,
+        143 sg_saharan.1sg.0004,
+        144 sg_saharan.1sg.0005,
+        145 sg_saharan.1sg.0006,
+        146 sg_saharan.1sg.0007,
+        147 sg_saharan.1sg.0008,
+        148 sg_saharan.1sg.0009,
+        149 sg_saharan.2sg.0010,
+        150 sg_saharan.2sg.0011,
+        151 skin_0ascertainment,
+        152 skin_saharan.skin.0121,
         153 skin_saharan.skin.0122,
         154 skin_saharan.skin.0123,
         155 skin_saharan.skin.0124,
         156 skin_saharan.skin.0125,
-        157 skin_saharan.skin.0126,
-        158 star_0ascertainment,
+        157 star_0ascertainment,
+        158 star_saharan.star.0126,
         159 star_saharan.star.0127,
         160 star_saharan.star.0128,
         161 star_saharan.star.0129,
-        162 star_saharan.star.0130,
-        163 stone_0ascertainment,
+        162 stone_0ascertainment,
+        163 stone_saharan.stone.0130,
         164 stone_saharan.stone.0131,
         165 stone_saharan.stone.0132,
         166 stone_saharan.stone.0133,
@@ -174,49 +174,48 @@ BEGIN DATA;
         168 stone_saharan.stone.0135,
         169 stone_saharan.stone.0136,
         170 stone_saharan.stone.0137,
-        171 stone_saharan.stone.0138,
-        172 sun_0ascertainment,
+        171 sun_0ascertainment,
+        172 sun_saharan.sun.0138,
         173 sun_saharan.sun.0139,
         174 sun_saharan.sun.0140,
         175 sun_saharan.sun.0141,
         176 sun_saharan.sun.0142,
         177 sun_saharan.sun.0143,
-        178 sun_saharan.sun.0144,
-        179 tongue_0ascertainment,
+        178 tongue_0ascertainment,
+        179 tongue_saharan.tongue.0144,
         180 tongue_saharan.tongue.0145,
-        181 tongue_saharan.tongue.0146,
-        182 tooth_0ascertainment,
+        181 tooth_0ascertainment,
+        182 tooth_saharan.tooth.0146,
         183 tooth_saharan.tooth.0147,
         184 tooth_saharan.tooth.0148,
         185 tooth_saharan.tooth.0149,
         186 tooth_saharan.tooth.0150,
-        187 tooth_saharan.tooth.0151,
-        188 tree_0ascertainment,
+        187 tree_0ascertainment,
+        188 tree_saharan.tree.0151,
         189 tree_saharan.tree.0152,
         190 tree_saharan.tree.0153,
         191 tree_saharan.tree.0154,
         192 tree_saharan.tree.0155,
         193 tree_saharan.tree.0156,
-        194 tree_saharan.tree.0157,
-        195 two_0ascertainment,
+        194 two_0ascertainment,
+        195 two_saharan.two.0157,
         196 two_saharan.two.0158,
         197 two_saharan.two.0159,
-        198 two_saharan.two.0160,
-        199 water_0ascertainment,
+        198 water_0ascertainment,
+        199 water_saharan.water.0160,
         200 water_saharan.water.0161,
         201 water_saharan.water.0162,
         202 water_saharan.water.0163,
-        203 water_saharan.water.0164,
-        204 water_saharan.water.0165
+        203 water_saharan.water.0164
 ;
 
 MATRIX
-beria        010001010010000010010100100001000010001000100100010000001000010000100001000000100100001000000000100000010000010000100010000010000000100010001001000001001000001000010000000010000001001000001000000100010000
-berti        0100010100?????0????0100????00100001100100??001000100100????001100100000100000??001000010000000001000100100101000010000100000100000001000100??00100101000100000100001001000001001001000101000100100100010000
-dazaga       001001010001010001000010010000011001000010010001000100100100000100010100010110100001000010001010001100000100001000010000100000101100???010100100010011100010000010000100111000100101000010000010010100001001
-kanuri       000101010000101001000100001000010001000010010001000010000010000010001000001100100000100001000100000100000010000100001000011000100000001010001000001001000001000001000010000000010000100010100001000010000100
-manga_kanuri 000101010000100001100100000100010001000010010???000010000001000010001000001000010000100000100000000010000010000110001000001000010000001010001000001001000000100001000010000000010000100010000001000001000010
-tedaga       001001011000010001000010010000010001000010010001000100100100000100010100010110100001000010011010001100000100001000010000100000101010???010100100010011100010000010000100111000100101000010000010010100001001
+beria        01000101001000001001010010000100001000100010010001000000100001000010000100000010010000100000000010000001000001000010001000001000000100010001001000001001000001000010000000010000001001000001000000100010000
+berti        0100010100?????0????0100????00100001100100??001000100100????001100100000100000??00100001000000000100010010010100001000010000010000001000100??00100101000100000100001001000001001001000101000100100100010000
+dazaga       00100101000101000100001001000001100100001001000100010010010000010001010001011010000100001000101000110000010000100001000010000010110???010100100010011100010000010000100111000100101000010000010010100001001
+kanuri       00010101000010100100010000100001000100001001000100001000001000001000100000110010000010000100010000010000001000010000100001100010000001010001000001001000001000001000010000000010000100010100001000010000100
+manga_kanuri 000101010000100001100100000100010001000010010???00001000000100001000100000100001000010000010000000001000001000011000100000100001000001010001000001001000000100001000010000000010000100010000001000001000010
+tedaga       00100101100001000100001001000001000100001001000100010010010000010001010001011010000100001001101000110000010000100001000010000010110???010100100010011100010000010000100111000100101000010000010010100001001
 ;
 END;
 
@@ -246,18 +245,18 @@ BEGIN ASSUMPTIONS;
     charset night = 109-113;
     charset nose = 114-117;
     charset one = 118-123;
-    charset path = 124-131;
-    charset person = 132-135;
-    charset pl = 136-139;
-    charset see = 140-142;
-    charset sg = 143-151;
-    charset skin = 152-157;
-    charset star = 158-162;
-    charset stone = 163-171;
-    charset sun = 172-178;
-    charset tongue = 179-181;
-    charset tooth = 182-187;
-    charset tree = 188-194;
-    charset two = 195-198;
-    charset water = 199-204;
+    charset path = 124-130;
+    charset person = 131-134;
+    charset pl = 135-138;
+    charset see = 139-141;
+    charset sg = 142-150;
+    charset skin = 151-156;
+    charset star = 157-161;
+    charset stone = 162-170;
+    charset sun = 171-177;
+    charset tongue = 178-180;
+    charset tooth = 181-186;
+    charset tree = 187-193;
+    charset two = 194-197;
+    charset water = 198-203;
 END;
