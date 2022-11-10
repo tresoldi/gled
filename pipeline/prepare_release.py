@@ -4,8 +4,6 @@
 Script for preparing data for release.
 """
 
-# TODO: have a global reference to the day, so there are no issues if running during midnight
-
 # Import Python standard libraries
 from collections import defaultdict
 from pathlib import Path
@@ -19,11 +17,14 @@ import re
 # Import 3rd party modules
 from Bio.Phylo.TreeConstruction import DistanceMatrix
 from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
+from ete3 import Tree
 
 # Import other modules
 import common
 
 BASE_PATH = Path(__file__).parent
+TODAY = datetime.date.today().strftime("%Y%m%d")
+RELEASE_PATH = BASE_PATH.parent / "releases" / TODAY
 
 
 def output_nexus(charstates, matrix, assumptions, family):
@@ -66,7 +67,8 @@ def output_nexus(charstates, matrix, assumptions, family):
     buffer.append("END;")
 
     # Open file and write
-    nexus_file = BASE_PATH.parent / "data" / "nexus" / f"{common.slug(family, level='full')}.nex"
+    NEXUS_PATH = RELEASE_PATH / "nexus"
+    nexus_file = NEXUS_PATH / f"{common.slug(family, level='full')}.nex"
     with open(nexus_file, "w", encoding="utf-8") as handler:
         handler.write("\n".join(buffer))
         handler.write("\n")
@@ -76,6 +78,9 @@ def build_nexus(data):
     """
     Build a NEXUS file for each family in the current release.
     """
+
+    NEXUS_PATH = RELEASE_PATH / "nexus"
+    NEXUS_PATH.mkdir()
 
     # Make sure the cognates are good for IDs and for NEXUS -- this is not the
     # most efficient implementation, but works fine for this purpose
@@ -202,8 +207,7 @@ def write_release_data(release_data):
     """
 
     # Write output file
-    today = datetime.date.today()
-    output_file = BASE_PATH.parent / "data" / f"gled.{today.strftime('%Y%m%d')}.tsv"
+    output_file = RELEASE_PATH / f"gled.tsv"
     logging.info("Writing datafile to `%s`...", output_file)
     with open(output_file, "w", encoding="utf-8") as handler:
         writer = csv.DictWriter(
@@ -236,7 +240,6 @@ def build_readme(release_data):
     """
 
     # Collect and show statistics
-    today = datetime.date.today()
     entries = len(release_data)
     doculects = len(set([e["DOCULECT"] for e in release_data]))
     families = len(set([e["FAMILY"] for e in release_data]))
@@ -248,7 +251,7 @@ def build_readme(release_data):
         readme = handler.read()
 
     badges_str = f"""
-[![Release](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-informational)](https://img.shields.io/badge/Release-{today.strftime('%Y%m%d')}-informational)
+[![Release](https://img.shields.io/badge/Release-{TODAY}-informational)](https://img.shields.io/badge/Release-{TODAY}-informational)
 [![Lemmas](https://img.shields.io/badge/Lemmas-{entries}-success)](https://img.shields.io/badge/Lemmas-{entries}-success)
 [![Languages](https://img.shields.io/badge/Languages-{doculects}-success)](https://img.shields.io/badge/Languages-{doculects}-success)
 [![Families](https://img.shields.io/badge/Families-{families}-success)](https://img.shields.io/badge/Families-{families}-success)
@@ -258,7 +261,7 @@ def build_readme(release_data):
     readme = readme.replace("{{BADGES}}", badges_str)
 
     stats_str = f"""
-The {today.strftime('%Y%m%d')} release comprises:
+The {TODAY} release comprises:
 
   - Entries: {entries}
   - Doculects: {doculects}
@@ -282,12 +285,10 @@ def build_metadata():
     with open(BASE_PATH / "etc" / "gled.template.resource.yaml") as handler:
         source = handler.read()
 
-    today = datetime.date.today()
-    release = today.strftime("%Y%m%d")
-    source = source.replace("{{RELEASE}}", release)
+    source = source.replace("{{RELEASE}}", TODAY)
 
     with open(
-        BASE_PATH.parent / "data" / f"gled.{release}.resource.yaml",
+        RELEASE_PATH / f"gled.resource.yaml",
         "w",
         encoding="utf-8",
     ) as handler:
@@ -299,6 +300,9 @@ def build_distance_matrices_and_trees(data):
     Build a distance matrix and an NJ tree for each family in the released data.
     """
 
+    PHYLO_PATH = RELEASE_PATH / "phylo"
+    PHYLO_PATH.mkdir()
+
     # Collect per-family information (as well as information on isolates,
     # on the same pass, so that we can skip them)
     cogsets = defaultdict(lambda: defaultdict(set))
@@ -306,11 +310,14 @@ def build_distance_matrices_and_trees(data):
     for entry in data:
         cogsets[entry["FAMILY"]][entry["DOCULECT"]].add(entry["COGSET"])
 
+    newicks = []
+    isolates = []
     for family, entries in cogsets.items():
         logging.info(f"Generating matrix distance (if possible) for family `{family}`.")
         # Collect list of languages and skip over isolates
         langs = sorted(entries.keys())
         if len(langs) == 1:
+            isolates.append(langs[0])
             continue
 
         # Get all pairwise distances; to account for distances of zero,
@@ -328,12 +335,7 @@ def build_distance_matrices_and_trees(data):
         }
 
         # Output the distance matrix
-        dst_file = (
-            BASE_PATH.parent
-            / "data"
-            / "phylo"
-            / f"{common.slug(family, level='full')}.dst"
-        )
+        dst_file = PHYLO_PATH / f"{common.slug(family, level='full')}.dst"
         with open(dst_file, "w", encoding="utf-8") as handler:
             # Write header with the number of languages
             handler.write(" %i\n" % len(langs))
@@ -375,22 +377,49 @@ def build_distance_matrices_and_trees(data):
         tree = constructor.nj(DistanceMatrix(langs, triang_matrix))
         newick = tree.format("newick")
         newick = re.sub(r"Inner\d+", "", newick)
+        newick = newick.replace("Inner", "")
 
         # Output the tree
-        tree_file = (
-            BASE_PATH.parent
-            / "data"
-            / "phylo"
-            / f"{common.slug(family, level='full')}.tree"
-        )
+        tree_file = PHYLO_PATH / f"{common.slug(family, level='full')}.tree"
         with open(tree_file, "w", encoding="utf-8") as handler:
             handler.write(newick)
+
+        # Append to the general list (for building the world tree)
+        newicks.append(newick)
+
+    # Build the world tree
+    global_tree = Tree()
+
+    for isolate in isolates:
+        isolate_tree = Tree()
+        isolate_tree.dist = 1.0
+        isolate_tree.name = isolate
+        global_tree.add_child(isolate_tree)
+
+    for family_newick in newicks:
+        family_tree = Tree(family_newick)
+        family_tree.dist += 1.0
+        global_tree.add_child(family_tree)
+
+    # Output the world tree; we fix the "1:" introduced by ete3
+    tree_file = PHYLO_PATH / "WORLD.tree"
+    with open(tree_file, "w", encoding="utf-8") as handler:
+        world_newick = global_tree.write()
+        world_newick = world_newick.replace(")1:", "):")
+        handler.write(world_newick)
 
 
 def main():
     """
     Script entry point.
     """
+
+    # Create release path if it does not exist, leaving if it is there
+    if RELEASE_PATH.is_dir():
+        raise ValueError(f"Release output directory already exists (`{RELEASE_PATH}`).")
+    else:
+        logging.info(f"Creating output directory (`{RELEASE_PATH}`).")
+        RELEASE_PATH.mkdir(parents=True)
 
     # Instantiate `glottolog` object and cache languoids
     logging.info("Caching Glottolog languoids...")
@@ -400,11 +429,12 @@ def main():
         languoids[lang.glottocode] = lang
     logging.info(f"Cached {len(languoids)} languoids.")
 
-    # Actually build the data and files
+    # Actually build the data and files'
+    build_metadata()
+
     release_data = build_released_data(languoids)
     write_release_data(release_data)
     build_readme(release_data)
-    build_metadata()
     build_distance_matrices_and_trees(release_data)
 
     # Build nexus files
