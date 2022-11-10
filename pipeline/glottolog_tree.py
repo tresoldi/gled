@@ -2,12 +2,18 @@
 Interface with Glottolog to obtain a starting tree.
 """
 
+# TODO: deal with bookkeeping
+
 # Import Python standard libraries
+from collections import defaultdict
 from pathlib import Path
 import csv
-from collections import defaultdict
-import logging
 import difflib
+import logging
+import re
+
+# Import 3rd party libraries
+from ete3 import Tree
 
 # Import other modules
 import common
@@ -65,6 +71,53 @@ def get_mapping(languoids):
     return glottomap
 
 
+def get_roots(glottomap, languoids):
+    # Get a mapping for family root and languoids found in our data
+    roots = defaultdict(list)
+    for glottocode in glottomap:
+        ancestors = languoids[glottocode].ancestors
+        if len(ancestors) == 0:
+            root = glottocode
+        else:
+            root = languoids[glottocode].ancestors[0].glottocode
+
+        roots[root].append(glottocode)
+
+    return roots
+
+
+def get_trees(roots, glottolog):
+    # Get the Glottolog tree for the root
+    trees = {}
+    for root, glottocodes in roots.items():
+        # Get the Glottolog tree as an ETE3 via newick
+        tree = Tree(glottolog.newick_tree(root), format=1)
+        logging.info(f"Collecting Glottolog tree for `{tree.name}`")
+
+        # Traverse the tree collecting the node names to preserve,
+        # which are the root and those with the glottocodes, and prune
+        # the tree
+        to_prune = []
+        for node in tree.traverse("preorder"):
+            if node == tree:
+                to_prune.append(node.name)
+            if any([glottocode in node.name for glottocode in glottocodes]):
+                to_prune.append(node.name)
+        tree.prune(to_prune)
+
+        # Rename all existing nodes only to the glottocode
+        # TODO: investigate why the regex r"\[(....\d+)\]" is failing
+        for node in tree.traverse("preorder"):
+            idx_a = node.name.find("[") + 1
+            idx_b = node.name.find("]", idx_a)
+            node.name = node.name[idx_a:idx_b]
+
+        # Store the tree
+        trees[root] = tree.write()
+
+    return trees
+
+
 def main():
     """
     Script entry point.
@@ -78,26 +131,12 @@ def main():
         languoids[lang.glottocode] = lang
     logging.info(f"Cached {len(languoids)} languoids.")
 
-    # Get the glottocode mapping
+    # Get the glottocode mapping, roots, and trees
     glottomap = get_mapping(languoids)
+    roots = get_roots(glottomap, languoids)
+    trees = get_trees(roots, glottolog)
 
-    # Get a mapping for family root and languoids found in our data
-    roots = defaultdict(list)
-    for glottocode in glottomap:
-        ancestors = languoids[glottocode].ancestors
-        if len(ancestors) == 0:
-            root = glottocode
-        else:
-            root = languoids[glottocode].ancestors[0].glottocode
-
-        roots[root].append(glottocode)
-
-    # Get the Glottolog tree for the root
-    for root, glottocodes in roots.items():
-        print(root, glottocodes)
-        print(glottolog.newick_tree(root))
-
-    # print(glottomap)
+    print(trees)
 
 
 if __name__ == "__main__":
