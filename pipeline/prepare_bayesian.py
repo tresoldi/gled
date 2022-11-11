@@ -9,8 +9,8 @@ from collections import defaultdict
 from pathlib import Path
 import csv
 import difflib
+import glob
 import logging
-import re
 
 # Import 3rd party libraries
 from ete3 import Tree
@@ -118,10 +118,68 @@ def get_trees(roots, glottolog):
     return trees
 
 
+def output_lexical_data(roots, languoids, BAYES_PATH):
+    # Get the lexical data for beastling; this means reloading the
+    # data that was loaded in get_mapping(), but makes the flow
+    # easier to understand
+    inv_root_map = {}
+    for root, doculects in roots.items():
+        for doculect in doculects:
+            inv_root_map[doculect] = root
+
+    bayes_data = defaultdict(list)
+    with open(BASE_PATH / "output" / "full_data.csv", encoding="utf-8") as handler:
+        for row in csv.DictReader(handler):
+            root = inv_root_map.get(row["GLOTTOCODE"])
+            if root:
+                bayes_data[root].append(
+                    {
+                        "Language_ID": row["GLOTTOCODE"],
+                        "Feature_ID": row["CONCEPT"],
+                        "Value": row["COGID"],
+                    }
+                )
+
+    for root, entries in bayes_data.items():
+        logging.info(f"Outputting lexical data for family `{name}`")
+
+        # Make sure missing entries are explicitly marked as such
+        languages = sorted(set([row["Language_ID"] for row in entries]))
+        concepts = sorted(set([row["Feature_ID"] for row in entries]))
+        lang_feat_pairs = sorted(
+            set([(row["Language_ID"], row["Feature_ID"]) for row in entries])
+        )
+        for lang in languages:
+            for concept in concepts:
+                if (lang, concept) not in lang_feat_pairs:
+                    entries.append(
+                        {"Language_ID": lang, "Feature_ID": concept, "Value": "?"}
+                    )
+
+        # Output the data
+        name = languoids[root].name
+        entries = sorted(
+            entries, key=lambda e: (e["Feature_ID"], e["Language_ID"], e["Value"])
+        )
+        with open(BAYES_PATH / f"{name}.csv", "w", encoding="utf-8") as handler:
+            writer = csv.DictWriter(
+                handler, fieldnames=["Language_ID", "Feature_ID", "Value"]
+            )
+            writer.writeheader()
+            writer.writerows(entries)
+
+
 def main():
     """
     Script entry point.
     """
+
+    # Grab the path to the latest release, and create the Bayesian
+    # directory if possible
+    logging.info(f"Creating Bayesian output directory...")
+    releases = sorted(glob.glob(str(BASE_PATH.parent / "releases" / "*")))
+    BAYES_PATH = Path(releases[-1]) / "bayesian"
+    BAYES_PATH.mkdir(exist_ok=False)
 
     # Instantiate `glottolog` object and cache languoids
     logging.info("Caching Glottolog languoids...")
@@ -135,8 +193,14 @@ def main():
     glottomap = get_mapping(languoids)
     roots = get_roots(glottomap, languoids)
     trees = get_trees(roots, glottolog)
+    for root, newick in trees.items():
+        name = languoids[root].name
+        logging.info(f"Outputting pruned tree for family `{name}`")
+        with open(BAYES_PATH / f"{name}.tree", "w", encoding="utf-8") as handler:
+            handler.write(newick)
 
-    print(trees)
+    # Output lexical data for Bayesian analysis
+    output_lexical_data(roots, languoids, BAYES_PATH)
 
 
 if __name__ == "__main__":

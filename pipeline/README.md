@@ -21,3 +21,10 @@ Two steps are necessary for a new release: the data preparation from the raw sou
 $ pipeline/prepare_data.py
 $ pipeline/prepare_release.py
 ```
+
+In order to include the Bayesian phylogenetics, which take a very long time to
+run, one first needs to prepare the phylogenetic data:
+
+```bash
+$ pipeline/prepare_bayesian.py
+```

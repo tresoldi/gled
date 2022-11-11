@@ -29,7 +29,7 @@ LINGPY_LIMIT = 18000
 
 # Glottolog family names (after normalization) to be dropped (note
 # that some have already been dropped in the source by Jaeger)
-DROP_FAMILY = ["MixedLanguage", "Spurious", "Unclassifiable kzw"]
+DROP_FAMILY = ["MixedLanguage", "Spurious", "Unclassifiable kzw", "Bookkeeping"]
 
 # NOTE: This implements a custom implementation of orthographic profiles,
 # so that we don't need the full CLDF/CLLD dependency system
