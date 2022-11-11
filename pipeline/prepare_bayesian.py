@@ -107,6 +107,19 @@ def get_trees(roots, glottolog):
                 to_prune.append(node.name)
         tree.prune(to_prune)
 
+        # Pruning the tree might lead us to cases where an intermediate
+        # node has only one descendant (especially when we have only what
+        # Glottolog considers a language and a dialect), which is not
+        # acceptable as a monophyletic restriction in BEAST2 (as we are
+        # not using sample ancestors). To solve this, in all cases we
+        # make the entries sisters
+        for node in tree.traverse("levelorder"):
+            if not node.is_leaf():
+                descendants = list(node.get_descendants())
+                if len(descendants) == 1:
+                    node.add_child(name=node.name)
+                    node.name = ""
+
         # Rename all existing nodes only to the glottocode
         # TODO: investigate why the regex r"\[(....\d+)\]" is failing
         for node in tree.traverse("preorder"):
