@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="bauw1240" />
+    <taxon id="domu1245" />
+    <taxon id="mail1248" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+    <sequence id="language_data_mailuan:bauw1240" taxon="bauw1240" value="0??0100010010010010010001001000??010010010010010010001001000100010000100100010010001001001001000100" />
+    <sequence id="language_data_mailuan:domu1245" taxon="domu1245" value="0110010001010001010010100100100100??0010010010??00110??0010001101000001001001000100??00101100100110" />
+    <sequence id="language_data_mailuan:mail1248" taxon="mail1248" value="010000100100100100100100??0001001001001001001001001000100010010001110010001011000100100101000010001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="StrictClockModel.c:default" spec="beast.evolution.branchratemodel.StrictClockModel" />
+  <run id="mcmc" spec="MCMC" chainLength="10000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <parameter id="covarion_alpha.s:mailuan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:mailuan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="YuleModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:beastlingTree" />
+        <prior id="YuleBirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:mailuan" name="distribution" x="@covarion_alpha.s:mailuan">
+          <Uniform id="CovAlphaUniform:mailuan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:mailuan" name="distribution" x="@covarion_s.s:mailuan">
+          <Gamma id="Gamma.0:mailuan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:mailuan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:mailuan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="DataLikelihood:mailuan" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@StrictClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mailuan" spec="SiteModel" mutationRate="1.0" proportionInvariant="0">
+            <substModel id="covarion.s:mailuan" spec="BinaryCovarion" alpha="@covarion_alpha.s:mailuan" switchRate="@covarion_s.s:mailuan">
+              <vfrequencies id="mailuan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.70 0.30</vfrequencies>
+              <parameter id="mailuan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="mailuan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="filtered_data_mailuan" spec="FilteredAlignment" data="@data_mailuan" filter="-" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="covarion_alpha_scaler.s:mailuan" spec="ScaleOperator" parameter="@covarion_alpha.s:mailuan" scaleFactor="0.5" weight="1.0" />
+    <operator id="mailuan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:mailuan" scaleFactor="0.5" weight="1.0" />
+    <logger id="screenlog" logEvery="1000">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="mailuan.log" logEvery="1000" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger mode="tree" fileName="mailuan.nex" logEvery="1000" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4" />
+    </logger>
+  </run>
+</beast>

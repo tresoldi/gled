@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="gale1259,lolo1264,modo1249,pagu1249,sahu1245,taba1263,tern1247,tido1248,west2600">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+    <sequence id="language_data_northhalmahera:gale1259" taxon="gale1259" value="0110001010110110000100101001001000000010000100010100000100100010010000010011000100??0100001000011000010010001000100010000010000101001001000110000010000100010000010100010000000100001000100000110001000010000010" />
+    <sequence id="language_data_northhalmahera:lolo1264" taxon="lolo1264" value="0010001000010001000100100000100000000001000100001000000100100010001000000011000010??010000100001000010100000100001001000000100????0??001000110000010000100000000010000010000000010001000010000010001000010000010" />
+    <sequence id="language_data_northhalmahera:modo1249" taxon="modo1249" value="0110001000010001000100100001000000000001010100000100000100100010001000000010000010??01000010000101001000000001000000100000010000100??001000110000001000010001000010000010010000010000100001000001001000100000010" />
+    <sequence id="language_data_northhalmahera:pagu1249" taxon="pagu1249" value="0110001000010001000100100000010000000001000100000100000100100010000100000010000010??01000010000100001010000000100000100000010000010??000100110000010000010000000010000010000001000000100010000010001000100000010" />
+    <sequence id="language_data_northhalmahera:sahu1245" taxon="sahu1245" value="0011001000010001000100010000001000000001000110000100000100100010001000000010000010100010001000010000100000000001000010000001000001001001000010000010000010000000001010000100000001001000001000010000100100000001" />
+    <sequence id="language_data_northhalmahera:taba1263" taxon="taba1263" value="0010001000010????00100010001000000000001000100???????001001000100????????0????0??0??0100001000?????0000100000001000010000????000110010010001000000100000010000000100000100000001000???0000100001000???0100000010" />
+    <sequence id="language_data_northhalmahera:tern1247" taxon="tern1247" value="0010001000010010000100100010000000000001000100000100000100100010000010000010000100100100000010010000100000000001000010000000100010001000010100000000100000100100010000010000001000000100010000000100100100000010" />
+    <sequence id="language_data_northhalmahera:tido1248" taxon="tido1248" value="0010100100110010100010100000001100000001000100000011000100100100000001000010000100??0101000010010010100001010001000010000001100010001000010001010100000000100010010000010001001000001100010000000100110001000010" />
+    <sequence id="language_data_northhalmahera:west2600" taxon="west2600" value="0110000010110100001000100011000011110100100100100000101001010101000000101010110100010100010100100000100000010000000101110100001000010010000000100100001000000000100000101000101000010001000101000001000100110100" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="StrictClockModel.c:default" spec="beast.evolution.branchratemodel.StrictClockModel" />
+  <run id="mcmc" spec="MCMC" chainLength="10000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <parameter id="covarion_alpha.s:northhalmahera" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:northhalmahera" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="YuleModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:beastlingTree" />
+        <prior id="YuleBirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:northhalmahera" name="distribution" x="@covarion_alpha.s:northhalmahera">
+          <Uniform id="CovAlphaUniform:northhalmahera" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:northhalmahera" name="distribution" x="@covarion_s.s:northhalmahera">
+          <Gamma id="Gamma.0:northhalmahera" name="distr">
+            <parameter id="covarion_switch_gamma_param1:northhalmahera" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:northhalmahera" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="DataLikelihood:northhalmahera" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@StrictClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.northhalmahera" spec="SiteModel" mutationRate="1.0" proportionInvariant="0">
+            <substModel id="covarion.s:northhalmahera" spec="BinaryCovarion" alpha="@covarion_alpha.s:northhalmahera" switchRate="@covarion_s.s:northhalmahera">
+              <vfrequencies id="northhalmahera:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.78 0.22</vfrequencies>
+              <parameter id="northhalmahera:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="northhalmahera:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="filtered_data_northhalmahera" spec="FilteredAlignment" data="@data_northhalmahera" filter="-" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="covarion_alpha_scaler.s:northhalmahera" spec="ScaleOperator" parameter="@covarion_alpha.s:northhalmahera" scaleFactor="0.5" weight="1.0" />
+    <operator id="northhalmahera:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:northhalmahera" scaleFactor="0.5" weight="1.0" />
+    <logger id="screenlog" logEvery="1000">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="northhalmahera.log" logEvery="1000" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger mode="tree" fileName="northhalmahera.nex" logEvery="1000" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4" />
+    </logger>
+  </run>
+</beast>

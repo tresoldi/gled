@@ -28,3 +28,16 @@ run, one first needs to prepare the phylogenetic data:
 ```bash
 $ pipeline/prepare_bayesian.py
 ```
+
+Due to incompatibilities in the CLLD framework (such as the dependency of
+`beastling` on older version of `clldutils`) a different virtual environment,
+as specified by `pipeline/requirements-beastling.txt` is necessary. The
+process is currently rather cumbersome, as we need to use both
+`beastling` and our patched version of the same, which involves generating
+temporary files, etc. An auxiliary script takes care of that: once
+this has been created and activated, the running of `beastling` can
+be performed with
+
+```bash
+$
+```

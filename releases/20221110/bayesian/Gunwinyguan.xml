@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="djau1244,gunw1252,kunb1251,ngal1292,ngal1293,ngan1295,nung1290,remb1249,wara1290">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+    <sequence id="language_data_gunwinyguan:djau1244" taxon="djau1244" value="0?????01000????0010000010010000000?????00100000001000000000010000000000001000000000100000100000010000000010000001000000100000000010000000010000000000100000000001000000001000000001000000100000001000001000?????001000010000000010000010000100000010000000100000000001000000000100010000000001000000001000000001000000" />
+    <sequence id="language_data_gunwinyguan:gunw1252" taxon="gunw1252" value="0010000110001000001000000100100000100000???????0000110000000011100000000?????????010000010100000001000000001000??????0001100000000010010000011000000000100000000001100000???????0??????010010000??????0???011000000100????????0000100011001001000000100000001100000000011000000100000110000000100000000011000000011000" />
+    <sequence id="language_data_gunwinyguan:kunb1251" taxon="kunb1251" value="0?????00100????0001000000001000000?????0001000000010000000000100000000000010000000001000100000000100000000100001000000001000000000100000000100000000001000000000010000000010000000010000001000000010000???0?????000100001000000001000010000010000001000000010000000000100000000010001000000000100000000100000000100000" />
+    <sequence id="language_data_gunwinyguan:ngal1292" taxon="ngal1292" value="0100010110010010100000000100000000?????0100000001000000000010000000001001000000000100000100000010000000010000001000010100000000010000000010000000000100000000001000000000100000001000010100000001000000???0?????010000100000000100000010001000000100100000100000000010001000001000100000000010000000010000000001000000" />
+    <sequence id="language_data_gunwinyguan:ngal1293" taxon="ngal1293" value="0100000001000100000100000000010000010000000100000000010000000000100000000001000000100000010000000001000000010000010000000010000000010000000000100000??????????00000010000001000000001000000010000001000010000100010000000100000000100010000000100000010000100000000000000100000100?????????000010000000000100001000000" />
+    <sequence id="language_data_gunwinyguan:ngan1295" taxon="ngan1295" value="00010000100100000000100000000010000010000000100000000010000000000100000000001000000001000001000000001000??????0000100000000100000000100000000001000000001000000000000100000010000??????00000010000010000100010000????000001000000001001000000010000000100000001000000000001000???0000001000000001000000000100000000100" />
+    <sequence id="language_data_gunwinyguan:nung1290" taxon="nung1290" value="0?????0???0????000100100000000010000010000000100000000010000000000100010000001001000001000001100000001000000100000010000000010000000010100000000100000000100100000000010000001000??????000000010000010000100001000001000000101000000101010000001001000000000000100100000000100???0000000100000000100000000010000010010" />
+    <sequence id="language_data_gunwinyguan:remb1249" taxon="remb1249" value="0?????01000????0001000000000000010?????0100000000000000010000000000100000000001000100000010000000000001000010001000000000000010000001000000000000100000000100000000100000000001000000100000010000001000???0?????010000000000100100000010000000100000000100000000100000001000000100000000010000000010000000001000000001" />
+    <sequence id="language_data_gunwinyguan:wara1290" taxon="wara1290" value="000010010001000000000010010000000000001000000010000000000100000000001000000000010010000010000000100000000000010??????000000000100000100000000000001000000001010000000001000000010??????0000010000000010100000001001000????????0??????010000100000000000010000000010000000000100100000000001000000001000000000101000000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="StrictClockModel.c:default" spec="beast.evolution.branchratemodel.StrictClockModel" />
+  <run id="mcmc" spec="MCMC" chainLength="10000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <parameter id="covarion_alpha.s:gunwinyguan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:gunwinyguan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="YuleModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:beastlingTree" />
+        <prior id="YuleBirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:gunwinyguan" name="distribution" x="@covarion_alpha.s:gunwinyguan">
+          <Uniform id="CovAlphaUniform:gunwinyguan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:gunwinyguan" name="distribution" x="@covarion_s.s:gunwinyguan">
+          <Gamma id="Gamma.0:gunwinyguan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:gunwinyguan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:gunwinyguan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="DataLikelihood:gunwinyguan" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@StrictClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan" spec="SiteModel" mutationRate="1.0" proportionInvariant="0">
+            <substModel id="covarion.s:gunwinyguan" spec="BinaryCovarion" alpha="@covarion_alpha.s:gunwinyguan" switchRate="@covarion_s.s:gunwinyguan">
+              <vfrequencies id="gunwinyguan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.87 0.13</vfrequencies>
+              <parameter id="gunwinyguan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="gunwinyguan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="filtered_data_gunwinyguan" spec="FilteredAlignment" data="@data_gunwinyguan" filter="-" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="covarion_alpha_scaler.s:gunwinyguan" spec="ScaleOperator" parameter="@covarion_alpha.s:gunwinyguan" scaleFactor="0.5" weight="1.0" />
+    <operator id="gunwinyguan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:gunwinyguan" scaleFactor="0.5" weight="1.0" />
+    <logger id="screenlog" logEvery="1000">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="gunwinyguan.log" logEvery="1000" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger mode="tree" fileName="gunwinyguan.nex" logEvery="1000" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4" />
+    </logger>
+  </run>
+</beast>

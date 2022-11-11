@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="dend1243,humb1243,kora1291,koyr1240,koyr1242,tada1238,tasa1240,zarm1239">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+    <sequence id="language_data_songhay:dend1243" taxon="dend1243" value="0100001000010010001001000010010000100000000100100001000100000100010000100001001001000000100001001000001001000100010010" />
+    <sequence id="language_data_songhay:humb1243" taxon="humb1243" value="010000000101001000100001101101000000000001011010000100010000000100100000100100100000001010000100?????01001000100001010" />
+    <sequence id="language_data_songhay:kora1291" taxon="kora1291" value="00010010000100010010001000100001000010000001000100010000010000100001000010001010000100000010010000100010010000100??010" />
+    <sequence id="language_data_songhay:koyr1240" taxon="koyr1240" value="0010001000011010001000100010010000000010000100001001000010000010001000010000101000100010010101001100001001000100010010" />
+    <sequence id="language_data_songhay:koyr1242" taxon="koyr1242" value="0100101100011011001000010010010000010100000100001001000010000010001000110000101000100010110101001000001001000100010010" />
+    <sequence id="language_data_songhay:tada1238" taxon="tada1238" value="0100000010010000100100100010000100000001000100100000100000100010001000000100100100001000010001000001001000100001010001" />
+    <sequence id="language_data_songhay:tasa1240" taxon="tasa1240" value="0100001000010001001000100010000100000000100100000100010000010???0000101000001010000001000100001000001010000100010100??" />
+    <sequence id="language_data_songhay:zarm1239" taxon="zarm1239" value="0110001000011010001000110010011010010100000100100001000110000010001000110001101000100010110101001100001101000100010010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="StrictClockModel.c:default" spec="beast.evolution.branchratemodel.StrictClockModel" />
+  <run id="mcmc" spec="MCMC" chainLength="10000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <parameter id="covarion_alpha.s:songhay" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:songhay" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="YuleModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:beastlingTree" />
+        <prior id="YuleBirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:songhay" name="distribution" x="@covarion_alpha.s:songhay">
+          <Uniform id="CovAlphaUniform:songhay" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:songhay" name="distribution" x="@covarion_s.s:songhay">
+          <Gamma id="Gamma.0:songhay" name="distr">
+            <parameter id="covarion_switch_gamma_param1:songhay" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:songhay" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="DataLikelihood:songhay" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@StrictClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay" spec="SiteModel" mutationRate="1.0" proportionInvariant="0">
+            <substModel id="covarion.s:songhay" spec="BinaryCovarion" alpha="@covarion_alpha.s:songhay" switchRate="@covarion_s.s:songhay">
+              <vfrequencies id="songhay:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.74 0.26</vfrequencies>
+              <parameter id="songhay:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="songhay:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="filtered_data_songhay" spec="FilteredAlignment" data="@data_songhay" filter="-" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="covarion_alpha_scaler.s:songhay" spec="ScaleOperator" parameter="@covarion_alpha.s:songhay" scaleFactor="0.5" weight="1.0" />
+    <operator id="songhay:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:songhay" scaleFactor="0.5" weight="1.0" />
+    <logger id="screenlog" logEvery="1000">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="songhay.log" logEvery="1000" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger mode="tree" fileName="songhay.nex" logEvery="1000" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4" />
+    </logger>
+  </run>
+</beast>

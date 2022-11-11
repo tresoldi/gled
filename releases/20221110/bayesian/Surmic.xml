@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="didi1258,kaci1244,kweg1241,maja1242,meen1242,murl1244,murs1242,nari1240,suri1267,tenn1246">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+    <sequence id="language_data_surmic:didi1258" taxon="didi1258" value="01001010011001000100000010000000011000100100001001000001100000010001000001001000000100010000100100000100010000000001000000010000010000000100000???????0100000100001000010000000??????00110000010000010001000100000010001001000" />
+    <sequence id="language_data_surmic:kaci1244" taxon="kaci1244" value="01000010010001000100000100000010100001001000010010000001000000010101000010001000000??01100001001000011000100000010100000101100001000001001000001000000010000010000100010000001010010001000001010000010011001000000010001001000" />
+    <sequence id="language_data_surmic:kweg1241" taxon="kweg1241" value="00100010010000100010000001000000001000000010000000100000010000001000100010000100000??00010001000100000100010000000001000001000000010000001000000100000001000001000010000100000001000000010000010000010001000010000001000100101" />
+    <sequence id="language_data_surmic:maja1242" taxon="maja1242" value="00010001010000010100000100000000100000000001000000010000000100000100011000100001000??00100001000001010000000100000000010000010000000100000010000001000000010000010001000001000000010000000100000100010000100000100001001000010" />
+    <sequence id="language_data_surmic:meen1242" taxon="meen1242" value="01000010010000100001000010000000000100001000000010000000001000001001000010000010000??00100001000010000010001000000000100000100000001000000100000010000000100000100010000010000000100000001000001000001001000001000001001001000" />
+    <sequence id="language_data_surmic:murl1244" taxon="murl1244" value="01000010010001000000100000100000010000000000100000001000000010010001000010001000000??00001000101000001000000010000100000000001000000010000001000000100010000010000100000000100000010000100000010000010001000000010010001001000" />
+    <sequence id="language_data_surmic:murs1242" taxon="murs1242" value="01000010000100100000010010000000000100001000000010000000001000001001000010000000100??00000101000010010000100000000000100000100000000001001000000010000000001000100010000010000000100000000010000010010001000000001001001001000" />
+    <sequence id="language_data_surmic:nari1240" taxon="nari1240" value="010000100100010001000000000100000100000001000000000001000000100100010000100010000001000100001001000001000100000000100000000100000000000101000000000010010000010000100000010000000010000100000010000010001000100000000101001000" />
+    <sequence id="language_data_surmic:suri1267" taxon="suri1267" value="010000100100001000100000000011001000100010000000100000000010010010010000100000001100100000101000010010000100000100000101000100100000001001000000010000010001000100010010000000000001100011000000011010001000000001001001001000" />
+    <sequence id="language_data_surmic:tenn1246" taxon="tenn1246" value="010000100100010001000000100000000100000001000000000001000000100100010000100010000001000100001001000001000000001000100000000100000000010000000100000001010000010000100000000010000010000100000010000010001000000010000101001000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="StrictClockModel.c:default" spec="beast.evolution.branchratemodel.StrictClockModel" />
+  <run id="mcmc" spec="MCMC" chainLength="10000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <parameter id="covarion_alpha.s:surmic" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:surmic" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="YuleModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:beastlingTree" />
+        <prior id="YuleBirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:surmic" name="distribution" x="@covarion_alpha.s:surmic">
+          <Uniform id="CovAlphaUniform:surmic" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:surmic" name="distribution" x="@covarion_s.s:surmic">
+          <Gamma id="Gamma.0:surmic" name="distr">
+            <parameter id="covarion_switch_gamma_param1:surmic" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:surmic" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="DataLikelihood:surmic" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@StrictClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.surmic" spec="SiteModel" mutationRate="1.0" proportionInvariant="0">
+            <substModel id="covarion.s:surmic" spec="BinaryCovarion" alpha="@covarion_alpha.s:surmic" switchRate="@covarion_s.s:surmic">
+              <vfrequencies id="surmic:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.82 0.18</vfrequencies>
+              <parameter id="surmic:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="surmic:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="filtered_data_surmic" spec="FilteredAlignment" data="@data_surmic" filter="-" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="covarion_alpha_scaler.s:surmic" spec="ScaleOperator" parameter="@covarion_alpha.s:surmic" scaleFactor="0.5" weight="1.0" />
+    <operator id="surmic:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:surmic" scaleFactor="0.5" weight="1.0" />
+    <logger id="screenlog" logEvery="1000">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="surmic.log" logEvery="1000" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger mode="tree" fileName="surmic.nex" logEvery="1000" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4" />
+    </logger>
+  </run>
+</beast>

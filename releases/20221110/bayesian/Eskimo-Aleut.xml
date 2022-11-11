@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="aleu1260,cent2127,cent2128,east2534,kala1399,nort2943,nort2945,sire1246,west2618">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+    <sequence id="language_data_eskimoaleut:aleu1260" taxon="aleu1260" value="0100001000100000010000010000010000000010000000010000000010000100010001000010000100000100000000010000001000???0100000100000000100010000100000100100100010010000100000001000000100000010000001000000100001000010100010000010001000" />
+    <sequence id="language_data_eskimoaleut:cent2127" taxon="cent2127" value="0????00100010000001000001000001000000001000000001000000001000010001000100001000010000?????????001000000100???00100000100000000100010000100001000100100010010000100000001000000100000010000001000000100001000000100010000???00100" />
+    <sequence id="language_data_eskimoaleut:cent2128" taxon="cent2128" value="00101000100010100011100000100100100100010000000010010000001000010010001000010000010100000011000010001011001000010100000000100010000010001000100010010001000010010000100010000010010000100000010010001000010000100001100001000100" />
+    <sequence id="language_data_eskimoaleut:east2534" taxon="east2534" value="0001000010000100001000001010000011000000010000000100000000100???00100000100101000100000100000000001000???00010010000000100010010000010000010100??001000100010000010000??????0010000000001000010000001000000100010000010001000100" />
+    <sequence id="language_data_eskimoaleut:kala1399" taxon="kala1399" value="00010000100001000010000011000001011000001011010010001000001000010011000110011000001000100000000001100011100110011000001001000011000110000100110010010001000100001101000100100011100000011000011000001000001100011001001001100101" />
+    <sequence id="language_data_eskimoaleut:nort2943" taxon="nort2943" value="00010000100001000010000010000001000000001001000010000000001000010010000010010000010000001000010000010010000010010010000010000010000010010000??00100010010????0000100000001000010010000001000010000001000000100010000010001000100" />
+    <sequence id="language_data_eskimoaleut:nort2945" taxon="nort2945" value="00010000100001000010000010000001000000001000100010100110001000010010000010010000010000001100000000110010000010010000000011000010000010010000100010010001001100000100000001010000010000001000010000001000000100010000010001000110" />
+    <sequence id="language_data_eskimoaleut:sire1246" taxon="sire1246" value="00010000100000010010010000010000000010????????0????????00001000100100010000100000100000000001000001000???01000010000????????0010000010001000??001001000100001000001000??????00000010000001000001000001000100001000?????001000100" />
+    <sequence id="language_data_eskimoaleut:west2618" taxon="west2618" value="0001000010000100001000001000000001000000000100001000000000100001001000001001000001000001000000000010001000???0010000000100000010000010010000100010010001000100000100000100000010010000001000010000001000000100010000010001000100" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="StrictClockModel.c:default" spec="beast.evolution.branchratemodel.StrictClockModel" />
+  <run id="mcmc" spec="MCMC" chainLength="10000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <parameter id="covarion_alpha.s:eskimoaleut" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:eskimoaleut" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="YuleModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:beastlingTree" />
+        <prior id="YuleBirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:eskimoaleut" name="distribution" x="@covarion_alpha.s:eskimoaleut">
+          <Uniform id="CovAlphaUniform:eskimoaleut" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:eskimoaleut" name="distribution" x="@covarion_s.s:eskimoaleut">
+          <Gamma id="Gamma.0:eskimoaleut" name="distr">
+            <parameter id="covarion_switch_gamma_param1:eskimoaleut" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:eskimoaleut" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="DataLikelihood:eskimoaleut" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@StrictClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.eskimoaleut" spec="SiteModel" mutationRate="1.0" proportionInvariant="0">
+            <substModel id="covarion.s:eskimoaleut" spec="BinaryCovarion" alpha="@covarion_alpha.s:eskimoaleut" switchRate="@covarion_s.s:eskimoaleut">
+              <vfrequencies id="eskimoaleut:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.80 0.20</vfrequencies>
+              <parameter id="eskimoaleut:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="eskimoaleut:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="filtered_data_eskimoaleut" spec="FilteredAlignment" data="@data_eskimoaleut" filter="-" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="covarion_alpha_scaler.s:eskimoaleut" spec="ScaleOperator" parameter="@covarion_alpha.s:eskimoaleut" scaleFactor="0.5" weight="1.0" />
+    <operator id="eskimoaleut:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:eskimoaleut" scaleFactor="0.5" weight="1.0" />
+    <logger id="screenlog" logEvery="1000">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="eskimoaleut.log" logEvery="1000" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger mode="tree" fileName="eskimoaleut.nex" logEvery="1000" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4" />
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="ipik1244,maka1315,mina1274,muba1238,nucl1622,wark1247,yaqa1246">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+    <sequence id="language_data_anim:ipik1244" taxon="ipik1244" value="0100001000010010000010000001000000001000000100000000010000000010000010000000100000010000010000000010000001000010000001000000100100000001000000010000010000000100000010001000000010000000010000100100000000010000001000010000010000000100000100000000100000000001000001000000???010000000010000000" />
+    <sequence id="language_data_anim:maka1315" taxon="maka1315" value="00010000100000001000001000000100000000100000010000000????????0001000010000000010000001000001000000001000000100??????0??????0??000100000001000000100000010000001000000100001000000010000000010000000100000000100000????0?????000100000100000001000000001000000000010001000000010000100000000100000" />
+    <sequence id="language_data_anim:mina1274" taxon="mina1274" value="010000000100001000000000100000010000000100000001000000001000000100000001000000001001000000000100100010000000100001000000100001000001000000010000010000000100000100001000000010000000100000000100000001000000001000????000100000001000000100000010000000010000001000000001000???000001000000001000" />
+    <sequence id="language_data_anim:muba1238" taxon="muba1238" value="0100000001001010001000000100000010000000100000001100000001101001000000001010001000010000000000100000101000010000001000000110??000000100000010100001000000011000011001000000001000000010000000010000000110000000100????001000000010100100000000001000000001101101000000000100100000000110000000110" />
+    <sequence id="language_data_anim:nucl1622" taxon="nucl1622" value="000010010000000001000001000000100000010001000010000000010000000001000010000000010000001000001000000001000????000100000010000??00001000000010000?????000010000??????0100000010000000100000000100000001000000001000000100?????000010000001000000100000000100000000001000010000100000010000000010000" />
+    <sequence id="language_data_anim:wark1247" taxon="wark1247" value="0????000001000?????0010000000000010001000000000000100????????0000010???????000000100000100000001000000010????00000010??????0??00000001000000100?????001000000??????0001000000010000000100000000100000000100??????00001000010000000010000010000000100000000010000000100000010001000000001000000001" />
+    <sequence id="language_data_anim:yaqa1246" taxon="yaqa1246" value="0010000100000001000001000000100000100100000010000001001000010001000000000100010000001000001000000001000000100001000000100000??0010000000100000000001001000000000001010000100000001000001001000000010000001000000100100001001001000000010000010000010010000000000100000100000100001000010001000000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="StrictClockModel.c:default" spec="beast.evolution.branchratemodel.StrictClockModel" />
+  <run id="mcmc" spec="MCMC" chainLength="10000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <parameter id="covarion_alpha.s:anim" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:anim" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="YuleModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:beastlingTree" />
+        <prior id="YuleBirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:anim" name="distribution" x="@covarion_alpha.s:anim">
+          <Uniform id="CovAlphaUniform:anim" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:anim" name="distribution" x="@covarion_s.s:anim">
+          <Gamma id="Gamma.0:anim" name="distr">
+            <parameter id="covarion_switch_gamma_param1:anim" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:anim" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="DataLikelihood:anim" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@StrictClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.anim" spec="SiteModel" mutationRate="1.0" proportionInvariant="0">
+            <substModel id="covarion.s:anim" spec="BinaryCovarion" alpha="@covarion_alpha.s:anim" switchRate="@covarion_s.s:anim">
+              <vfrequencies id="anim:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.86 0.14</vfrequencies>
+              <parameter id="anim:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="anim:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="filtered_data_anim" spec="FilteredAlignment" data="@data_anim" filter="-" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="covarion_alpha_scaler.s:anim" spec="ScaleOperator" parameter="@covarion_alpha.s:anim" scaleFactor="0.5" weight="1.0" />
+    <operator id="anim:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:anim" scaleFactor="0.5" weight="1.0" />
+    <logger id="screenlog" logEvery="1000">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="anim.log" logEvery="1000" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger mode="tree" fileName="anim.nex" logEvery="1000" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4" />
+    </logger>
+  </run>
+</beast>

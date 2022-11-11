@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 Interface with Glottolog to obtain a starting tree.
 """
@@ -141,10 +143,13 @@ def output_lexical_data(roots, languoids, BAYES_PATH):
                 )
 
     for root, entries in bayes_data.items():
-        logging.info(f"Outputting lexical data for family `{name}`")
+        logging.info(f"Outputting lexical data for family `{root}`")
 
-        # Make sure missing entries are explicitly marked as such
+        # Make sure missing entries are explicitly marked as such; we
+        # also make sure not to run phylogenetic inference for isolates
         languages = sorted(set([row["Language_ID"] for row in entries]))
+        if len(languages) == 1:
+            continue
         concepts = sorted(set([row["Feature_ID"] for row in entries]))
         lang_feat_pairs = sorted(
             set([(row["Language_ID"], row["Feature_ID"]) for row in entries])
@@ -167,6 +172,28 @@ def output_lexical_data(roots, languoids, BAYES_PATH):
             )
             writer.writeheader()
             writer.writerows(entries)
+
+
+def prepare_beastling_conf(BAYES_PATH):
+    # Get the list of families
+    families = sorted(
+        [Path(filename).stem for filename in glob.glob(str(BAYES_PATH / "*.csv"))]
+    )
+
+    # Read template and generate a configuration for each family
+    with open(BASE_PATH / "etc" / "beastling.template.conf") as handler:
+        conf = handler.read()
+
+    for family in families:
+        logging.info(f"Generating BEASTling configuration for `{family}`...")
+        family_conf = conf
+
+        replaces = {"family": family, "model_name": common.slug(family, level="full")}
+        for source, target in replaces.items():
+            family_conf = family_conf.replace("{{" + source + "}}", target)
+
+        with open(BAYES_PATH / f"{family}.conf", "w", encoding="utf-8") as handler:
+            handler.write(family_conf)
 
 
 def main():
@@ -202,6 +229,10 @@ def main():
     # Output lexical data for Bayesian analysis
     output_lexical_data(roots, languoids, BAYES_PATH)
 
+    # Prepare the beastling configurations
+    prepare_beastling_conf(BAYES_PATH)
+
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     main()

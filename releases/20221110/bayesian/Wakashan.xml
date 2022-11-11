@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="diti1235,hais1244,heil1246,kwak1269,maka1318,nuuc1236">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+    <sequence id="language_data_wakashan:diti1235" taxon="diti1235" value="0??010010001000010000001000100100000101001000000101010000100001000000101010000100100????01000000010000001000000100001000100000001000000100100000100001001000010010001000100010000010001001000100010000000" />
+    <sequence id="language_data_wakashan:hais1244" taxon="hais1244" value="010001001000100001000000100000010000000100100000100001000010000100000010001000010000100000100000001000000100000010000100010000000100000010010000010000100100010001000100010001000001000101000010001000000" />
+    <sequence id="language_data_wakashan:heil1246" taxon="heil1246" value="010001000100010000110000010000001001000100011000100001000010100010000010001000010000010000010000000100000010000011000010001000100101000010001000001001000110010001000100010000100001000101000010000101101" />
+    <sequence id="language_data_wakashan:kwak1269" taxon="kwak1269" value="010001010000010000010000100000000100000100001000100000100001000001000010001000001000110000001001000010000001000010000100000100000010100010000100000100100010010001000100010001000001000100100010000010000" />
+    <sequence id="language_data_wakashan:maka1318" taxon="maka1318" value="001010010000001000001001000000000010001000000100010010000100000000100010000100100000001000000100000001001000000000101000000010001000000100000010100001000001010010000010001010000010001001000001010000000" />
+    <sequence id="language_data_wakashan:nuuc1236" taxon="nuuc1236" value="001010010000001000000100001010000010001000000110100000010100001000010010000010100010000100000010010000100000110000101000000001001000010100100000100001001000011010100100001000011000101001010001010000010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="StrictClockModel.c:default" spec="beast.evolution.branchratemodel.StrictClockModel" />
+  <run id="mcmc" spec="MCMC" chainLength="10000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <parameter id="covarion_alpha.s:wakashan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:wakashan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="YuleModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:beastlingTree" />
+        <prior id="YuleBirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:wakashan" name="distribution" x="@covarion_alpha.s:wakashan">
+          <Uniform id="CovAlphaUniform:wakashan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:wakashan" name="distribution" x="@covarion_s.s:wakashan">
+          <Gamma id="Gamma.0:wakashan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:wakashan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:wakashan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="DataLikelihood:wakashan" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@StrictClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan" spec="SiteModel" mutationRate="1.0" proportionInvariant="0">
+            <substModel id="covarion.s:wakashan" spec="BinaryCovarion" alpha="@covarion_alpha.s:wakashan" switchRate="@covarion_s.s:wakashan">
+              <vfrequencies id="wakashan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.78 0.22</vfrequencies>
+              <parameter id="wakashan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="wakashan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="filtered_data_wakashan" spec="FilteredAlignment" data="@data_wakashan" filter="-" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="covarion_alpha_scaler.s:wakashan" spec="ScaleOperator" parameter="@covarion_alpha.s:wakashan" scaleFactor="0.5" weight="1.0" />
+    <operator id="wakashan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:wakashan" scaleFactor="0.5" weight="1.0" />
+    <logger id="screenlog" logEvery="1000">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="wakashan.log" logEvery="1000" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger mode="tree" fileName="wakashan.nex" logEvery="1000" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4" />
+    </logger>
+  </run>
+</beast>

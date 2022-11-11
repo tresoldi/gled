@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="heib1243,koal1240,kooo1244,laro1243,logo1262,moro1285,otor1240,shwa1239,tira1254,warn1244">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+    <sequence id="language_data_heibanic:heib1243" taxon="heib1243" value="0100001000100100100100000001000010000001000100010000110000000100000100001000100010000010000000100000000100000100000100000110000000010001000000001000000000001000001100001000000100100100100010000000100000" />
+    <sequence id="language_data_heibanic:koal1240" taxon="koal1240" value="010000100010010010010000000001000010000100010001000000001000000100000100???01000?????000010000000100000100000001000001000000010000001001000000000000010000001000001000001000000100010100100000010000100000" />
+    <sequence id="language_data_heibanic:kooo1244" taxon="kooo1244" value="001000100010001001001010000010001000000100001001000000100000010000001000???0100001000001000000010000000100000010000010000001000000001000100000000100000000000100000010000100000100100010010001000000010000" />
+    <sequence id="language_data_heibanic:laro1243" taxon="laro1243" value="0100000100100100100100000000010010000001000100010000000100000010000100001000100000100010000000010000000100000010000001000000100000010000010000000010000000101000001000000010000100100100100010000000001000" />
+    <sequence id="language_data_heibanic:logo1262" taxon="logo1262" value="01000000101001001001000000010000??????01000100010000100000000100000001001000100010000000100000100000000100000010000010000000010000010000001000000001000000000010000010001000000010100100100000100000000100" />
+    <sequence id="language_data_heibanic:moro1285" taxon="moro1285" value="00010010001001001001000100010000010000001000010010001000000001000000010010000100000100???????0001000000010000010000000100000001000010000000100000000100100000001000001000001000100100100100001000000010000" />
+    <sequence id="language_data_heibanic:otor1240" taxon="otor1240" value="0100001000100100100100000001000000001001000100010000000000100001000100100100100010000010000010000000100100000000010001000000000010010001000000001000000010001000001000001000000100100100100000000100100000" />
+    <sequence id="language_data_heibanic:shwa1239" taxon="shwa1239" value="0100001000100100100100000001000010000001000100000100000001000100000001000100100000001010000000000010000001000000100001000000000100010000000010000000001000001000000100000000100100100100100001000000000010" />
+    <sequence id="language_data_heibanic:tira1254" taxon="tira1254" value="0000101000100100100100001001000000010000100100000010100000000000100010000100010010000000001000000001000000100010000?????0000001000010000000001000000000100000001000000101000000100100100100000001000010000" />
+    <sequence id="language_data_heibanic:warn1244" taxon="warn1244" value="01000010000100101000010001000010000001000100100100000000000100000100100000100010?????000000100000000010000010000100000010000000001000100000000100000000001000000100100000000010100100100001000000010000001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="StrictClockModel.c:default" spec="beast.evolution.branchratemodel.StrictClockModel" />
+  <run id="mcmc" spec="MCMC" chainLength="10000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <parameter id="covarion_alpha.s:heibanic" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:heibanic" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="YuleModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:beastlingTree" />
+        <prior id="YuleBirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:heibanic" name="distribution" x="@covarion_alpha.s:heibanic">
+          <Uniform id="CovAlphaUniform:heibanic" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:heibanic" name="distribution" x="@covarion_s.s:heibanic">
+          <Gamma id="Gamma.0:heibanic" name="distr">
+            <parameter id="covarion_switch_gamma_param1:heibanic" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:heibanic" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="DataLikelihood:heibanic" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@StrictClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.heibanic" spec="SiteModel" mutationRate="1.0" proportionInvariant="0">
+            <substModel id="covarion.s:heibanic" spec="BinaryCovarion" alpha="@covarion_alpha.s:heibanic" switchRate="@covarion_s.s:heibanic">
+              <vfrequencies id="heibanic:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.82 0.18</vfrequencies>
+              <parameter id="heibanic:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="heibanic:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="filtered_data_heibanic" spec="FilteredAlignment" data="@data_heibanic" filter="-" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="covarion_alpha_scaler.s:heibanic" spec="ScaleOperator" parameter="@covarion_alpha.s:heibanic" scaleFactor="0.5" weight="1.0" />
+    <operator id="heibanic:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:heibanic" scaleFactor="0.5" weight="1.0" />
+    <logger id="screenlog" logEvery="1000">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="heibanic.log" logEvery="1000" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger mode="tree" fileName="heibanic.nex" logEvery="1000" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4" />
+    </logger>
+  </run>
+</beast>

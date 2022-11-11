@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="cayu1261,cher1273,moha1258,onei1249,onon1246,sene1264,tusc1257,wyan1247">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+    <sequence id="language_data_iroquoian:cayu1261" taxon="cayu1261" value="01001000100100001000001000001000000001000100000000100010010000100001000010000001000001000010001000000001000100000100000010000100010010010001000100000100100010000000100010000001000000100100001000001000100000" />
+    <sequence id="language_data_iroquoian:cher1273" taxon="cher1273" value="00100100100010000100000100000100000000100010000000010001001100010000100001000000100000100001000100000000100010000010000001000010001001001000100010000010010001001000010001000000100000010010000100000100010000" />
+    <sequence id="language_data_iroquoian:moha1258" taxon="moha1258" value="01001000100100000010000010001000010001010001000000001010010000100100010010000001000001000010000010000001000101000001000010000100010010010001000001000100100010010000001000100001000000100101000011001000100000" />
+    <sequence id="language_data_iroquoian:onei1249" taxon="onei1249" value="01001000100100000010000001001000000001000000100000100010010000001000010010010001000001000010000001000001000100000001000010100100010010010001000001000100001000100000001000100000010000100001000001001000001000" />
+    <sequence id="language_data_iroquoian:onon1246" taxon="onon1246" value="01001000100100000011000001100010000001000000010000100010010000101001000010000000010001000010000000100001000100000000100010000100010010010001000001000100100010010000001000100001000000100100000000101000001000" />
+    <sequence id="language_data_iroquoian:sene1264" taxon="sene1264" value="01001000100100000001001000001001001001000000001000100010010000101000010010001101010001001010000000010001000100000001000010000100010010010001000001000100100010000000100010000001000000100100000001001000001000" />
+    <sequence id="language_data_iroquoian:tusc1257" taxon="tusc1257" value="01001000100101000000100000101000100101000000000100001010010000100000010000100000001000010000100000001000010100000000010010010100010010010000010001110100100000010000100000011000001100100100000010000010000100" />
+    <sequence id="language_data_iroquoian:wyan1247" taxon="wyan1247" value="01101010110001100001000001101000000001000000000010001010010010101000011010000000010101001010000000000101000000110001001010000001010010000101000001000100100000010110100000001101000010100100100011001000000011" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="StrictClockModel.c:default" spec="beast.evolution.branchratemodel.StrictClockModel" />
+  <run id="mcmc" spec="MCMC" chainLength="10000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <parameter id="covarion_alpha.s:iroquoian" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:iroquoian" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="YuleModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.YuleModel" birthDiffRate="@birthRate.t:beastlingTree" />
+        <prior id="YuleBirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:iroquoian" name="distribution" x="@covarion_alpha.s:iroquoian">
+          <Uniform id="CovAlphaUniform:iroquoian" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:iroquoian" name="distribution" x="@covarion_s.s:iroquoian">
+          <Gamma id="Gamma.0:iroquoian" name="distr">
+            <parameter id="covarion_switch_gamma_param1:iroquoian" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:iroquoian" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="DataLikelihood:iroquoian" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@StrictClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iroquoian" spec="SiteModel" mutationRate="1.0" proportionInvariant="0">
+            <substModel id="covarion.s:iroquoian" spec="BinaryCovarion" alpha="@covarion_alpha.s:iroquoian" switchRate="@covarion_s.s:iroquoian">
+              <vfrequencies id="iroquoian:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.78 0.22</vfrequencies>
+              <parameter id="iroquoian:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="iroquoian:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="filtered_data_iroquoian" spec="FilteredAlignment" data="@data_iroquoian" filter="-" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="covarion_alpha_scaler.s:iroquoian" spec="ScaleOperator" parameter="@covarion_alpha.s:iroquoian" scaleFactor="0.5" weight="1.0" />
+    <operator id="iroquoian:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:iroquoian" scaleFactor="0.5" weight="1.0" />
+    <logger id="screenlog" logEvery="1000">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="iroquoian.log" logEvery="1000" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger mode="tree" fileName="iroquoian.nex" logEvery="1000" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4" />
+    </logger>
+  </run>
+</beast>
