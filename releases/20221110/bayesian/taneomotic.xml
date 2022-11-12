@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="anfi1235,bask1236,benc1235,boro1277,char1269,dawr1236,dorz1235,gamo1243,gofa1235,kach1284,kafa1242,koor1239,male1284,melo1242,oyda1235,shek1244,wola1242,yems1235,zays1235">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_taneomotic" name="data_taneomotic" dataType="integer">
+    <sequence id="language_data_taneomotic:anfi1235" taxon="anfi1235" value="01001000001000010100001000000001000000000000000001000010000000000001000000000001000000001000000010?????01000000000100000010000001000000000000100000000000100001000000000010100000000101000000010000000000010010000010000000100000001000000000000000100000100100000000000100000001" />
+    <sequence id="language_data_taneomotic:bask1236" taxon="bask1236" value="01001000010000100100100000000000000010000000000000000010000000010000010000000000000000001000010000?????01000001000000001000001000000000010000000100000000001000001000000000100010000001000000010010000000000010000010000000100000100000000000000100000010000100000010000000001000" />
+    <sequence id="language_data_taneomotic:benc1235" taxon="benc1235" value="01001100010000100100010000000000001011000000000000000010000000001010001000000000010000001000011000?????01000000100001000100000100010000011000000011000000000100000100000100100001000000100000010001010000000011000001000000010010010000000000000010000001000010000010000000000100" />
+    <sequence id="language_data_taneomotic:boro1277" taxon="boro1277" value="010010000000101001000100000000000000000000000000100000100000000100000000000000000010000010000100000010001000000000000100001000000000100000000100000001000000001000000001000100000000100000001010010000000000010000000000100100000100000000000000000001000100100000000000100001000" />
+    <sequence id="language_data_taneomotic:char1269" taxon="char1269" value="0100100001000010010000100000000000000010000000000000000100000001000000010000000000000000100001000010000001000000100000001000001000000000100000000010000000001000000100000001000001000000100000??000100000000010000000100000100000001000000000000100000010000100000001000000001000" />
+    <sequence id="language_data_taneomotic:dawr1236" taxon="dawr1236" value="01001000010000100100000000010000000000000000010000000000000100010000000000000100000000001000010000?????01000000001000000010000100000000000100000000001000000010001000000000100000100000001000010000100000000010000010000000100000000000100000000100000010000100000000000010001000" />
+    <sequence id="language_data_taneomotic:dorz1235" taxon="dorz1235" value="01001000010000100100000100000000000000010000000000000000010000010000000010000000000000001000010000?????0100000000100000?????00010000000000100000000010000000010000000100000100000010000001000011000010000000010000010000000100000000100000000000100000010000100000000100000001000" />
+    <sequence id="language_data_taneomotic:gamo1243" taxon="gamo1243" value="010010000100001001001001110000000100100110000010000000001111000100000001000000000000000010010100000100001000000001000000010000111000000010100000001110000000010000001000000110000110000001100010000101000101010000010000000100100100110000000000100000010000101000010100000001000" />
+    <sequence id="language_data_taneomotic:gofa1235" taxon="gofa1235" value="0100100001000010010000000001000000000000100000000000000000100001000000010000000000000000100001000001000010000000010000000100001000000000???????0??????????000100010000000001000001000000010000100001000000000?????010000000100000000001000000000001000010000100000000100000001000" />
+    <sequence id="language_data_taneomotic:kach1284" taxon="kach1284" value="01001000010000100010000000000100000000010000000000000001000000010000000100000000000000001000010000?????0?????000100000010000001000000000100000000000010000001000000000010000010001000000010000100000000100000001000???????0001000??????????????0100000000100100000000001000001000" />
+    <sequence id="language_data_taneomotic:kafa1242" taxon="kafa1242" value="010010000001000101000100000000000000000000100000000000000000100100000000000100000000000000100000100010000001000000100001000000100000000000001000001000000000001000000001000100000000100000010010000010000000010000010000000000100010000000000000100000000100100000000000100001000" />
+    <sequence id="language_data_taneomotic:koor1239" taxon="koor1239" value="010010100100001001001000001000000000001000011000000000110001000100000000010010000000001010000100000100101000000010000001000000100100000010000000001010100100100001000000000110000100000001000010010000000000010000010000010100000100000000000000100000000100100000010100000001000" />
+    <sequence id="language_data_taneomotic:male1284" taxon="male1284" value="01000001010000100100000000000100000000010000000000000010000000010000000000000010000000001000010000?????01000000000010000001000001000000010000000000000010000000100000001000100000100001000000010000000001000010000000001000100000100000000000000100000010000100000000000001001000" />
+    <sequence id="language_data_taneomotic:melo1242" taxon="melo1242" value="0??01000010000100100000000000010000000000000000100000011000000010000000100000000000000001000010000010000?????000010000010000000100000100001000100000010000000100000010000001000001000000001000??000100000000000011010000000100000000000010000000000100010000100010000100000001000" />
+    <sequence id="language_data_taneomotic:oyda1235" taxon="oyda1235" value="01001000010000100100000000000000100000010000000000000010000000010000000000000000100000001000010000?????01000000001000000010000001000000000100000000001000000010001000000000100000100000001000010010000000000010000010000000100000000000001000000100000010000100000000100000001000" />
+    <sequence id="language_data_taneomotic:shek1244" taxon="shek1244" value="01001000000100010100001000000001000000000100000000000000000100010000000000000001000000000010000010?????00000100000100000100000000001000000000100000000001000010000000001000100000000100000010010000000000010010000010000000100000001000000000000000010000100100000000000100001000" />
+    <sequence id="language_data_taneomotic:wola1242" taxon="wola1242" value="010010000100001001000001000100000000000000000000001100000010010100000000000001000001000010000100000101001000000001000000010000011000001000100000000001000000010001000000000100000100000001000010000100000000010000010000000100000000000000110010100000010000100001000100000001000" />
+    <sequence id="language_data_taneomotic:yems1235" taxon="yems1235" value="00101000001000100100000000001000000000000100000000000000000100000100000000100000000000000100000100?????00010000000100000001000000010000000010000000010000000100000000010000100000001000001000010000000100000010000000010000100000000100000000000000100010000000100000010000000010" />
+    <sequence id="language_data_taneomotic:zays1235" taxon="zays1235" value="010010000100001001001000000000000000000000000010000010000001000100000001000000000000110000010100000100001000000011000000010100101000000010000000001010000000110000000001000010000100000001000010000000000100010000010000000000100100000000001100100000010010100000010100000101000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,drink,ear,eye,fire,fish,full,hear,horn,knee,leaf,liver,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:taneomotic:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:taneomotic" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:taneomotic" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:taneomotic" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:taneomotic" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(benc1235,yems1235,(anfi1235,boro1277,(kafa1242,shek1244)),(char1269,(kach1284,koor1239,zays1235),(bask1236,male1284,(dorz1235,melo1242,oyda1235,wola1242,(dawr1236,gamo1243,gofa1235)))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:taneomotic" name="distribution">
+          <input id="featureClockRateCompound:taneomotic" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,drink,ear,eye,fire,fish,full,hear,horn,knee,leaf,liver,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:taneomotic:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:taneomotic" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:taneomotic" beta="@featureClockRateGammaScale:taneomotic" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:taneomotic" name="distribution" x="@featureClockRateGammaScale:taneomotic">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:taneomotic" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:taneomotic" name="distribution" x="@covarion_alpha.s:taneomotic">
+          <Uniform id="CovAlphaUniform:taneomotic" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:taneomotic" name="distribution" x="@covarion_s.s:taneomotic">
+          <Gamma id="Gamma.0:taneomotic" name="distr">
+            <parameter id="covarion_switch_gamma_param1:taneomotic" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:taneomotic" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:taneomotic:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:1pl" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:taneomotic" spec="BinaryCovarion" alpha="@covarion_alpha.s:taneomotic" switchRate="@covarion_s.s:taneomotic">
+              <vfrequencies id="taneomotic:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.86 0.14</vfrequencies>
+              <parameter id="taneomotic:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="taneomotic:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_taneomotic:1pl" spec="FilteredAlignment" data="@data_taneomotic" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:2sg" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:2sg" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:2sg" spec="FilteredAlignment" data="@data_taneomotic" filter="4-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:blood" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:blood" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:blood" spec="FilteredAlignment" data="@data_taneomotic" filter="9-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:bone" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:bone" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:bone" spec="FilteredAlignment" data="@data_taneomotic" filter="14-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:breast" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:breast" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:breast" spec="FilteredAlignment" data="@data_taneomotic" filter="17-19" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:come" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:come" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:come" spec="FilteredAlignment" data="@data_taneomotic" filter="20-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:die" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:die" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:die" spec="FilteredAlignment" data="@data_taneomotic" filter="36-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:drink" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:drink" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:drink" spec="FilteredAlignment" data="@data_taneomotic" filter="54-62" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:ear" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:ear" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:ear" spec="FilteredAlignment" data="@data_taneomotic" filter="63-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:eye" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:eye" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:eye" spec="FilteredAlignment" data="@data_taneomotic" filter="69-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:fire" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:fire" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:fire" spec="FilteredAlignment" data="@data_taneomotic" filter="88-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:fish" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:fish" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:fish" spec="FilteredAlignment" data="@data_taneomotic" filter="93-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:full" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:full" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:full" spec="FilteredAlignment" data="@data_taneomotic" filter="98-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:hear" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:hear" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:hear" spec="FilteredAlignment" data="@data_taneomotic" filter="104-109" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:horn" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:horn" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:horn" spec="FilteredAlignment" data="@data_taneomotic" filter="110-118" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:knee" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:knee" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:knee" spec="FilteredAlignment" data="@data_taneomotic" filter="119-124" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:leaf" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:leaf" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:leaf" spec="FilteredAlignment" data="@data_taneomotic" filter="125-135" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:liver" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:liver" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:liver" spec="FilteredAlignment" data="@data_taneomotic" filter="136-143" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:mountain" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:mountain" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:mountain" spec="FilteredAlignment" data="@data_taneomotic" filter="144-154" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:new" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:new" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:new" spec="FilteredAlignment" data="@data_taneomotic" filter="155-160" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:night" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:night" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:night" spec="FilteredAlignment" data="@data_taneomotic" filter="161-170" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:nose" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:nose" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:nose" spec="FilteredAlignment" data="@data_taneomotic" filter="171-174" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:one" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:one" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:one" spec="FilteredAlignment" data="@data_taneomotic" filter="175-181" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:path" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:path" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:path" spec="FilteredAlignment" data="@data_taneomotic" filter="182-189" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:person" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:person" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:person" spec="FilteredAlignment" data="@data_taneomotic" filter="190-192" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:see" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:see" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:see" spec="FilteredAlignment" data="@data_taneomotic" filter="193-204" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:skin" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:skin" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:skin" spec="FilteredAlignment" data="@data_taneomotic" filter="205-210" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:star" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:star" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:star" spec="FilteredAlignment" data="@data_taneomotic" filter="211-218" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:stone" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:stone" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:stone" spec="FilteredAlignment" data="@data_taneomotic" filter="219-224" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:sun" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:sun" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:sun" spec="FilteredAlignment" data="@data_taneomotic" filter="225-239" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:tongue" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:tongue" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:tongue" spec="FilteredAlignment" data="@data_taneomotic" filter="240-246" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:tooth" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:tooth" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:tooth" spec="FilteredAlignment" data="@data_taneomotic" filter="247-251" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:tree" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:tree" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:tree" spec="FilteredAlignment" data="@data_taneomotic" filter="252-258" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:two" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:two" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:two" spec="FilteredAlignment" data="@data_taneomotic" filter="259-268" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:taneomotic:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.taneomotic:water" spec="SiteModel" mutationRate="@featureClockRate:taneomotic:water" proportionInvariant="0" substModel="@covarion.s:taneomotic" />
+          <data id="feature_data_taneomotic:water" spec="FilteredAlignment" data="@data_taneomotic" filter="269-273" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:taneomotic" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:taneomotic" name="up" />
+      <parameter idref="featureClockRateGammaScale:taneomotic" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:taneomotic" spec="ScaleOperator" parameter="@covarion_alpha.s:taneomotic" scaleFactor="0.5" weight="1.0" />
+    <operator id="taneomotic:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:taneomotic" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,drink,ear,eye,fire,fish,full,hear,horn,knee,leaf,liver,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:taneomotic:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="35" estimate="false">2 4 4 2 2 15 17 8 5 18 4 4 5 5 8 5 10 7 10 5 9 3 6 7 2 11 5 7 5 14 6 4 6 9 4</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="taneomotic.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,drink,ear,eye,fire,fish,full,hear,horn,knee,leaf,liver,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:taneomotic:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:taneomotic" />
+      <log idref="covarion_alpha.s:taneomotic" />
+      <log idref="covarion_s.s:taneomotic" />
+    </logger>
+    <logger mode="tree" fileName="taneomotic.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

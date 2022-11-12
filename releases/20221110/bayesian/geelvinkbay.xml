@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="bauz1241,bura1276,kofe1239,tefa1238,tung1293">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_geelvinkbay" name="data_geelvinkbay" dataType="integer">
+    <sequence id="language_data_geelvinkbay:bauz1241" taxon="bauz1241" value="010010000010000100001001000001000001000010000001000000010001000001000100100000010000010000010000100010010010001000001001000010001000010001000010000010001000010000" />
+    <sequence id="language_data_geelvinkbay:bura1276" taxon="bura1276" value="0??001000001000010000100100000100000100001000000100000001000100000100??00100000010000010000010000100??0??010000100000100100001000100001000100001000001000100001000" />
+    <sequence id="language_data_geelvinkbay:kofe1239" taxon="kofe1239" value="001000100001000001000100011000010000010000100000010000001000100100010??0001001000100000101000100101001001001100010000100011000100010000100110000101010000010000100" />
+    <sequence id="language_data_geelvinkbay:tefa1238" taxon="tefa1238" value="010010000010000001000100001000001000001000010000001000000100010000010010000100000010000010001000010001001010000010000100001000100001000100100000100000100001000010" />
+    <sequence id="language_data_geelvinkbay:tung1293" taxon="tung1293" value="01000001100011000010010000010000010010000000110000011100100000100???0??00000100000010?????000010???0010??01000000110??0????0010000100???000010000100???00100000001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,drink,ear,eye,fire,fish,full,hear,leaf,liver,louse,mountain,name,new,night,one,path,person,see,skin,star,stone,sun,tongue,two,water">
+        <parameter id="featureClockRate:geelvinkbay:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:geelvinkbay" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:geelvinkbay" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:geelvinkbay" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:geelvinkbay" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(bauz1241,kofe1239,tefa1238,(bura1276,tung1293));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:geelvinkbay" name="distribution">
+          <input id="featureClockRateCompound:geelvinkbay" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,drink,ear,eye,fire,fish,full,hear,leaf,liver,louse,mountain,name,new,night,one,path,person,see,skin,star,stone,sun,tongue,two,water">
+              <var idref="featureClockRate:geelvinkbay:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:geelvinkbay" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:geelvinkbay" beta="@featureClockRateGammaScale:geelvinkbay" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:geelvinkbay" name="distribution" x="@featureClockRateGammaScale:geelvinkbay">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:geelvinkbay" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:geelvinkbay" name="distribution" x="@covarion_alpha.s:geelvinkbay">
+          <Uniform id="CovAlphaUniform:geelvinkbay" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:geelvinkbay" name="distribution" x="@covarion_s.s:geelvinkbay">
+          <Gamma id="Gamma.0:geelvinkbay" name="distr">
+            <parameter id="covarion_switch_gamma_param1:geelvinkbay" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:geelvinkbay" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:geelvinkbay:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:1pl" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:geelvinkbay" spec="BinaryCovarion" alpha="@covarion_alpha.s:geelvinkbay" switchRate="@covarion_s.s:geelvinkbay">
+              <vfrequencies id="geelvinkbay:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.80 0.20</vfrequencies>
+              <parameter id="geelvinkbay:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="geelvinkbay:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_geelvinkbay:1pl" spec="FilteredAlignment" data="@data_geelvinkbay" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:1sg" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:1sg" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:1sg" spec="FilteredAlignment" data="@data_geelvinkbay" filter="4-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:2sg" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:2sg" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:2sg" spec="FilteredAlignment" data="@data_geelvinkbay" filter="10-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:blood" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:blood" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:blood" spec="FilteredAlignment" data="@data_geelvinkbay" filter="15-19" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:bone" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:bone" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:bone" spec="FilteredAlignment" data="@data_geelvinkbay" filter="20-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:breast" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:breast" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:breast" spec="FilteredAlignment" data="@data_geelvinkbay" filter="23-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:come" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:come" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:come" spec="FilteredAlignment" data="@data_geelvinkbay" filter="29-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:die" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:die" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:die" spec="FilteredAlignment" data="@data_geelvinkbay" filter="35-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:drink" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:drink" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:drink" spec="FilteredAlignment" data="@data_geelvinkbay" filter="40-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:ear" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:ear" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:ear" spec="FilteredAlignment" data="@data_geelvinkbay" filter="47-54" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:eye" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:eye" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:eye" spec="FilteredAlignment" data="@data_geelvinkbay" filter="55-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:fire" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:fire" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:fire" spec="FilteredAlignment" data="@data_geelvinkbay" filter="59-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:fish" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:fish" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:fish" spec="FilteredAlignment" data="@data_geelvinkbay" filter="65-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:full" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:full" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:full" spec="FilteredAlignment" data="@data_geelvinkbay" filter="69-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:hear" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:hear" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:hear" spec="FilteredAlignment" data="@data_geelvinkbay" filter="72-78" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:leaf" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:leaf" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:leaf" spec="FilteredAlignment" data="@data_geelvinkbay" filter="79-84" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:liver" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:liver" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:liver" spec="FilteredAlignment" data="@data_geelvinkbay" filter="85-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:louse" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:louse" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:louse" spec="FilteredAlignment" data="@data_geelvinkbay" filter="91-95" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:mountain" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:mountain" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:mountain" spec="FilteredAlignment" data="@data_geelvinkbay" filter="96-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:name" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:name" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:name" spec="FilteredAlignment" data="@data_geelvinkbay" filter="100-102" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:new" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:new" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:new" spec="FilteredAlignment" data="@data_geelvinkbay" filter="103-105" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:night" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:night" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:night" spec="FilteredAlignment" data="@data_geelvinkbay" filter="106-109" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:one" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:one" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:one" spec="FilteredAlignment" data="@data_geelvinkbay" filter="110-115" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:path" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:path" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:path" spec="FilteredAlignment" data="@data_geelvinkbay" filter="116-118" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:person" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:person" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:person" spec="FilteredAlignment" data="@data_geelvinkbay" filter="119-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:see" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:see" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:see" spec="FilteredAlignment" data="@data_geelvinkbay" filter="124-127" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:skin" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:skin" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:skin" spec="FilteredAlignment" data="@data_geelvinkbay" filter="128-132" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:star" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:star" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:star" spec="FilteredAlignment" data="@data_geelvinkbay" filter="133-136" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:stone" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:stone" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:stone" spec="FilteredAlignment" data="@data_geelvinkbay" filter="137-141" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:sun" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:sun" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:sun" spec="FilteredAlignment" data="@data_geelvinkbay" filter="142-147" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:tongue" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:tongue" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:tongue" spec="FilteredAlignment" data="@data_geelvinkbay" filter="148-151" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:two" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:two" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:two" spec="FilteredAlignment" data="@data_geelvinkbay" filter="152-156" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:geelvinkbay:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.geelvinkbay:water" spec="SiteModel" mutationRate="@featureClockRate:geelvinkbay:water" proportionInvariant="0" substModel="@covarion.s:geelvinkbay" />
+          <data id="feature_data_geelvinkbay:water" spec="FilteredAlignment" data="@data_geelvinkbay" filter="157-162" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:geelvinkbay" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:geelvinkbay" name="up" />
+      <parameter idref="featureClockRateGammaScale:geelvinkbay" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:geelvinkbay" spec="ScaleOperator" parameter="@covarion_alpha.s:geelvinkbay" scaleFactor="0.5" weight="1.0" />
+    <operator id="geelvinkbay:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:geelvinkbay" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,drink,ear,eye,fire,fish,full,hear,leaf,liver,louse,mountain,name,new,night,one,path,person,see,skin,star,stone,sun,tongue,two,water">
+        <parameter idref="featureClockRate:geelvinkbay:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="33" estimate="false">2 5 4 4 2 5 5 4 6 7 3 5 3 2 6 5 5 4 3 2 2 3 5 2 4 3 4 3 4 5 3 4 5</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="geelvinkbay.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,drink,ear,eye,fire,fish,full,hear,leaf,liver,louse,mountain,name,new,night,one,path,person,see,skin,star,stone,sun,tongue,two,water">
+        <log idref="featureClockRate:geelvinkbay:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:geelvinkbay" />
+      <log idref="covarion_alpha.s:geelvinkbay" />
+      <log idref="covarion_s.s:geelvinkbay" />
+    </logger>
+    <logger mode="tree" fileName="geelvinkbay.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

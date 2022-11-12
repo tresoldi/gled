@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Chipaya
+			Uru
+			;
+End;
+Begin trees;
+	Translate
+		   1 Chipaya,
+		   2 Uru
+;
+tree TREE1 = (1[&height=0.0,length=1.9955989608313516,length_95%_HPD={0.5756,3.3636},length_median=2.0789,length_range={0.5756,4.2283},rate=1.0081481215027954,rate_95%_HPD={0.7921,1.2471},rate_median=1.0071,rate_range={0.5868,1.2471}]:1.9955989608313516,2[&height=0.0,length=1.9955989608313516,length_95%_HPD={0.5756,3.3636},length_median=2.0789,length_range={0.5756,4.2283},rate=0.9990577937649835,rate_95%_HPD={0.7867,1.2471},rate_median=1.005,rate_range={0.5868,1.2471}]:1.9955989608313516)[&CAheight_95%_HPD={0.5756,3.3636},CAheight_mean=1.9955989608313516,CAheight_median=2.0789,CAheight_range={0.5756,4.2283},height=1.9955989608313516,height_95%_HPD={0.5756,3.3636},height_median=2.0789,height_range={0.5756,4.2283},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

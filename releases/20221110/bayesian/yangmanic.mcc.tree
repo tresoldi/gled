@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Wardaman
+			Yangman
+			;
+End;
+Begin trees;
+	Translate
+		   1 Wardaman,
+		   2 Yangman
+;
+tree TREE1 = (1[&height=0.0,length=1.7098884092725755,length_95%_HPD={0.8926,3.0448},length_median=1.5504,length_range={0.5805,3.0448},rate=0.9846806554756249,rate_95%_HPD={0.7667,1.1784},rate_median=0.9917,rate_range={0.7026,1.2012}]:1.7098884092725755,2[&height=0.0,length=1.7098884092725755,length_95%_HPD={0.8926,3.0448},length_median=1.5504,length_range={0.5805,3.0448},rate=0.9877771382893714,rate_95%_HPD={0.7667,1.1784},rate_median=1.0069,rate_range={0.7026,1.2012}]:1.7098884092725755)[&CAheight_95%_HPD={0.8926,3.0448},CAheight_mean=1.7098884092725755,CAheight_median=1.5504,CAheight_range={0.5805,3.0448},height=1.7098884092725755,height_95%_HPD={0.8926,3.0448},height_median=1.5504,height_range={0.5805,3.0448},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

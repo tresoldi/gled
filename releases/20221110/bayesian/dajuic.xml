@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="darf1239,dars1235,logo1261,njal1239,shat1244">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_dajuic" name="data_dajuic" dataType="integer">
+    <sequence id="language_data_dajuic:darf1239" taxon="darf1239" value="001000010001000100000101000010010000100010010000100010100010001001000010000100001000100010000100010000100100010001000100010" />
+    <sequence id="language_data_dajuic:dars1235" taxon="dars1235" value="000001000101000000100100010100000100100010000100100010???010001000100000100001001000010000101000000100100100000101000010010" />
+    <sequence id="language_data_dajuic:logo1261" taxon="logo1261" value="010000010001001000001001000100100001000100100001000100100010010010000100001000010001000100001000100001001000100001001000100" />
+    <sequence id="language_data_dajuic:njal1239" taxon="njal1239" value="00010000100010001000010010010001000010001000100001001001001000100010010000010000010???0001000010010000100100010000100100001" />
+    <sequence id="language_data_dajuic:shat1244" taxon="shat1244" value="000010010001000001000101000100001000010100000101000010001001001000010001000010010001000000101000001000100010001001000100100" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,blood,bone,come,die,dog,drink,ear,eye,hear,horn,knee,leaf,liver,louse,mountain,night,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+        <parameter id="featureClockRate:dajuic:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:dajuic" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:dajuic" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:dajuic" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:dajuic" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((logo1261,shat1244),(darf1239,dars1235,njal1239));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:dajuic" name="distribution">
+          <input id="featureClockRateCompound:dajuic" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,blood,bone,come,die,dog,drink,ear,eye,hear,horn,knee,leaf,liver,louse,mountain,night,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+              <var idref="featureClockRate:dajuic:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:dajuic" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:dajuic" beta="@featureClockRateGammaScale:dajuic" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:dajuic" name="distribution" x="@featureClockRateGammaScale:dajuic">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:dajuic" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:dajuic" name="distribution" x="@covarion_alpha.s:dajuic">
+          <Uniform id="CovAlphaUniform:dajuic" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:dajuic" name="distribution" x="@covarion_s.s:dajuic">
+          <Gamma id="Gamma.0:dajuic" name="distr">
+            <parameter id="covarion_switch_gamma_param1:dajuic" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:dajuic" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:dajuic:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:1pl" spec="SiteModel" mutationRate="@featureClockRate:dajuic:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:dajuic" spec="BinaryCovarion" alpha="@covarion_alpha.s:dajuic" switchRate="@covarion_s.s:dajuic">
+              <vfrequencies id="dajuic:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.76 0.24</vfrequencies>
+              <parameter id="dajuic:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="dajuic:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_dajuic:1pl" spec="FilteredAlignment" data="@data_dajuic" filter="1-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:1sg" spec="SiteModel" mutationRate="@featureClockRate:dajuic:1sg" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:1sg" spec="FilteredAlignment" data="@data_dajuic" filter="7-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:blood" spec="SiteModel" mutationRate="@featureClockRate:dajuic:blood" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:blood" spec="FilteredAlignment" data="@data_dajuic" filter="11-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:bone" spec="SiteModel" mutationRate="@featureClockRate:dajuic:bone" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:bone" spec="FilteredAlignment" data="@data_dajuic" filter="14-19" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:come" spec="SiteModel" mutationRate="@featureClockRate:dajuic:come" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:come" spec="FilteredAlignment" data="@data_dajuic" filter="20-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:die" spec="SiteModel" mutationRate="@featureClockRate:dajuic:die" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:die" spec="FilteredAlignment" data="@data_dajuic" filter="23-26" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:dog" spec="SiteModel" mutationRate="@featureClockRate:dajuic:dog" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:dog" spec="FilteredAlignment" data="@data_dajuic" filter="27-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:drink" spec="SiteModel" mutationRate="@featureClockRate:dajuic:drink" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:drink" spec="FilteredAlignment" data="@data_dajuic" filter="30-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:ear" spec="SiteModel" mutationRate="@featureClockRate:dajuic:ear" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:ear" spec="FilteredAlignment" data="@data_dajuic" filter="35-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:eye" spec="SiteModel" mutationRate="@featureClockRate:dajuic:eye" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:eye" spec="FilteredAlignment" data="@data_dajuic" filter="39-41" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:hear" spec="SiteModel" mutationRate="@featureClockRate:dajuic:hear" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:hear" spec="FilteredAlignment" data="@data_dajuic" filter="42-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:horn" spec="SiteModel" mutationRate="@featureClockRate:dajuic:horn" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:horn" spec="FilteredAlignment" data="@data_dajuic" filter="47-50" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:knee" spec="SiteModel" mutationRate="@featureClockRate:dajuic:knee" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:knee" spec="FilteredAlignment" data="@data_dajuic" filter="51-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:leaf" spec="SiteModel" mutationRate="@featureClockRate:dajuic:leaf" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:leaf" spec="FilteredAlignment" data="@data_dajuic" filter="54-57" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:liver" spec="SiteModel" mutationRate="@featureClockRate:dajuic:liver" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:liver" spec="FilteredAlignment" data="@data_dajuic" filter="58-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:louse" spec="SiteModel" mutationRate="@featureClockRate:dajuic:louse" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:louse" spec="FilteredAlignment" data="@data_dajuic" filter="61-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:mountain" spec="SiteModel" mutationRate="@featureClockRate:dajuic:mountain" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:mountain" spec="FilteredAlignment" data="@data_dajuic" filter="64-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:night" spec="SiteModel" mutationRate="@featureClockRate:dajuic:night" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:night" spec="FilteredAlignment" data="@data_dajuic" filter="69-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:one" spec="SiteModel" mutationRate="@featureClockRate:dajuic:one" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:one" spec="FilteredAlignment" data="@data_dajuic" filter="74-78" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:path" spec="SiteModel" mutationRate="@featureClockRate:dajuic:path" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:path" spec="FilteredAlignment" data="@data_dajuic" filter="79-82" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:person" spec="SiteModel" mutationRate="@featureClockRate:dajuic:person" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:person" spec="FilteredAlignment" data="@data_dajuic" filter="83-86" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:see" spec="SiteModel" mutationRate="@featureClockRate:dajuic:see" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:see" spec="FilteredAlignment" data="@data_dajuic" filter="87-91" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:skin" spec="SiteModel" mutationRate="@featureClockRate:dajuic:skin" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:skin" spec="FilteredAlignment" data="@data_dajuic" filter="92-95" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:star" spec="SiteModel" mutationRate="@featureClockRate:dajuic:star" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:star" spec="FilteredAlignment" data="@data_dajuic" filter="96-100" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:stone" spec="SiteModel" mutationRate="@featureClockRate:dajuic:stone" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:stone" spec="FilteredAlignment" data="@data_dajuic" filter="101-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:sun" spec="SiteModel" mutationRate="@featureClockRate:dajuic:sun" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:sun" spec="FilteredAlignment" data="@data_dajuic" filter="104-107" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:tongue" spec="SiteModel" mutationRate="@featureClockRate:dajuic:tongue" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:tongue" spec="FilteredAlignment" data="@data_dajuic" filter="108-112" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:tooth" spec="SiteModel" mutationRate="@featureClockRate:dajuic:tooth" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:tooth" spec="FilteredAlignment" data="@data_dajuic" filter="113-115" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:tree" spec="SiteModel" mutationRate="@featureClockRate:dajuic:tree" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:tree" spec="FilteredAlignment" data="@data_dajuic" filter="116-119" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dajuic:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dajuic:water" spec="SiteModel" mutationRate="@featureClockRate:dajuic:water" proportionInvariant="0" substModel="@covarion.s:dajuic" />
+          <data id="feature_data_dajuic:water" spec="FilteredAlignment" data="@data_dajuic" filter="120-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:dajuic" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:dajuic" name="up" />
+      <parameter idref="featureClockRateGammaScale:dajuic" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:dajuic" spec="ScaleOperator" parameter="@covarion_alpha.s:dajuic" scaleFactor="0.5" weight="1.0" />
+    <operator id="dajuic:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:dajuic" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,blood,bone,come,die,dog,drink,ear,eye,hear,horn,knee,leaf,liver,louse,mountain,night,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+        <parameter idref="featureClockRate:dajuic:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="30" estimate="false">5 3 2 5 2 3 2 4 3 2 4 3 2 3 2 2 4 4 4 3 3 4 3 4 2 3 4 2 3 3</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="dajuic.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,blood,bone,come,die,dog,drink,ear,eye,hear,horn,knee,leaf,liver,louse,mountain,night,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+        <log idref="featureClockRate:dajuic:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:dajuic" />
+      <log idref="covarion_alpha.s:dajuic" />
+      <log idref="covarion_s.s:dajuic" />
+    </logger>
+    <logger mode="tree" fileName="dajuic.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Temein
+			Tese
+			;
+End;
+Begin trees;
+	Translate
+		   1 Temein,
+		   2 Tese
+;
+tree TREE1 = (1[&height=0.0,length=2.2604908872901546,length_95%_HPD={1.171,3.4505},length_median=2.2826,length_range={0.6059,6.1719},rate=1.000584172661872,rate_95%_HPD={0.9007,1.0881},rate_median=1.015,rate_range={0.8574,1.1211}]:2.2604908872901546,2[&height=0.0,length=2.2604908872901546,length_95%_HPD={1.171,3.4505},length_median=2.2826,length_range={0.6059,6.1719},rate=1.005657953637094,rate_95%_HPD={0.9098,1.0886},rate_median=1.0194,rate_range={0.8574,1.1211}]:2.2604908872901546)[&CAheight_95%_HPD={1.171,3.4505},CAheight_mean=2.2604908872901546,CAheight_median=2.2826,CAheight_range={0.6059,6.1719},height=2.2604908872901546,height_95%_HPD={1.171,3.4505},height_median=2.2826,height_range={0.6059,6.1719},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="jara1245" />
+    <taxon id="onge1236" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_jarawaonge" name="data_jarawaonge" dataType="integer">
+    <sequence id="language_data_jarawaonge:jara1245" taxon="jara1245" value="01001010011010010010011010010010001101001001001010100010" />
+    <sequence id="language_data_jarawaonge:onge1236" taxon="onge1236" value="001001010010110010010??001001001101000101101100100011001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,come,dog,drink,fish,knee,louse,night,one,person,see,star,stone,sun,tongue,tooth,two">
+        <parameter id="featureClockRate:jarawaonge:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:jarawaonge" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:jarawaonge" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:jarawaonge" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:jarawaonge" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(jara1245,onge1236);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:jarawaonge" name="distribution">
+          <input id="featureClockRateCompound:jarawaonge" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,come,dog,drink,fish,knee,louse,night,one,person,see,star,stone,sun,tongue,tooth,two">
+              <var idref="featureClockRate:jarawaonge:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:jarawaonge" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:jarawaonge" beta="@featureClockRateGammaScale:jarawaonge" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:jarawaonge" name="distribution" x="@featureClockRateGammaScale:jarawaonge">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:jarawaonge" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:jarawaonge" name="distribution" x="@covarion_alpha.s:jarawaonge">
+          <Uniform id="CovAlphaUniform:jarawaonge" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:jarawaonge" name="distribution" x="@covarion_s.s:jarawaonge">
+          <Gamma id="Gamma.0:jarawaonge" name="distr">
+            <parameter id="covarion_switch_gamma_param1:jarawaonge" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:jarawaonge" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:jarawaonge:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:1pl" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:jarawaonge" spec="BinaryCovarion" alpha="@covarion_alpha.s:jarawaonge" switchRate="@covarion_s.s:jarawaonge">
+              <vfrequencies id="jarawaonge:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.61 0.39</vfrequencies>
+              <parameter id="jarawaonge:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="jarawaonge:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_jarawaonge:1pl" spec="FilteredAlignment" data="@data_jarawaonge" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:come" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:come" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:come" spec="FilteredAlignment" data="@data_jarawaonge" filter="4-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:dog" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:dog" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:dog" spec="FilteredAlignment" data="@data_jarawaonge" filter="9-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:drink" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:drink" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:drink" spec="FilteredAlignment" data="@data_jarawaonge" filter="12-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:fish" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:fish" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:fish" spec="FilteredAlignment" data="@data_jarawaonge" filter="15-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:knee" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:knee" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:knee" spec="FilteredAlignment" data="@data_jarawaonge" filter="18-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:louse" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:louse" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:louse" spec="FilteredAlignment" data="@data_jarawaonge" filter="21-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:night" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:night" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:night" spec="FilteredAlignment" data="@data_jarawaonge" filter="24-26" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:one" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:one" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:one" spec="FilteredAlignment" data="@data_jarawaonge" filter="27-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:person" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:person" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:person" spec="FilteredAlignment" data="@data_jarawaonge" filter="30-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:see" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:see" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:see" spec="FilteredAlignment" data="@data_jarawaonge" filter="34-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:star" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:star" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:star" spec="FilteredAlignment" data="@data_jarawaonge" filter="37-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:stone" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:stone" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:stone" spec="FilteredAlignment" data="@data_jarawaonge" filter="40-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:sun" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:sun" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:sun" spec="FilteredAlignment" data="@data_jarawaonge" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:tongue" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:tongue" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:tongue" spec="FilteredAlignment" data="@data_jarawaonge" filter="46-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:tooth" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:tooth" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:tooth" spec="FilteredAlignment" data="@data_jarawaonge" filter="50-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:jarawaonge:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.jarawaonge:two" spec="SiteModel" mutationRate="@featureClockRate:jarawaonge:two" proportionInvariant="0" substModel="@covarion.s:jarawaonge" />
+          <data id="feature_data_jarawaonge:two" spec="FilteredAlignment" data="@data_jarawaonge" filter="54-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:jarawaonge" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:jarawaonge" name="up" />
+      <parameter idref="featureClockRateGammaScale:jarawaonge" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:jarawaonge" spec="ScaleOperator" parameter="@covarion_alpha.s:jarawaonge" scaleFactor="0.5" weight="1.0" />
+    <operator id="jarawaonge:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:jarawaonge" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,come,dog,drink,fish,knee,louse,night,one,person,see,star,stone,sun,tongue,tooth,two">
+        <parameter idref="featureClockRate:jarawaonge:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="17" estimate="false">2 4 2 2 2 2 2 2 2 3 2 2 2 2 3 3 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="jarawaonge.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,come,dog,drink,fish,knee,louse,night,one,person,see,star,stone,sun,tongue,tooth,two">
+        <log idref="featureClockRate:jarawaonge:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:jarawaonge" />
+      <log idref="covarion_alpha.s:jarawaonge" />
+      <log idref="covarion_s.s:jarawaonge" />
+    </logger>
+    <logger mode="tree" fileName="jarawaonge.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="djau1244,gunw1252,kunb1251,ngal1292,ngal1293,ngan1295,nung1290,remb1249,wara1290">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_gunwinyguan" name="data_gunwinyguan" dataType="integer">
+    <sequence id="language_data_gunwinyguan:djau1244" taxon="djau1244" value="0?????01000????0010000010010000000?????00100000001000000000010000000000001000000000100000100000010000000010000001000000100000000010000000010000000000100000000001000000001000000001000000100000001000001000?????001000010000000010000010000100000010000000100000000001000000000100010000000001000000001000000001000000" />
+    <sequence id="language_data_gunwinyguan:gunw1252" taxon="gunw1252" value="0010000110001000001000000100100000100000???????0000110000000011100000000?????????010000010100000001000000001000??????0001100000000010010000011000000000100000000001100000???????0??????010010000??????0???011000000100????????0000100011001001000000100000001100000000011000000100000110000000100000000011000000011000" />
+    <sequence id="language_data_gunwinyguan:kunb1251" taxon="kunb1251" value="0?????00100????0001000000001000000?????0001000000010000000000100000000000010000000001000100000000100000000100001000000001000000000100000000100000000001000000000010000000010000000010000001000000010000???0?????000100001000000001000010000010000001000000010000000000100000000010001000000000100000000100000000100000" />
+    <sequence id="language_data_gunwinyguan:ngal1292" taxon="ngal1292" value="0100010110010010100000000100000000?????0100000001000000000010000000001001000000000100000100000010000000010000001000010100000000010000000010000000000100000000001000000000100000001000010100000001000000???0?????010000100000000100000010001000000100100000100000000010001000001000100000000010000000010000000001000000" />
+    <sequence id="language_data_gunwinyguan:ngal1293" taxon="ngal1293" value="0100000001000100000100000000010000010000000100000000010000000000100000000001000000100000010000000001000000010000010000000010000000010000000000100000??????????00000010000001000000001000000010000001000010000100010000000100000000100010000000100000010000100000000000000100000100?????????000010000000000100001000000" />
+    <sequence id="language_data_gunwinyguan:ngan1295" taxon="ngan1295" value="00010000100100000000100000000010000010000000100000000010000000000100000000001000000001000001000000001000??????0000100000000100000000100000000001000000001000000000000100000010000??????00000010000010000100010000????000001000000001001000000010000000100000001000000000001000???0000001000000001000000000100000000100" />
+    <sequence id="language_data_gunwinyguan:nung1290" taxon="nung1290" value="0?????0???0????000100100000000010000010000000100000000010000000000100010000001001000001000001100000001000000100000010000000010000000010100000000100000000100100000000010000001000??????000000010000010000100001000001000000101000000101010000001001000000000000100100000000100???0000000100000000100000000010000010010" />
+    <sequence id="language_data_gunwinyguan:remb1249" taxon="remb1249" value="0?????01000????0001000000000000010?????0100000000000000010000000000100000000001000100000010000000000001000010001000000000000010000001000000000000100000000100000000100000000001000000100000010000001000???0?????010000000000100100000010000000100000000100000000100000001000000100000000010000000010000000001000000001" />
+    <sequence id="language_data_gunwinyguan:wara1290" taxon="wara1290" value="000010010001000000000010010000000000001000000010000000000100000000001000000000010010000010000000100000000000010??????000000000100000100000000000001000000001010000000001000000010??????0000010000000010100000001001000????????0??????010000100000000000010000000010000000000100100000000001000000001000000000101000000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:gunwinyguan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:gunwinyguan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:gunwinyguan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:gunwinyguan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:gunwinyguan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((djau1244,wara1290),(kunb1251,(gunw1252,ngal1292)),(nung1290,(ngan1295,(ngal1293,remb1249))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:gunwinyguan" name="distribution">
+          <input id="featureClockRateCompound:gunwinyguan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:gunwinyguan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:gunwinyguan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:gunwinyguan" beta="@featureClockRateGammaScale:gunwinyguan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:gunwinyguan" name="distribution" x="@featureClockRateGammaScale:gunwinyguan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:gunwinyguan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:gunwinyguan" name="distribution" x="@covarion_alpha.s:gunwinyguan">
+          <Uniform id="CovAlphaUniform:gunwinyguan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:gunwinyguan" name="distribution" x="@covarion_s.s:gunwinyguan">
+          <Gamma id="Gamma.0:gunwinyguan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:gunwinyguan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:gunwinyguan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:gunwinyguan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:1pl" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:gunwinyguan" spec="BinaryCovarion" alpha="@covarion_alpha.s:gunwinyguan" switchRate="@covarion_s.s:gunwinyguan">
+              <vfrequencies id="gunwinyguan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.87 0.13</vfrequencies>
+              <parameter id="gunwinyguan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="gunwinyguan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_gunwinyguan:1pl" spec="FilteredAlignment" data="@data_gunwinyguan" filter="1-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:1sg" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:1sg" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:1sg" spec="FilteredAlignment" data="@data_gunwinyguan" filter="7-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:2sg" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:2sg" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:2sg" spec="FilteredAlignment" data="@data_gunwinyguan" filter="11-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:blood" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:blood" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:blood" spec="FilteredAlignment" data="@data_gunwinyguan" filter="16-24" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:bone" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:bone" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:bone" spec="FilteredAlignment" data="@data_gunwinyguan" filter="25-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:breast" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:breast" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:breast" spec="FilteredAlignment" data="@data_gunwinyguan" filter="34-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:come" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:come" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:come" spec="FilteredAlignment" data="@data_gunwinyguan" filter="40-47" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:die" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:die" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:die" spec="FilteredAlignment" data="@data_gunwinyguan" filter="48-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:dog" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:dog" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:dog" spec="FilteredAlignment" data="@data_gunwinyguan" filter="59-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:drink" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:drink" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:drink" spec="FilteredAlignment" data="@data_gunwinyguan" filter="72-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:ear" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:ear" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:ear" spec="FilteredAlignment" data="@data_gunwinyguan" filter="82-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:eye" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:eye" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:eye" spec="FilteredAlignment" data="@data_gunwinyguan" filter="88-94" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:fire" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:fire" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:fire" spec="FilteredAlignment" data="@data_gunwinyguan" filter="95-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:fish" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:fish" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:fish" spec="FilteredAlignment" data="@data_gunwinyguan" filter="104-110" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:full" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:full" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:full" spec="FilteredAlignment" data="@data_gunwinyguan" filter="111-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:hand" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:hand" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:hand" spec="FilteredAlignment" data="@data_gunwinyguan" filter="118-127" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:hear" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:hear" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:hear" spec="FilteredAlignment" data="@data_gunwinyguan" filter="128-136" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:knee" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:knee" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:knee" spec="FilteredAlignment" data="@data_gunwinyguan" filter="137-147" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:leaf" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:leaf" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:leaf" spec="FilteredAlignment" data="@data_gunwinyguan" filter="148-158" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:liver" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:liver" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:liver" spec="FilteredAlignment" data="@data_gunwinyguan" filter="159-168" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:louse" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:louse" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:louse" spec="FilteredAlignment" data="@data_gunwinyguan" filter="169-176" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:mountain" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:mountain" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:mountain" spec="FilteredAlignment" data="@data_gunwinyguan" filter="177-183" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:name" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:name" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:name" spec="FilteredAlignment" data="@data_gunwinyguan" filter="184-191" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:new" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:new" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:new" spec="FilteredAlignment" data="@data_gunwinyguan" filter="192-198" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:night" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:night" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:night" spec="FilteredAlignment" data="@data_gunwinyguan" filter="199-202" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:nose" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:nose" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:nose" spec="FilteredAlignment" data="@data_gunwinyguan" filter="203-208" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:one" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:one" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:one" spec="FilteredAlignment" data="@data_gunwinyguan" filter="209-213" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:path" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:path" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:path" spec="FilteredAlignment" data="@data_gunwinyguan" filter="214-222" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:person" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:person" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:person" spec="FilteredAlignment" data="@data_gunwinyguan" filter="223-229" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:see" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:see" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:see" spec="FilteredAlignment" data="@data_gunwinyguan" filter="230-233" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:skin" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:skin" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:skin" spec="FilteredAlignment" data="@data_gunwinyguan" filter="234-240" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:star" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:star" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:star" spec="FilteredAlignment" data="@data_gunwinyguan" filter="241-249" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:stone" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:stone" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:stone" spec="FilteredAlignment" data="@data_gunwinyguan" filter="250-259" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:sun" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:sun" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:sun" spec="FilteredAlignment" data="@data_gunwinyguan" filter="260-269" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:tongue" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:tongue" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:tongue" spec="FilteredAlignment" data="@data_gunwinyguan" filter="270-273" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:tooth" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:tooth" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:tooth" spec="FilteredAlignment" data="@data_gunwinyguan" filter="274-283" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:tree" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:tree" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:tree" spec="FilteredAlignment" data="@data_gunwinyguan" filter="284-292" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:two" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:two" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:two" spec="FilteredAlignment" data="@data_gunwinyguan" filter="293-302" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:gunwinyguan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.gunwinyguan:water" spec="SiteModel" mutationRate="@featureClockRate:gunwinyguan:water" proportionInvariant="0" substModel="@covarion.s:gunwinyguan" />
+          <data id="feature_data_gunwinyguan:water" spec="FilteredAlignment" data="@data_gunwinyguan" filter="303-310" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:gunwinyguan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:gunwinyguan" name="up" />
+      <parameter idref="featureClockRateGammaScale:gunwinyguan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:gunwinyguan" spec="ScaleOperator" parameter="@covarion_alpha.s:gunwinyguan" scaleFactor="0.5" weight="1.0" />
+    <operator id="gunwinyguan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:gunwinyguan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:gunwinyguan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="39" estimate="false">5 3 4 8 8 5 7 10 12 9 5 6 8 6 6 9 8 10 10 9 7 6 7 6 3 5 4 8 6 3 6 8 9 9 3 9 8 9 7</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="gunwinyguan.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:gunwinyguan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:gunwinyguan" />
+      <log idref="covarion_alpha.s:gunwinyguan" />
+      <log idref="covarion_s.s:gunwinyguan" />
+    </logger>
+    <logger mode="tree" fileName="gunwinyguan.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="nucl1651" />
+    <taxon id="patw1250" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_wintuan" name="data_wintuan" dataType="integer">
+    <sequence id="language_data_wintuan:nucl1651" taxon="nucl1651" value="0011010001001100110011001100110010110010011001001001001100101100011001001001100110010010010011001" />
+    <sequence id="language_data_wintuan:patw1250" taxon="patw1250" value="0100011010010001000100010001000100100100100010010010010001001010100010010010001000100100100100010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,blood,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,liver,mountain,night,nose,one,skin,star,stone,sun,tongue,tree,two">
+        <parameter id="featureClockRate:wintuan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:wintuan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:wintuan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:wintuan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:wintuan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(nucl1651,patw1250);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:wintuan" name="distribution">
+          <input id="featureClockRateCompound:wintuan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,blood,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,liver,mountain,night,nose,one,skin,star,stone,sun,tongue,tree,two">
+              <var idref="featureClockRate:wintuan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:wintuan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:wintuan" beta="@featureClockRateGammaScale:wintuan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:wintuan" name="distribution" x="@featureClockRateGammaScale:wintuan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:wintuan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:wintuan" name="distribution" x="@covarion_alpha.s:wintuan">
+          <Uniform id="CovAlphaUniform:wintuan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:wintuan" name="distribution" x="@covarion_s.s:wintuan">
+          <Gamma id="Gamma.0:wintuan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:wintuan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:wintuan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:wintuan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:1pl" spec="SiteModel" mutationRate="@featureClockRate:wintuan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:wintuan" spec="BinaryCovarion" alpha="@covarion_alpha.s:wintuan" switchRate="@covarion_s.s:wintuan">
+              <vfrequencies id="wintuan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.63 0.37</vfrequencies>
+              <parameter id="wintuan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="wintuan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_wintuan:1pl" spec="FilteredAlignment" data="@data_wintuan" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:1sg" spec="SiteModel" mutationRate="@featureClockRate:wintuan:1sg" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:1sg" spec="FilteredAlignment" data="@data_wintuan" filter="5-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:blood" spec="SiteModel" mutationRate="@featureClockRate:wintuan:blood" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:blood" spec="FilteredAlignment" data="@data_wintuan" filter="8-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:breast" spec="SiteModel" mutationRate="@featureClockRate:wintuan:breast" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:breast" spec="FilteredAlignment" data="@data_wintuan" filter="11-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:come" spec="SiteModel" mutationRate="@featureClockRate:wintuan:come" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:come" spec="FilteredAlignment" data="@data_wintuan" filter="15-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:die" spec="SiteModel" mutationRate="@featureClockRate:wintuan:die" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:die" spec="FilteredAlignment" data="@data_wintuan" filter="19-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:dog" spec="SiteModel" mutationRate="@featureClockRate:wintuan:dog" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:dog" spec="FilteredAlignment" data="@data_wintuan" filter="23-26" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:drink" spec="SiteModel" mutationRate="@featureClockRate:wintuan:drink" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:drink" spec="FilteredAlignment" data="@data_wintuan" filter="27-30" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:eye" spec="SiteModel" mutationRate="@featureClockRate:wintuan:eye" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:eye" spec="FilteredAlignment" data="@data_wintuan" filter="31-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:fire" spec="SiteModel" mutationRate="@featureClockRate:wintuan:fire" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:fire" spec="FilteredAlignment" data="@data_wintuan" filter="34-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:fish" spec="SiteModel" mutationRate="@featureClockRate:wintuan:fish" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:fish" spec="FilteredAlignment" data="@data_wintuan" filter="37-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:full" spec="SiteModel" mutationRate="@featureClockRate:wintuan:full" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:full" spec="FilteredAlignment" data="@data_wintuan" filter="40-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:hand" spec="SiteModel" mutationRate="@featureClockRate:wintuan:hand" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:hand" spec="FilteredAlignment" data="@data_wintuan" filter="44-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:hear" spec="SiteModel" mutationRate="@featureClockRate:wintuan:hear" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:hear" spec="FilteredAlignment" data="@data_wintuan" filter="47-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:horn" spec="SiteModel" mutationRate="@featureClockRate:wintuan:horn" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:horn" spec="FilteredAlignment" data="@data_wintuan" filter="50-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:knee" spec="SiteModel" mutationRate="@featureClockRate:wintuan:knee" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:knee" spec="FilteredAlignment" data="@data_wintuan" filter="53-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:liver" spec="SiteModel" mutationRate="@featureClockRate:wintuan:liver" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:liver" spec="FilteredAlignment" data="@data_wintuan" filter="57-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:mountain" spec="SiteModel" mutationRate="@featureClockRate:wintuan:mountain" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:mountain" spec="FilteredAlignment" data="@data_wintuan" filter="60-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:night" spec="SiteModel" mutationRate="@featureClockRate:wintuan:night" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:night" spec="FilteredAlignment" data="@data_wintuan" filter="64-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:nose" spec="SiteModel" mutationRate="@featureClockRate:wintuan:nose" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:nose" spec="FilteredAlignment" data="@data_wintuan" filter="68-70" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:one" spec="SiteModel" mutationRate="@featureClockRate:wintuan:one" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:one" spec="FilteredAlignment" data="@data_wintuan" filter="71-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:skin" spec="SiteModel" mutationRate="@featureClockRate:wintuan:skin" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:skin" spec="FilteredAlignment" data="@data_wintuan" filter="74-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:star" spec="SiteModel" mutationRate="@featureClockRate:wintuan:star" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:star" spec="FilteredAlignment" data="@data_wintuan" filter="78-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:stone" spec="SiteModel" mutationRate="@featureClockRate:wintuan:stone" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:stone" spec="FilteredAlignment" data="@data_wintuan" filter="82-84" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:sun" spec="SiteModel" mutationRate="@featureClockRate:wintuan:sun" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:sun" spec="FilteredAlignment" data="@data_wintuan" filter="85-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:tongue" spec="SiteModel" mutationRate="@featureClockRate:wintuan:tongue" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:tongue" spec="FilteredAlignment" data="@data_wintuan" filter="88-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:tree" spec="SiteModel" mutationRate="@featureClockRate:wintuan:tree" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:tree" spec="FilteredAlignment" data="@data_wintuan" filter="91-94" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wintuan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wintuan:two" spec="SiteModel" mutationRate="@featureClockRate:wintuan:two" proportionInvariant="0" substModel="@covarion.s:wintuan" />
+          <data id="feature_data_wintuan:two" spec="FilteredAlignment" data="@data_wintuan" filter="95-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:wintuan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:wintuan" name="up" />
+      <parameter idref="featureClockRateGammaScale:wintuan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:wintuan" spec="ScaleOperator" parameter="@covarion_alpha.s:wintuan" scaleFactor="0.5" weight="1.0" />
+    <operator id="wintuan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:wintuan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,blood,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,liver,mountain,night,nose,one,skin,star,stone,sun,tongue,tree,two">
+        <parameter idref="featureClockRate:wintuan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="28" estimate="false">3 2 2 3 3 3 3 3 2 2 2 3 2 2 2 3 2 3 3 2 2 3 3 2 2 2 3 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="wintuan.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,blood,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,liver,mountain,night,nose,one,skin,star,stone,sun,tongue,tree,two">
+        <log idref="featureClockRate:wintuan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:wintuan" />
+      <log idref="covarion_alpha.s:wintuan" />
+      <log idref="covarion_s.s:wintuan" />
+    </logger>
+    <logger mode="tree" fileName="wintuan.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

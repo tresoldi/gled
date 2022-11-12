@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			NuclearWintu
+			Patwin
+			;
+End;
+Begin trees;
+	Translate
+		   1 NuclearWintu,
+		   2 Patwin
+;
+tree TREE1 = (1[&height=0.0,length=11.009348760991173,length_95%_HPD={1.3537,21.6027},length_median=8.4778,length_range={1.3537,33.8033},rate=0.9367549960031941,rate_95%_HPD={0.4319,1.249},rate_median=0.9596,rate_range={0.2441,1.2553}]:11.009348760991173,2[&height=0.0,length=11.009348760991173,length_95%_HPD={1.3537,21.6027},length_median=8.4778,length_range={1.3537,33.8033},rate=0.960173701039162,rate_95%_HPD={0.4742,1.2553},rate_median=1.0642,rate_range={0.2441,1.2553}]:11.009348760991173)[&CAheight_95%_HPD={1.3537,21.6027},CAheight_mean=11.009348760991173,CAheight_median=8.4778,CAheight_range={1.3537,33.8033},height=11.009348760991173,height_95%_HPD={1.3537,21.6027},height_median=8.4778,height_range={1.3537,33.8033},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

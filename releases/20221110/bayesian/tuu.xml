@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="huaa1248" />
+    <taxon id="nuuu1241" />
+    <taxon id="xamm1241" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_tuu" name="data_tuu" dataType="integer">
+    <sequence id="language_data_tuu:huaa1248" taxon="huaa1248" value="01110000110001110110100011101000010111001000100100100100110001011010010100101100101001101101101010111100101001011100110010111" />
+    <sequence id="language_data_tuu:nuuu1241" taxon="nuuu1241" value="01001000101101010100110001001100100110010101010110110011000011010011011001001000110001001101101100100010110010100001100100110" />
+    <sequence id="language_data_tuu:xamm1241" taxon="xamm1241" value="01000101101001010100100100001010100100010001000100100?????0100010010010001001001000101001101101000100000100010000001000100100" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,die,dog,ear,eye,full,horn,knee,leaf,louse,mountain,name,new,night,one,path,person,see,skin,star,stone,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:tuu:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:tuu" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:tuu" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:tuu" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:tuu" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(huaa1248,(nuuu1241,xamm1241));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:tuu" name="distribution">
+          <input id="featureClockRateCompound:tuu" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,die,dog,ear,eye,full,horn,knee,leaf,louse,mountain,name,new,night,one,path,person,see,skin,star,stone,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:tuu:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:tuu" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:tuu" beta="@featureClockRateGammaScale:tuu" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:tuu" name="distribution" x="@featureClockRateGammaScale:tuu">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:tuu" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:tuu" name="distribution" x="@covarion_alpha.s:tuu">
+          <Uniform id="CovAlphaUniform:tuu" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:tuu" name="distribution" x="@covarion_s.s:tuu">
+          <Gamma id="Gamma.0:tuu" name="distr">
+            <parameter id="covarion_switch_gamma_param1:tuu" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:tuu" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:tuu:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:1pl" spec="SiteModel" mutationRate="@featureClockRate:tuu:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:tuu" spec="BinaryCovarion" alpha="@covarion_alpha.s:tuu" switchRate="@covarion_s.s:tuu">
+              <vfrequencies id="tuu:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.59 0.41</vfrequencies>
+              <parameter id="tuu:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="tuu:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_tuu:1pl" spec="FilteredAlignment" data="@data_tuu" filter="1-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:1sg" spec="SiteModel" mutationRate="@featureClockRate:tuu:1sg" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:1sg" spec="FilteredAlignment" data="@data_tuu" filter="7-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:2sg" spec="SiteModel" mutationRate="@featureClockRate:tuu:2sg" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:2sg" spec="FilteredAlignment" data="@data_tuu" filter="13-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:blood" spec="SiteModel" mutationRate="@featureClockRate:tuu:blood" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:blood" spec="FilteredAlignment" data="@data_tuu" filter="17-19" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:bone" spec="SiteModel" mutationRate="@featureClockRate:tuu:bone" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:bone" spec="FilteredAlignment" data="@data_tuu" filter="20-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:breast" spec="SiteModel" mutationRate="@featureClockRate:tuu:breast" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:breast" spec="FilteredAlignment" data="@data_tuu" filter="23-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:die" spec="SiteModel" mutationRate="@featureClockRate:tuu:die" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:die" spec="FilteredAlignment" data="@data_tuu" filter="28-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:dog" spec="SiteModel" mutationRate="@featureClockRate:tuu:dog" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:dog" spec="FilteredAlignment" data="@data_tuu" filter="32-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:ear" spec="SiteModel" mutationRate="@featureClockRate:tuu:ear" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:ear" spec="FilteredAlignment" data="@data_tuu" filter="35-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:eye" spec="SiteModel" mutationRate="@featureClockRate:tuu:eye" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:eye" spec="FilteredAlignment" data="@data_tuu" filter="39-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:full" spec="SiteModel" mutationRate="@featureClockRate:tuu:full" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:full" spec="FilteredAlignment" data="@data_tuu" filter="43-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:horn" spec="SiteModel" mutationRate="@featureClockRate:tuu:horn" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:horn" spec="FilteredAlignment" data="@data_tuu" filter="47-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:knee" spec="SiteModel" mutationRate="@featureClockRate:tuu:knee" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:knee" spec="FilteredAlignment" data="@data_tuu" filter="50-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:leaf" spec="SiteModel" mutationRate="@featureClockRate:tuu:leaf" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:leaf" spec="FilteredAlignment" data="@data_tuu" filter="53-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:louse" spec="SiteModel" mutationRate="@featureClockRate:tuu:louse" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:louse" spec="FilteredAlignment" data="@data_tuu" filter="59-62" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:mountain" spec="SiteModel" mutationRate="@featureClockRate:tuu:mountain" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:mountain" spec="FilteredAlignment" data="@data_tuu" filter="63-65" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:name" spec="SiteModel" mutationRate="@featureClockRate:tuu:name" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:name" spec="FilteredAlignment" data="@data_tuu" filter="66-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:new" spec="SiteModel" mutationRate="@featureClockRate:tuu:new" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:new" spec="FilteredAlignment" data="@data_tuu" filter="69-72" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:night" spec="SiteModel" mutationRate="@featureClockRate:tuu:night" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:night" spec="FilteredAlignment" data="@data_tuu" filter="73-75" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:one" spec="SiteModel" mutationRate="@featureClockRate:tuu:one" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:one" spec="FilteredAlignment" data="@data_tuu" filter="76-78" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:path" spec="SiteModel" mutationRate="@featureClockRate:tuu:path" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:path" spec="FilteredAlignment" data="@data_tuu" filter="79-84" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:person" spec="SiteModel" mutationRate="@featureClockRate:tuu:person" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:person" spec="FilteredAlignment" data="@data_tuu" filter="85-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:see" spec="SiteModel" mutationRate="@featureClockRate:tuu:see" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:see" spec="FilteredAlignment" data="@data_tuu" filter="88-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:skin" spec="SiteModel" mutationRate="@featureClockRate:tuu:skin" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:skin" spec="FilteredAlignment" data="@data_tuu" filter="91-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:star" spec="SiteModel" mutationRate="@featureClockRate:tuu:star" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:star" spec="FilteredAlignment" data="@data_tuu" filter="94-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:stone" spec="SiteModel" mutationRate="@featureClockRate:tuu:stone" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:stone" spec="FilteredAlignment" data="@data_tuu" filter="98-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:tongue" spec="SiteModel" mutationRate="@featureClockRate:tuu:tongue" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:tongue" spec="FilteredAlignment" data="@data_tuu" filter="104-107" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:tooth" spec="SiteModel" mutationRate="@featureClockRate:tuu:tooth" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:tooth" spec="FilteredAlignment" data="@data_tuu" filter="108-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:tree" spec="SiteModel" mutationRate="@featureClockRate:tuu:tree" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:tree" spec="FilteredAlignment" data="@data_tuu" filter="115-118" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:two" spec="SiteModel" mutationRate="@featureClockRate:tuu:two" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:two" spec="FilteredAlignment" data="@data_tuu" filter="119-121" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tuu:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tuu:water" spec="SiteModel" mutationRate="@featureClockRate:tuu:water" proportionInvariant="0" substModel="@covarion.s:tuu" />
+          <data id="feature_data_tuu:water" spec="FilteredAlignment" data="@data_tuu" filter="122-125" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:tuu" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:tuu" name="up" />
+      <parameter idref="featureClockRateGammaScale:tuu" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:tuu" spec="ScaleOperator" parameter="@covarion_alpha.s:tuu" scaleFactor="0.5" weight="1.0" />
+    <operator id="tuu:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:tuu" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,die,dog,ear,eye,full,horn,knee,leaf,louse,mountain,name,new,night,one,path,person,see,skin,star,stone,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:tuu:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="31" estimate="false">5 5 3 2 2 4 3 2 3 3 3 2 2 5 3 2 2 3 2 2 5 2 2 2 3 5 3 6 3 2 3</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="tuu.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,die,dog,ear,eye,full,horn,knee,leaf,louse,mountain,name,new,night,one,path,person,see,skin,star,stone,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:tuu:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:tuu" />
+      <log idref="covarion_alpha.s:tuu" />
+      <log idref="covarion_s.s:tuu" />
+    </logger>
+    <logger mode="tree" fileName="tuu.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			JarawaIndia
+			Onge
+			;
+End;
+Begin trees;
+	Translate
+		   1 JarawaIndia,
+		   2 Onge
+;
+tree TREE1 = (1[&height=0.0,length=1.1184179056754509,length_95%_HPD={0.4877,1.6158},length_median=1.1751,length_range={0.4325,2.8353},rate=0.9999944044764206,rate_95%_HPD={0.9997,1.0002},rate_median=0.9999,rate_range={0.9997,1.0003}]:1.1184179056754509,2[&height=0.0,length=1.1184179056754509,length_95%_HPD={0.4877,1.6158},length_median=1.1751,length_range={0.4325,2.8353},rate=0.9999944044764212,rate_95%_HPD={0.9997,1.0002},rate_median=0.9999,rate_range={0.9997,1.0003}]:1.1184179056754509)[&CAheight_95%_HPD={0.4877,1.6158},CAheight_mean=1.1184179056754509,CAheight_median=1.1751,CAheight_range={0.4325,2.8353},height=1.1184179056754509,height_95%_HPD={0.4877,1.6158},height_median=1.1751,height_range={0.4325,2.8353},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="biwa1243,bunn1240,chan1319,kyen1243,mekm1240">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_yuat" name="data_yuat" dataType="integer">
+    <sequence id="language_data_yuat:biwa1243" taxon="biwa1243" value="0???0100????01000100001000100100100100001000100000010010000100001010000010000010000010000100100100100000100000010000100001000000100100001000100100010" />
+    <sequence id="language_data_yuat:bunn1240" taxon="bunn1240" value="01000100100000100????0???0010??00100100010000100000??001000??????001000001000001000001000??0010100010000010000001000????00100000100010000100100010010" />
+    <sequence id="language_data_yuat:chan1319" taxon="chan1319" value="001001000100000100100001001000100100010010000010000??001000010000000100000100000100000100010100100001000001000000100010000010000010001000010100001001" />
+    <sequence id="language_data_yuat:kyen1243" taxon="kyen1243" value="00100110101101000001100010100??0010010101100000101001000110001100000010010010000010001000100100010000110000110000010001100001100100010000010100010010" />
+    <sequence id="language_data_yuat:mekm1240" taxon="mekm1240" value="00010100100001000????0???0100??00100100000100000100??0010000000100000010000010000010010101001001001000000000010????0????00000010100000101000110010010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tree,two,water">
+        <parameter id="featureClockRate:yuat:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:yuat" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:yuat" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:yuat" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:yuat" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(chan1319,mekm1240,(kyen1243,(biwa1243,bunn1240)));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:yuat" name="distribution">
+          <input id="featureClockRateCompound:yuat" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tree,two,water">
+              <var idref="featureClockRate:yuat:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:yuat" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:yuat" beta="@featureClockRateGammaScale:yuat" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:yuat" name="distribution" x="@featureClockRateGammaScale:yuat">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:yuat" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:yuat" name="distribution" x="@covarion_alpha.s:yuat">
+          <Uniform id="CovAlphaUniform:yuat" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:yuat" name="distribution" x="@covarion_s.s:yuat">
+          <Gamma id="Gamma.0:yuat" name="distr">
+            <parameter id="covarion_switch_gamma_param1:yuat" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:yuat" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:yuat:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:1pl" spec="SiteModel" mutationRate="@featureClockRate:yuat:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:yuat" spec="BinaryCovarion" alpha="@covarion_alpha.s:yuat" switchRate="@covarion_s.s:yuat">
+              <vfrequencies id="yuat:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.78 0.22</vfrequencies>
+              <parameter id="yuat:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="yuat:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_yuat:1pl" spec="FilteredAlignment" data="@data_yuat" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:1sg" spec="SiteModel" mutationRate="@featureClockRate:yuat:1sg" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:1sg" spec="FilteredAlignment" data="@data_yuat" filter="5-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:2sg" spec="SiteModel" mutationRate="@featureClockRate:yuat:2sg" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:2sg" spec="FilteredAlignment" data="@data_yuat" filter="8-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:breast" spec="SiteModel" mutationRate="@featureClockRate:yuat:breast" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:breast" spec="FilteredAlignment" data="@data_yuat" filter="13-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:come" spec="SiteModel" mutationRate="@featureClockRate:yuat:come" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:come" spec="FilteredAlignment" data="@data_yuat" filter="17-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:die" spec="SiteModel" mutationRate="@featureClockRate:yuat:die" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:die" spec="FilteredAlignment" data="@data_yuat" filter="22-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:dog" spec="SiteModel" mutationRate="@featureClockRate:yuat:dog" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:dog" spec="FilteredAlignment" data="@data_yuat" filter="26-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:drink" spec="SiteModel" mutationRate="@featureClockRate:yuat:drink" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:drink" spec="FilteredAlignment" data="@data_yuat" filter="29-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:ear" spec="SiteModel" mutationRate="@featureClockRate:yuat:ear" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:ear" spec="FilteredAlignment" data="@data_yuat" filter="32-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:eye" spec="SiteModel" mutationRate="@featureClockRate:yuat:eye" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:eye" spec="FilteredAlignment" data="@data_yuat" filter="35-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:fire" spec="SiteModel" mutationRate="@featureClockRate:yuat:fire" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:fire" spec="FilteredAlignment" data="@data_yuat" filter="40-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:fish" spec="SiteModel" mutationRate="@featureClockRate:yuat:fish" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:fish" spec="FilteredAlignment" data="@data_yuat" filter="44-50" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:full" spec="SiteModel" mutationRate="@featureClockRate:yuat:full" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:full" spec="FilteredAlignment" data="@data_yuat" filter="51-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:hand" spec="SiteModel" mutationRate="@featureClockRate:yuat:hand" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:hand" spec="FilteredAlignment" data="@data_yuat" filter="54-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:hear" spec="SiteModel" mutationRate="@featureClockRate:yuat:hear" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:hear" spec="FilteredAlignment" data="@data_yuat" filter="59-65" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:knee" spec="SiteModel" mutationRate="@featureClockRate:yuat:knee" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:knee" spec="FilteredAlignment" data="@data_yuat" filter="66-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:leaf" spec="SiteModel" mutationRate="@featureClockRate:yuat:leaf" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:leaf" spec="FilteredAlignment" data="@data_yuat" filter="72-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:liver" spec="SiteModel" mutationRate="@featureClockRate:yuat:liver" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:liver" spec="FilteredAlignment" data="@data_yuat" filter="78-83" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:mountain" spec="SiteModel" mutationRate="@featureClockRate:yuat:mountain" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:mountain" spec="FilteredAlignment" data="@data_yuat" filter="84-88" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:new" spec="SiteModel" mutationRate="@featureClockRate:yuat:new" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:new" spec="FilteredAlignment" data="@data_yuat" filter="89-91" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:night" spec="SiteModel" mutationRate="@featureClockRate:yuat:night" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:night" spec="FilteredAlignment" data="@data_yuat" filter="92-94" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:nose" spec="SiteModel" mutationRate="@featureClockRate:yuat:nose" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:nose" spec="FilteredAlignment" data="@data_yuat" filter="95-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:one" spec="SiteModel" mutationRate="@featureClockRate:yuat:one" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:one" spec="FilteredAlignment" data="@data_yuat" filter="98-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:path" spec="SiteModel" mutationRate="@featureClockRate:yuat:path" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:path" spec="FilteredAlignment" data="@data_yuat" filter="104-110" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:person" spec="SiteModel" mutationRate="@featureClockRate:yuat:person" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:person" spec="FilteredAlignment" data="@data_yuat" filter="111-115" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:see" spec="SiteModel" mutationRate="@featureClockRate:yuat:see" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:see" spec="FilteredAlignment" data="@data_yuat" filter="116-120" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:skin" spec="SiteModel" mutationRate="@featureClockRate:yuat:skin" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:skin" spec="FilteredAlignment" data="@data_yuat" filter="121-127" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:star" spec="SiteModel" mutationRate="@featureClockRate:yuat:star" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:star" spec="FilteredAlignment" data="@data_yuat" filter="128-130" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:stone" spec="SiteModel" mutationRate="@featureClockRate:yuat:stone" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:stone" spec="FilteredAlignment" data="@data_yuat" filter="131-135" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:sun" spec="SiteModel" mutationRate="@featureClockRate:yuat:sun" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:sun" spec="FilteredAlignment" data="@data_yuat" filter="136-139" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:tree" spec="SiteModel" mutationRate="@featureClockRate:yuat:tree" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:tree" spec="FilteredAlignment" data="@data_yuat" filter="140-142" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:two" spec="SiteModel" mutationRate="@featureClockRate:yuat:two" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:two" spec="FilteredAlignment" data="@data_yuat" filter="143-146" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yuat:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yuat:water" spec="SiteModel" mutationRate="@featureClockRate:yuat:water" proportionInvariant="0" substModel="@covarion.s:yuat" />
+          <data id="feature_data_yuat:water" spec="FilteredAlignment" data="@data_yuat" filter="147-149" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:yuat" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:yuat" name="up" />
+      <parameter idref="featureClockRateGammaScale:yuat" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:yuat" spec="ScaleOperator" parameter="@covarion_alpha.s:yuat" scaleFactor="0.5" weight="1.0" />
+    <operator id="yuat:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:yuat" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tree,two,water">
+        <parameter idref="featureClockRate:yuat:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="33" estimate="false">3 2 4 3 4 3 2 2 2 4 3 6 2 4 6 5 5 5 4 2 2 2 5 6 4 4 6 2 4 3 2 3 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="yuat.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tree,two,water">
+        <log idref="featureClockRate:yuat:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:yuat" />
+      <log idref="covarion_alpha.s:yuat" />
+      <log idref="covarion_s.s:yuat" />
+    </logger>
+    <logger mode="tree" fileName="yuat.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

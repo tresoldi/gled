@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="arhu1242,bari1297,bord1248,boru1252,brib1243,cabe1245,cent2150,chib1270,chim1309,cogu1240,mala1522,male1297,ngab1239,pech1241,rama1270,sanb1242,teri1250">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_chibchan" name="data_chibchan" dataType="integer">
+    <sequence id="language_data_chibchan:arhu1242" taxon="arhu1242" value="00010000000000000001000000000001000000100000001000001000000000000000000000100000000000100000000000000000010000000000000100001000000000000100000010000000000000000010000000000000000010000000000000010000000000000001000000000001000000000000000000100000000000000100000100000000000010000000000001000000000001000000000010000000000000010000000010000000000000100000000000000001000000001000000000000000000100000100???????????000000000100000001000000000000000001000000000000000000100000000001000000010000000001000000100000" />
+    <sequence id="language_data_chibchan:bari1297" taxon="bari1297" value="0000000000000100001000000000001000010000001000000000100000000000100010000000001001000000000000000101000000000000101000000010100000010000000001001000000000001000000000000101010000000000001010000000000000001000000000000010000000000000001100000000000001000100010000000000000001001000001000001000000000001000000010000000100100001000000000001000010000000100000000100001000000000010000000000000100000000001000010000000000010000000000000100010000010100000000000000100001000000000001000000000000100000010000000001000000" />
+    <sequence id="language_data_chibchan:bord1248" taxon="bord1248" value="0000001000000000000000000100001000010000001000000000000000100000001000000100000000000001000000000000010000000000100000000000001001000000100000000000010000000000010000000000000000100000000000000100000000000000001000000001000000001000000000000100000000000000100000000010000000001000000000001000001000100000001000100000010000000010000000000000010000000000100000001000001000000000000010000010000011000000000000001000000000000010000000000001000000000001000000000000001000000001000000010000000001000000010000100100000" />
+    <sequence id="language_data_chibchan:boru1252" taxon="boru1252" value="0100000000000010000100000001001000010000000100000000010000000000010001000000000000100000000000000000100000000010010000000000100000001000000000000101000000000100000000000000001000000000000001000000000000000100000000000000000100000000000001000000000000100010000000100000000000001000000100000100000001000000000010000000000010000000000010000100000000000100000000000000100000000001000000000100010000000000000001000000000001000000000000100000000000010000000000000000000100000000000100000000100010000001000000000100000" />
+    <sequence id="language_data_chibchan:brib1243" taxon="brib1243" value="00100000000000000000100000001010000100000000100000000010000000000000????????????0001000000000000000001000000000001000000000010000000010000000000001000000000001000000000000000010000000000000010000000000000001000000000000000001000000000000???????????????001000000001000000000000100000001000010000000??????????010000000000001000000000000000010000000000100000000010000100000000000100000000000001000000000000000100000001000100000000000010000000000001000000000000000000010000000000010000000000010000001100000000100000" />
+    <sequence id="language_data_chibchan:cabe1245" taxon="cabe1245" value="0001000000000000000001100000001000010000000010000000100110000000000000100000000100001000000000010000011000000000001000000100110000000100000000000001000000000010000000000000000010000000000000100000000000000001000000001000000011000000000000100000000000010011000000010000000000001100000001000000000001000000000010000000000000110000000000000001100000000110000000000000100000000000110000000000001000000000000000010000000000011000000000010000000000001000000000000010000001000000000010000000000110000001100001000110000" />
+    <sequence id="language_data_chibchan:cent2150" taxon="cent2150" value="0000100000000000000000010000001000010000001000000000000010000000000000100000000000000000000000101000000000000100010000000000100000000000010000000001000000000000000000001000000000000000010000000000000001000000000000000100000000000000010000000000001000000010000000000000000010001000000001000000000000000000010000000001000000000000000100000000010000000000000001000000000000001000000000001000000000000010001000000000010000010000000000001000000000000000000000001000000010000000000000000001000000001001000000001000000" />
+    <sequence id="language_data_chibchan:chib1270" taxon="chib1270" value="000010000000000000000001000000010001000000000100000000001000000000000001000000000000010000000000000000100000000000010000000010000000001000000000100000000000000100000000000000000100000000000001000000000000000010000000000000000010000000000001000000000000001100000000100000000000100010000010000000000010000000001000000000000000100000000000010000000000010000000000000??????????000001000000000000100000000000000001000000000100000000000001000000000000100000000000000000000100000000001000000000100000001000000000001000" />
+    <sequence id="language_data_chibchan:chim1309" taxon="chim1309" value="0000010000000000000000001000000010001000001000000000000001000000000000001000000000000010000000000000000100000000000010000000100000000001000000000000100000000000100000000000001000000000000000001000000000000000010000000000000000010000000000001000000000000001000000000100000000001000000000010000000000010000000001000000000000000100000000000000100000000001000000000000010000000000000100000000000010000000000000000100000000000100000000000100000000000010000000000000000010000000000000100000000100000001000000000000100" />
+    <sequence id="language_data_chibchan:cogu1240" taxon="cogu1240" value="0000000001000000000001000000000100010000000000010000000000001000000000000010000000000000010000000000000000100000001000000000100000000000010000000000000100001000000000000010000000000100000000000000100000000000010000000000000100000000000000000000100000000010000000000000010000001000000000000100000100000100000000000100000000000000100000000000000010000100000000000000000001000000100000000000001000000000000000000010000001000000000000001000000000000000000100000000100000010000000000001000000010000001000000000000010" />
+    <sequence id="language_data_chibchan:mala1522" taxon="mala1522" value="0000000100000000000000000010000101010000001000000000010000000000000000000010000000000010000000000000000010000000000001000000100000000000010000001000000000000000001000000000001000000000000000100000000000000000000100000000000100000000000000000010000000000010000000000001000000000010000000000100000000000100000010000000000000001000000000001000001000000010000000000000000100000000100000000000000010000000000000000010000000000001000000000000100000000000100000000000000000010000000000001000000010000000001000001000000" />
+    <sequence id="language_data_chibchan:male1297" taxon="male1297" value="000000000010000000010000000000100000000100000000100000001000000000000000000010000000000000100000000000000001000000100000000010000000000000100000000000001000000000101000000000000000001000000000000001000000??????????????????0000000100000000000000010000000000001000100000000000001000000000000000100000000010000000000010000000000000010000000000000001000000000100000100000000100000000000100000000000100000000000000000100000000000001000000000001000000000000010000000000010000000000010000000000010000000000010000100000" />
+    <sequence id="language_data_chibchan:ngab1239" taxon="ngab1239" value="00000000100000000000010000000001000001000010000000000000000100000000000010010000000000001000000000000001000000000000001000000001000????????????00000001000000000100000000000000000010000000000000010000000000000000010000000100?????????????00000001000000000010000000000000100000001000000000000010000001000000000000010000000000100000000000000000010000000100010000000000000010000000000001000000000000100000100000000001000001000000000000000000010000000000010000000001000000001000000000000100000010000000010100000000010" />
+    <sequence id="language_data_chibchan:pech1241" taxon="pech1241" value="000000000001000100000100000000100000010000?????????00000000001000000001000000000000000000001000000000100000000000000000010000000100000000001001000000000010000001000010000000??????????????00000000000100010000000000010000000000000001000000000000000100000000000010001000000000000000100??????????????000000010000??????????0????????????????0000001000000010000000000000??????????0?????????????00000000010000000???????????000000000000100001000000000000000000001000000000010000000100000000010010000100001000000000001000" />
+    <sequence id="language_data_chibchan:rama1270" taxon="rama1270" value="0000000001000000001000000100000100000100100000000100000000000010000000100000100000000000000010000000000000001000000000100000100000000000010000000000000000100000001000100000000000000001000000000000000100000000000000010000000000000001000000000000000100000010000010000000001000101000000001000000010000100000100000000100000000100000000001000000000000110000000010000000000000010000000000010000001000000000000000001000000000010000000010000000000100000000000000100000001000000000000001000000000000010001000000000001001" />
+    <sequence id="language_data_chibchan:sanb1242" taxon="sanb1242" value="00000010000000000001000001000010000100000010000000001000000000000000001001000000000000010000000000000100000000001000000000000010000000001000000000000100000000000001000000000??????????????000000100000000000000000001000000000?????????????00000100000000000010000000?????????????01000000000000001000000100000000010000000000000000010000000000000010000000000001000000001000000000000000010000000000010000000000000001000000000000000010000001000000000000001000000000000001000000000000000010000000001000000100000000100000" />
+    <sequence id="language_data_chibchan:teri1250" taxon="teri1250" value="000000000000100010000100000000100000010000000000001000000000000100000000000001000000000000000100000001000000000001000000000010000000000000001000010000000000000000000001000000000000000010000000000000001000000000000000100001000000000010000000000000101000001000000000000000010000100000000100000000000??????????0??????????00000000000010001000000001000000000100000000000000000010000000001000000000000001000000???????????000000000010000010000000000000000000000010000000000000010000010000000000010000000010000000100000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:chibchan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:chibchan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:chibchan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:chibchan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:chibchan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(pech1241,((male1297,rama1270),((bari1297,cent2150,chib1270),(chim1309,(cogu1240,(arhu1242,mala1522)))),((ngab1239,(bord1248,sanb1242)),(boru1252,teri1250,(brib1243,cabe1245)))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:chibchan" name="distribution">
+          <input id="featureClockRateCompound:chibchan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:chibchan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:chibchan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:chibchan" beta="@featureClockRateGammaScale:chibchan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:chibchan" name="distribution" x="@featureClockRateGammaScale:chibchan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:chibchan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:chibchan" name="distribution" x="@covarion_alpha.s:chibchan">
+          <Uniform id="CovAlphaUniform:chibchan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:chibchan" name="distribution" x="@covarion_s.s:chibchan">
+          <Gamma id="Gamma.0:chibchan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:chibchan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:chibchan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:chibchan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:1pl" spec="SiteModel" mutationRate="@featureClockRate:chibchan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:chibchan" spec="BinaryCovarion" alpha="@covarion_alpha.s:chibchan" switchRate="@covarion_s.s:chibchan">
+              <vfrequencies id="chibchan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.91 0.09</vfrequencies>
+              <parameter id="chibchan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="chibchan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_chibchan:1pl" spec="FilteredAlignment" data="@data_chibchan" filter="1-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:1sg" spec="SiteModel" mutationRate="@featureClockRate:chibchan:1sg" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:1sg" spec="FilteredAlignment" data="@data_chibchan" filter="18-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:2sg" spec="SiteModel" mutationRate="@featureClockRate:chibchan:2sg" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:2sg" spec="FilteredAlignment" data="@data_chibchan" filter="30-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:blood" spec="SiteModel" mutationRate="@featureClockRate:chibchan:blood" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:blood" spec="FilteredAlignment" data="@data_chibchan" filter="35-41" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:bone" spec="SiteModel" mutationRate="@featureClockRate:chibchan:bone" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:bone" spec="FilteredAlignment" data="@data_chibchan" filter="42-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:breast" spec="SiteModel" mutationRate="@featureClockRate:chibchan:breast" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:breast" spec="FilteredAlignment" data="@data_chibchan" filter="52-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:come" spec="SiteModel" mutationRate="@featureClockRate:chibchan:come" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:come" spec="FilteredAlignment" data="@data_chibchan" filter="68-80" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:die" spec="SiteModel" mutationRate="@featureClockRate:chibchan:die" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:die" spec="FilteredAlignment" data="@data_chibchan" filter="81-98" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:dog" spec="SiteModel" mutationRate="@featureClockRate:chibchan:dog" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:dog" spec="FilteredAlignment" data="@data_chibchan" filter="99-111" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:drink" spec="SiteModel" mutationRate="@featureClockRate:chibchan:drink" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:drink" spec="FilteredAlignment" data="@data_chibchan" filter="112-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:ear" spec="SiteModel" mutationRate="@featureClockRate:chibchan:ear" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:ear" spec="FilteredAlignment" data="@data_chibchan" filter="124-130" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:eye" spec="SiteModel" mutationRate="@featureClockRate:chibchan:eye" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:eye" spec="FilteredAlignment" data="@data_chibchan" filter="131-143" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:fire" spec="SiteModel" mutationRate="@featureClockRate:chibchan:fire" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:fire" spec="FilteredAlignment" data="@data_chibchan" filter="144-155" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:fish" spec="SiteModel" mutationRate="@featureClockRate:chibchan:fish" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:fish" spec="FilteredAlignment" data="@data_chibchan" filter="156-172" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:full" spec="SiteModel" mutationRate="@featureClockRate:chibchan:full" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:full" spec="FilteredAlignment" data="@data_chibchan" filter="173-187" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:hand" spec="SiteModel" mutationRate="@featureClockRate:chibchan:hand" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:hand" spec="FilteredAlignment" data="@data_chibchan" filter="188-203" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:hear" spec="SiteModel" mutationRate="@featureClockRate:chibchan:hear" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:hear" spec="FilteredAlignment" data="@data_chibchan" filter="204-222" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:horn" spec="SiteModel" mutationRate="@featureClockRate:chibchan:horn" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:horn" spec="FilteredAlignment" data="@data_chibchan" filter="223-236" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:knee" spec="SiteModel" mutationRate="@featureClockRate:chibchan:knee" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:knee" spec="FilteredAlignment" data="@data_chibchan" filter="237-252" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:leaf" spec="SiteModel" mutationRate="@featureClockRate:chibchan:leaf" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:leaf" spec="FilteredAlignment" data="@data_chibchan" filter="253-261" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:liver" spec="SiteModel" mutationRate="@featureClockRate:chibchan:liver" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:liver" spec="FilteredAlignment" data="@data_chibchan" filter="262-275" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:louse" spec="SiteModel" mutationRate="@featureClockRate:chibchan:louse" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:louse" spec="FilteredAlignment" data="@data_chibchan" filter="276-281" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:mountain" spec="SiteModel" mutationRate="@featureClockRate:chibchan:mountain" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:mountain" spec="FilteredAlignment" data="@data_chibchan" filter="282-296" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:name" spec="SiteModel" mutationRate="@featureClockRate:chibchan:name" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:name" spec="FilteredAlignment" data="@data_chibchan" filter="297-307" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:new" spec="SiteModel" mutationRate="@featureClockRate:chibchan:new" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:new" spec="FilteredAlignment" data="@data_chibchan" filter="308-318" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:night" spec="SiteModel" mutationRate="@featureClockRate:chibchan:night" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:night" spec="FilteredAlignment" data="@data_chibchan" filter="319-335" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:nose" spec="SiteModel" mutationRate="@featureClockRate:chibchan:nose" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:nose" spec="FilteredAlignment" data="@data_chibchan" filter="336-348" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:one" spec="SiteModel" mutationRate="@featureClockRate:chibchan:one" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:one" spec="FilteredAlignment" data="@data_chibchan" filter="349-362" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:path" spec="SiteModel" mutationRate="@featureClockRate:chibchan:path" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:path" spec="FilteredAlignment" data="@data_chibchan" filter="363-373" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:person" spec="SiteModel" mutationRate="@featureClockRate:chibchan:person" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:person" spec="FilteredAlignment" data="@data_chibchan" filter="374-387" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:see" spec="SiteModel" mutationRate="@featureClockRate:chibchan:see" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:see" spec="FilteredAlignment" data="@data_chibchan" filter="388-403" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:skin" spec="SiteModel" mutationRate="@featureClockRate:chibchan:skin" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:skin" spec="FilteredAlignment" data="@data_chibchan" filter="404-415" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:star" spec="SiteModel" mutationRate="@featureClockRate:chibchan:star" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:star" spec="FilteredAlignment" data="@data_chibchan" filter="416-429" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:stone" spec="SiteModel" mutationRate="@featureClockRate:chibchan:stone" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:stone" spec="FilteredAlignment" data="@data_chibchan" filter="430-441" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:sun" spec="SiteModel" mutationRate="@featureClockRate:chibchan:sun" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:sun" spec="FilteredAlignment" data="@data_chibchan" filter="442-461" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:tongue" spec="SiteModel" mutationRate="@featureClockRate:chibchan:tongue" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:tongue" spec="FilteredAlignment" data="@data_chibchan" filter="462-473" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:tooth" spec="SiteModel" mutationRate="@featureClockRate:chibchan:tooth" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:tooth" spec="FilteredAlignment" data="@data_chibchan" filter="474-486" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:tree" spec="SiteModel" mutationRate="@featureClockRate:chibchan:tree" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:tree" spec="FilteredAlignment" data="@data_chibchan" filter="487-493" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:two" spec="SiteModel" mutationRate="@featureClockRate:chibchan:two" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:two" spec="FilteredAlignment" data="@data_chibchan" filter="494-503" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chibchan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chibchan:water" spec="SiteModel" mutationRate="@featureClockRate:chibchan:water" proportionInvariant="0" substModel="@covarion.s:chibchan" />
+          <data id="feature_data_chibchan:water" spec="FilteredAlignment" data="@data_chibchan" filter="504-511" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:chibchan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:chibchan" name="up" />
+      <parameter idref="featureClockRateGammaScale:chibchan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:chibchan" spec="ScaleOperator" parameter="@covarion_alpha.s:chibchan" scaleFactor="0.5" weight="1.0" />
+    <operator id="chibchan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:chibchan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:chibchan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">16 11 4 6 9 15 12 17 12 11 6 12 11 16 14 15 18 13 15 8 13 5 14 10 10 16 12 13 10 13 15 11 13 11 19 11 12 6 9 7</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="chibchan.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:chibchan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:chibchan" />
+      <log idref="covarion_alpha.s:chibchan" />
+      <log idref="covarion_s.s:chibchan" />
+    </logger>
+    <logger mode="tree" fileName="chibchan.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

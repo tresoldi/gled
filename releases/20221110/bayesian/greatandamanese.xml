@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="akab1248,akab1249,akac1240,akak1251,akak1252,akak1253,akar1243,apuc1241,mixe1288,okoj1239">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_greatandamanese" name="data_greatandamanese" dataType="integer">
+    <sequence id="language_data_greatandamanese:akab1248" taxon="akab1248" value="00100??01000100010000010000000100000001000010001000000010100001000000100000000???01000001000000010000100001000000????0100010010000100???0????00100000100001000000100000100001000010001000001000001000100000100" />
+    <sequence id="language_data_greatandamanese:akab1249" taxon="akab1249" value="0100010010001000100001000000010000000100000100100000001001000100000010000000001000100001000000010000100001000001010000??01000100010001000100001000001000010000000????01001010000010010000010000010001000000???" />
+    <sequence id="language_data_greatandamanese:akac1240" taxon="akac1240" value="001001001000010001000001000000010000001000010000100000010010000100000010000000???00100000100000001000010000100000????0100010010000010???001000001000????000100000010000100000100001000100001000010000100000100" />
+    <sequence id="language_data_greatandamanese:akak1251" taxon="akak1251" value="00010100100000101000000000100000001000001000100000010001001000010000000001000000100010000001000????0000100000100001000??0???0010001000100010000000100001000001000010000100000010001000010001000000100001000100" />
+    <sequence id="language_data_greatandamanese:akak1252" taxon="akak1252" value="001001001000100000100000100000001000001000010000010000010100000100000001000000???01000000100000010000100000010000????0100010010000010???0001000001000010000100000010000100001000001000100001000001000100000100" />
+    <sequence id="language_data_greatandamanese:akak1253" taxon="akak1253" value="00100100???01000100000000100000001000001000??00000100010000100001000000010000001001000000010000????0010001000000010000??0001010000100010000010100000????000010000100000100001000010001000000100001000010000100" />
+    <sequence id="language_data_greatandamanese:akar1243" taxon="akar1243" value="0100001010001000100001000000010000000000010??01000000010010000000100000000100010001000010000000????0010001000000010000??0100000101000001010000100000????010000000001000010010000010010000000010001000000100100" />
+    <sequence id="language_data_greatandamanese:apuc1241" taxon="apuc1241" value="0110010011101000100001000001010000000100000100100000001001000100000010000000001000100001000000010000100001000001010000??01000100010001000100001000001000010000000101001001010000010010000010000010001000000111" />
+    <sequence id="language_data_greatandamanese:mixe1288" taxon="mixe1288" value="001001001000100010010000100001000001011000001000000010100010000100100000000100???00011000000110010100001000000100001100100100010001100100010000000100100000100100010100100001001011000001001001001000100010110" />
+    <sequence id="language_data_greatandamanese:okoj1239" taxon="okoj1239" value="00100100???01000100000000100000001000001000??00000100010000100001000000000001001001000000010000????0010001000000010000??0010010001000010000010100000????000000010100000100001000010001000000100001000010000100" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:greatandamanese:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:greatandamanese" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:greatandamanese" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:greatandamanese" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:greatandamanese" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((akab1249,akar1243),(okoj1239,(akak1253,apuc1241)),(akak1252,((akab1248,akac1240),(akak1251,mixe1288))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:greatandamanese" name="distribution">
+          <input id="featureClockRateCompound:greatandamanese" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:greatandamanese:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:greatandamanese" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:greatandamanese" beta="@featureClockRateGammaScale:greatandamanese" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:greatandamanese" name="distribution" x="@featureClockRateGammaScale:greatandamanese">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:greatandamanese" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:greatandamanese" name="distribution" x="@covarion_alpha.s:greatandamanese">
+          <Uniform id="CovAlphaUniform:greatandamanese" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:greatandamanese" name="distribution" x="@covarion_s.s:greatandamanese">
+          <Gamma id="Gamma.0:greatandamanese" name="distr">
+            <parameter id="covarion_switch_gamma_param1:greatandamanese" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:greatandamanese" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:greatandamanese:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:1pl" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:greatandamanese" spec="BinaryCovarion" alpha="@covarion_alpha.s:greatandamanese" switchRate="@covarion_s.s:greatandamanese">
+              <vfrequencies id="greatandamanese:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.81 0.19</vfrequencies>
+              <parameter id="greatandamanese:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="greatandamanese:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_greatandamanese:1pl" spec="FilteredAlignment" data="@data_greatandamanese" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:1sg" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:1sg" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:1sg" spec="FilteredAlignment" data="@data_greatandamanese" filter="5-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:2sg" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:2sg" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:2sg" spec="FilteredAlignment" data="@data_greatandamanese" filter="8-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:blood" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:blood" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:blood" spec="FilteredAlignment" data="@data_greatandamanese" filter="12-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:bone" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:bone" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:bone" spec="FilteredAlignment" data="@data_greatandamanese" filter="16-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:breast" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:breast" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:breast" spec="FilteredAlignment" data="@data_greatandamanese" filter="21-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:come" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:come" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:come" spec="FilteredAlignment" data="@data_greatandamanese" filter="29-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:die" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:die" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:die" spec="FilteredAlignment" data="@data_greatandamanese" filter="37-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:dog" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:dog" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:dog" spec="FilteredAlignment" data="@data_greatandamanese" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:drink" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:drink" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:drink" spec="FilteredAlignment" data="@data_greatandamanese" filter="46-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:ear" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:ear" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:ear" spec="FilteredAlignment" data="@data_greatandamanese" filter="54-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:eye" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:eye" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:eye" spec="FilteredAlignment" data="@data_greatandamanese" filter="57-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:fire" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:fire" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:fire" spec="FilteredAlignment" data="@data_greatandamanese" filter="61-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:fish" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:fish" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:fish" spec="FilteredAlignment" data="@data_greatandamanese" filter="68-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:full" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:full" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:full" spec="FilteredAlignment" data="@data_greatandamanese" filter="78-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:hand" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:hand" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:hand" spec="FilteredAlignment" data="@data_greatandamanese" filter="82-86" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:hear" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:hear" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:hear" spec="FilteredAlignment" data="@data_greatandamanese" filter="87-94" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:horn" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:horn" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:horn" spec="FilteredAlignment" data="@data_greatandamanese" filter="95-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:knee" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:knee" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:knee" spec="FilteredAlignment" data="@data_greatandamanese" filter="100-104" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:leaf" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:leaf" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:leaf" spec="FilteredAlignment" data="@data_greatandamanese" filter="105-112" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:liver" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:liver" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:liver" spec="FilteredAlignment" data="@data_greatandamanese" filter="113-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:louse" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:louse" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:louse" spec="FilteredAlignment" data="@data_greatandamanese" filter="118-120" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:name" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:name" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:name" spec="FilteredAlignment" data="@data_greatandamanese" filter="121-124" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:new" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:new" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:new" spec="FilteredAlignment" data="@data_greatandamanese" filter="125-128" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:night" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:night" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:night" spec="FilteredAlignment" data="@data_greatandamanese" filter="129-132" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:nose" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:nose" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:nose" spec="FilteredAlignment" data="@data_greatandamanese" filter="133-136" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:one" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:one" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:one" spec="FilteredAlignment" data="@data_greatandamanese" filter="137-141" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:path" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:path" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:path" spec="FilteredAlignment" data="@data_greatandamanese" filter="142-147" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:person" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:person" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:person" spec="FilteredAlignment" data="@data_greatandamanese" filter="148-152" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:see" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:see" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:see" spec="FilteredAlignment" data="@data_greatandamanese" filter="153-160" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:skin" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:skin" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:skin" spec="FilteredAlignment" data="@data_greatandamanese" filter="161-165" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:star" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:star" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:star" spec="FilteredAlignment" data="@data_greatandamanese" filter="166-170" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:stone" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:stone" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:stone" spec="FilteredAlignment" data="@data_greatandamanese" filter="171-176" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:sun" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:sun" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:sun" spec="FilteredAlignment" data="@data_greatandamanese" filter="177-179" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:tongue" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:tongue" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:tongue" spec="FilteredAlignment" data="@data_greatandamanese" filter="180-185" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:tooth" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:tooth" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:tooth" spec="FilteredAlignment" data="@data_greatandamanese" filter="186-191" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:tree" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:tree" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:tree" spec="FilteredAlignment" data="@data_greatandamanese" filter="192-195" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:two" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:two" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:two" spec="FilteredAlignment" data="@data_greatandamanese" filter="196-202" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greatandamanese:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greatandamanese:water" spec="SiteModel" mutationRate="@featureClockRate:greatandamanese:water" proportionInvariant="0" substModel="@covarion.s:greatandamanese" />
+          <data id="feature_data_greatandamanese:water" spec="FilteredAlignment" data="@data_greatandamanese" filter="203-206" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:greatandamanese" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:greatandamanese" name="up" />
+      <parameter idref="featureClockRateGammaScale:greatandamanese" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:greatandamanese" spec="ScaleOperator" parameter="@covarion_alpha.s:greatandamanese" scaleFactor="0.5" weight="1.0" />
+    <operator id="greatandamanese:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:greatandamanese" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:greatandamanese:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="39" estimate="false">3 2 3 3 4 7 7 5 2 7 2 3 6 9 3 4 7 4 4 7 4 2 3 3 3 3 4 5 4 7 4 4 5 2 5 5 3 6 3</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="greatandamanese.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:greatandamanese:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:greatandamanese" />
+      <log idref="covarion_alpha.s:greatandamanese" />
+      <log idref="covarion_s.s:greatandamanese" />
+    </logger>
+    <logger mode="tree" fileName="greatandamanese.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

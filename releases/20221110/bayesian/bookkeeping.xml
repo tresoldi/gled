@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="aghu1256,buma1247,chua1256,lenc1244,oldt1247,samr1245,urad1239,xinc1247">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_bookkeeping" name="data_bookkeeping" dataType="integer">
+    <sequence id="language_data_bookkeeping:aghu1256" taxon="aghu1256" value="0000010000000000100000000010000000000010000000000010000000000100000000000010000000000100000000001000000000100000000010000000000010000000000001000??????????0??????0000010000?????????0?????000001000000000000100000000010000?????????000000001000000000000100000??????0??????????000000001000000000010000??????????0000010000000000100000000010000000100000000100000000100000000000100000000010000000001000000000010000000000010000" />
+    <sequence id="language_data_bookkeeping:buma1247" taxon="buma1247" value="001000000000010000000010000000001000000000001000000000001000000000001000000000010000000000010000000000100000001000000000000001000000000010000000010000000000??????01000000000100000000100000100000000010000000000001000000000100000000010000000000000100000000001000000100000000000100000000000010000000010000000000010000001100000000000100000000100000001000000000100000001000000000001000000000100000000000100000000010000000000" />
+    <sequence id="language_data_bookkeeping:chua1256" taxon="chua1256" value="00010000000000100000000010000000011000000000001100000000001100000000001100000000010000000000110000000000100000001100000000000010000000000010000000011000000001000000110000000010000000001000001000000001110000000000100000000010000000001100000000000011100000000010000001000000000011000000000001000000000100000000001100000011000000000001000000010000000100000000010000000011100000000010000000010000000000011000000001100000000" />
+    <sequence id="language_data_bookkeeping:lenc1244" taxon="lenc1244" value="0000100000000001000000000100000000011100000000001100000000001000000000001100000000111000000000110000000001000000001100000000000100000000000110000000011000000010000000100000000110000000010000010000000000111000000001100000000110000000001110000000000001000000??????0000110000000000111000000000110000000010000000??????000000111000000000100000001000000011000000001000000000011000000001100000001110000000000100000000011100000" />
+    <sequence id="language_data_bookkeeping:oldt1247" taxon="oldt1247" value="000000011000000000100000000010000000000010000000000010000000000110000000000010000000000100000000001000???????000000000001000000000001000000000100000000010000000100000000100000000010000001000000100000000000001100????????00000000100000000000110000000000001000000010000000001000000000000100000000010000000011000000001000000000001000???????00000001000000001000000001000000000001000000000100000000010000000001000000000000100" />
+    <sequence id="language_data_bookkeeping:samr1245" taxon="samr1245" value="0100000000001000000000010000000010000000000001000000000001000000000001000000000010000000001000000000000100000001000000000000100000000000010000000010000000001000000100000000100000000001000001000000010000000000000100000000100000000010000000000000100000000000010000001000000000100000000000010000000000100000000010000001000000000000001000000100000000?????????0100000000100000000000100000000100000000001000000000100000000000" />
+    <sequence id="language_data_bookkeeping:urad1239" taxon="urad1239" value="00000010000000000100000000010000000000010000000000010000000001100000000000010000000000100000000001000000000100000000011100000000011100000000010000000001000000010000000010000000011000?????0000010000000000000100000000010000000011000000000001000000000001110000001100000001110000000000011000000000100000001100000000010000000000010000000010000000110000000010000000010000000000110000000001000000000100000000010000000000001000" />
+    <sequence id="language_data_bookkeeping:xinc1247" taxon="xinc1247" value="00000000011000000001100000000110000000000110000000000110000000000110000000000100000000001000000000011000000010000000000001100000000001100000000100000000011000000100000000100000000010?????000000011000000000000010000000110000000001000000000000110000000000010??????0000000000100000000000010000000001000000000110??????000000000000110000001100000000100000000110000000100000000000100000000010000000001100000000110000000000011" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:bookkeeping:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:bookkeeping" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:bookkeeping" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:bookkeeping" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:bookkeeping" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(aghu1256,buma1247,chua1256,lenc1244,oldt1247,samr1245,urad1239,xinc1247);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:bookkeeping" name="distribution">
+          <input id="featureClockRateCompound:bookkeeping" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:bookkeeping:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:bookkeeping" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:bookkeeping" beta="@featureClockRateGammaScale:bookkeeping" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:bookkeeping" name="distribution" x="@featureClockRateGammaScale:bookkeeping">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:bookkeeping" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:bookkeeping" name="distribution" x="@covarion_alpha.s:bookkeeping">
+          <Uniform id="CovAlphaUniform:bookkeeping" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:bookkeeping" name="distribution" x="@covarion_s.s:bookkeeping">
+          <Gamma id="Gamma.0:bookkeeping" name="distr">
+            <parameter id="covarion_switch_gamma_param1:bookkeeping" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:bookkeeping" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:bookkeeping:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:1pl" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:bookkeeping" spec="BinaryCovarion" alpha="@covarion_alpha.s:bookkeeping" switchRate="@covarion_s.s:bookkeeping">
+              <vfrequencies id="bookkeeping:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.88 0.12</vfrequencies>
+              <parameter id="bookkeeping:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="bookkeeping:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_bookkeeping:1pl" spec="FilteredAlignment" data="@data_bookkeeping" filter="1-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:1sg" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:1sg" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:1sg" spec="FilteredAlignment" data="@data_bookkeeping" filter="12-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:2sg" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:2sg" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:2sg" spec="FilteredAlignment" data="@data_bookkeeping" filter="22-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:blood" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:blood" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:blood" spec="FilteredAlignment" data="@data_bookkeeping" filter="32-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:bone" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:bone" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:bone" spec="FilteredAlignment" data="@data_bookkeeping" filter="44-55" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:breast" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:breast" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:breast" spec="FilteredAlignment" data="@data_bookkeeping" filter="56-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:come" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:come" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:come" spec="FilteredAlignment" data="@data_bookkeeping" filter="68-78" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:die" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:die" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:die" spec="FilteredAlignment" data="@data_bookkeeping" filter="79-89" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:dog" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:dog" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:dog" spec="FilteredAlignment" data="@data_bookkeeping" filter="90-101" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:drink" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:drink" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:drink" spec="FilteredAlignment" data="@data_bookkeeping" filter="102-109" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:ear" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:ear" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:ear" spec="FilteredAlignment" data="@data_bookkeeping" filter="110-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:eye" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:eye" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:eye" spec="FilteredAlignment" data="@data_bookkeeping" filter="124-135" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:fire" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:fire" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:fire" spec="FilteredAlignment" data="@data_bookkeeping" filter="136-144" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:fish" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:fish" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:fish" spec="FilteredAlignment" data="@data_bookkeeping" filter="145-155" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:full" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:full" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:full" spec="FilteredAlignment" data="@data_bookkeeping" filter="156-162" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:hand" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:hand" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:hand" spec="FilteredAlignment" data="@data_bookkeeping" filter="163-171" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:hear" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:hear" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:hear" spec="FilteredAlignment" data="@data_bookkeeping" filter="172-181" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:horn" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:horn" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:horn" spec="FilteredAlignment" data="@data_bookkeeping" filter="182-187" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:knee" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:knee" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:knee" spec="FilteredAlignment" data="@data_bookkeeping" filter="188-196" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:leaf" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:leaf" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:leaf" spec="FilteredAlignment" data="@data_bookkeeping" filter="197-210" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:liver" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:liver" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:liver" spec="FilteredAlignment" data="@data_bookkeeping" filter="211-219" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:louse" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:louse" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:louse" spec="FilteredAlignment" data="@data_bookkeeping" filter="220-229" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:mountain" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:mountain" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:mountain" spec="FilteredAlignment" data="@data_bookkeeping" filter="230-243" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:name" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:name" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:name" spec="FilteredAlignment" data="@data_bookkeeping" filter="244-255" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:new" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:new" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:new" spec="FilteredAlignment" data="@data_bookkeeping" filter="256-262" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:night" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:night" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:night" spec="FilteredAlignment" data="@data_bookkeeping" filter="263-273" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:nose" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:nose" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:nose" spec="FilteredAlignment" data="@data_bookkeeping" filter="274-286" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:one" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:one" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:one" spec="FilteredAlignment" data="@data_bookkeeping" filter="287-296" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:path" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:path" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:path" spec="FilteredAlignment" data="@data_bookkeeping" filter="297-307" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:person" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:person" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:person" spec="FilteredAlignment" data="@data_bookkeeping" filter="308-314" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:see" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:see" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:see" spec="FilteredAlignment" data="@data_bookkeeping" filter="315-328" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:skin" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:skin" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:skin" spec="FilteredAlignment" data="@data_bookkeeping" filter="329-336" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:star" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:star" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:star" spec="FilteredAlignment" data="@data_bookkeeping" filter="337-345" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:stone" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:stone" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:stone" spec="FilteredAlignment" data="@data_bookkeeping" filter="346-355" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:sun" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:sun" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:sun" spec="FilteredAlignment" data="@data_bookkeeping" filter="356-363" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:tongue" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:tongue" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:tongue" spec="FilteredAlignment" data="@data_bookkeeping" filter="364-375" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:tooth" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:tooth" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:tooth" spec="FilteredAlignment" data="@data_bookkeeping" filter="376-385" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:tree" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:tree" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:tree" spec="FilteredAlignment" data="@data_bookkeeping" filter="386-396" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:two" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:two" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:two" spec="FilteredAlignment" data="@data_bookkeeping" filter="397-406" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bookkeeping:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bookkeeping:water" spec="SiteModel" mutationRate="@featureClockRate:bookkeeping:water" proportionInvariant="0" substModel="@covarion.s:bookkeeping" />
+          <data id="feature_data_bookkeeping:water" spec="FilteredAlignment" data="@data_bookkeeping" filter="407-419" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:bookkeeping" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:bookkeeping" name="up" />
+      <parameter idref="featureClockRateGammaScale:bookkeeping" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:bookkeeping" spec="ScaleOperator" parameter="@covarion_alpha.s:bookkeeping" scaleFactor="0.5" weight="1.0" />
+    <operator id="bookkeeping:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:bookkeeping" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:bookkeeping:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">10 9 9 11 11 11 10 10 11 7 13 11 8 10 6 8 9 5 8 13 8 9 13 11 6 10 12 9 10 6 13 7 8 9 7 11 9 10 9 12</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="bookkeeping.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:bookkeeping:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:bookkeeping" />
+      <log idref="covarion_alpha.s:bookkeeping" />
+      <log idref="covarion_s.s:bookkeeping" />
+    </logger>
+    <logger mode="tree" fileName="bookkeeping.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

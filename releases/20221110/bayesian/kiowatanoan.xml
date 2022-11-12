@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="jeme1245,kiow1266,nort1550,sout2961,tewa1260">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_kiowatanoan" name="data_kiowatanoan" dataType="integer">
+    <sequence id="language_data_kiowatanoan:jeme1245" taxon="jeme1245" value="01000101000010000101000010001000100000100001000000100010010010000100100001000010010100001000001001001000001000100001000010010010010000100010000100000100001000100001000010" />
+    <sequence id="language_data_kiowatanoan:kiow1266" taxon="kiow1266" value="00100000100001000001001001000100010000011000100000010001010001000010010000100001000101001000000101000100000100010001000001001001001010010001000010000010000100010000100001" />
+    <sequence id="language_data_kiowatanoan:nort1550" taxon="nort1550" value="00001000001000001000010000100100000010001100000110010001010001010010000100001000010100101011001001000000100010000100010010010010000100001000010001000001000010001101001010" />
+    <sequence id="language_data_kiowatanoan:sout2961" taxon="sout2961" value="00001000001000001000010000100100000010000100000100010010010001000010000100001000010100000010001001000000100010000100001010010010000100001000010000010000100010001000001010" />
+    <sequence id="language_data_kiowatanoan:tewa1260" taxon="tewa1260" value="00010000010000110000100000100110001100001000011000001001011000100010001000010000100010001100101000100011000100001000100010010010000100001000100001100010000010001000010010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fish,full,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:kiowatanoan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:kiowatanoan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:kiowatanoan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:kiowatanoan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:kiowatanoan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(jeme1245,kiow1266,tewa1260,(nort1550,sout2961));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:kiowatanoan" name="distribution">
+          <input id="featureClockRateCompound:kiowatanoan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fish,full,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:kiowatanoan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:kiowatanoan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:kiowatanoan" beta="@featureClockRateGammaScale:kiowatanoan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:kiowatanoan" name="distribution" x="@featureClockRateGammaScale:kiowatanoan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:kiowatanoan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:kiowatanoan" name="distribution" x="@covarion_alpha.s:kiowatanoan">
+          <Uniform id="CovAlphaUniform:kiowatanoan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:kiowatanoan" name="distribution" x="@covarion_s.s:kiowatanoan">
+          <Gamma id="Gamma.0:kiowatanoan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:kiowatanoan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:kiowatanoan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:kiowatanoan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:1pl" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:kiowatanoan" spec="BinaryCovarion" alpha="@covarion_alpha.s:kiowatanoan" switchRate="@covarion_s.s:kiowatanoan">
+              <vfrequencies id="kiowatanoan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.75 0.25</vfrequencies>
+              <parameter id="kiowatanoan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="kiowatanoan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_kiowatanoan:1pl" spec="FilteredAlignment" data="@data_kiowatanoan" filter="1-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:2sg" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:2sg" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:2sg" spec="FilteredAlignment" data="@data_kiowatanoan" filter="7-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:blood" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:blood" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:blood" spec="FilteredAlignment" data="@data_kiowatanoan" filter="12-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:bone" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:bone" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:bone" spec="FilteredAlignment" data="@data_kiowatanoan" filter="19-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:breast" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:breast" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:breast" spec="FilteredAlignment" data="@data_kiowatanoan" filter="24-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:come" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:come" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:come" spec="FilteredAlignment" data="@data_kiowatanoan" filter="28-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:die" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:die" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:die" spec="FilteredAlignment" data="@data_kiowatanoan" filter="32-37" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:dog" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:dog" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:dog" spec="FilteredAlignment" data="@data_kiowatanoan" filter="38-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:drink" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:drink" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:drink" spec="FilteredAlignment" data="@data_kiowatanoan" filter="43-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:ear" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:ear" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:ear" spec="FilteredAlignment" data="@data_kiowatanoan" filter="50-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:eye" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:eye" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:eye" spec="FilteredAlignment" data="@data_kiowatanoan" filter="54-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:fish" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:fish" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:fish" spec="FilteredAlignment" data="@data_kiowatanoan" filter="57-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:full" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:full" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:full" spec="FilteredAlignment" data="@data_kiowatanoan" filter="60-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:hear" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:hear" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:hear" spec="FilteredAlignment" data="@data_kiowatanoan" filter="65-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:horn" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:horn" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:horn" spec="FilteredAlignment" data="@data_kiowatanoan" filter="68-72" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:knee" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:knee" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:knee" spec="FilteredAlignment" data="@data_kiowatanoan" filter="73-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:leaf" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:leaf" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:leaf" spec="FilteredAlignment" data="@data_kiowatanoan" filter="78-82" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:liver" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:liver" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:liver" spec="FilteredAlignment" data="@data_kiowatanoan" filter="83-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:louse" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:louse" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:louse" spec="FilteredAlignment" data="@data_kiowatanoan" filter="88-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:mountain" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:mountain" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:mountain" spec="FilteredAlignment" data="@data_kiowatanoan" filter="94-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:name" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:name" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:name" spec="FilteredAlignment" data="@data_kiowatanoan" filter="97-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:new" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:new" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:new" spec="FilteredAlignment" data="@data_kiowatanoan" filter="100-105" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:night" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:night" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:night" spec="FilteredAlignment" data="@data_kiowatanoan" filter="106-109" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:nose" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:nose" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:nose" spec="FilteredAlignment" data="@data_kiowatanoan" filter="110-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:one" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:one" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:one" spec="FilteredAlignment" data="@data_kiowatanoan" filter="115-119" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:path" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:path" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:path" spec="FilteredAlignment" data="@data_kiowatanoan" filter="120-122" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:person" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:person" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:person" spec="FilteredAlignment" data="@data_kiowatanoan" filter="123-125" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:see" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:see" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:see" spec="FilteredAlignment" data="@data_kiowatanoan" filter="126-128" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:skin" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:skin" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:skin" spec="FilteredAlignment" data="@data_kiowatanoan" filter="129-133" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:star" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:star" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:star" spec="FilteredAlignment" data="@data_kiowatanoan" filter="134-137" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:stone" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:stone" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:stone" spec="FilteredAlignment" data="@data_kiowatanoan" filter="138-142" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:sun" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:sun" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:sun" spec="FilteredAlignment" data="@data_kiowatanoan" filter="143-148" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:tongue" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:tongue" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:tongue" spec="FilteredAlignment" data="@data_kiowatanoan" filter="149-153" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:tooth" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:tooth" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:tooth" spec="FilteredAlignment" data="@data_kiowatanoan" filter="154-157" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:tree" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:tree" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:tree" spec="FilteredAlignment" data="@data_kiowatanoan" filter="158-162" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:two" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:two" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:two" spec="FilteredAlignment" data="@data_kiowatanoan" filter="163-167" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kiowatanoan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kiowatanoan:water" spec="SiteModel" mutationRate="@featureClockRate:kiowatanoan:water" proportionInvariant="0" substModel="@covarion.s:kiowatanoan" />
+          <data id="feature_data_kiowatanoan:water" spec="FilteredAlignment" data="@data_kiowatanoan" filter="168-170" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:kiowatanoan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:kiowatanoan" name="up" />
+      <parameter idref="featureClockRateGammaScale:kiowatanoan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:kiowatanoan" spec="ScaleOperator" parameter="@covarion_alpha.s:kiowatanoan" scaleFactor="0.5" weight="1.0" />
+    <operator id="kiowatanoan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:kiowatanoan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fish,full,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:kiowatanoan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="37" estimate="false">5 4 6 4 3 3 5 4 6 3 2 2 4 2 4 4 4 4 5 2 2 5 3 4 4 2 2 2 4 3 4 5 4 3 4 4 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="kiowatanoan.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fish,full,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:kiowatanoan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:kiowatanoan" />
+      <log idref="covarion_alpha.s:kiowatanoan" />
+      <log idref="covarion_s.s:kiowatanoan" />
+    </logger>
+    <logger mode="tree" fileName="kiowatanoan.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

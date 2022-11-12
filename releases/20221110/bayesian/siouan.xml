@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="assi1247,bilo1248,cata1286,crow1244,dako1258,hida1246,hoch1243,kans1243,lako1247,mand1446,ofoo1242,omah1247,osag1243,quap1242">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_siouan" name="data_siouan" dataType="integer">
+    <sequence id="language_data_siouan:assi1247" taxon="assi1247" value="01000000000000????????0100000001000000001001000000??????0100001000001000000001000000010000100000??????0100000000001000001001000001000000100000010000000100000100000000000100???01000000000010001000001000000010000100000010000000000100000010000000001000000001000100010000000010010000" />
+    <sequence id="language_data_siouan:bilo1248" taxon="bilo1248" value="0010000000000010000000001000000010000000100100000010000001010010000001000000001000000010001000001000010??????????00100001001000000100000010100001000000010000010000000000100100001000000100100001000011000000010000100000??????????0100000010000000000100000001000010001000000010001000" />
+    <sequence id="language_data_siouan:cata1286" taxon="cata1286" value="000100000000000100000000010100000100000010010000001000000010000100000010000000010000000100100000010000001000000000001000100?????00010000001000001000000?????0001000000000??00100001000000001000100000001000000100000100000100000000001000000100000100001000000???0001000100000010000100" />
+    <sequence id="language_data_siouan:crow1244" taxon="crow1244" value="000010000010000010000000001000000010000010010000001000000100000010000001000000001100010000010010??????000100000010000100100010010000100000010000010000000100000010000000010000100010000000001001000000001000010000000100000100000000001000000100000000001000001000010000010000010000011" />
+    <sequence id="language_data_siouan:dako1258" taxon="dako1258" value="010000000000000001000001000000010000000010001000001000000100001000001000000000000100010000100000001000000010000000100000100100000000010000010001000000010000000001000000010010000001000000010001000000100000010000100000000010000000100000001000000000000100001000100010000000010010000" />
+    <sequence id="language_data_siouan:hida1246" taxon="hida1246" value="0000010000010000001000000010000000010000100110000011000001000000101000001001000010010100000010000001000000010000000001001000010000000010000010001000000?????0000001000000110001000001000010010010000000001010????00001000000010000000010000000100001000000101010001100????????010010000" />
+    <sequence id="language_data_siouan:hoch1243" taxon="hoch1243" value="000000000100000000001000001000010000000001010000001001010100001000000000010001000100010000100000000010000000000100100000100100000000100000010001000000010000000001000001010010000000010000001000000100100000010010000001000010000000100000001000000001000000001000100000000001010001000" />
+    <sequence id="language_data_siouan:kans1243" taxon="kans1243" value="010000000000000000010000000100000000100010010000001000000100001000000000010001000000010000100000100000000000100000100000100100000000100000000100001001010000000000010000010010000000010000001001000000000010010000010100000010001010000100000001000001100000001100100010000000010010000" />
+    <sequence id="language_data_siouan:lako1247" taxon="lako1247" value="010000000000100001110101000111010000000010011000001010000100001000001000000000000100010000100000001000000000010000100000100100000100000010000001000000010000000001000000010010001000000000010001000000100000000100100000000010000100100000011000000001000000001000100010000000011010000" />
+    <sequence id="language_data_siouan:mand1446" taxon="mand1446" value="0000001000000000010000010000000000000100100001001010000001000000010000001000000000100000100001001000000000000010000000100100001000001000000100000001000100000000010000000100100000000010000100010000001000000????0000010000000101000000011000000100001000000001000100000001000010010000" />
+    <sequence id="language_data_siouan:ofoo1242" taxon="ofoo1242" value="0????????????0????????0???????000000001010000010000001000100001000000000001001000000000100100000100000000000001000010000100100000??????0000100000000100000100000000010000??010000000000100000100010000100000010000010000000000010000100000000000010000000001000010010010000000010001000" />
+    <sequence id="language_data_siouan:omah1247" taxon="omah1247" value="000000010000000000010000001000000000100010000001001000000100001000000000010001000000010000100000100000000000100000100000100100000000100000000101000000010001000000000100010010000000010000001001000000000010010000010000000010001000000100010000000001000000001000100000000100010001000" />
+    <sequence id="language_data_siouan:osag1243" taxon="osag1243" value="000000001000000000010000000100000000100010010000001000100100101000000000010001000000010000100000100000000000100000000100100100000000100000000100001000010000000000000010010010000000010010001001001001000000010000010100000000001000000100000001000001000000001000100010000000010001000" />
+    <sequence id="language_data_siouan:quap1242" taxon="quap1242" value="0????????????0????????0???????0000001000100100000010000001000010000000000100010000000100001000001000000000001000001000001001000000001000000100010000000100000???????????01001000??????????01000?????01000000010000010000000010000000000100000001000001000000001000100000000010010001000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:siouan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:siouan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:siouan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:siouan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:siouan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(cata1286,(mand1446,(bilo1248,ofoo1242),(crow1244,hida1246),(hoch1243,(assi1247,(dako1258,lako1247)),(omah1247,quap1242,(kans1243,osag1243)))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:siouan" name="distribution">
+          <input id="featureClockRateCompound:siouan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:siouan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:siouan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:siouan" beta="@featureClockRateGammaScale:siouan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:siouan" name="distribution" x="@featureClockRateGammaScale:siouan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:siouan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:siouan" name="distribution" x="@covarion_alpha.s:siouan">
+          <Uniform id="CovAlphaUniform:siouan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:siouan" name="distribution" x="@covarion_s.s:siouan">
+          <Gamma id="Gamma.0:siouan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:siouan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:siouan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:siouan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:1pl" spec="SiteModel" mutationRate="@featureClockRate:siouan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:siouan" spec="BinaryCovarion" alpha="@covarion_alpha.s:siouan" switchRate="@covarion_s.s:siouan">
+              <vfrequencies id="siouan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.85 0.15</vfrequencies>
+              <parameter id="siouan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="siouan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_siouan:1pl" spec="FilteredAlignment" data="@data_siouan" filter="1-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:1sg" spec="SiteModel" mutationRate="@featureClockRate:siouan:1sg" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:1sg" spec="FilteredAlignment" data="@data_siouan" filter="14-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:2sg" spec="SiteModel" mutationRate="@featureClockRate:siouan:2sg" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:2sg" spec="FilteredAlignment" data="@data_siouan" filter="23-30" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:blood" spec="SiteModel" mutationRate="@featureClockRate:siouan:blood" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:blood" spec="FilteredAlignment" data="@data_siouan" filter="31-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:bone" spec="SiteModel" mutationRate="@featureClockRate:siouan:bone" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:bone" spec="FilteredAlignment" data="@data_siouan" filter="40-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:breast" spec="SiteModel" mutationRate="@featureClockRate:siouan:breast" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:breast" spec="FilteredAlignment" data="@data_siouan" filter="43-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:come" spec="SiteModel" mutationRate="@featureClockRate:siouan:come" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:come" spec="FilteredAlignment" data="@data_siouan" filter="50-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:die" spec="SiteModel" mutationRate="@featureClockRate:siouan:die" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:die" spec="FilteredAlignment" data="@data_siouan" filter="57-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:dog" spec="SiteModel" mutationRate="@featureClockRate:siouan:dog" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:dog" spec="FilteredAlignment" data="@data_siouan" filter="62-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:drink" spec="SiteModel" mutationRate="@featureClockRate:siouan:drink" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:drink" spec="FilteredAlignment" data="@data_siouan" filter="68-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:ear" spec="SiteModel" mutationRate="@featureClockRate:siouan:ear" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:ear" spec="FilteredAlignment" data="@data_siouan" filter="77-84" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:eye" spec="SiteModel" mutationRate="@featureClockRate:siouan:eye" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:eye" spec="FilteredAlignment" data="@data_siouan" filter="85-89" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:fire" spec="SiteModel" mutationRate="@featureClockRate:siouan:fire" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:fire" spec="FilteredAlignment" data="@data_siouan" filter="90-95" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:fish" spec="SiteModel" mutationRate="@featureClockRate:siouan:fish" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:fish" spec="FilteredAlignment" data="@data_siouan" filter="96-102" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:full" spec="SiteModel" mutationRate="@featureClockRate:siouan:full" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:full" spec="FilteredAlignment" data="@data_siouan" filter="103-113" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:hand" spec="SiteModel" mutationRate="@featureClockRate:siouan:hand" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:hand" spec="FilteredAlignment" data="@data_siouan" filter="114-119" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:hear" spec="SiteModel" mutationRate="@featureClockRate:siouan:hear" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:hear" spec="FilteredAlignment" data="@data_siouan" filter="120-122" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:horn" spec="SiteModel" mutationRate="@featureClockRate:siouan:horn" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:horn" spec="FilteredAlignment" data="@data_siouan" filter="123-128" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:knee" spec="SiteModel" mutationRate="@featureClockRate:siouan:knee" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:knee" spec="FilteredAlignment" data="@data_siouan" filter="129-135" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:leaf" spec="SiteModel" mutationRate="@featureClockRate:siouan:leaf" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:leaf" spec="FilteredAlignment" data="@data_siouan" filter="136-142" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:liver" spec="SiteModel" mutationRate="@featureClockRate:siouan:liver" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:liver" spec="FilteredAlignment" data="@data_siouan" filter="143-150" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:louse" spec="SiteModel" mutationRate="@featureClockRate:siouan:louse" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:louse" spec="FilteredAlignment" data="@data_siouan" filter="151-156" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:mountain" spec="SiteModel" mutationRate="@featureClockRate:siouan:mountain" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:mountain" spec="FilteredAlignment" data="@data_siouan" filter="157-168" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:name" spec="SiteModel" mutationRate="@featureClockRate:siouan:name" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:name" spec="FilteredAlignment" data="@data_siouan" filter="169-171" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:new" spec="SiteModel" mutationRate="@featureClockRate:siouan:new" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:new" spec="FilteredAlignment" data="@data_siouan" filter="172-175" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:night" spec="SiteModel" mutationRate="@featureClockRate:siouan:night" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:night" spec="FilteredAlignment" data="@data_siouan" filter="176-186" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:nose" spec="SiteModel" mutationRate="@featureClockRate:siouan:nose" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:nose" spec="FilteredAlignment" data="@data_siouan" filter="187-190" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:one" spec="SiteModel" mutationRate="@featureClockRate:siouan:one" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:one" spec="FilteredAlignment" data="@data_siouan" filter="191-196" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:path" spec="SiteModel" mutationRate="@featureClockRate:siouan:path" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:path" spec="FilteredAlignment" data="@data_siouan" filter="197-204" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:person" spec="SiteModel" mutationRate="@featureClockRate:siouan:person" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:person" spec="FilteredAlignment" data="@data_siouan" filter="205-209" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:see" spec="SiteModel" mutationRate="@featureClockRate:siouan:see" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:see" spec="FilteredAlignment" data="@data_siouan" filter="210-216" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:skin" spec="SiteModel" mutationRate="@featureClockRate:siouan:skin" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:skin" spec="FilteredAlignment" data="@data_siouan" filter="217-227" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:star" spec="SiteModel" mutationRate="@featureClockRate:siouan:star" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:star" spec="FilteredAlignment" data="@data_siouan" filter="228-234" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:stone" spec="SiteModel" mutationRate="@featureClockRate:siouan:stone" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:stone" spec="FilteredAlignment" data="@data_siouan" filter="235-244" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:sun" spec="SiteModel" mutationRate="@featureClockRate:siouan:sun" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:sun" spec="FilteredAlignment" data="@data_siouan" filter="245-253" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:tongue" spec="SiteModel" mutationRate="@featureClockRate:siouan:tongue" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:tongue" spec="FilteredAlignment" data="@data_siouan" filter="254-257" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:tooth" spec="SiteModel" mutationRate="@featureClockRate:siouan:tooth" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:tooth" spec="FilteredAlignment" data="@data_siouan" filter="258-261" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:tree" spec="SiteModel" mutationRate="@featureClockRate:siouan:tree" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:tree" spec="FilteredAlignment" data="@data_siouan" filter="262-270" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:two" spec="SiteModel" mutationRate="@featureClockRate:siouan:two" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:two" spec="FilteredAlignment" data="@data_siouan" filter="271-273" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:siouan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.siouan:water" spec="SiteModel" mutationRate="@featureClockRate:siouan:water" proportionInvariant="0" substModel="@covarion.s:siouan" />
+          <data id="feature_data_siouan:water" spec="FilteredAlignment" data="@data_siouan" filter="274-279" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:siouan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:siouan" name="up" />
+      <parameter idref="featureClockRateGammaScale:siouan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:siouan" spec="ScaleOperator" parameter="@covarion_alpha.s:siouan" scaleFactor="0.5" weight="1.0" />
+    <operator id="siouan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:siouan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:siouan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">12 8 7 8 2 6 6 4 5 8 7 4 5 6 10 5 2 5 6 6 7 5 11 2 3 10 3 5 7 4 6 10 6 9 8 3 3 8 2 5</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="siouan.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:siouan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:siouan" />
+      <log idref="covarion_alpha.s:siouan" />
+      <log idref="covarion_s.s:siouan" />
+    </logger>
+    <logger mode="tree" fileName="siouan.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

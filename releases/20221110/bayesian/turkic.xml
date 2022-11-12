@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="ainu1251,bash1264,chuv1255,crim1257,dolg1241,kara1462,kara1464,kara1465,kara1467,kaza1248,khor1269,kirg1245,kumy1244,noga1249,nort2686,nort2690,nort2697,nucl1301,sala1264,shor1247,sout2699,tata1255,turk1303,turk1304,tuvi1240,uigh1240,west2402,yaku1245">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_turkic" name="data_turkic" dataType="integer">
+    <sequence id="language_data_turkic:ainu1251" taxon="ainu1251" value="010000001000100000100100000010000000001000010000000000010000001000000001001000010000001000001000001000010000000001000000????0???????0???????00100000010000?????0???????00100000010000000100000100000000010000000000100000???????0???0010000100000000010001000100000000101000" />
+    <sequence id="language_data_turkic:bash1264" taxon="bash1264" value="0100000010001000010000100000000100000100001000000000001000000000010000100010001000000001000100000100000100000000000100000100001000000001000001000000101000010000010000000010000001000001000001000000000010000001001000000100000001000100000001000000100010000001000001001000" />
+    <sequence id="language_data_turkic:chuv1255" taxon="chuv1255" value="0100000001000100010000100000000100000100001000000000000010000100000000100010001000100001000100000001000100000000000010001000000100000001000001000000001000100000001000000001000000100001000001000100000000010010001000000100000001000100000000010000001000100001000001001100" />
+    <sequence id="language_data_turkic:crim1257" taxon="crim1257" value="01000000001010000100001000000001000001000010000000000010000001000000001000100010000000????010000010000010000000000010000100000100000000010000??????0100000100000000100001000000100000001000001000000000010000000001000000100000001000100001000000000100010000001000001001000" />
+    <sequence id="language_data_turkic:dolg1241" taxon="dolg1241" value="010000001000100001000001000000001000010000100000000000100000010000000010000100100000000100010000010000010000000000010000010000100000000100000??????0001000100000010000000010000001000001000000001000000010000000001000000100000001000100001000000000100010000001000001001000" />
+    <sequence id="language_data_turkic:kara1462" taxon="kara1462" value="0100000010001000010000100000001000000100001000000000001000000000010000100001001000000001000100000100000000100000000100000001000000100001000001000000100000100000000000100010000000010001000000000001000010000000001000000000010001000100001000000000100010000000010001001000" />
+    <sequence id="language_data_turkic:kara1464" taxon="kara1464" value="0100000010001000010000100000000001000????01000000000001000000????????0100010001000000001000100000100000?????????0??????010000???????0???????00010000100000100000010000000010000???????0100000100000000000100000000??????0100000001000100001000000000100010000010000001001000" />
+    <sequence id="language_data_turkic:kara1465" taxon="kara1465" value="010000001000100001000010000?????????01000010000000000010000000001000001000100010000000001001000001000001000000000??????0????001000000001000001000000100000100000010000001000000100000001000001000000000001000000001000000100000001000100001000000000100010000010000001001000" />
+    <sequence id="language_data_turkic:kara1467" taxon="kara1467" value="010000001000100001000010000000010000010000100000000000100000010000000010001000100000000100010000010000010000000000010000100000100000000100000??????0100000100000000010000010000100000001000000000100000011000000001000000100000001000100000001000000100010000001000001001000" />
+    <sequence id="language_data_turkic:kaza1248" taxon="kaza1248" value="0100000010001000010000100000001100000100001000000000001000000100000000100010001000000001000100000100000100000000000100001000001000000001000001000000101000110000000010000010000100000001000001000000000011000000001000000100000001000100001000000000100010000001000001001000" />
+    <sequence id="language_data_turkic:khor1269" taxon="khor1269" value="011111101000100101000?????010100000001000010000000000010010001011010001000100011010000????01011001000001000000100??????01010010011000100111001111100100000?????0110100001000100100000101010001000000000010001100001001000111100001100100001010100110110010001000000001001000" />
+    <sequence id="language_data_turkic:kirg1245" taxon="kirg1245" value="010000001000100001000010000000010000010000100000000000100000000100000010001000100000000100010000010000001000000000010000100000100000000100000??????0001000100000010000000010000100000001000000010000000011000000001000000100000001000100001000000000100010000010000001001000" />
+    <sequence id="language_data_turkic:kumy1244" taxon="kumy1244" value="0100000010000010010000100001000100000100001000000000001000000000100000100010001000000001100100000100000100000000000100000100001000000001000001000000110000100000010000001000000100000001000000000100000010000000001000000100000001000101001010000000100010001000000001001000" />
+    <sequence id="language_data_turkic:noga1249" taxon="noga1249" value="0100000010001000010000100001000100000100001000000000001000000100000000100010001000000001100100000110000100000000000100001000001000000001000001000000110000100000010000001000000100000001000001000100000010000000001000000100001001000101000000001000100010001000000001001000" />
+    <sequence id="language_data_turkic:nort2686" taxon="nort2686" value="010000001000100001010010000000100100010000100000000000100000000010000010001000100000000100010000010000001000000000010000100000100000000100000100000010000010000001000000001000010000000100000??????????010000000001000000100000001000100001000000000100010000001000001001010" />
+    <sequence id="language_data_turkic:nort2690" taxon="nort2690" value="0100000010001000010000100000000101000100001000000000001000000000100000100010001100000001000101000100000100000000000100001000001000000001000001000000100000100010010000001010000100000001000001000000000000000010001000000100000001000100001000000000100010001000000001001000" />
+    <sequence id="language_data_turkic:nort2697" taxon="nort2697" value="0100000010001000010000100000011000010100001010001000001000100001100000100010001000000001000100000100100100000100001000001000011000000010000101000000110000100000110000001000000100000001000001010000000001100010001000000100000001000101000010000000100010001010000001001000" />
+    <sequence id="language_data_turkic:nucl1301" taxon="nucl1301" value="0100000010001010010000101000010001000100000000100010000000110001000100101000100100010001000100010100010100000001001000101000001000000010000001000010000010110000110000001000000100000001001000000000101010000000101000010100100001000100101000000000110010000000001001001000" />
+    <sequence id="language_data_turkic:sala1264" taxon="sala1264" value="000010001000100001000010000100000000010000100000000000100000010000000010001000100000000100010000001000000010000000010100100000100000000100000??????0100000100000010000001000000100000001000001000000000010000000000010100100000001000100001000000000100010000000100001001000" />
+    <sequence id="language_data_turkic:shor1247" taxon="shor1247" value="010000001000100001000010000000100000000100000100000000101000000001000010000100100000000100010000010000000001000000010000100000000010000100000??????0100000100000000001001000000100000001000001000000000010000000001000000100000001000100001000000000100010000001000001001000" />
+    <sequence id="language_data_turkic:sout2699" taxon="sout2699" value="010010001000100001000?????0000000100010000100000000000100000000010000010001000???????0????0?????01000001000000000??????01000010000000???????0??????010000010100001000000000100010000000100000100000000001000000000??????010000000???01000000010000001000???01010000001001000" />
+    <sequence id="language_data_turkic:tata1255" taxon="tata1255" value="0100000010001000010000100000001100000100001000000100101000000001100000100010001010000001000100000100000100000000000100001000001000000001000001000000101000010000010000000011000100000001000001000100000011000010001000000100000001000100000001000000100010000011000001001000" />
+    <sequence id="language_data_turkic:turk1303" taxon="turk1303" value="010000001000????0100001000000100000001000010000000000010000000001000001000100010000000????01000001000001000000000??????010000???????0???????0100000010000010000001000000100000010000000100000??????????000001000001000000100000001000100001000000000100010000010000001001000" />
+    <sequence id="language_data_turkic:turk1304" taxon="turk1304" value="0??????0???0????01000010000100010000010000001000001000??????0001000010100011001000001001000101000100000?????????0??????0100000100000000100000??????0100000000100100000001000000100000001000101000000000001000000001000000100000101010????01000000000???0???00000000101001001" />
+    <sequence id="language_data_turkic:tuvi1240" taxon="tuvi1240" value="0100000010001000010000100000001000000100001000000000001000000000010000100001001000000001000100000100000000100000000100000001000000100001000001000000100000100000100000000000010000010001000000000001000010000000001000000000010001000100001000000000100010000000010001001000" />
+    <sequence id="language_data_turkic:uigh1240" taxon="uigh1240" value="01000000???01000010000000100000001000100100000010000001000000001000000100010001000000001000100000100000000001000000100001000001000000001000001000000100000000010010000000010000100000001000000000000010001000000001000000100000001000100000001000000???010001000000001001000" />
+    <sequence id="language_data_turkic:west2402" taxon="west2402" value="0010000010001000010000100000000000100100001000000001001000000100000000100010001000000000010100000000100000100000000100001000000000010001000001000000100000100000010000000000010000001001000001000000000010000000001000000100000001000100001000000000100010001000000001001000" />
+    <sequence id="language_data_turkic:yaku1245" taxon="yaku1245" value="0100000010001000010000010000000010000100001000000000001000000100000000100001001000000001000100000100000101000000000100000100001000000001000001000000000100100000000010000010000100000001000000000010000010000000001000000100000001000100001000000000100010000001000001001000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:turkic:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:turkic" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:turkic" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:turkic" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:turkic" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(chuv1255,(turk1303,(dolg1241,yaku1245),(uigh1240,(nort2690,sout2699)),(sala1264,(nort2697,nucl1301,(khor1269,turk1304))),(nort2686,(kara1462,tuvi1240),(shor1247,(ainu1251,west2402))),(kirg1245,(bash1264,tata1255),(kara1467,kaza1248,noga1249),(crim1257,kara1464,(kara1465,kumy1244)))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:turkic" name="distribution">
+          <input id="featureClockRateCompound:turkic" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:turkic:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:turkic" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:turkic" beta="@featureClockRateGammaScale:turkic" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:turkic" name="distribution" x="@featureClockRateGammaScale:turkic">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:turkic" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:turkic" name="distribution" x="@covarion_alpha.s:turkic">
+          <Uniform id="CovAlphaUniform:turkic" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:turkic" name="distribution" x="@covarion_s.s:turkic">
+          <Gamma id="Gamma.0:turkic" name="distr">
+            <parameter id="covarion_switch_gamma_param1:turkic" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:turkic" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:turkic:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:1pl" spec="SiteModel" mutationRate="@featureClockRate:turkic:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:turkic" spec="BinaryCovarion" alpha="@covarion_alpha.s:turkic" switchRate="@covarion_s.s:turkic">
+              <vfrequencies id="turkic:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.84 0.16</vfrequencies>
+              <parameter id="turkic:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="turkic:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_turkic:1pl" spec="FilteredAlignment" data="@data_turkic" filter="1-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:1sg" spec="SiteModel" mutationRate="@featureClockRate:turkic:1sg" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:1sg" spec="FilteredAlignment" data="@data_turkic" filter="8-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:2sg" spec="SiteModel" mutationRate="@featureClockRate:turkic:2sg" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:2sg" spec="FilteredAlignment" data="@data_turkic" filter="12-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:blood" spec="SiteModel" mutationRate="@featureClockRate:turkic:blood" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:blood" spec="FilteredAlignment" data="@data_turkic" filter="17-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:bone" spec="SiteModel" mutationRate="@featureClockRate:turkic:bone" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:bone" spec="FilteredAlignment" data="@data_turkic" filter="21-26" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:breast" spec="SiteModel" mutationRate="@featureClockRate:turkic:breast" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:breast" spec="FilteredAlignment" data="@data_turkic" filter="27-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:come" spec="SiteModel" mutationRate="@featureClockRate:turkic:come" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:come" spec="FilteredAlignment" data="@data_turkic" filter="37-41" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:die" spec="SiteModel" mutationRate="@featureClockRate:turkic:die" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:die" spec="FilteredAlignment" data="@data_turkic" filter="42-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:dog" spec="SiteModel" mutationRate="@featureClockRate:turkic:dog" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:dog" spec="FilteredAlignment" data="@data_turkic" filter="54-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:drink" spec="SiteModel" mutationRate="@featureClockRate:turkic:drink" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:drink" spec="FilteredAlignment" data="@data_turkic" filter="61-69" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:ear" spec="SiteModel" mutationRate="@featureClockRate:turkic:ear" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:ear" spec="FilteredAlignment" data="@data_turkic" filter="70-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:eye" spec="SiteModel" mutationRate="@featureClockRate:turkic:eye" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:eye" spec="FilteredAlignment" data="@data_turkic" filter="74-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:fire" spec="SiteModel" mutationRate="@featureClockRate:turkic:fire" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:fire" spec="FilteredAlignment" data="@data_turkic" filter="78-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:fish" spec="SiteModel" mutationRate="@featureClockRate:turkic:fish" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:fish" spec="FilteredAlignment" data="@data_turkic" filter="86-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:full" spec="SiteModel" mutationRate="@featureClockRate:turkic:full" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:full" spec="FilteredAlignment" data="@data_turkic" filter="91-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:hand" spec="SiteModel" mutationRate="@featureClockRate:turkic:hand" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:hand" spec="FilteredAlignment" data="@data_turkic" filter="97-102" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:hear" spec="SiteModel" mutationRate="@featureClockRate:turkic:hear" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:hear" spec="FilteredAlignment" data="@data_turkic" filter="103-112" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:horn" spec="SiteModel" mutationRate="@featureClockRate:turkic:horn" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:horn" spec="FilteredAlignment" data="@data_turkic" filter="113-119" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:knee" spec="SiteModel" mutationRate="@featureClockRate:turkic:knee" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:knee" spec="FilteredAlignment" data="@data_turkic" filter="120-124" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:leaf" spec="SiteModel" mutationRate="@featureClockRate:turkic:leaf" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:leaf" spec="FilteredAlignment" data="@data_turkic" filter="125-132" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:liver" spec="SiteModel" mutationRate="@featureClockRate:turkic:liver" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:liver" spec="FilteredAlignment" data="@data_turkic" filter="133-140" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:louse" spec="SiteModel" mutationRate="@featureClockRate:turkic:louse" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:louse" spec="FilteredAlignment" data="@data_turkic" filter="141-147" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:mountain" spec="SiteModel" mutationRate="@featureClockRate:turkic:mountain" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:mountain" spec="FilteredAlignment" data="@data_turkic" filter="148-153" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:name" spec="SiteModel" mutationRate="@featureClockRate:turkic:name" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:name" spec="FilteredAlignment" data="@data_turkic" filter="154-159" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:new" spec="SiteModel" mutationRate="@featureClockRate:turkic:new" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:new" spec="FilteredAlignment" data="@data_turkic" filter="160-167" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:night" spec="SiteModel" mutationRate="@featureClockRate:turkic:night" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:night" spec="FilteredAlignment" data="@data_turkic" filter="168-174" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:nose" spec="SiteModel" mutationRate="@featureClockRate:turkic:nose" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:nose" spec="FilteredAlignment" data="@data_turkic" filter="175-182" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:one" spec="SiteModel" mutationRate="@featureClockRate:turkic:one" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:one" spec="FilteredAlignment" data="@data_turkic" filter="183-188" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:path" spec="SiteModel" mutationRate="@featureClockRate:turkic:path" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:path" spec="FilteredAlignment" data="@data_turkic" filter="189-199" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:person" spec="SiteModel" mutationRate="@featureClockRate:turkic:person" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:person" spec="FilteredAlignment" data="@data_turkic" filter="200-209" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:see" spec="SiteModel" mutationRate="@featureClockRate:turkic:see" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:see" spec="FilteredAlignment" data="@data_turkic" filter="210-216" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:skin" spec="SiteModel" mutationRate="@featureClockRate:turkic:skin" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:skin" spec="FilteredAlignment" data="@data_turkic" filter="217-224" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:star" spec="SiteModel" mutationRate="@featureClockRate:turkic:star" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:star" spec="FilteredAlignment" data="@data_turkic" filter="225-228" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:stone" spec="SiteModel" mutationRate="@featureClockRate:turkic:stone" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:stone" spec="FilteredAlignment" data="@data_turkic" filter="229-233" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:sun" spec="SiteModel" mutationRate="@featureClockRate:turkic:sun" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:sun" spec="FilteredAlignment" data="@data_turkic" filter="234-243" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:tongue" spec="SiteModel" mutationRate="@featureClockRate:turkic:tongue" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:tongue" spec="FilteredAlignment" data="@data_turkic" filter="244-247" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:tooth" spec="SiteModel" mutationRate="@featureClockRate:turkic:tooth" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:tooth" spec="FilteredAlignment" data="@data_turkic" filter="248-251" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:tree" spec="SiteModel" mutationRate="@featureClockRate:turkic:tree" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:tree" spec="FilteredAlignment" data="@data_turkic" filter="252-260" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:two" spec="SiteModel" mutationRate="@featureClockRate:turkic:two" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:two" spec="FilteredAlignment" data="@data_turkic" filter="261-263" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:turkic:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.turkic:water" spec="SiteModel" mutationRate="@featureClockRate:turkic:water" proportionInvariant="0" substModel="@covarion.s:turkic" />
+          <data id="feature_data_turkic:water" spec="FilteredAlignment" data="@data_turkic" filter="264-268" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:turkic" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:turkic" name="up" />
+      <parameter idref="featureClockRateGammaScale:turkic" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:turkic" spec="ScaleOperator" parameter="@covarion_alpha.s:turkic" scaleFactor="0.5" weight="1.0" />
+    <operator id="turkic:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:turkic" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:turkic:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">6 3 4 3 5 9 4 11 6 8 3 3 7 4 5 5 9 6 4 7 7 6 5 5 7 6 7 5 10 9 6 7 3 4 9 3 3 8 2 4</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="turkic.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:turkic:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:turkic" />
+      <log idref="covarion_alpha.s:turkic" />
+      <log idref="covarion_s.s:turkic" />
+    </logger>
+    <logger mode="tree" fileName="turkic.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

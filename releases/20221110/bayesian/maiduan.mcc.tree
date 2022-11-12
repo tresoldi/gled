@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Nisenan
+			NortheastMaidu
+			;
+End;
+Begin trees;
+	Translate
+		   1 Nisenan,
+		   2 NortheastMaidu
+;
+tree TREE1 = (1[&height=0.0,length=3.0727690647481976,length_95%_HPD={0.4899,6.569},length_median=2.7524,length_range={0.3606,10.6911},rate=1.0070010391686686,rate_95%_HPD={0.8278,1.1414},rate_median=1.0095,rate_range={0.5479,1.2531}]:3.0727690647481976,2[&height=0.0,length=3.0727690647481976,length_95%_HPD={0.4899,6.569},length_median=2.7524,length_range={0.3606,10.6911},rate=0.9932213429256629,rate_95%_HPD={0.8278,1.1414},rate_median=1.0058,rate_range={0.5479,1.2531}]:3.0727690647481976)[&CAheight_95%_HPD={0.4899,6.569},CAheight_mean=3.0727690647481976,CAheight_median=2.7524,CAheight_range={0.3606,10.6911},height=3.0727690647481976,height_95%_HPD={0.4899,6.569},height_median=2.7524,height_range={0.3606,10.6911},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

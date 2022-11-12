@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="ayac1239,caja1238,cald1236,cana1262,chac1250,chim1302,chiq1249,coro1247,cusc1236,hual1241,huay1240,huay1241,imba1240,inga1252,jauj1238,jung1240,lamb1276,loja1235,napo1242,nort2973,nort2976,nort2980,paca1245,pana1306,puno1238,sala1272,sanm1289,sant1432,sout2990,sout2991,sout2992,tena1240,yauy1235">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_quechuan" name="data_quechuan" dataType="integer">
+    <sequence id="language_data_quechuan:ayac1239" taxon="ayac1239" value="01001000010001000100011010000100001001000100000100000010010000000001000000001001000001010001100001001100010011000000100001001000000001000010" />
+    <sequence id="language_data_quechuan:caja1238" taxon="caja1238" value="0100????010001000100010010000????01001000010000100000???010000000001000000001001000000010000100001001000010010000000010001000100000000100010" />
+    <sequence id="language_data_quechuan:cald1236" taxon="cald1236" value="01001001010001010110010010100001101000100010000010100100010000010001000100001001000000010000100001101000010010000100110001000110000000100010" />
+    <sequence id="language_data_quechuan:cana1262" taxon="cana1262" value="01001000010001000110010010000101001000100110000010000101010000010001000000001001000000010000100001101000010010010000110001000010000000100010" />
+    <sequence id="language_data_quechuan:chac1250" taxon="chac1250" value="0100100001000???001001001000010000??01000?????01000000100100000000010000000010010000010100001000010011010100???????0100001000011001000010010" />
+    <sequence id="language_data_quechuan:chim1302" taxon="chim1302" value="01001000010101000110010011000101001000100010100010000100010100110001010100001001000000010000100001101000010010010000100001000110000000100010" />
+    <sequence id="language_data_quechuan:chiq1249" taxon="chiq1249" value="010010000???010001000??010000????01001000?????0?????0???01100000100????????010000100000100001000010010000100???????010000100????????01000010" />
+    <sequence id="language_data_quechuan:coro1247" taxon="coro1247" value="0100????001001000100011010000????01001000010000100010???010000000000100000001001000100010000100001001000010010000000010001001000000001000010" />
+    <sequence id="language_data_quechuan:cusc1236" taxon="cusc1236" value="0100????010001000100010010000????01001000100000100000???010000000001000000001001000001010000100001001000010000100000100001001000000100010001" />
+    <sequence id="language_data_quechuan:hual1241" taxon="hual1241" value="0100????010001000100011010000????01101000010000100000???010000000001000000001000100100010000100001001000010001000010100001000100000001000010" />
+    <sequence id="language_data_quechuan:huay1240" taxon="huay1240" value="010010000???01100100011010000100001001000010000001000010010001000001000000001000001100010000100001001000010001000000110001000100100001100010" />
+    <sequence id="language_data_quechuan:huay1241" taxon="huay1241" value="01000100010001000001010010000100001001000010000100000010010000000001000000001001000000010001000001001000001001000000100001001000000001000010" />
+    <sequence id="language_data_quechuan:imba1240" taxon="imba1240" value="01001001010001010100010010000100101000100010000010000100010000010001000100001001000000010000100001101000010010010000100001000110000000110010" />
+    <sequence id="language_data_quechuan:inga1252" taxon="inga1252" value="01001000010001000100010010000100001000100010000010000100010000000000000101001001000000010000010001000100010000010000100001001000000000010010" />
+    <sequence id="language_data_quechuan:jauj1238" taxon="jauj1238" value="01001000010001000100010010000100001001000010000100000010010000000001000000001001000000010001000001001000001001000000100001001000000001000010" />
+    <sequence id="language_data_quechuan:jung1240" taxon="jung1240" value="0100100001000100010001001000010000100010001000001000010001000001000????????010010000000100000100011001000100???????0100001001000000000100010" />
+    <sequence id="language_data_quechuan:lamb1276" taxon="lamb1276" value="01001000010001000010010010000????01001000010000100000010000010000000100000001001000000011000100001001000010001000000010001000100000000100010" />
+    <sequence id="language_data_quechuan:loja1235" taxon="loja1235" value="01001000010101000100010010000000101000100010000010000100010000000001000000001001000000010000100000101000010010010000100001000010000000010010" />
+    <sequence id="language_data_quechuan:napo1242" taxon="napo1242" value="01001000010001000???00101000001000??0???0?????001000010001000000000????????010010000000100000100010010000100???????0????0100????????01000010" />
+    <sequence id="language_data_quechuan:nort2973" taxon="nort2973" value="01001000010001000100010010000100001000100010000010000100010000010001000000001001000000010000100000101000010010000000100001000010000000100010" />
+    <sequence id="language_data_quechuan:nort2976" taxon="nort2976" value="0100????010001000100010010000????01001000010000100000???010000000001000000001001000001010000100001001000010001000000100001001000000001000001" />
+    <sequence id="language_data_quechuan:nort2980" taxon="nort2980" value="01001000010001000100010010010100001001000010000100000010001000000101000100001000000100010101000001001000010001001000100001001100000001000010" />
+    <sequence id="language_data_quechuan:paca1245" taxon="paca1245" value="010010000100010001000100100001000010010000100001000000100010000000000000100010000000100001010000010010000100???????0001001000100000001000010" />
+    <sequence id="language_data_quechuan:pana1306" taxon="pana1306" value="0??01000010001000100001010000????0100???0010000?????00100?????????010000000001001001000100001000010010000100???????0100001000010000001000010" />
+    <sequence id="language_data_quechuan:puno1238" taxon="puno1238" value="0100????010001000100010010000????01001000010000100000???010000000001000000001001000001010000100001001000010001100000110001001000010001010001" />
+    <sequence id="language_data_quechuan:sala1272" taxon="sala1272" value="01001000010001000010010010100100101000100010000010000100010000010001000000001001000000010000100001101000010010000000100001000010000000100010" />
+    <sequence id="language_data_quechuan:sanm1289" taxon="sanm1289" value="010010000???01000100010010000100001001000110010010000010010000000001000000001001000000010000100001000100010010000000100000100001000000010010" />
+    <sequence id="language_data_quechuan:sant1432" taxon="sant1432" value="010010000???010000100??010000????01001000?????0?????0???01000000000????????010010000000100001000010000100100???????010000100????????00100010" />
+    <sequence id="language_data_quechuan:sout2990" taxon="sout2990" value="01101010010001000100010010000100001000110010000010000100010000000001001000101001000000010000010101001000010000010000100001000001000000010010" />
+    <sequence id="language_data_quechuan:sout2991" taxon="sout2991" value="0100????010001000100010010000????01001000101000100000???010000000001000000001001000001010000001001001000010001100000100001001000000001010010" />
+    <sequence id="language_data_quechuan:sout2992" taxon="sout2992" value="0100????010001000100011010000????01001000010000100000???001000000001100000001000100100010000100001001000010001000000100101001000000001000010" />
+    <sequence id="language_data_quechuan:tena1240" taxon="tena1240" value="0100????010001000100001010000????01000010001000010000???010000000001000000001001000000010000100001001000010000010000100001000010000000100010" />
+    <sequence id="language_data_quechuan:yauy1235" taxon="yauy1235" value="01001000010001000100010010000????01001000010000100000???010000000001000000001001000000010001000001001100011001000000100001000000100001001010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,breast,die,dog,drink,fire,fish,full,horn,knee,leaf,liver,louse,mountain,new,night,one,path,person,see,skin,star,sun,tongue,tree,two,water">
+        <parameter id="featureClockRate:quechuan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:quechuan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:quechuan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:quechuan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:quechuan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((paca1245,(nort2980,(huay1241,jauj1238),(chiq1249,hual1241,pana1306),(coro1247,huay1240,sout2992))),(yauy1235,(caja1238,lamb1276),((chac1250,sanm1289),(ayac1239,(cusc1236,puno1238),(nort2976,sant1432,sout2991),((cald1236,chim1302,sala1272),(cana1262,loja1235,(imba1240,((inga1252,jung1240),(napo1242,tena1240,(nort2973,sout2990))))))))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:quechuan" name="distribution">
+          <input id="featureClockRateCompound:quechuan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,breast,die,dog,drink,fire,fish,full,horn,knee,leaf,liver,louse,mountain,new,night,one,path,person,see,skin,star,sun,tongue,tree,two,water">
+              <var idref="featureClockRate:quechuan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:quechuan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:quechuan" beta="@featureClockRateGammaScale:quechuan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:quechuan" name="distribution" x="@featureClockRateGammaScale:quechuan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:quechuan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:quechuan" name="distribution" x="@covarion_alpha.s:quechuan">
+          <Uniform id="CovAlphaUniform:quechuan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:quechuan" name="distribution" x="@covarion_s.s:quechuan">
+          <Gamma id="Gamma.0:quechuan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:quechuan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:quechuan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:quechuan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:1pl" spec="SiteModel" mutationRate="@featureClockRate:quechuan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:quechuan" spec="BinaryCovarion" alpha="@covarion_alpha.s:quechuan" switchRate="@covarion_s.s:quechuan">
+              <vfrequencies id="quechuan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.79 0.21</vfrequencies>
+              <parameter id="quechuan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="quechuan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_quechuan:1pl" spec="FilteredAlignment" data="@data_quechuan" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:1sg" spec="SiteModel" mutationRate="@featureClockRate:quechuan:1sg" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:1sg" spec="FilteredAlignment" data="@data_quechuan" filter="4-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:breast" spec="SiteModel" mutationRate="@featureClockRate:quechuan:breast" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:breast" spec="FilteredAlignment" data="@data_quechuan" filter="9-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:die" spec="SiteModel" mutationRate="@featureClockRate:quechuan:die" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:die" spec="FilteredAlignment" data="@data_quechuan" filter="13-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:dog" spec="SiteModel" mutationRate="@featureClockRate:quechuan:dog" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:dog" spec="FilteredAlignment" data="@data_quechuan" filter="17-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:drink" spec="SiteModel" mutationRate="@featureClockRate:quechuan:drink" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:drink" spec="FilteredAlignment" data="@data_quechuan" filter="21-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:fire" spec="SiteModel" mutationRate="@featureClockRate:quechuan:fire" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:fire" spec="FilteredAlignment" data="@data_quechuan" filter="24-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:fish" spec="SiteModel" mutationRate="@featureClockRate:quechuan:fish" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:fish" spec="FilteredAlignment" data="@data_quechuan" filter="29-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:full" spec="SiteModel" mutationRate="@featureClockRate:quechuan:full" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:full" spec="FilteredAlignment" data="@data_quechuan" filter="34-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:horn" spec="SiteModel" mutationRate="@featureClockRate:quechuan:horn" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:horn" spec="FilteredAlignment" data="@data_quechuan" filter="37-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:knee" spec="SiteModel" mutationRate="@featureClockRate:quechuan:knee" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:knee" spec="FilteredAlignment" data="@data_quechuan" filter="41-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:leaf" spec="SiteModel" mutationRate="@featureClockRate:quechuan:leaf" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:leaf" spec="FilteredAlignment" data="@data_quechuan" filter="47-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:liver" spec="SiteModel" mutationRate="@featureClockRate:quechuan:liver" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:liver" spec="FilteredAlignment" data="@data_quechuan" filter="53-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:louse" spec="SiteModel" mutationRate="@featureClockRate:quechuan:louse" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:louse" spec="FilteredAlignment" data="@data_quechuan" filter="57-66" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:mountain" spec="SiteModel" mutationRate="@featureClockRate:quechuan:mountain" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:mountain" spec="FilteredAlignment" data="@data_quechuan" filter="67-75" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:new" spec="SiteModel" mutationRate="@featureClockRate:quechuan:new" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:new" spec="FilteredAlignment" data="@data_quechuan" filter="76-78" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:night" spec="SiteModel" mutationRate="@featureClockRate:quechuan:night" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:night" spec="FilteredAlignment" data="@data_quechuan" filter="79-86" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:one" spec="SiteModel" mutationRate="@featureClockRate:quechuan:one" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:one" spec="FilteredAlignment" data="@data_quechuan" filter="87-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:path" spec="SiteModel" mutationRate="@featureClockRate:quechuan:path" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:path" spec="FilteredAlignment" data="@data_quechuan" filter="91-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:person" spec="SiteModel" mutationRate="@featureClockRate:quechuan:person" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:person" spec="FilteredAlignment" data="@data_quechuan" filter="97-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:see" spec="SiteModel" mutationRate="@featureClockRate:quechuan:see" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:see" spec="FilteredAlignment" data="@data_quechuan" filter="100-104" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:skin" spec="SiteModel" mutationRate="@featureClockRate:quechuan:skin" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:skin" spec="FilteredAlignment" data="@data_quechuan" filter="105-107" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:star" spec="SiteModel" mutationRate="@featureClockRate:quechuan:star" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:star" spec="FilteredAlignment" data="@data_quechuan" filter="108-115" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:sun" spec="SiteModel" mutationRate="@featureClockRate:quechuan:sun" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:sun" spec="FilteredAlignment" data="@data_quechuan" filter="116-120" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:tongue" spec="SiteModel" mutationRate="@featureClockRate:quechuan:tongue" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:tongue" spec="FilteredAlignment" data="@data_quechuan" filter="121-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:tree" spec="SiteModel" mutationRate="@featureClockRate:quechuan:tree" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:tree" spec="FilteredAlignment" data="@data_quechuan" filter="124-132" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:two" spec="SiteModel" mutationRate="@featureClockRate:quechuan:two" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:two" spec="FilteredAlignment" data="@data_quechuan" filter="133-137" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:quechuan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.quechuan:water" spec="SiteModel" mutationRate="@featureClockRate:quechuan:water" proportionInvariant="0" substModel="@covarion.s:quechuan" />
+          <data id="feature_data_quechuan:water" spec="FilteredAlignment" data="@data_quechuan" filter="138-140" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:quechuan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:quechuan" name="up" />
+      <parameter idref="featureClockRateGammaScale:quechuan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:quechuan" spec="ScaleOperator" parameter="@covarion_alpha.s:quechuan" scaleFactor="0.5" weight="1.0" />
+    <operator id="quechuan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:quechuan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,breast,die,dog,drink,fire,fish,full,horn,knee,leaf,liver,louse,mountain,new,night,one,path,person,see,skin,star,sun,tongue,tree,two,water">
+        <parameter idref="featureClockRate:quechuan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="28" estimate="false">2 4 3 3 3 2 4 4 2 3 5 5 3 9 8 2 7 3 5 2 4 2 7 4 2 8 4 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="quechuan.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,breast,die,dog,drink,fire,fish,full,horn,knee,leaf,liver,louse,mountain,new,night,one,path,person,see,skin,star,sun,tongue,tree,two,water">
+        <log idref="featureClockRate:quechuan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:quechuan" />
+      <log idref="covarion_alpha.s:quechuan" />
+      <log idref="covarion_s.s:quechuan" />
+    </logger>
+    <logger mode="tree" fileName="quechuan.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

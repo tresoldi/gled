@@ -1,0 +1,18 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=3;
+		Taxlabels
+			AmaPapuaNewGuinea
+			Nakwi
+			Owiniga
+			;
+End;
+Begin trees;
+	Translate
+		   1 AmaPapuaNewGuinea,
+		   2 Nakwi,
+		   3 Owiniga
+;
+tree TREE1 = ((1[&CAheight_95%_HPD={0.0,9.999999999976694E-5},CAheight_mean=5.515587529997953E-6,CAheight_median=0.0,CAheight_range={0.0,1.0000000000065512E-4},height=5.515587529997953E-6,height_95%_HPD={0.0,9.999999999976694E-5},height_median=0.0,height_range={0.0,1.0000000000065512E-4},length=2.602591846522788,length_95%_HPD={0.4528,6.810800000000001},length_median=2.1917,length_range={0.4528,13.022499999999999},rate=0.9942126298960767,rate_95%_HPD={0.5916,1.7608},rate_median=1.01,rate_range={0.3222,1.7608}]:2.602591846522788,2[&CAheight_95%_HPD={0.0,9.999999999976694E-5},CAheight_mean=5.515587529997953E-6,CAheight_median=0.0,CAheight_range={0.0,1.0000000000065512E-4},height=5.515587529997953E-6,height_95%_HPD={0.0,9.999999999976694E-5},height_median=0.0,height_range={0.0,1.0000000000065512E-4},length=2.602591846522788,length_95%_HPD={0.4528,6.810800000000001},length_median=2.1917,length_range={0.4528,13.022499999999999},rate=0.93726362909672,rate_95%_HPD={0.5705,1.4516},rate_median=0.9736,rate_range={0.3222,1.7844}]:2.602591846522788)[&CAheight_95%_HPD={0.4528,6.810800000000001},CAheight_mean=2.602597362110318,CAheight_median=2.1917,CAheight_range={0.4528,13.022499999999999},height=2.602597362110318,height_95%_HPD={0.4528,6.810800000000001},height_median=2.1917,height_range={0.4528,13.022499999999999},length=2.0502504396482664,length_95%_HPD={0.3567,5.3653},length_median=1.7266,length_range={0.3567,10.2587},posterior=1.0,rate=0.9650943245403625,rate_95%_HPD={0.3222,1.4516},rate_median=0.9736,rate_range={0.3222,1.7844}]:2.0502504396483268,3[&CAheight_95%_HPD={0.0,9.999999999976694E-5},CAheight_mean=1.2789768185509158E-5,CAheight_median=0.0,CAheight_range={0.0,9.999999999998899E-5},height=1.2789768185509158E-5,height_95%_HPD={0.0,9.999999999976694E-5},height_median=0.0,height_range={0.0,9.999999999998899E-5},length=4.652835011990468,length_95%_HPD={0.8094,12.1761},length_median=3.9183,length_range={0.8094,23.2812},rate=0.9629880895283724,rate_95%_HPD={0.3222,1.4113},rate_median=0.9877,rate_range={0.3222,1.7608}]:4.652835011990459)[&CAheight_95%_HPD={0.8095,12.176100000000002},CAheight_mean=4.652847801758645,CAheight_median=3.9183,CAheight_range={0.8095,23.2812},height=4.652847801758645,height_95%_HPD={0.8095,12.176100000000002},height_median=3.9183,height_range={0.8095,23.2812},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

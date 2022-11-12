@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="amap1240" />
+    <taxon id="nakw1240" />
+    <taxon id="owin1240" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_leftmay" name="data_leftmay" dataType="integer">
+    <sequence id="language_data_leftmay:amap1240" taxon="amap1240" value="0??0100100010010010000100010010001000100010000100010001001001000100100010001001000100100010010000100010010000100" />
+    <sequence id="language_data_leftmay:nakw1240" taxon="nakw1240" value="01001000100100010010100100??001001100010001010010001001000100100??0010001001000100010010010001010010010001010010" />
+    <sequence id="language_data_leftmay:owin1240" taxon="owin1240" value="0010010001001010000100001001000100010001000100001000100101000010010001000100100010??0001001000100001001000100001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,blood,bone,breast,come,dog,drink,ear,eye,fish,hand,knee,leaf,liver,louse,mountain,new,night,nose,one,path,see,star,stone,sun,tongue,tooth,two,water">
+        <parameter id="featureClockRate:leftmay:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:leftmay" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:leftmay" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:leftmay" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:leftmay" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(owin1240,(amap1240,nakw1240));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:leftmay" name="distribution">
+          <input id="featureClockRateCompound:leftmay" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,blood,bone,breast,come,dog,drink,ear,eye,fish,hand,knee,leaf,liver,louse,mountain,new,night,nose,one,path,see,star,stone,sun,tongue,tooth,two,water">
+              <var idref="featureClockRate:leftmay:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:leftmay" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:leftmay" beta="@featureClockRateGammaScale:leftmay" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:leftmay" name="distribution" x="@featureClockRateGammaScale:leftmay">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:leftmay" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:leftmay" name="distribution" x="@covarion_alpha.s:leftmay">
+          <Uniform id="CovAlphaUniform:leftmay" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:leftmay" name="distribution" x="@covarion_s.s:leftmay">
+          <Gamma id="Gamma.0:leftmay" name="distr">
+            <parameter id="covarion_switch_gamma_param1:leftmay" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:leftmay" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:leftmay:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:1pl" spec="SiteModel" mutationRate="@featureClockRate:leftmay:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:leftmay" spec="BinaryCovarion" alpha="@covarion_alpha.s:leftmay" switchRate="@covarion_s.s:leftmay">
+              <vfrequencies id="leftmay:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.73 0.27</vfrequencies>
+              <parameter id="leftmay:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="leftmay:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_leftmay:1pl" spec="FilteredAlignment" data="@data_leftmay" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:1sg" spec="SiteModel" mutationRate="@featureClockRate:leftmay:1sg" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:1sg" spec="FilteredAlignment" data="@data_leftmay" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:blood" spec="SiteModel" mutationRate="@featureClockRate:leftmay:blood" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:blood" spec="FilteredAlignment" data="@data_leftmay" filter="7-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:bone" spec="SiteModel" mutationRate="@featureClockRate:leftmay:bone" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:bone" spec="FilteredAlignment" data="@data_leftmay" filter="11-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:breast" spec="SiteModel" mutationRate="@featureClockRate:leftmay:breast" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:breast" spec="FilteredAlignment" data="@data_leftmay" filter="14-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:come" spec="SiteModel" mutationRate="@featureClockRate:leftmay:come" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:come" spec="FilteredAlignment" data="@data_leftmay" filter="17-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:dog" spec="SiteModel" mutationRate="@featureClockRate:leftmay:dog" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:dog" spec="FilteredAlignment" data="@data_leftmay" filter="22-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:drink" spec="SiteModel" mutationRate="@featureClockRate:leftmay:drink" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:drink" spec="FilteredAlignment" data="@data_leftmay" filter="26-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:ear" spec="SiteModel" mutationRate="@featureClockRate:leftmay:ear" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:ear" spec="FilteredAlignment" data="@data_leftmay" filter="29-32" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:eye" spec="SiteModel" mutationRate="@featureClockRate:leftmay:eye" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:eye" spec="FilteredAlignment" data="@data_leftmay" filter="33-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:fish" spec="SiteModel" mutationRate="@featureClockRate:leftmay:fish" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:fish" spec="FilteredAlignment" data="@data_leftmay" filter="37-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:hand" spec="SiteModel" mutationRate="@featureClockRate:leftmay:hand" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:hand" spec="FilteredAlignment" data="@data_leftmay" filter="41-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:knee" spec="SiteModel" mutationRate="@featureClockRate:leftmay:knee" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:knee" spec="FilteredAlignment" data="@data_leftmay" filter="46-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:leaf" spec="SiteModel" mutationRate="@featureClockRate:leftmay:leaf" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:leaf" spec="FilteredAlignment" data="@data_leftmay" filter="50-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:liver" spec="SiteModel" mutationRate="@featureClockRate:leftmay:liver" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:liver" spec="FilteredAlignment" data="@data_leftmay" filter="54-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:louse" spec="SiteModel" mutationRate="@featureClockRate:leftmay:louse" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:louse" spec="FilteredAlignment" data="@data_leftmay" filter="57-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:mountain" spec="SiteModel" mutationRate="@featureClockRate:leftmay:mountain" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:mountain" spec="FilteredAlignment" data="@data_leftmay" filter="60-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:new" spec="SiteModel" mutationRate="@featureClockRate:leftmay:new" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:new" spec="FilteredAlignment" data="@data_leftmay" filter="64-66" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:night" spec="SiteModel" mutationRate="@featureClockRate:leftmay:night" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:night" spec="FilteredAlignment" data="@data_leftmay" filter="67-70" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:nose" spec="SiteModel" mutationRate="@featureClockRate:leftmay:nose" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:nose" spec="FilteredAlignment" data="@data_leftmay" filter="71-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:one" spec="SiteModel" mutationRate="@featureClockRate:leftmay:one" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:one" spec="FilteredAlignment" data="@data_leftmay" filter="75-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:path" spec="SiteModel" mutationRate="@featureClockRate:leftmay:path" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:path" spec="FilteredAlignment" data="@data_leftmay" filter="78-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:see" spec="SiteModel" mutationRate="@featureClockRate:leftmay:see" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:see" spec="FilteredAlignment" data="@data_leftmay" filter="82-84" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:star" spec="SiteModel" mutationRate="@featureClockRate:leftmay:star" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:star" spec="FilteredAlignment" data="@data_leftmay" filter="85-88" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:stone" spec="SiteModel" mutationRate="@featureClockRate:leftmay:stone" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:stone" spec="FilteredAlignment" data="@data_leftmay" filter="89-91" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:sun" spec="SiteModel" mutationRate="@featureClockRate:leftmay:sun" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:sun" spec="FilteredAlignment" data="@data_leftmay" filter="92-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:tongue" spec="SiteModel" mutationRate="@featureClockRate:leftmay:tongue" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:tongue" spec="FilteredAlignment" data="@data_leftmay" filter="97-100" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:tooth" spec="SiteModel" mutationRate="@featureClockRate:leftmay:tooth" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:tooth" spec="FilteredAlignment" data="@data_leftmay" filter="101-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:two" spec="SiteModel" mutationRate="@featureClockRate:leftmay:two" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:two" spec="FilteredAlignment" data="@data_leftmay" filter="104-108" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:leftmay:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.leftmay:water" spec="SiteModel" mutationRate="@featureClockRate:leftmay:water" proportionInvariant="0" substModel="@covarion.s:leftmay" />
+          <data id="feature_data_leftmay:water" spec="FilteredAlignment" data="@data_leftmay" filter="109-112" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:leftmay" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:leftmay" name="up" />
+      <parameter idref="featureClockRateGammaScale:leftmay" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:leftmay" spec="ScaleOperator" parameter="@covarion_alpha.s:leftmay" scaleFactor="0.5" weight="1.0" />
+    <operator id="leftmay:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:leftmay" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,blood,bone,breast,come,dog,drink,ear,eye,fish,hand,knee,leaf,liver,louse,mountain,new,night,nose,one,path,see,star,stone,sun,tongue,tooth,two,water">
+        <parameter idref="featureClockRate:leftmay:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="30" estimate="false">2 2 3 2 2 4 3 2 3 3 3 4 3 3 2 2 3 2 3 3 2 3 2 3 2 4 3 2 4 3</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="leftmay.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,blood,bone,breast,come,dog,drink,ear,eye,fish,hand,knee,leaf,liver,louse,mountain,new,night,nose,one,path,see,star,stone,sun,tongue,tooth,two,water">
+        <log idref="featureClockRate:leftmay:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:leftmay" />
+      <log idref="covarion_alpha.s:leftmay" />
+      <log idref="covarion_s.s:leftmay" />
+    </logger>
+    <logger mode="tree" fileName="leftmay.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="chim1300,coat1238,copa1236,fran1266,high1276,isth1238,juqu1238,nort2939,olut1240,rayo1235,sayu1241,taba1264,tapa1260,texi1237,tlah1239,toto1305">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_mixezoque" name="data_mixezoque" dataType="integer">
+    <sequence id="language_data_mixezoque:chim1300" taxon="chim1300" value="000000001100001000100000101000001000010000100001000010000011000100000000001100000011001001000000100000110001000010000010001000100001000000100100?????0100000001010000100101001000010000" />
+    <sequence id="language_data_mixezoque:coat1238" taxon="coat1238" value="000000010000001000100000010000001000100100000001000100000100010000000000010000000010001000010001000000010001000010001000010000100010000010001000100000100000010010001000100010001000000" />
+    <sequence id="language_data_mixezoque:copa1236" taxon="copa1236" value="000010000000001000100000100000001000010001000001000100000010000100000000100000000010001001000010000000010001000010000100001000100001000000100100001000100000001010000100100001001000000" />
+    <sequence id="language_data_mixezoque:fran1266" taxon="fran1266" value="0000100000000010001000?????????01000010001000001000010000010000100000000000000101010001001000000000100010001000010000010001000100001000000100100001000110000001010000100100001000000010" />
+    <sequence id="language_data_mixezoque:high1276" taxon="high1276" value="0????????????0100010001000000000100001000000100100000100001000000100000000000100001000100???0000010000100001000010000010001000100001000001000100?????0100000001010000100100001000001000" />
+    <sequence id="language_data_mixezoque:isth1238" taxon="isth1238" value="0000001000000010001000?????????01000100100000001000100000100010000010010000000000010001000100???????00010001000001001000010000010010000010001000100000100000001010001000100010001000000" />
+    <sequence id="language_data_mixezoque:juqu1238" taxon="juqu1238" value="0????????????010001000?????????010001001000000010001000001000????????010000000000010001001000???????000100010000100010000100000100100000100010001000001000000??01000100001001000???????" />
+    <sequence id="language_data_mixezoque:nort2939" taxon="nort2939" value="0100010000000010001000?????????01000100100000001000100000100010010000010000000000010001001000???????01010001000011001001010000110010000010001000100000100000011010101000100010001000000" />
+    <sequence id="language_data_mixezoque:olut1240" taxon="olut1240" value="0000010000000010001000?????????01000100001000001000100000100000100000010000000000010001001000000010000000101000010001000010000100010000010001000000100001000010010001000100001001000000" />
+    <sequence id="language_data_mixezoque:rayo1235" taxon="rayo1235" value="000010000000001000100000100000101010010001000001010000100010000000100000000000010010001001000000000100010001000010000010001000100001000000101000000010000010001010000100100001000000010" />
+    <sequence id="language_data_mixezoque:sayu1241" taxon="sayu1241" value="000001000000001000100000000010001000100000010001000100000100010000000000000010000010000101000001000000010001000010000100010000100010000010000100100000100001010010001000100001001000000" />
+    <sequence id="language_data_mixezoque:taba1264" taxon="taba1264" value="001000000000001000010010000000000100010010000001000010000010001000000001000000000010001001000100000000100001000010000100001000100001000001000100010000010000001010000100100001000100000" />
+    <sequence id="language_data_mixezoque:tapa1260" taxon="tapa1260" value="000000000001101010???000100000001000??00000001001000010101000001000010???????????00010??0???000000100?????0000100010????0????0001000010001000010?????00001000??001000010100001001000001" />
+    <sequence id="language_data_mixezoque:texi1237" taxon="texi1237" value="000001000000001000100000000001001000010000001001000001000010001000000000000001000010001001000000010000100001000010000100001000100000001000100100001000100000010010000100???001000000100" />
+    <sequence id="language_data_mixezoque:tlah1239" taxon="tlah1239" value="000100000010001100101001000000001000100100000001000100000100010000000010000000000010001001000001000000010001100010001000010010010010100010001000100000100000011010001000100000101000000" />
+    <sequence id="language_data_mixezoque:toto1305" taxon="toto1305" value="000000000010001000100000000100001000100100000001000100000100010000000010000000000010001001000001000000001000010010001000000100100010000010001000100000100000010010001000100010001000000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,bone,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,sun,tongue,tree,two">
+        <parameter id="featureClockRate:mixezoque:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:mixezoque" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:mixezoque" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:mixezoque" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:mixezoque" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((chim1300,(copa1236,fran1266,rayo1235),(high1276,taba1264,texi1237)),(olut1240,sayu1241,tapa1260,(toto1305,(tlah1239,((coat1238,isth1238),(juqu1238,nort2939))))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:mixezoque" name="distribution">
+          <input id="featureClockRateCompound:mixezoque" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,bone,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,sun,tongue,tree,two">
+              <var idref="featureClockRate:mixezoque:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:mixezoque" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:mixezoque" beta="@featureClockRateGammaScale:mixezoque" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:mixezoque" name="distribution" x="@featureClockRateGammaScale:mixezoque">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:mixezoque" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:mixezoque" name="distribution" x="@covarion_alpha.s:mixezoque">
+          <Uniform id="CovAlphaUniform:mixezoque" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:mixezoque" name="distribution" x="@covarion_s.s:mixezoque">
+          <Gamma id="Gamma.0:mixezoque" name="distr">
+            <parameter id="covarion_switch_gamma_param1:mixezoque" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:mixezoque" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:mixezoque:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:1pl" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:mixezoque" spec="BinaryCovarion" alpha="@covarion_alpha.s:mixezoque" switchRate="@covarion_s.s:mixezoque">
+              <vfrequencies id="mixezoque:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.82 0.18</vfrequencies>
+              <parameter id="mixezoque:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="mixezoque:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_mixezoque:1pl" spec="FilteredAlignment" data="@data_mixezoque" filter="1-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:1sg" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:1sg" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:1sg" spec="FilteredAlignment" data="@data_mixezoque" filter="14-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:bone" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:bone" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:bone" spec="FilteredAlignment" data="@data_mixezoque" filter="18-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:breast" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:breast" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:breast" spec="FilteredAlignment" data="@data_mixezoque" filter="22-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:come" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:come" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:come" spec="FilteredAlignment" data="@data_mixezoque" filter="32-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:die" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:die" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:die" spec="FilteredAlignment" data="@data_mixezoque" filter="36-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:dog" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:dog" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:dog" spec="FilteredAlignment" data="@data_mixezoque" filter="39-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:drink" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:drink" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:drink" spec="FilteredAlignment" data="@data_mixezoque" filter="47-50" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:eye" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:eye" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:eye" spec="FilteredAlignment" data="@data_mixezoque" filter="51-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:fire" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:fire" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:fire" spec="FilteredAlignment" data="@data_mixezoque" filter="57-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:fish" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:fish" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:fish" spec="FilteredAlignment" data="@data_mixezoque" filter="61-69" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:full" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:full" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:full" spec="FilteredAlignment" data="@data_mixezoque" filter="70-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:hand" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:hand" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:hand" spec="FilteredAlignment" data="@data_mixezoque" filter="82-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:hear" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:hear" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:hear" spec="FilteredAlignment" data="@data_mixezoque" filter="86-88" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:horn" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:horn" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:horn" spec="FilteredAlignment" data="@data_mixezoque" filter="89-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:knee" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:knee" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:knee" spec="FilteredAlignment" data="@data_mixezoque" filter="93-100" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:liver" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:liver" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:liver" spec="FilteredAlignment" data="@data_mixezoque" filter="101-106" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:louse" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:louse" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:louse" spec="FilteredAlignment" data="@data_mixezoque" filter="107-111" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:mountain" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:mountain" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:mountain" spec="FilteredAlignment" data="@data_mixezoque" filter="112-115" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:name" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:name" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:name" spec="FilteredAlignment" data="@data_mixezoque" filter="116-120" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:new" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:new" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:new" spec="FilteredAlignment" data="@data_mixezoque" filter="121-125" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:night" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:night" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:night" spec="FilteredAlignment" data="@data_mixezoque" filter="126-129" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:nose" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:nose" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:nose" spec="FilteredAlignment" data="@data_mixezoque" filter="130-135" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:one" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:one" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:one" spec="FilteredAlignment" data="@data_mixezoque" filter="136-139" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:path" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:path" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:path" spec="FilteredAlignment" data="@data_mixezoque" filter="140-143" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:person" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:person" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:person" spec="FilteredAlignment" data="@data_mixezoque" filter="144-149" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:see" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:see" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:see" spec="FilteredAlignment" data="@data_mixezoque" filter="150-156" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:skin" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:skin" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:skin" spec="FilteredAlignment" data="@data_mixezoque" filter="157-159" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:star" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:star" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:star" spec="FilteredAlignment" data="@data_mixezoque" filter="160-163" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:sun" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:sun" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:sun" spec="FilteredAlignment" data="@data_mixezoque" filter="164-167" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:tongue" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:tongue" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:tongue" spec="FilteredAlignment" data="@data_mixezoque" filter="168-171" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:tree" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:tree" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:tree" spec="FilteredAlignment" data="@data_mixezoque" filter="172-175" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mixezoque:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mixezoque:two" spec="SiteModel" mutationRate="@featureClockRate:mixezoque:two" proportionInvariant="0" substModel="@covarion.s:mixezoque" />
+          <data id="feature_data_mixezoque:two" spec="FilteredAlignment" data="@data_mixezoque" filter="176-183" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:mixezoque" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:mixezoque" name="up" />
+      <parameter idref="featureClockRateGammaScale:mixezoque" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:mixezoque" spec="ScaleOperator" parameter="@covarion_alpha.s:mixezoque" scaleFactor="0.5" weight="1.0" />
+    <operator id="mixezoque:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:mixezoque" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,bone,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,sun,tongue,tree,two">
+        <parameter idref="featureClockRate:mixezoque:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="33" estimate="false">12 3 3 9 3 2 7 3 5 3 8 11 3 2 3 7 5 4 3 4 4 3 5 3 3 5 6 2 3 3 3 3 7</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="mixezoque.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,bone,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,sun,tongue,tree,two">
+        <log idref="featureClockRate:mixezoque:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:mixezoque" />
+      <log idref="covarion_alpha.s:mixezoque" />
+      <log idref="covarion_s.s:mixezoque" />
+    </logger>
+    <logger mode="tree" fileName="mixezoque.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

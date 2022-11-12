@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="kang1288,katc1249,keig1242,kron1241,tuli1249,tumt1243">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_kaduglikrongo" name="data_kaduglikrongo" dataType="integer">
+    <sequence id="language_data_kaduglikrongo:kang1288" taxon="kang1288" value="001000110010010011000????011001000100100010011000100??0????010000??0100001000100000010000001010001001000001000100010" />
+    <sequence id="language_data_kaduglikrongo:katc1249" taxon="katc1249" value="00100011001001101101011000110010001001000100001001001001100001000100101001000110000011000000101001001000001000100010" />
+    <sequence id="language_data_kaduglikrongo:keig1242" taxon="keig1242" value="001000110010001000100????0110010101000100100010001000100010000100??0000100100001000000100100100000100100000100101001" />
+    <sequence id="language_data_kaduglikrongo:kron1241" taxon="kron1241" value="0110001100100100101001001011000100110100011001000100??00001010000010010001010000100000010000100001001000000100100010" />
+    <sequence id="language_data_kaduglikrongo:tuli1249" taxon="tuli1249" value="00001001101001001000010000011010001001000??000010100??0????001000??01000010000000010??????00000101000001000010001010" />
+    <sequence id="language_data_kaduglikrongo:tumt1243" taxon="tumt1243" value="00010011000101000010000100010010001000010??001000010??0????000010100010001000000010000001000001001000010100100010010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,2sg,blood,bone,come,die,dog,drink,eye,fish,horn,knee,leaf,liver,louse,mountain,new,nose,one,person,see,skin,star,stone,sun,tree,two">
+        <parameter id="featureClockRate:kaduglikrongo:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:kaduglikrongo" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:kaduglikrongo" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:kaduglikrongo" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:kaduglikrongo" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(keig1242,(tuli1249,(kang1288,katc1249),(kron1241,tumt1243)));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:kaduglikrongo" name="distribution">
+          <input id="featureClockRateCompound:kaduglikrongo" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,2sg,blood,bone,come,die,dog,drink,eye,fish,horn,knee,leaf,liver,louse,mountain,new,nose,one,person,see,skin,star,stone,sun,tree,two">
+              <var idref="featureClockRate:kaduglikrongo:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:kaduglikrongo" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:kaduglikrongo" beta="@featureClockRateGammaScale:kaduglikrongo" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:kaduglikrongo" name="distribution" x="@featureClockRateGammaScale:kaduglikrongo">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:kaduglikrongo" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:kaduglikrongo" name="distribution" x="@covarion_alpha.s:kaduglikrongo">
+          <Uniform id="CovAlphaUniform:kaduglikrongo" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:kaduglikrongo" name="distribution" x="@covarion_s.s:kaduglikrongo">
+          <Gamma id="Gamma.0:kaduglikrongo" name="distr">
+            <parameter id="covarion_switch_gamma_param1:kaduglikrongo" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:kaduglikrongo" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:kaduglikrongo:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:1pl" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:kaduglikrongo" spec="BinaryCovarion" alpha="@covarion_alpha.s:kaduglikrongo" switchRate="@covarion_s.s:kaduglikrongo">
+              <vfrequencies id="kaduglikrongo:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.74 0.26</vfrequencies>
+              <parameter id="kaduglikrongo:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="kaduglikrongo:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_kaduglikrongo:1pl" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="1-5" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:2sg" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:2sg" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:2sg" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="6-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:blood" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:blood" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:blood" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="10-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:bone" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:bone" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:bone" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="13-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:come" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:come" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:come" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="16-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:die" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:die" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:die" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="21-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:dog" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:dog" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:dog" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="26-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:drink" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:drink" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:drink" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="30-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:eye" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:eye" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:eye" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="34-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:fish" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:fish" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:fish" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="37-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:horn" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:horn" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:horn" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="41-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:knee" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:knee" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:knee" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="44-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:leaf" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:leaf" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:leaf" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="49-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:liver" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:liver" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:liver" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="52-54" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:louse" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:louse" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:louse" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="55-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:mountain" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:mountain" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:mountain" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="60-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:new" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:new" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:new" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="65-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:nose" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:nose" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:nose" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="68-72" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:one" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:one" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:one" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="73-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:person" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:person" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:person" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="77-83" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:see" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:see" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:see" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="84-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:skin" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:skin" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:skin" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="91-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:star" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:star" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:star" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="97-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:stone" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:stone" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:stone" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="100-105" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:sun" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:sun" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:sun" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="106-109" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:tree" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:tree" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:tree" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="110-113" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaduglikrongo:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaduglikrongo:two" spec="SiteModel" mutationRate="@featureClockRate:kaduglikrongo:two" proportionInvariant="0" substModel="@covarion.s:kaduglikrongo" />
+          <data id="feature_data_kaduglikrongo:two" spec="FilteredAlignment" data="@data_kaduglikrongo" filter="114-116" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:kaduglikrongo" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:kaduglikrongo" name="up" />
+      <parameter idref="featureClockRateGammaScale:kaduglikrongo" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:kaduglikrongo" spec="ScaleOperator" parameter="@covarion_alpha.s:kaduglikrongo" scaleFactor="0.5" weight="1.0" />
+    <operator id="kaduglikrongo:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:kaduglikrongo" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,2sg,blood,bone,come,die,dog,drink,eye,fish,horn,knee,leaf,liver,louse,mountain,new,nose,one,person,see,skin,star,stone,sun,tree,two">
+        <parameter idref="featureClockRate:kaduglikrongo:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="27" estimate="false">4 3 2 2 4 4 3 3 2 3 2 4 2 2 4 4 2 4 3 6 6 5 2 5 3 3 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="kaduglikrongo.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,2sg,blood,bone,come,die,dog,drink,eye,fish,horn,knee,leaf,liver,louse,mountain,new,nose,one,person,see,skin,star,stone,sun,tree,two">
+        <log idref="featureClockRate:kaduglikrongo:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:kaduglikrongo" />
+      <log idref="covarion_alpha.s:kaduglikrongo" />
+      <log idref="covarion_s.s:kaduglikrongo" />
+    </logger>
+    <logger mode="tree" fileName="kaduglikrongo.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,412 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="apin1244,arik1265,cane1242,djeo1235,kain1272,kara1500,krah1246,kren1239,krey1238,maxa1247,ofay1240,pana1307,para1315,rikb1245,suya1243,xava1240,xere1240,xokl1240">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_nuclearmacroje" name="data_nuclearmacroje" dataType="integer">
+    <sequence id="language_data_nuclearmacroje:apin1244" taxon="apin1244" value="00100000000000010000000001000000100000000000100000000?????????0010000000000000100001000000000001000000000000100000000000100000000001000000001000000001000000000000100000000010000000001100000000001000001000000000001000000000010000010000000000000?????????????00100000000010000000010000000000001000000000001000000000100000000000?????01000000000001000000010000000000100000000000000010000000000010000010000000010000000000100000000000000100000000" />
+    <sequence id="language_data_nuclearmacroje:arik1265" taxon="arik1265" value="000100000000000010000000001000000100000000000100000000100000000001000000000000010000000000000000100000000000???????????00100000000001000000001000000001000000000000100000000010000000001000000000001000001000000000001000000100100000010000000000000100000000000001000000000010000000010000000000010000000000001000000000100000000001000000100000000001000000001000000000010000000000000001000000000010000001000000001000000000010000000000000010000000" />
+    <sequence id="language_data_nuclearmacroje:cane1242" taxon="cane1242" value="010000000100000100000000010000001000000000001000000001000010000110000000000000100001000000000001000000000000100000001000100000000001000000001000000001000000000000100000000010000000010000000000010000001000000000010000000000100000010000000000000100000000000001000000000010000000100000000000001000000000001000000000100000000000?????01000000000001000000010000000000100000000000000100000000000010000010000000010000000001000000000000001000000000" />
+    <sequence id="language_data_nuclearmacroje:djeo1235" taxon="djeo1235" value="0000100000000001000000000010000000100000000001000000000100000000001000000000000010000000000000000100000000000100000000000010000000001000000001000000001000000000000010100000010000000001000000000000100001000000000001000000000100000001000000000000010000000000001000000000010000100010000000000001000000000000100000000010000000000100000010000000001000000001000000000001000000000000001000000000010000010000000001000000000001000000000000001000000" />
+    <sequence id="language_data_nuclearmacroje:kain1272" taxon="kain1272" value="0000010000000000010000000??????00001000000000010000000100000000000010000000000000100000000000000001000000000001000000000000100000000010000000010000100010000000000000100000001000000000100000000000100000010000000000010000000001000010000000000000000100000000000100000000010000000000100000000000010000000001000000000100000000000?????00001000000000100000000100000000000100000000000000100000000010000000100000001000000000000100000000000100000000" />
+    <sequence id="language_data_nuclearmacroje:kara1500" taxon="kara1500" value="000000100000000000100000010000000000100000000100000000001000000000001000000000000010000000000000000100000000???????????0000010000000001000000100000000001000000010000010000000100000000010000001000100000001000000000001000000100000000010000000000000010000000000010000001000100000000010000000100001000000000001000000000100000000?????00100000000000010001000010000000000010000000010000010000000010000000010000000100000000000010000000000000100000" />
+    <sequence id="language_data_nuclearmacroje:krah1246" taxon="krah1246" value="0?????????????010000000001000000100000000000100000000?????????01000000000000000000010000000000010000000000000001000000001000000000000001000010000000010000000000001000000000000100000000010000000??????00000100000001000000000000100000001000000000000001000000001000000000001000000000001000000001000000000001000000000100000000000?????010000000000010000000??????????0??????????????00000010000000?????0????????010000000001000000000000001000000000" />
+    <sequence id="language_data_nuclearmacroje:kren1239" taxon="kren1239" value="0000000100000000000100000001000000000100000000010000000001000000000001000000000000001000000000000000100000000000100000000001000000000000100000010000000001000000000000010000000010000???????????0??????0000001000000000010000000010000000010000000000000010000000??????????000010000000000100000000000100000001000000000000010000000?????01000000000000001000000001000000000001000000000000000100000010000000001000000010000000000001000000000000010000" />
+    <sequence id="language_data_nuclearmacroje:krey1238" taxon="krey1238" value="00000000100000010000000001000000100000000000????????010000000000000000100000000000010000000000000000010000000000010000001000000000010000000010000000000000100000000000001000100000000???????????0??????00000001000000000010000??????010000000000000000000010000001000000000010000000000000010000000000010000001000000000100000000000001000100000000000100000000000010000010000000000000000000001000001000001000000000000100000??????????????01000000000" />
+    <sequence id="language_data_nuclearmacroje:maxa1247" taxon="maxa1247" value="0000000001000000010000000100000000000010000000001000010000000000000000010000000000000100000000000000001000000000001000000000010000000000010010000000000000010000000000000100010000000000001000000??????00000000100000000001000000010000000010000000000000001000000001000000010000000000000001000000000001000000000100000000001000000?????000001000000000001000000000100000000001000000000000000010000?????000000100000000100000000000100000000000001000" />
+    <sequence id="language_data_nuclearmacroje:ofay1240" taxon="ofay1240" value="00000000001000000000100000001000000000010000000001000?????????000000000010000000000000100010000????????????0000000010000000000100000010000001000000000000000100000?????????0000001000100000000000000010000000000100??????????0??????00000000100000000000000010000??????????0???????0000000000100000000000100000000010000000000100000?????00000010000000000100000010000000000000010000000000000000100001000000000010000010000000000000010000000000000100" />
+    <sequence id="language_data_nuclearmacroje:pana1307" taxon="pana1307" value="00000000000100000000010001000000000000001000100000000?????????0000000000010000100000000000000000000000010000100000000000000000010001000000000000100000000000010000?????????00000001001000000000000000010??????????001000000000100000000000000100000?????????????00000100000001000000?????????????00000000010001000000000???????????0?????0100000000000???????000010000000000000001000000????????????010000000000001010000000000000000001000001000000000" />
+    <sequence id="language_data_nuclearmacroje:para1315" taxon="para1315" value="000000000100000100000000010000001000000000001000000000000010000010000000000000????????????????00000001000000000000001000000000001001000000001000000001000000000000?????????01000000000000001000000010000100000000000100000000010000000000100000000000000000001000??????????0???????0?????????????000000000010010000000001000000000000001001000000000001000000010000000000100000000000000000001000000000100010000000010000000001000000000000001000000000" />
+    <sequence id="language_data_nuclearmacroje:rikb1245" taxon="rikb1245" value="00000010000000000010001000000100000000000100????????0000000100000000000000100000000000010000000000000000100000000000010000100000000????????00000010000000000001000?????????0010000000000000010000??????0??????????0??????????01000000?????????????0?????????????00000010000000001000000000000010000001000000000000001000000000010000?????00000001001000000010000000001000000000000100000000000000010000010000010000000000010000000000000100000000000010" />
+    <sequence id="language_data_nuclearmacroje:suya1243" taxon="suya1243" value="00000000000010000000000101000000100000000000100000000?????????0010000000000000100000000000000000000000000100100000000000000000010001000000001000000000000000010000?????????010000000000100000000000100001000000000001000000000010000000000000010000?????????????00000010000010000000000000000001001000000000001000000000000000001000?????00000000100001000000010000000000100000000000000000000000001010000000010000000000001000000000000010000100000000" />
+    <sequence id="language_data_nuclearmacroje:xava1240" taxon="xava1240" value="0?????????????0?????????0??????00000000000100000001000000000110??????????????000000000001001110100000000000000000000001000000000010000000010000000100100000001000000000000100000000100000000010000010000000000000100000000010000000100000000000100000000000000100000000100000000010000100000000000000000000010000000010000000000010000001010000000001000100000000000001000000000000100001000000000000?????010000000000000000100000000000001000000000001" />
+    <sequence id="language_data_nuclearmacroje:xere1240" taxon="xere1240" value="00000000000001010000000001000000000000000010100000010?????????000000000000010000000001000000000100000000000000000000001000000000010000000010000000100100000000000010000000000000000100000000001000010000??????????001000000000000001000000000000100000000000000100000000100000000100001000000000001000000000000000000100000000000100?????00000000010000010000000000000100000000000001000100000000000000001010000000000000000100000000000000101000000000" />
+    <sequence id="language_data_nuclearmacroje:xokl1240" taxon="xokl1240" value="00000100000000000100000000000010???????????0????????0?????????0000000000000010100000000001000000000000000010000000001000000100000000010000000010000000000000000100?????????0010000000???????????0??????00010000000000010000000??????000000000000010?????????????00000000010010000000?????????????01000000000000000000010000000000010?????01000000000000100000000000000010000000000000100000100000000010000000100000001000000000000100000000000100000000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:nuclearmacroje:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:nuclearmacroje" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:nuclearmacroje" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:nuclearmacroje" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:nuclearmacroje" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(kara1500,kren1239,maxa1247,ofay1240,rikb1245,(arik1265,djeo1235),((kain1272,xokl1240),(xava1240,xere1240),(pana1307,(apin1244,suya1243,(krey1238,(para1315,(cane1242,krah1246)))))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:nuclearmacroje" name="distribution">
+          <input id="featureClockRateCompound:nuclearmacroje" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:nuclearmacroje:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:nuclearmacroje" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:nuclearmacroje" beta="@featureClockRateGammaScale:nuclearmacroje" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:nuclearmacroje" name="distribution" x="@featureClockRateGammaScale:nuclearmacroje">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:nuclearmacroje" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:nuclearmacroje" name="distribution" x="@covarion_alpha.s:nuclearmacroje">
+          <Uniform id="CovAlphaUniform:nuclearmacroje" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:nuclearmacroje" name="distribution" x="@covarion_s.s:nuclearmacroje">
+          <Gamma id="Gamma.0:nuclearmacroje" name="distr">
+            <parameter id="covarion_switch_gamma_param1:nuclearmacroje" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:nuclearmacroje" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:nuclearmacroje:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:1pl" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:nuclearmacroje" spec="BinaryCovarion" alpha="@covarion_alpha.s:nuclearmacroje" switchRate="@covarion_s.s:nuclearmacroje">
+              <vfrequencies id="nuclearmacroje:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.92 0.08</vfrequencies>
+              <parameter id="nuclearmacroje:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="nuclearmacroje:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_nuclearmacroje:1pl" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="1-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:1sg" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:1sg" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:1sg" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="15-24" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:2sg" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:2sg" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:2sg" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="25-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:blood" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:blood" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:blood" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="32-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:bone" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:bone" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:bone" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="44-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:breast" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:breast" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:breast" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="53-62" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:come" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:come" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:come" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="63-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:die" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:die" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:die" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="78-94" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:dog" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:dog" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:dog" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="95-107" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:drink" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:drink" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:drink" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="108-119" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:ear" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:ear" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:ear" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="120-130" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:eye" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:eye" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:eye" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="131-139" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:fire" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:fire" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:fire" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="140-148" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:fish" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:fish" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:fish" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="149-161" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:full" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:full" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:full" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="162-171" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:hand" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:hand" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:hand" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="172-180" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:hear" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:hear" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:hear" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="181-192" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:horn" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:horn" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:horn" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="193-199" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:knee" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:knee" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:knee" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="200-210" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:leaf" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:leaf" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:leaf" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="211-221" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:liver" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:liver" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:liver" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="222-228" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:louse" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:louse" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:louse" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="229-242" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:mountain" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:mountain" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:mountain" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="243-256" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:name" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:name" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:name" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="257-267" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:new" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:new" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:new" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="268-275" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:night" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:night" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:night" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="276-289" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:nose" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:nose" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:nose" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="290-301" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:one" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:one" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:one" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="302-311" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:path" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:path" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:path" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="312-323" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:person" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:person" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:person" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="324-329" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:see" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:see" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:see" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="330-341" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:skin" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:skin" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:skin" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="342-349" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:star" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:star" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:star" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="350-360" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:stone" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:stone" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:stone" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="361-375" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:sun" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:sun" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:sun" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="376-388" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:tongue" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:tongue" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:tongue" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="389-394" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:tooth" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:tooth" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:tooth" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="395-403" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:tree" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:tree" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:tree" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="404-413" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:two" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:two" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:two" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="414-428" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nuclearmacroje:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nuclearmacroje:water" spec="SiteModel" mutationRate="@featureClockRate:nuclearmacroje:water" proportionInvariant="0" substModel="@covarion.s:nuclearmacroje" />
+          <data id="feature_data_nuclearmacroje:water" spec="FilteredAlignment" data="@data_nuclearmacroje" filter="429-439" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:nuclearmacroje" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:nuclearmacroje" name="up" />
+      <parameter idref="featureClockRateGammaScale:nuclearmacroje" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:nuclearmacroje" spec="ScaleOperator" parameter="@covarion_alpha.s:nuclearmacroje" scaleFactor="0.5" weight="1.0" />
+    <operator id="nuclearmacroje:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:nuclearmacroje" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:nuclearmacroje:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">13 9 6 11 8 9 14 16 12 11 10 8 8 12 9 8 11 6 10 10 6 13 13 10 7 13 11 9 11 5 11 7 10 14 12 5 8 9 14 10</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="nuclearmacroje.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:nuclearmacroje:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:nuclearmacroje" />
+      <log idref="covarion_alpha.s:nuclearmacroje" />
+      <log idref="covarion_s.s:nuclearmacroje" />
+    </logger>
+    <logger mode="tree" fileName="nuclearmacroje.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

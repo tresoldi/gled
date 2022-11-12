@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="dend1243,humb1243,kora1291,koyr1240,koyr1242,tada1238,tasa1240,zarm1239">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_songhay" name="data_songhay" dataType="integer">
+    <sequence id="language_data_songhay:dend1243" taxon="dend1243" value="0100001000010010001001000010010000100000000100100001000100000100010000100001001001000000100001001000001001000100010010" />
+    <sequence id="language_data_songhay:humb1243" taxon="humb1243" value="010000000101001000100001101101000000000001011010000100010000000100100000100100100000001010000100?????01001000100001010" />
+    <sequence id="language_data_songhay:kora1291" taxon="kora1291" value="00010010000100010010001000100001000010000001000100010000010000100001000010001010000100000010010000100010010000100??010" />
+    <sequence id="language_data_songhay:koyr1240" taxon="koyr1240" value="0010001000011010001000100010010000000010000100001001000010000010001000010000101000100010010101001100001001000100010010" />
+    <sequence id="language_data_songhay:koyr1242" taxon="koyr1242" value="0100101100011011001000010010010000010100000100001001000010000010001000110000101000100010110101001000001001000100010010" />
+    <sequence id="language_data_songhay:tada1238" taxon="tada1238" value="0100000010010000100100100010000100000001000100100000100000100010001000000100100100001000010001000001001000100001010001" />
+    <sequence id="language_data_songhay:tasa1240" taxon="tasa1240" value="0100001000010001001000100010000100000000100100000100010000010???0000101000001010000001000100001000001010000100010100??" />
+    <sequence id="language_data_songhay:zarm1239" taxon="zarm1239" value="0110001000011010001000110010011010010100000100100001000110000010001000110001101000100010110101001100001101000100010010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,breast,come,drink,eye,fire,fish,full,horn,knee,leaf,liver,mountain,new,night,nose,path,see,skin,star,stone,tongue,tooth,tree,water">
+        <parameter id="featureClockRate:songhay:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:songhay" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:songhay" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:songhay" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:songhay" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((humb1243,koyr1242,(dend1243,zarm1239)),(koyr1240,(kora1291,tada1238,tasa1240)));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:songhay" name="distribution">
+          <input id="featureClockRateCompound:songhay" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,breast,come,drink,eye,fire,fish,full,horn,knee,leaf,liver,mountain,new,night,nose,path,see,skin,star,stone,tongue,tooth,tree,water">
+              <var idref="featureClockRate:songhay:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:songhay" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:songhay" beta="@featureClockRateGammaScale:songhay" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:songhay" name="distribution" x="@featureClockRateGammaScale:songhay">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:songhay" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:songhay" name="distribution" x="@covarion_alpha.s:songhay">
+          <Uniform id="CovAlphaUniform:songhay" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:songhay" name="distribution" x="@covarion_s.s:songhay">
+          <Gamma id="Gamma.0:songhay" name="distr">
+            <parameter id="covarion_switch_gamma_param1:songhay" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:songhay" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:songhay:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:1pl" spec="SiteModel" mutationRate="@featureClockRate:songhay:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:songhay" spec="BinaryCovarion" alpha="@covarion_alpha.s:songhay" switchRate="@covarion_s.s:songhay">
+              <vfrequencies id="songhay:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.74 0.26</vfrequencies>
+              <parameter id="songhay:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="songhay:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_songhay:1pl" spec="FilteredAlignment" data="@data_songhay" filter="1-5" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:1sg" spec="SiteModel" mutationRate="@featureClockRate:songhay:1sg" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:1sg" spec="FilteredAlignment" data="@data_songhay" filter="6-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:2sg" spec="SiteModel" mutationRate="@featureClockRate:songhay:2sg" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:2sg" spec="FilteredAlignment" data="@data_songhay" filter="11-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:breast" spec="SiteModel" mutationRate="@featureClockRate:songhay:breast" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:breast" spec="FilteredAlignment" data="@data_songhay" filter="14-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:come" spec="SiteModel" mutationRate="@featureClockRate:songhay:come" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:come" spec="FilteredAlignment" data="@data_songhay" filter="18-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:drink" spec="SiteModel" mutationRate="@featureClockRate:songhay:drink" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:drink" spec="FilteredAlignment" data="@data_songhay" filter="21-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:eye" spec="SiteModel" mutationRate="@featureClockRate:songhay:eye" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:eye" spec="FilteredAlignment" data="@data_songhay" filter="26-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:fire" spec="SiteModel" mutationRate="@featureClockRate:songhay:fire" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:fire" spec="FilteredAlignment" data="@data_songhay" filter="29-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:fish" spec="SiteModel" mutationRate="@featureClockRate:songhay:fish" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:fish" spec="FilteredAlignment" data="@data_songhay" filter="34-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:full" spec="SiteModel" mutationRate="@featureClockRate:songhay:full" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:full" spec="FilteredAlignment" data="@data_songhay" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:horn" spec="SiteModel" mutationRate="@featureClockRate:songhay:horn" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:horn" spec="FilteredAlignment" data="@data_songhay" filter="46-50" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:knee" spec="SiteModel" mutationRate="@featureClockRate:songhay:knee" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:knee" spec="FilteredAlignment" data="@data_songhay" filter="51-54" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:leaf" spec="SiteModel" mutationRate="@featureClockRate:songhay:leaf" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:leaf" spec="FilteredAlignment" data="@data_songhay" filter="55-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:liver" spec="SiteModel" mutationRate="@featureClockRate:songhay:liver" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:liver" spec="FilteredAlignment" data="@data_songhay" filter="61-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:mountain" spec="SiteModel" mutationRate="@featureClockRate:songhay:mountain" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:mountain" spec="FilteredAlignment" data="@data_songhay" filter="65-69" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:new" spec="SiteModel" mutationRate="@featureClockRate:songhay:new" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:new" spec="FilteredAlignment" data="@data_songhay" filter="70-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:night" spec="SiteModel" mutationRate="@featureClockRate:songhay:night" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:night" spec="FilteredAlignment" data="@data_songhay" filter="75-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:nose" spec="SiteModel" mutationRate="@featureClockRate:songhay:nose" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:nose" spec="FilteredAlignment" data="@data_songhay" filter="78-80" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:path" spec="SiteModel" mutationRate="@featureClockRate:songhay:path" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:path" spec="FilteredAlignment" data="@data_songhay" filter="81-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:see" spec="SiteModel" mutationRate="@featureClockRate:songhay:see" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:see" spec="FilteredAlignment" data="@data_songhay" filter="88-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:skin" spec="SiteModel" mutationRate="@featureClockRate:songhay:skin" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:skin" spec="FilteredAlignment" data="@data_songhay" filter="93-95" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:star" spec="SiteModel" mutationRate="@featureClockRate:songhay:star" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:star" spec="FilteredAlignment" data="@data_songhay" filter="96-101" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:stone" spec="SiteModel" mutationRate="@featureClockRate:songhay:stone" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:stone" spec="FilteredAlignment" data="@data_songhay" filter="102-104" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:tongue" spec="SiteModel" mutationRate="@featureClockRate:songhay:tongue" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:tongue" spec="FilteredAlignment" data="@data_songhay" filter="105-108" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:tooth" spec="SiteModel" mutationRate="@featureClockRate:songhay:tooth" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:tooth" spec="FilteredAlignment" data="@data_songhay" filter="109-112" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:tree" spec="SiteModel" mutationRate="@featureClockRate:songhay:tree" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:tree" spec="FilteredAlignment" data="@data_songhay" filter="113-115" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:songhay:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.songhay:water" spec="SiteModel" mutationRate="@featureClockRate:songhay:water" proportionInvariant="0" substModel="@covarion.s:songhay" />
+          <data id="feature_data_songhay:water" spec="FilteredAlignment" data="@data_songhay" filter="116-118" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:songhay" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:songhay" name="up" />
+      <parameter idref="featureClockRateGammaScale:songhay" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:songhay" spec="ScaleOperator" parameter="@covarion_alpha.s:songhay" scaleFactor="0.5" weight="1.0" />
+    <operator id="songhay:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:songhay" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,breast,come,drink,eye,fire,fish,full,horn,knee,leaf,liver,mountain,new,night,nose,path,see,skin,star,stone,tongue,tooth,tree,water">
+        <parameter idref="featureClockRate:songhay:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="27" estimate="false">4 4 2 3 2 4 2 4 8 2 4 3 5 3 4 4 2 2 6 4 2 5 2 3 3 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="songhay.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,breast,come,drink,eye,fire,fish,full,horn,knee,leaf,liver,mountain,new,night,nose,path,see,skin,star,stone,tongue,tooth,tree,water">
+        <log idref="featureClockRate:songhay:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:songhay" />
+      <log idref="covarion_alpha.s:songhay" />
+      <log idref="covarion_s.s:songhay" />
+    </logger>
+    <logger mode="tree" fileName="songhay.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

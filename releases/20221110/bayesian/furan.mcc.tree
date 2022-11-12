@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Amdang
+			Fur
+			;
+End;
+Begin trees;
+	Translate
+		   1 Amdang,
+		   2 Fur
+;
+tree TREE1 = (1[&height=0.0,length=6.444574580335761,length_95%_HPD={1.1914,15.6922},length_median=4.0937,length_range={1.0125,23.3664},rate=0.97687929656275,rate_95%_HPD={0.5456,1.2554},rate_median=1.1204,rate_range={0.365,1.2554}]:6.444574580335761,2[&height=0.0,length=6.444574580335761,length_95%_HPD={1.1914,15.6922},length_median=4.0937,length_range={1.0125,23.3664},rate=0.9542287769784175,rate_95%_HPD={0.5184,1.2554},rate_median=1.1204,rate_range={0.365,1.2554}]:6.444574580335761)[&CAheight_95%_HPD={1.1914,15.6922},CAheight_mean=6.444574580335761,CAheight_median=4.0937,CAheight_range={1.0125,23.3664},height=6.444574580335761,height_95%_HPD={1.1914,15.6922},height_median=4.0937,height_range={1.0125,23.3664},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Afitti
+			AmaSudan
+			;
+End;
+Begin trees;
+	Translate
+		   1 Afitti,
+		   2 AmaSudan
+;
+tree TREE1 = (1[&height=0.0,length=1.6591915267785884,length_95%_HPD={0.7962,3.4642},length_median=1.3846,length_range={0.5454,4.8874},rate=0.9990147082334145,rate_95%_HPD={0.9515,1.0458},rate_median=0.9995,rate_range={0.9408,1.0553}]:1.6591915267785884,2[&height=0.0,length=1.6591915267785884,length_95%_HPD={0.7962,3.4642},length_median=1.3846,length_range={0.5454,4.8874},rate=0.9994657074340558,rate_95%_HPD={0.9515,1.0458},rate_median=0.9995,rate_range={0.9408,1.0499}]:1.6591915267785884)[&CAheight_95%_HPD={0.7962,3.4642},CAheight_mean=1.6591915267785884,CAheight_median=1.3846,CAheight_range={0.5454,4.8874},height=1.6591915267785884,height_95%_HPD={0.7962,3.4642},height_median=1.3846,height_range={0.5454,4.8874},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

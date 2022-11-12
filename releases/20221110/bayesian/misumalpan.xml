@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="caca1247" />
+    <taxon id="misk1235" />
+    <taxon id="ulwa1239" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_misumalpan" name="data_misumalpan" dataType="integer">
+    <sequence id="language_data_misumalpan:caca1247" taxon="caca1247" value="0100010001001001010001001000010001000100010010000100001000??0101010001000100100010001001000100100??01000100001000100100010000100010" />
+    <sequence id="language_data_misumalpan:misk1235" taxon="misk1235" value="001000100010010000100??00100001000100010001001010010000100100010001000100??001000100??00100010??01000100010100100010010001010010010" />
+    <sequence id="language_data_misumalpan:ulwa1239" taxon="ulwa1239" value="00010001001000100001001000110001000100010??0001000011000100101000001000100100010001001000101000100100010001000010100001000100001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,dog,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,new,night,nose,one,path,see,skin,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:misumalpan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:misumalpan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:misumalpan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:misumalpan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:misumalpan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(misk1235,(caca1247,ulwa1239));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:misumalpan" name="distribution">
+          <input id="featureClockRateCompound:misumalpan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,dog,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,new,night,nose,one,path,see,skin,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:misumalpan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:misumalpan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:misumalpan" beta="@featureClockRateGammaScale:misumalpan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:misumalpan" name="distribution" x="@featureClockRateGammaScale:misumalpan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:misumalpan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:misumalpan" name="distribution" x="@covarion_alpha.s:misumalpan">
+          <Uniform id="CovAlphaUniform:misumalpan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:misumalpan" name="distribution" x="@covarion_s.s:misumalpan">
+          <Gamma id="Gamma.0:misumalpan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:misumalpan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:misumalpan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:misumalpan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:1pl" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:misumalpan" spec="BinaryCovarion" alpha="@covarion_alpha.s:misumalpan" switchRate="@covarion_s.s:misumalpan">
+              <vfrequencies id="misumalpan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.74 0.26</vfrequencies>
+              <parameter id="misumalpan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="misumalpan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_misumalpan:1pl" spec="FilteredAlignment" data="@data_misumalpan" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:1sg" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:1sg" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:1sg" spec="FilteredAlignment" data="@data_misumalpan" filter="5-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:2sg" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:2sg" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:2sg" spec="FilteredAlignment" data="@data_misumalpan" filter="9-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:blood" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:blood" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:blood" spec="FilteredAlignment" data="@data_misumalpan" filter="12-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:bone" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:bone" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:bone" spec="FilteredAlignment" data="@data_misumalpan" filter="17-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:breast" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:breast" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:breast" spec="FilteredAlignment" data="@data_misumalpan" filter="21-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:come" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:come" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:come" spec="FilteredAlignment" data="@data_misumalpan" filter="24-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:dog" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:dog" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:dog" spec="FilteredAlignment" data="@data_misumalpan" filter="29-32" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:ear" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:ear" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:ear" spec="FilteredAlignment" data="@data_misumalpan" filter="33-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:eye" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:eye" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:eye" spec="FilteredAlignment" data="@data_misumalpan" filter="37-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:fire" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:fire" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:fire" spec="FilteredAlignment" data="@data_misumalpan" filter="41-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:fish" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:fish" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:fish" spec="FilteredAlignment" data="@data_misumalpan" filter="44-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:full" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:full" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:full" spec="FilteredAlignment" data="@data_misumalpan" filter="49-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:hand" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:hand" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:hand" spec="FilteredAlignment" data="@data_misumalpan" filter="54-57" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:hear" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:hear" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:hear" spec="FilteredAlignment" data="@data_misumalpan" filter="58-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:knee" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:knee" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:knee" spec="FilteredAlignment" data="@data_misumalpan" filter="61-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:leaf" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:leaf" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:leaf" spec="FilteredAlignment" data="@data_misumalpan" filter="65-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:liver" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:liver" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:liver" spec="FilteredAlignment" data="@data_misumalpan" filter="69-72" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:louse" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:louse" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:louse" spec="FilteredAlignment" data="@data_misumalpan" filter="73-75" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:mountain" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:mountain" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:mountain" spec="FilteredAlignment" data="@data_misumalpan" filter="76-79" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:new" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:new" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:new" spec="FilteredAlignment" data="@data_misumalpan" filter="80-83" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:night" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:night" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:night" spec="FilteredAlignment" data="@data_misumalpan" filter="84-86" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:nose" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:nose" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:nose" spec="FilteredAlignment" data="@data_misumalpan" filter="87-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:one" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:one" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:one" spec="FilteredAlignment" data="@data_misumalpan" filter="91-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:path" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:path" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:path" spec="FilteredAlignment" data="@data_misumalpan" filter="94-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:see" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:see" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:see" spec="FilteredAlignment" data="@data_misumalpan" filter="97-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:skin" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:skin" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:skin" spec="FilteredAlignment" data="@data_misumalpan" filter="100-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:stone" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:stone" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:stone" spec="FilteredAlignment" data="@data_misumalpan" filter="104-108" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:sun" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:sun" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:sun" spec="FilteredAlignment" data="@data_misumalpan" filter="109-112" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:tongue" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:tongue" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:tongue" spec="FilteredAlignment" data="@data_misumalpan" filter="113-115" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:tooth" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:tooth" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:tooth" spec="FilteredAlignment" data="@data_misumalpan" filter="116-119" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:tree" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:tree" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:tree" spec="FilteredAlignment" data="@data_misumalpan" filter="120-124" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:two" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:two" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:two" spec="FilteredAlignment" data="@data_misumalpan" filter="125-128" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:misumalpan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.misumalpan:water" spec="SiteModel" mutationRate="@featureClockRate:misumalpan:water" proportionInvariant="0" substModel="@covarion.s:misumalpan" />
+          <data id="feature_data_misumalpan:water" spec="FilteredAlignment" data="@data_misumalpan" filter="129-131" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:misumalpan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:misumalpan" name="up" />
+      <parameter idref="featureClockRateGammaScale:misumalpan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:misumalpan" spec="ScaleOperator" parameter="@covarion_alpha.s:misumalpan" scaleFactor="0.5" weight="1.0" />
+    <operator id="misumalpan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:misumalpan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,dog,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,new,night,nose,one,path,see,skin,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:misumalpan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="34" estimate="false">3 3 2 4 3 2 4 3 3 3 2 4 4 3 2 3 3 3 2 3 3 2 3 2 2 2 3 4 3 2 3 4 3 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="misumalpan.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,dog,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,new,night,nose,one,path,see,skin,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:misumalpan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:misumalpan" />
+      <log idref="covarion_alpha.s:misumalpan" />
+      <log idref="covarion_s.s:misumalpan" />
+    </logger>
+    <logger mode="tree" fileName="misumalpan.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

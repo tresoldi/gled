@@ -39,5 +39,13 @@ this has been created and activated, the running of `beastling` can
 be performed with
 
 ```bash
-$
+$ pipeline/prepare_beastling.py
+```
+
+At last, the Bayesian analyses (which take *a long* time) can be
+run with the following script (the path to the executables must
+be set at the top):
+
+```bash
+$ pipeline/run_bayesian.py
 ```

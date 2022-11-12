@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="nisg1240" />
+    <taxon id="nucl1649" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_tsimshian" name="data_tsimshian" dataType="integer">
+    <sequence id="language_data_tsimshian:nisg1240" taxon="nisg1240" value="0010010010010001001001000100100010010010010010010010010010001001011" />
+    <sequence id="language_data_tsimshian:nucl1649" taxon="nucl1649" value="0100100110101010010010101001010100100100100100100100100101010010010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,bone,breast,come,die,drink,ear,fire,full,hand,hear,knee,night,nose,path,see,star,sun,two">
+        <parameter id="featureClockRate:tsimshian:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:tsimshian" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:tsimshian" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:tsimshian" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:tsimshian" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(nisg1240,nucl1649);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:tsimshian" name="distribution">
+          <input id="featureClockRateCompound:tsimshian" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,bone,breast,come,die,drink,ear,fire,full,hand,hear,knee,night,nose,path,see,star,sun,two">
+              <var idref="featureClockRate:tsimshian:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:tsimshian" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:tsimshian" beta="@featureClockRateGammaScale:tsimshian" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:tsimshian" name="distribution" x="@featureClockRateGammaScale:tsimshian">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:tsimshian" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:tsimshian" name="distribution" x="@covarion_alpha.s:tsimshian">
+          <Uniform id="CovAlphaUniform:tsimshian" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:tsimshian" name="distribution" x="@covarion_s.s:tsimshian">
+          <Gamma id="Gamma.0:tsimshian" name="distr">
+            <parameter id="covarion_switch_gamma_param1:tsimshian" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:tsimshian" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:tsimshian:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:1pl" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:tsimshian" spec="BinaryCovarion" alpha="@covarion_alpha.s:tsimshian" switchRate="@covarion_s.s:tsimshian">
+              <vfrequencies id="tsimshian:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.64 0.36</vfrequencies>
+              <parameter id="tsimshian:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="tsimshian:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_tsimshian:1pl" spec="FilteredAlignment" data="@data_tsimshian" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:1sg" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:1sg" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:1sg" spec="FilteredAlignment" data="@data_tsimshian" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:2sg" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:2sg" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:2sg" spec="FilteredAlignment" data="@data_tsimshian" filter="7-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:bone" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:bone" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:bone" spec="FilteredAlignment" data="@data_tsimshian" filter="10-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:breast" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:breast" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:breast" spec="FilteredAlignment" data="@data_tsimshian" filter="14-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:come" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:come" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:come" spec="FilteredAlignment" data="@data_tsimshian" filter="17-19" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:die" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:die" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:die" spec="FilteredAlignment" data="@data_tsimshian" filter="20-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:drink" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:drink" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:drink" spec="FilteredAlignment" data="@data_tsimshian" filter="24-26" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:ear" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:ear" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:ear" spec="FilteredAlignment" data="@data_tsimshian" filter="27-30" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:fire" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:fire" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:fire" spec="FilteredAlignment" data="@data_tsimshian" filter="31-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:full" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:full" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:full" spec="FilteredAlignment" data="@data_tsimshian" filter="34-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:hand" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:hand" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:hand" spec="FilteredAlignment" data="@data_tsimshian" filter="37-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:hear" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:hear" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:hear" spec="FilteredAlignment" data="@data_tsimshian" filter="40-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:knee" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:knee" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:knee" spec="FilteredAlignment" data="@data_tsimshian" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:night" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:night" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:night" spec="FilteredAlignment" data="@data_tsimshian" filter="46-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:nose" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:nose" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:nose" spec="FilteredAlignment" data="@data_tsimshian" filter="49-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:path" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:path" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:path" spec="FilteredAlignment" data="@data_tsimshian" filter="52-54" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:see" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:see" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:see" spec="FilteredAlignment" data="@data_tsimshian" filter="55-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:star" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:star" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:star" spec="FilteredAlignment" data="@data_tsimshian" filter="59-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:sun" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:sun" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:sun" spec="FilteredAlignment" data="@data_tsimshian" filter="62-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tsimshian:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tsimshian:two" spec="SiteModel" mutationRate="@featureClockRate:tsimshian:two" proportionInvariant="0" substModel="@covarion.s:tsimshian" />
+          <data id="feature_data_tsimshian:two" spec="FilteredAlignment" data="@data_tsimshian" filter="65-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:tsimshian" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:tsimshian" name="up" />
+      <parameter idref="featureClockRateGammaScale:tsimshian" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:tsimshian" spec="ScaleOperator" parameter="@covarion_alpha.s:tsimshian" scaleFactor="0.5" weight="1.0" />
+    <operator id="tsimshian:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:tsimshian" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,bone,breast,come,die,drink,ear,fire,full,hand,hear,knee,night,nose,path,see,star,sun,two">
+        <parameter idref="featureClockRate:tsimshian:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="21" estimate="false">2 2 2 3 2 2 3 2 3 2 2 2 2 2 2 2 2 3 2 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="tsimshian.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,bone,breast,come,die,drink,ear,fire,full,hand,hear,knee,night,nose,path,see,star,sun,two">
+        <log idref="featureClockRate:tsimshian:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:tsimshian" />
+      <log idref="covarion_alpha.s:tsimshian" />
+      <log idref="covarion_s.s:tsimshian" />
+    </logger>
+    <logger mode="tree" fileName="tsimshian.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

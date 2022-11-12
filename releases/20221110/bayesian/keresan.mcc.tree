@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			EasternKeres
+			WesternKeres
+			;
+End;
+Begin trees;
+	Translate
+		   1 EasternKeres,
+		   2 WesternKeres
+;
+tree TREE1 = (1[&height=0.0,length=9.42605915267782E-4,length_95%_HPD={1.0E-4,0.0022},length_median=0.001,length_range={1.0E-4,0.0031},rate=1.0001726618705014,rate_95%_HPD={0.8567,1.1002},rate_median=1.0241,rate_range={0.7755,1.1527}]:9.42605915267782E-4,2[&height=0.0,length=9.42605915267782E-4,length_95%_HPD={1.0E-4,0.0022},length_median=0.001,length_range={1.0E-4,0.0031},rate=1.0028350119904066,rate_95%_HPD={0.8567,1.1002},rate_median=1.0241,rate_range={0.7755,1.1721}]:9.42605915267782E-4)[&CAheight_95%_HPD={1.0E-4,0.0022},CAheight_mean=9.42605915267782E-4,CAheight_median=0.001,CAheight_range={1.0E-4,0.0031},height=9.42605915267782E-4,height_95%_HPD={1.0E-4,0.0022},height_median=0.001,height_range={1.0E-4,0.0031},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Katla
+			Tima
+			;
+End;
+Begin trees;
+	Translate
+		   1 Katla,
+		   2 Tima
+;
+tree TREE1 = (1[&height=0.0,length=7.263161151079174,length_95%_HPD={0.7966,18.0324},length_median=6.6226,length_range={0.7966,21.4827},rate=0.9819684252597927,rate_95%_HPD={0.6451,1.2506},rate_median=1.0375,rate_range={0.4475,1.2506}]:7.263161151079174,2[&height=0.0,length=7.263161151079174,length_95%_HPD={0.7966,18.0324},length_median=6.6226,length_range={0.7966,21.4827},rate=0.9794781774580348,rate_95%_HPD={0.6253,1.2506},rate_median=1.0375,rate_range={0.4475,1.2506}]:7.263161151079174)[&CAheight_95%_HPD={0.7966,18.0324},CAheight_mean=7.263161151079174,CAheight_median=6.6226,CAheight_range={0.7966,21.4827},height=7.263161151079174,height_95%_HPD={0.7966,18.0324},height_median=6.6226,height_range={0.7966,21.4827},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

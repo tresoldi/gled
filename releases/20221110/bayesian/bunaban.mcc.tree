@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Bunaba
+			Gooniyandi
+			;
+End;
+Begin trees;
+	Translate
+		   1 Bunaba,
+		   2 Gooniyandi
+;
+tree TREE1 = (1[&height=0.0,length=3.5446717026379053,length_95%_HPD={0.7412,10.0131},length_median=2.5364,length_range={0.7165,10.9304},rate=0.9641439648281449,rate_95%_HPD={0.5934,1.2554},rate_median=1.0305,rate_range={0.4736,1.2554}]:3.5446717026379053,2[&height=0.0,length=3.5446717026379053,length_95%_HPD={0.7412,10.0131},length_median=2.5364,length_range={0.7165,10.9304},rate=0.9704385291766661,rate_95%_HPD={0.5934,1.2554},rate_median=1.0355,rate_range={0.4736,1.2554}]:3.5446717026379053)[&CAheight_95%_HPD={0.7412,10.0131},CAheight_mean=3.5446717026379053,CAheight_median=2.5364,CAheight_range={0.7165,10.9304},height=3.5446717026379053,height_95%_HPD={0.7412,10.0131},height_median=2.5364,height_range={0.7165,10.9304},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

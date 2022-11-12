@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="aghu1253,akhv1239,andi1255,arch1244,avar1256,bagv1239,bats1242,bezh1248,botl1242,budu1248,cham1309,chec1245,darg1241,dido1241,ghod1238,hinu1240,hunz1247,ingu1240,kara1474,khin1240,khva1239,kryt1240,lakk1252,lezg1247,rutu1240,taba1259,tind1238,tsak1249,udii1243">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_nakhdaghestanian" name="data_nakhdaghestanian" dataType="integer">
+    <sequence id="language_data_nakhdaghestanian:aghu1253" taxon="aghu1253" value="010000000000001000001000000000001000000000000001000000001000000000000000001000000000010000000001000000000000000000100000100100000000001000001000000000001000000000010000100000000100001000000000000010000000000000???????????????010000000000000000010001000000010000000001000001000000001000000000000001000000000000000000001000010000000010000000010001000000000010000000000?????????????010000001000000001000000000000000000000100000000000001000000000010000000001000000000000000000000000010000000010000100000000100000000000000000010000000001000100" />
+    <sequence id="language_data_nakhdaghestanian:akhv1239" taxon="akhv1239" value="0010100010000010000010000000011001000000000000001000000001001000000000000001000000000100000000001010000010000000001000000000101000000001000000000000000001000000000110000100000000000001000000000000010010000000101000010000000000010000000000000000010100001000010000000000000001000000001000000000000011000000000010000000001000010000000010000000000001000000000010000000000100000001000001000011100010000100000000000000000000111000000000000000000000001000000000100010000000000010000000001000000010000100000000010000000000000000011000000000100000" />
+    <sequence id="language_data_nakhdaghestanian:andi1255" taxon="andi1255" value="0010100000000010000010000000100001000000000000001000000000011000000000000000110000000000000000000010000000000000001000000000001000000001000000000000000000010000000100000011000000000010000000000000010000000000001000000000000000000110000000000000000110000000000110000000000001000000001000000000000000011000000000000000001000100000000010000000000001100000000000110000000100000000000000011000000000000001100000000000000000100100000000000000000000001010000000001010000000000000000000001000000010000100000000010000000000000000000100000000100000" />
+    <sequence id="language_data_nakhdaghestanian:arch1244" taxon="arch1244" value="010000000000001000001000000000000001000000000000010000001000000000000001001000000000000000000001000000000000000000100000000100100000000001000000000000001000000000010000000010000000001000000000000010000000000000001000000000000000000100000000000000000100000000000100000000000010000000100000000000000000010000000000000000100000100000010000000000000100000000000000100000?????????????000100010000000001000000000000000000000100000000000000000000000000001000000000100000000000000100000000010000010000001000000000100000000000000010000000000100000" />
+    <sequence id="language_data_nakhdaghestanian:avar1256" taxon="avar1256" value="0000011000000010000010000000000000010000000000001000000000001110000000000000001111100000000000010001000000000001001010000000000111000000001000000000000010000000000100001100000000000001010000000000100100000000000001100010000000100000110000000000000100100000000000100000000000010000001000000000000010000110000000000010001000100000000000110000000001011000000100000000000110000010000000100110000000000000011000000000000010101011000000000010000000001010000000001011100000000000010000000001000010000110111000000010000000000000000010000000101000" />
+    <sequence id="language_data_nakhdaghestanian:bagv1239" taxon="bagv1239" value="001000000000001000001000000000000000100000000000100000000000000100000000000000000001000000000000001000000000000000100000000000101000000100000000000000000001000000010000000001000000001000000000000001000000000000000001000000000000000000100100000000010000000000001000000000000100000000100000000000000100000000000000000000100010000000001000000000000100000000000000010000?????????????000010010000000000000100000000000000000100000000000000000000000000010000000001000000000000000000000001000000010000100000000010000000000000000001000000000100000" />
+    <sequence id="language_data_nakhdaghestanian:bats1242" taxon="bats1242" value="000000010000000100000010000000000010000000000000001000000000000010000000000000000000100000000000010000000000000000100000000001000000000010000000000000000010000000010000010000000000001000000000000000001000000000001000000000000000000000010000000000001000000000000001000000000000100000001000000000000000000100000000000000100010000000000100000000000100000000010000000000?????????????000000001010000000000000100000000000000000000100000000000000000010010000000000000010000000000000000000100000001000010000000000001000000000000000001000000010000" />
+    <sequence id="language_data_nakhdaghestanian:bezh1248" taxon="bezh1248" value="0000000010000010000010000000000001000000000000000001000000000100000000000000000000000100000000000000100000000000000001000000000010000000000100000000000000001000000100000000001000000010000000000000001000000000000000001000000000000000000010000000000000100000010000000000000000000100001000000000000000000000100010000000001000000100000000001000000001000000000000010000000001000000000000001000000000000000000010000000000000000000010000000000000000001000000000000010000000000000000000000000100010000100000000000000100000000000000000100000100000" />
+    <sequence id="language_data_nakhdaghestanian:botl1242" taxon="botl1242" value="001000000000001000001000000000000000100000000000100000000010000000000000000000000000010000001000000001000000000000100000000000001000000100000000000000000000100000010000000000010000000000100000000001000000000000100000000000000000000000000100000000010000000000001000000000000100000100100000000000000000000001000000000000100010000000001000000000000100000000000000010000?????????????000010000000000000000100000000000000000100000000000000000000000001000000000001000000000000000000000001000000010000100000000010000000000000000001000000000100000" />
+    <sequence id="language_data_nakhdaghestanian:budu1248" taxon="budu1248" value="010000000000001000001000000000000000010000000000000010001000000000000000000001000000000000000001000000000000000000000010000000000010000000001000000000001000000000010000100000000000001000000000000010000000000000000000010000000010000000000000000000000001000000000000100000000010000000000100000000000000000000100000000001000000001000000000010000000100000000010000000000?????????????000000011000000000001000000000000000000000000001000000000000000010000000000000000100000000000000000010000000010000100000000100000000000000000010000000000000100" />
+    <sequence id="language_data_nakhdaghestanian:cham1309" taxon="cham1309" value="00100000000000100000100000000000??????????????00100000000010000000000000000000000001000000000000001000000000000000100000000000001000000000010000000000000001100000010000001000000000001000000000010001000000000000000001000000000000000000000110000000010000000000000100000000000100000000100000000000000001000000000000000000100010000000001000000000000100000000000010000000?????????????000000011000000000000100000000000000000100100000000000000000000001000000000001000000000000000000000001000000010000110000000010000000000000100001000000000100000" />
+    <sequence id="language_data_nakhdaghestanian:chec1245" taxon="chec1245" value="0101000001000001100001010000000000100000000000010000000000100000010000000000110000000000000000000100000000000000000100000000010000000000100000000000000000100000000100000100000000000000100100000000001010000000000110000000000000001000000100000000001000000000001000000000000000100000000100000000100000100000000000000000001000100001000001000000000001000000000001000000001000100000000000101000000000000010000001000000000000001000100000000000000000000100000000010000001000000001000000000100000011000010000000001000010000000000010001000000010000" />
+    <sequence id="language_data_nakhdaghestanian:darg1241" taxon="darg1241" value="0010000000000001001000010100000000010000100000000100000010000100000100000010000000100110000001000000001010000000101000000001000000010000000101100101000010000000000100001000000000100000000010000000000001000001000001000010100000000000000100011000100000000000000001000011000000100000001000100100000010000000000110000001001110100000110001000010000011000100000100000000000000001100100000100011001000000100000000110010010000100000000100000000100000001010000000000000110010000000000001000010001010110100000000000000100100000000010000010001000000" />
+    <sequence id="language_data_nakhdaghestanian:dido1241" taxon="dido1241" value="0000000010000010000010000000000000000000000100000001000000001100000000000000000000000010011000000000100000000000001000001000000010000000000100000000000000000010010100000000001000000010000000110000010000000000000000001000000000000000000010000000000000011000000000000100100000000100001000000000000010000000000000010000001000000100000000001000000001000000000100000001000000010000000000001010000000000000000010000000100000100000000011000000001000001000000000000000000000100100000010000000100010000000000100010000001000000000000000100000100000" />
+    <sequence id="language_data_nakhdaghestanian:ghod1238" taxon="ghod1238" value="00100000000000100000100000000000000010000000000010000000001000000000000000????????????????????00000000010000000000100000000000101000000100000000000000000000100000010000010000000000001000000100000001000000000000100000000000000000000000000100000000010000000000001000000000000100000000100000000000000001000000000000000000100010000000001000000000000100000000000000010000?????????????000000011000000000000100000000000000000100100000000000000000000001010000000101000000000000000000000001000000010000100000000010000000000000000001000000000100000" />
+    <sequence id="language_data_nakhdaghestanian:hinu1240" taxon="hinu1240" value="0000000010000010000010000000000000000010000000000001000000000000001000001000000000000010000000010000000000000000001000000000000001000000000100000000000000000100000100000000001000000010000000000000100000000000000000001000000000000000000001000000000000011000010000000000000000000100001000000000010010000000000010000000001000100000000000001000000001000000000000010000000000010000000000000000100000000000000000010000000000000000000010000001000000001000000000000000010100000000000000000000100010000000000100010000000000000000000000100000100000" />
+    <sequence id="language_data_nakhdaghestanian:hunz1247" taxon="hunz1247" value="0000000010000010000010000000000000000001000000000001000000001100000000000000000000000010000000010000000000000000001000000000000010000000000100000000000000000010000100000000001000000010000000000000010000100000000000000001000000000000000010000000000110000000010000000000000000000100001000000000010000000000100000000000001000000100000000001000000001000000000000010000000000010000000000001000000000000000000000010000000000000000010001000000000000001000000000000010000000000000000000000000100010000100000100000000100000000000000000100000100000" />
+    <sequence id="language_data_nakhdaghestanian:ingu1240" taxon="ingu1240" value="000000000010000100000000100000000010000000000001000000000010000000000000000000000000000100000000010000000000000000010000000001000000000010000000000000000010000000010000010000000000001000000000000000000001000000001000000000000000000000010000000010100000000000100000000000000010000000010000000000000010000000000000000000100010000100000100000000000100000000000000001000?????????????000000000010000000000000000001000000000001000100000000000000000000100000000000001000000000000000000000100000001000010000000000001000000000010000001000001010000" />
+    <sequence id="language_data_nakhdaghestanian:kara1474" taxon="kara1474" value="0010000000000010000010000000000001001000000000001000000000101010000000000000000000010010000000000010000000000100001000000100101000000001000000000000000000010000000100000100000000000010000000000000010000000000001000010000000000000000001000000010000100000000000010000000000001000000001000000000001011000000010000000000001000100000000010000000000001000000000010100000000000000001001000100000100100000000100000000000001000101000000000000000000001001010000000100010000000000000001000001000000010000100000000010000000000000000001010000000001010" />
+    <sequence id="language_data_nakhdaghestanian:khin1240" taxon="khin1240" value="000000000001000010000000001000000001000000000001000000000000100000000000000000000000000010001001000000000000000000000010000000100000000000000001000000001000000000010000100000000000001000000000000010000000000000100000000000000000000000000000010000010000000000000000100000000010000000100000000000000000000000001000000000100000001000000000000100000100000000010000000000?????????????000000011000000000000100000000000000000000000000000100000000000000000100001000000000000000000000100000000010010000100000000010000000000000000010000000000010000" />
+    <sequence id="language_data_nakhdaghestanian:khva1239" taxon="khva1239" value="0000000010000010000010000000000000000000010000000001000000001000000000000000000000000110000000000000100001000000001000000000001010000000000100000000000000000100000100000100000000000010000000000000010000000000000000001000000000000000000010000000000000000100000000000100000000000100001000000000000010000000000000000000001000000100000010001000000001000000000000010000000000010000000000101000000000000000100000000100000000100000000001000000000000001000000000000000000010000000000000000010100010000100000000000000001000000001000000101000100000" />
+    <sequence id="language_data_nakhdaghestanian:kryt1240" taxon="kryt1240" value="01000000000000100000100000000000000001000000000000001000100000000000000000000100000000000000000100000000000000000010001000000000100000000000100000000000100000000001000010000000000000100000000000001000000000000000000001000000001000000000000000000000000100000000000000100000????????00000100000000000000000000100100000001000010001000000000000010000100000000010000000000?????????????000000001000000000001000000000000000000100000000000000000000000010000000000000000000001001000000000010000000010000100000000100000000000000000010000000000000100" />
+    <sequence id="language_data_nakhdaghestanian:lakk1252" taxon="lakk1252" value="000000000001000000101000000000000000001000000001000000000000000000001000000010000000000000000000000000000001000000100000000000000100000100000000000000000000000100010000100000000000001000000000000000100000100000000000000001000000000000000001000000010000000001000000000000000010000000100000000000000000000000000010000000100000001000000000000001000100000000010000000000?????????????000000011000000000000000000000001000000000000000000010000010000001000000000000010000000000000000000010000000010000000000100000000000010000000010000000001000000" />
+    <sequence id="language_data_nakhdaghestanian:lezg1247" taxon="lezg1247" value="0100000000001010110010000000000000010000001000000000100000000000100001000000100000000000000000010000000000101000000000010000001001000000000000001000000010000000100100001000000010010010000000000000100000000100000001000000001000100000000000000000000000100000000000000010001010100000000000011000000000000000001100000000010000100000000000000000100000000010000100000000000000000011000000000010010000001000000010000000000000100000000010000000000000010000010001000000000000000001000000010000000010000000000010100000000000000000010000000000000001" />
+    <sequence id="language_data_nakhdaghestanian:rutu1240" taxon="rutu1240" value="010000000000000010000000000100000000000000000100000010001000000000000000000000000000010000000001000000000000000000000000100100000000000000001000000010001000000000010000100000000000001000000000000000000000001000000100000000000010000000000000000000001000000000000010000000001000000000000000001000001000000000000000100001000010000000010000000000000000000100010000000000?????????????000000001000000001000000000000000000000000000000000001000000000010000000000000000000000001000000000010000000010000100000010000001000000000000010000000000000100" />
+    <sequence id="language_data_nakhdaghestanian:taba1259" taxon="taba1259" value="0110000000000000100000000001000000000000001011010000100010000000000000000000010000000010000000010000000010000000001000000001000000001000000000001010001010000000000101001100000000000010000000000010100000000000000000000000100100100000000000000000100010000000000001000000000010000000011000000000000010000000001000000000011000100010000000000000100010000000000100000000100000000000010010000001010000001000000000010000000000100000000000001000000110010000000001000000010000010000000000010000000010000100000000000000000001100000010000000001000000" />
+    <sequence id="language_data_nakhdaghestanian:tind1238" taxon="tind1238" value="001000000000001000001000000000000000100000000000100000000010000000000000000000000001000000000000001000000000000000100000000000101000000100000000000000000001000000010000010000010000001000000000000001000000000000000001000000000000000000000100000000010000000000001000000000000100000000100000000000000100000000000000000000100010000000001000000000000100000000000010000000?????????????000000010000001000000100000000000000000100000000000000000000000001000000000001000000000000000000000001000000010000100000000010000000000000000001000000000100000" />
+    <sequence id="language_data_nakhdaghestanian:tsak1249" taxon="tsak1249" value="000000000001000010000001000000000000000000000100000001001000100000000000001000000000000000000001000000000000000000100000000100000000000000000000000010001000000000010000100000000000101000000000000010000000000000000100000000000010000000000000000000000000001000001000000000000000001000000000000100001000000000000000000000100010000000000000000001000000000011010010000000?????????????000000011000000000000000100000000000100000000000000000100000000000000001000000000100000000000000000000010000010000100000000000000000000010000010000000000000100" />
+    <sequence id="language_data_nakhdaghestanian:udii1243" taxon="udii1243" value="01000000000000010000100000000000000100000000000000000010000000001000001000000000000000000001000000000000000000100010000000000000010000000000000000000100100000000000001001000000000000000000000010001000000000000000000000000000100000000001000000000001000000000000000000000100????????01000000000000000000000000000000010000100000001000000000000000100000100000010000000000?????????????000000000000000100000000010000000000000000000100000000000000000000000000100000000000010000000000000000000100010000000010000000000000000001000000000000100010000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="2500" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:nakhdaghestanian:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:nakhdaghestanian" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:nakhdaghestanian" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:nakhdaghestanian" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:nakhdaghestanian" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((bats1242,(chec1245,ingu1240)),(darg1241,khin1240,lakk1252,(arch1244,((budu1248,kryt1240),(rutu1240,tsak1249),(udii1243,(taba1259,(aghu1253,lezg1247))))),(avar1256,((bezh1248,hunz1247),(dido1241,hinu1240,khva1239)),(akhv1239,andi1255,cham1309,kara1474,(bagv1239,tind1238),(botl1242,ghod1238)))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:nakhdaghestanian" name="distribution">
+          <input id="featureClockRateCompound:nakhdaghestanian" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:nakhdaghestanian:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:nakhdaghestanian" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:nakhdaghestanian" beta="@featureClockRateGammaScale:nakhdaghestanian" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:nakhdaghestanian" name="distribution" x="@featureClockRateGammaScale:nakhdaghestanian">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:nakhdaghestanian" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:nakhdaghestanian" name="distribution" x="@covarion_alpha.s:nakhdaghestanian">
+          <Uniform id="CovAlphaUniform:nakhdaghestanian" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:nakhdaghestanian" name="distribution" x="@covarion_s.s:nakhdaghestanian">
+          <Gamma id="Gamma.0:nakhdaghestanian" name="distr">
+            <parameter id="covarion_switch_gamma_param1:nakhdaghestanian" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:nakhdaghestanian" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:nakhdaghestanian:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:1pl" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:nakhdaghestanian" spec="BinaryCovarion" alpha="@covarion_alpha.s:nakhdaghestanian" switchRate="@covarion_s.s:nakhdaghestanian">
+              <vfrequencies id="nakhdaghestanian:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.90 0.10</vfrequencies>
+              <parameter id="nakhdaghestanian:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="nakhdaghestanian:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_nakhdaghestanian:1pl" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="1-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:1sg" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:1sg" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:1sg" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="14-19" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:2sg" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:2sg" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:2sg" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="20-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:blood" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:blood" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:blood" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="32-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:bone" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:bone" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:bone" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="47-55" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:breast" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:breast" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:breast" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="56-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:come" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:come" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:come" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="74-94" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:die" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:die" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:die" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="95-113" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:dog" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:dog" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:dog" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="114-122" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:drink" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:drink" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:drink" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="123-133" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:ear" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:ear" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:ear" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="134-151" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:eye" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:eye" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:eye" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="152-162" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:fire" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:fire" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:fire" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="163-167" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:fish" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:fish" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:fish" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="168-181" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:full" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:full" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:full" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="182-195" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:hand" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:hand" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:hand" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="196-209" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:hear" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:hear" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:hear" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="210-225" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:horn" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:horn" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:horn" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="226-243" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:knee" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:knee" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:knee" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="244-255" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:leaf" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:leaf" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:leaf" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="256-271" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:liver" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:liver" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:liver" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="272-280" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:louse" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:louse" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:louse" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="281-295" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:mountain" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:mountain" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:mountain" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="296-316" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:name" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:name" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:name" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="317-321" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:new" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:new" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:new" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="322-330" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:night" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:night" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:night" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="331-343" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:nose" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:nose" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:nose" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="344-354" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:one" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:one" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:one" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="355-365" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:path" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:path" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:path" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="366-379" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:person" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:person" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:person" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="380-395" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:see" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:see" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:see" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="396-417" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:skin" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:skin" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:skin" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="418-442" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:star" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:star" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:star" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="443-452" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:stone" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:stone" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:stone" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="453-478" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:sun" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:sun" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:sun" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="479-487" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:tongue" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:tongue" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:tongue" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="488-492" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:tooth" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:tooth" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:tooth" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="493-501" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:tree" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:tree" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:tree" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="502-520" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:two" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:two" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:two" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="521-530" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nakhdaghestanian:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nakhdaghestanian:water" spec="SiteModel" mutationRate="@featureClockRate:nakhdaghestanian:water" proportionInvariant="0" substModel="@covarion.s:nakhdaghestanian" />
+          <data id="feature_data_nakhdaghestanian:water" spec="FilteredAlignment" data="@data_nakhdaghestanian" filter="531-538" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:nakhdaghestanian" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:nakhdaghestanian" name="up" />
+      <parameter idref="featureClockRateGammaScale:nakhdaghestanian" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:nakhdaghestanian" spec="ScaleOperator" parameter="@covarion_alpha.s:nakhdaghestanian" scaleFactor="0.5" weight="1.0" />
+    <operator id="nakhdaghestanian:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:nakhdaghestanian" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:nakhdaghestanian:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">12 5 11 14 8 17 20 18 8 10 17 10 4 13 13 13 15 17 11 15 8 14 20 4 8 12 10 10 13 15 21 24 9 25 8 4 8 18 9 7</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="1">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="nakhdaghestanian.log" logEvery="1" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:nakhdaghestanian:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:nakhdaghestanian" />
+      <log idref="covarion_alpha.s:nakhdaghestanian" />
+      <log idref="covarion_s.s:nakhdaghestanian" />
+    </logger>
+    <logger mode="tree" fileName="nakhdaghestanian.nex" logEvery="1" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>
