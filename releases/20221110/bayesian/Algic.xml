@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="algo1255,arap1274,atik1240,chey1247,chip1241,east2542,east2544,kick1244,male1292,meno1252,mesk1242,miam1252,mikm1235,mont1268,moos1236,muns1251,nask1242,nort1552,otta1242,pequ1242,plai1258,pota1247,powh1243,siks1238,sout2978,unam1242,wamp1249,west2630,wiyo1248,yuro1248">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_algic" name="data_algic" dataType="integer">
+    <sequence id="language_data_algic:algo1255" taxon="algo1255" value="001000010001000001000000000000100000000100000000000000010000000000000000010000000000000000100000000010000000000100000000000010000000000010000000000000000010000000000100000000000000000100000000000001000000000100100000000000001000000000100000000000010000000001000000100000010000000000000000100000000010000000000100000000000000100000000000000000000100000000000100000000000000100000000000000000000000000100000000000000100000000000000000001000000000010000000000010000000000000010000000000000100000000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:arap1274" taxon="arap1274" value="00010001000010000010000000000001000000001000000000000??????????????????0???????????????0000100000000100000000000100000000000010000000000????????????????010100000000?????????????????00010000000000000100000000000010000000000000100000000100000000000001000000000100000000000????????????????0?????????0???????????0?????????????0001000000000000000000010000000000??????????????00010000000000000000000000000010000000000000010000000000000000000100000000001000000000010000000000000010000000000000010000000010000000010000001000000000000000" />
+    <sequence id="language_data_algic:atik1240" taxon="atik1240" value="0?????01000????00100000000000010000000010000000000000000100000000000000001000000000000000100000000001000000000000100000000001000000001000100000000000000010000000000010000000000000000010000000000000001000000000010000000000000001000000001000000000001000000000100000000000000100000000000000001000000001000000000010000000000000000100000000000000000001000000000010000000000000?????????????????????????000001000000000000100000000000000000001000000000000100000000010000000000000001000000000000100000000100000000010000000100000000000000" />
+    <sequence id="language_data_algic:chey1247" taxon="chey1247" value="0100000100000100010000000000000010000000001000000000000001000000000000000001000000000000000010000000001000000000000100000000000100000000000100000000000001000000000000010000000000000000001000000000001000000000000001000000000000001000000001000000000000100010?????????????0000010000000000000001000000000100000000001000000000000000010000000000000000010000000000010000000000000000100000000000000000000000000010000000000000100000000000000000100000000010000000000000100000000000000010000000000000100000001000000010000000001000000000000" />
+    <sequence id="language_data_algic:chip1241" taxon="chip1241" value="010000010001000001000000000000100000000000010000000000000010000000000000???????????????0??????????00100000000000000100000000???????????00010000000000000001000000000010000000000000000010000000000000010000000000010000000000000????????001000000000000100000000?????????????01000000000000000001000000000100000000001000000000000000000010000000000000001000000000001000000000000000000100000000000000000000???????????????0000001000000000000000000100000001000000000001000000000000000000100000000000001000??????????010000010000000000000000" />
+    <sequence id="language_data_algic:east2542" taxon="east2542" value="010000010001000001000000000000100000000100000000000000001000000000000000010000000000000000001000000010000000000100000000000010000000000010000000000000000000000010000100000000000000000100000000000000100000000000100000000000001000000000100000000000010000000000000000100000????????????????00100000000010000000000100000000000000000000100000000000000100000000000100000000000000000000000000000100000000000001000000000000000000000000010000000001000100010000000000010000000000000000000010000000100000000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:east2544" taxon="east2544" value="0100000???01000010000000000001000000000100000000000001000000000000000000???????????????01100000000010000000000010000000000001000000000001000000000000000010000000000?????????????????0100000000000010000000000000010000000000000100000000100000000000001000000001000000000000010000000000000000?????????010000010000010000000000000100000000000000000000010000000000100000000000000100000000000000000000000001000000000000000???????????????????010000000000010000000000010000000000000100000000000000100000001000000000010000010000000000000000" />
+    <sequence id="language_data_algic:kick1244" taxon="kick1244" value="010000010001000001000000000000100000000000001000000000001000000000100000000000100000000001000000000010000000000000000100000010000000000010000000000001000100000000000000000100000000000000001000000000001000000000000000100000000010000000010010000000010000000000000100000000000000100000000001000000000010000000000100010000000000100000000000000000000010000000000010000000001000000000010000000000000000000001000010000000000000101000000000010000000000000100100000010000000000000000100000000000100000000100000000010000000000001000000100" />
+    <sequence id="language_data_algic:male1292" taxon="male1292" value="0100000???000010100000000000001000000000000000010000000000000100000000001000000000000000010000000000000001000000000000000100100000000000100000000000000001000000000000000000000100000000000000010000000000001000000000000001000010000000000010000000000100000000100000000000001000000000000000010000000000000000010000000001000000000000000000010000000000100000100000000010000000010000000000000000000000000???????????????0???????????????????0???????????00000000100001000000100000010000000000000010000000??????????0101000?????????????????" />
+    <sequence id="language_data_algic:meno1252" taxon="meno1252" value="0100000100010000????????????00100000000?????????????00001000000000000000010000000000000000001000000010000000000100000000000010000000000010000000000000000100000000000100000000000000000000000010000000001000000000?????????????0????????000000001000000????????001000000000000000000001000000001000000000???????????0?????????????0000000010000000000000001000000000010000000000000?????????????????????????0000000000100000000000000001000000000???????????010000000000010000000000000000001000000000100000000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:mesk1242" taxon="mesk1242" value="0?????0???0????001000000000000100000000000001000000000001000000000000000010000000000000000000010000010000000000000010000000010000000000010000000000000000100000000000000010000000000000000001000000000000010000000000010000000000010000000000010000000000000100001000000000000000000100000000001000000000010000000000100000000000000100000000000000000000010000000000000100000000000000001000000000000000000000000001000000000000000100000000000010000000000010000000000010000000000000000100000000000100000000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:miam1252" taxon="miam1252" value="010000011001000000001100000000100100000000001100000000001001000001000000010001000000000001000001000010000000000000001010000000001100000010000100000010000110000000000000001010000000000000001100000000001001000000000011000000001000010000000001010000010000100011000000000000000000010000000001000000010000011000010100100000001000100000010000000001000010000000000100010000000000000000101000000000000000000000000110000000000000010010000010010000100000010001000000010010000000000000100100000100100000000100100100011000000000010100001000" />
+    <sequence id="language_data_algic:mikm1235" taxon="mikm1235" value="010000010001000000000010000000000010000000010000000000000000100000000000000000010000000000100000000000010000000000000001000010000010000000000010000000000000010000000000000001000000000000010000000000101000000000000000010000000010000000100000000000010000000000000010000100000000000100001000000010000000000100000000001000000000000000001000000000000010000000001000000000000000000000000100000000000000000000000011000000000000000001000000000000010000000000010000000001000000000000100000000000100000000100000000000100000000000010000000" />
+    <sequence id="language_data_algic:mont1268" taxon="mont1268" value="0000100100010000010000000000001000000001000000000000000100000000000000000100000000000000000010000000100000000000000000001000100000000000100000000000000001000000000000000000001000000010000000000000000101000000001000000000000010000000001000000000000100000000?????????????0100000000000000000100000000010000000000100000000000000000000000010000000000100000000000100000000000000000000000001000000000000000101000000000000100000000000000000000000001000010000000000000000100000000000001000000000000001000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:moos1236" taxon="moos1236" value="010000010001000001000000000000100000000000010000000000001000000000000000010000000000000000001000000010000000000100000000000010000000000010000000000000000000000100000000000000100000001000000000000000001000000000100000000000000010000000100000000000010000000001000000000000100000000000000001100000000010000000000100000000000000101000000000000000000100000000000100000000000000000000000000100000000010000001000000000000100000000000000000000100000000010000000000000000010000000000001000000000100000000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:muns1251" taxon="muns1251" value="01000001000100000100000000000010000000000000100000000000100000000000000000001000000001000000010000001000000000000001000000001000000000000000100000000000010000000000000010000000000000000001000000000000010000000010000000000000100000000100000000000000000100000000100000000000000100000000000000010000001000000000010000000000000010000000000000000000000010000000000100000000000?????????????????????????000000001000000000000001000000000000010000000000010000000000010000000000000000100000000000100000000100000000010000000000100000000000" />
+    <sequence id="language_data_algic:nask1242" taxon="nask1242" value="01000001000100000100000000000010000000000000001000000??????????????????0010000000000000000001000000010000000000000000000100010000000000010000000000000000100000000000000000000100000001000000000000000001000000000000000001000000010000000100000000000010000000000000001000000000000000010000000100000000010000000000100000000000000001000000000000000000100000000000100000000000000000000000000010000000000000100000000000000000000000000100000000000001000010000000000000000110000000000001000000000100000000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:nort1552" taxon="nort1552" value="010000010001000000000001000000100000000?????????????00010000000000000000???????????????000001000000???????????0100000000000010000000000010000000000000000100000000000000000000100000001000000000000??????????????010000000000000001000000?????????????01000000000100000000000010000000000000000010000000001000000000010000000000000?????????????????????0100000000000100000000000000000000000000001000000000000001000000000000000000000000100000001000000000010000000000000000100000000000001000000000000010000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:otta1242" taxon="otta1242" value="01000001000100000100000000000010000001010000000000000??????????????????0???????????????000100000000???????????01000000000000100000000000????????????????001000000000?????????????????00100000000000000100000000000100000000000001000000000100000000000010000000000000000100000????????????????0?????????0010000000000100000000000000000000100000000000000000010000000100000000000000000000000000000010000000000001000000000000100000000000000000000001000000010000000000010000000000000000001000000000100000000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:pequ1242" taxon="pequ1242" value="010000010001000001000000000000000001000?????????????0000100000000001000010000000000000001000000000000000100000010000000000001000000000000000000100000000000000100000?????????????????00100000000000000010000000000?????????????0????????0?????????????0????????010000000000000????????????????0100000000000000001000010000000000000000000000010000000000010000000000??????????????0000000000001000000000000000000000100001000???????????????????0???????????010000000000010000000000000000100000000000100000000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:plai1258" taxon="plai1258" value="01000001000100000000000100000010000000010000000000000??????????????????0010000000000000000000000100010000000000100000000000010000000000010000000000000000000000100000100000000000000001000000000000000010000000000100000000000000010000000100000000000010000000001000000000000100000000000000001000000000010000000000100000000000000100000000000000000000100000000000100000000000000000000000000000001000000000001000000000000000000000000100000001000000000010000000000000000100000000000001000000000100000000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:pota1247" taxon="pota1247" value="0100000100010000010000000000001000000000000010000000000010000000000000000100000000000000001000000000100000000000000000000010100000000000100000000000000000100000000001000000000000000001000100000000001000000000000000100000000000100000000000100000000110000000?????????????000000000100000000100000000001000000000000000001000000000000010000000000000001000000000010000000000000000000000000000001000000000010100000000000???????????????????000000000100010000000000010000000000000000000001000000100000000100000000010000000000100000000000" />
+    <sequence id="language_data_algic:powh1243" taxon="powh1243" value="0?????00010????0????????????0010000000010000000000000000000000100000100000000000100000000100000000000000001000000001000000001000000000000010000000000010010000000000010000000000000000000000000010000010000000000000000000001000????????000000000010000????????000000000010000000000000001000000000001000???????????010000000000010000000000000010000010001000000000??????????????0?????????????????????????00000000001000000???????????????????000000000010000000000100000000000100010000000000100000???????00100000000000010000000000010000010" />
+    <sequence id="language_data_algic:siks1238" taxon="siks1238" value="01000001000100000001000000000010000000000100000000010??????????????????000100000000010000010000000000100000000000011000000000010000000100010000000010000000010000000001000000000000000000100100000000000100000000000100000000000000100000000100000000000010000000001000000000000010000000000000?????????0001000000000010000000000000000100000000000000000001000100000100000000000000001000000000000000000100000000100000000000001000000000000000000010000000000010000000001000000000100000100000000000001000000100000000010000000010000000010000" />
+    <sequence id="language_data_algic:sout2978" taxon="sout2978" value="010000010001000000000001000000100000000?????????????00010000000000000000???????????????000001000000???????????010000000000001000000000001000000000000000010000000000?????????????????01000000000000??????????????0?????????????0001000000?????????????010000000001000000000000100000000000000000100000000010000000000100000000000000000000000000010000000100000000000000000100000000000000000000001000000000000001000000000000100000000000000000001000000000010000000000000000100000000000001000000000100000000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:unam1242" taxon="unam1242" value="010000010001000000000000100000100000000000000000100000001000000000000000000000000100000000001000000010000000000100000000000010000000000000001000000000000100000000000000000000001000000000010000000000000100000000?????????????010000000000000000001000????????00100000000000010000000000000000100000000001000000000010000000000000010000000000000000000000010000000000000001000000?????????????????????????00000000001000000???????????????????010000000000010000000000010000000000000000100000000000100000000100000000010000000000100000000000" />
+    <sequence id="language_data_algic:wamp1249" taxon="wamp1249" value="0100000100010000000000000100001000000000010000000000000010000000000000000100000000000000000010000000000000010000000100000000100000000000000000001000000101000000000000000000000001000000000010000000000010000000001000000000000010000000010000000000000100000000?????????????0100000000000000001000000000010000000000000000001000000000000000001000000000110000000000000000001000000000000000000000000100000000000000010000000000000000000001000001000000000000000000010000000000010000000000000010000100000000100000000010000010000000000000000" />
+    <sequence id="language_data_algic:west2630" taxon="west2630" value="010000010001000010000000000000100000000100000000000000101000000000000000100000000000000001000000000100000000000100000000000010000000000010000000000000000100000000001000000000000000001000000000010010100000000000100000000000001000000001000000000000010000000010000000000000100000000000000001000000000010000000000?????????????01000000000000000010000110000000001000000000000001000000000000000000000000001000000000000001000000000000000000010000000000010000000000010000000000000100000000000000100000001000000000010000010000000000000000" />
+    <sequence id="language_data_algic:wiyo1248" taxon="wiyo1248" value="0100000???010000000000000010001000000000000000000100000000000001000001000000000000100010000000000100000000001001000000000000000000010000000000000100000000000000011000000000000000110001000000000000000000000100100000000000010000000010000000000000110????????0?????????????0000000000000100001000000000???????????000000000010000000000000000000100000010000000100000000000010000000000000000000000001000000000000000010100???????????????????0???????????0001000000000?????????????0000000000001010100000000000010010000001000000000001000001" />
+    <sequence id="language_data_algic:yuro1248" taxon="yuro1248" value="000001010001000000000000000100000000100000000000001000000000000010000010000000000001000000000000100000000000010000000100000000000000100000000000001000000100000000000000000001000000100100000000000000000000001000000000000000100000000100001000000000000000010000000000001010000000000000010100000000100000000000100000000000010000000000000000000100010000001000100000000000010100000000000000000000001001000000001000000100000000000000000101000000000001010000000001000000000001000100000000000000000000100000001001010000000000000000100000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:algic:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:algic" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:algic" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:algic" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:algic" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(wiyo1248,yuro1248,(siks1238,(arap1274,chey1247,meno1252,(atik1240,mont1268,nask1242,(moos1236,nort1552,plai1258,sout2978)),(miam1252,(kick1244,mesk1242),(pota1247,(algo1255,otta1242,(chip1241,east2542)))),(male1292,mikm1235,powh1243,(east2544,west2630),(muns1251,unam1242),(pequ1242,wamp1249)))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:algic" name="distribution">
+          <input id="featureClockRateCompound:algic" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:algic:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:algic" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:algic" beta="@featureClockRateGammaScale:algic" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:algic" name="distribution" x="@featureClockRateGammaScale:algic">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:algic" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:algic" name="distribution" x="@covarion_alpha.s:algic">
+          <Uniform id="CovAlphaUniform:algic" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:algic" name="distribution" x="@covarion_s.s:algic">
+          <Gamma id="Gamma.0:algic" name="distr">
+            <parameter id="covarion_switch_gamma_param1:algic" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:algic" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:algic:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:1pl" spec="SiteModel" mutationRate="@featureClockRate:algic:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:algic" spec="BinaryCovarion" alpha="@covarion_alpha.s:algic" switchRate="@covarion_s.s:algic">
+              <vfrequencies id="algic:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.92 0.08</vfrequencies>
+              <parameter id="algic:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="algic:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_algic:1pl" spec="FilteredAlignment" data="@data_algic" filter="1-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:1sg" spec="SiteModel" mutationRate="@featureClockRate:algic:1sg" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:1sg" spec="FilteredAlignment" data="@data_algic" filter="7-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:2sg" spec="SiteModel" mutationRate="@featureClockRate:algic:2sg" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:2sg" spec="FilteredAlignment" data="@data_algic" filter="11-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:blood" spec="SiteModel" mutationRate="@featureClockRate:algic:blood" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:blood" spec="FilteredAlignment" data="@data_algic" filter="16-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:bone" spec="SiteModel" mutationRate="@featureClockRate:algic:bone" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:bone" spec="FilteredAlignment" data="@data_algic" filter="29-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:breast" spec="SiteModel" mutationRate="@featureClockRate:algic:breast" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:breast" spec="FilteredAlignment" data="@data_algic" filter="39-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:come" spec="SiteModel" mutationRate="@featureClockRate:algic:come" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:come" spec="FilteredAlignment" data="@data_algic" filter="53-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:die" spec="SiteModel" mutationRate="@featureClockRate:algic:die" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:die" spec="FilteredAlignment" data="@data_algic" filter="72-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:dog" spec="SiteModel" mutationRate="@featureClockRate:algic:dog" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:dog" spec="FilteredAlignment" data="@data_algic" filter="88-98" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:drink" spec="SiteModel" mutationRate="@featureClockRate:algic:drink" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:drink" spec="FilteredAlignment" data="@data_algic" filter="99-110" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:ear" spec="SiteModel" mutationRate="@featureClockRate:algic:ear" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:ear" spec="FilteredAlignment" data="@data_algic" filter="111-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:eye" spec="SiteModel" mutationRate="@featureClockRate:algic:eye" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:eye" spec="FilteredAlignment" data="@data_algic" filter="124-135" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:fire" spec="SiteModel" mutationRate="@featureClockRate:algic:fire" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:fire" spec="FilteredAlignment" data="@data_algic" filter="136-152" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:fish" spec="SiteModel" mutationRate="@featureClockRate:algic:fish" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:fish" spec="FilteredAlignment" data="@data_algic" filter="153-163" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:full" spec="SiteModel" mutationRate="@featureClockRate:algic:full" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:full" spec="FilteredAlignment" data="@data_algic" filter="164-181" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:hand" spec="SiteModel" mutationRate="@featureClockRate:algic:hand" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:hand" spec="FilteredAlignment" data="@data_algic" filter="182-194" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:hear" spec="SiteModel" mutationRate="@featureClockRate:algic:hear" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:hear" spec="FilteredAlignment" data="@data_algic" filter="195-209" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:horn" spec="SiteModel" mutationRate="@featureClockRate:algic:horn" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:horn" spec="FilteredAlignment" data="@data_algic" filter="210-223" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:knee" spec="SiteModel" mutationRate="@featureClockRate:algic:knee" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:knee" spec="FilteredAlignment" data="@data_algic" filter="224-232" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:leaf" spec="SiteModel" mutationRate="@featureClockRate:algic:leaf" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:leaf" spec="FilteredAlignment" data="@data_algic" filter="233-246" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:liver" spec="SiteModel" mutationRate="@featureClockRate:algic:liver" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:liver" spec="FilteredAlignment" data="@data_algic" filter="247-255" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:louse" spec="SiteModel" mutationRate="@featureClockRate:algic:louse" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:louse" spec="FilteredAlignment" data="@data_algic" filter="256-269" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:mountain" spec="SiteModel" mutationRate="@featureClockRate:algic:mountain" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:mountain" spec="FilteredAlignment" data="@data_algic" filter="270-286" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:name" spec="SiteModel" mutationRate="@featureClockRate:algic:name" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:name" spec="FilteredAlignment" data="@data_algic" filter="287-296" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:new" spec="SiteModel" mutationRate="@featureClockRate:algic:new" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:new" spec="FilteredAlignment" data="@data_algic" filter="297-308" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:night" spec="SiteModel" mutationRate="@featureClockRate:algic:night" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:night" spec="FilteredAlignment" data="@data_algic" filter="309-322" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:nose" spec="SiteModel" mutationRate="@featureClockRate:algic:nose" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:nose" spec="FilteredAlignment" data="@data_algic" filter="323-344" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:one" spec="SiteModel" mutationRate="@featureClockRate:algic:one" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:one" spec="FilteredAlignment" data="@data_algic" filter="345-355" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:path" spec="SiteModel" mutationRate="@featureClockRate:algic:path" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:path" spec="FilteredAlignment" data="@data_algic" filter="356-370" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:person" spec="SiteModel" mutationRate="@featureClockRate:algic:person" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:person" spec="FilteredAlignment" data="@data_algic" filter="371-396" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:see" spec="SiteModel" mutationRate="@featureClockRate:algic:see" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:see" spec="FilteredAlignment" data="@data_algic" filter="397-412" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:skin" spec="SiteModel" mutationRate="@featureClockRate:algic:skin" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:skin" spec="FilteredAlignment" data="@data_algic" filter="413-432" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:star" spec="SiteModel" mutationRate="@featureClockRate:algic:star" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:star" spec="FilteredAlignment" data="@data_algic" filter="433-444" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:stone" spec="SiteModel" mutationRate="@featureClockRate:algic:stone" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:stone" spec="FilteredAlignment" data="@data_algic" filter="445-456" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:sun" spec="SiteModel" mutationRate="@featureClockRate:algic:sun" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:sun" spec="FilteredAlignment" data="@data_algic" filter="457-470" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:tongue" spec="SiteModel" mutationRate="@featureClockRate:algic:tongue" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:tongue" spec="FilteredAlignment" data="@data_algic" filter="471-485" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:tooth" spec="SiteModel" mutationRate="@featureClockRate:algic:tooth" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:tooth" spec="FilteredAlignment" data="@data_algic" filter="486-493" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:tree" spec="SiteModel" mutationRate="@featureClockRate:algic:tree" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:tree" spec="FilteredAlignment" data="@data_algic" filter="494-504" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:two" spec="SiteModel" mutationRate="@featureClockRate:algic:two" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:two" spec="FilteredAlignment" data="@data_algic" filter="505-510" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:algic:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.algic:water" spec="SiteModel" mutationRate="@featureClockRate:algic:water" proportionInvariant="0" substModel="@covarion.s:algic" />
+          <data id="feature_data_algic:water" spec="FilteredAlignment" data="@data_algic" filter="511-528" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:algic" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:algic" name="up" />
+      <parameter idref="featureClockRateGammaScale:algic" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:algic" spec="ScaleOperator" parameter="@covarion_alpha.s:algic" scaleFactor="0.5" weight="1.0" />
+    <operator id="algic:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:algic" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:algic:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">5 3 4 12 9 13 18 15 10 11 12 11 16 10 17 12 14 13 8 13 8 13 16 9 11 13 21 10 14 25 15 19 11 11 13 14 7 10 5 17</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="algic.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:algic:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:algic" />
+      <log idref="covarion_alpha.s:algic" />
+      <log idref="covarion_s.s:algic" />
+    </logger>
+    <logger mode="tree" fileName="algic.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="kaur1271" />
+    <taxon id="kosa1251" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_kaurekosare" name="data_kaurekosare" dataType="integer">
+    <sequence id="language_data_kaurekosare:kaur1271" taxon="kaur1271" value="010010010010010010010010010010010010010010010010010001001001001000100010001100100100100100100100010010010010010010" />
+    <sequence id="language_data_kaurekosare:kosa1251" taxon="kosa1251" value="001001001001001001001001001001001001001001001001001100100100100110011001100010010010010010010011001001001001001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:kaurekosare:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:kaurekosare" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:kaurekosare" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:kaurekosare" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:kaurekosare" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(kaur1271,kosa1251);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:kaurekosare" name="distribution">
+          <input id="featureClockRateCompound:kaurekosare" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:kaurekosare:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:kaurekosare" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:kaurekosare" beta="@featureClockRateGammaScale:kaurekosare" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:kaurekosare" name="distribution" x="@featureClockRateGammaScale:kaurekosare">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:kaurekosare" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:kaurekosare" name="distribution" x="@covarion_alpha.s:kaurekosare">
+          <Uniform id="CovAlphaUniform:kaurekosare" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:kaurekosare" name="distribution" x="@covarion_s.s:kaurekosare">
+          <Gamma id="Gamma.0:kaurekosare" name="distr">
+            <parameter id="covarion_switch_gamma_param1:kaurekosare" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:kaurekosare" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:kaurekosare:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:1pl" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:kaurekosare" spec="BinaryCovarion" alpha="@covarion_alpha.s:kaurekosare" switchRate="@covarion_s.s:kaurekosare">
+              <vfrequencies id="kaurekosare:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.66 0.34</vfrequencies>
+              <parameter id="kaurekosare:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="kaurekosare:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_kaurekosare:1pl" spec="FilteredAlignment" data="@data_kaurekosare" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:1sg" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:1sg" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:1sg" spec="FilteredAlignment" data="@data_kaurekosare" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:2sg" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:2sg" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:2sg" spec="FilteredAlignment" data="@data_kaurekosare" filter="7-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:blood" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:blood" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:blood" spec="FilteredAlignment" data="@data_kaurekosare" filter="10-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:bone" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:bone" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:bone" spec="FilteredAlignment" data="@data_kaurekosare" filter="13-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:come" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:come" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:come" spec="FilteredAlignment" data="@data_kaurekosare" filter="16-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:die" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:die" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:die" spec="FilteredAlignment" data="@data_kaurekosare" filter="19-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:dog" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:dog" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:dog" spec="FilteredAlignment" data="@data_kaurekosare" filter="22-24" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:drink" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:drink" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:drink" spec="FilteredAlignment" data="@data_kaurekosare" filter="25-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:ear" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:ear" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:ear" spec="FilteredAlignment" data="@data_kaurekosare" filter="28-30" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:eye" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:eye" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:eye" spec="FilteredAlignment" data="@data_kaurekosare" filter="31-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:fire" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:fire" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:fire" spec="FilteredAlignment" data="@data_kaurekosare" filter="34-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:fish" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:fish" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:fish" spec="FilteredAlignment" data="@data_kaurekosare" filter="37-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:hear" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:hear" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:hear" spec="FilteredAlignment" data="@data_kaurekosare" filter="40-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:knee" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:knee" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:knee" spec="FilteredAlignment" data="@data_kaurekosare" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:leaf" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:leaf" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:leaf" spec="FilteredAlignment" data="@data_kaurekosare" filter="46-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:liver" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:liver" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:liver" spec="FilteredAlignment" data="@data_kaurekosare" filter="49-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:louse" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:louse" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:louse" spec="FilteredAlignment" data="@data_kaurekosare" filter="53-55" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:mountain" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:mountain" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:mountain" spec="FilteredAlignment" data="@data_kaurekosare" filter="56-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:name" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:name" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:name" spec="FilteredAlignment" data="@data_kaurekosare" filter="59-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:new" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:new" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:new" spec="FilteredAlignment" data="@data_kaurekosare" filter="62-65" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:night" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:night" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:night" spec="FilteredAlignment" data="@data_kaurekosare" filter="66-69" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:nose" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:nose" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:nose" spec="FilteredAlignment" data="@data_kaurekosare" filter="70-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:one" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:one" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:one" spec="FilteredAlignment" data="@data_kaurekosare" filter="74-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:path" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:path" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:path" spec="FilteredAlignment" data="@data_kaurekosare" filter="78-80" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:person" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:person" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:person" spec="FilteredAlignment" data="@data_kaurekosare" filter="81-83" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:see" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:see" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:see" spec="FilteredAlignment" data="@data_kaurekosare" filter="84-86" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:skin" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:skin" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:skin" spec="FilteredAlignment" data="@data_kaurekosare" filter="87-89" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:star" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:star" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:star" spec="FilteredAlignment" data="@data_kaurekosare" filter="90-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:stone" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:stone" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:stone" spec="FilteredAlignment" data="@data_kaurekosare" filter="93-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:sun" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:sun" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:sun" spec="FilteredAlignment" data="@data_kaurekosare" filter="97-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:tongue" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:tongue" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:tongue" spec="FilteredAlignment" data="@data_kaurekosare" filter="100-102" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:tooth" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:tooth" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:tooth" spec="FilteredAlignment" data="@data_kaurekosare" filter="103-105" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:tree" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:tree" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:tree" spec="FilteredAlignment" data="@data_kaurekosare" filter="106-108" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:two" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:two" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:two" spec="FilteredAlignment" data="@data_kaurekosare" filter="109-111" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kaurekosare:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kaurekosare:water" spec="SiteModel" mutationRate="@featureClockRate:kaurekosare:water" proportionInvariant="0" substModel="@covarion.s:kaurekosare" />
+          <data id="feature_data_kaurekosare:water" spec="FilteredAlignment" data="@data_kaurekosare" filter="112-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:kaurekosare" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:kaurekosare" name="up" />
+      <parameter idref="featureClockRateGammaScale:kaurekosare" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:kaurekosare" spec="ScaleOperator" parameter="@covarion_alpha.s:kaurekosare" scaleFactor="0.5" weight="1.0" />
+    <operator id="kaurekosare:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:kaurekosare" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:kaurekosare:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="36" estimate="false">2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 3 3 3 3 2 2 2 2 2 3 2 2 2 2 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="kaurekosare.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:kaurekosare:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:kaurekosare" />
+      <log idref="covarion_alpha.s:kaurekosare" />
+      <log idref="covarion_s.s:kaurekosare" />
+    </logger>
+    <logger mode="tree" fileName="kaurekosare.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

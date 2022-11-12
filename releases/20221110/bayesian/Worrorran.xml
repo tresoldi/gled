@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="ngar1284" />
+    <taxon id="worr1237" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_worrorran" name="data_worrorran" dataType="integer">
+    <sequence id="language_data_worrorran:ngar1284" taxon="ngar1284" value="01001011010010101101101001101010100101101010100100101010101101001110101010010010" />
+    <sequence id="language_data_worrorran:worr1237" taxon="worr1237" value="0010010000100100100010010??00100010010000100010010010001001000100100010001001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="2sg,bone,breast,come,die,dog,drink,ear,eye,fire,hand,knee,liver,nose,one,person,see,star,stone,tooth,tree,two,water">
+        <parameter id="featureClockRate:worrorran:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:worrorran" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:worrorran" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:worrorran" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:worrorran" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(ngar1284,worr1237);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:worrorran" name="distribution">
+          <input id="featureClockRateCompound:worrorran" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="2sg,bone,breast,come,die,dog,drink,ear,eye,fire,hand,knee,liver,nose,one,person,see,star,stone,tooth,tree,two,water">
+              <var idref="featureClockRate:worrorran:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:worrorran" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:worrorran" beta="@featureClockRateGammaScale:worrorran" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:worrorran" name="distribution" x="@featureClockRateGammaScale:worrorran">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:worrorran" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:worrorran" name="distribution" x="@covarion_alpha.s:worrorran">
+          <Uniform id="CovAlphaUniform:worrorran" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:worrorran" name="distribution" x="@covarion_s.s:worrorran">
+          <Gamma id="Gamma.0:worrorran" name="distr">
+            <parameter id="covarion_switch_gamma_param1:worrorran" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:worrorran" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:worrorran:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:2sg" spec="SiteModel" mutationRate="@featureClockRate:worrorran:2sg" proportionInvariant="0">
+            <substModel id="covarion.s:worrorran" spec="BinaryCovarion" alpha="@covarion_alpha.s:worrorran" switchRate="@covarion_s.s:worrorran">
+              <vfrequencies id="worrorran:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.62 0.38</vfrequencies>
+              <parameter id="worrorran:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="worrorran:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_worrorran:2sg" spec="FilteredAlignment" data="@data_worrorran" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:bone" spec="SiteModel" mutationRate="@featureClockRate:worrorran:bone" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:bone" spec="FilteredAlignment" data="@data_worrorran" filter="4-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:breast" spec="SiteModel" mutationRate="@featureClockRate:worrorran:breast" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:breast" spec="FilteredAlignment" data="@data_worrorran" filter="9-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:come" spec="SiteModel" mutationRate="@featureClockRate:worrorran:come" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:come" spec="FilteredAlignment" data="@data_worrorran" filter="12-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:die" spec="SiteModel" mutationRate="@featureClockRate:worrorran:die" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:die" spec="FilteredAlignment" data="@data_worrorran" filter="16-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:dog" spec="SiteModel" mutationRate="@featureClockRate:worrorran:dog" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:dog" spec="FilteredAlignment" data="@data_worrorran" filter="19-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:drink" spec="SiteModel" mutationRate="@featureClockRate:worrorran:drink" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:drink" spec="FilteredAlignment" data="@data_worrorran" filter="22-24" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:ear" spec="SiteModel" mutationRate="@featureClockRate:worrorran:ear" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:ear" spec="FilteredAlignment" data="@data_worrorran" filter="25-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:eye" spec="SiteModel" mutationRate="@featureClockRate:worrorran:eye" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:eye" spec="FilteredAlignment" data="@data_worrorran" filter="28-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:fire" spec="SiteModel" mutationRate="@featureClockRate:worrorran:fire" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:fire" spec="FilteredAlignment" data="@data_worrorran" filter="32-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:hand" spec="SiteModel" mutationRate="@featureClockRate:worrorran:hand" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:hand" spec="FilteredAlignment" data="@data_worrorran" filter="35-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:knee" spec="SiteModel" mutationRate="@featureClockRate:worrorran:knee" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:knee" spec="FilteredAlignment" data="@data_worrorran" filter="40-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:liver" spec="SiteModel" mutationRate="@featureClockRate:worrorran:liver" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:liver" spec="FilteredAlignment" data="@data_worrorran" filter="44-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:nose" spec="SiteModel" mutationRate="@featureClockRate:worrorran:nose" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:nose" spec="FilteredAlignment" data="@data_worrorran" filter="47-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:one" spec="SiteModel" mutationRate="@featureClockRate:worrorran:one" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:one" spec="FilteredAlignment" data="@data_worrorran" filter="50-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:person" spec="SiteModel" mutationRate="@featureClockRate:worrorran:person" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:person" spec="FilteredAlignment" data="@data_worrorran" filter="54-57" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:see" spec="SiteModel" mutationRate="@featureClockRate:worrorran:see" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:see" spec="FilteredAlignment" data="@data_worrorran" filter="58-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:star" spec="SiteModel" mutationRate="@featureClockRate:worrorran:star" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:star" spec="FilteredAlignment" data="@data_worrorran" filter="61-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:stone" spec="SiteModel" mutationRate="@featureClockRate:worrorran:stone" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:stone" spec="FilteredAlignment" data="@data_worrorran" filter="64-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:tooth" spec="SiteModel" mutationRate="@featureClockRate:worrorran:tooth" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:tooth" spec="FilteredAlignment" data="@data_worrorran" filter="68-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:tree" spec="SiteModel" mutationRate="@featureClockRate:worrorran:tree" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:tree" spec="FilteredAlignment" data="@data_worrorran" filter="72-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:two" spec="SiteModel" mutationRate="@featureClockRate:worrorran:two" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:two" spec="FilteredAlignment" data="@data_worrorran" filter="75-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:worrorran:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.worrorran:water" spec="SiteModel" mutationRate="@featureClockRate:worrorran:water" proportionInvariant="0" substModel="@covarion.s:worrorran" />
+          <data id="feature_data_worrorran:water" spec="FilteredAlignment" data="@data_worrorran" filter="78-80" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:worrorran" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:worrorran" name="up" />
+      <parameter idref="featureClockRateGammaScale:worrorran" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:worrorran" spec="ScaleOperator" parameter="@covarion_alpha.s:worrorran" scaleFactor="0.5" weight="1.0" />
+    <operator id="worrorran:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:worrorran" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="2sg,bone,breast,come,die,dog,drink,ear,eye,fire,hand,knee,liver,nose,one,person,see,star,stone,tooth,tree,two,water">
+        <parameter idref="featureClockRate:worrorran:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="23" estimate="false">2 4 2 3 2 2 2 2 3 2 4 3 2 2 3 3 2 2 3 3 2 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="worrorran.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="2sg,bone,breast,come,die,dog,drink,ear,eye,fire,hand,knee,liver,nose,one,person,see,star,stone,tooth,tree,two,water">
+        <log idref="featureClockRate:worrorran:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:worrorran" />
+      <log idref="covarion_alpha.s:worrorran" />
+      <log idref="covarion_s.s:worrorran" />
+    </logger>
+    <logger mode="tree" fileName="worrorran.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

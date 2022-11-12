@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="daur1238,dong1285,halh1238,kalm1243,mogh1245,mong1330,peri1253,russ1264">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_mongolickhitan" name="data_mongolickhitan" dataType="integer">
+    <sequence id="language_data_mongolickhitan:daur1238" taxon="daur1238" value="011011010001000011000001001100000010011001010011001011000100100000100100100100100000001000100001001001000001001000001000010000100101000100100011010101000" />
+    <sequence id="language_data_mongolickhitan:dong1285" taxon="dong1285" value="00101001000001000000100100000001001000001001000001000000100000100000100000100000000100100010000??01001000000100010000001010000010001000100001010010000001" />
+    <sequence id="language_data_mongolickhitan:halh1238" taxon="halh1238" value="010010011001100010000101101000100010010100010010100010010001100000010000010000000110001100100001001101000101001000011000010001010001100100100001010001010" />
+    <sequence id="language_data_mongolickhitan:kalm1243" taxon="kalm1243" value="001010010001000010010001001000000010010000010010000000100000100000010000010000001000001000001001001000100001001000000100010000010001000100100001010001000" />
+    <sequence id="language_data_mongolickhitan:mogh1245" taxon="mogh1245" value="01001001000100000000100100000100101101010000101000001000000001010?????0?????0????????0100000010110??010100010001010000100011000010010000100100??001001100" />
+    <sequence id="language_data_mongolickhitan:mong1330" taxon="mong1330" value="0100100100100000??????010010000000100100000100?????01000000100000100000?????0????????0??0100000100100100000??0100001000001000?????0100???01000??010001000" />
+    <sequence id="language_data_mongolickhitan:peri1253" taxon="peri1253" value="0110100100?????0001000010000100000100?????01001000001000000010000?????0?????0001000000100001000100??010010010010000100000100001000010001001000??010001000" />
+    <sequence id="language_data_mongolickhitan:russ1264" taxon="russ1264" value="01001001001000101000000100100000001001000001001000001000000010000100000100000100000010??01000001001001000001001000001000010001000001001100100010010001000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,2sg,bone,breast,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,leaf,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,tongue,tree,two">
+        <parameter id="featureClockRate:mongolickhitan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:mongolickhitan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:mongolickhitan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:mongolickhitan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:mongolickhitan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(daur1238,dong1285,mogh1245,((mong1330,russ1264),(halh1238,kalm1243,peri1253)));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:mongolickhitan" name="distribution">
+          <input id="featureClockRateCompound:mongolickhitan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,2sg,bone,breast,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,leaf,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,tongue,tree,two">
+              <var idref="featureClockRate:mongolickhitan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:mongolickhitan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:mongolickhitan" beta="@featureClockRateGammaScale:mongolickhitan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:mongolickhitan" name="distribution" x="@featureClockRateGammaScale:mongolickhitan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:mongolickhitan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:mongolickhitan" name="distribution" x="@covarion_alpha.s:mongolickhitan">
+          <Uniform id="CovAlphaUniform:mongolickhitan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:mongolickhitan" name="distribution" x="@covarion_s.s:mongolickhitan">
+          <Gamma id="Gamma.0:mongolickhitan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:mongolickhitan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:mongolickhitan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:mongolickhitan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:1pl" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:mongolickhitan" spec="BinaryCovarion" alpha="@covarion_alpha.s:mongolickhitan" switchRate="@covarion_s.s:mongolickhitan">
+              <vfrequencies id="mongolickhitan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.77 0.23</vfrequencies>
+              <parameter id="mongolickhitan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="mongolickhitan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_mongolickhitan:1pl" spec="FilteredAlignment" data="@data_mongolickhitan" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:2sg" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:2sg" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:2sg" spec="FilteredAlignment" data="@data_mongolickhitan" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:bone" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:bone" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:bone" spec="FilteredAlignment" data="@data_mongolickhitan" filter="7-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:breast" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:breast" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:breast" spec="FilteredAlignment" data="@data_mongolickhitan" filter="10-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:die" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:die" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:die" spec="FilteredAlignment" data="@data_mongolickhitan" filter="16-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:dog" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:dog" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:dog" spec="FilteredAlignment" data="@data_mongolickhitan" filter="23-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:drink" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:drink" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:drink" spec="FilteredAlignment" data="@data_mongolickhitan" filter="26-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:eye" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:eye" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:eye" spec="FilteredAlignment" data="@data_mongolickhitan" filter="34-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:fire" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:fire" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:fire" spec="FilteredAlignment" data="@data_mongolickhitan" filter="37-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:fish" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:fish" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:fish" spec="FilteredAlignment" data="@data_mongolickhitan" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:full" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:full" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:full" spec="FilteredAlignment" data="@data_mongolickhitan" filter="46-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:hand" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:hand" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:hand" spec="FilteredAlignment" data="@data_mongolickhitan" filter="52-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:hear" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:hear" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:hear" spec="FilteredAlignment" data="@data_mongolickhitan" filter="59-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:horn" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:horn" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:horn" spec="FilteredAlignment" data="@data_mongolickhitan" filter="65-70" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:knee" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:knee" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:knee" spec="FilteredAlignment" data="@data_mongolickhitan" filter="71-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:leaf" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:leaf" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:leaf" spec="FilteredAlignment" data="@data_mongolickhitan" filter="77-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:louse" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:louse" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:louse" spec="FilteredAlignment" data="@data_mongolickhitan" filter="86-88" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:mountain" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:mountain" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:mountain" spec="FilteredAlignment" data="@data_mongolickhitan" filter="89-94" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:name" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:name" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:name" spec="FilteredAlignment" data="@data_mongolickhitan" filter="95-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:new" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:new" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:new" spec="FilteredAlignment" data="@data_mongolickhitan" filter="98-100" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:night" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:night" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:night" spec="FilteredAlignment" data="@data_mongolickhitan" filter="101-106" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:nose" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:nose" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:nose" spec="FilteredAlignment" data="@data_mongolickhitan" filter="107-109" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:one" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:one" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:one" spec="FilteredAlignment" data="@data_mongolickhitan" filter="110-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:path" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:path" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:path" spec="FilteredAlignment" data="@data_mongolickhitan" filter="115-120" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:person" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:person" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:person" spec="FilteredAlignment" data="@data_mongolickhitan" filter="121-124" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:see" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:see" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:see" spec="FilteredAlignment" data="@data_mongolickhitan" filter="125-130" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:skin" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:skin" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:skin" spec="FilteredAlignment" data="@data_mongolickhitan" filter="131-133" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:star" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:star" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:star" spec="FilteredAlignment" data="@data_mongolickhitan" filter="134-137" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:stone" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:stone" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:stone" spec="FilteredAlignment" data="@data_mongolickhitan" filter="138-141" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:tongue" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:tongue" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:tongue" spec="FilteredAlignment" data="@data_mongolickhitan" filter="142-144" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:tree" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:tree" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:tree" spec="FilteredAlignment" data="@data_mongolickhitan" filter="145-148" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:mongolickhitan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.mongolickhitan:two" spec="SiteModel" mutationRate="@featureClockRate:mongolickhitan:two" proportionInvariant="0" substModel="@covarion.s:mongolickhitan" />
+          <data id="feature_data_mongolickhitan:two" spec="FilteredAlignment" data="@data_mongolickhitan" filter="149-153" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:mongolickhitan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:mongolickhitan" name="up" />
+      <parameter idref="featureClockRateGammaScale:mongolickhitan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:mongolickhitan" spec="ScaleOperator" parameter="@covarion_alpha.s:mongolickhitan" scaleFactor="0.5" weight="1.0" />
+    <operator id="mongolickhitan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:mongolickhitan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,2sg,bone,breast,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,leaf,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,tongue,tree,two">
+        <parameter idref="featureClockRate:mongolickhitan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="32" estimate="false">2 2 2 5 6 2 7 2 5 2 5 6 5 5 5 8 2 5 2 2 5 2 4 5 3 5 2 3 3 2 3 4</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="mongolickhitan.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,2sg,bone,breast,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,leaf,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,tongue,tree,two">
+        <log idref="featureClockRate:mongolickhitan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:mongolickhitan" />
+      <log idref="covarion_alpha.s:mongolickhitan" />
+      <log idref="covarion_s.s:mongolickhitan" />
+    </logger>
+    <logger mode="tree" fileName="mongolickhitan.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

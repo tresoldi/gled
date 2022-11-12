@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="coch1272,hava1248,kili1268,kumi1248,mari1440,moha1256">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_cochimiyuman" name="data_cochimiyuman" dataType="integer">
+    <sequence id="language_data_cochimiyuman:coch1272" taxon="coch1272" value="0100001010010010100100100000010010001000100001010001000000?????0??0100000000001001000010000????0?????0????01000????01000010101010000100???0100001000010??????01000100001000100010010001001001010" />
+    <sequence id="language_data_cochimiyuman:hava1248" taxon="hava1248" value="000001000100100001001000000010001010001000001000010000010000001001000000100010010000100001010000000100010100010001000000100010000001000011001010000010000100100010000100100000100000010100100100" />
+    <sequence id="language_data_cochimiyuman:kili1268" taxon="kili1268" value="0001000001001000100010001000000010001000001000000100010000100000100001000010000101000001000010000100000100000101100000100001000001000001000????00010000??????01000001000010010000000100001100100" />
+    <sequence id="language_data_cochimiyuman:kumi1248" taxon="kumi1248" value="00100000010010001000100100000000???01000010000001000100000100000??00100001000001001000????010000100010100000100100000100000010001000010100001000010000010010000100010000100010000001000000100100" />
+    <sequence id="language_data_cochimiyuman:mari1440" taxon="mari1440" value="0??????0??0????0100??000010000000100100000010000010000100001000001000010000000010001000010000110?????0????00010????000010000100000100001000010000001000??????000100001001000010000??????00100100" />
+    <sequence id="language_data_cochimiyuman:moha1256" taxon="moha1256" value="0000100001000100100010000111001000101100000100000100001010001100010000110001000100010000100100000010000010000101001000010000100000110001000011000001000010010000100001001000010010??????00100101" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tooth,tree,two,water">
+        <parameter id="featureClockRate:cochimiyuman:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:cochimiyuman" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:cochimiyuman" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:cochimiyuman" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:cochimiyuman" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(coch1272,(kili1268,(hava1248,kumi1248,(mari1440,moha1256))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:cochimiyuman" name="distribution">
+          <input id="featureClockRateCompound:cochimiyuman" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tooth,tree,two,water">
+              <var idref="featureClockRate:cochimiyuman:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:cochimiyuman" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:cochimiyuman" beta="@featureClockRateGammaScale:cochimiyuman" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:cochimiyuman" name="distribution" x="@featureClockRateGammaScale:cochimiyuman">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:cochimiyuman" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:cochimiyuman" name="distribution" x="@covarion_alpha.s:cochimiyuman">
+          <Uniform id="CovAlphaUniform:cochimiyuman" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:cochimiyuman" name="distribution" x="@covarion_s.s:cochimiyuman">
+          <Gamma id="Gamma.0:cochimiyuman" name="distr">
+            <parameter id="covarion_switch_gamma_param1:cochimiyuman" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:cochimiyuman" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:cochimiyuman:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:1pl" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:cochimiyuman" spec="BinaryCovarion" alpha="@covarion_alpha.s:cochimiyuman" switchRate="@covarion_s.s:cochimiyuman">
+              <vfrequencies id="cochimiyuman:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.80 0.20</vfrequencies>
+              <parameter id="cochimiyuman:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="cochimiyuman:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_cochimiyuman:1pl" spec="FilteredAlignment" data="@data_cochimiyuman" filter="1-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:1sg" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:1sg" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:1sg" spec="FilteredAlignment" data="@data_cochimiyuman" filter="8-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:2sg" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:2sg" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:2sg" spec="FilteredAlignment" data="@data_cochimiyuman" filter="11-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:bone" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:bone" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:bone" spec="FilteredAlignment" data="@data_cochimiyuman" filter="16-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:breast" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:breast" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:breast" spec="FilteredAlignment" data="@data_cochimiyuman" filter="19-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:come" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:come" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:come" spec="FilteredAlignment" data="@data_cochimiyuman" filter="22-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:die" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:die" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:die" spec="FilteredAlignment" data="@data_cochimiyuman" filter="32-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:dog" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:dog" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:dog" spec="FilteredAlignment" data="@data_cochimiyuman" filter="36-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:drink" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:drink" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:drink" spec="FilteredAlignment" data="@data_cochimiyuman" filter="40-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:ear" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:ear" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:ear" spec="FilteredAlignment" data="@data_cochimiyuman" filter="47-50" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:eye" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:eye" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:eye" spec="FilteredAlignment" data="@data_cochimiyuman" filter="51-57" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:fire" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:fire" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:fire" spec="FilteredAlignment" data="@data_cochimiyuman" filter="58-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:fish" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:fish" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:fish" spec="FilteredAlignment" data="@data_cochimiyuman" filter="64-66" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:full" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:full" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:full" spec="FilteredAlignment" data="@data_cochimiyuman" filter="67-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:hand" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:hand" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:hand" spec="FilteredAlignment" data="@data_cochimiyuman" filter="78-80" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:hear" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:hear" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:hear" spec="FilteredAlignment" data="@data_cochimiyuman" filter="81-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:leaf" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:leaf" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:leaf" spec="FilteredAlignment" data="@data_cochimiyuman" filter="86-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:liver" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:liver" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:liver" spec="FilteredAlignment" data="@data_cochimiyuman" filter="91-95" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:louse" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:louse" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:louse" spec="FilteredAlignment" data="@data_cochimiyuman" filter="96-101" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:mountain" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:mountain" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:mountain" spec="FilteredAlignment" data="@data_cochimiyuman" filter="102-106" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:name" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:name" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:name" spec="FilteredAlignment" data="@data_cochimiyuman" filter="107-110" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:new" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:new" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:new" spec="FilteredAlignment" data="@data_cochimiyuman" filter="111-115" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:night" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:night" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:night" spec="FilteredAlignment" data="@data_cochimiyuman" filter="116-122" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:nose" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:nose" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:nose" spec="FilteredAlignment" data="@data_cochimiyuman" filter="123-126" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:one" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:one" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:one" spec="FilteredAlignment" data="@data_cochimiyuman" filter="127-134" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:path" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:path" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:path" spec="FilteredAlignment" data="@data_cochimiyuman" filter="135-138" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:person" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:person" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:person" spec="FilteredAlignment" data="@data_cochimiyuman" filter="139-143" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:see" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:see" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:see" spec="FilteredAlignment" data="@data_cochimiyuman" filter="144-150" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:skin" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:skin" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:skin" spec="FilteredAlignment" data="@data_cochimiyuman" filter="151-157" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:star" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:star" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:star" spec="FilteredAlignment" data="@data_cochimiyuman" filter="158-161" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:stone" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:stone" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:stone" spec="FilteredAlignment" data="@data_cochimiyuman" filter="162-166" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:sun" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:sun" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:sun" spec="FilteredAlignment" data="@data_cochimiyuman" filter="167-170" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:tooth" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:tooth" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:tooth" spec="FilteredAlignment" data="@data_cochimiyuman" filter="171-177" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:tree" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:tree" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:tree" spec="FilteredAlignment" data="@data_cochimiyuman" filter="178-184" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:two" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:two" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:two" spec="FilteredAlignment" data="@data_cochimiyuman" filter="185-187" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cochimiyuman:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cochimiyuman:water" spec="SiteModel" mutationRate="@featureClockRate:cochimiyuman:water" proportionInvariant="0" substModel="@covarion.s:cochimiyuman" />
+          <data id="feature_data_cochimiyuman:water" spec="FilteredAlignment" data="@data_cochimiyuman" filter="188-192" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:cochimiyuman" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:cochimiyuman" name="up" />
+      <parameter idref="featureClockRateGammaScale:cochimiyuman" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:cochimiyuman" spec="ScaleOperator" parameter="@covarion_alpha.s:cochimiyuman" scaleFactor="0.5" weight="1.0" />
+    <operator id="cochimiyuman:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:cochimiyuman" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tooth,tree,two,water">
+        <parameter idref="featureClockRate:cochimiyuman:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="36" estimate="false">6 2 4 2 2 9 3 3 6 3 6 5 2 10 2 4 4 4 5 4 3 4 6 3 7 3 4 6 6 3 4 3 6 6 2 4</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="cochimiyuman.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tooth,tree,two,water">
+        <log idref="featureClockRate:cochimiyuman:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:cochimiyuman" />
+      <log idref="covarion_alpha.s:cochimiyuman" />
+      <log idref="covarion_s.s:cochimiyuman" />
+    </logger>
+    <logger mode="tree" fileName="cochimiyuman.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

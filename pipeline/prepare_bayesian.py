@@ -92,9 +92,10 @@ def get_trees(roots, glottolog):
     # Get the Glottolog tree for the root
     trees = {}
     for root, glottocodes in roots.items():
+        logging.info(f"Collecting Glottolog tree for family `{root}`")
+
         # Get the Glottolog tree as an ETE3 via newick
         tree = Tree(glottolog.newick_tree(root), format=1)
-        logging.info(f"Collecting Glottolog tree for `{tree.name}`")
 
         # Traverse the tree collecting the node names to preserve,
         # which are the root and those with the glottocodes, and prune
@@ -113,12 +114,17 @@ def get_trees(roots, glottolog):
         # acceptable as a monophyletic restriction in BEAST2 (as we are
         # not using sample ancestors). To solve this, in all cases we
         # make the entries sisters
-        for node in tree.traverse("levelorder"):
-            if not node.is_leaf():
-                descendants = list(node.get_descendants())
-                if len(descendants) == 1:
+        while True:
+            changed = False
+            for node in tree.traverse("levelorder"):
+                if not node.is_leaf() and node.name in to_prune:
                     node.add_child(name=node.name)
                     node.name = ""
+                    changed = True
+                    break
+
+            if not changed:
+                break
 
         # Rename all existing nodes only to the glottocode
         # TODO: investigate why the regex r"\[(....\d+)\]" is failing
@@ -127,7 +133,9 @@ def get_trees(roots, glottolog):
             idx_b = node.name.find("]", idx_a)
             node.name = node.name[idx_a:idx_b]
 
-        # Store the tree
+        # "sort" the tree and sort it Store the tree
+        tree.sort_descendants()
+        tree.ladderize()
         trees[root] = tree.write()
 
     return trees

@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="bada1257,bett1235,brah1256,dand1238,duru1236,koda1255,korr1238,kota1263,koya1251,kuru1302,kuvi1243,mala1464,mand1413,mari1414,muth1236,nort2699,nort2702,nucl1305,peng1244,pott1240,ravu1237,saur1249,tami1289,telu1262,toda1252,tulu1258,west2408,yeru1240">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_dravidian" name="data_dravidian" dataType="integer">
+    <sequence id="language_data_dravidian:bada1257" taxon="bada1257" value="00100000100100101000001000000000000011000000000000000000011100000000011000000000000000001000000000010000001000001000001000010000000000000010000000000100000001000000100000001000010000110001000011000000001001000000011010001100000000001000001000000001100000000000010000100000000001100100000000000001100000000011000000000001000011000001010000010000000000101000001001000001000000001100000000" />
+    <sequence id="language_data_dravidian:bett1235" taxon="bett1235" value="00100000100100100000000100000000000000100000000000000000100010000000000100000000000000001000000000010000000100001000001000011000000000000010000000000010000000000000100000001000010000100000000001000000001000000000010000010000000000001000000100000000100000000000010000100000000000010000000000000000100000000001100000000001000010000000010000010000000000100000001001000001000000000100000000" />
+    <sequence id="language_data_dravidian:brah1256" taxon="brah1256" value="00100000010100100000000010000000000000011000000000010010100000000000000010000000000000000100000010????????????00100000100000010000000000001000000000001000000010000001001000010000100000100011000010000001000000000001010000110000000010010000001000001000000000000000100010000000000100100000000000000011000000001001000000000100??????????010000001000000000010000000100101001010000000100000000" />
+    <sequence id="language_data_dravidian:dand1238" taxon="dand1238" value="01000000100100100000000001000000000????????????????????0100000000000100000000000000000001000000000100000000000001000001000100000000000000001000000001000000000000000100000010000100000????????0100000000010000000000??????01000000000000100001000000001000000000000010000010000000000000000000000100000?????????01000000000000010010000000000?????01000000000100000000100?????01000000010000000000" />
+    <sequence id="language_data_dravidian:duru1236" taxon="duru1236" value="00001000100100100000000001000000000????????????????????0100010000000010001000000000000000010000000100000000000000001001010010000000000000010000000000000001000000000100000000100100000010000000000000100010000000000??????0????????????01000010000000000000000001010010000010010010000000000001010000001000000000100000000000001001000000000010000000000010000001000001001000001000000000100000000" />
+    <sequence id="language_data_dravidian:koda1255" taxon="koda1255" value="00100000100100100000000001000000000001000000000000000000100000000000000001000000000000001000000000010000000000000100001000010000000000000010000000000100000000000000100000001000010000010000000000010000000100000000010000000010000000001000000001000000001000000000010000100000000000010000000100000001000000000001000000000001000001000000010000000100000000001000001001000001000000000100000000" />
+    <sequence id="language_data_dravidian:korr1238" taxon="korr1238" value="00100000100010101000001000000000000000000100000000000000100000000000???????????????????000010000000001000000000010000010000000100000000000?????????00100000000010000100000?????0?????0????????0001000001010000000000??????000000100000001000000000100000000010000000?????010000000000010000000000000000?????????000000001000000100000010000001000000010000000010000000100?????010000000???????????" />
+    <sequence id="language_data_dravidian:kota1263" taxon="kota1263" value="00001000100100100000000100000000000001000000000000000000???????????000000001000000000000100000000000001000000000100000100000000100000000001000000000???????????????0100000001000?????010000000000100000000000100000001000000000010000000100000000100000000000100000001000000100000000100000000000000000?????????0001000000000001000001000000010000000100000000100000001001000001000000000100000000" />
+    <sequence id="language_data_dravidian:koya1251" taxon="koya1251" value="01000000100100100000010001000000010000001000000000000000100000001000100000001000000000001000000000100000000000001000001000100000000000100001000000001001000000000000100000010000100100110000000100000000010000100000000100010000000001001000000000100010000000100000100000100100000001000000000000000001000000000000001000000001001000000000000100010000000001100000001001000001000000010000000000" />
+    <sequence id="language_data_dravidian:kuru1302" taxon="kuru1302" value="00010000100100010000000000100000000000000010000000000000000010000000000000000100000000000000100000100000000000010000001000010000000000000010000000000001000000000000001000000010100000100000000100000000000000010000010000001000000000000010010000000000000000010000010000100000000001000000000000000000100000000000000001000001000010000000001000010000000000000100001001000001000000000010000000" />
+    <sequence id="language_data_dravidian:kuvi1243" taxon="kuvi1243" value="01000000100100100000000100010000100000000001000000000000000001000100010000000000000010001000000000100000000010010000001000???????????????01000000000???????????????0100000?????00001000100000001000000000100000000000100000????????????000010????????01000000000000001000000001000000100001000000000000100000100000000000010000100100000000001010000001000000????????010010000010010000???????????" />
+    <sequence id="language_data_dravidian:mala1464" taxon="mala1464" value="00011000100100101000001000001000000001000000100000000000000010000000000000000010000000001100000000010001000000011000001100000010100000000010000010000001000000000000100000001000010000110000000001000000000001000000010000000100100000001000000001000000010000000000010000100000000000000001000000000001000000000010000000000001100001000000010000010000000000100000001001000101000000000001000001" />
+    <sequence id="language_data_dravidian:mand1413" taxon="mand1413" value="000100001001001000000000000100000000000100000000000001001000000000000100000000000000010000000010001000000000000100000010000000000100100000100000000000001000000010001000000001000001000100000001000000000100000000000100000011000010000000010100000010100100000000000100000000010010000000001000000001000000100001000000000001010010000000000110010000001000010000000010010000011010000???????????" />
+    <sequence id="language_data_dravidian:mari1414" taxon="mari1414" value="01000000100100100000010000000000000100010000000000000000100000000000110000000000000100001000000000100000000000011000001000100000000000000011000000001000000000000000100000110000100000100000000100000000010000000000100000010000000000001000010000000010000000000000100000100000000011000000000000000001000000000100000000000001001000000000010000010000000001000000001001000001000000010000000000" />
+    <sequence id="language_data_dravidian:muth1236" taxon="muth1236" value="0000100010010010010000010000000000000000000000100000000010001000000000000000000010000000100000000001000000000001000000100000001000000000001000000100???????????????0100000001000010000????????00010000000??????????0??????00010000000000????000001000000000010000000?????010000000000000000001000000000110000000001000000000100??000000100000100000?????????00100000001001000001000000000000010000" />
+    <sequence id="language_data_dravidian:nort2699" taxon="nort2699" value="00010000100100100000010000000000000100001000000000000000100000000000000000100000000000000010000000101000000000001000001000100000001000000000110000000001000000000000100000000100000100010000000100000000010010000000010000000101000000001000000000100000000100000000010000010000100001000000001000000001000000000000000100000001001000000000001000010000000100100000001001000001000010010000000000" />
+    <sequence id="language_data_dravidian:nort2702" taxon="nort2702" value="01000000100100100000010000000000000000010000000000000000100000000000010000000000000000001000000000100000000000001000001000110000000000000010000000001001000000000000100000010000100000000100000100000000010000000000000100010000000000001000010000000010000000000000100000100000000001000000000000000000001000000100001000000001000100000000001000010000000001000000001001000001000000010100000000" />
+    <sequence id="language_data_dravidian:nucl1305" taxon="nucl1305" value="00100000100100101000001100000000000010000000000000001000000110000000010001000000000000001000000000010000001000001000001000010000000001000010000100000100000001000000100000001000010000100000000011000000010001000000010001010100000000001000001000000001010000000000010000100000000000000100000000001001100000000011000000000001000011000000010001010100000000101000001001000001000000000100000010" />
+    <sequence id="language_data_dravidian:peng1244" taxon="peng1244" value="00000110100100100000000000010000000????????????????????010000000001001100000000000000000100000000010000000000101000000???0???????????????01000000000???????????????0100000?????0000100????????0010000000010000000000010000000100000010000001010000000010010000000000010000?????????0??????????????????01000000000010000000000001000000000100010000000000100001000000000101000001100000000000001000" />
+    <sequence id="language_data_dravidian:pott1240" taxon="pott1240" value="000100001001001000000?????????????0000000000000100000000100000000000???????????????????01000000000100000000000000001001000???????????????010000000000000010000000000100000?????0100000000010000000001000010000000000??????00000000010000????0000000100?????????????001000010000000000000000000010000000?????????000000001000000100000000100001000001000000000000001000100?????01000000000100000000" />
+    <sequence id="language_data_dravidian:ravu1237" taxon="ravu1237" value="00101000100100100000001001000000000001000000000000000000100000000000010001000000000000001000000000010000000000001100001000000010000000000010000000000100000000000000100000001000010000110000000001000000000100000000010000000010000000001000000001000000010010000000010000100000000000000000000100000001100000000011000000000001000001000010010000000100001000001000001001000001000000000100000000" />
+    <sequence id="language_data_dravidian:saur1249" taxon="saur1249" value="00001000100100001000000000000100000000000000010000000000000010000000000000000001000000000000010000100000000000000010001000010000000000000010000000000001000000000000000100000010000010100000000100000000000000001000??????00000001000000001001000000000001000001000000010010000000000001000000000000000000010000000000000001000100001000000000001000000100000100000000100?????01000101000000100000" />
+    <sequence id="language_data_dravidian:tami1289" taxon="tami1289" value="00110000100100001000000100000000000001000000000000000000100000000000000001000000010000001000000000010000000000010000001000000010000000010010000000000001000000000100100000001000010000110000000001000000000001000000010000000100000000001000010001000000010010000000010000100000000000000000000000100001000000000010000000001001000011000000010000000100000000100000001001000001000000000100010000" />
+    <sequence id="language_data_dravidian:telu1262" taxon="telu1262" value="01000000100100101000010000000000100000000000100010000000000000101000000000000000010000000000000100000000100000001000001000000001000100001000001000000001000000000000100000000100000100100000000100000000000000000100010000000010100000001000000000100000010000000000010000100000000001010000000000001001000000000000001000000001101001000000000100010100000000100000001000010001000000000100000100" />
+    <sequence id="language_data_dravidian:toda1252" taxon="toda1252" value="00010000100100000010000000000010000000000000000001000000000000010000000000000000001000001000000000000000010000001000001000010000000000000010000000000000000100000000100000001000100000010000000000000010001000000000100000000010000000001000010000000000000000000100000010100000000000000000000000010001000000000001000000000001000001000000010000000100000000000001001001000001000000000100000000" />
+    <sequence id="language_data_dravidian:tulu1258" taxon="tulu1258" value="00101000100100100000001000000001000001000000000000000000???????????0010000000000000000101000000000????????????0??????0100000001000000000001000000010???????????????0100000?????0?????00100000000100000000??????????00100000000001000000010000????????00001000000000001000010000000000010000000010000100100000001010001001000000010000100000001000001000000000010000010??01000001000000000100000000" />
+    <sequence id="language_data_dravidian:west2408" taxon="west2408" value="0100000010010010000001000000000000000001000000000000000010000000000001000000000000000000100000000001000000000000100000100010000000000000001000000000???????????????0100000?????01000000100000001000000000100000000000001000????????????010000????????010000000000000100000100000000001000000000000000001000000000?????????????010010000000000?????01000000000????????01001000001000000010000000000" />
+    <sequence id="language_data_dravidian:yeru1240" taxon="yeru1240" value="00100000100100000001000000000000100000000000000000100000100000000000010000000000000000001000000000010000000000000000101000000000000010010010000000000000000010000010100000001000000100????????0001000000000000000010??????0????????????0100001000000001000000000000001000010000000000100000000000000000010000010000000000000100??010000000000?????010000000000100000001001000001000000000000010000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:dravidian:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:dravidian" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:dravidian" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:dravidian" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:dravidian" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((brah1256,(kuru1302,saur1249)),(nort2699,(duru1236,pott1240)),((telu1262,(kuvi1243,(mand1413,peng1244)),((nort2702,west2408),(mari1414,(dand1238,koya1251)))),((korr1238,tulu1258),((bada1257,(bett1235,nucl1305)),(kota1263,(toda1252,(koda1255,((mala1464,ravu1237),(muth1236,tami1289,yeru1240)))))))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:dravidian" name="distribution">
+          <input id="featureClockRateCompound:dravidian" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:dravidian:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:dravidian" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:dravidian" beta="@featureClockRateGammaScale:dravidian" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:dravidian" name="distribution" x="@featureClockRateGammaScale:dravidian">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:dravidian" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:dravidian" name="distribution" x="@covarion_alpha.s:dravidian">
+          <Uniform id="CovAlphaUniform:dravidian" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:dravidian" name="distribution" x="@covarion_s.s:dravidian">
+          <Gamma id="Gamma.0:dravidian" name="distr">
+            <parameter id="covarion_switch_gamma_param1:dravidian" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:dravidian" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:dravidian:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:1pl" spec="SiteModel" mutationRate="@featureClockRate:dravidian:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:dravidian" spec="BinaryCovarion" alpha="@covarion_alpha.s:dravidian" switchRate="@covarion_s.s:dravidian">
+              <vfrequencies id="dravidian:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.88 0.12</vfrequencies>
+              <parameter id="dravidian:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="dravidian:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_dravidian:1pl" spec="FilteredAlignment" data="@data_dravidian" filter="1-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:1sg" spec="SiteModel" mutationRate="@featureClockRate:dravidian:1sg" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:1sg" spec="FilteredAlignment" data="@data_dravidian" filter="8-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:2sg" spec="SiteModel" mutationRate="@featureClockRate:dravidian:2sg" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:2sg" spec="FilteredAlignment" data="@data_dravidian" filter="11-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:blood" spec="SiteModel" mutationRate="@featureClockRate:dravidian:blood" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:blood" spec="FilteredAlignment" data="@data_dravidian" filter="14-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:bone" spec="SiteModel" mutationRate="@featureClockRate:dravidian:bone" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:bone" spec="FilteredAlignment" data="@data_dravidian" filter="21-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:breast" spec="SiteModel" mutationRate="@featureClockRate:dravidian:breast" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:breast" spec="FilteredAlignment" data="@data_dravidian" filter="35-55" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:come" spec="SiteModel" mutationRate="@featureClockRate:dravidian:come" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:come" spec="FilteredAlignment" data="@data_dravidian" filter="56-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:die" spec="SiteModel" mutationRate="@featureClockRate:dravidian:die" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:die" spec="FilteredAlignment" data="@data_dravidian" filter="68-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:dog" spec="SiteModel" mutationRate="@featureClockRate:dravidian:dog" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:dog" spec="FilteredAlignment" data="@data_dravidian" filter="88-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:drink" spec="SiteModel" mutationRate="@featureClockRate:dravidian:drink" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:drink" spec="FilteredAlignment" data="@data_dravidian" filter="98-110" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:ear" spec="SiteModel" mutationRate="@featureClockRate:dravidian:ear" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:ear" spec="FilteredAlignment" data="@data_dravidian" filter="111-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:eye" spec="SiteModel" mutationRate="@featureClockRate:dravidian:eye" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:eye" spec="FilteredAlignment" data="@data_dravidian" filter="118-121" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:fire" spec="SiteModel" mutationRate="@featureClockRate:dravidian:fire" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:fire" spec="FilteredAlignment" data="@data_dravidian" filter="122-137" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:fish" spec="SiteModel" mutationRate="@featureClockRate:dravidian:fish" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:fish" spec="FilteredAlignment" data="@data_dravidian" filter="138-147" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:full" spec="SiteModel" mutationRate="@featureClockRate:dravidian:full" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:full" spec="FilteredAlignment" data="@data_dravidian" filter="148-163" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:hand" spec="SiteModel" mutationRate="@featureClockRate:dravidian:hand" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:hand" spec="FilteredAlignment" data="@data_dravidian" filter="164-169" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:hear" spec="SiteModel" mutationRate="@featureClockRate:dravidian:hear" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:hear" spec="FilteredAlignment" data="@data_dravidian" filter="170-175" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:horn" spec="SiteModel" mutationRate="@featureClockRate:dravidian:horn" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:horn" spec="FilteredAlignment" data="@data_dravidian" filter="176-181" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:knee" spec="SiteModel" mutationRate="@featureClockRate:dravidian:knee" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:knee" spec="FilteredAlignment" data="@data_dravidian" filter="182-190" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:leaf" spec="SiteModel" mutationRate="@featureClockRate:dravidian:leaf" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:leaf" spec="FilteredAlignment" data="@data_dravidian" filter="191-200" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:liver" spec="SiteModel" mutationRate="@featureClockRate:dravidian:liver" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:liver" spec="FilteredAlignment" data="@data_dravidian" filter="201-211" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:louse" spec="SiteModel" mutationRate="@featureClockRate:dravidian:louse" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:louse" spec="FilteredAlignment" data="@data_dravidian" filter="212-218" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:mountain" spec="SiteModel" mutationRate="@featureClockRate:dravidian:mountain" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:mountain" spec="FilteredAlignment" data="@data_dravidian" filter="219-231" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:name" spec="SiteModel" mutationRate="@featureClockRate:dravidian:name" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:name" spec="FilteredAlignment" data="@data_dravidian" filter="232-236" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:new" spec="SiteModel" mutationRate="@featureClockRate:dravidian:new" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:new" spec="FilteredAlignment" data="@data_dravidian" filter="237-245" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:night" spec="SiteModel" mutationRate="@featureClockRate:dravidian:night" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:night" spec="FilteredAlignment" data="@data_dravidian" filter="246-259" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:nose" spec="SiteModel" mutationRate="@featureClockRate:dravidian:nose" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:nose" spec="FilteredAlignment" data="@data_dravidian" filter="260-265" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:one" spec="SiteModel" mutationRate="@featureClockRate:dravidian:one" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:one" spec="FilteredAlignment" data="@data_dravidian" filter="266-275" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:path" spec="SiteModel" mutationRate="@featureClockRate:dravidian:path" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:path" spec="FilteredAlignment" data="@data_dravidian" filter="276-294" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:person" spec="SiteModel" mutationRate="@featureClockRate:dravidian:person" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:person" spec="FilteredAlignment" data="@data_dravidian" filter="295-304" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:see" spec="SiteModel" mutationRate="@featureClockRate:dravidian:see" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:see" spec="FilteredAlignment" data="@data_dravidian" filter="305-318" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:skin" spec="SiteModel" mutationRate="@featureClockRate:dravidian:skin" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:skin" spec="FilteredAlignment" data="@data_dravidian" filter="319-321" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:star" spec="SiteModel" mutationRate="@featureClockRate:dravidian:star" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:star" spec="FilteredAlignment" data="@data_dravidian" filter="322-332" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:stone" spec="SiteModel" mutationRate="@featureClockRate:dravidian:stone" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:stone" spec="FilteredAlignment" data="@data_dravidian" filter="333-338" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:sun" spec="SiteModel" mutationRate="@featureClockRate:dravidian:sun" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:sun" spec="FilteredAlignment" data="@data_dravidian" filter="339-348" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:tongue" spec="SiteModel" mutationRate="@featureClockRate:dravidian:tongue" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:tongue" spec="FilteredAlignment" data="@data_dravidian" filter="349-357" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:tooth" spec="SiteModel" mutationRate="@featureClockRate:dravidian:tooth" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:tooth" spec="FilteredAlignment" data="@data_dravidian" filter="358-360" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:tree" spec="SiteModel" mutationRate="@featureClockRate:dravidian:tree" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:tree" spec="FilteredAlignment" data="@data_dravidian" filter="361-366" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:two" spec="SiteModel" mutationRate="@featureClockRate:dravidian:two" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:two" spec="FilteredAlignment" data="@data_dravidian" filter="367-374" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:dravidian:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.dravidian:water" spec="SiteModel" mutationRate="@featureClockRate:dravidian:water" proportionInvariant="0" substModel="@covarion.s:dravidian" />
+          <data id="feature_data_dravidian:water" spec="FilteredAlignment" data="@data_dravidian" filter="375-386" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:dravidian" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:dravidian" name="up" />
+      <parameter idref="featureClockRateGammaScale:dravidian" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:dravidian" spec="ScaleOperator" parameter="@covarion_alpha.s:dravidian" scaleFactor="0.5" weight="1.0" />
+    <operator id="dravidian:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:dravidian" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:dravidian:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">6 2 2 6 13 20 11 19 9 12 6 3 15 9 15 5 5 5 8 9 10 6 12 4 8 13 5 9 18 9 13 2 10 5 9 8 2 5 7 11</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="dravidian.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:dravidian:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:dravidian" />
+      <log idref="covarion_alpha.s:dravidian" />
+      <log idref="covarion_s.s:dravidian" />
+    </logger>
+    <logger mode="tree" fileName="dravidian.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

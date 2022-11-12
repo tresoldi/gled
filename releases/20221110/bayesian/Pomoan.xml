@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="cent2138,east2545,kash1280,nort2966,sout2984">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_pomoan" name="data_pomoan" dataType="integer">
+    <sequence id="language_data_pomoan:cent2138" taxon="cent2138" value="01000100010000101000??0100??0010010???0010010??001000100001000101000010010" />
+    <sequence id="language_data_pomoan:east2545" taxon="east2545" value="0010001000100??00100100010010010010010001001001001100010000100100100001001" />
+    <sequence id="language_data_pomoan:kash1280" taxon="kash1280" value="0100010010000100???0100100100100100100011010010010001000001001001000100010" />
+    <sequence id="language_data_pomoan:nort2966" taxon="nort2966" value="0100010010000010100001010010001011000100100100100100000100??00101000010010" />
+    <sequence id="language_data_pomoan:sout2984" taxon="sout2984" value="0001001000010??00010??0100100100??0100001010001010000000101001000010100010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,bone,die,drink,eye,fire,hear,horn,leaf,liver,louse,mountain,one,path,see,skin,sun,tongue,tooth,two">
+        <parameter id="featureClockRate:pomoan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:pomoan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:pomoan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:pomoan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:pomoan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(east2545,((cent2138,nort2966),(kash1280,sout2984)));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:pomoan" name="distribution">
+          <input id="featureClockRateCompound:pomoan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,bone,die,drink,eye,fire,hear,horn,leaf,liver,louse,mountain,one,path,see,skin,sun,tongue,tooth,two">
+              <var idref="featureClockRate:pomoan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:pomoan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:pomoan" beta="@featureClockRateGammaScale:pomoan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:pomoan" name="distribution" x="@featureClockRateGammaScale:pomoan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:pomoan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:pomoan" name="distribution" x="@covarion_alpha.s:pomoan">
+          <Uniform id="CovAlphaUniform:pomoan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:pomoan" name="distribution" x="@covarion_s.s:pomoan">
+          <Gamma id="Gamma.0:pomoan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:pomoan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:pomoan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:pomoan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:1pl" spec="SiteModel" mutationRate="@featureClockRate:pomoan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:pomoan" spec="BinaryCovarion" alpha="@covarion_alpha.s:pomoan" switchRate="@covarion_s.s:pomoan">
+              <vfrequencies id="pomoan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.74 0.26</vfrequencies>
+              <parameter id="pomoan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="pomoan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_pomoan:1pl" spec="FilteredAlignment" data="@data_pomoan" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:1sg" spec="SiteModel" mutationRate="@featureClockRate:pomoan:1sg" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:1sg" spec="FilteredAlignment" data="@data_pomoan" filter="5-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:bone" spec="SiteModel" mutationRate="@featureClockRate:pomoan:bone" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:bone" spec="FilteredAlignment" data="@data_pomoan" filter="8-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:die" spec="SiteModel" mutationRate="@featureClockRate:pomoan:die" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:die" spec="FilteredAlignment" data="@data_pomoan" filter="13-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:drink" spec="SiteModel" mutationRate="@featureClockRate:pomoan:drink" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:drink" spec="FilteredAlignment" data="@data_pomoan" filter="16-19" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:eye" spec="SiteModel" mutationRate="@featureClockRate:pomoan:eye" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:eye" spec="FilteredAlignment" data="@data_pomoan" filter="20-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:fire" spec="SiteModel" mutationRate="@featureClockRate:pomoan:fire" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:fire" spec="FilteredAlignment" data="@data_pomoan" filter="23-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:hear" spec="SiteModel" mutationRate="@featureClockRate:pomoan:hear" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:hear" spec="FilteredAlignment" data="@data_pomoan" filter="26-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:horn" spec="SiteModel" mutationRate="@featureClockRate:pomoan:horn" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:horn" spec="FilteredAlignment" data="@data_pomoan" filter="29-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:leaf" spec="SiteModel" mutationRate="@featureClockRate:pomoan:leaf" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:leaf" spec="FilteredAlignment" data="@data_pomoan" filter="32-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:liver" spec="SiteModel" mutationRate="@featureClockRate:pomoan:liver" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:liver" spec="FilteredAlignment" data="@data_pomoan" filter="35-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:louse" spec="SiteModel" mutationRate="@featureClockRate:pomoan:louse" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:louse" spec="FilteredAlignment" data="@data_pomoan" filter="39-41" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:mountain" spec="SiteModel" mutationRate="@featureClockRate:pomoan:mountain" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:mountain" spec="FilteredAlignment" data="@data_pomoan" filter="42-44" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:one" spec="SiteModel" mutationRate="@featureClockRate:pomoan:one" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:one" spec="FilteredAlignment" data="@data_pomoan" filter="45-47" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:path" spec="SiteModel" mutationRate="@featureClockRate:pomoan:path" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:path" spec="FilteredAlignment" data="@data_pomoan" filter="48-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:see" spec="SiteModel" mutationRate="@featureClockRate:pomoan:see" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:see" spec="FilteredAlignment" data="@data_pomoan" filter="52-57" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:skin" spec="SiteModel" mutationRate="@featureClockRate:pomoan:skin" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:skin" spec="FilteredAlignment" data="@data_pomoan" filter="58-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:sun" spec="SiteModel" mutationRate="@featureClockRate:pomoan:sun" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:sun" spec="FilteredAlignment" data="@data_pomoan" filter="61-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:tongue" spec="SiteModel" mutationRate="@featureClockRate:pomoan:tongue" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:tongue" spec="FilteredAlignment" data="@data_pomoan" filter="64-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:tooth" spec="SiteModel" mutationRate="@featureClockRate:pomoan:tooth" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:tooth" spec="FilteredAlignment" data="@data_pomoan" filter="68-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pomoan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pomoan:two" spec="SiteModel" mutationRate="@featureClockRate:pomoan:two" proportionInvariant="0" substModel="@covarion.s:pomoan" />
+          <data id="feature_data_pomoan:two" spec="FilteredAlignment" data="@data_pomoan" filter="72-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:pomoan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:pomoan" name="up" />
+      <parameter idref="featureClockRateGammaScale:pomoan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:pomoan" spec="ScaleOperator" parameter="@covarion_alpha.s:pomoan" scaleFactor="0.5" weight="1.0" />
+    <operator id="pomoan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:pomoan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,bone,die,drink,eye,fire,hear,horn,leaf,liver,louse,mountain,one,path,see,skin,sun,tongue,tooth,two">
+        <parameter idref="featureClockRate:pomoan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="21" estimate="false">3 2 4 2 3 2 2 2 2 2 3 2 2 2 3 5 2 2 3 3 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="pomoan.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,bone,die,drink,eye,fire,hear,horn,leaf,liver,louse,mountain,one,path,see,skin,sun,tongue,tooth,two">
+        <log idref="featureClockRate:pomoan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:pomoan" />
+      <log idref="covarion_alpha.s:pomoan" />
+      <log idref="covarion_s.s:pomoan" />
+    </logger>
+    <logger mode="tree" fileName="pomoan.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

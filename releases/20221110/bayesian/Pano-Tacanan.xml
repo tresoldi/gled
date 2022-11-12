@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="amah1246,arao1248,capa1241,cash1251,cash1254,cavi1250,chac1251,esee1248,kaxa1239,maru1252,mati1255,mats1244,pano1254,pano1255,poya1241,shar1245,ship1254,taca1256,yami1256,yawa1260">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_panotacanan" name="data_panotacanan" dataType="integer">
+    <sequence id="language_data_panotacanan:amah1246" taxon="amah1246" value="0100001000000100010000011000010000001001000000000000100000000010000000000000100000100100000010??????????0????????????010000010000000000010000001000000100000000100100000001100000000000100100000000100000000010000????????01000001000000000100000100000010000001100000000100001000100100010000100010000100" />
+    <sequence id="language_data_panotacanan:arao1248" taxon="arao1248" value="00100001000001000100000100000010000000001000000000000100000000010010000000000100000100100000001000000000010000100000000100000100000000000100000010001001000000010001000000010000000010001010001000001000000000100010000000001000001000010000100000100000??????00100000000010001000000010001000010010001000" />
+    <sequence id="language_data_panotacanan:capa1241" taxon="capa1241" value="010000??????0100010000011000010100000000010000000100000100000000100000000000100100100100000000010000000000010000001000110000100000000000001000010000001000000001000010000001000000000001001000000001000000000100000100000001000001000000000100010010001010000001000000000100001100000100000100100010000000" />
+    <sequence id="language_data_panotacanan:cash1251" taxon="cash1251" value="010000000001010001100000100001000000000101000000000000110000000001010000000000010010010110000000101000000????????????0100000001000000000100000010000001000000001001001001001100100000001001000000100010001000100000010000001000001000010010100000111000010000000100000000100001000000100010000100000100000" />
+    <sequence id="language_data_panotacanan:cash1254" taxon="cash1254" value="010000100000010001000000001000010000000000000100000000100000000000000010000010000010010000000000001000000000001000000010000010000000000010000001000000100000000100100000000100000000000100100000000100000000010000010000000100000?????????0001000010000010000000100000000100001000000100010000100000100000" />
+    <sequence id="language_data_panotacanan:cavi1250" taxon="cavi1250" value="001000001000010001000000010000010000000010000000000000001000000000100000000001000001010000000010100000000100000000000000010000010000000001000000010000001000000100000010000100000000000010001000000000100000000100100000000001000?????????0010000010000001000000010000000010001000000010001000010010000000" />
+    <sequence id="language_data_panotacanan:chac1251" taxon="chac1251" value="010000??????01000100000010000001100000010000000000101000000000?????????????010000010010000000010000000010000100000010011000010000000000000100001000000100100000100???????001010000000001000001000000000100000100000100000001000000010000000100000010000010000000100000100100001100000100000100100010000000" />
+    <sequence id="language_data_panotacanan:esee1248" taxon="esee1248" value="0010000101000010010000010000000001000000100000000000000001000000001000000000010000010010000000001000000000000100000000010000000011000000010000000010000100000001000000100001001000000000100000100000001010000010000001100000001000001100100010000000100000100000001000000010001000000010001000010010000010" />
+    <sequence id="language_data_panotacanan:kaxa1239" taxon="kaxa1239" value="000100000100010000010000100000010000000000001000000000001000000000000100000000001010010000000000010000000000000100000010000000000010000010000000010000000100000100100000000000001000000100000001000000100000010000010000000100000?????????0000100010000000010000001000000100001000000100000100100001000000" />
+    <sequence id="language_data_panotacanan:maru1252" taxon="maru1252" value="01000000010001000100000010000?????????0000000010000000000001000000001000000000100010010000000001000000000000001000000000100010000000000010000001000000100000000100100000000100000000000100100000000100000000010000010000000100000?????????0001000100000010000000001000000100000010000100000100100001000000" />
+    <sequence id="language_data_panotacanan:mati1255" taxon="mati1255" value="010000000010010000001000100000000001000100000000000000000001000000001000000010000010000001000000000100000000000010000010000000000001000000001001000000100000000100000001000000000100000100000100000000100000010000000001000100000?????????0?????0010000010000001000000000001001000000100000100100001000000" />
+    <sequence id="language_data_panotacanan:mats1244" taxon="mats1244" value="01000000001000010000010?????00000001000????????????0?????????00000000001000010000010001000000000000010000????????????0000010000000001000??????00010000????????0010???????00000000010000??0000000100000000010000010000000100?????0?????????0100000010000010000001000000010000100001000100000010001000010000" />
+    <sequence id="language_data_panotacanan:pano1254" taxon="pano1254" value="01000010010001000100000010000?????????0100010000000000100000001000001000000000100010010000000001100000000010001000000000100010000000000010000001000000100000000100100000000100000000000100110000000101000000010000010000000110000?????????0001000010010010000000100100000110001000000100010100100001000000" />
+    <sequence id="language_data_panotacanan:pano1255" taxon="pano1255" value="0100000000100100010000001000000000100000001000000000000000100000000100000000100000100100000000001000000000010000000000100000???????????0000100010000001000000001001000000000010000000001001000000001000000000100000010000001000001000000000?????0100000010000001000000000100001000000100000100100010000001" />
+    <sequence id="language_data_panotacanan:poya1241" taxon="poya1241" value="01000000010001000100000010000?????????0000000001000000010000000000000000100010000010000000100001000000000010000000000010000000000000010010000001000000000010000100100000000100000000000100000100000100000000010000010000000100000?????????0?????0010000000001000000010000100001000000100000100100001000000" />
+    <sequence id="language_data_panotacanan:shar1245" taxon="shar1245" value="010000??????01000100000010010?????????0100000000000000100000101000000000000010100010010000000000000000100010000000001010100010000000000010000001000000100001000100???????00100000000010100100000000100000000010000010000000100000?????????0?????0010000010000000000001000110001000000101010100100010000000" />
+    <sequence id="language_data_panotacanan:ship1254" taxon="ship1254" value="0100000000100100010000001000010000000100000000001000000100000000000100000010100000100100000000000011000000000010010000110000100000000000000001010000001000000001001000000000010000000001001000000001000000000100000000001101000001000000000100000010000010000001000000000100001000010100000100100000100000" />
+    <sequence id="language_data_panotacanan:taca1256" taxon="taca1256" value="00101001000001000100000100000000010000001000000000000001000000?????????????001000001000000010010000000000100000000000001000000000000001001000000000100000000100100000010000100000000000010000010000010000000001000100000000010000?????????00100000100000??????00010000000010001000000010001000010000001000" />
+    <sequence id="language_data_panotacanan:yami1256" taxon="yami1256" value="01000010000001000100000010000?????????0100000000000000000000101000000000000000100010010000000001000000000010000000000010000010000000000010000001000000000000010100100000000000000001000100100000000100000000010000010000000000010?????????0001000010000000000100000001000010001000000001000100100000100000" />
+    <sequence id="language_data_panotacanan:yawa1260" taxon="yawa1260" value="01000010000001000100000010000?????????0100000000000000100000001000000000010010000010010000000001000001000010000000000010100010000000000010000001000000100000000100100000000100000000000100100000000100000001010000010000000010000?????????0001000010000010000000000100000100001000000100000100100011000000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:panotacanan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:panotacanan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:panotacanan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:panotacanan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:panotacanan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((cavi1250,(esee1248,(arao1248,taca1256))),((mati1255,mats1244),(cash1251,kaxa1239,(chac1251,poya1241,(maru1252,pano1254),(pano1255,(capa1241,ship1254)),(amah1246,cash1254,(shar1245,yami1256,yawa1260))))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:panotacanan" name="distribution">
+          <input id="featureClockRateCompound:panotacanan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:panotacanan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:panotacanan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:panotacanan" beta="@featureClockRateGammaScale:panotacanan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:panotacanan" name="distribution" x="@featureClockRateGammaScale:panotacanan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:panotacanan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:panotacanan" name="distribution" x="@covarion_alpha.s:panotacanan">
+          <Uniform id="CovAlphaUniform:panotacanan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:panotacanan" name="distribution" x="@covarion_s.s:panotacanan">
+          <Gamma id="Gamma.0:panotacanan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:panotacanan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:panotacanan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:panotacanan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:1pl" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:panotacanan" spec="BinaryCovarion" alpha="@covarion_alpha.s:panotacanan" switchRate="@covarion_s.s:panotacanan">
+              <vfrequencies id="panotacanan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.86 0.14</vfrequencies>
+              <parameter id="panotacanan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="panotacanan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_panotacanan:1pl" spec="FilteredAlignment" data="@data_panotacanan" filter="1-5" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:1sg" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:1sg" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:1sg" spec="FilteredAlignment" data="@data_panotacanan" filter="6-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:blood" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:blood" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:blood" spec="FilteredAlignment" data="@data_panotacanan" filter="13-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:bone" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:bone" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:bone" spec="FilteredAlignment" data="@data_panotacanan" filter="17-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:breast" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:breast" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:breast" spec="FilteredAlignment" data="@data_panotacanan" filter="23-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:come" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:come" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:come" spec="FilteredAlignment" data="@data_panotacanan" filter="29-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:die" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:die" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:die" spec="FilteredAlignment" data="@data_panotacanan" filter="39-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:dog" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:dog" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:dog" spec="FilteredAlignment" data="@data_panotacanan" filter="52-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:drink" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:drink" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:drink" spec="FilteredAlignment" data="@data_panotacanan" filter="62-75" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:ear" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:ear" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:ear" spec="FilteredAlignment" data="@data_panotacanan" filter="76-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:eye" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:eye" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:eye" spec="FilteredAlignment" data="@data_panotacanan" filter="82-84" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:fire" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:fire" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:fire" spec="FilteredAlignment" data="@data_panotacanan" filter="85-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:fish" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:fish" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:fish" spec="FilteredAlignment" data="@data_panotacanan" filter="94-104" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:full" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:full" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:full" spec="FilteredAlignment" data="@data_panotacanan" filter="105-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:hand" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:hand" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:hand" spec="FilteredAlignment" data="@data_panotacanan" filter="118-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:hear" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:hear" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:hear" spec="FilteredAlignment" data="@data_panotacanan" filter="124-135" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:horn" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:horn" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:horn" spec="FilteredAlignment" data="@data_panotacanan" filter="136-142" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:knee" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:knee" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:knee" spec="FilteredAlignment" data="@data_panotacanan" filter="143-149" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:leaf" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:leaf" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:leaf" spec="FilteredAlignment" data="@data_panotacanan" filter="150-158" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:liver" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:liver" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:liver" spec="FilteredAlignment" data="@data_panotacanan" filter="159-161" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:louse" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:louse" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:louse" spec="FilteredAlignment" data="@data_panotacanan" filter="162-169" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:mountain" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:mountain" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:mountain" spec="FilteredAlignment" data="@data_panotacanan" filter="170-182" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:name" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:name" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:name" spec="FilteredAlignment" data="@data_panotacanan" filter="183-185" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:new" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:new" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:new" spec="FilteredAlignment" data="@data_panotacanan" filter="186-194" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:night" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:night" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:night" spec="FilteredAlignment" data="@data_panotacanan" filter="195-204" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:nose" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:nose" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:nose" spec="FilteredAlignment" data="@data_panotacanan" filter="205-209" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:one" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:one" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:one" spec="FilteredAlignment" data="@data_panotacanan" filter="210-218" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:path" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:path" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:path" spec="FilteredAlignment" data="@data_panotacanan" filter="219-224" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:person" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:person" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:person" spec="FilteredAlignment" data="@data_panotacanan" filter="225-234" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:see" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:see" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:see" spec="FilteredAlignment" data="@data_panotacanan" filter="235-240" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:skin" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:skin" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:skin" spec="FilteredAlignment" data="@data_panotacanan" filter="241-247" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:star" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:star" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:star" spec="FilteredAlignment" data="@data_panotacanan" filter="248-254" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:stone" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:stone" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:stone" spec="FilteredAlignment" data="@data_panotacanan" filter="255-264" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:sun" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:sun" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:sun" spec="FilteredAlignment" data="@data_panotacanan" filter="265-269" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:tongue" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:tongue" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:tongue" spec="FilteredAlignment" data="@data_panotacanan" filter="270-276" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:tooth" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:tooth" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:tooth" spec="FilteredAlignment" data="@data_panotacanan" filter="277-280" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:tree" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:tree" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:tree" spec="FilteredAlignment" data="@data_panotacanan" filter="281-285" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:two" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:two" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:two" spec="FilteredAlignment" data="@data_panotacanan" filter="286-289" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:panotacanan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.panotacanan:water" spec="SiteModel" mutationRate="@featureClockRate:panotacanan:water" proportionInvariant="0" substModel="@covarion.s:panotacanan" />
+          <data id="feature_data_panotacanan:water" spec="FilteredAlignment" data="@data_panotacanan" filter="290-298" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:panotacanan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:panotacanan" name="up" />
+      <parameter idref="featureClockRateGammaScale:panotacanan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:panotacanan" spec="ScaleOperator" parameter="@covarion_alpha.s:panotacanan" scaleFactor="0.5" weight="1.0" />
+    <operator id="panotacanan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:panotacanan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:panotacanan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="39" estimate="false">4 6 3 5 5 9 12 9 13 5 2 8 10 12 5 11 6 6 8 2 7 12 2 8 9 4 8 5 9 5 6 6 9 4 6 3 4 3 8</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="panotacanan.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:panotacanan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:panotacanan" />
+      <log idref="covarion_alpha.s:panotacanan" />
+      <log idref="covarion_s.s:panotacanan" />
+    </logger>
+    <logger mode="tree" fileName="panotacanan.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

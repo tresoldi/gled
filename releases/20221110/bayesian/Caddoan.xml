@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="arik1262,cadd1256,kits1249,pawn1254,wich1260">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_caddoan" name="data_caddoan" dataType="integer">
+    <sequence id="language_data_caddoan:arik1262" taxon="arik1262" value="0???0???0??0100010010001001000100100100000010010001001000001000001000100010001001000101000001001000010001000100000100010000010001000010000100000???010000010010010000010001000100000" />
+    <sequence id="language_data_caddoan:cadd1256" taxon="cadd1256" value="010001000100010001001000000100010000010000001001000100100000100000100010001000100100000100000100100001000100010000010001000001000100001000010000100001000010001001000010000100010000" />
+    <sequence id="language_data_caddoan:kits1249" taxon="kits1249" value="0010001000101000100001001000100010000010000100???0100001000001000???00010001010000100000100010000100???0???0001000001000100001000010000100001000010000100010010000100001000010001000" />
+    <sequence id="language_data_caddoan:pawn1254" taxon="pawn1254" value="0???0???0??010001000001000100000010000010001001000100000100000100???0001010001001000000001001000001000100010000100001000010000101000010000000100001000010001010000010010001000000100" />
+    <sequence id="language_data_caddoan:wich1260" taxon="wich1260" value="000100010??0001010010000001000000010000011010000101000000100000100010100010001000001000000101001000010000100000010010000001010000001000010000010010000001010010000001000100100000011" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:caddoan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:caddoan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:caddoan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:caddoan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:caddoan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(cadd1256,(wich1260,(kits1249,(arik1262,pawn1254))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:caddoan" name="distribution">
+          <input id="featureClockRateCompound:caddoan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:caddoan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:caddoan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:caddoan" beta="@featureClockRateGammaScale:caddoan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:caddoan" name="distribution" x="@featureClockRateGammaScale:caddoan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:caddoan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:caddoan" name="distribution" x="@covarion_alpha.s:caddoan">
+          <Uniform id="CovAlphaUniform:caddoan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:caddoan" name="distribution" x="@covarion_s.s:caddoan">
+          <Gamma id="Gamma.0:caddoan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:caddoan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:caddoan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:caddoan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:1pl" spec="SiteModel" mutationRate="@featureClockRate:caddoan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:caddoan" spec="BinaryCovarion" alpha="@covarion_alpha.s:caddoan" switchRate="@covarion_s.s:caddoan">
+              <vfrequencies id="caddoan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.79 0.21</vfrequencies>
+              <parameter id="caddoan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="caddoan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_caddoan:1pl" spec="FilteredAlignment" data="@data_caddoan" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:1sg" spec="SiteModel" mutationRate="@featureClockRate:caddoan:1sg" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:1sg" spec="FilteredAlignment" data="@data_caddoan" filter="5-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:2sg" spec="SiteModel" mutationRate="@featureClockRate:caddoan:2sg" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:2sg" spec="FilteredAlignment" data="@data_caddoan" filter="9-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:blood" spec="SiteModel" mutationRate="@featureClockRate:caddoan:blood" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:blood" spec="FilteredAlignment" data="@data_caddoan" filter="12-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:bone" spec="SiteModel" mutationRate="@featureClockRate:caddoan:bone" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:bone" spec="FilteredAlignment" data="@data_caddoan" filter="16-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:breast" spec="SiteModel" mutationRate="@featureClockRate:caddoan:breast" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:breast" spec="FilteredAlignment" data="@data_caddoan" filter="19-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:come" spec="SiteModel" mutationRate="@featureClockRate:caddoan:come" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:come" spec="FilteredAlignment" data="@data_caddoan" filter="26-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:die" spec="SiteModel" mutationRate="@featureClockRate:caddoan:die" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:die" spec="FilteredAlignment" data="@data_caddoan" filter="30-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:dog" spec="SiteModel" mutationRate="@featureClockRate:caddoan:dog" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:dog" spec="FilteredAlignment" data="@data_caddoan" filter="36-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:drink" spec="SiteModel" mutationRate="@featureClockRate:caddoan:drink" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:drink" spec="FilteredAlignment" data="@data_caddoan" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:ear" spec="SiteModel" mutationRate="@featureClockRate:caddoan:ear" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:ear" spec="FilteredAlignment" data="@data_caddoan" filter="46-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:eye" spec="SiteModel" mutationRate="@featureClockRate:caddoan:eye" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:eye" spec="FilteredAlignment" data="@data_caddoan" filter="50-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:fire" spec="SiteModel" mutationRate="@featureClockRate:caddoan:fire" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:fire" spec="FilteredAlignment" data="@data_caddoan" filter="53-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:fish" spec="SiteModel" mutationRate="@featureClockRate:caddoan:fish" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:fish" spec="FilteredAlignment" data="@data_caddoan" filter="59-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:full" spec="SiteModel" mutationRate="@featureClockRate:caddoan:full" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:full" spec="FilteredAlignment" data="@data_caddoan" filter="65-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:hand" spec="SiteModel" mutationRate="@featureClockRate:caddoan:hand" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:hand" spec="FilteredAlignment" data="@data_caddoan" filter="69-72" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:hear" spec="SiteModel" mutationRate="@featureClockRate:caddoan:hear" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:hear" spec="FilteredAlignment" data="@data_caddoan" filter="73-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:horn" spec="SiteModel" mutationRate="@featureClockRate:caddoan:horn" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:horn" spec="FilteredAlignment" data="@data_caddoan" filter="77-79" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:knee" spec="SiteModel" mutationRate="@featureClockRate:caddoan:knee" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:knee" spec="FilteredAlignment" data="@data_caddoan" filter="80-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:leaf" spec="SiteModel" mutationRate="@featureClockRate:caddoan:leaf" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:leaf" spec="FilteredAlignment" data="@data_caddoan" filter="86-91" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:liver" spec="SiteModel" mutationRate="@featureClockRate:caddoan:liver" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:liver" spec="FilteredAlignment" data="@data_caddoan" filter="92-94" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:mountain" spec="SiteModel" mutationRate="@featureClockRate:caddoan:mountain" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:mountain" spec="FilteredAlignment" data="@data_caddoan" filter="95-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:name" spec="SiteModel" mutationRate="@featureClockRate:caddoan:name" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:name" spec="FilteredAlignment" data="@data_caddoan" filter="100-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:new" spec="SiteModel" mutationRate="@featureClockRate:caddoan:new" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:new" spec="FilteredAlignment" data="@data_caddoan" filter="104-107" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:night" spec="SiteModel" mutationRate="@featureClockRate:caddoan:night" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:night" spec="FilteredAlignment" data="@data_caddoan" filter="108-113" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:nose" spec="SiteModel" mutationRate="@featureClockRate:caddoan:nose" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:nose" spec="FilteredAlignment" data="@data_caddoan" filter="114-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:one" spec="SiteModel" mutationRate="@featureClockRate:caddoan:one" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:one" spec="FilteredAlignment" data="@data_caddoan" filter="118-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:path" spec="SiteModel" mutationRate="@featureClockRate:caddoan:path" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:path" spec="FilteredAlignment" data="@data_caddoan" filter="124-127" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:person" spec="SiteModel" mutationRate="@featureClockRate:caddoan:person" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:person" spec="FilteredAlignment" data="@data_caddoan" filter="128-132" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:see" spec="SiteModel" mutationRate="@featureClockRate:caddoan:see" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:see" spec="FilteredAlignment" data="@data_caddoan" filter="133-137" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:skin" spec="SiteModel" mutationRate="@featureClockRate:caddoan:skin" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:skin" spec="FilteredAlignment" data="@data_caddoan" filter="138-143" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:star" spec="SiteModel" mutationRate="@featureClockRate:caddoan:star" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:star" spec="FilteredAlignment" data="@data_caddoan" filter="144-147" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:stone" spec="SiteModel" mutationRate="@featureClockRate:caddoan:stone" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:stone" spec="FilteredAlignment" data="@data_caddoan" filter="148-153" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:sun" spec="SiteModel" mutationRate="@featureClockRate:caddoan:sun" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:sun" spec="FilteredAlignment" data="@data_caddoan" filter="154-156" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:tongue" spec="SiteModel" mutationRate="@featureClockRate:caddoan:tongue" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:tongue" spec="FilteredAlignment" data="@data_caddoan" filter="157-159" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:tooth" spec="SiteModel" mutationRate="@featureClockRate:caddoan:tooth" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:tooth" spec="FilteredAlignment" data="@data_caddoan" filter="160-165" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:tree" spec="SiteModel" mutationRate="@featureClockRate:caddoan:tree" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:tree" spec="FilteredAlignment" data="@data_caddoan" filter="166-169" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:two" spec="SiteModel" mutationRate="@featureClockRate:caddoan:two" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:two" spec="FilteredAlignment" data="@data_caddoan" filter="170-173" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:caddoan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.caddoan:water" spec="SiteModel" mutationRate="@featureClockRate:caddoan:water" proportionInvariant="0" substModel="@covarion.s:caddoan" />
+          <data id="feature_data_caddoan:water" spec="FilteredAlignment" data="@data_caddoan" filter="174-180" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:caddoan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:caddoan" name="up" />
+      <parameter idref="featureClockRateGammaScale:caddoan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:caddoan" spec="ScaleOperator" parameter="@covarion_alpha.s:caddoan" scaleFactor="0.5" weight="1.0" />
+    <operator id="caddoan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:caddoan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:caddoan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="39" estimate="false">3 3 2 3 2 6 3 5 6 2 3 2 5 5 3 3 3 2 5 5 2 4 3 3 5 3 5 3 4 4 5 3 5 2 2 5 3 3 6</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="caddoan.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:caddoan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:caddoan" />
+      <log idref="covarion_alpha.s:caddoan" />
+      <log idref="covarion_s.s:caddoan" />
+    </logger>
+    <logger mode="tree" fileName="caddoan.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

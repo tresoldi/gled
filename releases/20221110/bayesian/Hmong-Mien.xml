@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="biao1254,biao1256,buna1273,dzao1238,hmon1264,hmon1333,iumi1238,jion1236,kimm1245,nort2747,pahn1237,shee1238,west2430,youn1235">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_hmongmien" name="data_hmongmien" dataType="integer">
+    <sequence id="language_data_hmongmien:biao1254" taxon="biao1254" value="00001000000100000000000001000010000000000100000000010000100000010000001000001000000000???????001000010000100000000100001000000000000000001000010000010000001000000000001000000000100000001000000100000000010000000000100001000010000011000000000000001000000001000000000000000010000100000001000000000100001000001000010000" />
+    <sequence id="language_data_hmongmien:biao1256" taxon="biao1256" value="01000000010100000000000001001100000000000100000100010000100000010000000110001000100000010000000100001000010000000100000????0????????????????001000001000000010000????????????01001000?????????0?????????0010010000001000001000010000110000000000010001000010001000000001000000000001010000011000000000110001000001000011000" />
+    <sequence id="language_data_hmongmien:buna1273" taxon="buna1273" value="010000001000000000000000100010010000011001010010100000011000001001000010000110000000001100000011000110001100000010110001000010110010000100000110100101000101100001011000000000100001011001000001100000000110001001000101001000100000101000010000100110100100100000000010001000000010100100100000101101000001000001001010001" />
+    <sequence id="language_data_hmongmien:dzao1238" taxon="dzao1238" value="01000000000100000000000001000000100000000100000010000000100000010000000100001000000000???????001000010000100000001000001000000001000000000000010000000010001000000000100000000000100000100000000100000000000100000000100001000010000010000000000010000000000010000000000001000000000100000000100000000100001000000100000100" />
+    <sequence id="language_data_hmongmien:hmon1264" taxon="hmon1264" value="010000000001000000000000100010000000000001000010000010011000001000000010000000010010000100000001000100000001001000100001000010000000000000000001000000100001000001000001000000100100000010000000100000000001000000000100001000001000011000000000000010000100100000000000001000000000100000001000000000100001000010000000010" />
+    <sequence id="language_data_hmongmien:hmon1333" taxon="hmon1333" value="0100000000010000000000001000100000100000000010010100100011100010000000100000000100000001000000011001000000010010011000010000????????????????0001000000100001000001000001000000101100000010000000100000000001000000000100001000001000001000010000000010000100100000000000001000000000100000001000000000100001000010000000010" />
+    <sequence id="language_data_hmongmien:iumi1238" taxon="iumi1238" value="010000000100000000000000010001000000000000100001001000001000001100000001000000100000000100000001000010000100000001100100100000000100000000100010000010000001000000010010000000101100000100000000100000100010100000100010001100011000011000000000010000000010000000110001010100001000100010000100000001100001000010000001000" />
+    <sequence id="language_data_hmongmien:jion1236" taxon="jion1236" value="011100100000000001100000010000100000000001000001100000010000000100000010010010000000000100000001000010000001000001100001000000000000011000010001000000010001000001010000000000100000001000001001000000000010000000000100001000101000011000000100001000000000000001001000001000000000100000001000000001000001000010000010000" />
+    <sequence id="language_data_hmongmien:kimm1245" taxon="kimm1245" value="0100000001000010000000000100001000000000010000010000000110000001000000010000001000000001001000010000100001000000010011010000????????????????0010000010000001000000000001000000001100000001000001100000000010000100000110001000010000010100000000010000000000001000000001000010000000101000000100000000100001000010000001000" />
+    <sequence id="language_data_hmongmien:nort2747" taxon="nort2747" value="010000000000100000000110010010000001100001000000000001011000001000001010000100010000000100010001000101000100000000100001000000010010000000000010000000101001001000001000100000000110000000100000101000000000000011000100001000100000001010000000110000000100100000000000001000000000100000100000001001000001000010000000001" />
+    <sequence id="language_data_hmongmien:pahn1237" taxon="pahn1237" value="010000000000100000000000010000000110000001000000010000001000001010000010000010000101000010000001000110000100000001100001000000010000000000000011010000010000010100100000000000101000000001000000110000000011000001000110001000000110011000000010000000100100100000000000000010100000100000001010000000100000001000010010001" />
+    <sequence id="language_data_hmongmien:shee1238" taxon="shee1238" value="010000000010010010010000010000100000000001000000100000000100000100000010000001000000000001000001000010000010100010100001000001000000000010000001000010010001000000100000000010010000001010000000100010010010001000000100001000100000011000000000001000000001000000000000100000000000100000001000000001000001000010000010000" />
+    <sequence id="language_data_hmongmien:west2430" taxon="west2430" value="010000000100000100001000010010000010000001000000010000000001100000110010000000000001100000001001010000100001010000110000011010010000100000000010000000100001001000000000001100100000010001000000100001000000000011000100001010100000000001101000000010010000100010000000001010000000100000000001010000000101010010000000001" />
+    <sequence id="language_data_hmongmien:youn1235" taxon="youn1235" value="010001000000100000000000001000000000100101000000010000001000000100000010000000000001000001000001000000101000000000110001000000000001000000000001000000010001000000000000010000110000000000010100000100000000001000000010101000100000010000000000001000000000000100000000000001000000100000000001000000001000100000010010000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,dog,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:hmongmien:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:hmongmien" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:hmongmien" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:hmongmien" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:hmongmien" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((biao1254,dzao1238,(biao1256,iumi1238,kimm1245)),((pahn1237,youn1235),((jion1236,shee1238),(nort2747,west2430,(buna1273,(hmon1264,hmon1333))))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:hmongmien" name="distribution">
+          <input id="featureClockRateCompound:hmongmien" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,dog,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:hmongmien:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:hmongmien" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:hmongmien" beta="@featureClockRateGammaScale:hmongmien" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:hmongmien" name="distribution" x="@featureClockRateGammaScale:hmongmien">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:hmongmien" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:hmongmien" name="distribution" x="@covarion_alpha.s:hmongmien">
+          <Uniform id="CovAlphaUniform:hmongmien" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:hmongmien" name="distribution" x="@covarion_s.s:hmongmien">
+          <Gamma id="Gamma.0:hmongmien" name="distr">
+            <parameter id="covarion_switch_gamma_param1:hmongmien" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:hmongmien" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:hmongmien:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:1pl" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:hmongmien" spec="BinaryCovarion" alpha="@covarion_alpha.s:hmongmien" switchRate="@covarion_s.s:hmongmien">
+              <vfrequencies id="hmongmien:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.83 0.17</vfrequencies>
+              <parameter id="hmongmien:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="hmongmien:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_hmongmien:1pl" spec="FilteredAlignment" data="@data_hmongmien" filter="1-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:1sg" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:1sg" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:1sg" spec="FilteredAlignment" data="@data_hmongmien" filter="8-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:2sg" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:2sg" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:2sg" spec="FilteredAlignment" data="@data_hmongmien" filter="24-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:blood" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:blood" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:blood" spec="FilteredAlignment" data="@data_hmongmien" filter="28-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:bone" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:bone" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:bone" spec="FilteredAlignment" data="@data_hmongmien" filter="41-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:breast" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:breast" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:breast" spec="FilteredAlignment" data="@data_hmongmien" filter="46-54" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:come" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:come" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:come" spec="FilteredAlignment" data="@data_hmongmien" filter="55-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:dog" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:dog" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:dog" spec="FilteredAlignment" data="@data_hmongmien" filter="62-69" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:drink" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:drink" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:drink" spec="FilteredAlignment" data="@data_hmongmien" filter="70-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:ear" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:ear" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:ear" spec="FilteredAlignment" data="@data_hmongmien" filter="75-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:eye" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:eye" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:eye" spec="FilteredAlignment" data="@data_hmongmien" filter="86-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:fire" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:fire" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:fire" spec="FilteredAlignment" data="@data_hmongmien" filter="94-98" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:fish" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:fish" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:fish" spec="FilteredAlignment" data="@data_hmongmien" filter="99-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:hand" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:hand" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:hand" spec="FilteredAlignment" data="@data_hmongmien" filter="104-111" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:hear" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:hear" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:hear" spec="FilteredAlignment" data="@data_hmongmien" filter="112-118" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:horn" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:horn" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:horn" spec="FilteredAlignment" data="@data_hmongmien" filter="119-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:knee" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:knee" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:knee" spec="FilteredAlignment" data="@data_hmongmien" filter="124-140" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:leaf" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:leaf" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:leaf" spec="FilteredAlignment" data="@data_hmongmien" filter="141-146" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:liver" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:liver" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:liver" spec="FilteredAlignment" data="@data_hmongmien" filter="147-154" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:louse" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:louse" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:louse" spec="FilteredAlignment" data="@data_hmongmien" filter="155-160" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:mountain" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:mountain" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:mountain" spec="FilteredAlignment" data="@data_hmongmien" filter="161-173" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:name" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:name" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:name" spec="FilteredAlignment" data="@data_hmongmien" filter="174-180" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:new" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:new" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:new" spec="FilteredAlignment" data="@data_hmongmien" filter="181-190" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:night" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:night" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:night" spec="FilteredAlignment" data="@data_hmongmien" filter="191-200" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:nose" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:nose" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:nose" spec="FilteredAlignment" data="@data_hmongmien" filter="201-211" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:one" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:one" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:one" spec="FilteredAlignment" data="@data_hmongmien" filter="212-217" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:path" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:path" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:path" spec="FilteredAlignment" data="@data_hmongmien" filter="218-221" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:person" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:person" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:person" spec="FilteredAlignment" data="@data_hmongmien" filter="222-227" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:see" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:see" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:see" spec="FilteredAlignment" data="@data_hmongmien" filter="228-239" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:skin" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:skin" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:skin" spec="FilteredAlignment" data="@data_hmongmien" filter="240-248" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:star" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:star" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:star" spec="FilteredAlignment" data="@data_hmongmien" filter="249-261" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:stone" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:stone" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:stone" spec="FilteredAlignment" data="@data_hmongmien" filter="262-273" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:sun" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:sun" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:sun" spec="FilteredAlignment" data="@data_hmongmien" filter="274-281" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:tongue" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:tongue" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:tongue" spec="FilteredAlignment" data="@data_hmongmien" filter="282-292" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:tooth" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:tooth" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:tooth" spec="FilteredAlignment" data="@data_hmongmien" filter="293-298" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:tree" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:tree" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:tree" spec="FilteredAlignment" data="@data_hmongmien" filter="299-303" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:two" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:two" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:two" spec="FilteredAlignment" data="@data_hmongmien" filter="304-309" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:hmongmien:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.hmongmien:water" spec="SiteModel" mutationRate="@featureClockRate:hmongmien:water" proportionInvariant="0" substModel="@covarion.s:hmongmien" />
+          <data id="feature_data_hmongmien:water" spec="FilteredAlignment" data="@data_hmongmien" filter="310-315" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:hmongmien" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:hmongmien" name="up" />
+      <parameter idref="featureClockRateGammaScale:hmongmien" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:hmongmien" spec="ScaleOperator" parameter="@covarion_alpha.s:hmongmien" scaleFactor="0.5" weight="1.0" />
+    <operator id="hmongmien:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:hmongmien" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,dog,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:hmongmien:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="38" estimate="false">6 15 3 12 4 8 6 7 4 10 7 4 4 7 6 4 16 5 7 5 12 6 9 9 10 5 3 5 11 8 12 11 7 10 5 4 5 5</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="hmongmien.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,dog,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:hmongmien:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:hmongmien" />
+      <log idref="covarion_alpha.s:hmongmien" />
+      <log idref="covarion_s.s:hmongmien" />
+    </logger>
+    <logger mode="tree" fileName="hmongmien.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

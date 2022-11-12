@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="naas1242" />
+    <taxon id="siwa1245" />
+    <taxon id="tere1278" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_southbougainville" name="data_southbougainville" dataType="integer">
+    <sequence id="language_data_southbougainville:naas1242" taxon="naas1242" value="0010010010001000100010000010010000100000100010001000010000101000010010001000010001000100000100010001000100000010001000010000010010000100??001100010" />
+    <sequence id="language_data_southbougainville:siwa1245" taxon="siwa1245" value="0010??0??0010001000100000100101001000001000110010100100001001100101010001100100010110111001000011010001001000??0010110100000110010001000010????0101" />
+    <sequence id="language_data_southbougainville:tere1278" taxon="tere1278" value="010010010010010100100110100010001001101000100010000101101000100100001110100100010000010001001011001001001111010010100010111010010101001010010110100" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,ear,eye,fire,fish,full,hand,hear,knee,leaf,louse,mountain,name,new,night,nose,path,person,see,skin,star,stone,sun,tooth,two,water">
+        <parameter id="featureClockRate:southbougainville:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:southbougainville" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:southbougainville" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:southbougainville" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:southbougainville" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(naas1242,(siwa1245,tere1278));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:southbougainville" name="distribution">
+          <input id="featureClockRateCompound:southbougainville" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,ear,eye,fire,fish,full,hand,hear,knee,leaf,louse,mountain,name,new,night,nose,path,person,see,skin,star,stone,sun,tooth,two,water">
+              <var idref="featureClockRate:southbougainville:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:southbougainville" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:southbougainville" beta="@featureClockRateGammaScale:southbougainville" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:southbougainville" name="distribution" x="@featureClockRateGammaScale:southbougainville">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:southbougainville" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:southbougainville" name="distribution" x="@covarion_alpha.s:southbougainville">
+          <Uniform id="CovAlphaUniform:southbougainville" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:southbougainville" name="distribution" x="@covarion_s.s:southbougainville">
+          <Gamma id="Gamma.0:southbougainville" name="distr">
+            <parameter id="covarion_switch_gamma_param1:southbougainville" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:southbougainville" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:southbougainville:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:1pl" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:southbougainville" spec="BinaryCovarion" alpha="@covarion_alpha.s:southbougainville" switchRate="@covarion_s.s:southbougainville">
+              <vfrequencies id="southbougainville:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.69 0.31</vfrequencies>
+              <parameter id="southbougainville:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="southbougainville:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_southbougainville:1pl" spec="FilteredAlignment" data="@data_southbougainville" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:1sg" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:1sg" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:1sg" spec="FilteredAlignment" data="@data_southbougainville" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:2sg" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:2sg" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:2sg" spec="FilteredAlignment" data="@data_southbougainville" filter="7-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:blood" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:blood" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:blood" spec="FilteredAlignment" data="@data_southbougainville" filter="10-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:bone" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:bone" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:bone" spec="FilteredAlignment" data="@data_southbougainville" filter="15-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:breast" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:breast" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:breast" spec="FilteredAlignment" data="@data_southbougainville" filter="18-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:come" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:come" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:come" spec="FilteredAlignment" data="@data_southbougainville" filter="24-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:die" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:die" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:die" spec="FilteredAlignment" data="@data_southbougainville" filter="28-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:dog" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:dog" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:dog" spec="FilteredAlignment" data="@data_southbougainville" filter="32-37" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:ear" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:ear" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:ear" spec="FilteredAlignment" data="@data_southbougainville" filter="38-41" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:eye" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:eye" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:eye" spec="FilteredAlignment" data="@data_southbougainville" filter="42-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:fire" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:fire" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:fire" spec="FilteredAlignment" data="@data_southbougainville" filter="46-50" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:fish" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:fish" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:fish" spec="FilteredAlignment" data="@data_southbougainville" filter="51-55" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:full" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:full" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:full" spec="FilteredAlignment" data="@data_southbougainville" filter="56-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:hand" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:hand" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:hand" spec="FilteredAlignment" data="@data_southbougainville" filter="60-62" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:hear" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:hear" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:hear" spec="FilteredAlignment" data="@data_southbougainville" filter="63-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:knee" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:knee" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:knee" spec="FilteredAlignment" data="@data_southbougainville" filter="68-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:leaf" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:leaf" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:leaf" spec="FilteredAlignment" data="@data_southbougainville" filter="72-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:louse" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:louse" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:louse" spec="FilteredAlignment" data="@data_southbougainville" filter="75-78" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:mountain" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:mountain" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:mountain" spec="FilteredAlignment" data="@data_southbougainville" filter="79-84" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:name" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:name" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:name" spec="FilteredAlignment" data="@data_southbougainville" filter="85-88" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:new" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:new" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:new" spec="FilteredAlignment" data="@data_southbougainville" filter="89-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:night" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:night" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:night" spec="FilteredAlignment" data="@data_southbougainville" filter="94-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:nose" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:nose" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:nose" spec="FilteredAlignment" data="@data_southbougainville" filter="98-100" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:path" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:path" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:path" spec="FilteredAlignment" data="@data_southbougainville" filter="101-108" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:person" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:person" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:person" spec="FilteredAlignment" data="@data_southbougainville" filter="109-111" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:see" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:see" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:see" spec="FilteredAlignment" data="@data_southbougainville" filter="112-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:skin" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:skin" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:skin" spec="FilteredAlignment" data="@data_southbougainville" filter="118-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:star" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:star" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:star" spec="FilteredAlignment" data="@data_southbougainville" filter="124-126" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:stone" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:stone" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:stone" spec="FilteredAlignment" data="@data_southbougainville" filter="127-130" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:sun" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:sun" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:sun" spec="FilteredAlignment" data="@data_southbougainville" filter="131-135" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:tooth" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:tooth" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:tooth" spec="FilteredAlignment" data="@data_southbougainville" filter="136-138" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:two" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:two" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:two" spec="FilteredAlignment" data="@data_southbougainville" filter="139-143" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbougainville:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbougainville:water" spec="SiteModel" mutationRate="@featureClockRate:southbougainville:water" proportionInvariant="0" substModel="@covarion.s:southbougainville" />
+          <data id="feature_data_southbougainville:water" spec="FilteredAlignment" data="@data_southbougainville" filter="144-147" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:southbougainville" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:southbougainville" name="up" />
+      <parameter idref="featureClockRateGammaScale:southbougainville" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:southbougainville" spec="ScaleOperator" parameter="@covarion_alpha.s:southbougainville" scaleFactor="0.5" weight="1.0" />
+    <operator id="southbougainville:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:southbougainville" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,ear,eye,fire,fish,full,hand,hear,knee,leaf,louse,mountain,name,new,night,nose,path,person,see,skin,star,stone,sun,tooth,two,water">
+        <parameter idref="featureClockRate:southbougainville:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="34" estimate="false">2 2 2 4 2 5 3 3 5 3 3 4 4 3 2 4 3 2 3 5 3 4 3 2 7 2 5 5 2 3 4 2 4 3</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="southbougainville.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,ear,eye,fire,fish,full,hand,hear,knee,leaf,louse,mountain,name,new,night,nose,path,person,see,skin,star,stone,sun,tooth,two,water">
+        <log idref="featureClockRate:southbougainville:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:southbougainville" />
+      <log idref="covarion_alpha.s:southbougainville" />
+      <log idref="covarion_s.s:southbougainville" />
+    </logger>
+    <logger mode="tree" fileName="southbougainville.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

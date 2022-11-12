@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="east2328,erzy1239,esto1258,finn1318,fore1265,hung1274,inar1241,ingr1248,kama1351,kare1335,khan1273,kild1236,komi1268,komi1269,livv1243,livv1244,lule1254,mans1258,mato1250,moks1248,nene1249,ngan1291,nort2671,selk1253,skol1241,sout2674,sout2679,udmu1245,veps1250,west2392">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_uralic" name="data_uralic" dataType="integer">
+    <sequence id="language_data_uralic:east2328" taxon="east2328" value="01000100100000100000000000001000000000000100000001000000000001000000001000100000000000000010000000000000001000000010000000100000001001000000010000100000000000001000000000010000000100010000100000000000000010000000000010000000100000000000000100000000000000001000001000000000000000000010000000000100000001000001000000000000100000000000000000000000000000000100000001000000010000000000100000000000001000000000001000000100000000000000010000000001000000000000100000000100000001000000000000" />
+    <sequence id="language_data_uralic:erzy1239" taxon="erzy1239" value="01000100100000100000000000100000000010000000000000000000000010000000000000100000000000000010000000100010000000000000000000100000100001000000010001000000000000001000000000001000000100000001000000000000000100000000000010000001000000000001000000000000000000001010000000000000000000010000000000001000000010000000000000000100000000000000000000000010000000000000000000000010000000000000000000000100000100000000010000000100000000000010000000001010000000010000000000001000000001000000000000" />
+    <sequence id="language_data_uralic:esto1258" taxon="esto1258" value="01000100100000010000000000011000000001000000000000000000000001000000000000010000000000000001000000000001000000000000000000010000100001000000010000100000000000001000000000010000000010000000100000000000000010000000000010000000100000000000100000000000000000010001000000000000000000001000000000000100000001000000000000000010000000000000000000000010000000000000000000000001000000000000000000000010000000000000010000000010000000000001000000000010000000001000000000010000000001000000000000" />
+    <sequence id="language_data_uralic:finn1318" taxon="finn1318" value="01000100100000010000000000001000000000100000000000000000000001000000000000100000000000000001000000000001000000000000000000010000100001000000010000100000000000001000000000010000000010000000100000000000000010000000000010000000100000000000010000000000000000010001000000000000000000000100000000000100000001000000000000000010000000000000000000000001000000000000000000000001000000000000000000000000100000000000010000000010000000000000100000000010000000000010000000010000000001000000000000" />
+    <sequence id="language_data_uralic:fore1265" taxon="fore1265" value="010001000100000010000000000001000000000100000000000000000000001000000000000010000000000000100000000000000100000000000000000010000100001000000100000100000000000001000000000001000000010000000100000000000000010000000000100000???????????000001000000000000000010000010000000000000000010000000000000010000000100000000000000001000000000000000000000000100000000000000000000000100000000000000000000000010000000000010000000001000000000000010000000001000000000001000000010000000000100000000000" />
+    <sequence id="language_data_uralic:hung1274" taxon="hung1274" value="01000100100000100000000000000010000100000100000000000001000100010000000000100000000000000100100000010100000100000000000000100000100010000000010010000000000000001000000000010000000010000010000000000000001000000000000100000010000000000010000000000000000000010000000100000000000000100001100000010001000100010000000000001000010000000000000000000100000000000000000000000100001000000000000000001000000000000000100000001000000000000100000000000001000000100000000000010000000001000000000000" />
+    <sequence id="language_data_uralic:inar1241" taxon="inar1241" value="01000100100000010000000000000010000000000010000000000000000000001000000000000010000000000010000000000000000010000000000000100000100001000000010000100000000000001000000000010000000010000000001000000000000010000000000001000000010000000000000010000000000000010000000010000000000000000000100000000100000000010000000000000000001000000000000000000000001000000000000000000000000100000000000000000000000100000000010000000000100000000001000000000000100000000000100000000010000000010000000000" />
+    <sequence id="language_data_uralic:ingr1248" taxon="ingr1248" value="01000100?????0010000000000????????0000000001000000000000000??????????????010000000000000000100000000000100000000000000000001000010000100000001000000100000000000100000000001000000001000000010000000000000????????????0000100000001000000000000001000000000000010000000010000000000000????????????000100000001000000000000000000000100000000000000000000000100000000000000000000000010000000000000000000100000000000???????00010000000000001000000000010000000000010000000010000000001000000000000" />
+    <sequence id="language_data_uralic:kama1351" taxon="kama1351" value="01000100100000000100000000001000000000000000100000000000000000000100000000000011000000000000010000000000000001000000000000001000100000010000010000000100000000000001000000000010010000101000000110000000000001000000000100000000000100000001000000100000000000010000000001000000000000010000000000000010000000001000000000100000000010000000000000000000000010000000000000000000000001000000000001000000000010000000000100000001000000000000010000000000010000000000010000010000000000100000000000" />
+    <sequence id="language_data_uralic:kare1335" taxon="kare1335" value="01000100100000010000000000001000000000100000000000000000000001000000000000100000000000000001000000000000100000010000000000010000100001000000010000100000000000001000000000010000000010000000100000000000000010000000000010000000100000000000110000000000000000010001000000000000000000000000000100000100000001000000000000000010001000000000000000000010000001000000000000000000000010000000000000000000000100000000010000000010000000000001000000000010000000000010000000010000000001000000000000" />
+    <sequence id="language_data_uralic:khan1273" taxon="khan1273" value="01000100000100000010010000001000000000000000010000000000000000010000000000100000010000100001000010000000001000000000010000100000100000100001010010100010000000001000000000010000000001000000000001000000000100000000000100000010000000000000000000010000010100010000010000000000000000000010000000000100000000000011000100000001000000100000000100100000000000100010000000000000000000010000000000000000000001010000000010001000000000000000001000100001000000000000001000000000100100001000000000" />
+    <sequence id="language_data_uralic:kild1236" taxon="kild1236" value="01000100100000010000000000000001000001001000000000000000000000001000000000000010000000000010000000000000000000001000000000100000100001000000010000100000000000001000000000010000000010000000100000000000000010000000000001000000010000000000000000001000000000010000000010000000000000000000100000000100000000010000000000000000000000010000000000000000001000000000000100000000000100000000000000000000010000000000010000000000001000000001000000000001000000000000100000000010000000000100000001" />
+    <sequence id="language_data_uralic:komi1268" taxon="komi1268" value="01000100100000100000000000001000000000000000001000000000000000000001000100100000000000000010000000000001000000000000000000100000100000001000010000000001000000000000100000010000000100000000010000000000000000010000000010000000010000000000000000000100000010010000000000001000000000000000001000000100000000000001000000000000100000001000000000000000000000010000000000000000000000000100000000000100000000000000000100000000000100000000000100000010000000000000100000010000000000100000000000" />
+    <sequence id="language_data_uralic:komi1269" taxon="komi1269" value="010001001000001000000000000010000000000000000010000000000000000100000000001000000000000000100000000000000000000100000000001000001000000010000100???????????????000001000000100000001000000000100000000000000000100000000100000???????????00000000000010000000001000000000001100000000000000000100000010000000000000100000000000000000000100000000000000000000001000000000000000000000000110000000000???????????????0000100000000000100000????????????010000000000000100000010000000001000000000000" />
+    <sequence id="language_data_uralic:livv1243" taxon="livv1243" value="01000100100000010000000000001000000000001000000000000000000001000000000000100000000000000001000000000000100000000000000000010000100001000000010010100000000000001000000000010000000010000000100000000000000010000000000010000000100000000000100000000000000000010001000000000000000000000000000100000100000001000000000000000000000100000000000000000000000000001000000000000001000000000000000000000000000000000100010000000010000000000001000000000010000000000010000000010000000001000000000000" />
+    <sequence id="language_data_uralic:livv1244" taxon="livv1244" value="00100100100000100000000000001000000000100000000000000000000001000000000000100000000000000010000000000000000000010000000000010000100001000000010000100000000000001000000100010000000010000000000000100000000010001000000010000000100000000000100000000000000000010001000000000000000000000000000100000100000001000000000000000010000000000100000000000000000000001000000000000001000000000000000000000000000100000000010000000010100000000001000000000010000000000000000100010000000001000000000000" />
+    <sequence id="language_data_uralic:lule1254" taxon="lule1254" value="01000100100000010000000000000010000000000000000100000000000000001000000000000010000000000010000000000000000000001000000000100000100001000000010000100000000000001000000000010000000010000000100000000000000010000000000000001000010000000000000010000000000000010000000010000000000000000010000000000100000001000000000000000000001000000000000000000000001000000000000000000000000000000010000000000000000100100000010000000000100000000001000000000000100000000000100000000010000000010000000000" />
+    <sequence id="language_data_uralic:mans1258" taxon="mans1258" value="01000100000100000010000100001000000000000100000010000000000000010000010000100000000010000000001010000000000000000100001000100000100001000100010010000000000000001000000000010000100001000000000000010000000000000100000100000000000010000000000110000010000000010000010000000000000000000010000000000100000001000000000000000000000000010000100000000000001000000000000010000000000000000001001000000000000001001000000110000000000010100000001000000001000000000000001000000000010001000000000000" />
+    <sequence id="language_data_uralic:mato1250" taxon="mato1250" value="01000110100000000100000000001000000000101000000000000000110000100010000000000000101000000010000000000000000000100000000000011010100010100000010000000000100000000001011001000100000001000000010010001000000000100100010000010000000100000001010000000000000000010000000000100100000000000000010000001000000000000101100000001000000001000000000000000???????????????????????0000000001100000000000000000001100000000000100000000010001000000010000000010001000000000010000000001000000100000000000" />
+    <sequence id="language_data_uralic:moks1248" taxon="moks1248" value="01000100100000000001000000000000100010000001000000100000000010000010100000100000000000000010000000000010000000000000000000100000100001000000010001000000000000001000000000011000000100000000000000001100000100000000000010000000000001000001000000000000000000001001000000000010000000010000000000000000100010000000000000000100000000010000000010000010000000000000000000000010000000000010000000100100000100000000010000000100000000000010000000000010000000010000100000001000000001000000000000" />
+    <sequence id="language_data_uralic:nene1249" taxon="nene1249" value="01000100000010001100000000001000000000000010000000000000000001100000000000100000000000010010000100000000000000000001000010001000100001100000010000010000000000000001000010000100000001000000000000100000000000000010000100000000000000101000000000000001000000010000000000000001000000010000000000000010000000000000010001000001000000000000000001000000000000000010000000010000100000000000000000000000010010000010000001000001000000000000000010000001000000000000000010010000000000000010000000" />
+    <sequence id="language_data_uralic:ngan1291" taxon="ngan1291" value="01000100100000000100100000001000000000000010000000000000000000100000000000000000000100000010000000000000000000000000100000001000100000100000010000000000010001000001100000000001000001000000000000000010000000000001000100000000000000010000000000000000100000010000000000000000100000010000000000000100000000000000001000000000000000000010000000000000000000000010000000000000000000000000010000000000000010000000000000100000000001000000000001000000000100000000000001000000001000000001000000" />
+    <sequence id="language_data_uralic:nort2671" taxon="nort2671" value="01000100100000010000000000000010000000000000000000010000000000001000000000000010000000000010000000000000000000001000000000100000100001000000010000100000000000001000000000010000000010000000000000001001000010000000000001000000010000000000000010000000000000010000000010000000010010000000100010000100000001000000000000000000001000000001000010000000001000000000000000100000000100000000000100000000000100000000010000000000100000000001000000000010100000000000100000000010000000010000000000" />
+    <sequence id="language_data_uralic:selk1253" taxon="selk1253" value="01000100100000000100000000001000000000000010000100000000000001000000000010000010000001000000000001000000000000000000000100001100010000100000010000000000001000100101000000000001000001000000000000100000000001000000000100000000000100000000100000000000000001010000000000000000001000010000000001000000010000000000000010001000000000000000000000010000000000000001100000000000000001000000000000000000000010000000000100000001000000000000000000010000000010000000010000010000000000000000110000" />
+    <sequence id="language_data_uralic:skol1241" taxon="skol1241" value="01000100100000010000000000000010000001000000000000000000000000001000000000000010000000000010000000000000000000001000000000100000100001000000010000100000000000001000000000010000000010000000100000000000000010000000000001000000010000000000000010000000000000010000000010000000000000010000000000000100000000010000000000000000001000000000000000000000001000000000000000000000000000000010000000000000000100000000010000000000000000010001000000000001000000000000100000000010000000000000001000" />
+    <sequence id="language_data_uralic:sout2674" taxon="sout2674" value="01000100100000010000000010000000010000000010000000001000000000001000000000000010000000000010000000000000000000001000000000100000100001000000010000100000000000001000000000010000000010000000100000000000000010000000100010001000010000000000000000000000101000010000000000000000000100000000100000000100000001000000000000000000001000000000000000000000001000000000000000000000000000000010000000000000000000000010010000000000100000000001000000000001000000000000100000000010000000000000000110" />
+    <sequence id="language_data_uralic:sout2679" taxon="sout2679" value="01000100100000010000000000001000000001000000000000000000000001000000000000100000000000000010000000000000100000000000000000010000100001000000010000100000000000001000000000010000000010000000100000000000000010000000000010000000100000000000100000000000000000010000100000000000000000????????????000100000001000000000000000010000000000000000000000010000000000000000000000001000000000000000000000001000000000000010000000010000000000001000000000010000000000100000000010000000001000000000000" />
+    <sequence id="language_data_uralic:udmu1245" taxon="udmu1245" value="01010100100000100000000000001000000000001000000000000100000000010000000000100000000000000010000000000000000000010000000000100000100001000000001000100000000100000000100000010000000100000000010000000000000000010000000010000000010000000000000000000100000000010000000000001000000000000000001000000100000000000001000000000000000000000000010000000000000000000000010000000000000000000000000010000100000000000000000100000000000100000000000100000010000000000000100000010000000001000000000000" />
+    <sequence id="language_data_uralic:veps1250" taxon="veps1250" value="01000100100000100000001000001000000000000000000000000010000001000000000000100000000000000001000000000000000000010000000000010000100000000010010000100000000000001000000100010000000010000000100000000000100010000000000010000000100000000000100000000000000000010001000000000000000000000000000100000100000001000000000000000000000000000000001000000000000000001000001000000001000000000000000000000000000100000000010000000010000000000001000000000010000000000000100100010000000001000000000000" />
+    <sequence id="language_data_uralic:west2392" taxon="west2392" value="01000100001000100000000000001000000000001100000001000000000001000000001000100100000000000010000000000000001000000000000000100000001001000000010000100000000010001010000000010000000100000000100000000000000010000000000010000000100000000000000100000000000000001000001000000000000000000010000000000100000001000001000000000000100000000000000000000000010000000000000000000000010000000000000000000000001000000000001000000100000000000000010000000001000000000000100000000100000001000000000000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+        <parameter id="featureClockRate:uralic:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:uralic" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:uralic" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:uralic" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:uralic" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(hung1274,khan1273,mans1258,(east2328,west2392),(erzy1239,moks1248),(udmu1245,(komi1268,komi1269)),(mato1250,ngan1291,(fore1265,nene1249),(kama1351,selk1253)),((kild1236,(inar1241,skol1241)),(sout2674,(lule1254,nort2671))),(sout2679,(livv1244,(esto1258,(finn1318,(ingr1248,kare1335,(livv1243,veps1250)))))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:uralic" name="distribution">
+          <input id="featureClockRateCompound:uralic" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+              <var idref="featureClockRate:uralic:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:uralic" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:uralic" beta="@featureClockRateGammaScale:uralic" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:uralic" name="distribution" x="@featureClockRateGammaScale:uralic">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:uralic" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:uralic" name="distribution" x="@covarion_alpha.s:uralic">
+          <Uniform id="CovAlphaUniform:uralic" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:uralic" name="distribution" x="@covarion_s.s:uralic">
+          <Gamma id="Gamma.0:uralic" name="distr">
+            <parameter id="covarion_switch_gamma_param1:uralic" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:uralic" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:uralic:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:1pl" spec="SiteModel" mutationRate="@featureClockRate:uralic:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:uralic" spec="BinaryCovarion" alpha="@covarion_alpha.s:uralic" switchRate="@covarion_s.s:uralic">
+              <vfrequencies id="uralic:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.91 0.09</vfrequencies>
+              <parameter id="uralic:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="uralic:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_uralic:1pl" spec="FilteredAlignment" data="@data_uralic" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:1sg" spec="SiteModel" mutationRate="@featureClockRate:uralic:1sg" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:1sg" spec="FilteredAlignment" data="@data_uralic" filter="5-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:2sg" spec="SiteModel" mutationRate="@featureClockRate:uralic:2sg" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:2sg" spec="FilteredAlignment" data="@data_uralic" filter="8-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:blood" spec="SiteModel" mutationRate="@featureClockRate:uralic:blood" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:blood" spec="FilteredAlignment" data="@data_uralic" filter="14-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:bone" spec="SiteModel" mutationRate="@featureClockRate:uralic:bone" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:bone" spec="FilteredAlignment" data="@data_uralic" filter="26-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:breast" spec="SiteModel" mutationRate="@featureClockRate:uralic:breast" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:breast" spec="FilteredAlignment" data="@data_uralic" filter="35-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:come" spec="SiteModel" mutationRate="@featureClockRate:uralic:come" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:come" spec="FilteredAlignment" data="@data_uralic" filter="59-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:die" spec="SiteModel" mutationRate="@featureClockRate:uralic:die" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:die" spec="FilteredAlignment" data="@data_uralic" filter="74-88" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:dog" spec="SiteModel" mutationRate="@featureClockRate:uralic:dog" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:dog" spec="FilteredAlignment" data="@data_uralic" filter="89-100" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:drink" spec="SiteModel" mutationRate="@featureClockRate:uralic:drink" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:drink" spec="FilteredAlignment" data="@data_uralic" filter="101-121" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:ear" spec="SiteModel" mutationRate="@featureClockRate:uralic:ear" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:ear" spec="FilteredAlignment" data="@data_uralic" filter="122-127" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:eye" spec="SiteModel" mutationRate="@featureClockRate:uralic:eye" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:eye" spec="FilteredAlignment" data="@data_uralic" filter="128-131" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:fire" spec="SiteModel" mutationRate="@featureClockRate:uralic:fire" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:fire" spec="FilteredAlignment" data="@data_uralic" filter="132-140" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:fish" spec="SiteModel" mutationRate="@featureClockRate:uralic:fish" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:fish" spec="FilteredAlignment" data="@data_uralic" filter="141-143" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:full" spec="SiteModel" mutationRate="@featureClockRate:uralic:full" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:full" spec="FilteredAlignment" data="@data_uralic" filter="144-159" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:hand" spec="SiteModel" mutationRate="@featureClockRate:uralic:hand" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:hand" spec="FilteredAlignment" data="@data_uralic" filter="160-170" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:hear" spec="SiteModel" mutationRate="@featureClockRate:uralic:hear" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:hear" spec="FilteredAlignment" data="@data_uralic" filter="171-178" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:horn" spec="SiteModel" mutationRate="@featureClockRate:uralic:horn" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:horn" spec="FilteredAlignment" data="@data_uralic" filter="179-185" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:knee" spec="SiteModel" mutationRate="@featureClockRate:uralic:knee" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:knee" spec="FilteredAlignment" data="@data_uralic" filter="186-201" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:leaf" spec="SiteModel" mutationRate="@featureClockRate:uralic:leaf" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:leaf" spec="FilteredAlignment" data="@data_uralic" filter="202-214" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:liver" spec="SiteModel" mutationRate="@featureClockRate:uralic:liver" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:liver" spec="FilteredAlignment" data="@data_uralic" filter="215-221" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:louse" spec="SiteModel" mutationRate="@featureClockRate:uralic:louse" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:louse" spec="FilteredAlignment" data="@data_uralic" filter="222-233" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:mountain" spec="SiteModel" mutationRate="@featureClockRate:uralic:mountain" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:mountain" spec="FilteredAlignment" data="@data_uralic" filter="234-254" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:name" spec="SiteModel" mutationRate="@featureClockRate:uralic:name" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:name" spec="FilteredAlignment" data="@data_uralic" filter="255-257" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:new" spec="SiteModel" mutationRate="@featureClockRate:uralic:new" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:new" spec="FilteredAlignment" data="@data_uralic" filter="258-277" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:night" spec="SiteModel" mutationRate="@featureClockRate:uralic:night" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:night" spec="FilteredAlignment" data="@data_uralic" filter="278-290" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:nose" spec="SiteModel" mutationRate="@featureClockRate:uralic:nose" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:nose" spec="FilteredAlignment" data="@data_uralic" filter="291-298" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:one" spec="SiteModel" mutationRate="@featureClockRate:uralic:one" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:one" spec="FilteredAlignment" data="@data_uralic" filter="299-315" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:path" spec="SiteModel" mutationRate="@featureClockRate:uralic:path" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:path" spec="FilteredAlignment" data="@data_uralic" filter="316-340" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:person" spec="SiteModel" mutationRate="@featureClockRate:uralic:person" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:person" spec="FilteredAlignment" data="@data_uralic" filter="341-364" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:see" spec="SiteModel" mutationRate="@featureClockRate:uralic:see" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:see" spec="FilteredAlignment" data="@data_uralic" filter="365-387" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:skin" spec="SiteModel" mutationRate="@featureClockRate:uralic:skin" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:skin" spec="FilteredAlignment" data="@data_uralic" filter="388-403" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:star" spec="SiteModel" mutationRate="@featureClockRate:uralic:star" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:star" spec="FilteredAlignment" data="@data_uralic" filter="404-411" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:stone" spec="SiteModel" mutationRate="@featureClockRate:uralic:stone" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:stone" spec="FilteredAlignment" data="@data_uralic" filter="412-424" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:sun" spec="SiteModel" mutationRate="@featureClockRate:uralic:sun" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:sun" spec="FilteredAlignment" data="@data_uralic" filter="425-437" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:tongue" spec="SiteModel" mutationRate="@featureClockRate:uralic:tongue" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:tongue" spec="FilteredAlignment" data="@data_uralic" filter="438-445" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:tooth" spec="SiteModel" mutationRate="@featureClockRate:uralic:tooth" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:tooth" spec="FilteredAlignment" data="@data_uralic" filter="446-458" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:tree" spec="SiteModel" mutationRate="@featureClockRate:uralic:tree" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:tree" spec="FilteredAlignment" data="@data_uralic" filter="459-468" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:uralic:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.uralic:water" spec="SiteModel" mutationRate="@featureClockRate:uralic:water" proportionInvariant="0" substModel="@covarion.s:uralic" />
+          <data id="feature_data_uralic:water" spec="FilteredAlignment" data="@data_uralic" filter="469-482" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:uralic" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:uralic" name="up" />
+      <parameter idref="featureClockRateGammaScale:uralic" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:uralic" spec="ScaleOperator" parameter="@covarion_alpha.s:uralic" scaleFactor="0.5" weight="1.0" />
+    <operator id="uralic:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:uralic" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+        <parameter idref="featureClockRate:uralic:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="39" estimate="false">3 2 5 11 8 23 14 14 11 20 5 3 8 2 15 10 7 6 15 12 6 11 20 2 19 12 7 16 24 23 22 15 7 12 12 7 12 9 13</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="uralic.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+        <log idref="featureClockRate:uralic:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:uralic" />
+      <log idref="covarion_alpha.s:uralic" />
+      <log idref="covarion_s.s:uralic" />
+    </logger>
+    <logger mode="tree" fileName="uralic.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

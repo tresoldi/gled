@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="ward1246" />
+    <taxon id="yang1288" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_yangmanic" name="data_yangmanic" dataType="integer">
+    <sequence id="language_data_yangmanic:ward1246" taxon="ward1246" value="011010101010101010011011010010010010010010101001010100100101010010011011010010" />
+    <sequence id="language_data_yangmanic:yang1288" taxon="yang1288" value="0??001000100010001001010001001001001001001000100100010010010001001001010001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="2sg,blood,die,dog,drink,ear,fire,full,hand,hear,leaf,liver,mountain,new,night,path,person,see,star,stone,sun,tongue,tooth,tree">
+        <parameter id="featureClockRate:yangmanic:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:yangmanic" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:yangmanic" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:yangmanic" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:yangmanic" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(ward1246,yang1288);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:yangmanic" name="distribution">
+          <input id="featureClockRateCompound:yangmanic" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="2sg,blood,die,dog,drink,ear,fire,full,hand,hear,leaf,liver,mountain,new,night,path,person,see,star,stone,sun,tongue,tooth,tree">
+              <var idref="featureClockRate:yangmanic:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:yangmanic" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:yangmanic" beta="@featureClockRateGammaScale:yangmanic" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:yangmanic" name="distribution" x="@featureClockRateGammaScale:yangmanic">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:yangmanic" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:yangmanic" name="distribution" x="@covarion_alpha.s:yangmanic">
+          <Uniform id="CovAlphaUniform:yangmanic" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:yangmanic" name="distribution" x="@covarion_s.s:yangmanic">
+          <Gamma id="Gamma.0:yangmanic" name="distr">
+            <parameter id="covarion_switch_gamma_param1:yangmanic" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:yangmanic" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:yangmanic:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:2sg" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:2sg" proportionInvariant="0">
+            <substModel id="covarion.s:yangmanic" spec="BinaryCovarion" alpha="@covarion_alpha.s:yangmanic" switchRate="@covarion_s.s:yangmanic">
+              <vfrequencies id="yangmanic:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.63 0.37</vfrequencies>
+              <parameter id="yangmanic:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="yangmanic:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_yangmanic:2sg" spec="FilteredAlignment" data="@data_yangmanic" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:blood" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:blood" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:blood" spec="FilteredAlignment" data="@data_yangmanic" filter="4-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:die" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:die" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:die" spec="FilteredAlignment" data="@data_yangmanic" filter="8-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:dog" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:dog" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:dog" spec="FilteredAlignment" data="@data_yangmanic" filter="12-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:drink" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:drink" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:drink" spec="FilteredAlignment" data="@data_yangmanic" filter="16-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:ear" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:ear" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:ear" spec="FilteredAlignment" data="@data_yangmanic" filter="19-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:fire" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:fire" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:fire" spec="FilteredAlignment" data="@data_yangmanic" filter="22-24" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:full" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:full" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:full" spec="FilteredAlignment" data="@data_yangmanic" filter="25-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:hand" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:hand" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:hand" spec="FilteredAlignment" data="@data_yangmanic" filter="28-30" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:hear" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:hear" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:hear" spec="FilteredAlignment" data="@data_yangmanic" filter="31-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:leaf" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:leaf" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:leaf" spec="FilteredAlignment" data="@data_yangmanic" filter="34-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:liver" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:liver" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:liver" spec="FilteredAlignment" data="@data_yangmanic" filter="37-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:mountain" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:mountain" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:mountain" spec="FilteredAlignment" data="@data_yangmanic" filter="40-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:new" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:new" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:new" spec="FilteredAlignment" data="@data_yangmanic" filter="44-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:night" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:night" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:night" spec="FilteredAlignment" data="@data_yangmanic" filter="47-50" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:path" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:path" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:path" spec="FilteredAlignment" data="@data_yangmanic" filter="51-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:person" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:person" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:person" spec="FilteredAlignment" data="@data_yangmanic" filter="54-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:see" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:see" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:see" spec="FilteredAlignment" data="@data_yangmanic" filter="57-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:star" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:star" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:star" spec="FilteredAlignment" data="@data_yangmanic" filter="61-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:stone" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:stone" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:stone" spec="FilteredAlignment" data="@data_yangmanic" filter="64-66" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:sun" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:sun" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:sun" spec="FilteredAlignment" data="@data_yangmanic" filter="67-69" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:tongue" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:tongue" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:tongue" spec="FilteredAlignment" data="@data_yangmanic" filter="70-72" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:tooth" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:tooth" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:tooth" spec="FilteredAlignment" data="@data_yangmanic" filter="73-75" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yangmanic:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yangmanic:tree" spec="SiteModel" mutationRate="@featureClockRate:yangmanic:tree" proportionInvariant="0" substModel="@covarion.s:yangmanic" />
+          <data id="feature_data_yangmanic:tree" spec="FilteredAlignment" data="@data_yangmanic" filter="76-78" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:yangmanic" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:yangmanic" name="up" />
+      <parameter idref="featureClockRateGammaScale:yangmanic" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:yangmanic" spec="ScaleOperator" parameter="@covarion_alpha.s:yangmanic" scaleFactor="0.5" weight="1.0" />
+    <operator id="yangmanic:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:yangmanic" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="2sg,blood,die,dog,drink,ear,fire,full,hand,hear,leaf,liver,mountain,new,night,path,person,see,star,stone,sun,tongue,tooth,tree">
+        <parameter idref="featureClockRate:yangmanic:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="24" estimate="false">2 3 3 3 2 2 2 2 2 2 2 2 3 2 3 2 2 3 2 2 2 2 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="yangmanic.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="2sg,blood,die,dog,drink,ear,fire,full,hand,hear,leaf,liver,mountain,new,night,path,person,see,star,stone,sun,tongue,tooth,tree">
+        <log idref="featureClockRate:yangmanic:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:yangmanic" />
+      <log idref="covarion_alpha.s:yangmanic" />
+      <log idref="covarion_s.s:yangmanic" />
+    </logger>
+    <logger mode="tree" fileName="yangmanic.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

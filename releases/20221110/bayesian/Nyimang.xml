@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="afit1238" />
+    <taxon id="amas1236" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_nyimang" name="data_nyimang" dataType="integer">
+    <sequence id="language_data_nyimang:afit1238" taxon="afit1238" value="01001001001000100100100100100010010010010010001001001010110100100??010010010010010" />
+    <sequence id="language_data_nyimang:amas1236" taxon="amas1236" value="0110110110011001001001011001100100100100100110010010010001001001011001001001001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="breast,come,die,drink,ear,eye,fire,hand,hear,horn,leaf,name,new,night,nose,one,person,see,skin,star,stone,sun,tongue,tooth,tree,two">
+        <parameter id="featureClockRate:nyimang:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:nyimang" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:nyimang" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:nyimang" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:nyimang" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(afit1238,amas1236);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:nyimang" name="distribution">
+          <input id="featureClockRateCompound:nyimang" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="breast,come,die,drink,ear,eye,fire,hand,hear,horn,leaf,name,new,night,nose,one,person,see,skin,star,stone,sun,tongue,tooth,tree,two">
+              <var idref="featureClockRate:nyimang:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:nyimang" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:nyimang" beta="@featureClockRateGammaScale:nyimang" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:nyimang" name="distribution" x="@featureClockRateGammaScale:nyimang">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:nyimang" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:nyimang" name="distribution" x="@covarion_alpha.s:nyimang">
+          <Uniform id="CovAlphaUniform:nyimang" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:nyimang" name="distribution" x="@covarion_s.s:nyimang">
+          <Gamma id="Gamma.0:nyimang" name="distr">
+            <parameter id="covarion_switch_gamma_param1:nyimang" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:nyimang" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:nyimang:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:breast" spec="SiteModel" mutationRate="@featureClockRate:nyimang:breast" proportionInvariant="0">
+            <substModel id="covarion.s:nyimang" spec="BinaryCovarion" alpha="@covarion_alpha.s:nyimang" switchRate="@covarion_s.s:nyimang">
+              <vfrequencies id="nyimang:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.63 0.37</vfrequencies>
+              <parameter id="nyimang:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="nyimang:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_nyimang:breast" spec="FilteredAlignment" data="@data_nyimang" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:come" spec="SiteModel" mutationRate="@featureClockRate:nyimang:come" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:come" spec="FilteredAlignment" data="@data_nyimang" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:die" spec="SiteModel" mutationRate="@featureClockRate:nyimang:die" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:die" spec="FilteredAlignment" data="@data_nyimang" filter="7-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:drink" spec="SiteModel" mutationRate="@featureClockRate:nyimang:drink" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:drink" spec="FilteredAlignment" data="@data_nyimang" filter="10-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:ear" spec="SiteModel" mutationRate="@featureClockRate:nyimang:ear" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:ear" spec="FilteredAlignment" data="@data_nyimang" filter="14-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:eye" spec="SiteModel" mutationRate="@featureClockRate:nyimang:eye" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:eye" spec="FilteredAlignment" data="@data_nyimang" filter="17-19" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:fire" spec="SiteModel" mutationRate="@featureClockRate:nyimang:fire" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:fire" spec="FilteredAlignment" data="@data_nyimang" filter="20-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:hand" spec="SiteModel" mutationRate="@featureClockRate:nyimang:hand" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:hand" spec="FilteredAlignment" data="@data_nyimang" filter="23-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:hear" spec="SiteModel" mutationRate="@featureClockRate:nyimang:hear" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:hear" spec="FilteredAlignment" data="@data_nyimang" filter="26-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:horn" spec="SiteModel" mutationRate="@featureClockRate:nyimang:horn" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:horn" spec="FilteredAlignment" data="@data_nyimang" filter="30-32" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:leaf" spec="SiteModel" mutationRate="@featureClockRate:nyimang:leaf" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:leaf" spec="FilteredAlignment" data="@data_nyimang" filter="33-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:name" spec="SiteModel" mutationRate="@featureClockRate:nyimang:name" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:name" spec="FilteredAlignment" data="@data_nyimang" filter="36-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:new" spec="SiteModel" mutationRate="@featureClockRate:nyimang:new" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:new" spec="FilteredAlignment" data="@data_nyimang" filter="39-41" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:night" spec="SiteModel" mutationRate="@featureClockRate:nyimang:night" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:night" spec="FilteredAlignment" data="@data_nyimang" filter="42-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:nose" spec="SiteModel" mutationRate="@featureClockRate:nyimang:nose" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:nose" spec="FilteredAlignment" data="@data_nyimang" filter="46-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:one" spec="SiteModel" mutationRate="@featureClockRate:nyimang:one" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:one" spec="FilteredAlignment" data="@data_nyimang" filter="49-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:person" spec="SiteModel" mutationRate="@featureClockRate:nyimang:person" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:person" spec="FilteredAlignment" data="@data_nyimang" filter="52-55" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:see" spec="SiteModel" mutationRate="@featureClockRate:nyimang:see" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:see" spec="FilteredAlignment" data="@data_nyimang" filter="56-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:skin" spec="SiteModel" mutationRate="@featureClockRate:nyimang:skin" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:skin" spec="FilteredAlignment" data="@data_nyimang" filter="59-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:star" spec="SiteModel" mutationRate="@featureClockRate:nyimang:star" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:star" spec="FilteredAlignment" data="@data_nyimang" filter="62-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:stone" spec="SiteModel" mutationRate="@featureClockRate:nyimang:stone" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:stone" spec="FilteredAlignment" data="@data_nyimang" filter="65-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:sun" spec="SiteModel" mutationRate="@featureClockRate:nyimang:sun" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:sun" spec="FilteredAlignment" data="@data_nyimang" filter="68-70" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:tongue" spec="SiteModel" mutationRate="@featureClockRate:nyimang:tongue" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:tongue" spec="FilteredAlignment" data="@data_nyimang" filter="71-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:tooth" spec="SiteModel" mutationRate="@featureClockRate:nyimang:tooth" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:tooth" spec="FilteredAlignment" data="@data_nyimang" filter="74-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:tree" spec="SiteModel" mutationRate="@featureClockRate:nyimang:tree" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:tree" spec="FilteredAlignment" data="@data_nyimang" filter="77-79" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:nyimang:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.nyimang:two" spec="SiteModel" mutationRate="@featureClockRate:nyimang:two" proportionInvariant="0" substModel="@covarion.s:nyimang" />
+          <data id="feature_data_nyimang:two" spec="FilteredAlignment" data="@data_nyimang" filter="80-82" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:nyimang" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:nyimang" name="up" />
+      <parameter idref="featureClockRateGammaScale:nyimang" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:nyimang" spec="ScaleOperator" parameter="@covarion_alpha.s:nyimang" scaleFactor="0.5" weight="1.0" />
+    <operator id="nyimang:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:nyimang" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="breast,come,die,drink,ear,eye,fire,hand,hear,horn,leaf,name,new,night,nose,one,person,see,skin,star,stone,sun,tongue,tooth,tree,two">
+        <parameter idref="featureClockRate:nyimang:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="26" estimate="false">2 2 2 3 2 2 2 2 3 2 2 2 2 3 2 2 3 2 2 2 2 2 2 2 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="nyimang.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="breast,come,die,drink,ear,eye,fire,hand,hear,horn,leaf,name,new,night,nose,one,person,see,skin,star,stone,sun,tongue,tooth,tree,two">
+        <log idref="featureClockRate:nyimang:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:nyimang" />
+      <log idref="covarion_alpha.s:nyimang" />
+      <log idref="covarion_s.s:nyimang" />
+    </logger>
+    <logger mode="tree" fileName="nyimang.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

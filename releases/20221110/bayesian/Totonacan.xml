@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="filo1235,high1243,hueh1236,papa1238,pisa1237,tlac1235,uppe1275,xico1235,yecu1235">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_totonacan" name="data_totonacan" dataType="integer">
+    <sequence id="language_data_totonacan:filo1235" taxon="filo1235" value="010010010010010000010100010000001000100010010000010010000000010000010010000100100010010010010001000010" />
+    <sequence id="language_data_totonacan:high1243" taxon="high1243" value="010010010010010000010100010000001010100010010000010010000100000000100010101001000010010010010001010010" />
+    <sequence id="language_data_totonacan:hueh1236" taxon="hueh1236" value="001010010001010000100010001000100001000010001000010001000010000001000001000101000010001001001001100001" />
+    <sequence id="language_data_totonacan:papa1238" taxon="papa1238" value="010010010010010001010100010001000010000010010000010010000100000010000010001001000010010010010001000010" />
+    <sequence id="language_data_totonacan:pisa1237" taxon="pisa1237" value="001011010001001000100010001000010001000010000100010001000001000001000001000101000010001001010001000001" />
+    <sequence id="language_data_totonacan:tlac1235" taxon="tlac1235" value="001001011001010000100010001000010001000010000010010001000000100001000001000101000001001001000100010001" />
+    <sequence id="language_data_totonacan:uppe1275" taxon="uppe1275" value="010010010010010000100100000100001000001010010000010000010000001001000010000100001010010010010001000001" />
+    <sequence id="language_data_totonacan:xico1235" taxon="xico1235" value="010010010010010000100100000100001010000010000001010000010000001001000010000100001010010010010001000001" />
+    <sequence id="language_data_totonacan:yecu1235" taxon="yecu1235" value="010010010010000100100001000100001000010001010000001000100000001000001010000100010010010001010000001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="2sg,breast,come,dog,drink,ear,eye,fire,fish,leaf,liver,mountain,name,nose,one,path,person,see,skin,stone,sun,tooth,tree,two,water">
+        <parameter id="featureClockRate:totonacan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:totonacan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:totonacan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:totonacan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:totonacan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((hueh1236,pisa1237,tlac1235),(yecu1235,(filo1235,(high1243,papa1238),(uppe1275,xico1235))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:totonacan" name="distribution">
+          <input id="featureClockRateCompound:totonacan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="2sg,breast,come,dog,drink,ear,eye,fire,fish,leaf,liver,mountain,name,nose,one,path,person,see,skin,stone,sun,tooth,tree,two,water">
+              <var idref="featureClockRate:totonacan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:totonacan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:totonacan" beta="@featureClockRateGammaScale:totonacan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:totonacan" name="distribution" x="@featureClockRateGammaScale:totonacan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:totonacan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:totonacan" name="distribution" x="@covarion_alpha.s:totonacan">
+          <Uniform id="CovAlphaUniform:totonacan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:totonacan" name="distribution" x="@covarion_s.s:totonacan">
+          <Gamma id="Gamma.0:totonacan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:totonacan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:totonacan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:totonacan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:2sg" spec="SiteModel" mutationRate="@featureClockRate:totonacan:2sg" proportionInvariant="0">
+            <substModel id="covarion.s:totonacan" spec="BinaryCovarion" alpha="@covarion_alpha.s:totonacan" switchRate="@covarion_s.s:totonacan">
+              <vfrequencies id="totonacan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.75 0.25</vfrequencies>
+              <parameter id="totonacan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="totonacan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_totonacan:2sg" spec="FilteredAlignment" data="@data_totonacan" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:breast" spec="SiteModel" mutationRate="@featureClockRate:totonacan:breast" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:breast" spec="FilteredAlignment" data="@data_totonacan" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:come" spec="SiteModel" mutationRate="@featureClockRate:totonacan:come" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:come" spec="FilteredAlignment" data="@data_totonacan" filter="7-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:dog" spec="SiteModel" mutationRate="@featureClockRate:totonacan:dog" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:dog" spec="FilteredAlignment" data="@data_totonacan" filter="10-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:drink" spec="SiteModel" mutationRate="@featureClockRate:totonacan:drink" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:drink" spec="FilteredAlignment" data="@data_totonacan" filter="13-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:ear" spec="SiteModel" mutationRate="@featureClockRate:totonacan:ear" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:ear" spec="FilteredAlignment" data="@data_totonacan" filter="17-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:eye" spec="SiteModel" mutationRate="@featureClockRate:totonacan:eye" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:eye" spec="FilteredAlignment" data="@data_totonacan" filter="21-24" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:fire" spec="SiteModel" mutationRate="@featureClockRate:totonacan:fire" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:fire" spec="FilteredAlignment" data="@data_totonacan" filter="25-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:fish" spec="SiteModel" mutationRate="@featureClockRate:totonacan:fish" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:fish" spec="FilteredAlignment" data="@data_totonacan" filter="29-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:leaf" spec="SiteModel" mutationRate="@featureClockRate:totonacan:leaf" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:leaf" spec="FilteredAlignment" data="@data_totonacan" filter="34-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:liver" spec="SiteModel" mutationRate="@featureClockRate:totonacan:liver" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:liver" spec="FilteredAlignment" data="@data_totonacan" filter="40-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:mountain" spec="SiteModel" mutationRate="@featureClockRate:totonacan:mountain" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:mountain" spec="FilteredAlignment" data="@data_totonacan" filter="43-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:name" spec="SiteModel" mutationRate="@featureClockRate:totonacan:name" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:name" spec="FilteredAlignment" data="@data_totonacan" filter="49-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:nose" spec="SiteModel" mutationRate="@featureClockRate:totonacan:nose" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:nose" spec="FilteredAlignment" data="@data_totonacan" filter="52-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:one" spec="SiteModel" mutationRate="@featureClockRate:totonacan:one" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:one" spec="FilteredAlignment" data="@data_totonacan" filter="57-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:path" spec="SiteModel" mutationRate="@featureClockRate:totonacan:path" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:path" spec="FilteredAlignment" data="@data_totonacan" filter="64-69" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:person" spec="SiteModel" mutationRate="@featureClockRate:totonacan:person" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:person" spec="FilteredAlignment" data="@data_totonacan" filter="70-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:see" spec="SiteModel" mutationRate="@featureClockRate:totonacan:see" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:see" spec="FilteredAlignment" data="@data_totonacan" filter="74-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:skin" spec="SiteModel" mutationRate="@featureClockRate:totonacan:skin" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:skin" spec="FilteredAlignment" data="@data_totonacan" filter="77-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:stone" spec="SiteModel" mutationRate="@featureClockRate:totonacan:stone" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:stone" spec="FilteredAlignment" data="@data_totonacan" filter="82-84" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:sun" spec="SiteModel" mutationRate="@featureClockRate:totonacan:sun" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:sun" spec="FilteredAlignment" data="@data_totonacan" filter="85-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:tooth" spec="SiteModel" mutationRate="@featureClockRate:totonacan:tooth" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:tooth" spec="FilteredAlignment" data="@data_totonacan" filter="88-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:tree" spec="SiteModel" mutationRate="@featureClockRate:totonacan:tree" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:tree" spec="FilteredAlignment" data="@data_totonacan" filter="91-94" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:two" spec="SiteModel" mutationRate="@featureClockRate:totonacan:two" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:two" spec="FilteredAlignment" data="@data_totonacan" filter="95-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:totonacan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.totonacan:water" spec="SiteModel" mutationRate="@featureClockRate:totonacan:water" proportionInvariant="0" substModel="@covarion.s:totonacan" />
+          <data id="feature_data_totonacan:water" spec="FilteredAlignment" data="@data_totonacan" filter="100-102" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:totonacan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:totonacan" name="up" />
+      <parameter idref="featureClockRateGammaScale:totonacan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:totonacan" spec="ScaleOperator" parameter="@covarion_alpha.s:totonacan" scaleFactor="0.5" weight="1.0" />
+    <operator id="totonacan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:totonacan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="2sg,breast,come,dog,drink,ear,eye,fire,fish,leaf,liver,mountain,name,nose,one,path,person,see,skin,stone,sun,tooth,tree,two,water">
+        <parameter idref="featureClockRate:totonacan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="25" estimate="false">2 2 2 2 3 3 3 3 4 5 2 5 2 4 6 5 3 2 4 2 2 2 3 4 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="totonacan.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="2sg,breast,come,dog,drink,ear,eye,fire,fish,leaf,liver,mountain,name,nose,one,path,person,see,skin,stone,sun,tooth,tree,two,water">
+        <log idref="featureClockRate:totonacan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:totonacan" />
+      <log idref="covarion_alpha.s:totonacan" />
+      <log idref="covarion_s.s:totonacan" />
+    </logger>
+    <logger mode="tree" fileName="totonacan.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

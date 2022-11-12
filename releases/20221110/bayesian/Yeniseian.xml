@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="arin1243,kett1243,kott1239,yugh1239">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_yeniseian" name="data_yeniseian" dataType="integer">
+    <sequence id="language_data_yeniseian:arin1243" taxon="arin1243" value="010000001001000??01000000???0100000100010001001000101001001000101001001000???010001000100100010000100000100001001001001001000100100000???0101001001001101000000100100011010" />
+    <sequence id="language_data_yeniseian:kett1243" taxon="kett1243" value="0011001001000101000110010100001000001100010010010001000010110001101010???0110001001100010???0011000100000100010001010011000001000100001000010001000100000110010010100011011" />
+    <sequence id="language_data_yeniseian:kott1239" taxon="kott1239" value="00001000001010001000011000100001010000101000010010011101000010001000000100???000101000100010000010001010010000100101100010110110001000???0010001100011001000000100111011010" />
+    <sequence id="language_data_yeniseian:yugh1239" taxon="yugh1239" value="00000100010000010001100000010000100010000000100000010000100100000100000010001001000110??00010000010001000111010001010010000001000001100110010101000100000001100110100010010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="25000000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,bone,breast,come,die,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,louse,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:yeniseian:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:yeniseian" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:yeniseian" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:yeniseian" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:yeniseian" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((arin1243,kott1239),(kett1243,yugh1239));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:yeniseian" name="distribution">
+          <input id="featureClockRateCompound:yeniseian" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,bone,breast,come,die,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,louse,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:yeniseian:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:yeniseian" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:yeniseian" beta="@featureClockRateGammaScale:yeniseian" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:yeniseian" name="distribution" x="@featureClockRateGammaScale:yeniseian">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:yeniseian" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:yeniseian" name="distribution" x="@covarion_alpha.s:yeniseian">
+          <Uniform id="CovAlphaUniform:yeniseian" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:yeniseian" name="distribution" x="@covarion_s.s:yeniseian">
+          <Gamma id="Gamma.0:yeniseian" name="distr">
+            <parameter id="covarion_switch_gamma_param1:yeniseian" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:yeniseian" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:yeniseian:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:1pl" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:yeniseian" spec="BinaryCovarion" alpha="@covarion_alpha.s:yeniseian" switchRate="@covarion_s.s:yeniseian">
+              <vfrequencies id="yeniseian:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.72 0.28</vfrequencies>
+              <parameter id="yeniseian:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="yeniseian:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_yeniseian:1pl" spec="FilteredAlignment" data="@data_yeniseian" filter="1-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:1sg" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:1sg" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:1sg" spec="FilteredAlignment" data="@data_yeniseian" filter="8-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:bone" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:bone" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:bone" spec="FilteredAlignment" data="@data_yeniseian" filter="15-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:breast" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:breast" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:breast" spec="FilteredAlignment" data="@data_yeniseian" filter="18-24" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:come" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:come" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:come" spec="FilteredAlignment" data="@data_yeniseian" filter="25-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:die" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:die" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:die" spec="FilteredAlignment" data="@data_yeniseian" filter="29-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:drink" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:drink" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:drink" spec="FilteredAlignment" data="@data_yeniseian" filter="35-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:ear" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:ear" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:ear" spec="FilteredAlignment" data="@data_yeniseian" filter="43-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:eye" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:eye" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:eye" spec="FilteredAlignment" data="@data_yeniseian" filter="50-54" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:fire" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:fire" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:fire" spec="FilteredAlignment" data="@data_yeniseian" filter="55-57" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:fish" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:fish" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:fish" spec="FilteredAlignment" data="@data_yeniseian" filter="58-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:hand" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:hand" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:hand" spec="FilteredAlignment" data="@data_yeniseian" filter="62-69" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:hear" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:hear" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:hear" spec="FilteredAlignment" data="@data_yeniseian" filter="70-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:horn" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:horn" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:horn" spec="FilteredAlignment" data="@data_yeniseian" filter="74-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:knee" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:knee" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:knee" spec="FilteredAlignment" data="@data_yeniseian" filter="78-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:leaf" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:leaf" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:leaf" spec="FilteredAlignment" data="@data_yeniseian" filter="82-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:liver" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:liver" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:liver" spec="FilteredAlignment" data="@data_yeniseian" filter="86-88" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:louse" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:louse" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:louse" spec="FilteredAlignment" data="@data_yeniseian" filter="89-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:mountain" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:mountain" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:mountain" spec="FilteredAlignment" data="@data_yeniseian" filter="93-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:new" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:new" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:new" spec="FilteredAlignment" data="@data_yeniseian" filter="104-108" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:night" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:night" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:night" spec="FilteredAlignment" data="@data_yeniseian" filter="109-111" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:nose" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:nose" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:nose" spec="FilteredAlignment" data="@data_yeniseian" filter="112-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:one" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:one" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:one" spec="FilteredAlignment" data="@data_yeniseian" filter="115-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:path" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:path" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:path" spec="FilteredAlignment" data="@data_yeniseian" filter="118-124" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:person" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:person" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:person" spec="FilteredAlignment" data="@data_yeniseian" filter="125-127" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:see" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:see" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:see" spec="FilteredAlignment" data="@data_yeniseian" filter="128-133" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:skin" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:skin" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:skin" spec="FilteredAlignment" data="@data_yeniseian" filter="134-137" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:star" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:star" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:star" spec="FilteredAlignment" data="@data_yeniseian" filter="138-142" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:stone" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:stone" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:stone" spec="FilteredAlignment" data="@data_yeniseian" filter="143-145" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:sun" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:sun" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:sun" spec="FilteredAlignment" data="@data_yeniseian" filter="146-151" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:tongue" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:tongue" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:tongue" spec="FilteredAlignment" data="@data_yeniseian" filter="152-158" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:tooth" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:tooth" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:tooth" spec="FilteredAlignment" data="@data_yeniseian" filter="159-161" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:tree" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:tree" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:tree" spec="FilteredAlignment" data="@data_yeniseian" filter="162-165" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:two" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:two" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:two" spec="FilteredAlignment" data="@data_yeniseian" filter="166-168" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yeniseian:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yeniseian:water" spec="SiteModel" mutationRate="@featureClockRate:yeniseian:water" proportionInvariant="0" substModel="@covarion.s:yeniseian" />
+          <data id="feature_data_yeniseian:water" spec="FilteredAlignment" data="@data_yeniseian" filter="169-171" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:yeniseian" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:yeniseian" name="up" />
+      <parameter idref="featureClockRateGammaScale:yeniseian" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:yeniseian" spec="ScaleOperator" parameter="@covarion_alpha.s:yeniseian" scaleFactor="0.5" weight="1.0" />
+    <operator id="yeniseian:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:yeniseian" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,bone,breast,come,die,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,louse,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:yeniseian:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="35" estimate="false">6 6 2 6 3 5 7 6 4 2 3 7 3 3 3 3 2 3 10 4 2 2 2 6 2 5 3 4 2 5 6 2 3 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="2500">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="yeniseian.log" logEvery="2500" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,bone,breast,come,die,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,louse,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:yeniseian:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:yeniseian" />
+      <log idref="covarion_alpha.s:yeniseian" />
+      <log idref="covarion_s.s:yeniseian" />
+    </logger>
+    <logger mode="tree" fileName="yeniseian.nex" logEvery="2500" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>
