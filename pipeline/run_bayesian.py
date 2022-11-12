@@ -11,6 +11,9 @@ import logging
 import re
 import subprocess
 
+# Import 3rd party
+from ete3 import Tree
+
 # Import other modules
 import common
 
@@ -82,12 +85,64 @@ def run_inference(BAYES_PATH, languoids):
         base_nex.unlink()
         temp_tree.unlink()
 
-def collect_trees():
+
+def extract_tree(nexus):
+    """
+    Extract a tree from an MCC nexus file.
+    """
+
+    in_translate = False
+    translate = {}
+    basename = Path(nexus).stem
+    basename = basename[: basename.find(".")]
+    with open(nexus) as handler:
+        for line in handler.readlines():
+            if "Translate" in line:
+                in_translate = True
+            elif in_translate:
+                if ";" in line:
+                    in_translate = False
+                else:
+                    source, target = line.strip().replace(",", "").split()
+                    translate[source] = f"{target}_{basename}"
+            elif "tree TREE1 =" in line:
+                tree_line = line.strip()[line.index("(") :]
+                tree_line = re.sub(r"\[[^]]+\]", "", tree_line)
+                tree = Tree(tree_line)
+
+    # Translate names
+    for node in tree.traverse():
+        if node.name in translate:
+            node.name = translate[node.name]
+
+    return tree
+
+
+def collect_global_tree(BAYES_PATH):
     """
     Collect all trees into a single, global tree.
     """
 
-    pass
+    # Collect all trees and the longest distance
+    global_max_dist = 0.0
+    trees = []
+    for tree_file in glob.glob(str(BAYES_PATH / "*.mcc.tree")):
+        tree = extract_tree(tree_file)
+        trees.append(tree)
+
+        # Get the biggest distance
+        max_dist = max([leaf.get_distance(tree) for leaf in tree.iter_leaves()])
+        if max_dist > global_max_dist:
+            global_max_dist = max_dist
+
+    # Build global tree
+    # TODO: missing isolates
+    global_tree = Tree()
+    for tree in trees:
+        global_tree.add_child(tree, dist=global_max_dist)
+
+    return global_tree
+
 
 def main():
     """
@@ -107,8 +162,10 @@ def main():
     releases = sorted(glob.glob(str(BASE_PATH.parent / "releases" / "*")))
     BAYES_PATH = Path(releases[-1]) / "bayesian"
 
-    run_inference(BAYES_PATH, languoids)
-    collect_trees()
+    # run_inference(BAYES_PATH, languoids)
+    global_tree = collect_global_tree(BAYES_PATH)
+    with open(BAYES_PATH.parent / "global.tree", "w") as handler:
+        handler.write(global_tree.write(format=1))
 
 
 if __name__ == "__main__":

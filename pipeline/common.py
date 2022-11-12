@@ -61,6 +61,7 @@ def slug(label: str, level: str) -> str:
         label = "".join([char for char in label if char in string.ascii_letters])
     if level in ["simple", "full"]:
         label = re.sub(r"\s+", "_", label.strip())
+        label = label.replace("'", "__")
 
     logging.debug("Label slugged to `%s`.", label)
 
