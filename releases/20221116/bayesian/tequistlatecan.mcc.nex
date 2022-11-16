@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			HighlandOaxacaChontal_high1242
+			LowlandOaxacaChontal_lowl1260
+			;
+End;
+Begin trees;
+	Translate
+		   1 HighlandOaxacaChontal_high1242,
+		   2 LowlandOaxacaChontal_lowl1260
+;
+tree TREE1 = (1[&height=0.0,length=7.149433533293372,length_95%_HPD={0.5438,22.99},length_median=2.4047,length_range={0.3462,233.2974},rate=0.9899940211957579,rate_95%_HPD={0.677,1.2554},rate_median=1.0038,rate_range={0.1376,1.2554}]:7.149433533293372,2[&height=0.0,length=7.149433533293372,length_95%_HPD={0.5438,22.99},length_median=2.4047,length_range={0.3462,233.2974},rate=0.9938682263547258,rate_95%_HPD={0.6785,1.2554},rate_median=1.0042,rate_range={0.1376,1.2554}]:7.149433533293372)[&CAheight_95%_HPD={0.5438,22.99},CAheight_mean=7.149433533293372,CAheight_median=2.4047,CAheight_range={0.3462,233.2974},height=7.149433533293372,height_95%_HPD={0.5438,22.99},height_median=2.4047,height_range={0.3462,233.2974},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

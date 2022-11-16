@@ -6,6 +6,7 @@ Run Bayesian analyses and collect results.
 
 # Import Python standard libraries
 from pathlib import Path
+from collections import defaultdict
 import glob
 import logging
 import re
@@ -43,47 +44,21 @@ def run_inference(BAYES_PATH, languoids):
 
         # Run Treeannotator
         # TODO: move to phyltr?
-        temp_tree = BAYES_PATH / f"{basename}.temp.tree"
+        beast2_trees = BAYES_PATH / f"{basename}.nex"
         subprocess.run(
             [
                 str(BEAST2_PATH / "treeannotator"),
                 "-burnin",
                 "50",
                 "-noSA",
-                f"{basename}.nex",
-                str(temp_tree),
+                str(beast2_trees),
+                f"{basename}.mcc.nex",
             ],
             cwd=BAYES_PATH,
         )
 
-        # Load list of languages and replace their names in the final tree
-        with open(temp_tree) as handler:
-            nexus = handler.read()
-
-        base_nex = BAYES_PATH / f"{basename}.nex"
-        with open(base_nex) as handler:
-            taxa_list = False
-            for line in handler.readlines():
-                if "Taxlabels" in line:
-                    taxa_list = True
-                elif taxa_list:
-                    if ";" in line:
-                        break
-                    else:
-                        glottocode = line.strip()
-                        nexus = nexus.replace(
-                            glottocode,
-                            common.slug(languoids[glottocode].name, level="simple"),
-                        )
-
-        output_tree = f"{model_filename.stem}.mcc.tree"
-        with open(BAYES_PATH / output_tree, "w") as handler:
-            handler.write(nexus)
-
-        # Delete large and unnecessary files
-        # TODO: study a way to keep all .nex files
-        base_nex.unlink()
-        temp_tree.unlink()
+        # Remove files that are big and not necessary for release
+        beast2_trees.unlink()
 
 
 def extract_tree(nexus):
@@ -104,7 +79,7 @@ def extract_tree(nexus):
                     in_translate = False
                 else:
                     source, target = line.strip().replace(",", "").split()
-                    translate[source] = f"{target}_{basename}"
+                    translate[source] = f"{target}"
             elif "tree TREE1 =" in line:
                 tree_line = line.strip()[line.index("(") :]
                 tree_line = re.sub(r"\[[^]]+\]", "", tree_line)
@@ -118,28 +93,33 @@ def extract_tree(nexus):
     return tree
 
 
-def collect_global_tree(BAYES_PATH):
+def collect_global_tree(BAYES_PATH, OUTPUT_PATH):
     """
     Collect all trees into a single, global tree.
     """
 
     # Collect all trees and the longest distance
-    global_max_dist = 0.0
-    trees = []
-    for tree_file in glob.glob(str(BAYES_PATH / "*.mcc.tree")):
+    max_dist = defaultdict(int)
+    trees = {}
+    for tree_file in glob.glob(str(BAYES_PATH / "*.mcc.nex")):
+        # Extract tree, write it to disk, and append to collection
         tree = extract_tree(tree_file)
-        trees.append(tree)
+        tree_name = Path(tree_file).stem.split(".")[0]
+        with open(OUTPUT_PATH / f"{tree_name}.tree", "w") as handler:
+            handler.write(tree.write(format=1))
+        trees[tree_name] = tree
 
         # Get the biggest distance
-        max_dist = max([leaf.get_distance(tree) for leaf in tree.iter_leaves()])
-        if max_dist > global_max_dist:
-            global_max_dist = max_dist
+        dist = max([leaf.get_distance(tree) for leaf in tree.iter_leaves()])
+        if max_dist[tree_name] < dist:
+            max_dist[tree_name] = dist
 
     # Build global tree
     # TODO: missing isolates
     global_tree = Tree()
-    for tree in trees:
-        global_tree.add_child(tree, dist=global_max_dist)
+    global_max_dist = max(max_dist.values())
+    for family, tree in trees.items():
+        global_tree.add_child(tree, dist=global_max_dist - max_dist[family])
 
     return global_tree
 
@@ -161,10 +141,12 @@ def main():
     # directory if possible
     releases = sorted(glob.glob(str(BASE_PATH.parent / "releases" / "*")))
     BAYES_PATH = Path(releases[-1]) / "bayesian"
+    TREES_PATH = BAYES_PATH.parent / "trees"
+    TREES_PATH.mkdir(exist_ok=True)
 
-    # run_inference(BAYES_PATH, languoids)
-    global_tree = collect_global_tree(BAYES_PATH)
-    with open(BAYES_PATH.parent / "global.tree", "w") as handler:
+    run_inference(BAYES_PATH, languoids)
+    global_tree = collect_global_tree(BAYES_PATH, TREES_PATH)
+    with open(TREES_PATH / "global.tree", "w") as handler:
         handler.write(global_tree.write(format=1))
 
 

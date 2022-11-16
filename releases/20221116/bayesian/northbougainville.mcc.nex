@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Rapoisi_rapo1238
+			Rotokas_roto1249
+			;
+End;
+Begin trees;
+	Translate
+		   1 Rapoisi_rapo1238,
+		   2 Rotokas_roto1249
+;
+tree TREE1 = (1[&height=0.0,length=4.2621104179164115,length_95%_HPD={0.4864,14.4098},length_median=2.1209,length_range={0.4864,107.9401},rate=0.9880118776244695,rate_95%_HPD={0.6982,1.2554},rate_median=1.0022,rate_range={0.0294,1.2554}]:4.2621104179164115,2[&height=0.0,length=4.2621104179164115,length_95%_HPD={0.4864,14.4098},length_median=2.1209,length_range={0.4864,107.9401},rate=0.9899517896420655,rate_95%_HPD={0.7089,1.2554},rate_median=1.003,rate_range={0.0294,1.2554}]:4.2621104179164115)[&CAheight_95%_HPD={0.4864,14.4098},CAheight_mean=4.2621104179164115,CAheight_median=2.1209,CAheight_range={0.4864,107.9401},height=4.2621104179164115,height_95%_HPD={0.4864,14.4098},height_median=2.1209,height_range={0.4864,107.9401},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Selknam_onaa1245
+			Tehuelche_tehu1242
+			;
+End;
+Begin trees;
+	Translate
+		   1 Selknam_onaa1245,
+		   2 Tehuelche_tehu1242
+;
+tree TREE1 = (1[&height=0.0,length=5.4430501499700075,length_95%_HPD={0.4572,21.3196},length_median=2.4631,length_range={0.4572,103.3639},rate=0.9927303739252095,rate_95%_HPD={0.6627,1.2554},rate_median=1.0015,rate_range={0.1996,1.2554}]:5.4430501499700075,2[&height=0.0,length=5.4430501499700075,length_95%_HPD={0.4572,21.3196},length_median=2.4631,length_range={0.4572,103.3639},rate=0.9921841431713618,rate_95%_HPD={0.67,1.2554},rate_median=1.0013,rate_range={0.1996,1.2554}]:5.4430501499700075)[&CAheight_95%_HPD={0.4572,21.3196},CAheight_mean=5.4430501499700075,CAheight_median=2.4631,CAheight_range={0.4572,103.3639},height=5.4430501499700075,height_95%_HPD={0.4572,21.3196},height_median=2.4631,height_range={0.4572,103.3639},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

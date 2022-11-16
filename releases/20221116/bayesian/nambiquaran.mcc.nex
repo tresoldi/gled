@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Sabane_saba1268
+			SouthernNambikuara_sout2994
+			;
+End;
+Begin trees;
+	Translate
+		   1 Sabane_saba1268,
+		   2 SouthernNambikuara_sout2994
+;
+tree TREE1 = (1[&height=0.0,length=3.689658228354359,length_95%_HPD={0.586,11.5135},length_median=2.0797,length_range={0.5099,69.4097},rate=0.9839832633473294,rate_95%_HPD={0.6004,1.2554},rate_median=1.0011,rate_range={0.109,1.2554}]:3.689658228354359,2[&height=0.0,length=3.689658228354359,length_95%_HPD={0.586,11.5135},length_median=2.0797,length_range={0.5099,69.4097},rate=0.9863174965006979,rate_95%_HPD={0.6251,1.2554},rate_median=1.0009,rate_range={0.109,1.2554}]:3.689658228354359)[&CAheight_95%_HPD={0.586,11.5135},CAheight_mean=3.689658228354359,CAheight_median=2.0797,CAheight_range={0.5099,69.4097},height=3.689658228354359,height_95%_HPD={0.586,11.5135},height_median=2.0797,height_range={0.5099,69.4097},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;
