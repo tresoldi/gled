@@ -23,6 +23,8 @@ BASE_PATH = Path(__file__).parent
 # Define path to executables
 BEAST2_PATH = Path("/home/tiagot/software/BEAST.v2.6.7.Linux/beast/bin")
 
+PROBLEMATIC_FAMILIES = ["bookkeeping", "easterntransfly", "mairasic", "walioic"]
+
 
 def run_inference(BAYES_PATH, languoids):
 
@@ -105,6 +107,9 @@ def collect_global_tree(BAYES_PATH, OUTPUT_PATH):
         # Extract tree, write it to disk, and append to collection
         tree = extract_tree(tree_file)
         tree_name = Path(tree_file).stem.split(".")[0]
+        if tree_name in PROBLEMATIC_FAMILIES:
+            continue
+
         with open(OUTPUT_PATH / f"{tree_name}.tree", "w") as handler:
             handler.write(tree.write(format=1))
         trees[tree_name] = tree
@@ -144,7 +149,7 @@ def main():
     TREES_PATH = BAYES_PATH.parent / "trees"
     TREES_PATH.mkdir(exist_ok=True)
 
-    run_inference(BAYES_PATH, languoids)
+    # run_inference(BAYES_PATH, languoids)
     global_tree = collect_global_tree(BAYES_PATH, TREES_PATH)
     with open(TREES_PATH / "global.tree", "w") as handler:
         handler.write(global_tree.write(format=1))
