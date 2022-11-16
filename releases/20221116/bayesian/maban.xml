@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Kibet_kibe1241,MabaChad_maba1277,Masalit_nucl1440,Runga_rung1258">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_maban" name="data_maban" dataType="integer">
+    <sequence id="language_data_maban:Kibet_kibe1241" taxon="Kibet_kibe1241" value="010001000100010000101010101001000100110100100001000100010000010001000100010000010001000100100100010000010001001001010010100100" />
+    <sequence id="language_data_maban:MabaChad_maba1277" taxon="MabaChad_maba1277" value="001000100010001000010010001000100100??0100010100100010001000001100100010001001001001000010000010001001001001000100010001000010" />
+    <sequence id="language_data_maban:Masalit_nucl1440" taxon="Masalit_nucl1440" value="010001010010000100001001001000100100010010010000010001000100001000010001000100000100110001010001000100000100100010001010010001" />
+    <sequence id="language_data_maban:Runga_rung1258" taxon="Runga_rung1258" value="0001010001010000101000100001010100100101000010010001000000110010010001000000100???01000000100100000010010001001001010000100100" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,bone,die,dog,drink,ear,full,hand,hear,knee,leaf,liver,louse,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+        <parameter id="featureClockRate:maban:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:maban" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:maban" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:maban" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:maban" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((Kibet_kibe1241,Runga_rung1258),(MabaChad_maba1277,Masalit_nucl1440));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:maban" name="distribution">
+          <input id="featureClockRateCompound:maban" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,bone,die,dog,drink,ear,full,hand,hear,knee,leaf,liver,louse,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+              <var idref="featureClockRate:maban:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:maban" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:maban" beta="@featureClockRateGammaScale:maban" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:maban" name="distribution" x="@featureClockRateGammaScale:maban">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:maban" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:maban" name="distribution" x="@covarion_alpha.s:maban">
+          <Uniform id="CovAlphaUniform:maban" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:maban" name="distribution" x="@covarion_s.s:maban">
+          <Gamma id="Gamma.0:maban" name="distr">
+            <parameter id="covarion_switch_gamma_param1:maban" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:maban" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:maban:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:1pl" spec="SiteModel" mutationRate="@featureClockRate:maban:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:maban" spec="BinaryCovarion" alpha="@covarion_alpha.s:maban" switchRate="@covarion_s.s:maban">
+              <vfrequencies id="maban:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.73 0.27</vfrequencies>
+              <parameter id="maban:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="maban:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_maban:1pl" spec="FilteredAlignment" data="@data_maban" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:1sg" spec="SiteModel" mutationRate="@featureClockRate:maban:1sg" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:1sg" spec="FilteredAlignment" data="@data_maban" filter="5-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:bone" spec="SiteModel" mutationRate="@featureClockRate:maban:bone" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:bone" spec="FilteredAlignment" data="@data_maban" filter="9-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:die" spec="SiteModel" mutationRate="@featureClockRate:maban:die" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:die" spec="FilteredAlignment" data="@data_maban" filter="13-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:dog" spec="SiteModel" mutationRate="@featureClockRate:maban:dog" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:dog" spec="FilteredAlignment" data="@data_maban" filter="18-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:drink" spec="SiteModel" mutationRate="@featureClockRate:maban:drink" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:drink" spec="FilteredAlignment" data="@data_maban" filter="22-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:ear" spec="SiteModel" mutationRate="@featureClockRate:maban:ear" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:ear" spec="FilteredAlignment" data="@data_maban" filter="26-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:full" spec="SiteModel" mutationRate="@featureClockRate:maban:full" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:full" spec="FilteredAlignment" data="@data_maban" filter="29-32" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:hand" spec="SiteModel" mutationRate="@featureClockRate:maban:hand" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:hand" spec="FilteredAlignment" data="@data_maban" filter="33-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:hear" spec="SiteModel" mutationRate="@featureClockRate:maban:hear" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:hear" spec="FilteredAlignment" data="@data_maban" filter="36-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:knee" spec="SiteModel" mutationRate="@featureClockRate:maban:knee" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:knee" spec="FilteredAlignment" data="@data_maban" filter="39-41" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:leaf" spec="SiteModel" mutationRate="@featureClockRate:maban:leaf" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:leaf" spec="FilteredAlignment" data="@data_maban" filter="42-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:liver" spec="SiteModel" mutationRate="@featureClockRate:maban:liver" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:liver" spec="FilteredAlignment" data="@data_maban" filter="47-50" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:louse" spec="SiteModel" mutationRate="@featureClockRate:maban:louse" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:louse" spec="FilteredAlignment" data="@data_maban" filter="51-54" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:mountain" spec="SiteModel" mutationRate="@featureClockRate:maban:mountain" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:mountain" spec="FilteredAlignment" data="@data_maban" filter="55-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:new" spec="SiteModel" mutationRate="@featureClockRate:maban:new" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:new" spec="FilteredAlignment" data="@data_maban" filter="61-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:night" spec="SiteModel" mutationRate="@featureClockRate:maban:night" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:night" spec="FilteredAlignment" data="@data_maban" filter="65-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:nose" spec="SiteModel" mutationRate="@featureClockRate:maban:nose" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:nose" spec="FilteredAlignment" data="@data_maban" filter="69-72" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:one" spec="SiteModel" mutationRate="@featureClockRate:maban:one" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:one" spec="FilteredAlignment" data="@data_maban" filter="73-78" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:path" spec="SiteModel" mutationRate="@featureClockRate:maban:path" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:path" spec="FilteredAlignment" data="@data_maban" filter="79-82" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:person" spec="SiteModel" mutationRate="@featureClockRate:maban:person" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:person" spec="FilteredAlignment" data="@data_maban" filter="83-86" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:see" spec="SiteModel" mutationRate="@featureClockRate:maban:see" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:see" spec="FilteredAlignment" data="@data_maban" filter="87-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:skin" spec="SiteModel" mutationRate="@featureClockRate:maban:skin" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:skin" spec="FilteredAlignment" data="@data_maban" filter="93-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:star" spec="SiteModel" mutationRate="@featureClockRate:maban:star" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:star" spec="FilteredAlignment" data="@data_maban" filter="97-102" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:stone" spec="SiteModel" mutationRate="@featureClockRate:maban:stone" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:stone" spec="FilteredAlignment" data="@data_maban" filter="103-106" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:sun" spec="SiteModel" mutationRate="@featureClockRate:maban:sun" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:sun" spec="FilteredAlignment" data="@data_maban" filter="107-109" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:tongue" spec="SiteModel" mutationRate="@featureClockRate:maban:tongue" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:tongue" spec="FilteredAlignment" data="@data_maban" filter="110-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:tooth" spec="SiteModel" mutationRate="@featureClockRate:maban:tooth" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:tooth" spec="FilteredAlignment" data="@data_maban" filter="115-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:tree" spec="SiteModel" mutationRate="@featureClockRate:maban:tree" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:tree" spec="FilteredAlignment" data="@data_maban" filter="118-122" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:maban:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.maban:water" spec="SiteModel" mutationRate="@featureClockRate:maban:water" proportionInvariant="0" substModel="@covarion.s:maban" />
+          <data id="feature_data_maban:water" spec="FilteredAlignment" data="@data_maban" filter="123-126" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:maban" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:maban" name="up" />
+      <parameter idref="featureClockRateGammaScale:maban" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:maban" spec="ScaleOperator" parameter="@covarion_alpha.s:maban" scaleFactor="0.5" weight="1.0" />
+    <operator id="maban:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:maban" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,bone,die,dog,drink,ear,full,hand,hear,knee,leaf,liver,louse,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+        <parameter idref="featureClockRate:maban:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="30" estimate="false">3 3 3 4 3 3 2 3 2 2 2 4 3 3 5 3 3 3 5 3 3 5 3 5 3 2 4 2 4 3</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="maban.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,bone,die,dog,drink,ear,full,hand,hear,knee,leaf,liver,louse,mountain,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,water">
+        <log idref="featureClockRate:maban:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:maban" />
+      <log idref="covarion_alpha.s:maban" />
+      <log idref="covarion_s.s:maban" />
+    </logger>
+    <logger mode="tree" fileName="maban.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

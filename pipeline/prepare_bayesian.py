@@ -88,7 +88,7 @@ def get_roots(glottomap, languoids):
     return roots
 
 
-def get_trees(roots, glottolog):
+def get_trees(roots, languoids, glottolog):
     # Get the Glottolog tree for the root
     trees = {}
     for root, glottocodes in roots.items():
@@ -131,7 +131,13 @@ def get_trees(roots, glottolog):
         for node in tree.traverse("preorder"):
             idx_a = node.name.find("[") + 1
             idx_b = node.name.find("]", idx_a)
-            node.name = node.name[idx_a:idx_b]
+            label = node.name[idx_a:idx_b]
+            if not label:
+                node.name = ""
+            else:
+                node.name = common.slug(
+                    f"{languoids[label].name}_{label}", level="simple"
+                )
 
         # "sort" the tree and sort it Store the tree
         tree.sort_descendants()
@@ -155,9 +161,11 @@ def output_lexical_data(roots, languoids, BAYES_PATH):
         for row in csv.DictReader(handler):
             root = inv_root_map.get(row["GLOTTOCODE"])
             if root:
+                lang_name = f"{languoids[row['GLOTTOCODE']].name}_{row['GLOTTOCODE']}"
+                lang_name = common.slug(lang_name, level="simple")
                 bayes_data[root].append(
                     {
-                        "Language_ID": row["GLOTTOCODE"],
+                        "Language_ID": lang_name,
                         "Feature_ID": row["CONCEPT"],
                         "Value": row["COGID"],
                     }
@@ -240,7 +248,7 @@ def main():
     # Get the glottocode mapping, roots, and trees
     glottomap = get_mapping(languoids)
     roots = get_roots(glottomap, languoids)
-    trees = get_trees(roots, glottolog)
+    trees = get_trees(roots, languoids, glottolog)
     for root, newick in trees.items():
         name = languoids[root].name
         logging.info(f"Outputting pruned tree for family `{name}`")

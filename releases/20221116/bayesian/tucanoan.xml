@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Barasana-Eduria_bara1380,Carapana_cara1272,Cubeo_cube1242,Desano_desa1247,Koreguaje_kore1283,Kotiria_guan1269,Macuna_macu1260,Maijiki_orej1242,Secoya_seco1241,Siona-Tetete_sion1247,Siriano_siri1274,Tanimuca-Retuara_tani1257,Tatuyo_tatu1247,Tucano_tuca1252,Tuyuca_tuyu1244,Waikhana_pira1254,Waimaha_waim1255,Yahuna_yahu1241,Yuruti_yuru1263">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_tucanoan" name="data_tucanoan" dataType="integer">
+    <sequence id="language_data_tucanoan:Barasana-Eduria_bara1380" taxon="Barasana-Eduria_bara1380" value="00101000100001000001001000010000000100000000000010000000000100001001000010001000010000100000010000000100000000010000000001000000000100000100000100000001000000010001000100000001000001000????????010010000100100000000001000001000100100000010" />
+    <sequence id="language_data_tucanoan:Carapana_cara1272" taxon="Carapana_cara1272" value="0110000010000100001000100001000000001000000100000100000001010000100100001010100001000001000001000000100000000000100000000100000000100000010000010000001100000001000100010000001000000100010000000010010000110??????????01000010000100100000010" />
+    <sequence id="language_data_tucanoan:Cubeo_cube1242" taxon="Cubeo_cube1242" value="0010100010000010000100100010000010000100000000000010000000001000100010000100100001000000100000100000001000001010000000000010000010001000001000001000000010000000100110001000000010000100001000001010001000100010000000101000001000100100000010" />
+    <sequence id="language_data_tucanoan:Desano_desa1247" taxon="Desano_desa1247" value="0010010010000100000100100000100000000010000000000001000000000100100001001000100000100000000000100000000100000000010000001000000000100000010000000100000101000001000100010000000100000100010100000010000100100001000000000100001000100100000010" />
+    <sequence id="language_data_tucanoan:Koreguaje_kore1283" taxon="Koreguaje_kore1283" value="0001001010100110000010110000011000000000110000000000100000001000100010000100110000011000000000010000000011000000001000000001000000010000000010001000000000100000010100001010000000100100010000000010010000100000100000000010001000100011000010" />
+    <sequence id="language_data_tucanoan:Kotiria_guan1269" taxon="Kotiria_guan1269" value="0110000010000100000100100010000000000001000000000001000000010000100100001000100001000000010001000000100000000010000000000100000000000101010100001000000100000001000100000100000001000100010000000010001010100100000000001000010100100100000010" />
+    <sequence id="language_data_tucanoan:Macuna_macu1260" taxon="Macuna_macu1260" value="0010010010000100000100100001000000000000001000001000000000010000100100001000100001010000000001000000100000000010000000000100000000100000010000010000001100000001000100010000000001000100000010000010010000100000010000001000001000100100000001" />
+    <sequence id="language_data_tucanoan:Maijiki_orej1242" taxon="Maijiki_orej1242" value="00101000100000010000101000000010000000000100000000000100000010001000100001000100????????????000100000000010000000001000000010000000100000000100??????00100000001000100000010000000100100000001000001010000100000100000000010001000100100000010" />
+    <sequence id="language_data_tucanoan:Secoya_seco1241" taxon="Secoya_seco1241" value="0010100010010010000010100000001000000000010000000000001000001000100010000100100000001000000000010000000001000000000010000001000000010000000010001000000100100000010001000010000000100100000001000010010000100000100000000010001000100000100010" />
+    <sequence id="language_data_tucanoan:Siona-Tetete_sion1247" taxon="Siona-Tetete_sion1247" value="0001001010010010000100100000001000000000010000000000001000001000100010000100100001000000100000000100100000000000000001000000100000010000000010001000000000010000010100000010000000100100000000100010010000100000100000000010001000100000010010" />
+    <sequence id="language_data_tucanoan:Siriano_siri1274" taxon="Siriano_siri1274" value="0010010010000100000100100000100000000000000100000001000000000100100000101000100000000100000000100000000100000000010000001000000000100000010000000010001100000001000100010000000000010100000100000010010000100001000000000100001000100100000010" />
+    <sequence id="language_data_tucanoan:Tanimuca-Retuara_tani1257" taxon="Tanimuca-Retuara_tani1257" value="00101000100000100001001000000001001000100000000000000001100010001000100010001000010000000010000000100000001000000000001010000000000000100000010000010000000010010001000000010001000001000????????010000100100000000100000001010000010100001010" />
+    <sequence id="language_data_tucanoan:Tatuyo_tatu1247" taxon="Tatuyo_tatu1247" value="0110000010000100001000100001000000010000000000000100000001010000100100000010100001000001000001000000010000000001000000000100000000100000010000010000001100000001000100010000001000000100000000010010010000100??????????01000010000100100000010" />
+    <sequence id="language_data_tucanoan:Tucano_tuca1252" taxon="Tucano_tuca1252" value="0110000010000100000100100001000000000000000010000001000000010000100100001000100001000000000101001000100000000000010000000100010000100000010000000001001100000001000100010000001000000100000100000010010000100000000010001000010000100100000010" />
+    <sequence id="language_data_tucanoan:Tuyuca_tuyu1244" taxon="Tuyuca_tuyu1244" value="0110000010000100000100100001000000000000000001000001000000010000100100001000100011000000000001000000100000000000010000001000000000100000010000010000001100000001000100010000001000000100010000000010010000100100000000001000010000100100000010" />
+    <sequence id="language_data_tucanoan:Waikhana_pira1254" taxon="Waikhana_pira1254" value="0110000010000100000100100001000000000001000000000001000000010000100100001000100001000000010000001000100000000010000000000100000000100000000100001000001100000001000100010000001000000100010000000010001000100000001000001000010000100100000010" />
+    <sequence id="language_data_tucanoan:Waimaha_waim1255" taxon="Waimaha_waim1255" value="0110000010000100001100100010000000100000000000001000000000010000100100001000100011000000000001000000100000000010000000001000000000100000010000010000001100000001000100010000001000000101010100000010010000100100000000001000010000100100000010" />
+    <sequence id="language_data_tucanoan:Yahuna_yahu1241" taxon="Yahuna_yahu1241" value="00001000010000001001000010000100000000000000001000000001000000100100100010000010????????????0??????00000000100?????????000000010000000100?????00000010000000010???0???0000001001000000100????????010000100100000000101000001000010010000001010" />
+    <sequence id="language_data_tucanoan:Yuruti_yuru1263" taxon="Yuruti_yuru1263" value="0110000010000100000100100001000000010000000100000001000000010000100100001000100011000000000001000000100000000010000000000000000100100000010000010000001000000001000100010000001000000100010000000010010000100100000000001000010000100100000010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,nose,one,path,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:tucanoan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:tucanoan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:tucanoan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:tucanoan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:tucanoan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((Koreguaje_kore1283,(Maijiki_orej1242,(Secoya_seco1241,Siona-Tetete_sion1247))),((Tanimuca-Retuara_tani1257,Yahuna_yahu1241),((Barasana-Eduria_bara1380,Macuna_macu1260),(Cubeo_cube1242,(Desano_desa1247,Siriano_siri1274))),((Tucano_tuca1252,(Tatuyo_tatu1247,Waimaha_waim1255)),((Kotiria_guan1269,Waikhana_pira1254),(Carapana_cara1272,(Tuyuca_tuyu1244,Yuruti_yuru1263))))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:tucanoan" name="distribution">
+          <input id="featureClockRateCompound:tucanoan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,nose,one,path,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:tucanoan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:tucanoan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:tucanoan" beta="@featureClockRateGammaScale:tucanoan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:tucanoan" name="distribution" x="@featureClockRateGammaScale:tucanoan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:tucanoan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:tucanoan" name="distribution" x="@covarion_alpha.s:tucanoan">
+          <Uniform id="CovAlphaUniform:tucanoan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:tucanoan" name="distribution" x="@covarion_s.s:tucanoan">
+          <Gamma id="Gamma.0:tucanoan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:tucanoan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:tucanoan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:tucanoan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:1pl" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:tucanoan" spec="BinaryCovarion" alpha="@covarion_alpha.s:tucanoan" switchRate="@covarion_s.s:tucanoan">
+              <vfrequencies id="tucanoan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.83 0.17</vfrequencies>
+              <parameter id="tucanoan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="tucanoan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_tucanoan:1pl" spec="FilteredAlignment" data="@data_tucanoan" filter="1-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:2sg" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:2sg" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:2sg" spec="FilteredAlignment" data="@data_tucanoan" filter="8-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:blood" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:blood" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:blood" spec="FilteredAlignment" data="@data_tucanoan" filter="13-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:bone" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:bone" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:bone" spec="FilteredAlignment" data="@data_tucanoan" filter="18-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:breast" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:breast" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:breast" spec="FilteredAlignment" data="@data_tucanoan" filter="22-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:come" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:come" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:come" spec="FilteredAlignment" data="@data_tucanoan" filter="26-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:die" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:die" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:die" spec="FilteredAlignment" data="@data_tucanoan" filter="34-47" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:dog" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:dog" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:dog" spec="FilteredAlignment" data="@data_tucanoan" filter="48-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:drink" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:drink" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:drink" spec="FilteredAlignment" data="@data_tucanoan" filter="59-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:ear" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:ear" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:ear" spec="FilteredAlignment" data="@data_tucanoan" filter="64-66" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:eye" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:eye" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:eye" spec="FilteredAlignment" data="@data_tucanoan" filter="67-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:fire" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:fire" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:fire" spec="FilteredAlignment" data="@data_tucanoan" filter="72-75" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:fish" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:fish" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:fish" spec="FilteredAlignment" data="@data_tucanoan" filter="76-79" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:full" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:full" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:full" spec="FilteredAlignment" data="@data_tucanoan" filter="80-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:hand" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:hand" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:hand" spec="FilteredAlignment" data="@data_tucanoan" filter="93-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:hear" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:hear" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:hear" spec="FilteredAlignment" data="@data_tucanoan" filter="100-109" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:horn" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:horn" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:horn" spec="FilteredAlignment" data="@data_tucanoan" filter="110-119" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:knee" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:knee" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:knee" spec="FilteredAlignment" data="@data_tucanoan" filter="120-129" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:leaf" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:leaf" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:leaf" spec="FilteredAlignment" data="@data_tucanoan" filter="130-136" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:liver" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:liver" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:liver" spec="FilteredAlignment" data="@data_tucanoan" filter="137-142" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:louse" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:louse" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:louse" spec="FilteredAlignment" data="@data_tucanoan" filter="143-149" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:mountain" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:mountain" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:mountain" spec="FilteredAlignment" data="@data_tucanoan" filter="150-158" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:name" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:name" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:name" spec="FilteredAlignment" data="@data_tucanoan" filter="159-162" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:new" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:new" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:new" spec="FilteredAlignment" data="@data_tucanoan" filter="163-166" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:nose" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:nose" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:nose" spec="FilteredAlignment" data="@data_tucanoan" filter="167-173" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:one" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:one" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:one" spec="FilteredAlignment" data="@data_tucanoan" filter="174-180" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:path" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:path" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:path" spec="FilteredAlignment" data="@data_tucanoan" filter="181-184" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:see" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:see" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:see" spec="FilteredAlignment" data="@data_tucanoan" filter="185-193" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:skin" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:skin" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:skin" spec="FilteredAlignment" data="@data_tucanoan" filter="194-196" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:star" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:star" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:star" spec="FilteredAlignment" data="@data_tucanoan" filter="197-201" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:stone" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:stone" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:stone" spec="FilteredAlignment" data="@data_tucanoan" filter="202-204" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:sun" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:sun" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:sun" spec="FilteredAlignment" data="@data_tucanoan" filter="205-215" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:tongue" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:tongue" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:tongue" spec="FilteredAlignment" data="@data_tucanoan" filter="216-220" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:tooth" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:tooth" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:tooth" spec="FilteredAlignment" data="@data_tucanoan" filter="221-225" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:tree" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:tree" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:tree" spec="FilteredAlignment" data="@data_tucanoan" filter="226-228" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:two" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:two" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:two" spec="FilteredAlignment" data="@data_tucanoan" filter="229-235" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:tucanoan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.tucanoan:water" spec="SiteModel" mutationRate="@featureClockRate:tucanoan:water" proportionInvariant="0" substModel="@covarion.s:tucanoan" />
+          <data id="feature_data_tucanoan:water" spec="FilteredAlignment" data="@data_tucanoan" filter="236-238" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:tucanoan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:tucanoan" name="up" />
+      <parameter idref="featureClockRateGammaScale:tucanoan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:tucanoan" spec="ScaleOperator" parameter="@covarion_alpha.s:tucanoan" scaleFactor="0.5" weight="1.0" />
+    <operator id="tucanoan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:tucanoan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,nose,one,path,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:tucanoan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="37" estimate="false">6 4 4 3 3 7 13 10 4 2 4 3 3 12 6 9 9 9 6 5 6 8 3 3 6 6 3 8 2 4 2 10 4 4 2 6 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="tucanoan.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,nose,one,path,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:tucanoan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:tucanoan" />
+      <log idref="covarion_alpha.s:tucanoan" />
+      <log idref="covarion_s.s:tucanoan" />
+    </logger>
+    <logger mode="tree" fileName="tucanoan.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

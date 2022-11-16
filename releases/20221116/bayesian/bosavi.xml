@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Aimele_aime1238,Beami_beam1240,Edolo_edol1239,Kaluli_kalu1248,Kasua_kasu1251,Onobasulu_onob1238,Sonia_soni1260">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_bosavi" name="data_bosavi" dataType="integer">
+    <sequence id="language_data_bosavi:Aimele_aime1238" taxon="Aimele_aime1238" value="01000100001000100100???01000???010000100010000000??????0100001000???0100000100000000???0100001000000010000001000100000100100000010000000100000100000100000100000100010000010010001000000001000" />
+    <sequence id="language_data_bosavi:Beami_beam1240" taxon="Beami_beam1240" value="00110010000100010010???00110???0010000110011000001100000????00100???0011000011000000???0010000110000001100000100010000??0110000001100000?????0010000011000010000010001001010001100110000000110" />
+    <sequence id="language_data_bosavi:Edolo_edol1239" taxon="Edolo_edol1239" value="0010001000010001001001000100010001000010001100000110000010000010010000100000100000000100010000100000001000000100010000110101000001000000010000010100011000010000010001000010001000100001000100" />
+    <sequence id="language_data_bosavi:Kaluli_kalu1248" taxon="Kaluli_kalu1248" value="0100000100100010011010000010101010000100000010000001000001000110001001000000001100001000001000001100000010001000001000100100001000010000100000001000000100001000100000100010001000001100101000" />
+    <sequence id="language_data_bosavi:Kasua_kasu1251" taxon="Kasua_kasu1251" value="0100000010100010001000100010001010000100000001000000100000100100000100100000000010000010001000000010000001001000000100010000100000001000001000100000000010100000100010000010001000000010001000" />
+    <sequence id="language_data_bosavi:Onobasulu_onob1238" taxon="Onobasulu_onob1238" value="01000001000100100010???00010???0001001000000001000000100000100010???0000100000000100???0000100000001000010001000000010010100000000000100000100000010010000000100001000010010001000000001001000" />
+    <sequence id="language_data_bosavi:Sonia_soni1260" taxon="Sonia_soni1260" value="01000001000010100010???00010???0000101000000000100000010100001000???0000010000000010???0001000000100000000100010001000100000010000000010000010001000000100000010100010000001010000010000000001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="2sg,blood,bone,breast,come,die,dog,drink,ear,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:bosavi:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:bosavi" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:bosavi" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:bosavi" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:bosavi" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((Beami_beam1240,Edolo_edol1239),(Aimele_aime1238,Kasua_kasu1251,Onobasulu_onob1238,(Kaluli_kalu1248,Sonia_soni1260)));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:bosavi" name="distribution">
+          <input id="featureClockRateCompound:bosavi" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="2sg,blood,bone,breast,come,die,dog,drink,ear,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:bosavi:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:bosavi" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:bosavi" beta="@featureClockRateGammaScale:bosavi" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:bosavi" name="distribution" x="@featureClockRateGammaScale:bosavi">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:bosavi" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:bosavi" name="distribution" x="@covarion_alpha.s:bosavi">
+          <Uniform id="CovAlphaUniform:bosavi" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:bosavi" name="distribution" x="@covarion_s.s:bosavi">
+          <Gamma id="Gamma.0:bosavi" name="distr">
+            <parameter id="covarion_switch_gamma_param1:bosavi" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:bosavi" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:bosavi:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:2sg" spec="SiteModel" mutationRate="@featureClockRate:bosavi:2sg" proportionInvariant="0">
+            <substModel id="covarion.s:bosavi" spec="BinaryCovarion" alpha="@covarion_alpha.s:bosavi" switchRate="@covarion_s.s:bosavi">
+              <vfrequencies id="bosavi:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.80 0.20</vfrequencies>
+              <parameter id="bosavi:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="bosavi:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_bosavi:2sg" spec="FilteredAlignment" data="@data_bosavi" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:blood" spec="SiteModel" mutationRate="@featureClockRate:bosavi:blood" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:blood" spec="FilteredAlignment" data="@data_bosavi" filter="5-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:bone" spec="SiteModel" mutationRate="@featureClockRate:bosavi:bone" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:bone" spec="FilteredAlignment" data="@data_bosavi" filter="10-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:breast" spec="SiteModel" mutationRate="@featureClockRate:bosavi:breast" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:breast" spec="FilteredAlignment" data="@data_bosavi" filter="14-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:come" spec="SiteModel" mutationRate="@featureClockRate:bosavi:come" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:come" spec="FilteredAlignment" data="@data_bosavi" filter="17-19" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:die" spec="SiteModel" mutationRate="@featureClockRate:bosavi:die" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:die" spec="FilteredAlignment" data="@data_bosavi" filter="20-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:dog" spec="SiteModel" mutationRate="@featureClockRate:bosavi:dog" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:dog" spec="FilteredAlignment" data="@data_bosavi" filter="24-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:drink" spec="SiteModel" mutationRate="@featureClockRate:bosavi:drink" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:drink" spec="FilteredAlignment" data="@data_bosavi" filter="28-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:ear" spec="SiteModel" mutationRate="@featureClockRate:bosavi:ear" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:ear" spec="FilteredAlignment" data="@data_bosavi" filter="32-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:fire" spec="SiteModel" mutationRate="@featureClockRate:bosavi:fire" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:fire" spec="FilteredAlignment" data="@data_bosavi" filter="37-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:fish" spec="SiteModel" mutationRate="@featureClockRate:bosavi:fish" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:fish" spec="FilteredAlignment" data="@data_bosavi" filter="41-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:full" spec="SiteModel" mutationRate="@featureClockRate:bosavi:full" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:full" spec="FilteredAlignment" data="@data_bosavi" filter="49-55" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:hand" spec="SiteModel" mutationRate="@featureClockRate:bosavi:hand" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:hand" spec="FilteredAlignment" data="@data_bosavi" filter="56-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:hear" spec="SiteModel" mutationRate="@featureClockRate:bosavi:hear" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:hear" spec="FilteredAlignment" data="@data_bosavi" filter="61-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:horn" spec="SiteModel" mutationRate="@featureClockRate:bosavi:horn" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:horn" spec="FilteredAlignment" data="@data_bosavi" filter="65-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:knee" spec="SiteModel" mutationRate="@featureClockRate:bosavi:knee" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:knee" spec="FilteredAlignment" data="@data_bosavi" filter="69-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:leaf" spec="SiteModel" mutationRate="@featureClockRate:bosavi:leaf" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:leaf" spec="FilteredAlignment" data="@data_bosavi" filter="75-83" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:liver" spec="SiteModel" mutationRate="@featureClockRate:bosavi:liver" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:liver" spec="FilteredAlignment" data="@data_bosavi" filter="84-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:louse" spec="SiteModel" mutationRate="@featureClockRate:bosavi:louse" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:louse" spec="FilteredAlignment" data="@data_bosavi" filter="88-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:mountain" spec="SiteModel" mutationRate="@featureClockRate:bosavi:mountain" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:mountain" spec="FilteredAlignment" data="@data_bosavi" filter="93-100" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:name" spec="SiteModel" mutationRate="@featureClockRate:bosavi:name" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:name" spec="FilteredAlignment" data="@data_bosavi" filter="101-107" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:new" spec="SiteModel" mutationRate="@featureClockRate:bosavi:new" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:new" spec="FilteredAlignment" data="@data_bosavi" filter="108-111" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:night" spec="SiteModel" mutationRate="@featureClockRate:bosavi:night" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:night" spec="FilteredAlignment" data="@data_bosavi" filter="112-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:nose" spec="SiteModel" mutationRate="@featureClockRate:bosavi:nose" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:nose" spec="FilteredAlignment" data="@data_bosavi" filter="118-120" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:one" spec="SiteModel" mutationRate="@featureClockRate:bosavi:one" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:one" spec="FilteredAlignment" data="@data_bosavi" filter="121-127" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:path" spec="SiteModel" mutationRate="@featureClockRate:bosavi:path" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:path" spec="FilteredAlignment" data="@data_bosavi" filter="128-135" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:person" spec="SiteModel" mutationRate="@featureClockRate:bosavi:person" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:person" spec="FilteredAlignment" data="@data_bosavi" filter="136-141" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:skin" spec="SiteModel" mutationRate="@featureClockRate:bosavi:skin" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:skin" spec="FilteredAlignment" data="@data_bosavi" filter="142-147" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:star" spec="SiteModel" mutationRate="@featureClockRate:bosavi:star" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:star" spec="FilteredAlignment" data="@data_bosavi" filter="148-153" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:stone" spec="SiteModel" mutationRate="@featureClockRate:bosavi:stone" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:stone" spec="FilteredAlignment" data="@data_bosavi" filter="154-159" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:sun" spec="SiteModel" mutationRate="@featureClockRate:bosavi:sun" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:sun" spec="FilteredAlignment" data="@data_bosavi" filter="160-163" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:tongue" spec="SiteModel" mutationRate="@featureClockRate:bosavi:tongue" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:tongue" spec="FilteredAlignment" data="@data_bosavi" filter="164-169" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:tooth" spec="SiteModel" mutationRate="@featureClockRate:bosavi:tooth" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:tooth" spec="FilteredAlignment" data="@data_bosavi" filter="170-172" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:tree" spec="SiteModel" mutationRate="@featureClockRate:bosavi:tree" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:tree" spec="FilteredAlignment" data="@data_bosavi" filter="173-176" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:two" spec="SiteModel" mutationRate="@featureClockRate:bosavi:two" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:two" spec="FilteredAlignment" data="@data_bosavi" filter="177-185" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:bosavi:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.bosavi:water" spec="SiteModel" mutationRate="@featureClockRate:bosavi:water" proportionInvariant="0" substModel="@covarion.s:bosavi" />
+          <data id="feature_data_bosavi:water" spec="FilteredAlignment" data="@data_bosavi" filter="186-190" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:bosavi" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:bosavi" name="up" />
+      <parameter idref="featureClockRateGammaScale:bosavi" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:bosavi" spec="ScaleOperator" parameter="@covarion_alpha.s:bosavi" scaleFactor="0.5" weight="1.0" />
+    <operator id="bosavi:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:bosavi" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="2sg,blood,bone,breast,come,die,dog,drink,ear,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:bosavi:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="36" estimate="false">3 4 3 2 2 3 3 3 4 3 7 6 4 3 3 5 8 3 4 7 6 3 5 2 6 7 5 5 5 5 3 5 2 3 8 4</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="bosavi.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="2sg,blood,bone,breast,come,die,dog,drink,ear,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:bosavi:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:bosavi" />
+      <log idref="covarion_alpha.s:bosavi" />
+      <log idref="covarion_s.s:bosavi" />
+    </logger>
+    <logger mode="tree" fileName="bosavi.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

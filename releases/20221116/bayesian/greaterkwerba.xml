@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="Airoran_airo1242" />
+    <taxon id="Isirawa_isir1237" />
+    <taxon id="Kwerba_nucl1595" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_greaterkwerba" name="data_greaterkwerba" dataType="integer">
+    <sequence id="language_data_greaterkwerba:Airoran_airo1242" taxon="Airoran_airo1242" value="0100100001001001001000001000100??01001001001001000100010010010001000100010001000100010001000010001001001000100010001000100" />
+    <sequence id="language_data_greaterkwerba:Isirawa_isir1237" taxon="Isirawa_isir1237" value="001000110010??01100011100110010010??0010??001000100010??00100010011000100010001000100010101100010010??00010001000100010001" />
+    <sequence id="language_data_greaterkwerba:Kwerba_nucl1595" taxon="Kwerba_nucl1595" value="0??001000??00101000100001000??0100010100010??001000100010??00100???0010001000100010001000100001001000100100010001000100010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,fire,fish,full,hand,hear,knee,liver,mountain,name,new,night,nose,one,path,see,skin,star,stone,sun,tongue,tree,two,water">
+        <parameter id="featureClockRate:greaterkwerba:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:greaterkwerba" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:greaterkwerba" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:greaterkwerba" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:greaterkwerba" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Isirawa_isir1237,(Airoran_airo1242,Kwerba_nucl1595));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:greaterkwerba" name="distribution">
+          <input id="featureClockRateCompound:greaterkwerba" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,fire,fish,full,hand,hear,knee,liver,mountain,name,new,night,nose,one,path,see,skin,star,stone,sun,tongue,tree,two,water">
+              <var idref="featureClockRate:greaterkwerba:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:greaterkwerba" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:greaterkwerba" beta="@featureClockRateGammaScale:greaterkwerba" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:greaterkwerba" name="distribution" x="@featureClockRateGammaScale:greaterkwerba">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:greaterkwerba" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:greaterkwerba" name="distribution" x="@covarion_alpha.s:greaterkwerba">
+          <Uniform id="CovAlphaUniform:greaterkwerba" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:greaterkwerba" name="distribution" x="@covarion_s.s:greaterkwerba">
+          <Gamma id="Gamma.0:greaterkwerba" name="distr">
+            <parameter id="covarion_switch_gamma_param1:greaterkwerba" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:greaterkwerba" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:greaterkwerba:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:1pl" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:greaterkwerba" spec="BinaryCovarion" alpha="@covarion_alpha.s:greaterkwerba" switchRate="@covarion_s.s:greaterkwerba">
+              <vfrequencies id="greaterkwerba:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.74 0.26</vfrequencies>
+              <parameter id="greaterkwerba:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="greaterkwerba:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_greaterkwerba:1pl" spec="FilteredAlignment" data="@data_greaterkwerba" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:1sg" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:1sg" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:1sg" spec="FilteredAlignment" data="@data_greaterkwerba" filter="4-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:2sg" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:2sg" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:2sg" spec="FilteredAlignment" data="@data_greaterkwerba" filter="9-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:blood" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:blood" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:blood" spec="FilteredAlignment" data="@data_greaterkwerba" filter="12-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:bone" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:bone" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:bone" spec="FilteredAlignment" data="@data_greaterkwerba" filter="15-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:come" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:come" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:come" spec="FilteredAlignment" data="@data_greaterkwerba" filter="18-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:die" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:die" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:die" spec="FilteredAlignment" data="@data_greaterkwerba" filter="24-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:dog" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:dog" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:dog" spec="FilteredAlignment" data="@data_greaterkwerba" filter="28-30" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:drink" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:drink" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:drink" spec="FilteredAlignment" data="@data_greaterkwerba" filter="31-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:ear" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:ear" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:ear" spec="FilteredAlignment" data="@data_greaterkwerba" filter="34-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:fire" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:fire" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:fire" spec="FilteredAlignment" data="@data_greaterkwerba" filter="37-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:fish" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:fish" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:fish" spec="FilteredAlignment" data="@data_greaterkwerba" filter="40-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:full" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:full" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:full" spec="FilteredAlignment" data="@data_greaterkwerba" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:hand" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:hand" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:hand" spec="FilteredAlignment" data="@data_greaterkwerba" filter="46-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:hear" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:hear" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:hear" spec="FilteredAlignment" data="@data_greaterkwerba" filter="50-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:knee" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:knee" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:knee" spec="FilteredAlignment" data="@data_greaterkwerba" filter="54-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:liver" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:liver" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:liver" spec="FilteredAlignment" data="@data_greaterkwerba" filter="57-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:mountain" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:mountain" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:mountain" spec="FilteredAlignment" data="@data_greaterkwerba" filter="60-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:name" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:name" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:name" spec="FilteredAlignment" data="@data_greaterkwerba" filter="64-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:new" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:new" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:new" spec="FilteredAlignment" data="@data_greaterkwerba" filter="68-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:night" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:night" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:night" spec="FilteredAlignment" data="@data_greaterkwerba" filter="72-75" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:nose" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:nose" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:nose" spec="FilteredAlignment" data="@data_greaterkwerba" filter="76-79" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:one" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:one" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:one" spec="FilteredAlignment" data="@data_greaterkwerba" filter="80-83" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:path" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:path" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:path" spec="FilteredAlignment" data="@data_greaterkwerba" filter="84-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:see" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:see" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:see" spec="FilteredAlignment" data="@data_greaterkwerba" filter="88-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:skin" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:skin" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:skin" spec="FilteredAlignment" data="@data_greaterkwerba" filter="93-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:star" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:star" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:star" spec="FilteredAlignment" data="@data_greaterkwerba" filter="97-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:stone" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:stone" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:stone" spec="FilteredAlignment" data="@data_greaterkwerba" filter="100-102" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:sun" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:sun" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:sun" spec="FilteredAlignment" data="@data_greaterkwerba" filter="103-106" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:tongue" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:tongue" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:tongue" spec="FilteredAlignment" data="@data_greaterkwerba" filter="107-110" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:tree" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:tree" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:tree" spec="FilteredAlignment" data="@data_greaterkwerba" filter="111-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:two" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:two" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:two" spec="FilteredAlignment" data="@data_greaterkwerba" filter="115-118" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:greaterkwerba:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.greaterkwerba:water" spec="SiteModel" mutationRate="@featureClockRate:greaterkwerba:water" proportionInvariant="0" substModel="@covarion.s:greaterkwerba" />
+          <data id="feature_data_greaterkwerba:water" spec="FilteredAlignment" data="@data_greaterkwerba" filter="119-122" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:greaterkwerba" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:greaterkwerba" name="up" />
+      <parameter idref="featureClockRateGammaScale:greaterkwerba" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:greaterkwerba" spec="ScaleOperator" parameter="@covarion_alpha.s:greaterkwerba" scaleFactor="0.5" weight="1.0" />
+    <operator id="greaterkwerba:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:greaterkwerba" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,fire,fish,full,hand,hear,knee,liver,mountain,name,new,night,nose,one,path,see,skin,star,stone,sun,tongue,tree,two,water">
+        <parameter idref="featureClockRate:greaterkwerba:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="33" estimate="false">2 4 2 2 2 5 3 2 2 2 2 2 2 3 3 2 2 3 3 3 3 3 3 3 4 3 2 2 3 3 3 3 3</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="greaterkwerba.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,fire,fish,full,hand,hear,knee,liver,mountain,name,new,night,nose,one,path,see,skin,star,stone,sun,tongue,tree,two,water">
+        <log idref="featureClockRate:greaterkwerba:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:greaterkwerba" />
+      <log idref="covarion_alpha.s:greaterkwerba" />
+      <log idref="covarion_s.s:greaterkwerba" />
+    </logger>
+    <logger mode="tree" fileName="greaterkwerba.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

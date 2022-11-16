@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Embera-Catio_embe1260,Embera-Chami_embe1262,Embera-Tado_embe1261,Epena_epen1239,NorthernEmbera_nort2972,WounMeu_woun1238">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_chocoan" name="data_chocoan" dataType="integer">
+    <sequence id="language_data_chocoan:Embera-Catio_embe1260" taxon="Embera-Catio_embe1260" value="0100010100010000100010001000010000001000100010000100100010000010001001000001001000010001000001001000000??01000001001000100100100100" />
+    <sequence id="language_data_chocoan:Embera-Chami_embe1262" taxon="Embera-Chami_embe1262" value="01000101100????0100010000100010000001000100010000??010000100001000100?????0100010001000?????01000100000??00100001001100100100100100" />
+    <sequence id="language_data_chocoan:Embera-Tado_embe1261" taxon="Embera-Tado_embe1261" value="01000101000????010001000100001000000100010001000010010000001001000100001000100101001000?????01000100000??00100001001100100100100100" />
+    <sequence id="language_data_chocoan:Epena_epen1239" taxon="Epena_epen1239" value="010001010001000011001100100001010000100010001100010010000010101000100?????0100101001000?????010001000000100100001100110100100100100" />
+    <sequence id="language_data_chocoan:NorthernEmbera_nort2972" taxon="NorthernEmbera_nort2972" value="01000111000011001010100010100101011011001100101000101100001000110011001010010010000110001010010001110101101011001001100100100100010" />
+    <sequence id="language_data_chocoan:WounMeu_woun1238" taxon="WounMeu_woun1238" value="0011010001000010100000100001001010000010001000010100001000100000101000000100100001000100010100100000100??00000101001000010010010001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,fire,fish,full,hear,knee,liver,louse,mountain,new,night,one,path,person,see,skin,star,stone,sun,tongue,tree,two,water">
+        <parameter id="featureClockRate:chocoan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:chocoan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:chocoan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:chocoan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:chocoan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(WounMeu_woun1238,((Embera-Catio_embe1260,NorthernEmbera_nort2972),(Epena_epen1239,(Embera-Chami_embe1262,Embera-Tado_embe1261))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:chocoan" name="distribution">
+          <input id="featureClockRateCompound:chocoan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,fire,fish,full,hear,knee,liver,louse,mountain,new,night,one,path,person,see,skin,star,stone,sun,tongue,tree,two,water">
+              <var idref="featureClockRate:chocoan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:chocoan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:chocoan" beta="@featureClockRateGammaScale:chocoan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:chocoan" name="distribution" x="@featureClockRateGammaScale:chocoan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:chocoan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:chocoan" name="distribution" x="@covarion_alpha.s:chocoan">
+          <Uniform id="CovAlphaUniform:chocoan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:chocoan" name="distribution" x="@covarion_s.s:chocoan">
+          <Gamma id="Gamma.0:chocoan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:chocoan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:chocoan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:chocoan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:1pl" spec="SiteModel" mutationRate="@featureClockRate:chocoan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:chocoan" spec="BinaryCovarion" alpha="@covarion_alpha.s:chocoan" switchRate="@covarion_s.s:chocoan">
+              <vfrequencies id="chocoan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.73 0.27</vfrequencies>
+              <parameter id="chocoan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="chocoan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_chocoan:1pl" spec="FilteredAlignment" data="@data_chocoan" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:2sg" spec="SiteModel" mutationRate="@featureClockRate:chocoan:2sg" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:2sg" spec="FilteredAlignment" data="@data_chocoan" filter="5-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:blood" spec="SiteModel" mutationRate="@featureClockRate:chocoan:blood" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:blood" spec="FilteredAlignment" data="@data_chocoan" filter="11-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:bone" spec="SiteModel" mutationRate="@featureClockRate:chocoan:bone" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:bone" spec="FilteredAlignment" data="@data_chocoan" filter="16-19" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:breast" spec="SiteModel" mutationRate="@featureClockRate:chocoan:breast" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:breast" spec="FilteredAlignment" data="@data_chocoan" filter="20-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:come" spec="SiteModel" mutationRate="@featureClockRate:chocoan:come" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:come" spec="FilteredAlignment" data="@data_chocoan" filter="24-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:die" spec="SiteModel" mutationRate="@featureClockRate:chocoan:die" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:die" spec="FilteredAlignment" data="@data_chocoan" filter="29-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:dog" spec="SiteModel" mutationRate="@featureClockRate:chocoan:dog" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:dog" spec="FilteredAlignment" data="@data_chocoan" filter="36-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:fire" spec="SiteModel" mutationRate="@featureClockRate:chocoan:fire" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:fire" spec="FilteredAlignment" data="@data_chocoan" filter="40-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:fish" spec="SiteModel" mutationRate="@featureClockRate:chocoan:fish" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:fish" spec="FilteredAlignment" data="@data_chocoan" filter="44-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:full" spec="SiteModel" mutationRate="@featureClockRate:chocoan:full" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:full" spec="FilteredAlignment" data="@data_chocoan" filter="49-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:hear" spec="SiteModel" mutationRate="@featureClockRate:chocoan:hear" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:hear" spec="FilteredAlignment" data="@data_chocoan" filter="52-55" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:knee" spec="SiteModel" mutationRate="@featureClockRate:chocoan:knee" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:knee" spec="FilteredAlignment" data="@data_chocoan" filter="56-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:liver" spec="SiteModel" mutationRate="@featureClockRate:chocoan:liver" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:liver" spec="FilteredAlignment" data="@data_chocoan" filter="62-65" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:louse" spec="SiteModel" mutationRate="@featureClockRate:chocoan:louse" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:louse" spec="FilteredAlignment" data="@data_chocoan" filter="66-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:mountain" spec="SiteModel" mutationRate="@featureClockRate:chocoan:mountain" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:mountain" spec="FilteredAlignment" data="@data_chocoan" filter="69-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:new" spec="SiteModel" mutationRate="@featureClockRate:chocoan:new" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:new" spec="FilteredAlignment" data="@data_chocoan" filter="75-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:night" spec="SiteModel" mutationRate="@featureClockRate:chocoan:night" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:night" spec="FilteredAlignment" data="@data_chocoan" filter="78-82" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:one" spec="SiteModel" mutationRate="@featureClockRate:chocoan:one" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:one" spec="FilteredAlignment" data="@data_chocoan" filter="83-86" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:path" spec="SiteModel" mutationRate="@featureClockRate:chocoan:path" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:path" spec="FilteredAlignment" data="@data_chocoan" filter="87-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:person" spec="SiteModel" mutationRate="@featureClockRate:chocoan:person" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:person" spec="FilteredAlignment" data="@data_chocoan" filter="93-95" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:see" spec="SiteModel" mutationRate="@featureClockRate:chocoan:see" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:see" spec="FilteredAlignment" data="@data_chocoan" filter="96-102" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:skin" spec="SiteModel" mutationRate="@featureClockRate:chocoan:skin" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:skin" spec="FilteredAlignment" data="@data_chocoan" filter="103-105" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:star" spec="SiteModel" mutationRate="@featureClockRate:chocoan:star" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:star" spec="FilteredAlignment" data="@data_chocoan" filter="106-111" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:stone" spec="SiteModel" mutationRate="@featureClockRate:chocoan:stone" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:stone" spec="FilteredAlignment" data="@data_chocoan" filter="112-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:sun" spec="SiteModel" mutationRate="@featureClockRate:chocoan:sun" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:sun" spec="FilteredAlignment" data="@data_chocoan" filter="115-118" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:tongue" spec="SiteModel" mutationRate="@featureClockRate:chocoan:tongue" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:tongue" spec="FilteredAlignment" data="@data_chocoan" filter="119-121" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:tree" spec="SiteModel" mutationRate="@featureClockRate:chocoan:tree" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:tree" spec="FilteredAlignment" data="@data_chocoan" filter="122-124" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:two" spec="SiteModel" mutationRate="@featureClockRate:chocoan:two" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:two" spec="FilteredAlignment" data="@data_chocoan" filter="125-127" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chocoan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chocoan:water" spec="SiteModel" mutationRate="@featureClockRate:chocoan:water" proportionInvariant="0" substModel="@covarion.s:chocoan" />
+          <data id="feature_data_chocoan:water" spec="FilteredAlignment" data="@data_chocoan" filter="128-131" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:chocoan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:chocoan" name="up" />
+      <parameter idref="featureClockRateGammaScale:chocoan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:chocoan" spec="ScaleOperator" parameter="@covarion_alpha.s:chocoan" scaleFactor="0.5" weight="1.0" />
+    <operator id="chocoan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:chocoan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,fire,fish,full,hear,knee,liver,louse,mountain,new,night,one,path,person,see,skin,star,stone,sun,tongue,tree,two,water">
+        <parameter idref="featureClockRate:chocoan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="30" estimate="false">3 5 4 3 3 4 6 3 3 4 2 3 5 3 2 5 2 4 3 5 2 6 2 5 2 3 2 2 2 3</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="chocoan.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,fire,fish,full,hear,knee,liver,louse,mountain,new,night,one,path,person,see,skin,star,stone,sun,tongue,tree,two,water">
+        <log idref="featureClockRate:chocoan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:chocoan" />
+      <log idref="covarion_alpha.s:chocoan" />
+      <log idref="covarion_s.s:chocoan" />
+    </logger>
+    <logger mode="tree" fileName="chocoan.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

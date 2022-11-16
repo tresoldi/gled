@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Ambakich_amba1269,ApMa_apma1241,Mwakai_mong1344,UlwaPapuaNewGuinea_yaul1241">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_keram" name="data_keram" dataType="integer">
+    <sequence id="language_data_keram:Ambakich_amba1269" taxon="Ambakich_amba1269" value="0001000010001000010000100001000011000110000100000110000100001000100010001000011000011000100001100010000100001000010001000010000110000100001100010001100001100001111000010000100001111110000100001000100010001" />
+    <sequence id="language_data_keram:ApMa_apma1241" taxon="ApMa_apma1241" value="0???011000???010000100001000010000010000100001100000100001000010001000100010000010000010001000001000100001000010000100010000100000100001100001000100001000001000000010000100001000000000100001000010001000100" />
+    <sequence id="language_data_keram:Mwakai_mong1344" taxon="Mwakai_mong1344" value="01000001001000010000100001000010000????00100000100000100001000???00100???0010000010000???0010000???0010000100001000???00100001000001000?????0???00100001000001000000010000100001000000000100001000???0???0010" />
+    <sequence id="language_data_keram:UlwaPapuaNewGuinea_yaul1241" taxon="UlwaPapuaNewGuinea_yaul1241" value="0010000100010000100001000010000100001000001000001000001000010001000100010000100000100001000010000100001000010000100010000100001000001000010000100010000010000010000000100001000010000000001000010001000100010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:keram:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:keram" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:keram" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:keram" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:keram" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((Ambakich_amba1269,ApMa_apma1241),(Mwakai_mong1344,UlwaPapuaNewGuinea_yaul1241));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:keram" name="distribution">
+          <input id="featureClockRateCompound:keram" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:keram:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:keram" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:keram" beta="@featureClockRateGammaScale:keram" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:keram" name="distribution" x="@featureClockRateGammaScale:keram">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:keram" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:keram" name="distribution" x="@covarion_alpha.s:keram">
+          <Uniform id="CovAlphaUniform:keram" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:keram" name="distribution" x="@covarion_s.s:keram">
+          <Gamma id="Gamma.0:keram" name="distr">
+            <parameter id="covarion_switch_gamma_param1:keram" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:keram" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:keram:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:1pl" spec="SiteModel" mutationRate="@featureClockRate:keram:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:keram" spec="BinaryCovarion" alpha="@covarion_alpha.s:keram" switchRate="@covarion_s.s:keram">
+              <vfrequencies id="keram:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.79 0.21</vfrequencies>
+              <parameter id="keram:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="keram:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_keram:1pl" spec="FilteredAlignment" data="@data_keram" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:1sg" spec="SiteModel" mutationRate="@featureClockRate:keram:1sg" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:1sg" spec="FilteredAlignment" data="@data_keram" filter="5-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:2sg" spec="SiteModel" mutationRate="@featureClockRate:keram:2sg" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:2sg" spec="FilteredAlignment" data="@data_keram" filter="10-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:blood" spec="SiteModel" mutationRate="@featureClockRate:keram:blood" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:blood" spec="FilteredAlignment" data="@data_keram" filter="14-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:bone" spec="SiteModel" mutationRate="@featureClockRate:keram:bone" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:bone" spec="FilteredAlignment" data="@data_keram" filter="19-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:breast" spec="SiteModel" mutationRate="@featureClockRate:keram:breast" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:breast" spec="FilteredAlignment" data="@data_keram" filter="24-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:come" spec="SiteModel" mutationRate="@featureClockRate:keram:come" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:come" spec="FilteredAlignment" data="@data_keram" filter="29-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:die" spec="SiteModel" mutationRate="@featureClockRate:keram:die" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:die" spec="FilteredAlignment" data="@data_keram" filter="35-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:dog" spec="SiteModel" mutationRate="@featureClockRate:keram:dog" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:dog" spec="FilteredAlignment" data="@data_keram" filter="40-44" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:drink" spec="SiteModel" mutationRate="@featureClockRate:keram:drink" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:drink" spec="FilteredAlignment" data="@data_keram" filter="45-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:ear" spec="SiteModel" mutationRate="@featureClockRate:keram:ear" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:ear" spec="FilteredAlignment" data="@data_keram" filter="52-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:eye" spec="SiteModel" mutationRate="@featureClockRate:keram:eye" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:eye" spec="FilteredAlignment" data="@data_keram" filter="57-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:fire" spec="SiteModel" mutationRate="@featureClockRate:keram:fire" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:fire" spec="FilteredAlignment" data="@data_keram" filter="62-65" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:fish" spec="SiteModel" mutationRate="@featureClockRate:keram:fish" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:fish" spec="FilteredAlignment" data="@data_keram" filter="66-69" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:full" spec="SiteModel" mutationRate="@featureClockRate:keram:full" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:full" spec="FilteredAlignment" data="@data_keram" filter="70-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:hand" spec="SiteModel" mutationRate="@featureClockRate:keram:hand" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:hand" spec="FilteredAlignment" data="@data_keram" filter="74-79" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:hear" spec="SiteModel" mutationRate="@featureClockRate:keram:hear" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:hear" spec="FilteredAlignment" data="@data_keram" filter="80-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:horn" spec="SiteModel" mutationRate="@featureClockRate:keram:horn" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:horn" spec="FilteredAlignment" data="@data_keram" filter="86-89" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:knee" spec="SiteModel" mutationRate="@featureClockRate:keram:knee" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:knee" spec="FilteredAlignment" data="@data_keram" filter="90-95" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:leaf" spec="SiteModel" mutationRate="@featureClockRate:keram:leaf" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:leaf" spec="FilteredAlignment" data="@data_keram" filter="96-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:liver" spec="SiteModel" mutationRate="@featureClockRate:keram:liver" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:liver" spec="FilteredAlignment" data="@data_keram" filter="100-104" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:louse" spec="SiteModel" mutationRate="@featureClockRate:keram:louse" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:louse" spec="FilteredAlignment" data="@data_keram" filter="105-109" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:mountain" spec="SiteModel" mutationRate="@featureClockRate:keram:mountain" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:mountain" spec="FilteredAlignment" data="@data_keram" filter="110-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:name" spec="SiteModel" mutationRate="@featureClockRate:keram:name" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:name" spec="FilteredAlignment" data="@data_keram" filter="115-118" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:new" spec="SiteModel" mutationRate="@featureClockRate:keram:new" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:new" spec="FilteredAlignment" data="@data_keram" filter="119-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:night" spec="SiteModel" mutationRate="@featureClockRate:keram:night" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:night" spec="FilteredAlignment" data="@data_keram" filter="124-129" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:nose" spec="SiteModel" mutationRate="@featureClockRate:keram:nose" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:nose" spec="FilteredAlignment" data="@data_keram" filter="130-134" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:one" spec="SiteModel" mutationRate="@featureClockRate:keram:one" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:one" spec="FilteredAlignment" data="@data_keram" filter="135-140" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:path" spec="SiteModel" mutationRate="@featureClockRate:keram:path" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:path" spec="FilteredAlignment" data="@data_keram" filter="141-144" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:person" spec="SiteModel" mutationRate="@featureClockRate:keram:person" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:person" spec="FilteredAlignment" data="@data_keram" filter="145-149" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:see" spec="SiteModel" mutationRate="@featureClockRate:keram:see" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:see" spec="FilteredAlignment" data="@data_keram" filter="150-155" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:skin" spec="SiteModel" mutationRate="@featureClockRate:keram:skin" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:skin" spec="FilteredAlignment" data="@data_keram" filter="156-163" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:star" spec="SiteModel" mutationRate="@featureClockRate:keram:star" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:star" spec="FilteredAlignment" data="@data_keram" filter="164-168" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:stone" spec="SiteModel" mutationRate="@featureClockRate:keram:stone" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:stone" spec="FilteredAlignment" data="@data_keram" filter="169-173" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:sun" spec="SiteModel" mutationRate="@featureClockRate:keram:sun" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:sun" spec="FilteredAlignment" data="@data_keram" filter="174-183" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:tongue" spec="SiteModel" mutationRate="@featureClockRate:keram:tongue" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:tongue" spec="FilteredAlignment" data="@data_keram" filter="184-188" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:tooth" spec="SiteModel" mutationRate="@featureClockRate:keram:tooth" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:tooth" spec="FilteredAlignment" data="@data_keram" filter="189-193" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:tree" spec="SiteModel" mutationRate="@featureClockRate:keram:tree" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:tree" spec="FilteredAlignment" data="@data_keram" filter="194-197" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:two" spec="SiteModel" mutationRate="@featureClockRate:keram:two" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:two" spec="FilteredAlignment" data="@data_keram" filter="198-201" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:keram:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.keram:water" spec="SiteModel" mutationRate="@featureClockRate:keram:water" proportionInvariant="0" substModel="@covarion.s:keram" />
+          <data id="feature_data_keram:water" spec="FilteredAlignment" data="@data_keram" filter="202-205" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:keram" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:keram" name="up" />
+      <parameter idref="featureClockRateGammaScale:keram" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:keram" spec="ScaleOperator" parameter="@covarion_alpha.s:keram" scaleFactor="0.5" weight="1.0" />
+    <operator id="keram:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:keram" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:keram:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">3 4 3 4 4 4 5 4 4 6 4 4 3 3 3 5 5 3 5 3 4 4 4 3 4 5 4 5 3 4 5 7 4 4 9 4 4 3 3 3</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="keram.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:keram:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:keram" />
+      <log idref="covarion_alpha.s:keram" />
+      <log idref="covarion_s.s:keram" />
+    </logger>
+    <logger mode="tree" fileName="keram.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

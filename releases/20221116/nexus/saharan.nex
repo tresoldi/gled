@@ -1,0 +1,263 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=6 NCHAR=204;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_saharan.blood.0012,
+        3 blood_saharan.blood.0013,
+        4 blood_saharan.blood.0014,
+        5 bone_0ascertainment,
+        6 bone_saharan.bone.0015,
+        7 breast_0ascertainment,
+        8 breast_saharan.breast.0016,
+        9 breast_saharan.breast.0017,
+        10 come_0ascertainment,
+        11 come_saharan.come.0018,
+        12 come_saharan.come.0019,
+        13 come_saharan.come.0020,
+        14 come_saharan.come.0021,
+        15 come_saharan.come.0022,
+        16 die_0ascertainment,
+        17 die_saharan.die.0023,
+        18 die_saharan.die.0024,
+        19 die_saharan.die.0025,
+        20 die_saharan.die.0026,
+        21 dog_0ascertainment,
+        22 dog_saharan.dog.0027,
+        23 dog_saharan.dog.0028,
+        24 drink_0ascertainment,
+        25 drink_saharan.drink.0029,
+        26 drink_saharan.drink.0030,
+        27 drink_saharan.drink.0031,
+        28 drink_saharan.drink.0032,
+        29 ear_0ascertainment,
+        30 ear_saharan.ear.0033,
+        31 ear_saharan.ear.0034,
+        32 ear_saharan.ear.0035,
+        33 ear_saharan.ear.0036,
+        34 eye_0ascertainment,
+        35 eye_saharan.eye.0037,
+        36 eye_saharan.eye.0038,
+        37 eye_saharan.eye.0039,
+        38 fire_0ascertainment,
+        39 fire_saharan.fire.0040,
+        40 fire_saharan.fire.0041,
+        41 fire_saharan.fire.0042,
+        42 fish_0ascertainment,
+        43 fish_saharan.fish.0043,
+        44 fish_saharan.fish.0044,
+        45 full_0ascertainment,
+        46 full_saharan.full.0045,
+        47 full_saharan.full.0046,
+        48 full_saharan.full.0047,
+        49 hand_0ascertainment,
+        50 hand_saharan.hand.0048,
+        51 hand_saharan.hand.0049,
+        52 hand_saharan.hand.0050,
+        53 hand_saharan.hand.0051,
+        54 hand_saharan.hand.0052,
+        55 hand_saharan.hand.0053,
+        56 hear_0ascertainment,
+        57 hear_saharan.hear.0054,
+        58 hear_saharan.hear.0055,
+        59 hear_saharan.hear.0056,
+        60 hear_saharan.hear.0057,
+        61 horn_0ascertainment,
+        62 horn_saharan.horn.0058,
+        63 horn_saharan.horn.0059,
+        64 horn_saharan.horn.0060,
+        65 horn_saharan.horn.0061,
+        66 knee_0ascertainment,
+        67 knee_saharan.knee.0062,
+        68 knee_saharan.knee.0063,
+        69 knee_saharan.knee.0064,
+        70 knee_saharan.knee.0065,
+        71 leaf_0ascertainment,
+        72 leaf_saharan.leaf.0066,
+        73 leaf_saharan.leaf.0067,
+        74 leaf_saharan.leaf.0068,
+        75 leaf_saharan.leaf.0069,
+        76 leaf_saharan.leaf.0070,
+        77 leaf_saharan.leaf.0071,
+        78 liver_0ascertainment,
+        79 liver_saharan.liver.0072,
+        80 liver_saharan.liver.0073,
+        81 louse_0ascertainment,
+        82 louse_saharan.louse.0074,
+        83 louse_saharan.louse.0075,
+        84 louse_saharan.louse.0076,
+        85 louse_saharan.louse.0077,
+        86 mountain_0ascertainment,
+        87 mountain_saharan.mountain.0078,
+        88 mountain_saharan.mountain.0079,
+        89 mountain_saharan.mountain.0080,
+        90 mountain_saharan.mountain.0081,
+        91 mountain_saharan.mountain.0082,
+        92 mountain_saharan.mountain.0083,
+        93 mountain_saharan.mountain.0084,
+        94 mountain_saharan.mountain.0085,
+        95 mountain_saharan.mountain.0086,
+        96 name_0ascertainment,
+        97 name_saharan.name.0087,
+        98 name_saharan.name.0088,
+        99 name_saharan.name.0089,
+        100 name_saharan.name.0090,
+        101 name_saharan.name.0091,
+        102 name_saharan.name.0092,
+        103 new_0ascertainment,
+        104 new_saharan.new.0093,
+        105 new_saharan.new.0094,
+        106 new_saharan.new.0095,
+        107 new_saharan.new.0096,
+        108 new_saharan.new.0097,
+        109 night_0ascertainment,
+        110 night_saharan.night.0098,
+        111 night_saharan.night.0099,
+        112 night_saharan.night.0100,
+        113 night_saharan.night.0101,
+        114 nose_0ascertainment,
+        115 nose_saharan.nose.0102,
+        116 nose_saharan.nose.0103,
+        117 nose_saharan.nose.0104,
+        118 one_0ascertainment,
+        119 one_saharan.one.0105,
+        120 one_saharan.one.0106,
+        121 one_saharan.one.0107,
+        122 one_saharan.one.0108,
+        123 one_saharan.one.0109,
+        124 path_0ascertainment,
+        125 path_saharan.path.0110,
+        126 path_saharan.path.0111,
+        127 path_saharan.path.0112,
+        128 path_saharan.path.0113,
+        129 path_saharan.path.0114,
+        130 path_saharan.path.0115,
+        131 person_0ascertainment,
+        132 person_saharan.person.0116,
+        133 person_saharan.person.0117,
+        134 person_saharan.person.0118,
+        135 pl_0ascertainment,
+        136 pl_saharan.1pl.0001,
+        137 pl_saharan.1pl.0002,
+        138 pl_saharan.1pl.0003,
+        139 see_0ascertainment,
+        140 see_saharan.see.0119,
+        141 see_saharan.see.0120,
+        142 sg_0ascertainment,
+        143 sg_saharan.1sg.0004,
+        144 sg_saharan.1sg.0005,
+        145 sg_saharan.1sg.0006,
+        146 sg_saharan.1sg.0007,
+        147 sg_saharan.1sg.0008,
+        148 sg_saharan.1sg.0009,
+        149 sg_saharan.2sg.0010,
+        150 sg_saharan.2sg.0011,
+        151 skin_0ascertainment,
+        152 skin_saharan.skin.0121,
+        153 skin_saharan.skin.0122,
+        154 skin_saharan.skin.0123,
+        155 skin_saharan.skin.0124,
+        156 skin_saharan.skin.0125,
+        157 star_0ascertainment,
+        158 star_saharan.star.0126,
+        159 star_saharan.star.0127,
+        160 star_saharan.star.0128,
+        161 star_saharan.star.0129,
+        162 stone_0ascertainment,
+        163 stone_saharan.stone.0130,
+        164 stone_saharan.stone.0131,
+        165 stone_saharan.stone.0132,
+        166 stone_saharan.stone.0133,
+        167 stone_saharan.stone.0134,
+        168 stone_saharan.stone.0135,
+        169 stone_saharan.stone.0136,
+        170 stone_saharan.stone.0137,
+        171 sun_0ascertainment,
+        172 sun_saharan.sun.0138,
+        173 sun_saharan.sun.0139,
+        174 sun_saharan.sun.0140,
+        175 sun_saharan.sun.0141,
+        176 sun_saharan.sun.0142,
+        177 sun_saharan.sun.0143,
+        178 tongue_0ascertainment,
+        179 tongue_saharan.tongue.0144,
+        180 tongue_saharan.tongue.0145,
+        181 tongue_saharan.tongue.0146,
+        182 tooth_0ascertainment,
+        183 tooth_saharan.tooth.0147,
+        184 tooth_saharan.tooth.0148,
+        185 tooth_saharan.tooth.0149,
+        186 tooth_saharan.tooth.0150,
+        187 tooth_saharan.tooth.0151,
+        188 tree_0ascertainment,
+        189 tree_saharan.tree.0152,
+        190 tree_saharan.tree.0153,
+        191 tree_saharan.tree.0154,
+        192 tree_saharan.tree.0155,
+        193 tree_saharan.tree.0156,
+        194 tree_saharan.tree.0157,
+        195 two_0ascertainment,
+        196 two_saharan.two.0158,
+        197 two_saharan.two.0159,
+        198 two_saharan.two.0160,
+        199 water_0ascertainment,
+        200 water_saharan.water.0161,
+        201 water_saharan.water.0162,
+        202 water_saharan.water.0163,
+        203 water_saharan.water.0164,
+        204 water_saharan.water.0165
+;
+
+MATRIX
+beria        010001010010000010010100100001000010001000100100010000001000010000100001000000100100001000000000100000010000010000100010000010000001000100010010000010010000010000100000000100000010001000001000000100010000
+berti        0100010100?????0????0100????00100001100100??001000100100????001100100000100000??00100001000000000100010010010100001000010000010000001000100??001001010001000001000010010000010010010000101000100100100010000
+dazaga       00100101000101000100001001000001100100001001000100010010010000010001010001011010000100001000101000110000010000100001000010000010110???0101001000100111000100000100001001110001001010100010000010010100001001
+kanuri       000101010000101001000100001000010001000010010001000010000010000010001000001100100000100001000100000100000010000100001000011000100000010100010000010010000010000010000100000000100001000010100001000010000100
+manga_kanuri 000101010000100001100100000100010001000010010???000010000001000010001000001000010000100000100000000010000010000110001000001000010000010100010000010010000001000010000100000000100001000010000001000001000010
+tedaga       00100101100001000100001001000001000100001001000100010010010000010001010001011010000100001001101000110000010000100001000010000010110???0101001000100111000100000100001001110001001010100010000010010100001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-6;
+    charset breast = 7-9;
+    charset come = 10-15;
+    charset die = 16-20;
+    charset dog = 21-23;
+    charset drink = 24-28;
+    charset ear = 29-33;
+    charset eye = 34-37;
+    charset fire = 38-41;
+    charset fish = 42-44;
+    charset full = 45-48;
+    charset hand = 49-55;
+    charset hear = 56-60;
+    charset horn = 61-65;
+    charset knee = 66-70;
+    charset leaf = 71-77;
+    charset liver = 78-80;
+    charset louse = 81-85;
+    charset mountain = 86-95;
+    charset name = 96-102;
+    charset new = 103-108;
+    charset night = 109-113;
+    charset nose = 114-117;
+    charset one = 118-123;
+    charset path = 124-130;
+    charset person = 131-134;
+    charset pl = 135-138;
+    charset see = 139-141;
+    charset sg = 142-150;
+    charset skin = 151-156;
+    charset star = 157-161;
+    charset stone = 162-170;
+    charset sun = 171-177;
+    charset tongue = 178-181;
+    charset tooth = 182-187;
+    charset tree = 188-194;
+    charset two = 195-198;
+    charset water = 199-204;
+END;

@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="Angor_ango1254" />
+    <taxon id="DeraIndonesia_dera1245" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_senagi" name="data_senagi" dataType="integer">
+    <sequence id="language_data_senagi:Angor_ango1254" taxon="Angor_ango1254" value="0010010000101000100??001000100??00100100100??0??0???0010010001001000100010100010010010" />
+    <sequence id="language_data_senagi:DeraIndonesia_dera1245" taxon="DeraIndonesia_dera1245" value="01001011011011010101101010101011010101100101101101110100101010010101010100110101011011" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,blood,bone,come,die,fish,hand,knee,leaf,louse,name,night,nose,one,path,person,see,skin,star,sun,tongue,tooth,tree,water">
+        <parameter id="featureClockRate:senagi:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:senagi" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:senagi" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:senagi" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:senagi" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Angor_ango1254,DeraIndonesia_dera1245);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:senagi" name="distribution">
+          <input id="featureClockRateCompound:senagi" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,blood,bone,come,die,fish,hand,knee,leaf,louse,name,night,nose,one,path,person,see,skin,star,sun,tongue,tooth,tree,water">
+              <var idref="featureClockRate:senagi:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:senagi" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:senagi" beta="@featureClockRateGammaScale:senagi" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:senagi" name="distribution" x="@featureClockRateGammaScale:senagi">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:senagi" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:senagi" name="distribution" x="@covarion_alpha.s:senagi">
+          <Uniform id="CovAlphaUniform:senagi" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:senagi" name="distribution" x="@covarion_s.s:senagi">
+          <Gamma id="Gamma.0:senagi" name="distr">
+            <parameter id="covarion_switch_gamma_param1:senagi" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:senagi" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:senagi:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:1pl" spec="SiteModel" mutationRate="@featureClockRate:senagi:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:senagi" spec="BinaryCovarion" alpha="@covarion_alpha.s:senagi" switchRate="@covarion_s.s:senagi">
+              <vfrequencies id="senagi:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.61 0.39</vfrequencies>
+              <parameter id="senagi:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="senagi:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_senagi:1pl" spec="FilteredAlignment" data="@data_senagi" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:1sg" spec="SiteModel" mutationRate="@featureClockRate:senagi:1sg" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:1sg" spec="FilteredAlignment" data="@data_senagi" filter="4-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:blood" spec="SiteModel" mutationRate="@featureClockRate:senagi:blood" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:blood" spec="FilteredAlignment" data="@data_senagi" filter="9-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:bone" spec="SiteModel" mutationRate="@featureClockRate:senagi:bone" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:bone" spec="FilteredAlignment" data="@data_senagi" filter="12-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:come" spec="SiteModel" mutationRate="@featureClockRate:senagi:come" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:come" spec="FilteredAlignment" data="@data_senagi" filter="15-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:die" spec="SiteModel" mutationRate="@featureClockRate:senagi:die" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:die" spec="FilteredAlignment" data="@data_senagi" filter="19-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:fish" spec="SiteModel" mutationRate="@featureClockRate:senagi:fish" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:fish" spec="FilteredAlignment" data="@data_senagi" filter="22-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:hand" spec="SiteModel" mutationRate="@featureClockRate:senagi:hand" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:hand" spec="FilteredAlignment" data="@data_senagi" filter="26-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:knee" spec="SiteModel" mutationRate="@featureClockRate:senagi:knee" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:knee" spec="FilteredAlignment" data="@data_senagi" filter="30-32" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:leaf" spec="SiteModel" mutationRate="@featureClockRate:senagi:leaf" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:leaf" spec="FilteredAlignment" data="@data_senagi" filter="33-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:louse" spec="SiteModel" mutationRate="@featureClockRate:senagi:louse" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:louse" spec="FilteredAlignment" data="@data_senagi" filter="37-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:name" spec="SiteModel" mutationRate="@featureClockRate:senagi:name" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:name" spec="FilteredAlignment" data="@data_senagi" filter="40-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:night" spec="SiteModel" mutationRate="@featureClockRate:senagi:night" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:night" spec="FilteredAlignment" data="@data_senagi" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:nose" spec="SiteModel" mutationRate="@featureClockRate:senagi:nose" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:nose" spec="FilteredAlignment" data="@data_senagi" filter="46-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:one" spec="SiteModel" mutationRate="@featureClockRate:senagi:one" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:one" spec="FilteredAlignment" data="@data_senagi" filter="49-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:path" spec="SiteModel" mutationRate="@featureClockRate:senagi:path" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:path" spec="FilteredAlignment" data="@data_senagi" filter="53-55" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:person" spec="SiteModel" mutationRate="@featureClockRate:senagi:person" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:person" spec="FilteredAlignment" data="@data_senagi" filter="56-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:see" spec="SiteModel" mutationRate="@featureClockRate:senagi:see" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:see" spec="FilteredAlignment" data="@data_senagi" filter="60-62" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:skin" spec="SiteModel" mutationRate="@featureClockRate:senagi:skin" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:skin" spec="FilteredAlignment" data="@data_senagi" filter="63-66" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:star" spec="SiteModel" mutationRate="@featureClockRate:senagi:star" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:star" spec="FilteredAlignment" data="@data_senagi" filter="67-70" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:sun" spec="SiteModel" mutationRate="@featureClockRate:senagi:sun" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:sun" spec="FilteredAlignment" data="@data_senagi" filter="71-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:tongue" spec="SiteModel" mutationRate="@featureClockRate:senagi:tongue" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:tongue" spec="FilteredAlignment" data="@data_senagi" filter="74-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:tooth" spec="SiteModel" mutationRate="@featureClockRate:senagi:tooth" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:tooth" spec="FilteredAlignment" data="@data_senagi" filter="77-80" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:tree" spec="SiteModel" mutationRate="@featureClockRate:senagi:tree" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:tree" spec="FilteredAlignment" data="@data_senagi" filter="81-83" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:senagi:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.senagi:water" spec="SiteModel" mutationRate="@featureClockRate:senagi:water" proportionInvariant="0" substModel="@covarion.s:senagi" />
+          <data id="feature_data_senagi:water" spec="FilteredAlignment" data="@data_senagi" filter="84-86" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:senagi" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:senagi" name="up" />
+      <parameter idref="featureClockRateGammaScale:senagi" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:senagi" spec="ScaleOperator" parameter="@covarion_alpha.s:senagi" scaleFactor="0.5" weight="1.0" />
+    <operator id="senagi:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:senagi" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,blood,bone,come,die,fish,hand,knee,leaf,louse,name,night,nose,one,path,person,see,skin,star,sun,tongue,tooth,tree,water">
+        <parameter idref="featureClockRate:senagi:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="25" estimate="false">2 4 2 2 3 2 3 3 2 3 2 2 2 2 3 2 3 2 3 3 2 2 3 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="senagi.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,blood,bone,come,die,fish,hand,knee,leaf,louse,name,night,nose,one,path,person,see,skin,star,sun,tongue,tooth,tree,water">
+        <log idref="featureClockRate:senagi:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:senagi" />
+      <log idref="covarion_alpha.s:senagi" />
+      <log idref="covarion_s.s:senagi" />
+    </logger>
+    <logger mode="tree" fileName="senagi.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

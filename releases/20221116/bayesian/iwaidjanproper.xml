@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="Amurdak_amar1271" />
+    <taxon id="Iwaidja_iwai1244" />
+    <taxon id="Mawng_maun1240" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_iwaidjanproper" name="data_iwaidjanproper" dataType="integer">
+    <sequence id="language_data_iwaidjanproper:Amurdak_amar1271" taxon="Amurdak_amar1271" value="010010001000??01000100010010010001000100100010001000??01000100100??0100100100010001000100100010001000100100100010010010" />
+    <sequence id="language_data_iwaidjanproper:Iwaidja_iwai1244" taxon="Iwaidja_iwai1244" value="00100110010010001000100100010010001001000100010001001000100100010100100010010001000100010010001000100010110010010001001" />
+    <sequence id="language_data_iwaidjanproper:Mawng_maun1240" taxon="Mawng_maun1240" value="00100010001001000100010010010001000100100010001000100100010010010010010010001000100010010001000100010010010001001001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1sg,2sg,bone,breast,come,die,dog,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,mountain,name,new,night,nose,one,person,see,skin,star,stone,sun,tooth,tree,two,water">
+        <parameter id="featureClockRate:iwaidjanproper:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:iwaidjanproper" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:iwaidjanproper" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:iwaidjanproper" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:iwaidjanproper" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Amurdak_amar1271,Iwaidja_iwai1244,Mawng_maun1240);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:iwaidjanproper" name="distribution">
+          <input id="featureClockRateCompound:iwaidjanproper" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1sg,2sg,bone,breast,come,die,dog,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,mountain,name,new,night,nose,one,person,see,skin,star,stone,sun,tooth,tree,two,water">
+              <var idref="featureClockRate:iwaidjanproper:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:iwaidjanproper" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:iwaidjanproper" beta="@featureClockRateGammaScale:iwaidjanproper" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:iwaidjanproper" name="distribution" x="@featureClockRateGammaScale:iwaidjanproper">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:iwaidjanproper" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:iwaidjanproper" name="distribution" x="@covarion_alpha.s:iwaidjanproper">
+          <Uniform id="CovAlphaUniform:iwaidjanproper" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:iwaidjanproper" name="distribution" x="@covarion_s.s:iwaidjanproper">
+          <Gamma id="Gamma.0:iwaidjanproper" name="distr">
+            <parameter id="covarion_switch_gamma_param1:iwaidjanproper" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:iwaidjanproper" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:iwaidjanproper:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:1sg" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:1sg" proportionInvariant="0">
+            <substModel id="covarion.s:iwaidjanproper" spec="BinaryCovarion" alpha="@covarion_alpha.s:iwaidjanproper" switchRate="@covarion_s.s:iwaidjanproper">
+              <vfrequencies id="iwaidjanproper:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.72 0.28</vfrequencies>
+              <parameter id="iwaidjanproper:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="iwaidjanproper:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_iwaidjanproper:1sg" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:2sg" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:2sg" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:2sg" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="4-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:bone" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:bone" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:bone" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="8-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:breast" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:breast" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:breast" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="12-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:come" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:come" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:come" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="15-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:die" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:die" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:die" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="19-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:dog" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:dog" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:dog" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="23-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:drink" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:drink" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:drink" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="26-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:ear" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:ear" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:ear" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="29-32" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:eye" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:eye" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:eye" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="33-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:fire" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:fire" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:fire" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="37-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:fish" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:fish" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:fish" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="40-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:hand" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:hand" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:hand" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="44-47" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:hear" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:hear" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:hear" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="48-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:horn" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:horn" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:horn" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="52-54" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:knee" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:knee" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:knee" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="55-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:leaf" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:leaf" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:leaf" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="59-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:liver" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:liver" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:liver" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="62-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:mountain" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:mountain" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:mountain" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="65-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:name" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:name" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:name" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="68-70" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:new" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:new" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:new" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="71-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:night" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:night" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:night" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="74-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:nose" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:nose" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:nose" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="78-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:one" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:one" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:one" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="82-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:person" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:person" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:person" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="86-88" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:see" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:see" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:see" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="89-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:skin" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:skin" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:skin" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="93-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:star" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:star" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:star" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="97-100" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:stone" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:stone" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:stone" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="101-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:sun" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:sun" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:sun" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="104-106" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:tooth" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:tooth" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:tooth" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="107-110" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:tree" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:tree" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:tree" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="111-113" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:two" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:two" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:two" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="114-116" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:iwaidjanproper:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.iwaidjanproper:water" spec="SiteModel" mutationRate="@featureClockRate:iwaidjanproper:water" proportionInvariant="0" substModel="@covarion.s:iwaidjanproper" />
+          <data id="feature_data_iwaidjanproper:water" spec="FilteredAlignment" data="@data_iwaidjanproper" filter="117-119" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:iwaidjanproper" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:iwaidjanproper" name="up" />
+      <parameter idref="featureClockRateGammaScale:iwaidjanproper" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:iwaidjanproper" spec="ScaleOperator" parameter="@covarion_alpha.s:iwaidjanproper" scaleFactor="0.5" weight="1.0" />
+    <operator id="iwaidjanproper:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:iwaidjanproper" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1sg,2sg,bone,breast,come,die,dog,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,mountain,name,new,night,nose,one,person,see,skin,star,stone,sun,tooth,tree,two,water">
+        <parameter idref="featureClockRate:iwaidjanproper:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="34" estimate="false">2 3 3 2 3 3 2 2 3 3 2 3 3 3 2 3 2 2 2 2 2 3 3 3 2 3 3 3 2 2 3 2 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="iwaidjanproper.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1sg,2sg,bone,breast,come,die,dog,drink,ear,eye,fire,fish,hand,hear,horn,knee,leaf,liver,mountain,name,new,night,nose,one,person,see,skin,star,stone,sun,tooth,tree,two,water">
+        <log idref="featureClockRate:iwaidjanproper:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:iwaidjanproper" />
+      <log idref="covarion_alpha.s:iwaidjanproper" />
+      <log idref="covarion_s.s:iwaidjanproper" />
+    </logger>
+    <logger mode="tree" fileName="iwaidjanproper.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

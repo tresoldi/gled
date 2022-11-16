@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="BellaCoola_bell1243,Clallam_clal1241,CoeurdAlene_coeu1236,Columbia-Wenatchi_colu1241,Comox_como1259,Cowlitz_cowl1242,Halkomelem_halk1245,Kalispel-PenddOreille_kali1308,Lillooet_lill1248,Nooksack_nook1247,NorthernLushootseed_lush1252,NorthernStraitsSalish_stra1244,Okanagan_okan1243,Quinault_quin1251,Sechelt_sech1246,Shuswap_shus1248,SouthernPugetSoundSalish_sout2965,Spokane_spok1245,Squamish_squa1248,Thompson_thom1243,Tillamook_till1254,Twana_twan1247,UpperChehalis_uppe1439">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_salishan" name="data_salishan" dataType="integer">
+    <sequence id="language_data_salishan:BellaCoola_bell1243" taxon="BellaCoola_bell1243" value="01000100000100000000010000001000000000000100000000100000000000000100000000000000001000000000100000000010000000001000100000000010000000000000000000000010000000000100000000001000000001000000000000000100000000001000000000000000010000000100000000000010000100000000001000000000010000000000100000000000000010001000000000100000000100000010000000000000000001000000000000000010000000000000010000000000100000001000000001000000100000000000000010000000010000" />
+    <sequence id="language_data_salishan:Clallam_clal1241" taxon="Clallam_clal1241" value="01000000000010000000001000000010000000000001000000001000000000000001000000000000000010000000010010000001000000000100001000000000100000000000000000100000100000000100000000000100000000010000000000000001000000000010000000000000000100000001000000000010000010000000000100000000001000000000001000000000000010000100000000010000000010000000100000000000000000010000000000000000100000000000000100000000001100000010000000100000001000000000000000100000010000" />
+    <sequence id="language_data_salishan:CoeurdAlene_coeu1236" taxon="CoeurdAlene_coeu1236" value="00010000000001000000000100000001000000000001000000000100000000000000100000000000000001000000001000000001000000000010000100000000010000000000000000000000010000000001000000000010000000001000000000000000100000000001000000000000000010000000100000000000100001000000001000000000000100000000000100000000000010000010000000001000000001000000010000000000000000001000000000000000010000000000000010000000000100000001000000010000000100000000000001000000010000" />
+    <sequence id="language_data_salishan:Columbia-Wenatchi_colu1241" taxon="Columbia-Wenatchi_colu1241" value="010000000001000000000100000000001000000000010000000000100000000000000100000000000000010000000001000000001000000000100000100000000010000000000000000100??????????0001000001000100000000001000000000000000100000000000100000000000000010000000100000000010000000100000000010000000000010000000000010000000000010000010000000010000000001000000001000000000000000001000000000000000001000000000000001000000000010000000100000010000000010000000000000010001001000" />
+    <sequence id="language_data_salishan:Comox_como1259" taxon="Comox_como1259" value="01000000000000000001001000000100000000000000000100000000000001000000000000000100000010000000000000100001000000000100001000000000000000000010000000000000100000000100000000000100000000000000000100000000000010000000000000001000000001000000000000100010000000000001000000010000001000000000001000000000000010000000000100000100000010000000000000001000000000000000000100000000000100000000000000001000010000000100000000100000000000000000100001000000010000" />
+    <sequence id="language_data_salishan:Cowlitz_cowl1242" taxon="Cowlitz_cowl1242" value="00100000000100000000001000000100000000000010000000010000000000000010000000000000000100000000010000000001000000000100010000000000000010000000000000000001000000000101000000000100000000000010000000000000010000000100000000000000000010000010000000000011000000010000001000000000000001000000010000000000000010000001000000010000000000100000000100000000000000000010000000000000000010000000001000000000010000000100000000100000000000100000010001000000010000" />
+    <sequence id="language_data_salishan:Halkomelem_halk1245" taxon="Halkomelem_halk1245" value="01000000000100000000001000100010010000000001000000011000001000000000001000100000000010000000000010000001000000000100001000000000000100000000000010000001001000000001000000000100000000000100000000000001000000000010000100000000000100000000010000000010000100000000001100000000001000000000001000000000000010000100000000010000000010000000100000000100000000000100000000000000000100000000000100000000011000000100000000100000000001000010000001000000010000" />
+    <sequence id="language_data_salishan:Kalispel-PenddOreille_kali1308" taxon="Kalispel-PenddOreille_kali1308" value="00001000000000110000010000000000001000000001000000000001010000000000100100000000000000101000001000000000010000000010000001000000000001001000000000000001000010000001100000000100000000001000000000000000100000000001000000000000000010000000100000000001000000100000001000000000000100000000000001000000000001000010000000010010100010000000010000000000000000000001000000000000000001100000000010000000000001000001000000010000000000010000000001000000001000" />
+    <sequence id="language_data_salishan:Lillooet_lill1248" taxon="Lillooet_lill1248" value="01000000000100000000001000000000000100010000100000000000100000000000000010000000100000010000010000000001000000000010000001000000000000100000000000000000001000000000010000000001000000000001000000000000001001000000010000000000000010000000001000000010000000001000001000000000000010000000000000100000000001000000100000000100000010000000000010000000000000001000000000000000000000100000000000100000010000000100001000001000000000001000000000001000010000" />
+    <sequence id="language_data_salishan:Nooksack_nook1247" taxon="Nooksack_nook1247" value="01000000000000001000001000000000010000000001000000000000000100000001000000100000000010000000000010000000001000100100001000000000000000010000000000000000001000000100000000000100000000010000000000000001000000000000000010000000000100000000010000000010000100000000000100000000001000000000001000000000000010000100000000010000000010000000000000100000000000000000010000000000000100000000000000100000001000000000001000000100000001000000000001000000000100" />
+    <sequence id="language_data_salishan:NorthernLushootseed_lush1252" taxon="NorthernLushootseed_lush1252" value="00000100000100000000000010000010000000000001000000001000000000000000000001000000000100000000000010000001000000000100001000000000000000010000000000000000000100000100000000000100000000000000100000000010000000000000001000000000000100000001010000000010000100000000000100000000001000100000000000010000000010000100000000010000000010000000000001000000010000000000100000000000000000010000000000100000010000000000010000100000000000000100000001000000010000" />
+    <sequence id="language_data_salishan:NorthernStraitsSalish_stra1244" taxon="NorthernStraitsSalish_stra1244" value="01000000000100000000001000000000000010000001001000001000000000100001000000100000000010000000010010000001000000000100001000000000100000000001000000000000100000100110000000000100000000010000001000000001000000000010000000000000000100000001000000000010010100000000000100100010001000000000001000000000000010000100000000010000010010000000100000001000000000000100000000000000000100000000000100000000010100000100000000100000001000000000000000100000010000" />
+    <sequence id="language_data_salishan:Okanagan_okan1243" taxon="Okanagan_okan1243" value="00000010000100000000010000000000100000000001000000000000010000000010000000000000000000001000010000000000010000000010000001000000000000000100000000000000000001000001000000000100000000000000010000000000000100100001000000000000000010000000100000000001000000000100001000000000000100000000000000001000000001000010000000010000000010000000010000000000000000001000000000000000000000100000000001000000000000100001000000001000000000001000000001000000001000" />
+    <sequence id="language_data_salishan:Quinault_quin1251" taxon="Quinault_quin1251" value="00100000000000000100001000000100000000000000010000010000000000000010000000000000000100000000000001000001000000000100010000000000000000000010000000000001000000000100001000000000100000000000001000000010000000000000000001000000000010000010000100000010000100000000000001000000000000010010000000000010001010000000010000010000000010000000000000010000000000000000001000000000000000001000000000010010000100000100000000100000000000000001000001000000010000" />
+    <sequence id="language_data_salishan:Sechelt_sech1246" taxon="Sechelt_sech1246" value="01000000000000000010001000000100000000000010000000000000100010000000000000100100000010000000000000100001000000000100001000000000000000000000100000000001000000000100000000000100000000000001000000000010000000000000000000100000000100000000000010000010000100000000001000000000001000000000001000000000000010000000001000010000000010000000000000001000001000000000000100000000000100000000000000001000010000000100000000100000000000000000100000000100010001" />
+    <sequence id="language_data_salishan:Shuswap_shus1248" taxon="Shuswap_shus1248" value="00000001000000000100000001000000000001000000100000000000100000000000000000001000000010000000010000000001000000000010000001000000000000000000010000000001000000000001000000000100000000000001000000000010000000000000000000010000000010000000000001000001000000000010001000000000000000001000000000000001000001000010000000010000000010000000010000000000000000000000000010001000000000100000000010000000000100000001000000010000000000001000000001000000001000" />
+    <sequence id="language_data_salishan:SouthernPugetSoundSalish_sout2965" taxon="SouthernPugetSoundSalish_sout2965" value="01000100010110000000001010000010000000000001000000001000000000000000000000010000000100000000000010000001000000000100001000000000000000010000000000000000000100000100000000000100000100000000100000010010000000000000001000000000000100000001010000000010000100000000000100000100001000100000000000000100000000100100000000010000000010000000000001000000010000000000100000000000000000010000000000100000010000000000010000100000000000000001001001000000010000" />
+    <sequence id="language_data_salishan:Spokane_spok1245" taxon="Spokane_spok1245" value="00001000000000010000010000000000001000000001000000000000010000000000000000000010000000100000010000001000010000000010000001000000000000000000001000000001000000000001000000000100000000001000000000000000100000000001000000000001000010000000100000000001000000100000001000000000000100000000000001000000000001000010000000000001000010000000010000000000000000000001000000000000000000000100000000000100000001000001000000010000000001010000000001000000000010" />
+    <sequence id="language_data_salishan:Squamish_squa1248" taxon="Squamish_squa1248" value="01000000000100000000001000000000010000000010000000001000000000000000000000100000000010000100000010010000000100000100001000001000000000000000000100001000001000000000000100000000010000000000000010000001000000000000000000000100000100000000000000010010000100000000000100000000001000000000001000000000000010000100000000010000000010000000100000000000000000000000000001000000000100000000000100000000010000000100000000100000000000000001000001000000010000" />
+    <sequence id="language_data_salishan:Thompson_thom1243" taxon="Thompson_thom1243" value="00000000100100000100010000000000000100000000100000000000100000000000000010000000000000010000010000000001000000000010000001000000000000100000000000000001000000000001000000000100000000000001000000000000000001000010000000000000000010000000000000001001000000001000001000000000000010000000000100000000000001000000100000010000000010000000000000000010000000001000000000000000000000100000000010000000000100000000001000010000000000001000000001000000010000" />
+    <sequence id="language_data_salishan:Tillamook_till1254" taxon="Tillamook_till1254" value="0100000000010000000001000100010000000000000000001000000000000001000000000000000100000000001001000000000000001000001000000010000000000001000000000000000000000001000000001010000000100000000000000100001000000000????????????????000000100????????????011000000000000100100000001000000000100000000000000100010000100000000010000000000010000000000000001000100000000000000100000000000000010000100000000011000000000000100000010???????????????001000010010000" />
+    <sequence id="language_data_salishan:Twana_twan1247" taxon="Twana_twan1247" value="01000000000100000000001000000000000000100010000000001000000000000000000000000001000100000000000010000000000001000100000000010000000000000000000001000000000100000000010000000100000000000000000000100010000000000000000000000010000000010000010000000010000100000000000000001000000010000000000000000000010010000000000010010000000000001000000000000000100000000000000000010000000000000001000000001000000100000001000000100000???????????????001000000010000" />
+    <sequence id="language_data_salishan:UpperChehalis_uppe1439" taxon="UpperChehalis_uppe1439" value="00100000000100000000001000000100000000000010000000010000000000000010000000000000000100000000010000000001000000000100010000000001000000000000000000000001000000000010000000000100000000100000000000000010000000000100000000000000001000000010000000000011000100000000001000000000001000000000010000000000000010000100000000010000000010000001000000000000000000100000000000000001000000000000001000000000010000000100000000100000010000000000000001000000010000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:salishan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:salishan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:salishan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:salishan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:salishan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(BellaCoola_bell1243,((Lillooet_lill1248,Shuswap_shus1248,Thompson_thom1243),(CoeurdAlene_coeu1236,Columbia-Wenatchi_colu1241,Okanagan_okan1243,(Kalispel-PenddOreille_kali1308,Spokane_spok1245))),(Tillamook_till1254,(Quinault_quin1251,(Cowlitz_cowl1242,UpperChehalis_uppe1439)),(Comox_como1259,Halkomelem_halk1245,Nooksack_nook1247,Sechelt_sech1246,Squamish_squa1248,Twana_twan1247,(Clallam_clal1241,NorthernStraitsSalish_stra1244),(NorthernLushootseed_lush1252,SouthernPugetSoundSalish_sout2965))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:salishan" name="distribution">
+          <input id="featureClockRateCompound:salishan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:salishan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:salishan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:salishan" beta="@featureClockRateGammaScale:salishan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:salishan" name="distribution" x="@featureClockRateGammaScale:salishan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:salishan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:salishan" name="distribution" x="@covarion_alpha.s:salishan">
+          <Uniform id="CovAlphaUniform:salishan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:salishan" name="distribution" x="@covarion_s.s:salishan">
+          <Gamma id="Gamma.0:salishan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:salishan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:salishan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:salishan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:1pl" spec="SiteModel" mutationRate="@featureClockRate:salishan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:salishan" spec="BinaryCovarion" alpha="@covarion_alpha.s:salishan" switchRate="@covarion_s.s:salishan">
+              <vfrequencies id="salishan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.90 0.10</vfrequencies>
+              <parameter id="salishan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="salishan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_salishan:1pl" spec="FilteredAlignment" data="@data_salishan" filter="1-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:1sg" spec="SiteModel" mutationRate="@featureClockRate:salishan:1sg" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:1sg" spec="FilteredAlignment" data="@data_salishan" filter="11-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:2sg" spec="SiteModel" mutationRate="@featureClockRate:salishan:2sg" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:2sg" spec="FilteredAlignment" data="@data_salishan" filter="21-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:blood" spec="SiteModel" mutationRate="@featureClockRate:salishan:blood" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:blood" spec="FilteredAlignment" data="@data_salishan" filter="28-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:bone" spec="SiteModel" mutationRate="@featureClockRate:salishan:bone" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:bone" spec="FilteredAlignment" data="@data_salishan" filter="41-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:breast" spec="SiteModel" mutationRate="@featureClockRate:salishan:breast" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:breast" spec="FilteredAlignment" data="@data_salishan" filter="50-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:come" spec="SiteModel" mutationRate="@featureClockRate:salishan:come" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:come" spec="FilteredAlignment" data="@data_salishan" filter="65-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:die" spec="SiteModel" mutationRate="@featureClockRate:salishan:die" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:die" spec="FilteredAlignment" data="@data_salishan" filter="82-91" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:dog" spec="SiteModel" mutationRate="@featureClockRate:salishan:dog" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:dog" spec="FilteredAlignment" data="@data_salishan" filter="92-101" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:drink" spec="SiteModel" mutationRate="@featureClockRate:salishan:drink" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:drink" spec="FilteredAlignment" data="@data_salishan" filter="102-111" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:ear" spec="SiteModel" mutationRate="@featureClockRate:salishan:ear" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:ear" spec="FilteredAlignment" data="@data_salishan" filter="112-115" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:eye" spec="SiteModel" mutationRate="@featureClockRate:salishan:eye" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:eye" spec="FilteredAlignment" data="@data_salishan" filter="116-125" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:fire" spec="SiteModel" mutationRate="@featureClockRate:salishan:fire" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:fire" spec="FilteredAlignment" data="@data_salishan" filter="126-149" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:fish" spec="SiteModel" mutationRate="@featureClockRate:salishan:fish" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:fish" spec="FilteredAlignment" data="@data_salishan" filter="150-160" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:full" spec="SiteModel" mutationRate="@featureClockRate:salishan:full" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:full" spec="FilteredAlignment" data="@data_salishan" filter="161-171" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:hand" spec="SiteModel" mutationRate="@featureClockRate:salishan:hand" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:hand" spec="FilteredAlignment" data="@data_salishan" filter="172-180" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:hear" spec="SiteModel" mutationRate="@featureClockRate:salishan:hear" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:hear" spec="FilteredAlignment" data="@data_salishan" filter="181-196" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:horn" spec="SiteModel" mutationRate="@featureClockRate:salishan:horn" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:horn" spec="FilteredAlignment" data="@data_salishan" filter="197-207" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:knee" spec="SiteModel" mutationRate="@featureClockRate:salishan:knee" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:knee" spec="FilteredAlignment" data="@data_salishan" filter="208-224" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:leaf" spec="SiteModel" mutationRate="@featureClockRate:salishan:leaf" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:leaf" spec="FilteredAlignment" data="@data_salishan" filter="225-232" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:liver" spec="SiteModel" mutationRate="@featureClockRate:salishan:liver" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:liver" spec="FilteredAlignment" data="@data_salishan" filter="233-245" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:louse" spec="SiteModel" mutationRate="@featureClockRate:salishan:louse" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:louse" spec="FilteredAlignment" data="@data_salishan" filter="246-250" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:mountain" spec="SiteModel" mutationRate="@featureClockRate:salishan:mountain" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:mountain" spec="FilteredAlignment" data="@data_salishan" filter="251-261" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:name" spec="SiteModel" mutationRate="@featureClockRate:salishan:name" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:name" spec="FilteredAlignment" data="@data_salishan" filter="262-272" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:new" spec="SiteModel" mutationRate="@featureClockRate:salishan:new" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:new" spec="FilteredAlignment" data="@data_salishan" filter="273-283" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:night" spec="SiteModel" mutationRate="@featureClockRate:salishan:night" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:night" spec="FilteredAlignment" data="@data_salishan" filter="284-299" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:nose" spec="SiteModel" mutationRate="@featureClockRate:salishan:nose" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:nose" spec="FilteredAlignment" data="@data_salishan" filter="300-303" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:one" spec="SiteModel" mutationRate="@featureClockRate:salishan:one" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:one" spec="FilteredAlignment" data="@data_salishan" filter="304-313" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:path" spec="SiteModel" mutationRate="@featureClockRate:salishan:path" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:path" spec="FilteredAlignment" data="@data_salishan" filter="314-322" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:person" spec="SiteModel" mutationRate="@featureClockRate:salishan:person" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:person" spec="FilteredAlignment" data="@data_salishan" filter="323-329" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:see" spec="SiteModel" mutationRate="@featureClockRate:salishan:see" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:see" spec="FilteredAlignment" data="@data_salishan" filter="330-348" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:skin" spec="SiteModel" mutationRate="@featureClockRate:salishan:skin" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:skin" spec="FilteredAlignment" data="@data_salishan" filter="349-365" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:star" spec="SiteModel" mutationRate="@featureClockRate:salishan:star" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:star" spec="FilteredAlignment" data="@data_salishan" filter="366-380" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:stone" spec="SiteModel" mutationRate="@featureClockRate:salishan:stone" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:stone" spec="FilteredAlignment" data="@data_salishan" filter="381-391" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:sun" spec="SiteModel" mutationRate="@featureClockRate:salishan:sun" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:sun" spec="FilteredAlignment" data="@data_salishan" filter="392-399" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:tongue" spec="SiteModel" mutationRate="@featureClockRate:salishan:tongue" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:tongue" spec="FilteredAlignment" data="@data_salishan" filter="400-408" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:tooth" spec="SiteModel" mutationRate="@featureClockRate:salishan:tooth" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:tooth" spec="FilteredAlignment" data="@data_salishan" filter="409-415" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:tree" spec="SiteModel" mutationRate="@featureClockRate:salishan:tree" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:tree" spec="FilteredAlignment" data="@data_salishan" filter="416-431" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:two" spec="SiteModel" mutationRate="@featureClockRate:salishan:two" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:two" spec="FilteredAlignment" data="@data_salishan" filter="432-440" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:salishan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.salishan:water" spec="SiteModel" mutationRate="@featureClockRate:salishan:water" proportionInvariant="0" substModel="@covarion.s:salishan" />
+          <data id="feature_data_salishan:water" spec="FilteredAlignment" data="@data_salishan" filter="441-446" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:salishan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:salishan" name="up" />
+      <parameter idref="featureClockRateGammaScale:salishan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:salishan" spec="ScaleOperator" parameter="@covarion_alpha.s:salishan" scaleFactor="0.5" weight="1.0" />
+    <operator id="salishan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:salishan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:salishan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">9 9 6 12 8 14 16 9 9 9 3 9 23 10 10 8 15 10 16 7 12 4 10 10 10 15 3 9 8 6 18 16 14 10 7 8 6 15 8 5</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="salishan.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:salishan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:salishan" />
+      <log idref="covarion_alpha.s:salishan" />
+      <log idref="covarion_s.s:salishan" />
+    </logger>
+    <logger mode="tree" fileName="salishan.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

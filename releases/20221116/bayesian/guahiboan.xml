@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Cuiba_cuib1242,Guahibo_guah1255,Guayabero_guay1257,Macaguan_maca1259,Playero_play1240">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_guahiboan" name="data_guahiboan" dataType="integer">
+    <sequence id="language_data_guahiboan:Cuiba_cuib1242" taxon="Cuiba_cuib1242" value="010001001000010001010001001001001001100100010010001001000001100100100001001001000100100011010010000010000100010000010000010" />
+    <sequence id="language_data_guahiboan:Guahibo_guah1255" taxon="Guahibo_guah1255" value="010001000100010000010001000101100000100100010010000100100000100100010000000101000100100010010001001010010100001000001000010" />
+    <sequence id="language_data_guahiboan:Guayabero_guay1257" taxon="Guayabero_guay1257" value="001001000010001000001000100100100101000010001010100100010000010010001000100101010100100010001000100001000010000100000100001" />
+    <sequence id="language_data_guahiboan:Macaguan_maca1259" taxon="Macaguan_maca1259" value="000101100010000100000101000100010000010001010001000100001000010100000100000101000100010010001000010000100100000010000010001" />
+    <sequence id="language_data_guahiboan:Playero_play1240" taxon="Playero_play1240" value="010001000001000010010001000101000000010100010010000100000100100100000010000100100010001010010010000010010001000001000001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,2sg,bone,come,dog,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,louse,mountain,nose,one,path,person,see,skin,star,sun,tongue,tooth,two,water">
+        <parameter id="featureClockRate:guahiboan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:guahiboan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:guahiboan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:guahiboan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:guahiboan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Guayabero_guay1257,Macaguan_maca1259,(Cuiba_cuib1242,(Guahibo_guah1255,Playero_play1240)));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:guahiboan" name="distribution">
+          <input id="featureClockRateCompound:guahiboan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,2sg,bone,come,dog,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,louse,mountain,nose,one,path,person,see,skin,star,sun,tongue,tooth,two,water">
+              <var idref="featureClockRate:guahiboan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:guahiboan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:guahiboan" beta="@featureClockRateGammaScale:guahiboan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:guahiboan" name="distribution" x="@featureClockRateGammaScale:guahiboan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:guahiboan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:guahiboan" name="distribution" x="@covarion_alpha.s:guahiboan">
+          <Uniform id="CovAlphaUniform:guahiboan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:guahiboan" name="distribution" x="@covarion_s.s:guahiboan">
+          <Gamma id="Gamma.0:guahiboan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:guahiboan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:guahiboan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:guahiboan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:1pl" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:guahiboan" spec="BinaryCovarion" alpha="@covarion_alpha.s:guahiboan" switchRate="@covarion_s.s:guahiboan">
+              <vfrequencies id="guahiboan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.74 0.26</vfrequencies>
+              <parameter id="guahiboan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="guahiboan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_guahiboan:1pl" spec="FilteredAlignment" data="@data_guahiboan" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:2sg" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:2sg" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:2sg" spec="FilteredAlignment" data="@data_guahiboan" filter="5-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:bone" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:bone" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:bone" spec="FilteredAlignment" data="@data_guahiboan" filter="8-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:come" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:come" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:come" spec="FilteredAlignment" data="@data_guahiboan" filter="13-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:dog" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:dog" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:dog" spec="FilteredAlignment" data="@data_guahiboan" filter="19-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:ear" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:ear" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:ear" spec="FilteredAlignment" data="@data_guahiboan" filter="23-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:eye" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:eye" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:eye" spec="FilteredAlignment" data="@data_guahiboan" filter="26-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:fire" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:fire" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:fire" spec="FilteredAlignment" data="@data_guahiboan" filter="29-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:fish" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:fish" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:fish" spec="FilteredAlignment" data="@data_guahiboan" filter="35-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:full" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:full" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:full" spec="FilteredAlignment" data="@data_guahiboan" filter="39-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:hand" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:hand" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:hand" spec="FilteredAlignment" data="@data_guahiboan" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:hear" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:hear" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:hear" spec="FilteredAlignment" data="@data_guahiboan" filter="46-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:horn" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:horn" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:horn" spec="FilteredAlignment" data="@data_guahiboan" filter="50-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:knee" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:knee" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:knee" spec="FilteredAlignment" data="@data_guahiboan" filter="53-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:leaf" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:leaf" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:leaf" spec="FilteredAlignment" data="@data_guahiboan" filter="59-62" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:louse" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:louse" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:louse" spec="FilteredAlignment" data="@data_guahiboan" filter="63-65" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:mountain" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:mountain" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:mountain" spec="FilteredAlignment" data="@data_guahiboan" filter="66-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:nose" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:nose" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:nose" spec="FilteredAlignment" data="@data_guahiboan" filter="74-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:one" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:one" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:one" spec="FilteredAlignment" data="@data_guahiboan" filter="77-80" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:path" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:path" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:path" spec="FilteredAlignment" data="@data_guahiboan" filter="81-83" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:person" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:person" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:person" spec="FilteredAlignment" data="@data_guahiboan" filter="84-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:see" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:see" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:see" spec="FilteredAlignment" data="@data_guahiboan" filter="88-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:skin" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:skin" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:skin" spec="FilteredAlignment" data="@data_guahiboan" filter="91-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:star" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:star" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:star" spec="FilteredAlignment" data="@data_guahiboan" filter="94-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:sun" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:sun" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:sun" spec="FilteredAlignment" data="@data_guahiboan" filter="100-104" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:tongue" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:tongue" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:tongue" spec="FilteredAlignment" data="@data_guahiboan" filter="105-108" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:tooth" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:tooth" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:tooth" spec="FilteredAlignment" data="@data_guahiboan" filter="109-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:two" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:two" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:two" spec="FilteredAlignment" data="@data_guahiboan" filter="115-120" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:guahiboan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.guahiboan:water" spec="SiteModel" mutationRate="@featureClockRate:guahiboan:water" proportionInvariant="0" substModel="@covarion.s:guahiboan" />
+          <data id="feature_data_guahiboan:water" spec="FilteredAlignment" data="@data_guahiboan" filter="121-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:guahiboan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:guahiboan" name="up" />
+      <parameter idref="featureClockRateGammaScale:guahiboan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:guahiboan" spec="ScaleOperator" parameter="@covarion_alpha.s:guahiboan" scaleFactor="0.5" weight="1.0" />
+    <operator id="guahiboan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:guahiboan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,2sg,bone,come,dog,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,louse,mountain,nose,one,path,person,see,skin,star,sun,tongue,tooth,two,water">
+        <parameter idref="featureClockRate:guahiboan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="29" estimate="false">3 2 4 5 3 2 2 5 3 3 2 3 2 5 3 2 7 2 3 2 3 2 2 5 4 3 5 5 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="guahiboan.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,2sg,bone,come,dog,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,louse,mountain,nose,one,path,person,see,skin,star,sun,tongue,tooth,two,water">
+        <log idref="featureClockRate:guahiboan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:guahiboan" />
+      <log idref="covarion_alpha.s:guahiboan" />
+      <log idref="covarion_s.s:guahiboan" />
+    </logger>
+    <logger mode="tree" fileName="guahiboan.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

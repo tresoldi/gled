@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="Jebero_jebe1250" />
+    <taxon id="Shawi_chay1248" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_cahuapanan" name="data_cahuapanan" dataType="integer">
+    <sequence id="language_data_cahuapanan:Jebero_jebe1250" taxon="Jebero_jebe1250" value="11111111111111111" />
+    <sequence id="language_data_cahuapanan:Shawi_chay1248" taxon="Shawi_chay1248" value="00000000000000000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="blood,breast,come,drink,ear,eye,full,hand,hear,horn,leaf,nose,path,person,skin,star,sun">
+        <parameter id="featureClockRate:cahuapanan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:cahuapanan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:cahuapanan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:cahuapanan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:cahuapanan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Jebero_jebe1250,Shawi_chay1248);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:cahuapanan" name="distribution">
+          <input id="featureClockRateCompound:cahuapanan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="blood,breast,come,drink,ear,eye,full,hand,hear,horn,leaf,nose,path,person,skin,star,sun">
+              <var idref="featureClockRate:cahuapanan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:cahuapanan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:cahuapanan" beta="@featureClockRateGammaScale:cahuapanan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:cahuapanan" name="distribution" x="@featureClockRateGammaScale:cahuapanan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:cahuapanan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:cahuapanan" name="distribution" x="@covarion_alpha.s:cahuapanan">
+          <Uniform id="CovAlphaUniform:cahuapanan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:cahuapanan" name="distribution" x="@covarion_s.s:cahuapanan">
+          <Gamma id="Gamma.0:cahuapanan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:cahuapanan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:cahuapanan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:cahuapanan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:blood" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:blood" proportionInvariant="0">
+            <substModel id="covarion.s:cahuapanan" spec="BinaryCovarion" alpha="@covarion_alpha.s:cahuapanan" switchRate="@covarion_s.s:cahuapanan">
+              <vfrequencies id="cahuapanan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.67 0.33</vfrequencies>
+              <parameter id="cahuapanan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="cahuapanan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_cahuapanan:blood" spec="FilteredAlignment" data="@data_cahuapanan" filter="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:breast" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:breast" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:breast" spec="FilteredAlignment" data="@data_cahuapanan" filter="2">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:come" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:come" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:come" spec="FilteredAlignment" data="@data_cahuapanan" filter="3">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:drink" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:drink" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:drink" spec="FilteredAlignment" data="@data_cahuapanan" filter="4">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:ear" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:ear" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:ear" spec="FilteredAlignment" data="@data_cahuapanan" filter="5">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:eye" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:eye" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:eye" spec="FilteredAlignment" data="@data_cahuapanan" filter="6">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:full" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:full" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:full" spec="FilteredAlignment" data="@data_cahuapanan" filter="7">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:hand" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:hand" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:hand" spec="FilteredAlignment" data="@data_cahuapanan" filter="8">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:hear" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:hear" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:hear" spec="FilteredAlignment" data="@data_cahuapanan" filter="9">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:horn" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:horn" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:horn" spec="FilteredAlignment" data="@data_cahuapanan" filter="10">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:leaf" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:leaf" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:leaf" spec="FilteredAlignment" data="@data_cahuapanan" filter="11">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:nose" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:nose" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:nose" spec="FilteredAlignment" data="@data_cahuapanan" filter="12">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:path" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:path" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:path" spec="FilteredAlignment" data="@data_cahuapanan" filter="13">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:person" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:person" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:person" spec="FilteredAlignment" data="@data_cahuapanan" filter="14">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:skin" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:skin" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:skin" spec="FilteredAlignment" data="@data_cahuapanan" filter="15">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:star" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:star" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:star" spec="FilteredAlignment" data="@data_cahuapanan" filter="16">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:cahuapanan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.cahuapanan:sun" spec="SiteModel" mutationRate="@featureClockRate:cahuapanan:sun" proportionInvariant="0" substModel="@covarion.s:cahuapanan" />
+          <data id="feature_data_cahuapanan:sun" spec="FilteredAlignment" data="@data_cahuapanan" filter="17">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:cahuapanan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:cahuapanan" name="up" />
+      <parameter idref="featureClockRateGammaScale:cahuapanan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:cahuapanan" spec="ScaleOperator" parameter="@covarion_alpha.s:cahuapanan" scaleFactor="0.5" weight="1.0" />
+    <operator id="cahuapanan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:cahuapanan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="blood,breast,come,drink,ear,eye,full,hand,hear,horn,leaf,nose,path,person,skin,star,sun">
+        <parameter idref="featureClockRate:cahuapanan:$(rate)" />
+      </plate>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="cahuapanan.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="blood,breast,come,drink,ear,eye,full,hand,hear,horn,leaf,nose,path,person,skin,star,sun">
+        <log idref="featureClockRate:cahuapanan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:cahuapanan" />
+      <log idref="covarion_alpha.s:cahuapanan" />
+      <log idref="covarion_s.s:cahuapanan" />
+    </logger>
+    <logger mode="tree" fileName="cahuapanan.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Dubu_dubu1240,Emumu_emum1240,Karkar-Yuri_kark1258,Towei_towe1240,Yafi_yafi1240">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_pauwasi" name="data_pauwasi" dataType="integer">
+    <sequence id="language_data_pauwasi:Dubu_dubu1240" taxon="Dubu_dubu1240" value="0100010000010000001000001000001000000100000001000000100000010000001000000100001000???0???010000100???0100000100100100010000000100000010000100000100001000001000001001000000010000010001000001001000001000000010000000010001000000" />
+    <sequence id="language_data_pauwasi:Emumu_emum1240" taxon="Emumu_emum1240" value="0110001000001100000110000110000100000011000000100000011000001100000110000011000100???0100001100000???0011000010010010001100000010000001100010000011000110000100000100110000001000010000110000100110000110000001100010001000110000" />
+    <sequence id="language_data_pauwasi:Karkar-Yuri_kark1258" taxon="Karkar-Yuri_kark1258" value="0???00100100000110001000001000000101000001110000111001010100010010001011000010010011101100000110101110000010010010011000101010010101000100010110????00001000110100100000101001001010000110000100001000100011000001101001000100101" />
+    <sequence id="language_data_pauwasi:Towei_towe1240" taxon="Towei_towe1240" value="010000001000001000000010000010000010010000000??????0000010000001000001000100000010???0001010000000???0000010100??0100000000100000010000010?????010000000010000100??00000010000010000100000100100000100000100010000000000100000010" />
+    <sequence id="language_data_pauwasi:Yafi_yafi1240" taxon="Yafi_yafi1240" value="00010001000??????00001000001000010000000100000010000??????00001000001000001000???0???0100010000000???0000100010??0010000010000001000001000001000000100001000100000100001000000100001000001000100100000001000000010000001000001000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:pauwasi:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:pauwasi" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:pauwasi" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:pauwasi" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:pauwasi" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((Dubu_dubu1240,Towei_towe1240),(Emumu_emum1240,Karkar-Yuri_kark1258,Yafi_yafi1240));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:pauwasi" name="distribution">
+          <input id="featureClockRateCompound:pauwasi" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:pauwasi:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:pauwasi" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:pauwasi" beta="@featureClockRateGammaScale:pauwasi" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:pauwasi" name="distribution" x="@featureClockRateGammaScale:pauwasi">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:pauwasi" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:pauwasi" name="distribution" x="@covarion_alpha.s:pauwasi">
+          <Uniform id="CovAlphaUniform:pauwasi" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:pauwasi" name="distribution" x="@covarion_s.s:pauwasi">
+          <Gamma id="Gamma.0:pauwasi" name="distr">
+            <parameter id="covarion_switch_gamma_param1:pauwasi" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:pauwasi" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:pauwasi:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:1pl" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:pauwasi" spec="BinaryCovarion" alpha="@covarion_alpha.s:pauwasi" switchRate="@covarion_s.s:pauwasi">
+              <vfrequencies id="pauwasi:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.79 0.21</vfrequencies>
+              <parameter id="pauwasi:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="pauwasi:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_pauwasi:1pl" spec="FilteredAlignment" data="@data_pauwasi" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:1sg" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:1sg" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:1sg" spec="FilteredAlignment" data="@data_pauwasi" filter="5-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:2sg" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:2sg" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:2sg" spec="FilteredAlignment" data="@data_pauwasi" filter="11-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:blood" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:blood" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:blood" spec="FilteredAlignment" data="@data_pauwasi" filter="18-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:bone" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:bone" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:bone" spec="FilteredAlignment" data="@data_pauwasi" filter="24-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:come" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:come" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:come" spec="FilteredAlignment" data="@data_pauwasi" filter="30-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:die" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:die" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:die" spec="FilteredAlignment" data="@data_pauwasi" filter="37-44" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:dog" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:dog" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:dog" spec="FilteredAlignment" data="@data_pauwasi" filter="45-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:drink" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:drink" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:drink" spec="FilteredAlignment" data="@data_pauwasi" filter="52-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:ear" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:ear" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:ear" spec="FilteredAlignment" data="@data_pauwasi" filter="59-65" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:eye" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:eye" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:eye" spec="FilteredAlignment" data="@data_pauwasi" filter="66-72" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:fire" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:fire" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:fire" spec="FilteredAlignment" data="@data_pauwasi" filter="73-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:fish" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:fish" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:fish" spec="FilteredAlignment" data="@data_pauwasi" filter="78-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:full" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:full" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:full" spec="FilteredAlignment" data="@data_pauwasi" filter="82-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:hand" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:hand" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:hand" spec="FilteredAlignment" data="@data_pauwasi" filter="86-89" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:hear" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:hear" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:hear" spec="FilteredAlignment" data="@data_pauwasi" filter="90-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:horn" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:horn" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:horn" spec="FilteredAlignment" data="@data_pauwasi" filter="98-101" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:knee" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:knee" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:knee" spec="FilteredAlignment" data="@data_pauwasi" filter="102-107" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:leaf" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:leaf" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:leaf" spec="FilteredAlignment" data="@data_pauwasi" filter="108-110" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:liver" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:liver" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:liver" spec="FilteredAlignment" data="@data_pauwasi" filter="111-113" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:louse" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:louse" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:louse" spec="FilteredAlignment" data="@data_pauwasi" filter="114-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:mountain" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:mountain" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:mountain" spec="FilteredAlignment" data="@data_pauwasi" filter="118-125" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:name" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:name" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:name" spec="FilteredAlignment" data="@data_pauwasi" filter="126-132" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:new" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:new" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:new" spec="FilteredAlignment" data="@data_pauwasi" filter="133-137" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:night" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:night" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:night" spec="FilteredAlignment" data="@data_pauwasi" filter="138-143" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:nose" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:nose" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:nose" spec="FilteredAlignment" data="@data_pauwasi" filter="144-148" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:one" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:one" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:one" spec="FilteredAlignment" data="@data_pauwasi" filter="149-154" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:path" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:path" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:path" spec="FilteredAlignment" data="@data_pauwasi" filter="155-160" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:person" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:person" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:person" spec="FilteredAlignment" data="@data_pauwasi" filter="161-163" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:see" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:see" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:see" spec="FilteredAlignment" data="@data_pauwasi" filter="164-171" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:skin" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:skin" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:skin" spec="FilteredAlignment" data="@data_pauwasi" filter="172-177" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:star" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:star" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:star" spec="FilteredAlignment" data="@data_pauwasi" filter="178-181" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:stone" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:stone" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:stone" spec="FilteredAlignment" data="@data_pauwasi" filter="182-187" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:sun" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:sun" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:sun" spec="FilteredAlignment" data="@data_pauwasi" filter="188-190" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:tongue" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:tongue" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:tongue" spec="FilteredAlignment" data="@data_pauwasi" filter="191-196" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:tooth" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:tooth" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:tooth" spec="FilteredAlignment" data="@data_pauwasi" filter="197-204" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:tree" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:tree" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:tree" spec="FilteredAlignment" data="@data_pauwasi" filter="205-213" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:two" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:two" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:two" spec="FilteredAlignment" data="@data_pauwasi" filter="214-217" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:pauwasi:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.pauwasi:water" spec="SiteModel" mutationRate="@featureClockRate:pauwasi:water" proportionInvariant="0" substModel="@covarion.s:pauwasi" />
+          <data id="feature_data_pauwasi:water" spec="FilteredAlignment" data="@data_pauwasi" filter="218-225" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:pauwasi" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:pauwasi" name="up" />
+      <parameter idref="featureClockRateGammaScale:pauwasi" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:pauwasi" spec="ScaleOperator" parameter="@covarion_alpha.s:pauwasi" scaleFactor="0.5" weight="1.0" />
+    <operator id="pauwasi:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:pauwasi" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:pauwasi:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="39" estimate="false">3 5 6 5 5 6 7 6 6 6 6 4 3 3 3 7 3 5 2 2 3 7 6 4 5 4 5 5 2 7 5 3 5 2 5 7 8 3 7</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="pauwasi.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:pauwasi:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:pauwasi" />
+      <log idref="covarion_alpha.s:pauwasi" />
+      <log idref="covarion_s.s:pauwasi" />
+    </logger>
+    <logger mode="tree" fileName="pauwasi.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>
