@@ -247,6 +247,13 @@ def main():
 
     # Get the glottocode mapping, roots, and trees
     glottomap = get_mapping(languoids)
+    with open(BAYES_PATH / "glottomap.tsv", "w", encoding="utf-8") as handler:
+        handler.write("Glottocode\tDoculect\n")
+        for key, value in sorted(glottomap.items()):
+            handler.write(key)
+            handler.write("\t")
+            handler.write(value)
+            handler.write("\n")
     roots = get_roots(glottomap, languoids)
     trees = get_trees(roots, languoids, glottolog)
     for root, newick in trees.items():
