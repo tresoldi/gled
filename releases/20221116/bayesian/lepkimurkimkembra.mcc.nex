@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Lepki_lepk1238
+			Murkim_murk1238
+			;
+End;
+Begin trees;
+	Translate
+		   1 Lepki_lepk1238,
+		   2 Murkim_murk1238
+;
+tree TREE1 = (1[&height=0.0,length=9.357913457308516,length_95%_HPD={0.4378,53.2037},length_median=1.9367,length_range={0.337,182.6483},rate=0.9983027394521106,rate_95%_HPD={0.6918,1.2554},rate_median=1.0048,rate_range={0.1467,1.2554}]:9.357913457308516,2[&height=0.0,length=9.357913457308516,length_95%_HPD={0.4378,53.2037},length_median=1.9367,length_range={0.337,182.6483},rate=0.9966160167966429,rate_95%_HPD={0.6793,1.2554},rate_median=1.005,rate_range={0.1467,1.2554}]:9.357913457308516)[&CAheight_95%_HPD={0.4378,53.2037},CAheight_mean=9.357913457308516,CAheight_median=1.9367,CAheight_range={0.337,182.6483},height=9.357913457308516,height_95%_HPD={0.4378,53.2037},height_median=1.9367,height_range={0.337,182.6483},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

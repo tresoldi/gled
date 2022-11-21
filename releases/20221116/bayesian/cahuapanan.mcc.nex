@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Jebero_jebe1250
+			Shawi_chay1248
+			;
+End;
+Begin trees;
+	Translate
+		   1 Jebero_jebe1250,
+		   2 Shawi_chay1248
+;
+tree TREE1 = (1[&height=0.0,length=4.9042527094581425,length_95%_HPD={0.2481,15.749},length_median=1.4134,length_range={0.2481,242.1843},rate=0.9917348730253941,rate_95%_HPD={0.6614,1.2554},rate_median=1.0003,rate_range={0.1028,1.2554}]:4.9042527094581425,2[&height=0.0,length=4.9042527094581425,length_95%_HPD={0.2481,15.749},length_median=1.4134,length_range={0.2481,242.1843},rate=0.9939217556488678,rate_95%_HPD={0.6622,1.2554},rate_median=1.0002,rate_range={0.0827,1.2554}]:4.9042527094581425)[&CAheight_95%_HPD={0.2481,15.749},CAheight_mean=4.9042527094581425,CAheight_median=1.4134,CAheight_range={0.2481,242.1843},height=4.9042527094581425,height_95%_HPD={0.2481,15.749},height_median=1.4134,height_range={0.2481,242.1843},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

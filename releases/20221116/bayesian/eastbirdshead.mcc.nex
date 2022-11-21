@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Meyah_meya1236
+			Sougb_mani1235
+			;
+End;
+Begin trees;
+	Translate
+		   1 Meyah_meya1236,
+		   2 Sougb_mani1235
+;
+tree TREE1 = (1[&height=0.0,length=3.3573583083383216,length_95%_HPD={0.6061,9.9847},length_median=1.8807,length_range={0.5787,59.372},rate=0.9934164767046565,rate_95%_HPD={0.7058,1.2554},rate_median=1.0014,rate_range={0.1354,1.2554}]:3.3573583083383216,2[&height=0.0,length=3.3573583083383216,length_95%_HPD={0.6061,9.9847},length_median=1.8807,length_range={0.5787,59.372},rate=0.9940616076784655,rate_95%_HPD={0.7227,1.2554},rate_median=1.0016,rate_range={0.1354,1.2554}]:3.3573583083383216)[&CAheight_95%_HPD={0.6061,9.9847},CAheight_mean=3.3573583083383216,CAheight_median=1.8807,CAheight_range={0.5787,59.372},height=3.3573583083383216,height_95%_HPD={0.6061,9.9847},height_median=1.8807,height_range={0.5787,59.372},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

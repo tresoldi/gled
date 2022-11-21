@@ -250,7 +250,7 @@ def main():
     with open(TREES_PATH / "global.tree", "w") as handler:
         handler.write(global_tree.write(format=1))
 
-    get_distances(family_trees)
+    #get_distances(family_trees)
 
 
 if __name__ == "__main__":

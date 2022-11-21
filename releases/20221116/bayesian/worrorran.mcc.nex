@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Ngarinyin_ngar1284
+			Worrorra_worr1237
+			;
+End;
+Begin trees;
+	Translate
+		   1 Ngarinyin_ngar1284,
+		   2 Worrorra_worr1237
+;
+tree TREE1 = (1[&height=0.0,length=4.283624355128983,length_95%_HPD={0.458,12.2238},length_median=2.1174,length_range={0.3996,134.5635},rate=0.99079936012797,rate_95%_HPD={0.6067,1.2554},rate_median=1.0006,rate_range={0.0878,1.2554}]:4.283624355128983,2[&height=0.0,length=4.283624355128983,length_95%_HPD={0.458,12.2238},length_median=2.1174,length_range={0.3996,134.5635},rate=0.9901179364127155,rate_95%_HPD={0.6052,1.2554},rate_median=1.0007,rate_range={0.0878,1.2554}]:4.283624355128983)[&CAheight_95%_HPD={0.458,12.2238},CAheight_mean=4.283624355128983,CAheight_median=2.1174,CAheight_range={0.3996,134.5635},height=4.283624355128983,height_95%_HPD={0.458,12.2238},height_median=2.1174,height_range={0.3996,134.5635},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

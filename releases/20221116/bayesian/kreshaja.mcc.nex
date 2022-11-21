@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			AjaSouthSudan_ajas1235
+			Kresh-Woro_gbay1288
+			;
+End;
+Begin trees;
+	Translate
+		   1 AjaSouthSudan_ajas1235,
+		   2 Kresh-Woro_gbay1288
+;
+tree TREE1 = (1[&height=0.0,length=3.9042992201559503,length_95%_HPD={0.6858,13.0348},length_median=2.4138,length_range={0.5296,52.7273},rate=0.9974286142771507,rate_95%_HPD={0.725,1.2549},rate_median=1.0029,rate_range={0.1673,1.2554}]:3.9042992201559503,2[&height=0.0,length=3.9042992201559503,length_95%_HPD={0.6858,13.0348},length_median=2.4138,length_range={0.5296,52.7273},rate=0.999892941411725,rate_95%_HPD={0.7283,1.2549},rate_median=1.0026,rate_range={0.1673,1.2554}]:3.9042992201559503)[&CAheight_95%_HPD={0.6858,13.0348},CAheight_mean=3.9042992201559503,CAheight_median=2.4138,CAheight_range={0.5296,52.7273},height=3.9042992201559503,height_95%_HPD={0.6858,13.0348},height_median=2.4138,height_range={0.5296,52.7273},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			NorthernYukaghir_nort2745
+			SouthernYukaghir_sout2750
+			;
+End;
+Begin trees;
+	Translate
+		   1 NorthernYukaghir_nort2745,
+		   2 SouthernYukaghir_sout2750
+;
+tree TREE1 = (1[&height=0.0,length=5.98292153569286,length_95%_HPD={0.6089,21.3235},length_median=2.9041,length_range={0.5775,135.0112},rate=0.9927665466906631,rate_95%_HPD={0.7126,1.2554},rate_median=1.0001,rate_range={0.1407,1.2554}]:5.98292153569286,2[&height=0.0,length=5.98292153569286,length_95%_HPD={0.6089,21.3235},length_median=2.9041,length_range={0.5775,135.0112},rate=0.9901838432313562,rate_95%_HPD={0.7037,1.2554},rate_median=1.0003,rate_range={0.1407,1.2554}]:5.98292153569286)[&CAheight_95%_HPD={0.6089,21.3235},CAheight_mean=5.98292153569286,CAheight_median=2.9041,CAheight_range={0.5775,135.0112},height=5.98292153569286,height_95%_HPD={0.6089,21.3235},height_median=2.9041,height_range={0.5775,135.0112},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

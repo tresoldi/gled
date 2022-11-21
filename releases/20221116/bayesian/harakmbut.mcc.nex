@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Amarakaeri_amar1274
+			Huachipaeri_huac1244
+			;
+End;
+Begin trees;
+	Translate
+		   1 Amarakaeri_amar1274,
+		   2 Huachipaeri_huac1244
+;
+tree TREE1 = (1[&height=0.0,length=7.397607218556281,length_95%_HPD={0.2799,26.9148},length_median=1.6036,length_range={0.2799,593.137},rate=0.987527014597079,rate_95%_HPD={0.667,1.2554},rate_median=1.0032,rate_range={0.0524,1.2554}]:7.397607218556281,2[&height=0.0,length=7.397607218556281,length_95%_HPD={0.2799,26.9148},length_median=1.6036,length_range={0.2799,593.137},rate=0.9870708658268319,rate_95%_HPD={0.6768,1.2554},rate_median=1.0023,rate_range={0.1354,1.2554}]:7.397607218556281)[&CAheight_95%_HPD={0.2799,26.9148},CAheight_mean=7.397607218556281,CAheight_median=1.6036,CAheight_range={0.2799,593.137},height=7.397607218556281,height_95%_HPD={0.2799,26.9148},height_median=1.6036,height_range={0.2799,593.137},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

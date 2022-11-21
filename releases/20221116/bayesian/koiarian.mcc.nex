@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Ese_esee1247
+			GrassKoiari_gras1249
+			;
+End;
+Begin trees;
+	Translate
+		   1 Ese_esee1247,
+		   2 GrassKoiari_gras1249
+;
+tree TREE1 = (1[&height=0.0,length=3.990029294141185,length_95%_HPD={0.5265,11.6859},length_median=2.0852,length_range={0.4661,74.9398},rate=0.9922002199560077,rate_95%_HPD={0.679,1.2554},rate_median=1.0001,rate_range={0.0621,1.2554}]:3.990029294141185,2[&height=0.0,length=3.990029294141185,length_95%_HPD={0.5265,11.6859},length_median=2.0852,length_range={0.4661,74.9398},rate=0.9900777844431088,rate_95%_HPD={0.6789,1.2553},rate_median=1.0001,rate_range={0.0621,1.2554}]:3.990029294141185)[&CAheight_95%_HPD={0.5265,11.6859},CAheight_mean=3.990029294141185,CAheight_median=2.0852,CAheight_range={0.4661,74.9398},height=3.990029294141185,height_95%_HPD={0.5265,11.6859},height_median=2.0852,height_range={0.4661,74.9398},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

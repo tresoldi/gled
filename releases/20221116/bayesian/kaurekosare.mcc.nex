@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Kaure-Narau_kaur1271
+			Kosadle_kosa1251
+			;
+End;
+Begin trees;
+	Translate
+		   1 Kaure-Narau_kaur1271,
+		   2 Kosadle_kosa1251
+;
+tree TREE1 = (1[&height=0.0,length=5.17289474105177,length_95%_HPD={0.6448,17.9507},length_median=2.4454,length_range={0.6214,110.4317},rate=0.9971646870625865,rate_95%_HPD={0.6256,1.2554},rate_median=1.0053,rate_range={0.2194,1.2554}]:5.17289474105177,2[&height=0.0,length=5.17289474105177,length_95%_HPD={0.6448,17.9507},length_median=2.4454,length_range={0.6214,110.4317},rate=0.9957896020795839,rate_95%_HPD={0.6448,1.2554},rate_median=1.0046,rate_range={0.2194,1.2554}]:5.17289474105177)[&CAheight_95%_HPD={0.6448,17.9507},CAheight_mean=5.17289474105177,CAheight_median=2.4454,CAheight_range={0.6214,110.4317},height=5.17289474105177,height_95%_HPD={0.6448,17.9507},height_median=2.4454,height_range={0.6214,110.4317},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

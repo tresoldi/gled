@@ -1,0 +1,18 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=3;
+		Taxlabels
+			Pei_peii1238
+			Tuwari_tuwa1242
+			Walio_nucl1453
+			;
+End;
+Begin trees;
+	Translate
+		   1 Pei_peii1238,
+		   2 Tuwari_tuwa1242,
+		   3 Walio_nucl1453
+;
+tree TREE1 = ((1[&CAheight_95%_HPD={0.0,1.0000000000021103E-4},CAheight_mean=1.4497100580217136E-5,CAheight_median=0.0,CAheight_range={0.0,1.0000000003174137E-4},height=1.4497100580217136E-5,height_95%_HPD={0.0,1.0000000000021103E-4},height_median=0.0,height_range={0.0,1.0000000003174137E-4},length=7.8993875024995255,length_95%_HPD={0.30239999999999995,31.385599999999997},length_median=1.9657000000000004,length_range={0.2704,247.74130000000002},rate=1.0114995200959793,rate_95%_HPD={0.4686,1.6034},rate_median=1.0006,rate_range={0.0352,1.938}]:7.899387502499505,3[&CAheight_95%_HPD={0.0,1.0000000000021103E-4},CAheight_mean=1.4497100580217136E-5,CAheight_median=0.0,CAheight_range={0.0,1.0000000003174137E-4},height=1.4497100580217136E-5,height_95%_HPD={0.0,1.0000000000021103E-4},height_median=0.0,height_range={0.0,1.0000000003174137E-4},length=7.8993875024995255,length_95%_HPD={0.30239999999999995,31.385599999999997},length_median=1.9657000000000004,length_range={0.2704,247.74130000000002},rate=1.0079221955608852,rate_95%_HPD={0.4036,1.4915},rate_median=1.0002,rate_range={0.1245,1.938}]:7.899387502499505)[&CAheight_95%_HPD={0.30239999999999995,31.385599999999997},CAheight_mean=7.8994019996000855,CAheight_median=1.9657000000000004,CAheight_range={0.2704,247.74130000000002},height=7.8994019996000855,height_95%_HPD={0.30239999999999995,31.385599999999997},height_median=1.9657000000000004,height_range={0.2704,247.74130000000002},length=9.124235812837421,length_95%_HPD={0.3492,36.2521},length_median=2.2704,length_range={0.3123,286.155},posterior=1.0,rate=0.9929099980004015,rate_95%_HPD={0.4686,1.6034},rate_median=0.9998,rate_range={0.0291,1.938}]:9.124235812837414,2[&CAheight_95%_HPD={0.0,9.999999999998899E-5},CAheight_mean=1.4057188562375594E-5,CAheight_median=0.0,CAheight_range={0.0,1.0000000000331966E-4},height=1.4057188562375594E-5,height_95%_HPD={0.0,9.999999999998899E-5},height_median=0.0,height_range={0.0,1.0000000000331966E-4},length=17.023623755248966,length_95%_HPD={0.6516,67.6377},length_median=4.2361,length_range={0.5827,533.8963},rate=0.993897140571886,rate_95%_HPD={0.3873,1.4979},rate_median=1.0,rate_range={0.0291,1.938}]:17.023623755248938)[&CAheight_95%_HPD={0.6516,67.6377},CAheight_mean=17.0236378124375,CAheight_median=4.2361,CAheight_range={0.5827,533.8963},height=17.0236378124375,height_95%_HPD={0.6516,67.6377},height_median=4.2361,height_range={0.5827,533.8963},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

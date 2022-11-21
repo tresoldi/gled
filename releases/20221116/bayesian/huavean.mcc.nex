@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			SanFranciscodelMarHuave_sanf1258
+			SanMateodelMarHuave_sanm1287
+			;
+End;
+Begin trees;
+	Translate
+		   1 SanFranciscodelMarHuave_sanf1258,
+		   2 SanMateodelMarHuave_sanm1287
+;
+tree TREE1 = (1[&height=0.0,length=5.834820835832844,length_95%_HPD={0.2536,26.5147},length_median=1.7934,length_range={0.2345,157.4718},rate=0.9786155368926194,rate_95%_HPD={0.5308,1.2554},rate_median=1.0033,rate_range={0.1137,1.2554}]:5.834820835832844,2[&height=0.0,length=5.834820835832844,length_95%_HPD={0.2536,26.5147},length_median=1.7934,length_range={0.2345,157.4718},rate=0.9803290141971582,rate_95%_HPD={0.5332,1.2554},rate_median=1.0033,rate_range={0.1137,1.2554}]:5.834820835832844)[&CAheight_95%_HPD={0.2536,26.5147},CAheight_mean=5.834820835832844,CAheight_median=1.7934,CAheight_range={0.2345,157.4718},height=5.834820835832844,height_95%_HPD={0.2536,26.5147},height_median=1.7934,height_range={0.2345,157.4718},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;
