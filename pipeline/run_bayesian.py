@@ -124,17 +124,27 @@ def collect_global_tree(family_distances, BAYES_PATH, OUTPUT_PATH):
     # Rescale the trees in `trees` so that their biggest distance
     # matches the one in `family_distances` (in order to later have
     # all at the same distances from the dummy root)
+    family_depth = {}
     for family, tree in trees.items():
-        bayes_dist = max_dist[family]
-        nj_dist = family_distances[family]
-        print(family, bayes_dist, nj_dist)
+        if family in family_distances:
+            # Compute the correction factor and apply it to the
+            # entire tree
+            corr = family_distances[family] / max_dist[family]
+        else:
+            corr = max(family_distances.values()) / max_dist[family]
+
+        for node in tree.traverse():
+            node.dist = node.dist * corr
+
+        family_depth[family] = max(
+            [tree.get_distance(leaf) for leaf in tree.get_leaves()]
+        )
 
     # Build global tree
     # TODO: missing isolates
     global_tree = Tree()
-    global_max_dist = max(max_dist.values())
     for family, tree in trees.items():
-        global_tree.add_child(tree, dist=global_max_dist - max_dist[family])
+        global_tree.add_child(tree, dist=2.0 - family_depth[family])
 
     return global_tree, trees
 
@@ -243,14 +253,14 @@ def main():
     distances = collect_distances(BAYES_PATH, PHYLO_PATH)
 
     # Run the inference for all trees
-    run_inference(BAYES_PATH, languoids)
+    # run_inference(BAYES_PATH, languoids)
 
     # Build the global tree
     global_tree, family_trees = collect_global_tree(distances, BAYES_PATH, TREES_PATH)
     with open(TREES_PATH / "global.tree", "w") as handler:
         handler.write(global_tree.write(format=1))
 
-    #get_distances(family_trees)
+    # get_distances(family_trees)
 
 
 if __name__ == "__main__":
