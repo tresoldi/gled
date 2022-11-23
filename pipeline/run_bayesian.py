@@ -5,12 +5,13 @@ Run Bayesian analyses and collect results.
 """
 
 # Import Python standard libraries
-from pathlib import Path
 from collections import defaultdict
-import itertools
-import glob
+from pathlib import Path
 import csv
+import glob
+import itertools
 import logging
+import random
 import re
 import subprocess
 
@@ -97,7 +98,7 @@ def extract_tree(nexus):
     return tree
 
 
-def collect_global_tree(family_distances, BAYES_PATH, OUTPUT_PATH):
+def collect_global_tree(family_distances, languoids, BAYES_PATH, OUTPUT_PATH):
     """
     Collect all trees into a single, global tree.
     """
@@ -140,13 +141,42 @@ def collect_global_tree(family_distances, BAYES_PATH, OUTPUT_PATH):
             [tree.get_distance(leaf) for leaf in tree.get_leaves()]
         )
 
-    # Build global tree
-    # TODO: missing isolates
-    global_tree = Tree()
-    for family, tree in trees.items():
-        global_tree.add_child(tree, dist=2.0 - family_depth[family])
+    # Build global tree; in order to have the resulting tree without
+    # all isolates together, we first collect all families (including isolates),
+    # shuffle, and finally add to the global tree
+    final_trees = []
 
-    return global_tree, trees
+    for family, tree in trees.items():
+        final_trees.append([tree, 2.0 - family_depth[family]])
+
+    # Add all language isolates from Glottolog that are in our database
+    isolates_glottolog = [
+        glottocode for glottocode in languoids if languoids[glottocode].isolate
+    ]
+    with open(OUTPUT_PATH.parent / "gled.tsv", encoding="utf-8") as handler:
+        isolates_gled = sorted(
+            set(
+                [
+                    "%s_%s"
+                    % (
+                        common.slug(row["GLOTTOLOG_NAME"], level="simple"),
+                        row["GLOTTOCODE"],
+                    )
+                    for row in csv.DictReader(handler, delimiter="\t")
+                    if row["GLOTTOCODE"] in isolates_glottolog
+                ]
+            )
+        )
+    for lang in isolates_gled:
+        final_trees.append([Tree(name=lang), 2.0])
+
+    random.seed("gled")
+    random.shuffle(final_trees)
+    global_tree = Tree()
+    for tree, dist in final_trees:
+        global_tree.add_child(tree, dist=dist)
+
+    return global_tree
 
 
 def get_distances(family_trees):
@@ -167,9 +197,6 @@ def get_distances(family_trees):
                 deepest = dist
 
         print(family, deepest)
-
-    # for k, v in distances.items():
-    #    print(k, v)
 
 
 def dst2dict(filename):
@@ -256,11 +283,11 @@ def main():
     # run_inference(BAYES_PATH, languoids)
 
     # Build the global tree
-    global_tree, family_trees = collect_global_tree(distances, BAYES_PATH, TREES_PATH)
+    global_tree = collect_global_tree(distances, languoids, BAYES_PATH, TREES_PATH)
     with open(TREES_PATH / "global.tree", "w") as handler:
         handler.write(global_tree.write(format=1))
 
-    # get_distances(family_trees)
+    # get_distances(global_tree)
 
 
 if __name__ == "__main__":
