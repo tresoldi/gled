@@ -179,24 +179,30 @@ def collect_global_tree(family_distances, languoids, BAYES_PATH, OUTPUT_PATH):
     return global_tree
 
 
-def get_distances(family_trees):
-    logging.info("Collecting distances from Bayesian trees")
+def get_distances(global_tree, OUTPUT_PATH):
+    logging.info("Collecting distances from Bayesian global tree")
 
+    # Collect pairwise distances between leaves and deepest leaf instance
     distances = {}
-    for family, tree in family_trees.items():
+    leaves = global_tree.get_leaves()
+    for lang1, lang2 in itertools.combinations_with_replacement(leaves, 2):
+        dist = lang1.get_distance(lang2)
+        distances[lang1.name, lang2.name] = dist
+        distances[lang2.name, lang1.name] = dist
 
-        # Collect pairwise distances between leaves and deepest leaf instance
-        leaves = tree.get_leaves()
-        for lang1, lang2 in itertools.combinations_with_replacement(leaves, 2):
-            distances[lang1.name, lang2.name] = lang1.get_distance(lang2)
+    # Build the matrix and write
+    with open(OUTPUT_PATH / "global.dst", "w", encoding="utf-8") as handler:
+        handler.write(" %i\n" % len(leaves))
+        lang_names = sorted([leaf.name for leaf in leaves])
+        for lang1 in lang_names:
+            lang_vector = []
+            for lang2 in lang_names:
+                lang_vector.append("%.6f" % distances[lang1, lang2])
 
-        deepest = 0.0
-        for leaf in leaves:
-            dist = tree.get_distance(leaf)
-            if dist > deepest:
-                deepest = dist
-
-        print(family, deepest)
+            handler.write(lang1)
+            handler.write(" ")
+            handler.write(" ".join(lang_vector))
+            handler.write("\n")
 
 
 def dst2dict(filename):
@@ -280,14 +286,14 @@ def main():
     distances = collect_distances(BAYES_PATH, PHYLO_PATH)
 
     # Run the inference for all trees
-    # run_inference(BAYES_PATH, languoids)
+    run_inference(BAYES_PATH, languoids)
 
     # Build the global tree
     global_tree = collect_global_tree(distances, languoids, BAYES_PATH, TREES_PATH)
     with open(TREES_PATH / "global.tree", "w") as handler:
         handler.write(global_tree.write(format=1))
 
-    # get_distances(global_tree)
+    get_distances(global_tree, BAYES_PATH.parent)
 
 
 if __name__ == "__main__":
