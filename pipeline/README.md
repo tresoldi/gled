@@ -49,3 +49,10 @@ be set at the top):
 ```bash
 $ pipeline/run_bayesian.py
 ```
+
+A stand-alone script can now be used
+to generate the plots and images for the paper and for the README:
+
+```bash
+$ pipeline/build_figures.py
+```
