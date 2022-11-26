@@ -1,7 +1,7 @@
 # A Global Lexical Dataset (GLED) with cognate annotation and phonological alignments
 
 
-[![Release](https://img.shields.io/badge/Release-20221116-informational)](https://img.shields.io/badge/Release-20221116-informational)
+[![Release](https://img.shields.io/badge/Release-20221127-informational)](https://img.shields.io/badge/Release-20221127-informational)
 [![Lemmas](https://img.shields.io/badge/Lemmas-262859-success)](https://img.shields.io/badge/Lemmas-262859-success)
 [![Languages](https://img.shields.io/badge/Languages-6572-success)](https://img.shields.io/badge/Languages-6572-success)
 [![Families](https://img.shields.io/badge/Families-344-success)](https://img.shields.io/badge/Families-344-success)
@@ -15,7 +15,7 @@
 ## Statistics
 
 
-The 20221116 release comprises:
+The 20221127 release comprises:
 
   - Entries: 262859
   - Doculects: 6572
