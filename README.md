@@ -1,4 +1,4 @@
-# A Global Lexical Dataset (GLED) with cognate annotation and phonological alignments
+# A Global Lexical Database (GLED) with cognate annotation and phonological alignments
 
 
 [![Release](https://img.shields.io/badge/Release-20221127-informational)](https://img.shields.io/badge/Release-20221127-informational)
@@ -163,15 +163,15 @@ establish additional restrictions on the derivative work.
 
 ## Author and citation
 
-The dataset is developed by Tiago Tresoldi (tiago.tresoldi@lingfil.uu.se).
+The database is developed by Tiago Tresoldi (tiago.tresoldi@lingfil.uu.se).
 During its development, the author received funding from
 [Cultural Evolution of Texts](https://github.com/evotext/)
 project ([Riksbankens Jubileumsfond](https://www.rj.se/), grant agreement ID:
 [MXM19-1087:1](https://www.rj.se/en/anslag/2019/cultural-evolution-of-texts/)).
 
-If you use this dataset, please cite it as:
+If you use this database, please cite it as:
 
-> Tresoldi T. 2022. A Global Lexical Dataset (GLED) with cognate annotation and phonological alignments.
+> Tresoldi T. 2022. A Global Lexical Database (GLED) with cognate annotation and phonological alignments.
 > [Data set]. Zenodo. doi: 10.5281/zenodo.5911132
 
 In BibTeX:
@@ -180,7 +180,7 @@ In BibTeX:
 @misc{Tresoldi2022gled,
   year      = {2022},
   author    = {Tiago Tresoldi},
-  title     = {A Global Lexical Dataset (GLED) with cognate annotation and phonological alignments},
+  title     = {A Global Lexical Database (GLED) with cognate annotation and phonological alignments},
   publisher = {Zenodo},
   doi       = {10.5281/zenodo.5911132}
 }
