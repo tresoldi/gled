@@ -1,0 +1,130 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=82;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_chimariko.blood.0082,
+        3 blood_chimariko.blood.0087,
+        4 bone_0ascertainment,
+        5 bone_chimariko.bone.0001,
+        6 breast_0ascertainment,
+        7 breast_chimariko.breast.0032,
+        8 breast_chimariko.breast.0267,
+        9 die_0ascertainment,
+        10 die_chimariko.die.0291,
+        11 dog_0ascertainment,
+        12 dog_chimariko.dog.0193,
+        13 dog_chimariko.dog.0223,
+        14 drink_0ascertainment,
+        15 drink_chimariko.drink.0307,
+        16 ear_0ascertainment,
+        17 ear_chimariko.ear.0009,
+        18 eye_0ascertainment,
+        19 eye_chimariko.eye.0255,
+        20 eye_chimariko.eye.0256,
+        21 fire_0ascertainment,
+        22 fire_chimariko.fire.0023,
+        23 full_0ascertainment,
+        24 full_chimariko.full.0001,
+        25 hand_0ascertainment,
+        26 hand_chimariko.hand.0036,
+        27 hand_chimariko.hand.0231,
+        28 hear_0ascertainment,
+        29 hear_chimariko.hear.0022,
+        30 knee_0ascertainment,
+        31 knee_chimariko.knee.0241,
+        32 leaf_0ascertainment,
+        33 leaf_chimariko.leaf.0246,
+        34 leaf_chimariko.leaf.0247,
+        35 liver_0ascertainment,
+        36 liver_chimariko.liver.0157,
+        37 mountain_0ascertainment,
+        38 mountain_chimariko.mountain.0266,
+        39 mountain_chimariko.mountain.0267,
+        40 new_0ascertainment,
+        41 new_chimariko.new.0260,
+        42 night_0ascertainment,
+        43 night_chimariko.night.0137,
+        44 night_chimariko.night.0252,
+        45 nose_0ascertainment,
+        46 nose_chimariko.nose.0280,
+        47 one_0ascertainment,
+        48 one_chimariko.one.0025,
+        49 one_chimariko.one.0034,
+        50 person_0ascertainment,
+        51 person_chimariko.person.0106,
+        52 pl_0ascertainment,
+        53 pl_chimariko.1pl.0274,
+        54 pl_chimariko.1pl.0275,
+        55 see_0ascertainment,
+        56 see_chimariko.see.0016,
+        57 sg_0ascertainment,
+        58 sg_chimariko.1sg.0007,
+        59 skin_0ascertainment,
+        60 skin_chimariko.skin.0303,
+        61 star_0ascertainment,
+        62 star_chimariko.star.0168,
+        63 star_chimariko.star.0286,
+        64 stone_0ascertainment,
+        65 stone_chimariko.stone.0350,
+        66 stone_chimariko.stone.0351,
+        67 sun_0ascertainment,
+        68 sun_chimariko.sun.0049,
+        69 sun_chimariko.sun.0237,
+        70 tongue_0ascertainment,
+        71 tongue_chimariko.tongue.0001,
+        72 tooth_0ascertainment,
+        73 tooth_chimariko.tooth.0284,
+        74 tree_0ascertainment,
+        75 tree_chimariko.tree.0035,
+        76 tree_chimariko.tree.0260,
+        77 two_0ascertainment,
+        78 two_chimariko.two.0207,
+        79 two_chimariko.two.0208,
+        80 water_0ascertainment,
+        81 water_chimariko.water.0224,
+        82 water_chimariko.water.0225
+;
+
+MATRIX
+chimariko 0110101101011010101101010110101011010110101101011010110101010110110110101011011011
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-5;
+    charset breast = 6-8;
+    charset die = 9-10;
+    charset dog = 11-13;
+    charset drink = 14-15;
+    charset ear = 16-17;
+    charset eye = 18-20;
+    charset fire = 21-22;
+    charset full = 23-24;
+    charset hand = 25-27;
+    charset hear = 28-29;
+    charset knee = 30-31;
+    charset leaf = 32-34;
+    charset liver = 35-36;
+    charset mountain = 37-39;
+    charset new = 40-41;
+    charset night = 42-44;
+    charset nose = 45-46;
+    charset one = 47-49;
+    charset person = 50-51;
+    charset pl = 52-54;
+    charset see = 55-56;
+    charset sg = 57-58;
+    charset skin = 59-60;
+    charset star = 61-63;
+    charset stone = 64-66;
+    charset sun = 67-69;
+    charset tongue = 70-71;
+    charset tooth = 72-73;
+    charset tree = 74-76;
+    charset two = 77-79;
+    charset water = 80-82;
+END;

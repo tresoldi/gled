@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Ditidaht_diti1235,Haisla_hais1244,Heiltsuk-Oowekyala_heil1246,Kwakwala_kwak1269,Makah_maka1318,Nuu-chah-nulth_nuuc1236">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_wakashan" name="data_wakashan" dataType="integer">
+    <sequence id="language_data_wakashan:Ditidaht_diti1235" taxon="Ditidaht_diti1235" value="0??010010001000010000001000100100000101001000000101010000100001000000101010000100100????01000000010000001000000100001000100000001000000100100000100001001000010010001000100010000010001001000100010000000" />
+    <sequence id="language_data_wakashan:Haisla_hais1244" taxon="Haisla_hais1244" value="010001001000100001000000100000010000000100100000100001000010000100000010001000010000100000100000001000000100000010000100010000000100000010010000010000100100010001000100010001000001000101000010001000000" />
+    <sequence id="language_data_wakashan:Heiltsuk-Oowekyala_heil1246" taxon="Heiltsuk-Oowekyala_heil1246" value="010001000100010000110000010000001001000100011000100001000010100010000010001000010000010000010000000100000010000011000010001000100101000010001000001001000110010001000100010000100001000101000010000101101" />
+    <sequence id="language_data_wakashan:Kwakwala_kwak1269" taxon="Kwakwala_kwak1269" value="010001010000010000010000100000000100000100001000100000100001000001000010001000001000110000001001000010000001000010000100000100000010100010000100000100100010010001000100010001000001000100100010000010000" />
+    <sequence id="language_data_wakashan:Makah_maka1318" taxon="Makah_maka1318" value="001010010000001000001001000000000010001000000100010010000100000000100010000100100000001000000100000001001000000000101000000010001000000100000010100001000001010010000010001010000010001001000001010000000" />
+    <sequence id="language_data_wakashan:Nuu-chah-nulth_nuuc1236" taxon="Nuu-chah-nulth_nuuc1236" value="001010010000001000000100001010000010001000000110100000010100001000010010000010100010000100000010010000100000110000101000000001001000010100100000100001001000011010100100001000011000101001010001010000010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:wakashan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:wakashan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:wakashan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:wakashan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:wakashan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((Nuu-chah-nulth_nuuc1236,(Ditidaht_diti1235,Makah_maka1318)),(Haisla_hais1244,(Heiltsuk-Oowekyala_heil1246,Kwakwala_kwak1269)));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:wakashan" name="distribution">
+          <input id="featureClockRateCompound:wakashan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:wakashan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:wakashan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:wakashan" beta="@featureClockRateGammaScale:wakashan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:wakashan" name="distribution" x="@featureClockRateGammaScale:wakashan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:wakashan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:wakashan" name="distribution" x="@covarion_alpha.s:wakashan">
+          <Uniform id="CovAlphaUniform:wakashan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:wakashan" name="distribution" x="@covarion_s.s:wakashan">
+          <Gamma id="Gamma.0:wakashan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:wakashan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:wakashan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:wakashan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:1pl" spec="SiteModel" mutationRate="@featureClockRate:wakashan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:wakashan" spec="BinaryCovarion" alpha="@covarion_alpha.s:wakashan" switchRate="@covarion_s.s:wakashan">
+              <vfrequencies id="wakashan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.78 0.22</vfrequencies>
+              <parameter id="wakashan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="wakashan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_wakashan:1pl" spec="FilteredAlignment" data="@data_wakashan" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:1sg" spec="SiteModel" mutationRate="@featureClockRate:wakashan:1sg" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:1sg" spec="FilteredAlignment" data="@data_wakashan" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:2sg" spec="SiteModel" mutationRate="@featureClockRate:wakashan:2sg" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:2sg" spec="FilteredAlignment" data="@data_wakashan" filter="7-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:blood" spec="SiteModel" mutationRate="@featureClockRate:wakashan:blood" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:blood" spec="FilteredAlignment" data="@data_wakashan" filter="11-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:bone" spec="SiteModel" mutationRate="@featureClockRate:wakashan:bone" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:bone" spec="FilteredAlignment" data="@data_wakashan" filter="16-22" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:breast" spec="SiteModel" mutationRate="@featureClockRate:wakashan:breast" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:breast" spec="FilteredAlignment" data="@data_wakashan" filter="23-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:come" spec="SiteModel" mutationRate="@featureClockRate:wakashan:come" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:come" spec="FilteredAlignment" data="@data_wakashan" filter="30-37" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:die" spec="SiteModel" mutationRate="@featureClockRate:wakashan:die" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:die" spec="FilteredAlignment" data="@data_wakashan" filter="38-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:dog" spec="SiteModel" mutationRate="@featureClockRate:wakashan:dog" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:dog" spec="FilteredAlignment" data="@data_wakashan" filter="41-47" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:drink" spec="SiteModel" mutationRate="@featureClockRate:wakashan:drink" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:drink" spec="FilteredAlignment" data="@data_wakashan" filter="48-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:eye" spec="SiteModel" mutationRate="@featureClockRate:wakashan:eye" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:eye" spec="FilteredAlignment" data="@data_wakashan" filter="52-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:fire" spec="SiteModel" mutationRate="@featureClockRate:wakashan:fire" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:fire" spec="FilteredAlignment" data="@data_wakashan" filter="57-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:fish" spec="SiteModel" mutationRate="@featureClockRate:wakashan:fish" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:fish" spec="FilteredAlignment" data="@data_wakashan" filter="62-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:full" spec="SiteModel" mutationRate="@featureClockRate:wakashan:full" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:full" spec="FilteredAlignment" data="@data_wakashan" filter="69-72" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:hand" spec="SiteModel" mutationRate="@featureClockRate:wakashan:hand" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:hand" spec="FilteredAlignment" data="@data_wakashan" filter="73-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:hear" spec="SiteModel" mutationRate="@featureClockRate:wakashan:hear" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:hear" spec="FilteredAlignment" data="@data_wakashan" filter="78-83" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:horn" spec="SiteModel" mutationRate="@featureClockRate:wakashan:horn" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:horn" spec="FilteredAlignment" data="@data_wakashan" filter="84-88" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:knee" spec="SiteModel" mutationRate="@featureClockRate:wakashan:knee" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:knee" spec="FilteredAlignment" data="@data_wakashan" filter="89-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:leaf" spec="SiteModel" mutationRate="@featureClockRate:wakashan:leaf" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:leaf" spec="FilteredAlignment" data="@data_wakashan" filter="97-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:liver" spec="SiteModel" mutationRate="@featureClockRate:wakashan:liver" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:liver" spec="FilteredAlignment" data="@data_wakashan" filter="104-110" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:louse" spec="SiteModel" mutationRate="@featureClockRate:wakashan:louse" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:louse" spec="FilteredAlignment" data="@data_wakashan" filter="111-115" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:mountain" spec="SiteModel" mutationRate="@featureClockRate:wakashan:mountain" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:mountain" spec="FilteredAlignment" data="@data_wakashan" filter="116-119" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:name" spec="SiteModel" mutationRate="@featureClockRate:wakashan:name" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:name" spec="FilteredAlignment" data="@data_wakashan" filter="120-127" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:new" spec="SiteModel" mutationRate="@featureClockRate:wakashan:new" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:new" spec="FilteredAlignment" data="@data_wakashan" filter="128-134" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:night" spec="SiteModel" mutationRate="@featureClockRate:wakashan:night" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:night" spec="FilteredAlignment" data="@data_wakashan" filter="135-137" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:nose" spec="SiteModel" mutationRate="@featureClockRate:wakashan:nose" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:nose" spec="FilteredAlignment" data="@data_wakashan" filter="138-143" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:one" spec="SiteModel" mutationRate="@featureClockRate:wakashan:one" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:one" spec="FilteredAlignment" data="@data_wakashan" filter="144-148" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:path" spec="SiteModel" mutationRate="@featureClockRate:wakashan:path" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:path" spec="FilteredAlignment" data="@data_wakashan" filter="149-151" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:person" spec="SiteModel" mutationRate="@featureClockRate:wakashan:person" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:person" spec="FilteredAlignment" data="@data_wakashan" filter="152-156" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:see" spec="SiteModel" mutationRate="@featureClockRate:wakashan:see" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:see" spec="FilteredAlignment" data="@data_wakashan" filter="157-159" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:skin" spec="SiteModel" mutationRate="@featureClockRate:wakashan:skin" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:skin" spec="FilteredAlignment" data="@data_wakashan" filter="160-163" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:star" spec="SiteModel" mutationRate="@featureClockRate:wakashan:star" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:star" spec="FilteredAlignment" data="@data_wakashan" filter="164-167" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:stone" spec="SiteModel" mutationRate="@featureClockRate:wakashan:stone" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:stone" spec="FilteredAlignment" data="@data_wakashan" filter="168-171" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:sun" spec="SiteModel" mutationRate="@featureClockRate:wakashan:sun" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:sun" spec="FilteredAlignment" data="@data_wakashan" filter="172-177" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:tongue" spec="SiteModel" mutationRate="@featureClockRate:wakashan:tongue" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:tongue" spec="FilteredAlignment" data="@data_wakashan" filter="178-181" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:tooth" spec="SiteModel" mutationRate="@featureClockRate:wakashan:tooth" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:tooth" spec="FilteredAlignment" data="@data_wakashan" filter="182-184" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:tree" spec="SiteModel" mutationRate="@featureClockRate:wakashan:tree" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:tree" spec="FilteredAlignment" data="@data_wakashan" filter="185-188" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:two" spec="SiteModel" mutationRate="@featureClockRate:wakashan:two" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:two" spec="FilteredAlignment" data="@data_wakashan" filter="189-192" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:wakashan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.wakashan:water" spec="SiteModel" mutationRate="@featureClockRate:wakashan:water" proportionInvariant="0" substModel="@covarion.s:wakashan" />
+          <data id="feature_data_wakashan:water" spec="FilteredAlignment" data="@data_wakashan" filter="193-201" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:wakashan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:wakashan" name="up" />
+      <parameter idref="featureClockRateGammaScale:wakashan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:wakashan" spec="ScaleOperator" parameter="@covarion_alpha.s:wakashan" scaleFactor="0.5" weight="1.0" />
+    <operator id="wakashan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:wakashan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:wakashan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="39" estimate="false">2 2 3 4 6 6 7 2 6 3 4 4 6 3 4 5 4 7 6 6 4 3 7 6 2 5 4 2 4 2 3 3 3 5 3 2 3 3 8</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="wakashan.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:wakashan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:wakashan" />
+      <log idref="covarion_alpha.s:wakashan" />
+      <log idref="covarion_s.s:wakashan" />
+    </logger>
+    <logger mode="tree" fileName="wakashan.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

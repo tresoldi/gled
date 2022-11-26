@@ -1,11 +1,13 @@
-"""
-Utility data and functions for the world trees project.
-"""
+# Functions and data shared among different scripts
 
 # Import Python standard libraries
 from pathlib import Path
+import logging
 import re
-import unidecode
+import string
+
+# Import 3rd-party libraries
+from unidecode import unidecode
 
 # Import MPI-SHH libraries
 from pyglottolog import Glottolog
@@ -26,21 +28,41 @@ def get_glottolog(glottolog_path=None):
     return glottolog
 
 
-def slug(label, drop_parentheses=False):
+def slug(label: str, level: str) -> str:
     """
-    Returns a slugged version of a label.
+    Return a slugged version of a label.
+    @param label: The text to be slugged. Note that, as this operates on
+        a single string, there is no guarantee of non-collision.
+    @param level: Define the level of slugging to be applied. Currently,
+        accepted levels are "none", "simple", and "full".
+    @return: The slugged version of the label.
     """
 
-    if drop_parentheses:
-        label = re.sub(r"\([^)]*\)", "", label)
+    if level not in ["none", "simple", "full"]:
+        raise ValueError(f"Unknown level of slugging `{level}`.")
 
-    label = label.strip()
-    label = re.sub(r"\s+", "_", label)
-    label = label.replace("-", "_")
-    label = unidecode.unidecode(label)
-    label = label.lower()
+    logging.debug("Slugging label `%s` with level `%s`.", label, level)
 
-    for delchar in ".!,?*'":
-        label = label.replace(delchar, "")
+    # This implementation of the different levels of slugging seems a
+    # bit cumbersome at first, but makes it easy for us to explore alternatives
+    if level in ["simple", "full"]:
+        label = unidecode(label)
+    if level in ["full"]:
+        label = label.lower()
+    if level in ["simple"]:
+        label = "".join(
+            [
+                char
+                for char in label
+                if char in string.ascii_letters + string.digits + "-_"
+            ]
+        )
+    if level in ["full"]:
+        label = "".join([char for char in label if char in string.ascii_letters])
+    if level in ["simple", "full"]:
+        label = re.sub(r"\s+", "_", label.strip())
+        label = label.replace("'", "__")
+
+    logging.debug("Label slugged to `%s`.", label)
 
     return label

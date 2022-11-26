@@ -1,0 +1,218 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=4 NCHAR=161;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_dagan.blood.0004,
+        3 blood_dagan.blood.0005,
+        4 blood_dagan.blood.0006,
+        5 blood_dagan.blood.0007,
+        6 bone_0ascertainment,
+        7 bone_dagan.bone.0008,
+        8 bone_dagan.bone.0009,
+        9 bone_dagan.bone.0010,
+        10 bone_dagan.bone.0011,
+        11 breast_0ascertainment,
+        12 breast_dagan.breast.0012,
+        13 breast_dagan.breast.0013,
+        14 breast_dagan.breast.0014,
+        15 come_0ascertainment,
+        16 come_dagan.come.0015,
+        17 come_dagan.come.0016,
+        18 come_dagan.come.0017,
+        19 die_0ascertainment,
+        20 die_dagan.die.0018,
+        21 die_dagan.die.0019,
+        22 die_dagan.die.0020,
+        23 dog_0ascertainment,
+        24 dog_dagan.dog.0021,
+        25 dog_dagan.dog.0022,
+        26 dog_dagan.dog.0023,
+        27 dog_dagan.dog.0024,
+        28 drink_0ascertainment,
+        29 drink_dagan.drink.0025,
+        30 drink_dagan.drink.0026,
+        31 drink_dagan.drink.0027,
+        32 ear_0ascertainment,
+        33 ear_dagan.ear.0028,
+        34 ear_dagan.ear.0029,
+        35 ear_dagan.ear.0030,
+        36 eye_0ascertainment,
+        37 eye_dagan.eye.0031,
+        38 fire_0ascertainment,
+        39 fire_dagan.fire.0032,
+        40 fire_dagan.fire.0033,
+        41 fire_dagan.fire.0034,
+        42 fish_0ascertainment,
+        43 fish_dagan.fish.0035,
+        44 fish_dagan.fish.0036,
+        45 fish_dagan.fish.0037,
+        46 fish_dagan.fish.0038,
+        47 full_0ascertainment,
+        48 full_dagan.full.0039,
+        49 full_dagan.full.0040,
+        50 full_dagan.full.0041,
+        51 hand_0ascertainment,
+        52 hand_dagan.hand.0042,
+        53 hand_dagan.hand.0043,
+        54 hand_dagan.hand.0044,
+        55 hear_0ascertainment,
+        56 hear_dagan.hear.0045,
+        57 hear_dagan.hear.0046,
+        58 hear_dagan.hear.0047,
+        59 horn_0ascertainment,
+        60 horn_dagan.horn.0048,
+        61 horn_dagan.horn.0049,
+        62 knee_0ascertainment,
+        63 knee_dagan.knee.0050,
+        64 knee_dagan.knee.0051,
+        65 knee_dagan.knee.0052,
+        66 leaf_0ascertainment,
+        67 leaf_dagan.leaf.0053,
+        68 leaf_dagan.leaf.0054,
+        69 leaf_dagan.leaf.0055,
+        70 leaf_dagan.leaf.0056,
+        71 liver_0ascertainment,
+        72 liver_dagan.liver.0057,
+        73 liver_dagan.liver.0058,
+        74 liver_dagan.liver.0059,
+        75 louse_0ascertainment,
+        76 louse_dagan.louse.0060,
+        77 louse_dagan.louse.0061,
+        78 louse_dagan.louse.0062,
+        79 louse_dagan.louse.0063,
+        80 mountain_0ascertainment,
+        81 mountain_dagan.mountain.0064,
+        82 mountain_dagan.mountain.0065,
+        83 mountain_dagan.mountain.0066,
+        84 mountain_dagan.mountain.0067,
+        85 name_0ascertainment,
+        86 name_dagan.name.0068,
+        87 name_dagan.name.0069,
+        88 name_dagan.name.0070,
+        89 new_0ascertainment,
+        90 new_dagan.new.0071,
+        91 new_dagan.new.0072,
+        92 new_dagan.new.0073,
+        93 night_0ascertainment,
+        94 night_dagan.night.0074,
+        95 night_dagan.night.0075,
+        96 night_dagan.night.0076,
+        97 nose_0ascertainment,
+        98 nose_dagan.nose.0077,
+        99 nose_dagan.nose.0078,
+        100 one_0ascertainment,
+        101 one_dagan.one.0079,
+        102 one_dagan.one.0080,
+        103 one_dagan.one.0081,
+        104 path_0ascertainment,
+        105 path_dagan.path.0082,
+        106 path_dagan.path.0083,
+        107 path_dagan.path.0084,
+        108 path_dagan.path.0085,
+        109 person_0ascertainment,
+        110 person_dagan.person.0086,
+        111 person_dagan.person.0087,
+        112 pl_0ascertainment,
+        113 pl_dagan.1pl.0001,
+        114 see_0ascertainment,
+        115 see_dagan.see.0088,
+        116 see_dagan.see.0089,
+        117 see_dagan.see.0090,
+        118 sg_0ascertainment,
+        119 sg_dagan.1sg.0002,
+        120 sg_dagan.2sg.0003,
+        121 skin_0ascertainment,
+        122 skin_dagan.skin.0091,
+        123 skin_dagan.skin.0092,
+        124 skin_dagan.skin.0093,
+        125 skin_dagan.skin.0094,
+        126 star_0ascertainment,
+        127 star_dagan.star.0095,
+        128 star_dagan.star.0096,
+        129 star_dagan.star.0097,
+        130 stone_0ascertainment,
+        131 stone_dagan.stone.0098,
+        132 stone_dagan.stone.0099,
+        133 sun_0ascertainment,
+        134 sun_dagan.sun.0100,
+        135 sun_dagan.sun.0101,
+        136 sun_dagan.sun.0102,
+        137 sun_dagan.sun.0103,
+        138 tongue_0ascertainment,
+        139 tongue_dagan.tongue.0104,
+        140 tongue_dagan.tongue.0105,
+        141 tongue_dagan.tongue.0106,
+        142 tongue_dagan.tongue.0107,
+        143 tooth_0ascertainment,
+        144 tooth_dagan.tooth.0108,
+        145 tooth_dagan.tooth.0109,
+        146 tooth_dagan.tooth.0110,
+        147 tree_0ascertainment,
+        148 tree_dagan.tree.0111,
+        149 tree_dagan.tree.0112,
+        150 tree_dagan.tree.0113,
+        151 tree_dagan.tree.0114,
+        152 two_0ascertainment,
+        153 two_dagan.two.0115,
+        154 two_dagan.two.0116,
+        155 two_dagan.two.0117,
+        156 two_dagan.two.0118,
+        157 water_0ascertainment,
+        158 water_dagan.water.0119,
+        159 water_dagan.water.0120,
+        160 water_dagan.water.0121,
+        161 water_dagan.water.0122
+;
+
+MATRIX
+daga_2  0100001000010001000100010000100010001010001000010001000100010010001000010001000010000100010001000100100010000100?010001001000010001001000010000100010000100001000
+dima    0010000100010000100010001000010001001001000100001000100010001001000100001000100001000010001000100100100001000100?001001000100001001000100001000010001000010000100
+maiwa_2 000100001000100001000100010000101000?000100010000101000001010000100010010000010000100001000100010100010000100??0?000101000010010001000010000100100000100001000010
+onjob   000010000100010???0???000010???0001010100000010???00010???0??0???00001000100001000010???0???0100001000100001001010???01100001000100100001000010001000010000100001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-10;
+    charset breast = 11-14;
+    charset come = 15-18;
+    charset die = 19-22;
+    charset dog = 23-27;
+    charset drink = 28-31;
+    charset ear = 32-35;
+    charset eye = 36-37;
+    charset fire = 38-41;
+    charset fish = 42-46;
+    charset full = 47-50;
+    charset hand = 51-54;
+    charset hear = 55-58;
+    charset horn = 59-61;
+    charset knee = 62-65;
+    charset leaf = 66-70;
+    charset liver = 71-74;
+    charset louse = 75-79;
+    charset mountain = 80-84;
+    charset name = 85-88;
+    charset new = 89-92;
+    charset night = 93-96;
+    charset nose = 97-99;
+    charset one = 100-103;
+    charset path = 104-108;
+    charset person = 109-111;
+    charset pl = 112-113;
+    charset see = 114-117;
+    charset sg = 118-120;
+    charset skin = 121-125;
+    charset star = 126-129;
+    charset stone = 130-132;
+    charset sun = 133-137;
+    charset tongue = 138-142;
+    charset tooth = 143-146;
+    charset tree = 147-151;
+    charset two = 152-156;
+    charset water = 157-161;
+END;

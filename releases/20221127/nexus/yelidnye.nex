@@ -1,0 +1,147 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=93;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_yelidnye.blood.0101,
+        3 bone_0ascertainment,
+        4 bone_yelidnye.bone.0154,
+        5 breast_0ascertainment,
+        6 breast_yelidnye.breast.0704,
+        7 come_0ascertainment,
+        8 come_yelidnye.come.0709,
+        9 die_0ascertainment,
+        10 die_yelidnye.die.0919,
+        11 dog_0ascertainment,
+        12 dog_yelidnye.dog.0497,
+        13 dog_yelidnye.dog.0498,
+        14 drink_0ascertainment,
+        15 drink_yelidnye.drink.0944,
+        16 ear_0ascertainment,
+        17 ear_yelidnye.ear.0414,
+        18 ear_yelidnye.ear.0415,
+        19 eye_0ascertainment,
+        20 eye_yelidnye.eye.0716,
+        21 eye_yelidnye.eye.0717,
+        22 fire_0ascertainment,
+        23 fire_yelidnye.fire.0073,
+        24 fire_yelidnye.fire.0216,
+        25 fish_0ascertainment,
+        26 fish_yelidnye.fish.0678,
+        27 fish_yelidnye.fish.0679,
+        28 full_0ascertainment,
+        29 full_yelidnye.full.1007,
+        30 hand_0ascertainment,
+        31 hand_yelidnye.hand.0224,
+        32 hand_yelidnye.hand.0551,
+        33 hear_0ascertainment,
+        34 hear_yelidnye.hear.1026,
+        35 hear_yelidnye.hear.1027,
+        36 horn_0ascertainment,
+        37 horn_yelidnye.horn.0573,
+        38 knee_0ascertainment,
+        39 knee_yelidnye.knee.0610,
+        40 leaf_0ascertainment,
+        41 leaf_yelidnye.leaf.0535,
+        42 liver_0ascertainment,
+        43 liver_yelidnye.liver.0853,
+        44 louse_0ascertainment,
+        45 louse_yelidnye.louse.0183,
+        46 mountain_0ascertainment,
+        47 mountain_yelidnye.mountain.0014,
+        48 name_0ascertainment,
+        49 name_yelidnye.name.0545,
+        50 new_0ascertainment,
+        51 new_yelidnye.new.0648,
+        52 night_0ascertainment,
+        53 night_yelidnye.night.0101,
+        54 nose_0ascertainment,
+        55 nose_yelidnye.nose.0795,
+        56 nose_yelidnye.nose.0796,
+        57 one_0ascertainment,
+        58 one_yelidnye.one.0023,
+        59 one_yelidnye.one.0547,
+        60 path_0ascertainment,
+        61 path_yelidnye.path.0365,
+        62 person_0ascertainment,
+        63 person_yelidnye.person.1001,
+        64 pl_0ascertainment,
+        65 pl_yelidnye.1pl.0843,
+        66 pl_yelidnye.1pl.0844,
+        67 see_0ascertainment,
+        68 see_yelidnye.see.0606,
+        69 sg_0ascertainment,
+        70 sg_yelidnye.1sg.0007,
+        71 sg_yelidnye.1sg.0055,
+        72 sg_yelidnye.2sg.0049,
+        73 skin_0ascertainment,
+        74 skin_yelidnye.skin.0006,
+        75 star_0ascertainment,
+        76 star_yelidnye.star.0012,
+        77 stone_0ascertainment,
+        78 stone_yelidnye.stone.1090,
+        79 stone_yelidnye.stone.1091,
+        80 sun_0ascertainment,
+        81 sun_yelidnye.sun.0030,
+        82 tongue_0ascertainment,
+        83 tongue_yelidnye.tongue.0615,
+        84 tooth_0ascertainment,
+        85 tooth_yelidnye.tooth.0021,
+        86 tooth_yelidnye.tooth.0415,
+        87 tree_0ascertainment,
+        88 tree_yelidnye.tree.0655,
+        89 two_0ascertainment,
+        90 two_yelidnye.two.0013,
+        91 two_yelidnye.two.0581,
+        92 water_0ascertainment,
+        93 water_yelidnye.water.0001
+;
+
+MATRIX
+yeletnye 010101010101101011011011011010110110101010101010101010110110101011010111010101101010110101101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-13;
+    charset drink = 14-15;
+    charset ear = 16-18;
+    charset eye = 19-21;
+    charset fire = 22-24;
+    charset fish = 25-27;
+    charset full = 28-29;
+    charset hand = 30-32;
+    charset hear = 33-35;
+    charset horn = 36-37;
+    charset knee = 38-39;
+    charset leaf = 40-41;
+    charset liver = 42-43;
+    charset louse = 44-45;
+    charset mountain = 46-47;
+    charset name = 48-49;
+    charset new = 50-51;
+    charset night = 52-53;
+    charset nose = 54-56;
+    charset one = 57-59;
+    charset path = 60-61;
+    charset person = 62-63;
+    charset pl = 64-66;
+    charset see = 67-68;
+    charset sg = 69-72;
+    charset skin = 73-74;
+    charset star = 75-76;
+    charset stone = 77-79;
+    charset sun = 80-81;
+    charset tongue = 82-83;
+    charset tooth = 84-86;
+    charset tree = 87-88;
+    charset two = 89-91;
+    charset water = 92-93;
+END;

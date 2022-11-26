@@ -1,0 +1,186 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=130;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_iwaidjanproper.blood.0007,
+        3 bone_0ascertainment,
+        4 bone_iwaidjanproper.bone.0008,
+        5 bone_iwaidjanproper.bone.0009,
+        6 bone_iwaidjanproper.bone.0010,
+        7 breast_0ascertainment,
+        8 breast_iwaidjanproper.breast.0011,
+        9 breast_iwaidjanproper.breast.0012,
+        10 come_0ascertainment,
+        11 come_iwaidjanproper.come.0013,
+        12 come_iwaidjanproper.come.0014,
+        13 come_iwaidjanproper.come.0015,
+        14 die_0ascertainment,
+        15 die_iwaidjanproper.die.0016,
+        16 die_iwaidjanproper.die.0017,
+        17 die_iwaidjanproper.die.0018,
+        18 dog_0ascertainment,
+        19 dog_iwaidjanproper.dog.0019,
+        20 dog_iwaidjanproper.dog.0020,
+        21 drink_0ascertainment,
+        22 drink_iwaidjanproper.drink.0021,
+        23 drink_iwaidjanproper.drink.0022,
+        24 ear_0ascertainment,
+        25 ear_iwaidjanproper.ear.0023,
+        26 ear_iwaidjanproper.ear.0024,
+        27 ear_iwaidjanproper.ear.0025,
+        28 eye_0ascertainment,
+        29 eye_iwaidjanproper.eye.0026,
+        30 eye_iwaidjanproper.eye.0027,
+        31 eye_iwaidjanproper.eye.0028,
+        32 fire_0ascertainment,
+        33 fire_iwaidjanproper.fire.0029,
+        34 fire_iwaidjanproper.fire.0030,
+        35 fish_0ascertainment,
+        36 fish_iwaidjanproper.fish.0031,
+        37 fish_iwaidjanproper.fish.0032,
+        38 fish_iwaidjanproper.fish.0033,
+        39 full_0ascertainment,
+        40 full_iwaidjanproper.full.0034,
+        41 hand_0ascertainment,
+        42 hand_iwaidjanproper.hand.0035,
+        43 hand_iwaidjanproper.hand.0036,
+        44 hand_iwaidjanproper.hand.0037,
+        45 hear_0ascertainment,
+        46 hear_iwaidjanproper.hear.0038,
+        47 hear_iwaidjanproper.hear.0039,
+        48 hear_iwaidjanproper.hear.0040,
+        49 horn_0ascertainment,
+        50 horn_iwaidjanproper.horn.0041,
+        51 horn_iwaidjanproper.horn.0042,
+        52 knee_0ascertainment,
+        53 knee_iwaidjanproper.knee.0043,
+        54 knee_iwaidjanproper.knee.0044,
+        55 knee_iwaidjanproper.knee.0045,
+        56 leaf_0ascertainment,
+        57 leaf_iwaidjanproper.leaf.0046,
+        58 leaf_iwaidjanproper.leaf.0047,
+        59 liver_0ascertainment,
+        60 liver_iwaidjanproper.liver.0048,
+        61 liver_iwaidjanproper.liver.0049,
+        62 louse_0ascertainment,
+        63 louse_iwaidjanproper.louse.0050,
+        64 mountain_0ascertainment,
+        65 mountain_iwaidjanproper.mountain.0051,
+        66 mountain_iwaidjanproper.mountain.0052,
+        67 name_0ascertainment,
+        68 name_iwaidjanproper.name.0053,
+        69 name_iwaidjanproper.name.0054,
+        70 new_0ascertainment,
+        71 new_iwaidjanproper.new.0055,
+        72 new_iwaidjanproper.new.0056,
+        73 night_0ascertainment,
+        74 night_iwaidjanproper.night.0057,
+        75 night_iwaidjanproper.night.0058,
+        76 night_iwaidjanproper.night.0059,
+        77 nose_0ascertainment,
+        78 nose_iwaidjanproper.nose.0060,
+        79 nose_iwaidjanproper.nose.0061,
+        80 nose_iwaidjanproper.nose.0062,
+        81 one_0ascertainment,
+        82 one_iwaidjanproper.one.0063,
+        83 one_iwaidjanproper.one.0064,
+        84 one_iwaidjanproper.one.0065,
+        85 path_0ascertainment,
+        86 path_iwaidjanproper.path.0066,
+        87 person_0ascertainment,
+        88 person_iwaidjanproper.person.0067,
+        89 person_iwaidjanproper.person.0068,
+        90 pl_0ascertainment,
+        91 pl_iwaidjanproper.1pl.0001,
+        92 see_0ascertainment,
+        93 see_iwaidjanproper.see.0069,
+        94 see_iwaidjanproper.see.0070,
+        95 see_iwaidjanproper.see.0071,
+        96 sg_0ascertainment,
+        97 sg_iwaidjanproper.1sg.0002,
+        98 sg_iwaidjanproper.1sg.0003,
+        99 sg_iwaidjanproper.2sg.0004,
+        100 sg_iwaidjanproper.2sg.0005,
+        101 sg_iwaidjanproper.2sg.0006,
+        102 skin_0ascertainment,
+        103 skin_iwaidjanproper.skin.0072,
+        104 skin_iwaidjanproper.skin.0073,
+        105 skin_iwaidjanproper.skin.0074,
+        106 star_0ascertainment,
+        107 star_iwaidjanproper.star.0075,
+        108 star_iwaidjanproper.star.0076,
+        109 star_iwaidjanproper.star.0077,
+        110 stone_0ascertainment,
+        111 stone_iwaidjanproper.stone.0078,
+        112 stone_iwaidjanproper.stone.0079,
+        113 sun_0ascertainment,
+        114 sun_iwaidjanproper.sun.0080,
+        115 sun_iwaidjanproper.sun.0081,
+        116 tongue_0ascertainment,
+        117 tongue_iwaidjanproper.tongue.0082,
+        118 tooth_0ascertainment,
+        119 tooth_iwaidjanproper.tooth.0083,
+        120 tooth_iwaidjanproper.tooth.0084,
+        121 tooth_iwaidjanproper.tooth.0085,
+        122 tree_0ascertainment,
+        123 tree_iwaidjanproper.tree.0086,
+        124 tree_iwaidjanproper.tree.0087,
+        125 two_0ascertainment,
+        126 two_iwaidjanproper.two.0088,
+        127 two_iwaidjanproper.two.0089,
+        128 water_0ascertainment,
+        129 water_iwaidjanproper.water.0090,
+        130 water_iwaidjanproper.water.0091
+;
+
+MATRIX
+amurdak 0101000??0100010001001001000100010010001010001000??01000100100?0??0100100100010001000?01001010001010001000100010010010100010010010
+iwaidja 0100100100010001001000100100010010001001001000100100010010001010100100010010001000100100101001000101100100010001011010010010001001
+mawng   0100010010001000100100100010001001000101000100010010001001001010010010010001000100010100101000100100100010001001001010001001001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-6;
+    charset breast = 7-9;
+    charset come = 10-13;
+    charset die = 14-17;
+    charset dog = 18-20;
+    charset drink = 21-23;
+    charset ear = 24-27;
+    charset eye = 28-31;
+    charset fire = 32-34;
+    charset fish = 35-38;
+    charset full = 39-40;
+    charset hand = 41-44;
+    charset hear = 45-48;
+    charset horn = 49-51;
+    charset knee = 52-55;
+    charset leaf = 56-58;
+    charset liver = 59-61;
+    charset louse = 62-63;
+    charset mountain = 64-66;
+    charset name = 67-69;
+    charset new = 70-72;
+    charset night = 73-76;
+    charset nose = 77-80;
+    charset one = 81-84;
+    charset path = 85-86;
+    charset person = 87-89;
+    charset pl = 90-91;
+    charset see = 92-95;
+    charset sg = 96-101;
+    charset skin = 102-105;
+    charset star = 106-109;
+    charset stone = 110-112;
+    charset sun = 113-115;
+    charset tongue = 116-117;
+    charset tooth = 118-121;
+    charset tree = 122-124;
+    charset two = 125-127;
+    charset water = 128-130;
+END;

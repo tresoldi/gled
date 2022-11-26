@@ -1,0 +1,198 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=142;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_misumalpan.blood.0009,
+        3 blood_misumalpan.blood.0010,
+        4 blood_misumalpan.blood.0011,
+        5 blood_misumalpan.blood.0012,
+        6 bone_0ascertainment,
+        7 bone_misumalpan.bone.0013,
+        8 bone_misumalpan.bone.0014,
+        9 bone_misumalpan.bone.0015,
+        10 breast_0ascertainment,
+        11 breast_misumalpan.breast.0016,
+        12 breast_misumalpan.breast.0017,
+        13 come_0ascertainment,
+        14 come_misumalpan.come.0018,
+        15 come_misumalpan.come.0019,
+        16 come_misumalpan.come.0020,
+        17 come_misumalpan.come.0021,
+        18 die_0ascertainment,
+        19 die_misumalpan.die.0022,
+        20 dog_0ascertainment,
+        21 dog_misumalpan.dog.0023,
+        22 dog_misumalpan.dog.0024,
+        23 dog_misumalpan.dog.0025,
+        24 drink_0ascertainment,
+        25 drink_misumalpan.drink.0026,
+        26 ear_0ascertainment,
+        27 ear_misumalpan.ear.0027,
+        28 ear_misumalpan.ear.0028,
+        29 ear_misumalpan.ear.0029,
+        30 eye_0ascertainment,
+        31 eye_misumalpan.eye.0030,
+        32 eye_misumalpan.eye.0031,
+        33 eye_misumalpan.eye.0032,
+        34 fire_0ascertainment,
+        35 fire_misumalpan.fire.0033,
+        36 fire_misumalpan.fire.0034,
+        37 fish_0ascertainment,
+        38 fish_misumalpan.fish.0035,
+        39 fish_misumalpan.fish.0036,
+        40 fish_misumalpan.fish.0037,
+        41 fish_misumalpan.fish.0038,
+        42 full_0ascertainment,
+        43 full_misumalpan.full.0039,
+        44 full_misumalpan.full.0040,
+        45 full_misumalpan.full.0041,
+        46 full_misumalpan.full.0042,
+        47 hand_0ascertainment,
+        48 hand_misumalpan.hand.0043,
+        49 hand_misumalpan.hand.0044,
+        50 hand_misumalpan.hand.0045,
+        51 hear_0ascertainment,
+        52 hear_misumalpan.hear.0046,
+        53 hear_misumalpan.hear.0047,
+        54 horn_0ascertainment,
+        55 horn_misumalpan.horn.0048,
+        56 knee_0ascertainment,
+        57 knee_misumalpan.knee.0049,
+        58 knee_misumalpan.knee.0050,
+        59 knee_misumalpan.knee.0051,
+        60 leaf_0ascertainment,
+        61 leaf_misumalpan.leaf.0052,
+        62 leaf_misumalpan.leaf.0053,
+        63 leaf_misumalpan.leaf.0054,
+        64 liver_0ascertainment,
+        65 liver_misumalpan.liver.0055,
+        66 liver_misumalpan.liver.0056,
+        67 liver_misumalpan.liver.0057,
+        68 louse_0ascertainment,
+        69 louse_misumalpan.louse.0058,
+        70 louse_misumalpan.louse.0059,
+        71 mountain_0ascertainment,
+        72 mountain_misumalpan.mountain.0060,
+        73 mountain_misumalpan.mountain.0061,
+        74 mountain_misumalpan.mountain.0062,
+        75 name_0ascertainment,
+        76 name_misumalpan.name.0063,
+        77 new_0ascertainment,
+        78 new_misumalpan.new.0064,
+        79 new_misumalpan.new.0065,
+        80 new_misumalpan.new.0066,
+        81 night_0ascertainment,
+        82 night_misumalpan.night.0067,
+        83 night_misumalpan.night.0068,
+        84 nose_0ascertainment,
+        85 nose_misumalpan.nose.0069,
+        86 nose_misumalpan.nose.0070,
+        87 nose_misumalpan.nose.0071,
+        88 one_0ascertainment,
+        89 one_misumalpan.one.0072,
+        90 one_misumalpan.one.0073,
+        91 path_0ascertainment,
+        92 path_misumalpan.path.0074,
+        93 path_misumalpan.path.0075,
+        94 person_0ascertainment,
+        95 person_misumalpan.person.0076,
+        96 pl_0ascertainment,
+        97 pl_misumalpan.1pl.0001,
+        98 pl_misumalpan.1pl.0002,
+        99 pl_misumalpan.1pl.0003,
+        100 see_0ascertainment,
+        101 see_misumalpan.see.0077,
+        102 see_misumalpan.see.0078,
+        103 sg_0ascertainment,
+        104 sg_misumalpan.1sg.0004,
+        105 sg_misumalpan.1sg.0005,
+        106 sg_misumalpan.1sg.0006,
+        107 sg_misumalpan.2sg.0007,
+        108 sg_misumalpan.2sg.0008,
+        109 skin_0ascertainment,
+        110 skin_misumalpan.skin.0079,
+        111 skin_misumalpan.skin.0080,
+        112 skin_misumalpan.skin.0081,
+        113 star_0ascertainment,
+        114 star_misumalpan.star.0082,
+        115 stone_0ascertainment,
+        116 stone_misumalpan.stone.0083,
+        117 stone_misumalpan.stone.0084,
+        118 stone_misumalpan.stone.0085,
+        119 stone_misumalpan.stone.0086,
+        120 sun_0ascertainment,
+        121 sun_misumalpan.sun.0087,
+        122 sun_misumalpan.sun.0088,
+        123 sun_misumalpan.sun.0089,
+        124 tongue_0ascertainment,
+        125 tongue_misumalpan.tongue.0090,
+        126 tongue_misumalpan.tongue.0091,
+        127 tooth_0ascertainment,
+        128 tooth_misumalpan.tooth.0092,
+        129 tooth_misumalpan.tooth.0093,
+        130 tooth_misumalpan.tooth.0094,
+        131 tree_0ascertainment,
+        132 tree_misumalpan.tree.0095,
+        133 tree_misumalpan.tree.0096,
+        134 tree_misumalpan.tree.0097,
+        135 tree_misumalpan.tree.0098,
+        136 two_0ascertainment,
+        137 two_misumalpan.two.0099,
+        138 two_misumalpan.two.0100,
+        139 two_misumalpan.two.0101,
+        140 water_0ascertainment,
+        141 water_misumalpan.water.0102,
+        142 water_misumalpan.water.0103
+;
+
+MATRIX
+cacaopera 010010100010010000?01000101000100010010000100001000??0?01010100010001001000?010001001000100100?01000??01001001000?0100001000100100010000100010
+miskito   0010000100??001000100100100100010001001010010000100100?0010001000100??00100?00100??00100010??0?001001000100100100?0010100100010010001010010010
+ulwa      000100001001000110?000101000100010??0001000011000100101010000010001001000101000100100010100010100010010001010001010001000010100001000100001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-9;
+    charset breast = 10-12;
+    charset come = 13-17;
+    charset die = 18-19;
+    charset dog = 20-23;
+    charset drink = 24-25;
+    charset ear = 26-29;
+    charset eye = 30-33;
+    charset fire = 34-36;
+    charset fish = 37-41;
+    charset full = 42-46;
+    charset hand = 47-50;
+    charset hear = 51-53;
+    charset horn = 54-55;
+    charset knee = 56-59;
+    charset leaf = 60-63;
+    charset liver = 64-67;
+    charset louse = 68-70;
+    charset mountain = 71-74;
+    charset name = 75-76;
+    charset new = 77-80;
+    charset night = 81-83;
+    charset nose = 84-87;
+    charset one = 88-90;
+    charset path = 91-93;
+    charset person = 94-95;
+    charset pl = 96-99;
+    charset see = 100-102;
+    charset sg = 103-108;
+    charset skin = 109-112;
+    charset star = 113-114;
+    charset stone = 115-119;
+    charset sun = 120-123;
+    charset tongue = 124-126;
+    charset tooth = 127-130;
+    charset tree = 131-135;
+    charset two = 136-139;
+    charset water = 140-142;
+END;

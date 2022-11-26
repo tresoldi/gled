@@ -1,0 +1,262 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=7 NCHAR=202;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_wakashan.blood.0008,
+        3 blood_wakashan.blood.0009,
+        4 blood_wakashan.blood.0010,
+        5 blood_wakashan.blood.0011,
+        6 bone_0ascertainment,
+        7 bone_wakashan.bone.0012,
+        8 bone_wakashan.bone.0013,
+        9 bone_wakashan.bone.0014,
+        10 bone_wakashan.bone.0015,
+        11 bone_wakashan.bone.0016,
+        12 bone_wakashan.bone.0017,
+        13 breast_0ascertainment,
+        14 breast_wakashan.breast.0018,
+        15 breast_wakashan.breast.0019,
+        16 breast_wakashan.breast.0020,
+        17 breast_wakashan.breast.0021,
+        18 breast_wakashan.breast.0022,
+        19 breast_wakashan.breast.0023,
+        20 come_0ascertainment,
+        21 come_wakashan.come.0024,
+        22 come_wakashan.come.0025,
+        23 come_wakashan.come.0026,
+        24 come_wakashan.come.0027,
+        25 come_wakashan.come.0028,
+        26 come_wakashan.come.0029,
+        27 come_wakashan.come.0030,
+        28 die_0ascertainment,
+        29 die_wakashan.die.0031,
+        30 die_wakashan.die.0032,
+        31 dog_0ascertainment,
+        32 dog_wakashan.dog.0033,
+        33 dog_wakashan.dog.0034,
+        34 dog_wakashan.dog.0035,
+        35 dog_wakashan.dog.0036,
+        36 dog_wakashan.dog.0037,
+        37 dog_wakashan.dog.0038,
+        38 drink_0ascertainment,
+        39 drink_wakashan.drink.0039,
+        40 drink_wakashan.drink.0040,
+        41 drink_wakashan.drink.0041,
+        42 ear_0ascertainment,
+        43 ear_wakashan.ear.0042,
+        44 eye_0ascertainment,
+        45 eye_wakashan.eye.0043,
+        46 eye_wakashan.eye.0044,
+        47 eye_wakashan.eye.0045,
+        48 eye_wakashan.eye.0046,
+        49 fire_0ascertainment,
+        50 fire_wakashan.fire.0047,
+        51 fire_wakashan.fire.0048,
+        52 fire_wakashan.fire.0049,
+        53 fire_wakashan.fire.0050,
+        54 fish_0ascertainment,
+        55 fish_wakashan.fish.0051,
+        56 fish_wakashan.fish.0052,
+        57 fish_wakashan.fish.0053,
+        58 fish_wakashan.fish.0054,
+        59 fish_wakashan.fish.0055,
+        60 fish_wakashan.fish.0056,
+        61 full_0ascertainment,
+        62 full_wakashan.full.0057,
+        63 full_wakashan.full.0058,
+        64 full_wakashan.full.0059,
+        65 hand_0ascertainment,
+        66 hand_wakashan.hand.0060,
+        67 hand_wakashan.hand.0061,
+        68 hand_wakashan.hand.0062,
+        69 hand_wakashan.hand.0063,
+        70 hear_0ascertainment,
+        71 hear_wakashan.hear.0064,
+        72 hear_wakashan.hear.0065,
+        73 hear_wakashan.hear.0066,
+        74 hear_wakashan.hear.0067,
+        75 hear_wakashan.hear.0068,
+        76 horn_0ascertainment,
+        77 horn_wakashan.horn.0069,
+        78 horn_wakashan.horn.0070,
+        79 horn_wakashan.horn.0071,
+        80 horn_wakashan.horn.0072,
+        81 knee_0ascertainment,
+        82 knee_wakashan.knee.0073,
+        83 knee_wakashan.knee.0074,
+        84 knee_wakashan.knee.0075,
+        85 knee_wakashan.knee.0076,
+        86 knee_wakashan.knee.0077,
+        87 knee_wakashan.knee.0078,
+        88 knee_wakashan.knee.0079,
+        89 leaf_0ascertainment,
+        90 leaf_wakashan.leaf.0080,
+        91 leaf_wakashan.leaf.0081,
+        92 leaf_wakashan.leaf.0082,
+        93 leaf_wakashan.leaf.0083,
+        94 leaf_wakashan.leaf.0084,
+        95 leaf_wakashan.leaf.0085,
+        96 liver_0ascertainment,
+        97 liver_wakashan.liver.0086,
+        98 liver_wakashan.liver.0087,
+        99 liver_wakashan.liver.0088,
+        100 liver_wakashan.liver.0089,
+        101 liver_wakashan.liver.0090,
+        102 liver_wakashan.liver.0091,
+        103 louse_0ascertainment,
+        104 louse_wakashan.louse.0092,
+        105 louse_wakashan.louse.0093,
+        106 louse_wakashan.louse.0094,
+        107 louse_wakashan.louse.0095,
+        108 mountain_0ascertainment,
+        109 mountain_wakashan.mountain.0096,
+        110 mountain_wakashan.mountain.0097,
+        111 mountain_wakashan.mountain.0098,
+        112 name_0ascertainment,
+        113 name_wakashan.name.0099,
+        114 name_wakashan.name.0100,
+        115 name_wakashan.name.0101,
+        116 name_wakashan.name.0102,
+        117 name_wakashan.name.0103,
+        118 name_wakashan.name.0104,
+        119 name_wakashan.name.0105,
+        120 new_0ascertainment,
+        121 new_wakashan.new.0106,
+        122 new_wakashan.new.0107,
+        123 new_wakashan.new.0108,
+        124 new_wakashan.new.0109,
+        125 new_wakashan.new.0110,
+        126 new_wakashan.new.0111,
+        127 night_0ascertainment,
+        128 night_wakashan.night.0112,
+        129 night_wakashan.night.0113,
+        130 nose_0ascertainment,
+        131 nose_wakashan.nose.0114,
+        132 nose_wakashan.nose.0115,
+        133 nose_wakashan.nose.0116,
+        134 nose_wakashan.nose.0117,
+        135 nose_wakashan.nose.0118,
+        136 one_0ascertainment,
+        137 one_wakashan.one.0119,
+        138 one_wakashan.one.0120,
+        139 one_wakashan.one.0121,
+        140 one_wakashan.one.0122,
+        141 path_0ascertainment,
+        142 path_wakashan.path.0123,
+        143 path_wakashan.path.0124,
+        144 person_0ascertainment,
+        145 person_wakashan.person.0125,
+        146 person_wakashan.person.0126,
+        147 person_wakashan.person.0127,
+        148 person_wakashan.person.0128,
+        149 pl_0ascertainment,
+        150 pl_wakashan.1pl.0001,
+        151 pl_wakashan.1pl.0002,
+        152 see_0ascertainment,
+        153 see_wakashan.see.0129,
+        154 see_wakashan.see.0130,
+        155 sg_0ascertainment,
+        156 sg_wakashan.1sg.0003,
+        157 sg_wakashan.1sg.0004,
+        158 sg_wakashan.2sg.0005,
+        159 sg_wakashan.2sg.0006,
+        160 sg_wakashan.2sg.0007,
+        161 skin_0ascertainment,
+        162 skin_wakashan.skin.0131,
+        163 skin_wakashan.skin.0132,
+        164 skin_wakashan.skin.0133,
+        165 star_0ascertainment,
+        166 star_wakashan.star.0134,
+        167 star_wakashan.star.0135,
+        168 star_wakashan.star.0136,
+        169 stone_0ascertainment,
+        170 stone_wakashan.stone.0137,
+        171 stone_wakashan.stone.0138,
+        172 stone_wakashan.stone.0139,
+        173 sun_0ascertainment,
+        174 sun_wakashan.sun.0140,
+        175 sun_wakashan.sun.0141,
+        176 sun_wakashan.sun.0142,
+        177 sun_wakashan.sun.0143,
+        178 sun_wakashan.sun.0144,
+        179 tongue_0ascertainment,
+        180 tongue_wakashan.tongue.0145,
+        181 tongue_wakashan.tongue.0146,
+        182 tongue_wakashan.tongue.0147,
+        183 tooth_0ascertainment,
+        184 tooth_wakashan.tooth.0148,
+        185 tooth_wakashan.tooth.0149,
+        186 tree_0ascertainment,
+        187 tree_wakashan.tree.0150,
+        188 tree_wakashan.tree.0151,
+        189 tree_wakashan.tree.0152,
+        190 two_0ascertainment,
+        191 two_wakashan.two.0153,
+        192 two_wakashan.two.0154,
+        193 two_wakashan.two.0155,
+        194 water_0ascertainment,
+        195 water_wakashan.water.0156,
+        196 water_wakashan.water.0157,
+        197 water_wakashan.water.0158,
+        198 water_wakashan.water.0159,
+        199 water_wakashan.water.0160,
+        200 water_wakashan.water.0161,
+        201 water_wakashan.water.0162,
+        202 water_wakashan.water.0163
+;
+
+MATRIX
+ditidaht  0100001000000100010010000010100100000010101010000100001000000101010000100100????010000000100000010000001000010001000000010000001001000001000010010000??010010100010001000100010000010001001000100010000000
+haisla    0010000100000010000001000000010010000010001001000010000100000010001000010000100000100000001000000100000010000100010000000100000010010000010000100100010010001010001000100010001000001000101000010001000000
+heiltsuk  0001000010000001000000100000010001000010001001000010000010000010001000010000010000010000000100000010000001000010001000000100000010001000001001000010010010001001001000100010000100001000101000010000100100
+kwakwala  0001000001000010000000010000010000100010001000100001000001000010001000001000110000001001000010000001000010000100000100000010100010000100000100100010010010001100001000100010001000001000100100010000010000
+makah     0000100000100100000000001000100000010001001010000100000000100010000100100000001000000100000001001000000000101000000010001000000100000010100001000001001010010100010000010001010000010001001000001010000000
+nootka    0000100000010000101000001000100000011010001000010100001000010010000010100010000100000010010000100000110000101000000001001000010100100000100001001000001011010100010100100001000011000101001010001010000010
+oowekyala 00010000010000010000000001000100001000100010010000001000100000100????001000001000???????0??????000100000100000100000001000010000100010000010010001000100100010010010001000100?????00100010???0010000001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-12;
+    charset breast = 13-19;
+    charset come = 20-27;
+    charset die = 28-30;
+    charset dog = 31-37;
+    charset drink = 38-41;
+    charset ear = 42-43;
+    charset eye = 44-48;
+    charset fire = 49-53;
+    charset fish = 54-60;
+    charset full = 61-64;
+    charset hand = 65-69;
+    charset hear = 70-75;
+    charset horn = 76-80;
+    charset knee = 81-88;
+    charset leaf = 89-95;
+    charset liver = 96-102;
+    charset louse = 103-107;
+    charset mountain = 108-111;
+    charset name = 112-119;
+    charset new = 120-126;
+    charset night = 127-129;
+    charset nose = 130-135;
+    charset one = 136-140;
+    charset path = 141-143;
+    charset person = 144-148;
+    charset pl = 149-151;
+    charset see = 152-154;
+    charset sg = 155-160;
+    charset skin = 161-164;
+    charset star = 165-168;
+    charset stone = 169-172;
+    charset sun = 173-178;
+    charset tongue = 179-182;
+    charset tooth = 183-185;
+    charset tree = 186-189;
+    charset two = 190-193;
+    charset water = 194-202;
+END;

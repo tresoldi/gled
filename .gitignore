@@ -1,6 +1,9 @@
 .idea/
+.vscode/
+.venv-beastling
 
-pipeline/nexus/*
+*.log
+*.state
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

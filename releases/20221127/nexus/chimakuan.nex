@@ -1,0 +1,175 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=121;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_chimakuan.blood.0008,
+        3 bone_0ascertainment,
+        4 bone_chimakuan.bone.0009,
+        5 bone_chimakuan.bone.0010,
+        6 breast_0ascertainment,
+        7 breast_chimakuan.breast.0011,
+        8 breast_chimakuan.breast.0012,
+        9 come_0ascertainment,
+        10 come_chimakuan.come.0013,
+        11 die_0ascertainment,
+        12 die_chimakuan.die.0014,
+        13 die_chimakuan.die.0015,
+        14 dog_0ascertainment,
+        15 dog_chimakuan.dog.0016,
+        16 dog_chimakuan.dog.0017,
+        17 drink_0ascertainment,
+        18 drink_chimakuan.drink.0018,
+        19 drink_chimakuan.drink.0019,
+        20 drink_chimakuan.drink.0020,
+        21 ear_0ascertainment,
+        22 ear_chimakuan.ear.0021,
+        23 ear_chimakuan.ear.0022,
+        24 ear_chimakuan.ear.0023,
+        25 eye_0ascertainment,
+        26 eye_chimakuan.eye.0024,
+        27 eye_chimakuan.eye.0025,
+        28 fire_0ascertainment,
+        29 fire_chimakuan.fire.0026,
+        30 fire_chimakuan.fire.0027,
+        31 fire_chimakuan.fire.0028,
+        32 fish_0ascertainment,
+        33 fish_chimakuan.fish.0029,
+        34 fish_chimakuan.fish.0030,
+        35 full_0ascertainment,
+        36 full_chimakuan.full.0031,
+        37 full_chimakuan.full.0032,
+        38 hand_0ascertainment,
+        39 hand_chimakuan.hand.0033,
+        40 hand_chimakuan.hand.0034,
+        41 hear_0ascertainment,
+        42 hear_chimakuan.hear.0035,
+        43 hear_chimakuan.hear.0036,
+        44 horn_0ascertainment,
+        45 horn_chimakuan.horn.0037,
+        46 knee_0ascertainment,
+        47 knee_chimakuan.knee.0038,
+        48 knee_chimakuan.knee.0039,
+        49 leaf_0ascertainment,
+        50 leaf_chimakuan.leaf.0040,
+        51 leaf_chimakuan.leaf.0041,
+        52 leaf_chimakuan.leaf.0042,
+        53 louse_0ascertainment,
+        54 louse_chimakuan.louse.0043,
+        55 louse_chimakuan.louse.0044,
+        56 mountain_0ascertainment,
+        57 mountain_chimakuan.mountain.0045,
+        58 mountain_chimakuan.mountain.0046,
+        59 name_0ascertainment,
+        60 name_chimakuan.name.0047,
+        61 name_chimakuan.name.0048,
+        62 new_0ascertainment,
+        63 new_chimakuan.new.0049,
+        64 new_chimakuan.new.0050,
+        65 night_0ascertainment,
+        66 night_chimakuan.night.0051,
+        67 night_chimakuan.night.0052,
+        68 nose_0ascertainment,
+        69 nose_chimakuan.nose.0053,
+        70 nose_chimakuan.nose.0054,
+        71 nose_chimakuan.nose.0055,
+        72 one_0ascertainment,
+        73 one_chimakuan.one.0056,
+        74 one_chimakuan.one.0057,
+        75 path_0ascertainment,
+        76 path_chimakuan.path.0058,
+        77 path_chimakuan.path.0059,
+        78 person_0ascertainment,
+        79 person_chimakuan.person.0060,
+        80 person_chimakuan.person.0061,
+        81 pl_0ascertainment,
+        82 pl_chimakuan.1pl.0001,
+        83 pl_chimakuan.1pl.0002,
+        84 see_0ascertainment,
+        85 see_chimakuan.see.0062,
+        86 see_chimakuan.see.0063,
+        87 sg_0ascertainment,
+        88 sg_chimakuan.1sg.0003,
+        89 sg_chimakuan.1sg.0004,
+        90 sg_chimakuan.1sg.0005,
+        91 sg_chimakuan.2sg.0006,
+        92 sg_chimakuan.2sg.0007,
+        93 skin_0ascertainment,
+        94 skin_chimakuan.skin.0064,
+        95 skin_chimakuan.skin.0065,
+        96 star_0ascertainment,
+        97 star_chimakuan.star.0066,
+        98 star_chimakuan.star.0067,
+        99 star_chimakuan.star.0068,
+        100 stone_0ascertainment,
+        101 stone_chimakuan.stone.0069,
+        102 stone_chimakuan.stone.0070,
+        103 sun_0ascertainment,
+        104 sun_chimakuan.sun.0071,
+        105 sun_chimakuan.sun.0072,
+        106 sun_chimakuan.sun.0073,
+        107 tongue_0ascertainment,
+        108 tongue_chimakuan.tongue.0074,
+        109 tongue_chimakuan.tongue.0075,
+        110 tooth_0ascertainment,
+        111 tooth_chimakuan.tooth.0076,
+        112 tooth_chimakuan.tooth.0077,
+        113 tree_0ascertainment,
+        114 tree_chimakuan.tree.0078,
+        115 tree_chimakuan.tree.0079,
+        116 two_0ascertainment,
+        117 two_chimakuan.two.0080,
+        118 two_chimakuan.two.0081,
+        119 water_0ascertainment,
+        120 water_chimakuan.water.0082,
+        121 water_chimakuan.water.0083
+;
+
+MATRIX
+chemakum 01010010010100100100010001001000100100100100?0100100010010010010010010001101001001001001001001001000100110010010010011010
+quileute 0100101101001001001100110010011001001001001010010011001001011001001001101000100100100100110101100110010011001001001010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-8;
+    charset come = 9-10;
+    charset die = 11-13;
+    charset dog = 14-16;
+    charset drink = 17-20;
+    charset ear = 21-24;
+    charset eye = 25-27;
+    charset fire = 28-31;
+    charset fish = 32-34;
+    charset full = 35-37;
+    charset hand = 38-40;
+    charset hear = 41-43;
+    charset horn = 44-45;
+    charset knee = 46-48;
+    charset leaf = 49-52;
+    charset louse = 53-55;
+    charset mountain = 56-58;
+    charset name = 59-61;
+    charset new = 62-64;
+    charset night = 65-67;
+    charset nose = 68-71;
+    charset one = 72-74;
+    charset path = 75-77;
+    charset person = 78-80;
+    charset pl = 81-83;
+    charset see = 84-86;
+    charset sg = 87-92;
+    charset skin = 93-95;
+    charset star = 96-99;
+    charset stone = 100-102;
+    charset sun = 103-106;
+    charset tongue = 107-109;
+    charset tooth = 110-112;
+    charset tree = 113-115;
+    charset two = 116-118;
+    charset water = 119-121;
+END;

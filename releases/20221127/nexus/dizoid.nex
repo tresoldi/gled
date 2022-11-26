@@ -1,0 +1,182 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=4 NCHAR=126;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_dizoid.blood.0009,
+        3 bone_0ascertainment,
+        4 bone_dizoid.bone.0010,
+        5 breast_0ascertainment,
+        6 breast_dizoid.breast.0011,
+        7 come_0ascertainment,
+        8 come_dizoid.come.0012,
+        9 die_0ascertainment,
+        10 die_dizoid.die.0013,
+        11 die_dizoid.die.0014,
+        12 dog_0ascertainment,
+        13 dog_dizoid.dog.0015,
+        14 drink_0ascertainment,
+        15 drink_dizoid.drink.0016,
+        16 drink_dizoid.drink.0017,
+        17 drink_dizoid.drink.0018,
+        18 ear_0ascertainment,
+        19 ear_dizoid.ear.0019,
+        20 ear_dizoid.ear.0020,
+        21 ear_dizoid.ear.0021,
+        22 ear_dizoid.ear.0022,
+        23 eye_0ascertainment,
+        24 eye_dizoid.eye.0023,
+        25 fire_0ascertainment,
+        26 fire_dizoid.fire.0024,
+        27 fire_dizoid.fire.0025,
+        28 fish_0ascertainment,
+        29 fish_dizoid.fish.0026,
+        30 fish_dizoid.fish.0027,
+        31 fish_dizoid.fish.0028,
+        32 fish_dizoid.fish.0029,
+        33 hand_0ascertainment,
+        34 hand_dizoid.hand.0030,
+        35 hear_0ascertainment,
+        36 hear_dizoid.hear.0031,
+        37 horn_0ascertainment,
+        38 horn_dizoid.horn.0032,
+        39 horn_dizoid.horn.0033,
+        40 horn_dizoid.horn.0034,
+        41 horn_dizoid.horn.0035,
+        42 knee_0ascertainment,
+        43 knee_dizoid.knee.0036,
+        44 knee_dizoid.knee.0037,
+        45 leaf_0ascertainment,
+        46 leaf_dizoid.leaf.0038,
+        47 leaf_dizoid.leaf.0039,
+        48 leaf_dizoid.leaf.0040,
+        49 liver_0ascertainment,
+        50 liver_dizoid.liver.0041,
+        51 liver_dizoid.liver.0042,
+        52 liver_dizoid.liver.0043,
+        53 louse_0ascertainment,
+        54 louse_dizoid.louse.0044,
+        55 mountain_0ascertainment,
+        56 mountain_dizoid.mountain.0045,
+        57 mountain_dizoid.mountain.0046,
+        58 mountain_dizoid.mountain.0047,
+        59 name_0ascertainment,
+        60 name_dizoid.name.0048,
+        61 name_dizoid.name.0049,
+        62 new_0ascertainment,
+        63 new_dizoid.new.0050,
+        64 new_dizoid.new.0051,
+        65 new_dizoid.new.0052,
+        66 night_0ascertainment,
+        67 night_dizoid.night.0053,
+        68 nose_0ascertainment,
+        69 nose_dizoid.nose.0054,
+        70 nose_dizoid.nose.0055,
+        71 one_0ascertainment,
+        72 one_dizoid.one.0056,
+        73 one_dizoid.one.0057,
+        74 path_0ascertainment,
+        75 path_dizoid.path.0058,
+        76 path_dizoid.path.0059,
+        77 path_dizoid.path.0060,
+        78 person_0ascertainment,
+        79 person_dizoid.person.0061,
+        80 pl_0ascertainment,
+        81 pl_dizoid.1pl.0001,
+        82 pl_dizoid.1pl.0002,
+        83 pl_dizoid.1pl.0003,
+        84 see_0ascertainment,
+        85 see_dizoid.see.0062,
+        86 see_dizoid.see.0063,
+        87 sg_0ascertainment,
+        88 sg_dizoid.1sg.0004,
+        89 sg_dizoid.1sg.0005,
+        90 sg_dizoid.1sg.0006,
+        91 sg_dizoid.2sg.0007,
+        92 sg_dizoid.2sg.0008,
+        93 skin_0ascertainment,
+        94 skin_dizoid.skin.0064,
+        95 skin_dizoid.skin.0065,
+        96 skin_dizoid.skin.0066,
+        97 star_0ascertainment,
+        98 star_dizoid.star.0067,
+        99 star_dizoid.star.0068,
+        100 star_dizoid.star.0069,
+        101 star_dizoid.star.0070,
+        102 star_dizoid.star.0071,
+        103 stone_0ascertainment,
+        104 stone_dizoid.stone.0072,
+        105 sun_0ascertainment,
+        106 sun_dizoid.sun.0073,
+        107 sun_dizoid.sun.0074,
+        108 sun_dizoid.sun.0075,
+        109 tongue_0ascertainment,
+        110 tongue_dizoid.tongue.0076,
+        111 tongue_dizoid.tongue.0077,
+        112 tongue_dizoid.tongue.0078,
+        113 tongue_dizoid.tongue.0079,
+        114 tooth_0ascertainment,
+        115 tooth_dizoid.tooth.0080,
+        116 tree_0ascertainment,
+        117 tree_dizoid.tree.0081,
+        118 tree_dizoid.tree.0082,
+        119 tree_dizoid.tree.0083,
+        120 tree_dizoid.tree.0084,
+        121 two_0ascertainment,
+        122 two_dizoid.two.0085,
+        123 two_dizoid.two.0086,
+        124 water_0ascertainment,
+        125 water_dizoid.water.0087,
+        126 water_dizoid.water.0088
+;
+
+MATRIX
+dizi_2 01010101010010100010000101001000010101100010010001000101000110100010100100???0?01000100100100100010000010100010000101000010010
+maji   010101010010101000010001010001000101001000100010010001010001001000101001001000101000010100100110001001010101001000100100010001
+nao    010101010010100100001001001000100101000100010010001001001001000100101000100100100100100010010100000100010010000100100010010001
+sheko  010101010010100010100101001000010101000010010001010101000101000010100101000010100010100001100001000010010100000010100001011001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-11;
+    charset dog = 12-13;
+    charset drink = 14-17;
+    charset ear = 18-22;
+    charset eye = 23-24;
+    charset fire = 25-27;
+    charset fish = 28-32;
+    charset hand = 33-34;
+    charset hear = 35-36;
+    charset horn = 37-41;
+    charset knee = 42-44;
+    charset leaf = 45-48;
+    charset liver = 49-52;
+    charset louse = 53-54;
+    charset mountain = 55-58;
+    charset name = 59-61;
+    charset new = 62-65;
+    charset night = 66-67;
+    charset nose = 68-70;
+    charset one = 71-73;
+    charset path = 74-77;
+    charset person = 78-79;
+    charset pl = 80-83;
+    charset see = 84-86;
+    charset sg = 87-92;
+    charset skin = 93-96;
+    charset star = 97-102;
+    charset stone = 103-104;
+    charset sun = 105-108;
+    charset tongue = 109-113;
+    charset tooth = 114-115;
+    charset tree = 116-120;
+    charset two = 121-123;
+    charset water = 124-126;
+END;

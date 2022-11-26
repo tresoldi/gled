@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Koneraw_kone1241
+			Mombum_nucl1452
+			;
+End;
+Begin trees;
+	Translate
+		   1 Koneraw_kone1241,
+		   2 Mombum_nucl1452
+;
+tree TREE1 = (1[&height=0.0,length=6.774853369326165,length_95%_HPD={0.4933,19.8144},length_median=1.9658,length_range={0.3491,630.0911},rate=0.9949585482903363,rate_95%_HPD={0.7645,1.2546},rate_median=1.0005,rate_range={0.2026,1.2554}]:6.774853369326165,2[&height=0.0,length=6.774853369326165,length_95%_HPD={0.4933,19.8144},length_median=1.9658,length_range={0.3491,630.0911},rate=0.995458928214349,rate_95%_HPD={0.767,1.2534},rate_median=1.0001,rate_range={0.2026,1.2554}]:6.774853369326165)[&CAheight_95%_HPD={0.4933,19.8144},CAheight_mean=6.774853369326165,CAheight_median=1.9658,CAheight_range={0.3491,630.0911},height=6.774853369326165,height_95%_HPD={0.4933,19.8144},height_median=1.9658,height_range={0.3491,630.0911},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

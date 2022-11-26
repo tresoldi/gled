@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Akoye_akoy1238,Angaataha_anga1290,Ankave_anka1246,Baruya_baru1267,Hamtai_hamt1247,Kamasa_kama1360,Kawacha_kawa1276,Menya_meny1245,Safeyoka_safe1240,Simbari_simb1255,Tainae_tain1253,Yagwoia_yagw1240">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_angan" name="data_angan" dataType="integer">
+    <sequence id="language_data_angan:Akoye_akoy1238" taxon="Akoye_akoy1238" value="0000101000001010000100000010000010000001000010000000000010000000100100000010100000000010100??000000001000000100000100000000001000000101000000001000001000000100000001001000000000001000001000000001000000000100000100000000001000000100000010000010000101000000010000001000000100" />
+    <sequence id="language_data_angan:Angaataha_anga1290" taxon="Angaataha_anga1290" value="0010001000010000001000000001001000000100000100000000010000000100000010001000010010000000010??001000000000010000100000000100000000100000100010000001000000010000001000000100001000000000010000000010000100000000001000000100000000010000100000000100000000100010000010000000010000" />
+    <sequence id="language_data_angan:Ankave_anka1246" taxon="Ankave_anka1246" value="0100001000001000000100000000100100000010000010000000001000000100000100000100100101000000100??000100000000100001000000000010000000010001000001000000100000100000000100001000000100000000001000010100000010000000000100000010000000001000010000000010000001000001000100000000001000" />
+    <sequence id="language_data_angan:Baruya_baru1267" taxon="Baruya_baru1267" value="0100001000100000000010000010001000001000010001000000000100000010000001010000100100000000??0100000100000001000000100001000010000010000010000001000000100000010010000100010000??????????0000100000????00001000000000010000001000000100000001000000001000001000100000????????0100000" />
+    <sequence id="language_data_angan:Hamtai_hamt1247" taxon="Hamtai_hamt1247" value="0100001000000010000000100010001000001000000100000000100000000100000001000010100000001000100??000100000000100001000000000000010000100001000000100000000010100000010000001000000000100000000001000000100000010000000001000000010000100001000000000010000001000100000000010000100000" />
+    <sequence id="language_data_angan:Kamasa_kama1360" taxon="Kamasa_kama1360" value="0100001000000100000001000010000001001000000000010000000001000100000001010000100000010000010??000000100000100001000000000001000001000001000100000000000100100000000000100010000001000000000010000100001000000000010000000000100000100001000000000001000001000000100000100000000010" />
+    <sequence id="language_data_angan:Kawacha_kawa1276" taxon="Kawacha_kawa1276" value="0100001000000100000000100010001000001000000000001000100000000001000001010000100000000100100??000000010000100000001000000001000001000001000000100000010000100000010000000001000000010000000001000100000000001000010000000001000000100001000000000001000001000000100100000000100000" />
+    <sequence id="language_data_angan:Menya_meny1245" taxon="Menya_meny1245" value="0100001000000001000000100010001000101000000000001000000000100100000001000010100????????010001000000100000????0000100000000000010100000???0000100000010000100000000010001000000000000100100000000000100000000010000001000010000010100000000001000001000000010100000000100000100000" />
+    <sequence id="language_data_angan:Safeyoka_safe1240" taxon="Safeyoka_safe1240" value="0100001000100000010000001010001000001000000100000000100000000100000100010000100100000000100??010000000000100001000001001000000001000001000100000010000000100000010000001000010000000000100000000100001000000000010000001000000000100001000000001000000001000100000100000000100000" />
+    <sequence id="language_data_angan:Simbari_simb1255" taxon="Simbari_simb1255" value="0000100010100000000000100010001000000000100000000100000100000000010001000100100100000000100??000000000100100000000010000001000001000001000000100000010000000010000010001000000000000010000100000100000000000001000010000000000100100000001000100000010001000000100000000100100001" />
+    <sequence id="language_data_angan:Tainae_tain1253" taxon="Tainae_tain1253" value="0001000100001000000100000010000010001000000000100000000010000100000100000010100000100000100??000001000000001001000000000000100000001000010000010000001000100000000001001000000010000000001000000001000000100000000100000010000000100000000100000000100001000100000001000000000100" />
+    <sequence id="language_data_angan:Yagwoia_yagw1240" taxon="Yagwoia_yagw1240" value="0100001000000100000000010010000010001000000000000010000000010100000001000010100000001000100??000000000010100001000000000001000001000001000100000000010000100000010000001000000000010000000000100100001000000000000000100001000000100001000000000000001001000000100000000010100000" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:angan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:angan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:angan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:angan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:angan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Angaataha_anga1290,(Yagwoia_yagw1240,(Baruya_baru1267,Simbari_simb1255),(Hamtai_hamt1247,Menya_meny1245),(Ankave_anka1246,(Akoye_akoy1238,Tainae_tain1253)),(Kamasa_kama1360,Kawacha_kawa1276,Safeyoka_safe1240)));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:angan" name="distribution">
+          <input id="featureClockRateCompound:angan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:angan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:angan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:angan" beta="@featureClockRateGammaScale:angan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:angan" name="distribution" x="@featureClockRateGammaScale:angan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:angan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:angan" name="distribution" x="@covarion_alpha.s:angan">
+          <Uniform id="CovAlphaUniform:angan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:angan" name="distribution" x="@covarion_s.s:angan">
+          <Gamma id="Gamma.0:angan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:angan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:angan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:angan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:1pl" spec="SiteModel" mutationRate="@featureClockRate:angan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:angan" spec="BinaryCovarion" alpha="@covarion_alpha.s:angan" switchRate="@covarion_s.s:angan">
+              <vfrequencies id="angan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.85 0.15</vfrequencies>
+              <parameter id="angan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="angan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_angan:1pl" spec="FilteredAlignment" data="@data_angan" filter="1-5" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:1sg" spec="SiteModel" mutationRate="@featureClockRate:angan:1sg" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:1sg" spec="FilteredAlignment" data="@data_angan" filter="6-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:2sg" spec="SiteModel" mutationRate="@featureClockRate:angan:2sg" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:2sg" spec="FilteredAlignment" data="@data_angan" filter="10-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:blood" spec="SiteModel" mutationRate="@featureClockRate:angan:blood" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:blood" spec="FilteredAlignment" data="@data_angan" filter="17-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:bone" spec="SiteModel" mutationRate="@featureClockRate:angan:bone" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:bone" spec="FilteredAlignment" data="@data_angan" filter="26-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:breast" spec="SiteModel" mutationRate="@featureClockRate:angan:breast" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:breast" spec="FilteredAlignment" data="@data_angan" filter="30-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:come" spec="SiteModel" mutationRate="@featureClockRate:angan:come" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:come" spec="FilteredAlignment" data="@data_angan" filter="36-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:die" spec="SiteModel" mutationRate="@featureClockRate:angan:die" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:die" spec="FilteredAlignment" data="@data_angan" filter="43-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:dog" spec="SiteModel" mutationRate="@featureClockRate:angan:dog" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:dog" spec="FilteredAlignment" data="@data_angan" filter="52-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:drink" spec="SiteModel" mutationRate="@featureClockRate:angan:drink" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:drink" spec="FilteredAlignment" data="@data_angan" filter="61-66" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:ear" spec="SiteModel" mutationRate="@featureClockRate:angan:ear" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:ear" spec="FilteredAlignment" data="@data_angan" filter="67-70" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:eye" spec="SiteModel" mutationRate="@featureClockRate:angan:eye" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:eye" spec="FilteredAlignment" data="@data_angan" filter="71-75" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:fire" spec="SiteModel" mutationRate="@featureClockRate:angan:fire" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:fire" spec="FilteredAlignment" data="@data_angan" filter="76-78" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:fish" spec="SiteModel" mutationRate="@featureClockRate:angan:fish" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:fish" spec="FilteredAlignment" data="@data_angan" filter="79-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:full" spec="SiteModel" mutationRate="@featureClockRate:angan:full" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:full" spec="FilteredAlignment" data="@data_angan" filter="88-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:hand" spec="SiteModel" mutationRate="@featureClockRate:angan:hand" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:hand" spec="FilteredAlignment" data="@data_angan" filter="91-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:hear" spec="SiteModel" mutationRate="@featureClockRate:angan:hear" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:hear" spec="FilteredAlignment" data="@data_angan" filter="94-104" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:horn" spec="SiteModel" mutationRate="@featureClockRate:angan:horn" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:horn" spec="FilteredAlignment" data="@data_angan" filter="105-109" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:knee" spec="SiteModel" mutationRate="@featureClockRate:angan:knee" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:knee" spec="FilteredAlignment" data="@data_angan" filter="110-118" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:leaf" spec="SiteModel" mutationRate="@featureClockRate:angan:leaf" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:leaf" spec="FilteredAlignment" data="@data_angan" filter="119-127" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:liver" spec="SiteModel" mutationRate="@featureClockRate:angan:liver" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:liver" spec="FilteredAlignment" data="@data_angan" filter="128-133" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:louse" spec="SiteModel" mutationRate="@featureClockRate:angan:louse" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:louse" spec="FilteredAlignment" data="@data_angan" filter="134-137" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:mountain" spec="SiteModel" mutationRate="@featureClockRate:angan:mountain" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:mountain" spec="FilteredAlignment" data="@data_angan" filter="138-144" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:name" spec="SiteModel" mutationRate="@featureClockRate:angan:name" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:name" spec="FilteredAlignment" data="@data_angan" filter="145-152" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:new" spec="SiteModel" mutationRate="@featureClockRate:angan:new" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:new" spec="FilteredAlignment" data="@data_angan" filter="153-159" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:night" spec="SiteModel" mutationRate="@featureClockRate:angan:night" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:night" spec="FilteredAlignment" data="@data_angan" filter="160-166" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:nose" spec="SiteModel" mutationRate="@featureClockRate:angan:nose" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:nose" spec="FilteredAlignment" data="@data_angan" filter="167-171" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:one" spec="SiteModel" mutationRate="@featureClockRate:angan:one" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:one" spec="FilteredAlignment" data="@data_angan" filter="172-182" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:path" spec="SiteModel" mutationRate="@featureClockRate:angan:path" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:path" spec="FilteredAlignment" data="@data_angan" filter="183-191" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:person" spec="SiteModel" mutationRate="@featureClockRate:angan:person" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:person" spec="FilteredAlignment" data="@data_angan" filter="192-196" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:see" spec="SiteModel" mutationRate="@featureClockRate:angan:see" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:see" spec="FilteredAlignment" data="@data_angan" filter="197-207" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:skin" spec="SiteModel" mutationRate="@featureClockRate:angan:skin" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:skin" spec="FilteredAlignment" data="@data_angan" filter="208-214" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:star" spec="SiteModel" mutationRate="@featureClockRate:angan:star" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:star" spec="FilteredAlignment" data="@data_angan" filter="215-224" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:stone" spec="SiteModel" mutationRate="@featureClockRate:angan:stone" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:stone" spec="FilteredAlignment" data="@data_angan" filter="225-229" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:sun" spec="SiteModel" mutationRate="@featureClockRate:angan:sun" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:sun" spec="FilteredAlignment" data="@data_angan" filter="230-238" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:tongue" spec="SiteModel" mutationRate="@featureClockRate:angan:tongue" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:tongue" spec="FilteredAlignment" data="@data_angan" filter="239-247" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:tooth" spec="SiteModel" mutationRate="@featureClockRate:angan:tooth" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:tooth" spec="FilteredAlignment" data="@data_angan" filter="248-251" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:tree" spec="SiteModel" mutationRate="@featureClockRate:angan:tree" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:tree" spec="FilteredAlignment" data="@data_angan" filter="252-257" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:two" spec="SiteModel" mutationRate="@featureClockRate:angan:two" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:two" spec="FilteredAlignment" data="@data_angan" filter="258-266" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:angan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.angan:water" spec="SiteModel" mutationRate="@featureClockRate:angan:water" proportionInvariant="0" substModel="@covarion.s:angan" />
+          <data id="feature_data_angan:water" spec="FilteredAlignment" data="@data_angan" filter="267-273" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:angan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:angan" name="up" />
+      <parameter idref="featureClockRateGammaScale:angan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:angan" spec="ScaleOperator" parameter="@covarion_alpha.s:angan" scaleFactor="0.5" weight="1.0" />
+    <operator id="angan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:angan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:angan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">4 3 6 8 3 5 6 8 8 5 3 4 2 8 2 2 10 4 8 8 5 3 6 7 6 6 4 10 8 4 10 6 9 4 8 8 3 5 8 6</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="angan.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:angan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:angan" />
+      <log idref="covarion_alpha.s:angan" />
+      <log idref="covarion_s.s:angan" />
+    </logger>
+    <logger mode="tree" fileName="angan.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

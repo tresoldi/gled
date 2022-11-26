@@ -1,0 +1,118 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=69;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_taushiro.blood.0510,
+        3 bone_0ascertainment,
+        4 bone_taushiro.bone.0057,
+        5 come_0ascertainment,
+        6 come_taushiro.come.0645,
+        7 die_0ascertainment,
+        8 die_taushiro.die.0165,
+        9 dog_0ascertainment,
+        10 dog_taushiro.dog.0454,
+        11 drink_0ascertainment,
+        12 drink_taushiro.drink.0858,
+        13 ear_0ascertainment,
+        14 ear_taushiro.ear.0052,
+        15 eye_0ascertainment,
+        16 eye_taushiro.eye.0651,
+        17 fire_0ascertainment,
+        18 fire_taushiro.fire.0666,
+        19 fish_0ascertainment,
+        20 fish_taushiro.fish.0037,
+        21 hand_0ascertainment,
+        22 hand_taushiro.hand.0036,
+        23 hear_0ascertainment,
+        24 hear_taushiro.hear.0925,
+        25 horn_0ascertainment,
+        26 horn_taushiro.horn.0426,
+        27 knee_0ascertainment,
+        28 knee_taushiro.knee.0566,
+        29 leaf_0ascertainment,
+        30 leaf_taushiro.leaf.0009,
+        31 liver_0ascertainment,
+        32 liver_taushiro.liver.0776,
+        33 louse_0ascertainment,
+        34 louse_taushiro.louse.0655,
+        35 name_0ascertainment,
+        36 name_taushiro.name.0129,
+        37 new_0ascertainment,
+        38 new_taushiro.new.0634,
+        39 night_0ascertainment,
+        40 night_taushiro.night.0314,
+        41 nose_0ascertainment,
+        42 nose_taushiro.nose.0721,
+        43 one_0ascertainment,
+        44 one_taushiro.one.0110,
+        45 person_0ascertainment,
+        46 person_taushiro.person.0906,
+        47 pl_0ascertainment,
+        48 pl_taushiro.1pl.0770,
+        49 sg_0ascertainment,
+        50 sg_taushiro.1sg.0065,
+        51 sg_taushiro.2sg.0013,
+        52 skin_0ascertainment,
+        53 skin_taushiro.skin.0186,
+        54 star_0ascertainment,
+        55 star_taushiro.star.0730,
+        56 stone_0ascertainment,
+        57 stone_taushiro.stone.0980,
+        58 sun_0ascertainment,
+        59 sun_taushiro.sun.0556,
+        60 tongue_0ascertainment,
+        61 tongue_taushiro.tongue.0568,
+        62 tooth_0ascertainment,
+        63 tooth_taushiro.tooth.0670,
+        64 tree_0ascertainment,
+        65 tree_taushiro.tree.0104,
+        66 two_0ascertainment,
+        67 two_taushiro.two.0533,
+        68 water_0ascertainment,
+        69 water_taushiro.water.0009
+;
+
+MATRIX
+taushiro 010101010101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset come = 5-6;
+    charset die = 7-8;
+    charset dog = 9-10;
+    charset drink = 11-12;
+    charset ear = 13-14;
+    charset eye = 15-16;
+    charset fire = 17-18;
+    charset fish = 19-20;
+    charset hand = 21-22;
+    charset hear = 23-24;
+    charset horn = 25-26;
+    charset knee = 27-28;
+    charset leaf = 29-30;
+    charset liver = 31-32;
+    charset louse = 33-34;
+    charset name = 35-36;
+    charset new = 37-38;
+    charset night = 39-40;
+    charset nose = 41-42;
+    charset one = 43-44;
+    charset person = 45-46;
+    charset pl = 47-48;
+    charset sg = 49-51;
+    charset skin = 52-53;
+    charset star = 54-55;
+    charset stone = 56-57;
+    charset sun = 58-59;
+    charset tongue = 60-61;
+    charset tooth = 62-63;
+    charset tree = 64-65;
+    charset two = 66-67;
+    charset water = 68-69;
+END;

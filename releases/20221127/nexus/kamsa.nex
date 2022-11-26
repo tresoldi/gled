@@ -1,0 +1,138 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=84;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kamsa.blood.0137,
+        3 bone_0ascertainment,
+        4 bone_kamsa.bone.0069,
+        5 bone_kamsa.bone.0253,
+        6 breast_0ascertainment,
+        7 breast_kamsa.breast.0038,
+        8 come_0ascertainment,
+        9 come_kamsa.come.0114,
+        10 die_0ascertainment,
+        11 die_kamsa.die.0495,
+        12 dog_0ascertainment,
+        13 dog_kamsa.dog.0318,
+        14 drink_0ascertainment,
+        15 drink_kamsa.drink.0533,
+        16 drink_kamsa.drink.0534,
+        17 ear_0ascertainment,
+        18 ear_kamsa.ear.0269,
+        19 eye_0ascertainment,
+        20 eye_kamsa.eye.0424,
+        21 fire_0ascertainment,
+        22 fire_kamsa.fire.0101,
+        23 fish_0ascertainment,
+        24 fish_kamsa.fish.0091,
+        25 full_0ascertainment,
+        26 full_kamsa.full.0126,
+        27 hand_0ascertainment,
+        28 hand_kamsa.hand.0349,
+        29 hear_0ascertainment,
+        30 hear_kamsa.hear.0567,
+        31 horn_0ascertainment,
+        32 horn_kamsa.horn.0341,
+        33 knee_0ascertainment,
+        34 knee_kamsa.knee.0382,
+        35 leaf_0ascertainment,
+        36 leaf_kamsa.leaf.0362,
+        37 liver_0ascertainment,
+        38 liver_kamsa.liver.0476,
+        39 louse_0ascertainment,
+        40 louse_kamsa.louse.0211,
+        41 mountain_0ascertainment,
+        42 mountain_kamsa.mountain.0439,
+        43 name_0ascertainment,
+        44 name_kamsa.name.0144,
+        45 new_0ascertainment,
+        46 new_kamsa.new.0412,
+        47 night_0ascertainment,
+        48 night_kamsa.night.0142,
+        49 nose_0ascertainment,
+        50 nose_kamsa.nose.0459,
+        51 one_0ascertainment,
+        52 one_kamsa.one.0186,
+        53 path_0ascertainment,
+        54 path_kamsa.path.0459,
+        55 person_0ascertainment,
+        56 person_kamsa.person.0561,
+        57 pl_0ascertainment,
+        58 pl_kamsa.1pl.0044,
+        59 see_0ascertainment,
+        60 see_kamsa.see.0017,
+        61 sg_0ascertainment,
+        62 sg_kamsa.1sg.0276,
+        63 sg_kamsa.2sg.0098,
+        64 sg_kamsa.2sg.0332,
+        65 skin_0ascertainment,
+        66 skin_kamsa.skin.0490,
+        67 star_0ascertainment,
+        68 star_kamsa.star.0442,
+        69 stone_0ascertainment,
+        70 stone_kamsa.stone.0625,
+        71 sun_0ascertainment,
+        72 sun_kamsa.sun.0044,
+        73 tongue_0ascertainment,
+        74 tongue_kamsa.tongue.0376,
+        75 tooth_0ascertainment,
+        76 tooth_kamsa.tooth.0153,
+        77 tree_0ascertainment,
+        78 tree_kamsa.tree.0209,
+        79 tree_kamsa.tree.0403,
+        80 two_0ascertainment,
+        81 two_kamsa.two.0342,
+        82 water_0ascertainment,
+        83 water_kamsa.water.0343,
+        84 water_kamsa.water.0344
+;
+
+MATRIX
+kamsa 010110101010101101010101010101010101010101010101010101010101011101010101010101101011
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-7;
+    charset come = 8-9;
+    charset die = 10-11;
+    charset dog = 12-13;
+    charset drink = 14-16;
+    charset ear = 17-18;
+    charset eye = 19-20;
+    charset fire = 21-22;
+    charset fish = 23-24;
+    charset full = 25-26;
+    charset hand = 27-28;
+    charset hear = 29-30;
+    charset horn = 31-32;
+    charset knee = 33-34;
+    charset leaf = 35-36;
+    charset liver = 37-38;
+    charset louse = 39-40;
+    charset mountain = 41-42;
+    charset name = 43-44;
+    charset new = 45-46;
+    charset night = 47-48;
+    charset nose = 49-50;
+    charset one = 51-52;
+    charset path = 53-54;
+    charset person = 55-56;
+    charset pl = 57-58;
+    charset see = 59-60;
+    charset sg = 61-64;
+    charset skin = 65-66;
+    charset star = 67-68;
+    charset stone = 69-70;
+    charset sun = 71-72;
+    charset tongue = 73-74;
+    charset tooth = 75-76;
+    charset tree = 77-79;
+    charset two = 80-81;
+    charset water = 82-84;
+END;

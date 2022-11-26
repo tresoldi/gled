@@ -1,0 +1,155 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=100;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_huavean.blood.0005,
+        3 bone_0ascertainment,
+        4 bone_huavean.bone.0006,
+        5 breast_0ascertainment,
+        6 breast_huavean.breast.0007,
+        7 breast_huavean.breast.0008,
+        8 come_0ascertainment,
+        9 come_huavean.come.0009,
+        10 come_huavean.come.0010,
+        11 come_huavean.come.0011,
+        12 die_0ascertainment,
+        13 die_huavean.die.0012,
+        14 die_huavean.die.0013,
+        15 die_huavean.die.0014,
+        16 dog_0ascertainment,
+        17 dog_huavean.dog.0015,
+        18 dog_huavean.dog.0016,
+        19 drink_0ascertainment,
+        20 drink_huavean.drink.0017,
+        21 ear_0ascertainment,
+        22 ear_huavean.ear.0018,
+        23 eye_0ascertainment,
+        24 eye_huavean.eye.0019,
+        25 fire_0ascertainment,
+        26 fire_huavean.fire.0020,
+        27 fire_huavean.fire.0021,
+        28 fish_0ascertainment,
+        29 fish_huavean.fish.0022,
+        30 full_0ascertainment,
+        31 full_huavean.full.0023,
+        32 hand_0ascertainment,
+        33 hand_huavean.hand.0024,
+        34 hand_huavean.hand.0025,
+        35 hear_0ascertainment,
+        36 hear_huavean.hear.0026,
+        37 hear_huavean.hear.0027,
+        38 horn_0ascertainment,
+        39 horn_huavean.horn.0028,
+        40 knee_0ascertainment,
+        41 knee_huavean.knee.0029,
+        42 leaf_0ascertainment,
+        43 leaf_huavean.leaf.0030,
+        44 liver_0ascertainment,
+        45 liver_huavean.liver.0031,
+        46 louse_0ascertainment,
+        47 louse_huavean.louse.0032,
+        48 mountain_0ascertainment,
+        49 mountain_huavean.mountain.0033,
+        50 name_0ascertainment,
+        51 name_huavean.name.0034,
+        52 new_0ascertainment,
+        53 new_huavean.new.0035,
+        54 new_huavean.new.0036,
+        55 night_0ascertainment,
+        56 night_huavean.night.0037,
+        57 nose_0ascertainment,
+        58 nose_huavean.nose.0038,
+        59 nose_huavean.nose.0039,
+        60 one_0ascertainment,
+        61 one_huavean.one.0040,
+        62 one_huavean.one.0041,
+        63 path_0ascertainment,
+        64 path_huavean.path.0042,
+        65 person_0ascertainment,
+        66 person_huavean.person.0043,
+        67 person_huavean.person.0044,
+        68 pl_0ascertainment,
+        69 pl_huavean.1pl.0001,
+        70 pl_huavean.1pl.0002,
+        71 see_0ascertainment,
+        72 see_huavean.see.0045,
+        73 see_huavean.see.0046,
+        74 sg_0ascertainment,
+        75 sg_huavean.1sg.0003,
+        76 sg_huavean.2sg.0004,
+        77 skin_0ascertainment,
+        78 skin_huavean.skin.0047,
+        79 star_0ascertainment,
+        80 star_huavean.star.0048,
+        81 stone_0ascertainment,
+        82 stone_huavean.stone.0049,
+        83 sun_0ascertainment,
+        84 sun_huavean.sun.0050,
+        85 tongue_0ascertainment,
+        86 tongue_huavean.tongue.0051,
+        87 tooth_0ascertainment,
+        88 tooth_huavean.tooth.0052,
+        89 tooth_huavean.tooth.0053,
+        90 tree_0ascertainment,
+        91 tree_huavean.tree.0054,
+        92 tree_huavean.tree.0055,
+        93 tree_huavean.tree.0056,
+        94 two_0ascertainment,
+        95 two_huavean.two.0057,
+        96 two_huavean.two.0058,
+        97 two_huavean.two.0059,
+        98 water_0ascertainment,
+        99 water_huavean.water.0060,
+        100 water_huavean.water.0061
+;
+
+MATRIX
+huave_2                     0101010010001010110101010100101010010010101010101010100101001101011010010011010101010101001010110010
+san_francisco_del_mar_huave 0?0?00100110010001010101001010?0010010?010101010101001010010110101000100101101010?010?00100100101001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-11;
+    charset die = 12-15;
+    charset dog = 16-18;
+    charset drink = 19-20;
+    charset ear = 21-22;
+    charset eye = 23-24;
+    charset fire = 25-27;
+    charset fish = 28-29;
+    charset full = 30-31;
+    charset hand = 32-34;
+    charset hear = 35-37;
+    charset horn = 38-39;
+    charset knee = 40-41;
+    charset leaf = 42-43;
+    charset liver = 44-45;
+    charset louse = 46-47;
+    charset mountain = 48-49;
+    charset name = 50-51;
+    charset new = 52-54;
+    charset night = 55-56;
+    charset nose = 57-59;
+    charset one = 60-62;
+    charset path = 63-64;
+    charset person = 65-67;
+    charset pl = 68-70;
+    charset see = 71-73;
+    charset sg = 74-76;
+    charset skin = 77-78;
+    charset star = 79-80;
+    charset stone = 81-82;
+    charset sun = 83-84;
+    charset tongue = 85-86;
+    charset tooth = 87-89;
+    charset tree = 90-93;
+    charset two = 94-97;
+    charset water = 98-100;
+END;

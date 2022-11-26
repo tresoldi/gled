@@ -1,0 +1,122 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=73;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_southerndaly.blood.0326,
+        3 bone_0ascertainment,
+        4 bone_southerndaly.bone.0021,
+        5 breast_0ascertainment,
+        6 breast_southerndaly.breast.0317,
+        7 breast_southerndaly.breast.0536,
+        8 die_0ascertainment,
+        9 die_southerndaly.die.0568,
+        10 dog_0ascertainment,
+        11 dog_southerndaly.dog.0075,
+        12 drink_0ascertainment,
+        13 drink_southerndaly.drink.0380,
+        14 ear_0ascertainment,
+        15 ear_southerndaly.ear.0022,
+        16 eye_0ascertainment,
+        17 eye_southerndaly.eye.0550,
+        18 fire_0ascertainment,
+        19 fire_southerndaly.fire.0572,
+        20 full_0ascertainment,
+        21 full_southerndaly.full.0259,
+        22 hand_0ascertainment,
+        23 hand_southerndaly.hand.0210,
+        24 hear_0ascertainment,
+        25 hear_southerndaly.hear.0772,
+        26 knee_0ascertainment,
+        27 knee_southerndaly.knee.0051,
+        28 leaf_0ascertainment,
+        29 leaf_southerndaly.leaf.0015,
+        30 liver_0ascertainment,
+        31 liver_southerndaly.liver.0655,
+        32 mountain_0ascertainment,
+        33 mountain_southerndaly.mountain.0614,
+        34 name_0ascertainment,
+        35 name_southerndaly.name.0426,
+        36 new_0ascertainment,
+        37 new_southerndaly.new.0011,
+        38 night_0ascertainment,
+        39 night_southerndaly.night.0230,
+        40 night_southerndaly.night.0507,
+        41 nose_0ascertainment,
+        42 nose_southerndaly.nose.0608,
+        43 one_0ascertainment,
+        44 one_southerndaly.one.0006,
+        45 path_0ascertainment,
+        46 path_southerndaly.path.0591,
+        47 pl_0ascertainment,
+        48 pl_southerndaly.1pl.0012,
+        49 see_0ascertainment,
+        50 see_southerndaly.see.0476,
+        51 sg_0ascertainment,
+        52 sg_southerndaly.1sg.0070,
+        53 sg_southerndaly.2sg.0029,
+        54 skin_0ascertainment,
+        55 skin_southerndaly.skin.0228,
+        56 star_0ascertainment,
+        57 star_southerndaly.star.0153,
+        58 star_southerndaly.star.0607,
+        59 stone_0ascertainment,
+        60 stone_southerndaly.stone.0830,
+        61 sun_0ascertainment,
+        62 sun_southerndaly.sun.0095,
+        63 sun_southerndaly.sun.0464,
+        64 tongue_0ascertainment,
+        65 tongue_southerndaly.tongue.0057,
+        66 tooth_0ascertainment,
+        67 tooth_southerndaly.tooth.0565,
+        68 tree_0ascertainment,
+        69 tree_southerndaly.tree.0516,
+        70 two_0ascertainment,
+        71 two_southerndaly.two.0463,
+        72 water_0ascertainment,
+        73 water_southerndaly.water.0308
+;
+
+MATRIX
+murrinh_patha_2 0101011010101010101010101010101010101011010101010101101011010110101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset die = 8-9;
+    charset dog = 10-11;
+    charset drink = 12-13;
+    charset ear = 14-15;
+    charset eye = 16-17;
+    charset fire = 18-19;
+    charset full = 20-21;
+    charset hand = 22-23;
+    charset hear = 24-25;
+    charset knee = 26-27;
+    charset leaf = 28-29;
+    charset liver = 30-31;
+    charset mountain = 32-33;
+    charset name = 34-35;
+    charset new = 36-37;
+    charset night = 38-40;
+    charset nose = 41-42;
+    charset one = 43-44;
+    charset path = 45-46;
+    charset pl = 47-48;
+    charset see = 49-50;
+    charset sg = 51-53;
+    charset skin = 54-55;
+    charset star = 56-58;
+    charset stone = 59-60;
+    charset sun = 61-63;
+    charset tongue = 64-65;
+    charset tooth = 66-67;
+    charset tree = 68-69;
+    charset two = 70-71;
+    charset water = 72-73;
+END;

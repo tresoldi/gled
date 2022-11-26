@@ -1,0 +1,127 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=75;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_pawaia.blood.0340,
+        3 bone_0ascertainment,
+        4 bone_pawaia.bone.0186,
+        5 breast_0ascertainment,
+        6 breast_pawaia.breast.0209,
+        7 die_0ascertainment,
+        8 die_pawaia.die.0029,
+        9 dog_0ascertainment,
+        10 dog_pawaia.dog.0423,
+        11 drink_0ascertainment,
+        12 drink_pawaia.drink.0781,
+        13 ear_0ascertainment,
+        14 ear_pawaia.ear.0356,
+        15 eye_0ascertainment,
+        16 eye_pawaia.eye.0518,
+        17 fire_0ascertainment,
+        18 fire_pawaia.fire.0330,
+        19 fish_0ascertainment,
+        20 fish_pawaia.fish.0048,
+        21 full_0ascertainment,
+        22 full_pawaia.full.0805,
+        23 hand_0ascertainment,
+        24 hand_pawaia.hand.0466,
+        25 hear_0ascertainment,
+        26 hear_pawaia.hear.0847,
+        27 knee_0ascertainment,
+        28 knee_pawaia.knee.0037,
+        29 leaf_0ascertainment,
+        30 leaf_pawaia.leaf.0052,
+        31 liver_0ascertainment,
+        32 liver_pawaia.liver.0716,
+        33 louse_0ascertainment,
+        34 louse_pawaia.louse.0595,
+        35 mountain_0ascertainment,
+        36 mountain_pawaia.mountain.0002,
+        37 name_0ascertainment,
+        38 name_pawaia.name.0458,
+        39 new_0ascertainment,
+        40 new_pawaia.new.0587,
+        41 night_0ascertainment,
+        42 night_pawaia.night.0218,
+        43 nose_0ascertainment,
+        44 nose_pawaia.nose.0652,
+        45 one_0ascertainment,
+        46 one_pawaia.one.0024,
+        47 path_0ascertainment,
+        48 path_pawaia.path.0644,
+        49 person_0ascertainment,
+        50 person_pawaia.person.0001,
+        51 pl_0ascertainment,
+        52 pl_pawaia.1pl.0174,
+        53 see_0ascertainment,
+        54 see_pawaia.see.0513,
+        55 sg_0ascertainment,
+        56 sg_pawaia.1sg.0123,
+        57 skin_0ascertainment,
+        58 skin_pawaia.skin.0701,
+        59 star_0ascertainment,
+        60 star_pawaia.star.0495,
+        61 stone_0ascertainment,
+        62 stone_pawaia.stone.0259,
+        63 sun_0ascertainment,
+        64 sun_pawaia.sun.0108,
+        65 sun_pawaia.sun.0514,
+        66 tongue_0ascertainment,
+        67 tongue_pawaia.tongue.0199,
+        68 tooth_0ascertainment,
+        69 tooth_pawaia.tooth.0609,
+        70 tree_0ascertainment,
+        71 tree_pawaia.tree.0001,
+        72 two_0ascertainment,
+        73 two_pawaia.two.0497,
+        74 water_0ascertainment,
+        75 water_pawaia.water.0468
+;
+
+MATRIX
+pawaia_2 010101010101010101010101010101010101010101010101010101010101010110101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset die = 7-8;
+    charset dog = 9-10;
+    charset drink = 11-12;
+    charset ear = 13-14;
+    charset eye = 15-16;
+    charset fire = 17-18;
+    charset fish = 19-20;
+    charset full = 21-22;
+    charset hand = 23-24;
+    charset hear = 25-26;
+    charset knee = 27-28;
+    charset leaf = 29-30;
+    charset liver = 31-32;
+    charset louse = 33-34;
+    charset mountain = 35-36;
+    charset name = 37-38;
+    charset new = 39-40;
+    charset night = 41-42;
+    charset nose = 43-44;
+    charset one = 45-46;
+    charset path = 47-48;
+    charset person = 49-50;
+    charset pl = 51-52;
+    charset see = 53-54;
+    charset sg = 55-56;
+    charset skin = 57-58;
+    charset star = 59-60;
+    charset stone = 61-62;
+    charset sun = 63-65;
+    charset tongue = 66-67;
+    charset tooth = 68-69;
+    charset tree = 70-71;
+    charset two = 72-73;
+    charset water = 74-75;
+END;

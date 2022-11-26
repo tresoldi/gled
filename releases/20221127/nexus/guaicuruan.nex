@@ -1,0 +1,264 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=5 NCHAR=206;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_guaicuruan.blood.0009,
+        3 blood_guaicuruan.blood.0010,
+        4 blood_guaicuruan.blood.0011,
+        5 blood_guaicuruan.blood.0012,
+        6 blood_guaicuruan.blood.0013,
+        7 bone_0ascertainment,
+        8 bone_guaicuruan.bone.0014,
+        9 bone_guaicuruan.bone.0015,
+        10 bone_guaicuruan.bone.0016,
+        11 breast_0ascertainment,
+        12 breast_guaicuruan.breast.0017,
+        13 breast_guaicuruan.breast.0018,
+        14 breast_guaicuruan.breast.0019,
+        15 breast_guaicuruan.breast.0020,
+        16 breast_guaicuruan.breast.0021,
+        17 come_0ascertainment,
+        18 come_guaicuruan.come.0022,
+        19 come_guaicuruan.come.0023,
+        20 come_guaicuruan.come.0024,
+        21 die_0ascertainment,
+        22 die_guaicuruan.die.0025,
+        23 die_guaicuruan.die.0026,
+        24 die_guaicuruan.die.0027,
+        25 die_guaicuruan.die.0028,
+        26 die_guaicuruan.die.0029,
+        27 die_guaicuruan.die.0030,
+        28 dog_0ascertainment,
+        29 dog_guaicuruan.dog.0031,
+        30 dog_guaicuruan.dog.0032,
+        31 dog_guaicuruan.dog.0033,
+        32 dog_guaicuruan.dog.0034,
+        33 drink_0ascertainment,
+        34 drink_guaicuruan.drink.0035,
+        35 drink_guaicuruan.drink.0036,
+        36 drink_guaicuruan.drink.0037,
+        37 drink_guaicuruan.drink.0038,
+        38 drink_guaicuruan.drink.0039,
+        39 ear_0ascertainment,
+        40 ear_guaicuruan.ear.0040,
+        41 ear_guaicuruan.ear.0041,
+        42 ear_guaicuruan.ear.0042,
+        43 ear_guaicuruan.ear.0043,
+        44 eye_0ascertainment,
+        45 eye_guaicuruan.eye.0044,
+        46 eye_guaicuruan.eye.0045,
+        47 eye_guaicuruan.eye.0046,
+        48 eye_guaicuruan.eye.0047,
+        49 fire_0ascertainment,
+        50 fire_guaicuruan.fire.0048,
+        51 fire_guaicuruan.fire.0049,
+        52 fire_guaicuruan.fire.0050,
+        53 fire_guaicuruan.fire.0051,
+        54 fire_guaicuruan.fire.0052,
+        55 fish_0ascertainment,
+        56 fish_guaicuruan.fish.0053,
+        57 fish_guaicuruan.fish.0054,
+        58 fish_guaicuruan.fish.0055,
+        59 fish_guaicuruan.fish.0056,
+        60 full_0ascertainment,
+        61 full_guaicuruan.full.0057,
+        62 full_guaicuruan.full.0058,
+        63 full_guaicuruan.full.0059,
+        64 full_guaicuruan.full.0060,
+        65 hand_0ascertainment,
+        66 hand_guaicuruan.hand.0061,
+        67 hand_guaicuruan.hand.0062,
+        68 hand_guaicuruan.hand.0063,
+        69 hand_guaicuruan.hand.0064,
+        70 hand_guaicuruan.hand.0065,
+        71 hand_guaicuruan.hand.0066,
+        72 hear_0ascertainment,
+        73 hear_guaicuruan.hear.0067,
+        74 hear_guaicuruan.hear.0068,
+        75 hear_guaicuruan.hear.0069,
+        76 hear_guaicuruan.hear.0070,
+        77 hear_guaicuruan.hear.0071,
+        78 hear_guaicuruan.hear.0072,
+        79 horn_0ascertainment,
+        80 horn_guaicuruan.horn.0073,
+        81 horn_guaicuruan.horn.0074,
+        82 horn_guaicuruan.horn.0075,
+        83 horn_guaicuruan.horn.0076,
+        84 knee_0ascertainment,
+        85 knee_guaicuruan.knee.0077,
+        86 knee_guaicuruan.knee.0078,
+        87 knee_guaicuruan.knee.0079,
+        88 knee_guaicuruan.knee.0080,
+        89 leaf_0ascertainment,
+        90 leaf_guaicuruan.leaf.0081,
+        91 leaf_guaicuruan.leaf.0082,
+        92 leaf_guaicuruan.leaf.0083,
+        93 leaf_guaicuruan.leaf.0084,
+        94 leaf_guaicuruan.leaf.0085,
+        95 leaf_guaicuruan.leaf.0086,
+        96 liver_0ascertainment,
+        97 liver_guaicuruan.liver.0087,
+        98 liver_guaicuruan.liver.0088,
+        99 liver_guaicuruan.liver.0089,
+        100 louse_0ascertainment,
+        101 louse_guaicuruan.louse.0090,
+        102 louse_guaicuruan.louse.0091,
+        103 louse_guaicuruan.louse.0092,
+        104 mountain_0ascertainment,
+        105 mountain_guaicuruan.mountain.0093,
+        106 mountain_guaicuruan.mountain.0094,
+        107 mountain_guaicuruan.mountain.0095,
+        108 mountain_guaicuruan.mountain.0096,
+        109 name_0ascertainment,
+        110 name_guaicuruan.name.0097,
+        111 name_guaicuruan.name.0098,
+        112 name_guaicuruan.name.0099,
+        113 name_guaicuruan.name.0100,
+        114 new_0ascertainment,
+        115 new_guaicuruan.new.0101,
+        116 new_guaicuruan.new.0102,
+        117 night_0ascertainment,
+        118 night_guaicuruan.night.0103,
+        119 night_guaicuruan.night.0104,
+        120 night_guaicuruan.night.0105,
+        121 night_guaicuruan.night.0106,
+        122 night_guaicuruan.night.0107,
+        123 night_guaicuruan.night.0108,
+        124 nose_0ascertainment,
+        125 nose_guaicuruan.nose.0109,
+        126 nose_guaicuruan.nose.0110,
+        127 nose_guaicuruan.nose.0111,
+        128 one_0ascertainment,
+        129 one_guaicuruan.one.0112,
+        130 one_guaicuruan.one.0113,
+        131 one_guaicuruan.one.0114,
+        132 path_0ascertainment,
+        133 path_guaicuruan.path.0115,
+        134 path_guaicuruan.path.0116,
+        135 path_guaicuruan.path.0117,
+        136 path_guaicuruan.path.0118,
+        137 path_guaicuruan.path.0119,
+        138 person_0ascertainment,
+        139 person_guaicuruan.person.0120,
+        140 person_guaicuruan.person.0121,
+        141 pl_0ascertainment,
+        142 pl_guaicuruan.1pl.0001,
+        143 pl_guaicuruan.1pl.0002,
+        144 see_0ascertainment,
+        145 see_guaicuruan.see.0122,
+        146 see_guaicuruan.see.0123,
+        147 see_guaicuruan.see.0124,
+        148 see_guaicuruan.see.0125,
+        149 see_guaicuruan.see.0126,
+        150 sg_0ascertainment,
+        151 sg_guaicuruan.1sg.0003,
+        152 sg_guaicuruan.1sg.0004,
+        153 sg_guaicuruan.2sg.0005,
+        154 sg_guaicuruan.2sg.0006,
+        155 sg_guaicuruan.2sg.0007,
+        156 sg_guaicuruan.2sg.0008,
+        157 skin_0ascertainment,
+        158 skin_guaicuruan.skin.0127,
+        159 skin_guaicuruan.skin.0128,
+        160 skin_guaicuruan.skin.0129,
+        161 skin_guaicuruan.skin.0130,
+        162 skin_guaicuruan.skin.0131,
+        163 skin_guaicuruan.skin.0132,
+        164 star_0ascertainment,
+        165 star_guaicuruan.star.0133,
+        166 star_guaicuruan.star.0134,
+        167 star_guaicuruan.star.0135,
+        168 star_guaicuruan.star.0136,
+        169 stone_0ascertainment,
+        170 stone_guaicuruan.stone.0137,
+        171 stone_guaicuruan.stone.0138,
+        172 stone_guaicuruan.stone.0139,
+        173 stone_guaicuruan.stone.0140,
+        174 sun_0ascertainment,
+        175 sun_guaicuruan.sun.0141,
+        176 sun_guaicuruan.sun.0142,
+        177 sun_guaicuruan.sun.0143,
+        178 sun_guaicuruan.sun.0144,
+        179 sun_guaicuruan.sun.0145,
+        180 sun_guaicuruan.sun.0146,
+        181 sun_guaicuruan.sun.0147,
+        182 tongue_0ascertainment,
+        183 tongue_guaicuruan.tongue.0148,
+        184 tongue_guaicuruan.tongue.0149,
+        185 tongue_guaicuruan.tongue.0150,
+        186 tongue_guaicuruan.tongue.0151,
+        187 tooth_0ascertainment,
+        188 tooth_guaicuruan.tooth.0152,
+        189 tooth_guaicuruan.tooth.0153,
+        190 tooth_guaicuruan.tooth.0154,
+        191 tooth_guaicuruan.tooth.0155,
+        192 tree_0ascertainment,
+        193 tree_guaicuruan.tree.0156,
+        194 tree_guaicuruan.tree.0157,
+        195 tree_guaicuruan.tree.0158,
+        196 two_0ascertainment,
+        197 two_guaicuruan.two.0159,
+        198 two_guaicuruan.two.0160,
+        199 two_guaicuruan.two.0161,
+        200 two_guaicuruan.two.0162,
+        201 water_0ascertainment,
+        202 water_guaicuruan.water.0163,
+        203 water_guaicuruan.water.0164,
+        204 water_guaicuruan.water.0165,
+        205 water_guaicuruan.water.0166,
+        206 water_guaicuruan.water.0167
+;
+
+MATRIX
+abipon  01000001010100000110010001001001010001010000????010000010000????01000000100001010000100001000000100010001000010010??010000101000???0100000??0??0100010??????0100000010000100001000010010000100001000????010001
+kadiweu 001000001000100001000010000001000010000010001000001000001000100000100000010000001000010000100000010001000100001000100010000001001000010000??010001000010100000100000010000100001000000010000100001001000001000
+mocovi  00010000100001000100000100000010000100000100010000010000010001000001000000100001000000100001000000100010001000100010000100000010???00010001000100010000101000001000000100001000010000000100010000010????000100
+pilaga  00010000100100000100000010000010000010000100001000001000001000100000100000010000010000010010010000100010001000010010000010000010010000100001001001000001001000001000001000010000010000000100010000100100010000
+toba    00001100100000110101001000100010000010000010000100000100001000010000011000001000001000010000101000100010001100100001000001000010001000011001001000010001001100000110000100011000001010000100001000100011000010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-6;
+    charset bone = 7-10;
+    charset breast = 11-16;
+    charset come = 17-20;
+    charset die = 21-27;
+    charset dog = 28-32;
+    charset drink = 33-38;
+    charset ear = 39-43;
+    charset eye = 44-48;
+    charset fire = 49-54;
+    charset fish = 55-59;
+    charset full = 60-64;
+    charset hand = 65-71;
+    charset hear = 72-78;
+    charset horn = 79-83;
+    charset knee = 84-88;
+    charset leaf = 89-95;
+    charset liver = 96-99;
+    charset louse = 100-103;
+    charset mountain = 104-108;
+    charset name = 109-113;
+    charset new = 114-116;
+    charset night = 117-123;
+    charset nose = 124-127;
+    charset one = 128-131;
+    charset path = 132-137;
+    charset person = 138-140;
+    charset pl = 141-143;
+    charset see = 144-149;
+    charset sg = 150-156;
+    charset skin = 157-163;
+    charset star = 164-168;
+    charset stone = 169-173;
+    charset sun = 174-181;
+    charset tongue = 182-186;
+    charset tooth = 187-191;
+    charset tree = 192-195;
+    charset two = 196-200;
+    charset water = 201-206;
+END;

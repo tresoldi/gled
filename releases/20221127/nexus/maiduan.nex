@@ -1,0 +1,153 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=100;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_maiduan.blood.0006,
+        3 bone_0ascertainment,
+        4 bone_maiduan.bone.0007,
+        5 breast_0ascertainment,
+        6 breast_maiduan.breast.0008,
+        7 come_0ascertainment,
+        8 come_maiduan.come.0009,
+        9 die_0ascertainment,
+        10 die_maiduan.die.0010,
+        11 dog_0ascertainment,
+        12 dog_maiduan.dog.0011,
+        13 dog_maiduan.dog.0012,
+        14 dog_maiduan.dog.0013,
+        15 drink_0ascertainment,
+        16 drink_maiduan.drink.0014,
+        17 drink_maiduan.drink.0015,
+        18 ear_0ascertainment,
+        19 ear_maiduan.ear.0016,
+        20 eye_0ascertainment,
+        21 eye_maiduan.eye.0017,
+        22 eye_maiduan.eye.0018,
+        23 fire_0ascertainment,
+        24 fire_maiduan.fire.0019,
+        25 fish_0ascertainment,
+        26 fish_maiduan.fish.0020,
+        27 fish_maiduan.fish.0021,
+        28 full_0ascertainment,
+        29 full_maiduan.full.0022,
+        30 full_maiduan.full.0023,
+        31 hand_0ascertainment,
+        32 hand_maiduan.hand.0024,
+        33 hear_0ascertainment,
+        34 hear_maiduan.hear.0025,
+        35 knee_0ascertainment,
+        36 knee_maiduan.knee.0026,
+        37 leaf_0ascertainment,
+        38 leaf_maiduan.leaf.0027,
+        39 leaf_maiduan.leaf.0028,
+        40 liver_0ascertainment,
+        41 liver_maiduan.liver.0029,
+        42 liver_maiduan.liver.0030,
+        43 louse_0ascertainment,
+        44 louse_maiduan.louse.0031,
+        45 louse_maiduan.louse.0032,
+        46 mountain_0ascertainment,
+        47 mountain_maiduan.mountain.0033,
+        48 name_0ascertainment,
+        49 name_maiduan.name.0034,
+        50 name_maiduan.name.0035,
+        51 new_0ascertainment,
+        52 new_maiduan.new.0036,
+        53 night_0ascertainment,
+        54 night_maiduan.night.0037,
+        55 night_maiduan.night.0038,
+        56 night_maiduan.night.0039,
+        57 nose_0ascertainment,
+        58 nose_maiduan.nose.0040,
+        59 nose_maiduan.nose.0041,
+        60 one_0ascertainment,
+        61 one_maiduan.one.0042,
+        62 one_maiduan.one.0043,
+        63 one_maiduan.one.0044,
+        64 path_0ascertainment,
+        65 path_maiduan.path.0045,
+        66 path_maiduan.path.0046,
+        67 person_0ascertainment,
+        68 person_maiduan.person.0047,
+        69 pl_0ascertainment,
+        70 pl_maiduan.1pl.0001,
+        71 pl_maiduan.1pl.0002,
+        72 see_0ascertainment,
+        73 see_maiduan.see.0048,
+        74 see_maiduan.see.0049,
+        75 see_maiduan.see.0050,
+        76 sg_0ascertainment,
+        77 sg_maiduan.1sg.0003,
+        78 sg_maiduan.2sg.0004,
+        79 sg_maiduan.2sg.0005,
+        80 skin_0ascertainment,
+        81 skin_maiduan.skin.0051,
+        82 skin_maiduan.skin.0052,
+        83 star_0ascertainment,
+        84 star_maiduan.star.0053,
+        85 star_maiduan.star.0054,
+        86 star_maiduan.star.0055,
+        87 sun_0ascertainment,
+        88 sun_maiduan.sun.0056,
+        89 sun_maiduan.sun.0057,
+        90 tongue_0ascertainment,
+        91 tongue_maiduan.tongue.0058,
+        92 tongue_maiduan.tongue.0059,
+        93 tooth_0ascertainment,
+        94 tooth_maiduan.tooth.0060,
+        95 tree_0ascertainment,
+        96 tree_maiduan.tree.0061,
+        97 two_0ascertainment,
+        98 two_maiduan.two.0062,
+        99 water_0ascertainment,
+        100 water_maiduan.water.0063
+;
+
+MATRIX
+ne_maidu 010101010101010100101001010010010101010010011010100?011001001000100101001000111010010001001001010101
+nisenan  0101010?010010011010010100100101010?0010010010101101010100100110010?0010011010100100110010010?010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-14;
+    charset drink = 15-17;
+    charset ear = 18-19;
+    charset eye = 20-22;
+    charset fire = 23-24;
+    charset fish = 25-27;
+    charset full = 28-30;
+    charset hand = 31-32;
+    charset hear = 33-34;
+    charset knee = 35-36;
+    charset leaf = 37-39;
+    charset liver = 40-42;
+    charset louse = 43-45;
+    charset mountain = 46-47;
+    charset name = 48-50;
+    charset new = 51-52;
+    charset night = 53-56;
+    charset nose = 57-59;
+    charset one = 60-63;
+    charset path = 64-66;
+    charset person = 67-68;
+    charset pl = 69-71;
+    charset see = 72-75;
+    charset sg = 76-79;
+    charset skin = 80-82;
+    charset star = 83-86;
+    charset sun = 87-89;
+    charset tongue = 90-92;
+    charset tooth = 93-94;
+    charset tree = 95-96;
+    charset two = 97-98;
+    charset water = 99-100;
+END;

@@ -1,0 +1,255 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=7 NCHAR=195;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_koman.blood.0014,
+        3 blood_koman.blood.0015,
+        4 blood_koman.blood.0016,
+        5 blood_koman.blood.0017,
+        6 blood_koman.blood.0018,
+        7 bone_0ascertainment,
+        8 bone_koman.bone.0019,
+        9 bone_koman.bone.0020,
+        10 bone_koman.bone.0021,
+        11 bone_koman.bone.0022,
+        12 breast_0ascertainment,
+        13 breast_koman.breast.0023,
+        14 breast_koman.breast.0024,
+        15 come_0ascertainment,
+        16 come_koman.come.0025,
+        17 come_koman.come.0026,
+        18 come_koman.come.0027,
+        19 come_koman.come.0028,
+        20 come_koman.come.0029,
+        21 die_0ascertainment,
+        22 die_koman.die.0030,
+        23 die_koman.die.0031,
+        24 die_koman.die.0032,
+        25 die_koman.die.0033,
+        26 die_koman.die.0034,
+        27 dog_0ascertainment,
+        28 dog_koman.dog.0035,
+        29 dog_koman.dog.0036,
+        30 dog_koman.dog.0037,
+        31 dog_koman.dog.0038,
+        32 dog_koman.dog.0039,
+        33 drink_0ascertainment,
+        34 drink_koman.drink.0040,
+        35 drink_koman.drink.0041,
+        36 drink_koman.drink.0042,
+        37 drink_koman.drink.0043,
+        38 drink_koman.drink.0044,
+        39 ear_0ascertainment,
+        40 ear_koman.ear.0045,
+        41 ear_koman.ear.0046,
+        42 ear_koman.ear.0047,
+        43 ear_koman.ear.0048,
+        44 eye_0ascertainment,
+        45 eye_koman.eye.0049,
+        46 eye_koman.eye.0050,
+        47 eye_koman.eye.0051,
+        48 eye_koman.eye.0052,
+        49 eye_koman.eye.0053,
+        50 fire_0ascertainment,
+        51 fire_koman.fire.0054,
+        52 fire_koman.fire.0055,
+        53 fish_0ascertainment,
+        54 fish_koman.fish.0056,
+        55 fish_koman.fish.0057,
+        56 fish_koman.fish.0058,
+        57 fish_koman.fish.0059,
+        58 full_0ascertainment,
+        59 full_koman.full.0060,
+        60 full_koman.full.0061,
+        61 hand_0ascertainment,
+        62 hand_koman.hand.0062,
+        63 hand_koman.hand.0063,
+        64 hand_koman.hand.0064,
+        65 hear_0ascertainment,
+        66 hear_koman.hear.0065,
+        67 hear_koman.hear.0066,
+        68 hear_koman.hear.0067,
+        69 hear_koman.hear.0068,
+        70 hear_koman.hear.0069,
+        71 horn_0ascertainment,
+        72 horn_koman.horn.0070,
+        73 horn_koman.horn.0071,
+        74 horn_koman.horn.0072,
+        75 knee_0ascertainment,
+        76 knee_koman.knee.0073,
+        77 knee_koman.knee.0074,
+        78 knee_koman.knee.0075,
+        79 leaf_0ascertainment,
+        80 leaf_koman.leaf.0076,
+        81 leaf_koman.leaf.0077,
+        82 leaf_koman.leaf.0078,
+        83 leaf_koman.leaf.0079,
+        84 liver_0ascertainment,
+        85 liver_koman.liver.0080,
+        86 liver_koman.liver.0081,
+        87 liver_koman.liver.0082,
+        88 liver_koman.liver.0083,
+        89 louse_0ascertainment,
+        90 louse_koman.louse.0084,
+        91 louse_koman.louse.0085,
+        92 louse_koman.louse.0086,
+        93 louse_koman.louse.0087,
+        94 mountain_0ascertainment,
+        95 mountain_koman.mountain.0088,
+        96 mountain_koman.mountain.0089,
+        97 mountain_koman.mountain.0090,
+        98 mountain_koman.mountain.0091,
+        99 mountain_koman.mountain.0092,
+        100 name_0ascertainment,
+        101 name_koman.name.0093,
+        102 name_koman.name.0094,
+        103 name_koman.name.0095,
+        104 name_koman.name.0096,
+        105 name_koman.name.0097,
+        106 new_0ascertainment,
+        107 new_koman.new.0098,
+        108 new_koman.new.0099,
+        109 new_koman.new.0100,
+        110 new_koman.new.0101,
+        111 night_0ascertainment,
+        112 night_koman.night.0102,
+        113 night_koman.night.0103,
+        114 night_koman.night.0104,
+        115 night_koman.night.0105,
+        116 night_koman.night.0106,
+        117 night_koman.night.0107,
+        118 nose_0ascertainment,
+        119 nose_koman.nose.0108,
+        120 nose_koman.nose.0109,
+        121 one_0ascertainment,
+        122 one_koman.one.0110,
+        123 one_koman.one.0111,
+        124 one_koman.one.0112,
+        125 one_koman.one.0113,
+        126 one_koman.one.0114,
+        127 path_0ascertainment,
+        128 path_koman.path.0115,
+        129 path_koman.path.0116,
+        130 path_koman.path.0117,
+        131 path_koman.path.0118,
+        132 path_koman.path.0119,
+        133 person_0ascertainment,
+        134 person_koman.person.0120,
+        135 person_koman.person.0121,
+        136 person_koman.person.0122,
+        137 person_koman.person.0123,
+        138 person_koman.person.0124,
+        139 pl_0ascertainment,
+        140 pl_koman.1pl.0001,
+        141 pl_koman.1pl.0002,
+        142 pl_koman.1pl.0003,
+        143 pl_koman.1pl.0004,
+        144 pl_koman.1pl.0005,
+        145 pl_koman.1pl.0006,
+        146 see_0ascertainment,
+        147 see_koman.see.0125,
+        148 see_koman.see.0126,
+        149 see_koman.see.0127,
+        150 see_koman.see.0128,
+        151 see_koman.see.0129,
+        152 see_koman.see.0130,
+        153 sg_0ascertainment,
+        154 sg_koman.1sg.0007,
+        155 sg_koman.1sg.0008,
+        156 sg_koman.2sg.0009,
+        157 sg_koman.2sg.0010,
+        158 sg_koman.2sg.0011,
+        159 sg_koman.2sg.0012,
+        160 sg_koman.2sg.0013,
+        161 skin_0ascertainment,
+        162 skin_koman.skin.0131,
+        163 skin_koman.skin.0132,
+        164 skin_koman.skin.0133,
+        165 skin_koman.skin.0134,
+        166 star_0ascertainment,
+        167 star_koman.star.0135,
+        168 star_koman.star.0136,
+        169 star_koman.star.0137,
+        170 star_koman.star.0138,
+        171 stone_0ascertainment,
+        172 stone_koman.stone.0139,
+        173 stone_koman.stone.0140,
+        174 sun_0ascertainment,
+        175 sun_koman.sun.0141,
+        176 sun_koman.sun.0142,
+        177 sun_koman.sun.0143,
+        178 tongue_0ascertainment,
+        179 tongue_koman.tongue.0144,
+        180 tongue_koman.tongue.0145,
+        181 tooth_0ascertainment,
+        182 tooth_koman.tooth.0146,
+        183 tree_0ascertainment,
+        184 tree_koman.tree.0147,
+        185 tree_koman.tree.0148,
+        186 two_0ascertainment,
+        187 two_koman.two.0149,
+        188 two_koman.two.0150,
+        189 two_koman.two.0151,
+        190 water_0ascertainment,
+        191 water_koman.water.0152,
+        192 water_koman.water.0153,
+        193 water_koman.water.0154,
+        194 water_koman.water.0155,
+        195 water_koman.water.0156
+;
+
+MATRIX
+central_koma  0100000100001001000001000001000001000001000010000010010000??010001000001000???010000100001000010000010000010000100000010010100010000010000010000001000000101000001000010000100100010010100100010000
+gwama         0010000010000100100000100000100000100000100001000001001000100010001000001001000????0010000100001000001000001000010000010001000001000001000001001000100000100100000100001000010010001010010010001000
+koma          0100000001001000010001010000010001000101000010100010001000010???010000010000100????00100010000?????010000000100001000010000100000100000100000100001000000100000001000010000100100010010100100000100
+langa         0001000????01000001000001000001000010001000000010010000100??00010001000100000100100000100????000100000100000010000100001000010000010000010000010000010000100000000010000100??0100010010100001000010
+northern_koma 0000100010000100000100000100100000100000010001000011000010??00100000100010010000100001000????001000000010001000010000010000001001000001000001000000001000100010000100001000010010001010010010001000
+southern_koma 0000010????001001000000001001000001000000010010000010????0??00100?????0???01000001000100000100000100?????001000000010010001000001000001000000001000000100100001000100001000010010001010010010001000
+uduk          0100000000101000100001000000000100001001000000001001000100??001000000100010???000010000100001000001000001000100000001010010000000001000001000000100000010010000100001000010100001010010100100000001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-6;
+    charset bone = 7-11;
+    charset breast = 12-14;
+    charset come = 15-20;
+    charset die = 21-26;
+    charset dog = 27-32;
+    charset drink = 33-38;
+    charset ear = 39-43;
+    charset eye = 44-49;
+    charset fire = 50-52;
+    charset fish = 53-57;
+    charset full = 58-60;
+    charset hand = 61-64;
+    charset hear = 65-70;
+    charset horn = 71-74;
+    charset knee = 75-78;
+    charset leaf = 79-83;
+    charset liver = 84-88;
+    charset louse = 89-93;
+    charset mountain = 94-99;
+    charset name = 100-105;
+    charset new = 106-110;
+    charset night = 111-117;
+    charset nose = 118-120;
+    charset one = 121-126;
+    charset path = 127-132;
+    charset person = 133-138;
+    charset pl = 139-145;
+    charset see = 146-152;
+    charset sg = 153-160;
+    charset skin = 161-165;
+    charset star = 166-170;
+    charset stone = 171-173;
+    charset sun = 174-177;
+    charset tongue = 178-180;
+    charset tooth = 181-182;
+    charset tree = 183-185;
+    charset two = 186-189;
+    charset water = 190-195;
+END;

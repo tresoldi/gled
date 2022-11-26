@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Ganggalida_gang1267
+			Kayardild_kaya1319
+			;
+End;
+Begin trees;
+	Translate
+		   1 Ganggalida_gang1267,
+		   2 Kayardild_kaya1319
+;
+tree TREE1 = (1[&height=0.0,length=2.519358708258346,length_95%_HPD={0.2772,6.9847},length_median=1.3676,length_range={0.2397,45.9299},rate=0.9951764447110615,rate_95%_HPD={0.6814,1.2554},rate_median=1.004,rate_range={0.0567,1.2554}]:2.519358708258346,2[&height=0.0,length=2.519358708258346,length_95%_HPD={0.2772,6.9847},length_median=1.3676,length_range={0.2397,45.9299},rate=0.994945870825839,rate_95%_HPD={0.6889,1.2554},rate_median=1.0037,rate_range={0.0567,1.2554}]:2.519358708258346)[&CAheight_95%_HPD={0.2772,6.9847},CAheight_mean=2.519358708258346,CAheight_median=1.3676,CAheight_range={0.2397,45.9299},height=2.519358708258346,height_95%_HPD={0.2772,6.9847},height_median=1.3676,height_range={0.2397,45.9299},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

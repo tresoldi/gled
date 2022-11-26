@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Dadibi_dadi1250
+			Folopa_folo1238
+			;
+End;
+Begin trees;
+	Translate
+		   1 Dadibi_dadi1250,
+		   2 Folopa_folo1238
+;
+tree TREE1 = (1[&height=0.0,length=9.243946250749794,length_95%_HPD={0.4696,37.0948},length_median=2.369,length_range={0.4011,228.7929},rate=0.9988698060387895,rate_95%_HPD={0.7739,1.2554},rate_median=1.0022,rate_range={0.1832,1.2554}]:9.243946250749794,2[&height=0.0,length=9.243946250749794,length_95%_HPD={0.4696,37.0948},length_median=2.369,length_range={0.4011,228.7929},rate=0.9956727054589084,rate_95%_HPD={0.7439,1.2554},rate_median=1.0015,rate_range={0.1832,1.2554}]:9.243946250749794)[&CAheight_95%_HPD={0.4696,37.0948},CAheight_mean=9.243946250749794,CAheight_median=2.369,CAheight_range={0.4011,228.7929},height=9.243946250749794,height_95%_HPD={0.4696,37.0948},height_median=2.369,height_range={0.4011,228.7929},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

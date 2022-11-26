@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Nisgaa_nisg1240
+			Southern-CoastalTsimshian_nucl1649
+			;
+End;
+Begin trees;
+	Translate
+		   1 Nisgaa_nisg1240,
+		   2 Southern-CoastalTsimshian_nucl1649
+;
+tree TREE1 = (1[&height=0.0,length=4.4454558088382035,length_95%_HPD={0.4065,15.4982},length_median=1.9849,length_range={0.4065,90.112},rate=0.9938725454909011,rate_95%_HPD={0.6955,1.2554},rate_median=1.0002,rate_range={0.1319,1.2554}]:4.4454558088382035,2[&height=0.0,length=4.4454558088382035,length_95%_HPD={0.4065,15.4982},length_median=1.9849,length_range={0.4065,90.112},rate=0.9892306738652259,rate_95%_HPD={0.6838,1.2553},rate_median=1.0002,rate_range={0.1319,1.2554}]:4.4454558088382035)[&CAheight_95%_HPD={0.4065,15.4982},CAheight_mean=4.4454558088382035,CAheight_median=1.9849,CAheight_range={0.4065,90.112},height=4.4454558088382035,height_95%_HPD={0.4065,15.4982},height_median=1.9849,height_range={0.4065,90.112},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

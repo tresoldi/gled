@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Kamula_kamu1260
+			Pare_pare1271
+			;
+End;
+Begin trees;
+	Translate
+		   1 Kamula_kamu1260,
+		   2 Pare_pare1271
+;
+tree TREE1 = (1[&height=0.0,length=4.7912336532693205,length_95%_HPD={0.4821,17.5172},length_median=1.9503,length_range={0.3586,278.4778},rate=0.9985026394720985,rate_95%_HPD={0.757,1.2554},rate_median=1.0013,rate_range={0.1904,1.2554}]:4.7912336532693205,2[&height=0.0,length=4.7912336532693205,length_95%_HPD={0.4821,17.5172},length_median=1.9503,length_range={0.3586,278.4778},rate=0.9949113177364479,rate_95%_HPD={0.7449,1.2541},rate_median=1.0009,rate_range={0.1904,1.2554}]:4.7912336532693205)[&CAheight_95%_HPD={0.4821,17.5172},CAheight_mean=4.7912336532693205,CAheight_median=1.9503,CAheight_range={0.3586,278.4778},height=4.7912336532693205,height_95%_HPD={0.4821,17.5172},height_median=1.9503,height_range={0.3586,278.4778},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

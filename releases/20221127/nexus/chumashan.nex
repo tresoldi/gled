@@ -1,0 +1,156 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=100;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_chumashan.blood.0004,
+        3 blood_chumashan.blood.0005,
+        4 bone_0ascertainment,
+        5 bone_chumashan.bone.0006,
+        6 breast_0ascertainment,
+        7 breast_chumashan.breast.0007,
+        8 breast_chumashan.breast.0008,
+        9 come_0ascertainment,
+        10 come_chumashan.come.0009,
+        11 come_chumashan.come.0010,
+        12 come_chumashan.come.0011,
+        13 come_chumashan.come.0012,
+        14 die_0ascertainment,
+        15 die_chumashan.die.0013,
+        16 die_chumashan.die.0014,
+        17 dog_0ascertainment,
+        18 dog_chumashan.dog.0015,
+        19 dog_chumashan.dog.0016,
+        20 drink_0ascertainment,
+        21 drink_chumashan.drink.0017,
+        22 ear_0ascertainment,
+        23 ear_chumashan.ear.0018,
+        24 eye_0ascertainment,
+        25 eye_chumashan.eye.0019,
+        26 fire_0ascertainment,
+        27 fire_chumashan.fire.0020,
+        28 fire_chumashan.fire.0021,
+        29 fish_0ascertainment,
+        30 fish_chumashan.fish.0022,
+        31 fish_chumashan.fish.0023,
+        32 full_0ascertainment,
+        33 full_chumashan.full.0024,
+        34 hand_0ascertainment,
+        35 hand_chumashan.hand.0025,
+        36 hand_chumashan.hand.0026,
+        37 hear_0ascertainment,
+        38 hear_chumashan.hear.0027,
+        39 horn_0ascertainment,
+        40 horn_chumashan.horn.0028,
+        41 horn_chumashan.horn.0029,
+        42 knee_0ascertainment,
+        43 knee_chumashan.knee.0030,
+        44 knee_chumashan.knee.0031,
+        45 leaf_0ascertainment,
+        46 leaf_chumashan.leaf.0032,
+        47 liver_0ascertainment,
+        48 liver_chumashan.liver.0033,
+        49 liver_chumashan.liver.0034,
+        50 louse_0ascertainment,
+        51 louse_chumashan.louse.0035,
+        52 mountain_0ascertainment,
+        53 mountain_chumashan.mountain.0036,
+        54 mountain_chumashan.mountain.0037,
+        55 mountain_chumashan.mountain.0038,
+        56 name_0ascertainment,
+        57 name_chumashan.name.0039,
+        58 new_0ascertainment,
+        59 new_chumashan.new.0040,
+        60 new_chumashan.new.0041,
+        61 night_0ascertainment,
+        62 night_chumashan.night.0042,
+        63 night_chumashan.night.0043,
+        64 night_chumashan.night.0044,
+        65 nose_0ascertainment,
+        66 nose_chumashan.nose.0045,
+        67 one_0ascertainment,
+        68 one_chumashan.one.0046,
+        69 path_0ascertainment,
+        70 path_chumashan.path.0047,
+        71 person_0ascertainment,
+        72 person_chumashan.person.0048,
+        73 pl_0ascertainment,
+        74 pl_chumashan.1pl.0001,
+        75 see_0ascertainment,
+        76 see_chumashan.see.0049,
+        77 see_chumashan.see.0050,
+        78 sg_0ascertainment,
+        79 sg_chumashan.1sg.0002,
+        80 sg_chumashan.2sg.0003,
+        81 skin_0ascertainment,
+        82 skin_chumashan.skin.0051,
+        83 skin_chumashan.skin.0052,
+        84 star_0ascertainment,
+        85 star_chumashan.star.0053,
+        86 stone_0ascertainment,
+        87 stone_chumashan.stone.0054,
+        88 sun_0ascertainment,
+        89 sun_chumashan.sun.0055,
+        90 sun_chumashan.sun.0056,
+        91 tongue_0ascertainment,
+        92 tongue_chumashan.tongue.0057,
+        93 tooth_0ascertainment,
+        94 tooth_chumashan.tooth.0058,
+        95 tree_0ascertainment,
+        96 tree_chumashan.tree.0059,
+        97 two_0ascertainment,
+        98 two_chumashan.two.0060,
+        99 water_0ascertainment,
+        100 water_chumashan.water.0061
+;
+
+MATRIX
+chumash_barbareno 01001010010100110??0101010100100101001010010010100?0100010100100010101010?0100??01001010100101010101
+inesenyo          010010110110101101001010101101001010010010010100101001101010001001010101010100110110101001010101010?
+venturenyo        001010??0????0100010101010100010?011010010??0?0010?000101001000101010?010100101101001010100101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-5;
+    charset breast = 6-8;
+    charset come = 9-13;
+    charset die = 14-16;
+    charset dog = 17-19;
+    charset drink = 20-21;
+    charset ear = 22-23;
+    charset eye = 24-25;
+    charset fire = 26-28;
+    charset fish = 29-31;
+    charset full = 32-33;
+    charset hand = 34-36;
+    charset hear = 37-38;
+    charset horn = 39-41;
+    charset knee = 42-44;
+    charset leaf = 45-46;
+    charset liver = 47-49;
+    charset louse = 50-51;
+    charset mountain = 52-55;
+    charset name = 56-57;
+    charset new = 58-60;
+    charset night = 61-64;
+    charset nose = 65-66;
+    charset one = 67-68;
+    charset path = 69-70;
+    charset person = 71-72;
+    charset pl = 73-74;
+    charset see = 75-77;
+    charset sg = 78-80;
+    charset skin = 81-83;
+    charset star = 84-85;
+    charset stone = 86-87;
+    charset sun = 88-90;
+    charset tongue = 91-92;
+    charset tooth = 93-94;
+    charset tree = 95-96;
+    charset two = 97-98;
+    charset water = 99-100;
+END;

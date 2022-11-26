@@ -1,0 +1,260 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=12 NCHAR=195;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_khoekwadi.blood.0011,
+        3 blood_khoekwadi.blood.0012,
+        4 blood_khoekwadi.blood.0013,
+        5 bone_0ascertainment,
+        6 bone_khoekwadi.bone.0014,
+        7 bone_khoekwadi.bone.0015,
+        8 bone_khoekwadi.bone.0016,
+        9 bone_khoekwadi.bone.0017,
+        10 breast_0ascertainment,
+        11 breast_khoekwadi.breast.0018,
+        12 breast_khoekwadi.breast.0019,
+        13 breast_khoekwadi.breast.0020,
+        14 breast_khoekwadi.breast.0021,
+        15 come_0ascertainment,
+        16 come_khoekwadi.come.0022,
+        17 come_khoekwadi.come.0023,
+        18 come_khoekwadi.come.0024,
+        19 come_khoekwadi.come.0025,
+        20 come_khoekwadi.come.0026,
+        21 come_khoekwadi.come.0027,
+        22 come_khoekwadi.come.0028,
+        23 die_0ascertainment,
+        24 die_khoekwadi.die.0029,
+        25 die_khoekwadi.die.0030,
+        26 die_khoekwadi.die.0031,
+        27 die_khoekwadi.die.0032,
+        28 die_khoekwadi.die.0033,
+        29 dog_0ascertainment,
+        30 dog_khoekwadi.dog.0034,
+        31 dog_khoekwadi.dog.0035,
+        32 dog_khoekwadi.dog.0036,
+        33 dog_khoekwadi.dog.0037,
+        34 dog_khoekwadi.dog.0038,
+        35 dog_khoekwadi.dog.0039,
+        36 drink_0ascertainment,
+        37 drink_khoekwadi.drink.0040,
+        38 drink_khoekwadi.drink.0041,
+        39 drink_khoekwadi.drink.0042,
+        40 drink_khoekwadi.drink.0043,
+        41 ear_0ascertainment,
+        42 ear_khoekwadi.ear.0044,
+        43 ear_khoekwadi.ear.0045,
+        44 eye_0ascertainment,
+        45 eye_khoekwadi.eye.0046,
+        46 eye_khoekwadi.eye.0047,
+        47 eye_khoekwadi.eye.0048,
+        48 eye_khoekwadi.eye.0049,
+        49 fire_0ascertainment,
+        50 fire_khoekwadi.fire.0050,
+        51 fire_khoekwadi.fire.0051,
+        52 fire_khoekwadi.fire.0052,
+        53 fish_0ascertainment,
+        54 fish_khoekwadi.fish.0053,
+        55 fish_khoekwadi.fish.0054,
+        56 full_0ascertainment,
+        57 full_khoekwadi.full.0055,
+        58 full_khoekwadi.full.0056,
+        59 hand_0ascertainment,
+        60 hand_khoekwadi.hand.0057,
+        61 hand_khoekwadi.hand.0058,
+        62 hand_khoekwadi.hand.0059,
+        63 hand_khoekwadi.hand.0060,
+        64 hear_0ascertainment,
+        65 hear_khoekwadi.hear.0061,
+        66 hear_khoekwadi.hear.0062,
+        67 hear_khoekwadi.hear.0063,
+        68 hear_khoekwadi.hear.0064,
+        69 hear_khoekwadi.hear.0065,
+        70 horn_0ascertainment,
+        71 horn_khoekwadi.horn.0066,
+        72 horn_khoekwadi.horn.0067,
+        73 horn_khoekwadi.horn.0068,
+        74 horn_khoekwadi.horn.0069,
+        75 knee_0ascertainment,
+        76 knee_khoekwadi.knee.0070,
+        77 knee_khoekwadi.knee.0071,
+        78 knee_khoekwadi.knee.0072,
+        79 leaf_0ascertainment,
+        80 leaf_khoekwadi.leaf.0073,
+        81 leaf_khoekwadi.leaf.0074,
+        82 leaf_khoekwadi.leaf.0075,
+        83 leaf_khoekwadi.leaf.0076,
+        84 leaf_khoekwadi.leaf.0077,
+        85 leaf_khoekwadi.leaf.0078,
+        86 leaf_khoekwadi.leaf.0079,
+        87 liver_0ascertainment,
+        88 liver_khoekwadi.liver.0080,
+        89 liver_khoekwadi.liver.0081,
+        90 liver_khoekwadi.liver.0082,
+        91 liver_khoekwadi.liver.0083,
+        92 liver_khoekwadi.liver.0084,
+        93 liver_khoekwadi.liver.0085,
+        94 louse_0ascertainment,
+        95 louse_khoekwadi.louse.0086,
+        96 louse_khoekwadi.louse.0087,
+        97 louse_khoekwadi.louse.0088,
+        98 louse_khoekwadi.louse.0089,
+        99 louse_khoekwadi.louse.0090,
+        100 mountain_0ascertainment,
+        101 mountain_khoekwadi.mountain.0091,
+        102 mountain_khoekwadi.mountain.0092,
+        103 mountain_khoekwadi.mountain.0093,
+        104 mountain_khoekwadi.mountain.0094,
+        105 mountain_khoekwadi.mountain.0095,
+        106 mountain_khoekwadi.mountain.0096,
+        107 name_0ascertainment,
+        108 name_khoekwadi.name.0097,
+        109 name_khoekwadi.name.0098,
+        110 name_khoekwadi.name.0099,
+        111 name_khoekwadi.name.0100,
+        112 new_0ascertainment,
+        113 new_khoekwadi.new.0101,
+        114 new_khoekwadi.new.0102,
+        115 new_khoekwadi.new.0103,
+        116 new_khoekwadi.new.0104,
+        117 new_khoekwadi.new.0105,
+        118 new_khoekwadi.new.0106,
+        119 night_0ascertainment,
+        120 night_khoekwadi.night.0107,
+        121 night_khoekwadi.night.0108,
+        122 night_khoekwadi.night.0109,
+        123 night_khoekwadi.night.0110,
+        124 night_khoekwadi.night.0111,
+        125 night_khoekwadi.night.0112,
+        126 night_khoekwadi.night.0113,
+        127 nose_0ascertainment,
+        128 nose_khoekwadi.nose.0114,
+        129 one_0ascertainment,
+        130 one_khoekwadi.one.0115,
+        131 path_0ascertainment,
+        132 path_khoekwadi.path.0116,
+        133 path_khoekwadi.path.0117,
+        134 person_0ascertainment,
+        135 person_khoekwadi.person.0118,
+        136 person_khoekwadi.person.0119,
+        137 person_khoekwadi.person.0120,
+        138 pl_0ascertainment,
+        139 pl_khoekwadi.1pl.0001,
+        140 pl_khoekwadi.1pl.0002,
+        141 pl_khoekwadi.1pl.0003,
+        142 pl_khoekwadi.1pl.0004,
+        143 see_0ascertainment,
+        144 see_khoekwadi.see.0121,
+        145 see_khoekwadi.see.0122,
+        146 see_khoekwadi.see.0123,
+        147 see_khoekwadi.see.0124,
+        148 see_khoekwadi.see.0125,
+        149 sg_0ascertainment,
+        150 sg_khoekwadi.1sg.0005,
+        151 sg_khoekwadi.1sg.0006,
+        152 sg_khoekwadi.1sg.0007,
+        153 sg_khoekwadi.2sg.0008,
+        154 sg_khoekwadi.2sg.0009,
+        155 sg_khoekwadi.2sg.0010,
+        156 skin_0ascertainment,
+        157 skin_khoekwadi.skin.0126,
+        158 skin_khoekwadi.skin.0127,
+        159 skin_khoekwadi.skin.0128,
+        160 star_0ascertainment,
+        161 star_khoekwadi.star.0129,
+        162 star_khoekwadi.star.0130,
+        163 stone_0ascertainment,
+        164 stone_khoekwadi.stone.0131,
+        165 stone_khoekwadi.stone.0132,
+        166 stone_khoekwadi.stone.0133,
+        167 stone_khoekwadi.stone.0134,
+        168 stone_khoekwadi.stone.0135,
+        169 stone_khoekwadi.stone.0136,
+        170 sun_0ascertainment,
+        171 sun_khoekwadi.sun.0137,
+        172 sun_khoekwadi.sun.0138,
+        173 tongue_0ascertainment,
+        174 tongue_khoekwadi.tongue.0139,
+        175 tongue_khoekwadi.tongue.0140,
+        176 tongue_khoekwadi.tongue.0141,
+        177 tooth_0ascertainment,
+        178 tooth_khoekwadi.tooth.0142,
+        179 tooth_khoekwadi.tooth.0143,
+        180 tooth_khoekwadi.tooth.0144,
+        181 tooth_khoekwadi.tooth.0145,
+        182 tree_0ascertainment,
+        183 tree_khoekwadi.tree.0146,
+        184 tree_khoekwadi.tree.0147,
+        185 tree_khoekwadi.tree.0148,
+        186 tree_khoekwadi.tree.0149,
+        187 tree_khoekwadi.tree.0150,
+        188 tree_khoekwadi.tree.0151,
+        189 two_0ascertainment,
+        190 two_khoekwadi.two.0152,
+        191 water_0ascertainment,
+        192 water_khoekwadi.water.0153,
+        193 water_khoekwadi.water.0154,
+        194 water_khoekwadi.water.0155,
+        195 water_khoekwadi.water.0156
+;
+
+MATRIX
+ani           0100010000100001000000010000010000001000010010000100010010010000100000100001000100000001000000100000??????010000??????01000000010101001000100001000001001000100010010000001001000????01000000101000
+gwi           010001000001010100000001000001100000010001001000010001001001000010000001000010001000000010000010000010000001000010000000100000010100101010010001100000101000100010010000001000100100000100000101000
+gxana         010001000001010100000001000000100000010001001000010001001001000010000001000010001000000010000010000010000001000010000000100010010101001010010001100000011000100010010000001001000100000100000101000
+khoekhoegowab 001000100000100100010001000001000000100001000100010101101000100001000000100100000100100001000001000001001101101001000100010000010101001000010001000001101110100001001100000101010010000010000101100
+khwe          0100010000????001000000100000001000010000??0100001000??0??01000010000001000010010000000??????0?????0??????010000??????010000000101010010000010010000010010001000??010000001001000????00001000101000
+korana        01000010000010010000000100000010000010000100010001000100??0????0?????0000101000???????01000000010000100000010000??????0???????010101001000????0100000??????0100001000100000101000010000010000100100
+kxoe          01000100000100010000000100000110000010000100100001000100??0????0?????0????0010000010000100000010000000100001000000100001000000010101001000????0100000??????0100010000010001001000010000010000100010
+masarwa_tati  00010001000010000100100010000000100000110010001000100??01001000010010001000001000010000000100000100000010001000000010000001000010101000110011001000001101000011010000001001001000010000010010101000
+nama_2        01000010000010010010010100110100000010000100010001000??01100100000101010000100000010000001001000010000001101000001000000010000010101001000010101011101101110100011000100101100010010000010000100100
+naro          01000100000100010000000100000100010010000100100001000100??00010010000010000010000001000100000000001010000001000000001000000100010101001000????0100000??????0100010000000101001000001000010000100001
+naron         01000100000100010010000101000000010010000100000101000??01001000010000010000010000010010000010000001010010000010010000000000101010101000010010101000001101110100010000000101000010010100010000101000
+shua          010000001000100100000001000000000010????001010000100010010000010100000100001000000100001000000100000??????010000??????01000000010101001000100001000001001000100010000100001001000010000000100101000
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-9;
+    charset breast = 10-14;
+    charset come = 15-22;
+    charset die = 23-28;
+    charset dog = 29-35;
+    charset drink = 36-40;
+    charset ear = 41-43;
+    charset eye = 44-48;
+    charset fire = 49-52;
+    charset fish = 53-55;
+    charset full = 56-58;
+    charset hand = 59-63;
+    charset hear = 64-69;
+    charset horn = 70-74;
+    charset knee = 75-78;
+    charset leaf = 79-86;
+    charset liver = 87-93;
+    charset louse = 94-99;
+    charset mountain = 100-106;
+    charset name = 107-111;
+    charset new = 112-118;
+    charset night = 119-126;
+    charset nose = 127-128;
+    charset one = 129-130;
+    charset path = 131-133;
+    charset person = 134-137;
+    charset pl = 138-142;
+    charset see = 143-148;
+    charset sg = 149-155;
+    charset skin = 156-159;
+    charset star = 160-162;
+    charset stone = 163-169;
+    charset sun = 170-172;
+    charset tongue = 173-176;
+    charset tooth = 177-181;
+    charset tree = 182-188;
+    charset two = 189-190;
+    charset water = 191-195;
+END;

@@ -1,0 +1,118 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=69;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_gaagudju.blood.0047,
+        3 bone_0ascertainment,
+        4 bone_gaagudju.bone.0191,
+        5 breast_0ascertainment,
+        6 breast_gaagudju.breast.0353,
+        7 come_0ascertainment,
+        8 come_gaagudju.come.0015,
+        9 die_0ascertainment,
+        10 die_gaagudju.die.0219,
+        11 dog_0ascertainment,
+        12 dog_gaagudju.dog.0050,
+        13 ear_0ascertainment,
+        14 ear_gaagudju.ear.0230,
+        15 eye_0ascertainment,
+        16 eye_gaagudju.eye.0339,
+        17 fire_0ascertainment,
+        18 fire_gaagudju.fire.0098,
+        19 fish_0ascertainment,
+        20 fish_gaagudju.fish.0226,
+        21 hand_0ascertainment,
+        22 hand_gaagudju.hand.0020,
+        23 hear_0ascertainment,
+        24 hear_gaagudju.hear.0455,
+        25 knee_0ascertainment,
+        26 knee_gaagudju.knee.0067,
+        27 leaf_0ascertainment,
+        28 leaf_gaagudju.leaf.0085,
+        29 liver_0ascertainment,
+        30 liver_gaagudju.liver.0389,
+        31 louse_0ascertainment,
+        32 louse_gaagudju.louse.0331,
+        33 name_0ascertainment,
+        34 name_gaagudju.name.0278,
+        35 new_0ascertainment,
+        36 new_gaagudju.new.0325,
+        37 night_0ascertainment,
+        38 night_gaagudju.night.0006,
+        39 nose_0ascertainment,
+        40 nose_gaagudju.nose.0380,
+        41 one_0ascertainment,
+        42 one_gaagudju.one.0295,
+        43 path_0ascertainment,
+        44 path_gaagudju.path.0361,
+        45 person_0ascertainment,
+        46 person_gaagudju.person.0442,
+        47 pl_0ascertainment,
+        48 pl_gaagudju.1pl.0004,
+        49 see_0ascertainment,
+        50 see_gaagudju.see.0301,
+        51 sg_0ascertainment,
+        52 sg_gaagudju.1sg.0070,
+        53 sg_gaagudju.2sg.0011,
+        54 skin_0ascertainment,
+        55 skin_gaagudju.skin.0402,
+        56 star_0ascertainment,
+        57 star_gaagudju.star.0391,
+        58 sun_0ascertainment,
+        59 sun_gaagudju.sun.0316,
+        60 tongue_0ascertainment,
+        61 tongue_gaagudju.tongue.0030,
+        62 tooth_0ascertainment,
+        63 tooth_gaagudju.tooth.0037,
+        64 tree_0ascertainment,
+        65 tree_gaagudju.tree.0042,
+        66 two_0ascertainment,
+        67 two_gaagudju.two.0015,
+        68 water_0ascertainment,
+        69 water_gaagudju.water.0262
+;
+
+MATRIX
+gaagudju 010101010101010101010101010101010101010101010101010110101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset ear = 13-14;
+    charset eye = 15-16;
+    charset fire = 17-18;
+    charset fish = 19-20;
+    charset hand = 21-22;
+    charset hear = 23-24;
+    charset knee = 25-26;
+    charset leaf = 27-28;
+    charset liver = 29-30;
+    charset louse = 31-32;
+    charset name = 33-34;
+    charset new = 35-36;
+    charset night = 37-38;
+    charset nose = 39-40;
+    charset one = 41-42;
+    charset path = 43-44;
+    charset person = 45-46;
+    charset pl = 47-48;
+    charset see = 49-50;
+    charset sg = 51-53;
+    charset skin = 54-55;
+    charset star = 56-57;
+    charset sun = 58-59;
+    charset tongue = 60-61;
+    charset tooth = 62-63;
+    charset tree = 64-65;
+    charset two = 66-67;
+    charset water = 68-69;
+END;

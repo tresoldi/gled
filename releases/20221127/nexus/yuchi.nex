@@ -1,0 +1,121 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=73;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_yuchi.blood.0552,
+        3 bone_0ascertainment,
+        4 bone_yuchi.bone.0002,
+        5 breast_0ascertainment,
+        6 breast_yuchi.breast.0147,
+        7 come_0ascertainment,
+        8 come_yuchi.come.0203,
+        9 dog_0ascertainment,
+        10 dog_yuchi.dog.0020,
+        11 dog_yuchi.dog.0135,
+        12 drink_0ascertainment,
+        13 drink_yuchi.drink.0950,
+        14 ear_0ascertainment,
+        15 ear_yuchi.ear.0317,
+        16 eye_0ascertainment,
+        17 eye_yuchi.eye.0103,
+        18 eye_yuchi.eye.0719,
+        19 fire_0ascertainment,
+        20 fire_yuchi.fire.0726,
+        21 fish_0ascertainment,
+        22 fish_yuchi.fish.0001,
+        23 full_0ascertainment,
+        24 full_yuchi.full.1013,
+        25 hear_0ascertainment,
+        26 hear_yuchi.hear.0002,
+        27 horn_0ascertainment,
+        28 horn_yuchi.horn.0576,
+        29 leaf_0ascertainment,
+        30 leaf_yuchi.leaf.0001,
+        31 liver_0ascertainment,
+        32 liver_yuchi.liver.0856,
+        33 mountain_0ascertainment,
+        34 mountain_yuchi.mountain.0245,
+        35 mountain_yuchi.mountain.0789,
+        36 name_0ascertainment,
+        37 name_yuchi.name.0549,
+        38 name_yuchi.name.0550,
+        39 night_0ascertainment,
+        40 night_yuchi.night.0021,
+        41 nose_0ascertainment,
+        42 nose_yuchi.nose.0801,
+        43 one_0ascertainment,
+        44 one_yuchi.one.0123,
+        45 path_0ascertainment,
+        46 path_yuchi.path.0765,
+        47 person_0ascertainment,
+        48 person_yuchi.person.0001,
+        49 pl_0ascertainment,
+        50 pl_yuchi.1pl.0163,
+        51 see_0ascertainment,
+        52 see_yuchi.see.0185,
+        53 sg_0ascertainment,
+        54 sg_yuchi.1sg.0157,
+        55 sg_yuchi.2sg.0569,
+        56 star_0ascertainment,
+        57 star_yuchi.star.0184,
+        58 stone_0ascertainment,
+        59 stone_yuchi.stone.0003,
+        60 sun_0ascertainment,
+        61 sun_yuchi.sun.0051,
+        62 sun_yuchi.sun.0599,
+        63 tongue_0ascertainment,
+        64 tongue_yuchi.tongue.0132,
+        65 tooth_0ascertainment,
+        66 tooth_yuchi.tooth.0744,
+        67 tooth_yuchi.tooth.0745,
+        68 tree_0ascertainment,
+        69 tree_yuchi.tree.0201,
+        70 two_0ascertainment,
+        71 two_yuchi.two.0583,
+        72 water_0ascertainment,
+        73 water_yuchi.water.0560
+;
+
+MATRIX
+yuchi 0101010101101010110101010101010101101101010101010101011010101101011010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset dog = 9-11;
+    charset drink = 12-13;
+    charset ear = 14-15;
+    charset eye = 16-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset full = 23-24;
+    charset hear = 25-26;
+    charset horn = 27-28;
+    charset leaf = 29-30;
+    charset liver = 31-32;
+    charset mountain = 33-35;
+    charset name = 36-38;
+    charset night = 39-40;
+    charset nose = 41-42;
+    charset one = 43-44;
+    charset path = 45-46;
+    charset person = 47-48;
+    charset pl = 49-50;
+    charset see = 51-52;
+    charset sg = 53-55;
+    charset star = 56-57;
+    charset stone = 58-59;
+    charset sun = 60-62;
+    charset tongue = 63-64;
+    charset tooth = 65-67;
+    charset tree = 68-69;
+    charset two = 70-71;
+    charset water = 72-73;
+END;

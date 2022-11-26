@@ -1,0 +1,137 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=84;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_comecrudan.blood.0002,
+        3 bone_0ascertainment,
+        4 bone_comecrudan.bone.0001,
+        5 breast_0ascertainment,
+        6 breast_comecrudan.breast.0286,
+        7 come_0ascertainment,
+        8 come_comecrudan.come.0168,
+        9 die_0ascertainment,
+        10 die_comecrudan.die.0310,
+        11 dog_0ascertainment,
+        12 dog_comecrudan.dog.0056,
+        13 drink_0ascertainment,
+        14 drink_comecrudan.drink.0337,
+        15 ear_0ascertainment,
+        16 ear_comecrudan.ear.0020,
+        17 eye_0ascertainment,
+        18 eye_comecrudan.eye.0272,
+        19 eye_comecrudan.eye.0273,
+        20 fire_0ascertainment,
+        21 fire_comecrudan.fire.0276,
+        22 fire_comecrudan.fire.0318,
+        23 fish_0ascertainment,
+        24 fish_comecrudan.fish.0290,
+        25 hand_0ascertainment,
+        26 hand_comecrudan.hand.0210,
+        27 hear_0ascertainment,
+        28 hear_comecrudan.hear.0128,
+        29 horn_0ascertainment,
+        30 horn_comecrudan.horn.0106,
+        31 knee_0ascertainment,
+        32 knee_comecrudan.knee.0258,
+        33 leaf_0ascertainment,
+        34 leaf_comecrudan.leaf.0001,
+        35 liver_0ascertainment,
+        36 liver_comecrudan.liver.0308,
+        37 louse_0ascertainment,
+        38 louse_comecrudan.louse.0237,
+        39 louse_comecrudan.louse.0269,
+        40 mountain_0ascertainment,
+        41 mountain_comecrudan.mountain.0014,
+        42 name_0ascertainment,
+        43 name_comecrudan.name.0221,
+        44 new_0ascertainment,
+        45 new_comecrudan.new.0274,
+        46 new_comecrudan.new.0275,
+        47 night_0ascertainment,
+        48 night_comecrudan.night.0272,
+        49 nose_0ascertainment,
+        50 nose_comecrudan.nose.0254,
+        51 one_0ascertainment,
+        52 one_comecrudan.one.0128,
+        53 path_0ascertainment,
+        54 path_comecrudan.path.0017,
+        55 person_0ascertainment,
+        56 person_comecrudan.person.0373,
+        57 pl_0ascertainment,
+        58 pl_comecrudan.1pl.0293,
+        59 see_0ascertainment,
+        60 see_comecrudan.see.0154,
+        61 sg_0ascertainment,
+        62 sg_comecrudan.1sg.0069,
+        63 sg_comecrudan.1sg.0074,
+        64 sg_comecrudan.2sg.0228,
+        65 skin_0ascertainment,
+        66 skin_comecrudan.skin.0023,
+        67 skin_comecrudan.skin.0325,
+        68 star_0ascertainment,
+        69 star_comecrudan.star.0312,
+        70 stone_0ascertainment,
+        71 stone_comecrudan.stone.0378,
+        72 sun_0ascertainment,
+        73 sun_comecrudan.sun.0049,
+        74 tongue_0ascertainment,
+        75 tongue_comecrudan.tongue.0257,
+        76 tooth_0ascertainment,
+        77 tooth_comecrudan.tooth.0305,
+        78 tooth_comecrudan.tooth.0306,
+        79 tree_0ascertainment,
+        80 tree_comecrudan.tree.0279,
+        81 two_0ascertainment,
+        82 two_comecrudan.two.0224,
+        83 water_0ascertainment,
+        84 water_comecrudan.water.0243
+;
+
+MATRIX
+comecrudo 010101010101010101101101010101010101011010101101010101010101011101101010101011010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-19;
+    charset fire = 20-22;
+    charset fish = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-28;
+    charset horn = 29-30;
+    charset knee = 31-32;
+    charset leaf = 33-34;
+    charset liver = 35-36;
+    charset louse = 37-39;
+    charset mountain = 40-41;
+    charset name = 42-43;
+    charset new = 44-46;
+    charset night = 47-48;
+    charset nose = 49-50;
+    charset one = 51-52;
+    charset path = 53-54;
+    charset person = 55-56;
+    charset pl = 57-58;
+    charset see = 59-60;
+    charset sg = 61-64;
+    charset skin = 65-67;
+    charset star = 68-69;
+    charset stone = 70-71;
+    charset sun = 72-73;
+    charset tongue = 74-75;
+    charset tooth = 76-78;
+    charset tree = 79-80;
+    charset two = 81-82;
+    charset water = 83-84;
+END;

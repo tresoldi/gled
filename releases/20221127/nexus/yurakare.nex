@@ -1,0 +1,158 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=103;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_yurakare.blood.0005,
+        3 bone_0ascertainment,
+        4 bone_yurakare.bone.0006,
+        5 bone_yurakare.bone.0007,
+        6 breast_0ascertainment,
+        7 breast_yurakare.breast.0008,
+        8 come_0ascertainment,
+        9 come_yurakare.come.0009,
+        10 come_yurakare.come.0010,
+        11 die_0ascertainment,
+        12 die_yurakare.die.0011,
+        13 die_yurakare.die.0012,
+        14 die_yurakare.die.0013,
+        15 dog_0ascertainment,
+        16 dog_yurakare.dog.0014,
+        17 dog_yurakare.dog.0015,
+        18 drink_0ascertainment,
+        19 drink_yurakare.drink.0016,
+        20 drink_yurakare.drink.0017,
+        21 drink_yurakare.drink.0018,
+        22 ear_0ascertainment,
+        23 ear_yurakare.ear.0019,
+        24 eye_0ascertainment,
+        25 eye_yurakare.eye.0020,
+        26 fire_0ascertainment,
+        27 fire_yurakare.fire.0021,
+        28 fish_0ascertainment,
+        29 fish_yurakare.fish.0022,
+        30 fish_yurakare.fish.0023,
+        31 full_0ascertainment,
+        32 full_yurakare.full.0024,
+        33 full_yurakare.full.0025,
+        34 full_yurakare.full.0026,
+        35 hand_0ascertainment,
+        36 hand_yurakare.hand.0027,
+        37 hear_0ascertainment,
+        38 hear_yurakare.hear.0028,
+        39 horn_0ascertainment,
+        40 horn_yurakare.horn.0029,
+        41 knee_0ascertainment,
+        42 knee_yurakare.knee.0030,
+        43 knee_yurakare.knee.0031,
+        44 leaf_0ascertainment,
+        45 leaf_yurakare.leaf.0032,
+        46 leaf_yurakare.leaf.0033,
+        47 liver_0ascertainment,
+        48 liver_yurakare.liver.0034,
+        49 louse_0ascertainment,
+        50 louse_yurakare.louse.0035,
+        51 louse_yurakare.louse.0036,
+        52 mountain_0ascertainment,
+        53 mountain_yurakare.mountain.0037,
+        54 mountain_yurakare.mountain.0038,
+        55 name_0ascertainment,
+        56 name_yurakare.name.0039,
+        57 new_0ascertainment,
+        58 new_yurakare.new.0040,
+        59 new_yurakare.new.0041,
+        60 night_0ascertainment,
+        61 night_yurakare.night.0042,
+        62 night_yurakare.night.0043,
+        63 night_yurakare.night.0044,
+        64 nose_0ascertainment,
+        65 nose_yurakare.nose.0045,
+        66 nose_yurakare.nose.0046,
+        67 one_0ascertainment,
+        68 one_yurakare.one.0047,
+        69 path_0ascertainment,
+        70 path_yurakare.path.0048,
+        71 path_yurakare.path.0049,
+        72 person_0ascertainment,
+        73 person_yurakare.person.0050,
+        74 person_yurakare.person.0051,
+        75 pl_0ascertainment,
+        76 pl_yurakare.1pl.0001,
+        77 see_0ascertainment,
+        78 see_yurakare.see.0052,
+        79 see_yurakare.see.0053,
+        80 see_yurakare.see.0054,
+        81 sg_0ascertainment,
+        82 sg_yurakare.1sg.0002,
+        83 sg_yurakare.2sg.0003,
+        84 sg_yurakare.2sg.0004,
+        85 skin_0ascertainment,
+        86 skin_yurakare.skin.0055,
+        87 star_0ascertainment,
+        88 star_yurakare.star.0056,
+        89 stone_0ascertainment,
+        90 stone_yurakare.stone.0057,
+        91 sun_0ascertainment,
+        92 sun_yurakare.sun.0058,
+        93 tongue_0ascertainment,
+        94 tongue_yurakare.tongue.0059,
+        95 tooth_0ascertainment,
+        96 tooth_yurakare.tooth.0060,
+        97 tree_0ascertainment,
+        98 tree_yurakare.tree.0061,
+        99 two_0ascertainment,
+        100 two_yurakare.two.0062,
+        101 two_yurakare.two.0063,
+        102 water_0ascertainment,
+        103 water_yurakare.water.0064
+;
+
+MATRIX
+yuracare          0101001010011001001000101010100100010101010010010100100101001000100101001001010001110101010101010101001
+yuracare_yurujure 0100101011011100101110101010010011010?01011001010110010100101110010100100101011100010101010101010101101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-7;
+    charset come = 8-10;
+    charset die = 11-14;
+    charset dog = 15-17;
+    charset drink = 18-21;
+    charset ear = 22-23;
+    charset eye = 24-25;
+    charset fire = 26-27;
+    charset fish = 28-30;
+    charset full = 31-34;
+    charset hand = 35-36;
+    charset hear = 37-38;
+    charset horn = 39-40;
+    charset knee = 41-43;
+    charset leaf = 44-46;
+    charset liver = 47-48;
+    charset louse = 49-51;
+    charset mountain = 52-54;
+    charset name = 55-56;
+    charset new = 57-59;
+    charset night = 60-63;
+    charset nose = 64-66;
+    charset one = 67-68;
+    charset path = 69-71;
+    charset person = 72-74;
+    charset pl = 75-76;
+    charset see = 77-80;
+    charset sg = 81-84;
+    charset skin = 85-86;
+    charset star = 87-88;
+    charset stone = 89-90;
+    charset sun = 91-92;
+    charset tongue = 93-94;
+    charset tooth = 95-96;
+    charset tree = 97-98;
+    charset two = 99-101;
+    charset water = 102-103;
+END;

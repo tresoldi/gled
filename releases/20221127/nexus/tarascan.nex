@@ -1,0 +1,144 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=88;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_tarascan.blood.0006,
+        3 bone_0ascertainment,
+        4 bone_tarascan.bone.0007,
+        5 breast_0ascertainment,
+        6 breast_tarascan.breast.0008,
+        7 breast_tarascan.breast.0009,
+        8 breast_tarascan.breast.0010,
+        9 come_0ascertainment,
+        10 come_tarascan.come.0011,
+        11 die_0ascertainment,
+        12 die_tarascan.die.0012,
+        13 dog_0ascertainment,
+        14 dog_tarascan.dog.0013,
+        15 drink_0ascertainment,
+        16 drink_tarascan.drink.0014,
+        17 ear_0ascertainment,
+        18 ear_tarascan.ear.0015,
+        19 eye_0ascertainment,
+        20 eye_tarascan.eye.0016,
+        21 fire_0ascertainment,
+        22 fire_tarascan.fire.0017,
+        23 fire_tarascan.fire.0018,
+        24 fish_0ascertainment,
+        25 fish_tarascan.fish.0019,
+        26 full_0ascertainment,
+        27 full_tarascan.full.0020,
+        28 hand_0ascertainment,
+        29 hand_tarascan.hand.0021,
+        30 hear_0ascertainment,
+        31 hear_tarascan.hear.0022,
+        32 hear_tarascan.hear.0023,
+        33 horn_0ascertainment,
+        34 horn_tarascan.horn.0024,
+        35 horn_tarascan.horn.0025,
+        36 knee_0ascertainment,
+        37 knee_tarascan.knee.0026,
+        38 leaf_0ascertainment,
+        39 leaf_tarascan.leaf.0027,
+        40 liver_0ascertainment,
+        41 liver_tarascan.liver.0028,
+        42 louse_0ascertainment,
+        43 louse_tarascan.louse.0029,
+        44 mountain_0ascertainment,
+        45 mountain_tarascan.mountain.0030,
+        46 name_0ascertainment,
+        47 name_tarascan.name.0031,
+        48 new_0ascertainment,
+        49 new_tarascan.new.0032,
+        50 night_0ascertainment,
+        51 night_tarascan.night.0033,
+        52 nose_0ascertainment,
+        53 nose_tarascan.nose.0034,
+        54 one_0ascertainment,
+        55 one_tarascan.one.0035,
+        56 path_0ascertainment,
+        57 path_tarascan.path.0036,
+        58 path_tarascan.path.0037,
+        59 person_0ascertainment,
+        60 person_tarascan.person.0038,
+        61 pl_0ascertainment,
+        62 pl_tarascan.1pl.0001,
+        63 pl_tarascan.1pl.0002,
+        64 see_0ascertainment,
+        65 see_tarascan.see.0039,
+        66 see_tarascan.see.0040,
+        67 sg_0ascertainment,
+        68 sg_tarascan.1sg.0003,
+        69 sg_tarascan.2sg.0004,
+        70 sg_tarascan.2sg.0005,
+        71 skin_0ascertainment,
+        72 skin_tarascan.skin.0041,
+        73 star_0ascertainment,
+        74 star_tarascan.star.0042,
+        75 stone_0ascertainment,
+        76 stone_tarascan.stone.0043,
+        77 sun_0ascertainment,
+        78 sun_tarascan.sun.0044,
+        79 tongue_0ascertainment,
+        80 tongue_tarascan.tongue.0045,
+        81 tooth_0ascertainment,
+        82 tooth_tarascan.tooth.0046,
+        83 tree_0ascertainment,
+        84 tree_tarascan.tree.0047,
+        85 two_0ascertainment,
+        86 two_tarascan.two.0048,
+        87 water_0ascertainment,
+        88 water_tarascan.water.0049
+;
+
+MATRIX
+purepecha    01010100010101010101010010?010??010010101010?010?0101010100101001001100?0101010101010101
+purhepecha_2 0101010101010101010101101010101100101010101010101010101010010100010100010101010101010101
+tarascan     0101001001010101010101001010101100101010101010101010101001010110010101010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-8;
+    charset come = 9-10;
+    charset die = 11-12;
+    charset dog = 13-14;
+    charset drink = 15-16;
+    charset ear = 17-18;
+    charset eye = 19-20;
+    charset fire = 21-23;
+    charset fish = 24-25;
+    charset full = 26-27;
+    charset hand = 28-29;
+    charset hear = 30-32;
+    charset horn = 33-35;
+    charset knee = 36-37;
+    charset leaf = 38-39;
+    charset liver = 40-41;
+    charset louse = 42-43;
+    charset mountain = 44-45;
+    charset name = 46-47;
+    charset new = 48-49;
+    charset night = 50-51;
+    charset nose = 52-53;
+    charset one = 54-55;
+    charset path = 56-58;
+    charset person = 59-60;
+    charset pl = 61-63;
+    charset see = 64-66;
+    charset sg = 67-70;
+    charset skin = 71-72;
+    charset star = 73-74;
+    charset stone = 75-76;
+    charset sun = 77-78;
+    charset tongue = 79-80;
+    charset tooth = 81-82;
+    charset tree = 83-84;
+    charset two = 85-86;
+    charset water = 87-88;
+END;

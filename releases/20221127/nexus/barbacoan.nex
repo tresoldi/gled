@@ -1,0 +1,240 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=5 NCHAR=182;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_barbacoan.blood.0009,
+        3 blood_barbacoan.blood.0010,
+        4 blood_barbacoan.blood.0011,
+        5 bone_0ascertainment,
+        6 bone_barbacoan.bone.0012,
+        7 bone_barbacoan.bone.0013,
+        8 bone_barbacoan.bone.0014,
+        9 bone_barbacoan.bone.0015,
+        10 breast_0ascertainment,
+        11 breast_barbacoan.breast.0016,
+        12 breast_barbacoan.breast.0017,
+        13 breast_barbacoan.breast.0018,
+        14 breast_barbacoan.breast.0019,
+        15 come_0ascertainment,
+        16 come_barbacoan.come.0020,
+        17 come_barbacoan.come.0021,
+        18 come_barbacoan.come.0022,
+        19 die_0ascertainment,
+        20 die_barbacoan.die.0023,
+        21 die_barbacoan.die.0024,
+        22 die_barbacoan.die.0025,
+        23 die_barbacoan.die.0026,
+        24 dog_0ascertainment,
+        25 dog_barbacoan.dog.0027,
+        26 dog_barbacoan.dog.0028,
+        27 dog_barbacoan.dog.0029,
+        28 drink_0ascertainment,
+        29 drink_barbacoan.drink.0030,
+        30 drink_barbacoan.drink.0031,
+        31 drink_barbacoan.drink.0032,
+        32 drink_barbacoan.drink.0033,
+        33 ear_0ascertainment,
+        34 ear_barbacoan.ear.0034,
+        35 ear_barbacoan.ear.0035,
+        36 ear_barbacoan.ear.0036,
+        37 eye_0ascertainment,
+        38 eye_barbacoan.eye.0037,
+        39 eye_barbacoan.eye.0038,
+        40 eye_barbacoan.eye.0039,
+        41 eye_barbacoan.eye.0040,
+        42 fire_0ascertainment,
+        43 fire_barbacoan.fire.0041,
+        44 fire_barbacoan.fire.0042,
+        45 fish_0ascertainment,
+        46 fish_barbacoan.fish.0043,
+        47 fish_barbacoan.fish.0044,
+        48 fish_barbacoan.fish.0045,
+        49 fish_barbacoan.fish.0046,
+        50 full_0ascertainment,
+        51 full_barbacoan.full.0047,
+        52 full_barbacoan.full.0048,
+        53 full_barbacoan.full.0049,
+        54 full_barbacoan.full.0050,
+        55 full_barbacoan.full.0051,
+        56 hand_0ascertainment,
+        57 hand_barbacoan.hand.0052,
+        58 hand_barbacoan.hand.0053,
+        59 hand_barbacoan.hand.0054,
+        60 hand_barbacoan.hand.0055,
+        61 hear_0ascertainment,
+        62 hear_barbacoan.hear.0056,
+        63 horn_0ascertainment,
+        64 horn_barbacoan.horn.0057,
+        65 horn_barbacoan.horn.0058,
+        66 horn_barbacoan.horn.0059,
+        67 knee_0ascertainment,
+        68 knee_barbacoan.knee.0060,
+        69 knee_barbacoan.knee.0061,
+        70 knee_barbacoan.knee.0062,
+        71 knee_barbacoan.knee.0063,
+        72 knee_barbacoan.knee.0064,
+        73 leaf_0ascertainment,
+        74 leaf_barbacoan.leaf.0065,
+        75 leaf_barbacoan.leaf.0066,
+        76 leaf_barbacoan.leaf.0067,
+        77 leaf_barbacoan.leaf.0068,
+        78 liver_0ascertainment,
+        79 liver_barbacoan.liver.0069,
+        80 liver_barbacoan.liver.0070,
+        81 liver_barbacoan.liver.0071,
+        82 liver_barbacoan.liver.0072,
+        83 liver_barbacoan.liver.0073,
+        84 louse_0ascertainment,
+        85 louse_barbacoan.louse.0074,
+        86 louse_barbacoan.louse.0075,
+        87 louse_barbacoan.louse.0076,
+        88 mountain_0ascertainment,
+        89 mountain_barbacoan.mountain.0077,
+        90 mountain_barbacoan.mountain.0078,
+        91 mountain_barbacoan.mountain.0079,
+        92 mountain_barbacoan.mountain.0080,
+        93 mountain_barbacoan.mountain.0081,
+        94 name_0ascertainment,
+        95 name_barbacoan.name.0082,
+        96 name_barbacoan.name.0083,
+        97 name_barbacoan.name.0084,
+        98 name_barbacoan.name.0085,
+        99 new_0ascertainment,
+        100 new_barbacoan.new.0086,
+        101 new_barbacoan.new.0087,
+        102 new_barbacoan.new.0088,
+        103 night_0ascertainment,
+        104 night_barbacoan.night.0089,
+        105 night_barbacoan.night.0090,
+        106 night_barbacoan.night.0091,
+        107 nose_0ascertainment,
+        108 nose_barbacoan.nose.0092,
+        109 nose_barbacoan.nose.0093,
+        110 nose_barbacoan.nose.0094,
+        111 nose_barbacoan.nose.0095,
+        112 nose_barbacoan.nose.0096,
+        113 one_0ascertainment,
+        114 one_barbacoan.one.0097,
+        115 one_barbacoan.one.0098,
+        116 one_barbacoan.one.0099,
+        117 one_barbacoan.one.0100,
+        118 path_0ascertainment,
+        119 path_barbacoan.path.0101,
+        120 path_barbacoan.path.0102,
+        121 path_barbacoan.path.0103,
+        122 person_0ascertainment,
+        123 person_barbacoan.person.0104,
+        124 person_barbacoan.person.0105,
+        125 person_barbacoan.person.0106,
+        126 pl_0ascertainment,
+        127 pl_barbacoan.1pl.0001,
+        128 pl_barbacoan.1pl.0002,
+        129 pl_barbacoan.1pl.0003,
+        130 see_0ascertainment,
+        131 see_barbacoan.see.0107,
+        132 see_barbacoan.see.0108,
+        133 see_barbacoan.see.0109,
+        134 see_barbacoan.see.0110,
+        135 see_barbacoan.see.0111,
+        136 sg_0ascertainment,
+        137 sg_barbacoan.1sg.0004,
+        138 sg_barbacoan.1sg.0005,
+        139 sg_barbacoan.1sg.0006,
+        140 sg_barbacoan.2sg.0007,
+        141 sg_barbacoan.2sg.0008,
+        142 skin_0ascertainment,
+        143 skin_barbacoan.skin.0112,
+        144 skin_barbacoan.skin.0113,
+        145 skin_barbacoan.skin.0114,
+        146 skin_barbacoan.skin.0115,
+        147 star_0ascertainment,
+        148 star_barbacoan.star.0116,
+        149 star_barbacoan.star.0117,
+        150 star_barbacoan.star.0118,
+        151 star_barbacoan.star.0119,
+        152 star_barbacoan.star.0120,
+        153 stone_0ascertainment,
+        154 stone_barbacoan.stone.0121,
+        155 stone_barbacoan.stone.0122,
+        156 stone_barbacoan.stone.0123,
+        157 sun_0ascertainment,
+        158 sun_barbacoan.sun.0124,
+        159 sun_barbacoan.sun.0125,
+        160 sun_barbacoan.sun.0126,
+        161 sun_barbacoan.sun.0127,
+        162 sun_barbacoan.sun.0128,
+        163 tongue_0ascertainment,
+        164 tongue_barbacoan.tongue.0129,
+        165 tongue_barbacoan.tongue.0130,
+        166 tongue_barbacoan.tongue.0131,
+        167 tongue_barbacoan.tongue.0132,
+        168 tooth_0ascertainment,
+        169 tooth_barbacoan.tooth.0133,
+        170 tooth_barbacoan.tooth.0134,
+        171 tooth_barbacoan.tooth.0135,
+        172 tooth_barbacoan.tooth.0136,
+        173 tree_0ascertainment,
+        174 tree_barbacoan.tree.0137,
+        175 tree_barbacoan.tree.0138,
+        176 tree_barbacoan.tree.0139,
+        177 two_0ascertainment,
+        178 two_barbacoan.two.0140,
+        179 two_barbacoan.two.0141,
+        180 water_0ascertainment,
+        181 water_barbacoan.water.0142,
+        182 water_barbacoan.water.0143
+;
+
+MATRIX
+awa_pit   010001000010000100010000100010000100010000??0100001000101000010100010000010000100000100010000010000100010001000001000010001000???01000001001001000010000010001000001000010000100010010
+cayapa    00100010001000001000100010000100001000100010001000010000010001001000100000100001000010000100100100001000100010000010000100010010000100000001100100001000001000100000100001000100001001
+colorado  00100001000100001000010001000010001000100010000100001000100001001000010000010000100011000010000100001000100001000010000100010001000010000111100100000100000100010000010000100010001001
+guambiano 00010000100010000100001000100001000100010010000010000100001001000100001000001000010010100001000010000100010000100001000010001000100001001001000010000010000100001000001000010001010001
+totoro    000100001000010001000010001000010001000010010????000010000010100010000010000100000100010?????00001000100010000010000101000001000100000101001000001000001000100000100001000010001010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-9;
+    charset breast = 10-14;
+    charset come = 15-18;
+    charset die = 19-23;
+    charset dog = 24-27;
+    charset drink = 28-32;
+    charset ear = 33-36;
+    charset eye = 37-41;
+    charset fire = 42-44;
+    charset fish = 45-49;
+    charset full = 50-55;
+    charset hand = 56-60;
+    charset hear = 61-62;
+    charset horn = 63-66;
+    charset knee = 67-72;
+    charset leaf = 73-77;
+    charset liver = 78-83;
+    charset louse = 84-87;
+    charset mountain = 88-93;
+    charset name = 94-98;
+    charset new = 99-102;
+    charset night = 103-106;
+    charset nose = 107-112;
+    charset one = 113-117;
+    charset path = 118-121;
+    charset person = 122-125;
+    charset pl = 126-129;
+    charset see = 130-135;
+    charset sg = 136-141;
+    charset skin = 142-146;
+    charset star = 147-152;
+    charset stone = 153-156;
+    charset sun = 157-162;
+    charset tongue = 163-167;
+    charset tooth = 168-172;
+    charset tree = 173-176;
+    charset two = 177-179;
+    charset water = 180-182;
+END;

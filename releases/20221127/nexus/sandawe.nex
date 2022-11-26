@@ -1,0 +1,112 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=66;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_sandawe.blood.0496,
+        3 bone_0ascertainment,
+        4 bone_sandawe.bone.0327,
+        5 breast_0ascertainment,
+        6 breast_sandawe.breast.0611,
+        7 die_0ascertainment,
+        8 die_sandawe.die.0772,
+        9 die_sandawe.die.0773,
+        10 dog_0ascertainment,
+        11 dog_sandawe.dog.0004,
+        12 drink_0ascertainment,
+        13 drink_sandawe.drink.0816,
+        14 ear_0ascertainment,
+        15 ear_sandawe.ear.0133,
+        16 eye_0ascertainment,
+        17 eye_sandawe.eye.0630,
+        18 fire_0ascertainment,
+        19 fire_sandawe.fire.0640,
+        20 fire_sandawe.fire.0641,
+        21 fish_0ascertainment,
+        22 fish_sandawe.fish.0002,
+        23 hand_0ascertainment,
+        24 hand_sandawe.hand.0305,
+        25 knee_0ascertainment,
+        26 knee_sandawe.knee.0540,
+        27 leaf_0ascertainment,
+        28 leaf_sandawe.leaf.0093,
+        29 liver_0ascertainment,
+        30 liver_sandawe.liver.0740,
+        31 louse_0ascertainment,
+        32 louse_sandawe.louse.0627,
+        33 mountain_0ascertainment,
+        34 mountain_sandawe.mountain.0226,
+        35 name_0ascertainment,
+        36 name_sandawe.name.0484,
+        37 new_0ascertainment,
+        38 new_sandawe.new.0610,
+        39 night_0ascertainment,
+        40 night_sandawe.night.0002,
+        41 nose_0ascertainment,
+        42 nose_sandawe.nose.0682,
+        43 one_0ascertainment,
+        44 one_sandawe.one.0493,
+        45 path_0ascertainment,
+        46 path_sandawe.path.0666,
+        47 person_0ascertainment,
+        48 person_sandawe.person.0859,
+        49 pl_0ascertainment,
+        50 pl_sandawe.1pl.0730,
+        51 sg_0ascertainment,
+        52 sg_sandawe.1sg.0413,
+        53 sg_sandawe.2sg.0490,
+        54 sun_0ascertainment,
+        55 sun_sandawe.sun.0535,
+        56 tongue_0ascertainment,
+        57 tongue_sandawe.tongue.0545,
+        58 tooth_0ascertainment,
+        59 tooth_sandawe.tooth.0638,
+        60 tooth_sandawe.tooth.0639,
+        61 tree_0ascertainment,
+        62 tree_sandawe.tree.0573,
+        63 two_0ascertainment,
+        64 two_sandawe.two.0511,
+        65 water_0ascertainment,
+        66 water_sandawe.water.0002
+;
+
+MATRIX
+sandawe 010101011010101010110101010101010101010101010101010110101011010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset die = 7-9;
+    charset dog = 10-11;
+    charset drink = 12-13;
+    charset ear = 14-15;
+    charset eye = 16-17;
+    charset fire = 18-20;
+    charset fish = 21-22;
+    charset hand = 23-24;
+    charset knee = 25-26;
+    charset leaf = 27-28;
+    charset liver = 29-30;
+    charset louse = 31-32;
+    charset mountain = 33-34;
+    charset name = 35-36;
+    charset new = 37-38;
+    charset night = 39-40;
+    charset nose = 41-42;
+    charset one = 43-44;
+    charset path = 45-46;
+    charset person = 47-48;
+    charset pl = 49-50;
+    charset sg = 51-53;
+    charset sun = 54-55;
+    charset tongue = 56-57;
+    charset tooth = 58-60;
+    charset tree = 61-62;
+    charset two = 63-64;
+    charset water = 65-66;
+END;

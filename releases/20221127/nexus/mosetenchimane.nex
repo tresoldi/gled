@@ -1,0 +1,107 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=62;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_mosetenchimane.blood.0002,
+        3 come_0ascertainment,
+        4 come_mosetenchimane.come.0520,
+        5 die_0ascertainment,
+        6 die_mosetenchimane.die.0664,
+        7 dog_0ascertainment,
+        8 dog_mosetenchimane.dog.0391,
+        9 drink_0ascertainment,
+        10 drink_mosetenchimane.drink.0698,
+        11 ear_0ascertainment,
+        12 ear_mosetenchimane.ear.0327,
+        13 eye_0ascertainment,
+        14 eye_mosetenchimane.eye.0545,
+        15 fire_0ascertainment,
+        16 fire_mosetenchimane.fire.0567,
+        17 fish_0ascertainment,
+        18 fish_mosetenchimane.fish.0328,
+        19 full_0ascertainment,
+        20 full_mosetenchimane.full.0727,
+        21 hand_0ascertainment,
+        22 hand_mosetenchimane.hand.0431,
+        23 hear_0ascertainment,
+        24 hear_mosetenchimane.hear.0760,
+        25 louse_0ascertainment,
+        26 louse_mosetenchimane.louse.0542,
+        27 mountain_0ascertainment,
+        28 mountain_mosetenchimane.mountain.0608,
+        29 name_0ascertainment,
+        30 name_mosetenchimane.name.0420,
+        31 new_0ascertainment,
+        32 new_mosetenchimane.new.0535,
+        33 night_0ascertainment,
+        34 night_mosetenchimane.night.0077,
+        35 nose_0ascertainment,
+        36 nose_mosetenchimane.nose.0599,
+        37 one_0ascertainment,
+        38 one_mosetenchimane.one.0126,
+        39 path_0ascertainment,
+        40 path_mosetenchimane.path.0583,
+        41 person_0ascertainment,
+        42 person_mosetenchimane.person.0753,
+        43 person_mosetenchimane.person.0754,
+        44 pl_0ascertainment,
+        45 pl_mosetenchimane.1pl.0637,
+        46 see_0ascertainment,
+        47 see_mosetenchimane.see.0017,
+        48 sg_0ascertainment,
+        49 sg_mosetenchimane.1sg.0007,
+        50 sg_mosetenchimane.2sg.0020,
+        51 stone_0ascertainment,
+        52 stone_mosetenchimane.stone.0820,
+        53 sun_0ascertainment,
+        54 sun_mosetenchimane.sun.0095,
+        55 tongue_0ascertainment,
+        56 tongue_mosetenchimane.tongue.0001,
+        57 tree_0ascertainment,
+        58 tree_mosetenchimane.tree.0510,
+        59 two_0ascertainment,
+        60 two_mosetenchimane.two.0001,
+        61 water_0ascertainment,
+        62 water_mosetenchimane.water.0434
+;
+
+MATRIX
+moseten 01010101010101010101010101010101010101010110101011010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset come = 3-4;
+    charset die = 5-6;
+    charset dog = 7-8;
+    charset drink = 9-10;
+    charset ear = 11-12;
+    charset eye = 13-14;
+    charset fire = 15-16;
+    charset fish = 17-18;
+    charset full = 19-20;
+    charset hand = 21-22;
+    charset hear = 23-24;
+    charset louse = 25-26;
+    charset mountain = 27-28;
+    charset name = 29-30;
+    charset new = 31-32;
+    charset night = 33-34;
+    charset nose = 35-36;
+    charset one = 37-38;
+    charset path = 39-40;
+    charset person = 41-43;
+    charset pl = 44-45;
+    charset see = 46-47;
+    charset sg = 48-50;
+    charset stone = 51-52;
+    charset sun = 53-54;
+    charset tongue = 55-56;
+    charset tree = 57-58;
+    charset two = 59-60;
+    charset water = 61-62;
+END;

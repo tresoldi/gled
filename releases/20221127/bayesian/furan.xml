@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="Amdang_amda1238" />
+    <taxon id="Fur_furr1244" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_furan" name="data_furan" dataType="integer">
+    <sequence id="language_data_furan:Amdang_amda1238" taxon="Amdang_amda1238" value="0100100100100100100001001000110100100100100100100100100100100100100100100010010010010010010010010" />
+    <sequence id="language_data_furan:Fur_furr1244" taxon="Fur_furr1244" value="0010010010010010011100100110010010010010010010010010010010010010010010011001001001001001001001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,leaf,name,night,nose,one,path,see,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:furan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:furan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:furan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:furan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:furan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Amdang_amda1238,Fur_furr1244);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:furan" name="distribution">
+          <input id="featureClockRateCompound:furan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,leaf,name,night,nose,one,path,see,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:furan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:furan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:furan" beta="@featureClockRateGammaScale:furan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:furan" name="distribution" x="@featureClockRateGammaScale:furan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:furan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:furan" name="distribution" x="@covarion_alpha.s:furan">
+          <Uniform id="CovAlphaUniform:furan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:furan" name="distribution" x="@covarion_s.s:furan">
+          <Gamma id="Gamma.0:furan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:furan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:furan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:furan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:1sg" spec="SiteModel" mutationRate="@featureClockRate:furan:1sg" proportionInvariant="0">
+            <substModel id="covarion.s:furan" spec="BinaryCovarion" alpha="@covarion_alpha.s:furan" switchRate="@covarion_s.s:furan">
+              <vfrequencies id="furan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.65 0.35</vfrequencies>
+              <parameter id="furan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="furan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_furan:1sg" spec="FilteredAlignment" data="@data_furan" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:2sg" spec="SiteModel" mutationRate="@featureClockRate:furan:2sg" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:2sg" spec="FilteredAlignment" data="@data_furan" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:blood" spec="SiteModel" mutationRate="@featureClockRate:furan:blood" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:blood" spec="FilteredAlignment" data="@data_furan" filter="7-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:bone" spec="SiteModel" mutationRate="@featureClockRate:furan:bone" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:bone" spec="FilteredAlignment" data="@data_furan" filter="10-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:come" spec="SiteModel" mutationRate="@featureClockRate:furan:come" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:come" spec="FilteredAlignment" data="@data_furan" filter="13-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:die" spec="SiteModel" mutationRate="@featureClockRate:furan:die" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:die" spec="FilteredAlignment" data="@data_furan" filter="16-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:dog" spec="SiteModel" mutationRate="@featureClockRate:furan:dog" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:dog" spec="FilteredAlignment" data="@data_furan" filter="21-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:drink" spec="SiteModel" mutationRate="@featureClockRate:furan:drink" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:drink" spec="FilteredAlignment" data="@data_furan" filter="24-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:ear" spec="SiteModel" mutationRate="@featureClockRate:furan:ear" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:ear" spec="FilteredAlignment" data="@data_furan" filter="28-30" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:eye" spec="SiteModel" mutationRate="@featureClockRate:furan:eye" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:eye" spec="FilteredAlignment" data="@data_furan" filter="31-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:fire" spec="SiteModel" mutationRate="@featureClockRate:furan:fire" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:fire" spec="FilteredAlignment" data="@data_furan" filter="34-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:fish" spec="SiteModel" mutationRate="@featureClockRate:furan:fish" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:fish" spec="FilteredAlignment" data="@data_furan" filter="37-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:full" spec="SiteModel" mutationRate="@featureClockRate:furan:full" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:full" spec="FilteredAlignment" data="@data_furan" filter="40-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:hand" spec="SiteModel" mutationRate="@featureClockRate:furan:hand" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:hand" spec="FilteredAlignment" data="@data_furan" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:hear" spec="SiteModel" mutationRate="@featureClockRate:furan:hear" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:hear" spec="FilteredAlignment" data="@data_furan" filter="46-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:horn" spec="SiteModel" mutationRate="@featureClockRate:furan:horn" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:horn" spec="FilteredAlignment" data="@data_furan" filter="49-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:leaf" spec="SiteModel" mutationRate="@featureClockRate:furan:leaf" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:leaf" spec="FilteredAlignment" data="@data_furan" filter="52-54" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:name" spec="SiteModel" mutationRate="@featureClockRate:furan:name" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:name" spec="FilteredAlignment" data="@data_furan" filter="55-57" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:night" spec="SiteModel" mutationRate="@featureClockRate:furan:night" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:night" spec="FilteredAlignment" data="@data_furan" filter="58-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:nose" spec="SiteModel" mutationRate="@featureClockRate:furan:nose" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:nose" spec="FilteredAlignment" data="@data_furan" filter="61-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:one" spec="SiteModel" mutationRate="@featureClockRate:furan:one" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:one" spec="FilteredAlignment" data="@data_furan" filter="64-66" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:path" spec="SiteModel" mutationRate="@featureClockRate:furan:path" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:path" spec="FilteredAlignment" data="@data_furan" filter="67-69" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:see" spec="SiteModel" mutationRate="@featureClockRate:furan:see" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:see" spec="FilteredAlignment" data="@data_furan" filter="70-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:star" spec="SiteModel" mutationRate="@featureClockRate:furan:star" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:star" spec="FilteredAlignment" data="@data_furan" filter="74-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:stone" spec="SiteModel" mutationRate="@featureClockRate:furan:stone" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:stone" spec="FilteredAlignment" data="@data_furan" filter="77-79" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:sun" spec="SiteModel" mutationRate="@featureClockRate:furan:sun" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:sun" spec="FilteredAlignment" data="@data_furan" filter="80-82" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:tongue" spec="SiteModel" mutationRate="@featureClockRate:furan:tongue" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:tongue" spec="FilteredAlignment" data="@data_furan" filter="83-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:tooth" spec="SiteModel" mutationRate="@featureClockRate:furan:tooth" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:tooth" spec="FilteredAlignment" data="@data_furan" filter="86-88" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:tree" spec="SiteModel" mutationRate="@featureClockRate:furan:tree" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:tree" spec="FilteredAlignment" data="@data_furan" filter="89-91" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:two" spec="SiteModel" mutationRate="@featureClockRate:furan:two" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:two" spec="FilteredAlignment" data="@data_furan" filter="92-94" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:furan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.furan:water" spec="SiteModel" mutationRate="@featureClockRate:furan:water" proportionInvariant="0" substModel="@covarion.s:furan" />
+          <data id="feature_data_furan:water" spec="FilteredAlignment" data="@data_furan" filter="95-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:furan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:furan" name="up" />
+      <parameter idref="featureClockRateGammaScale:furan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:furan" spec="ScaleOperator" parameter="@covarion_alpha.s:furan" scaleFactor="0.5" weight="1.0" />
+    <operator id="furan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:furan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,leaf,name,night,nose,one,path,see,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:furan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="31" estimate="false">2 2 2 2 2 4 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="furan.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1sg,2sg,blood,bone,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,leaf,name,night,nose,one,path,see,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:furan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:furan" />
+      <log idref="covarion_alpha.s:furan" />
+      <log idref="covarion_s.s:furan" />
+    </logger>
+    <logger mode="tree" fileName="furan.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

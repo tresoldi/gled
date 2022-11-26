@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Dombano_aran1237,Kemberano_kemb1235,Kokoda_koko1265,Puragi_pura1253">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_southbirdsheadfamily" name="data_southbirdsheadfamily" dataType="integer">
+    <sequence id="language_data_southbirdsheadfamily:Dombano_aran1237" taxon="Dombano_aran1237" value="01000110110100110110000010010010010001100??011001100000110001001100010010001000010010001000100100100110010011010" />
+    <sequence id="language_data_southbirdsheadfamily:Kemberano_kemb1235" taxon="Kemberano_kemb1235" value="0010010010010010010101100101001001000101010010100010000101001000100010001100110010010001000100100100010011010010" />
+    <sequence id="language_data_southbirdsheadfamily:Kokoda_koko1265" taxon="Kokoda_koko1265" value="010000100101001000100000??010010010100100??01000000110001000100010101000100????010010000100100110100010011010010" />
+    <sequence id="language_data_southbirdsheadfamily:Puragi_pura1253" taxon="Puragi_pura1253" value="00010100100010100000100001001001001000010010???00010010000100100010001001000001001001100010010010010001010010001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,bone,come,die,dog,drink,ear,fire,fish,full,knee,leaf,mountain,new,night,nose,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:southbirdsheadfamily:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:southbirdsheadfamily" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:southbirdsheadfamily" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:southbirdsheadfamily" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:southbirdsheadfamily" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Puragi_pura1253,(Kokoda_koko1265,(Dombano_aran1237,Kemberano_kemb1235)));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:southbirdsheadfamily" name="distribution">
+          <input id="featureClockRateCompound:southbirdsheadfamily" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,bone,come,die,dog,drink,ear,fire,fish,full,knee,leaf,mountain,new,night,nose,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:southbirdsheadfamily:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:southbirdsheadfamily" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:southbirdsheadfamily" beta="@featureClockRateGammaScale:southbirdsheadfamily" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:southbirdsheadfamily" name="distribution" x="@featureClockRateGammaScale:southbirdsheadfamily">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:southbirdsheadfamily" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:southbirdsheadfamily" name="distribution" x="@covarion_alpha.s:southbirdsheadfamily">
+          <Uniform id="CovAlphaUniform:southbirdsheadfamily" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:southbirdsheadfamily" name="distribution" x="@covarion_s.s:southbirdsheadfamily">
+          <Gamma id="Gamma.0:southbirdsheadfamily" name="distr">
+            <parameter id="covarion_switch_gamma_param1:southbirdsheadfamily" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:southbirdsheadfamily" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:southbirdsheadfamily:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:1pl" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:southbirdsheadfamily" spec="BinaryCovarion" alpha="@covarion_alpha.s:southbirdsheadfamily" switchRate="@covarion_s.s:southbirdsheadfamily">
+              <vfrequencies id="southbirdsheadfamily:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.68 0.32</vfrequencies>
+              <parameter id="southbirdsheadfamily:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="southbirdsheadfamily:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_southbirdsheadfamily:1pl" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:1sg" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:1sg" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:1sg" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="5-7" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:2sg" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:2sg" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:2sg" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="8-10" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:bone" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:bone" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:bone" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="11-13" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:come" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:come" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:come" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="14-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:die" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:die" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:die" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="17-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:dog" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:dog" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:dog" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="24-26" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:drink" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:drink" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:drink" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="27-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:ear" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:ear" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:ear" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="30-32" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:fire" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:fire" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:fire" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="33-36" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:fish" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:fish" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:fish" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="37-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:full" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:full" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:full" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="41-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:knee" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:knee" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:knee" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="44-47" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:leaf" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:leaf" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:leaf" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="48-54" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:mountain" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:mountain" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:mountain" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="55-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:new" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:new" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:new" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="60-62" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:night" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:night" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:night" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="63-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:nose" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:nose" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:nose" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="68-70" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:path" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:path" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:path" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="71-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:person" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:person" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:person" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="75-79" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:see" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:see" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:see" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="80-82" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:skin" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:skin" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:skin" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="83-86" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:star" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:star" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:star" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="87-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:stone" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:stone" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:stone" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="91-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:sun" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:sun" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:sun" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="94-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:tongue" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:tongue" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:tongue" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="97-99" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:tooth" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:tooth" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:tooth" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="100-103" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:tree" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:tree" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:tree" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="104-106" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:two" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:two" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:two" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="107-109" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:southbirdsheadfamily:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.southbirdsheadfamily:water" spec="SiteModel" mutationRate="@featureClockRate:southbirdsheadfamily:water" proportionInvariant="0" substModel="@covarion.s:southbirdsheadfamily" />
+          <data id="feature_data_southbirdsheadfamily:water" spec="FilteredAlignment" data="@data_southbirdsheadfamily" filter="110-112" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:southbirdsheadfamily" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:southbirdsheadfamily" name="up" />
+      <parameter idref="featureClockRateGammaScale:southbirdsheadfamily" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:southbirdsheadfamily" spec="ScaleOperator" parameter="@covarion_alpha.s:southbirdsheadfamily" scaleFactor="0.5" weight="1.0" />
+    <operator id="southbirdsheadfamily:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:southbirdsheadfamily" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,bone,come,die,dog,drink,ear,fire,fish,full,knee,leaf,mountain,new,night,nose,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:southbirdsheadfamily:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="30" estimate="false">3 2 2 2 2 6 2 2 2 3 3 2 3 6 4 2 4 2 3 4 2 3 3 2 2 2 3 2 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="southbirdsheadfamily.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,bone,come,die,dog,drink,ear,fire,fish,full,knee,leaf,mountain,new,night,nose,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:southbirdsheadfamily:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:southbirdsheadfamily" />
+      <log idref="covarion_alpha.s:southbirdsheadfamily" />
+      <log idref="covarion_s.s:southbirdsheadfamily" />
+    </logger>
+    <logger mode="tree" fileName="southbirdsheadfamily.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

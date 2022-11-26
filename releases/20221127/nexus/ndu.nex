@@ -1,0 +1,234 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=12 NCHAR=169;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_ndu.blood.0005,
+        3 blood_ndu.blood.0006,
+        4 blood_ndu.blood.0007,
+        5 blood_ndu.blood.0008,
+        6 bone_0ascertainment,
+        7 bone_ndu.bone.0009,
+        8 bone_ndu.bone.0010,
+        9 breast_0ascertainment,
+        10 breast_ndu.breast.0011,
+        11 breast_ndu.breast.0012,
+        12 come_0ascertainment,
+        13 come_ndu.come.0013,
+        14 die_0ascertainment,
+        15 die_ndu.die.0014,
+        16 dog_0ascertainment,
+        17 dog_ndu.dog.0015,
+        18 dog_ndu.dog.0016,
+        19 dog_ndu.dog.0017,
+        20 dog_ndu.dog.0018,
+        21 dog_ndu.dog.0019,
+        22 drink_0ascertainment,
+        23 drink_ndu.drink.0020,
+        24 ear_0ascertainment,
+        25 ear_ndu.ear.0021,
+        26 eye_0ascertainment,
+        27 eye_ndu.eye.0022,
+        28 eye_ndu.eye.0023,
+        29 eye_ndu.eye.0024,
+        30 eye_ndu.eye.0025,
+        31 fire_0ascertainment,
+        32 fire_ndu.fire.0026,
+        33 fire_ndu.fire.0027,
+        34 fish_0ascertainment,
+        35 fish_ndu.fish.0028,
+        36 fish_ndu.fish.0029,
+        37 fish_ndu.fish.0030,
+        38 fish_ndu.fish.0031,
+        39 fish_ndu.fish.0032,
+        40 fish_ndu.fish.0033,
+        41 full_0ascertainment,
+        42 full_ndu.full.0034,
+        43 full_ndu.full.0035,
+        44 full_ndu.full.0036,
+        45 full_ndu.full.0037,
+        46 full_ndu.full.0038,
+        47 full_ndu.full.0039,
+        48 full_ndu.full.0040,
+        49 full_ndu.full.0041,
+        50 full_ndu.full.0042,
+        51 full_ndu.full.0043,
+        52 full_ndu.full.0044,
+        53 hand_0ascertainment,
+        54 hand_ndu.hand.0045,
+        55 hand_ndu.hand.0046,
+        56 hand_ndu.hand.0047,
+        57 hand_ndu.hand.0048,
+        58 hand_ndu.hand.0049,
+        59 hand_ndu.hand.0050,
+        60 hand_ndu.hand.0051,
+        61 hear_0ascertainment,
+        62 hear_ndu.hear.0052,
+        63 hear_ndu.hear.0053,
+        64 hear_ndu.hear.0054,
+        65 horn_0ascertainment,
+        66 horn_ndu.horn.0055,
+        67 knee_0ascertainment,
+        68 knee_ndu.knee.0056,
+        69 knee_ndu.knee.0057,
+        70 knee_ndu.knee.0058,
+        71 leaf_0ascertainment,
+        72 leaf_ndu.leaf.0059,
+        73 leaf_ndu.leaf.0060,
+        74 leaf_ndu.leaf.0061,
+        75 liver_0ascertainment,
+        76 liver_ndu.liver.0062,
+        77 liver_ndu.liver.0063,
+        78 liver_ndu.liver.0064,
+        79 liver_ndu.liver.0065,
+        80 liver_ndu.liver.0066,
+        81 liver_ndu.liver.0067,
+        82 liver_ndu.liver.0068,
+        83 liver_ndu.liver.0069,
+        84 louse_0ascertainment,
+        85 louse_ndu.louse.0070,
+        86 louse_ndu.louse.0071,
+        87 louse_ndu.louse.0072,
+        88 louse_ndu.louse.0073,
+        89 louse_ndu.louse.0074,
+        90 louse_ndu.louse.0075,
+        91 mountain_0ascertainment,
+        92 mountain_ndu.mountain.0076,
+        93 mountain_ndu.mountain.0077,
+        94 mountain_ndu.mountain.0078,
+        95 mountain_ndu.mountain.0079,
+        96 mountain_ndu.mountain.0080,
+        97 mountain_ndu.mountain.0081,
+        98 name_0ascertainment,
+        99 name_ndu.name.0082,
+        100 name_ndu.name.0083,
+        101 name_ndu.name.0084,
+        102 name_ndu.name.0085,
+        103 name_ndu.name.0086,
+        104 name_ndu.name.0087,
+        105 new_0ascertainment,
+        106 new_ndu.new.0088,
+        107 new_ndu.new.0089,
+        108 new_ndu.new.0090,
+        109 night_0ascertainment,
+        110 night_ndu.night.0091,
+        111 nose_0ascertainment,
+        112 nose_ndu.nose.0092,
+        113 nose_ndu.nose.0093,
+        114 one_0ascertainment,
+        115 one_ndu.one.0094,
+        116 one_ndu.one.0095,
+        117 one_ndu.one.0096,
+        118 one_ndu.one.0097,
+        119 one_ndu.one.0098,
+        120 one_ndu.one.0099,
+        121 path_0ascertainment,
+        122 path_ndu.path.0100,
+        123 path_ndu.path.0101,
+        124 person_0ascertainment,
+        125 person_ndu.person.0102,
+        126 person_ndu.person.0103,
+        127 person_ndu.person.0104,
+        128 pl_0ascertainment,
+        129 pl_ndu.1pl.0001,
+        130 see_0ascertainment,
+        131 see_ndu.see.0105,
+        132 see_ndu.see.0106,
+        133 sg_0ascertainment,
+        134 sg_ndu.1sg.0002,
+        135 sg_ndu.2sg.0003,
+        136 sg_ndu.2sg.0004,
+        137 skin_0ascertainment,
+        138 skin_ndu.skin.0107,
+        139 skin_ndu.skin.0108,
+        140 skin_ndu.skin.0109,
+        141 skin_ndu.skin.0110,
+        142 star_0ascertainment,
+        143 star_ndu.star.0111,
+        144 star_ndu.star.0112,
+        145 star_ndu.star.0113,
+        146 star_ndu.star.0114,
+        147 star_ndu.star.0115,
+        148 stone_0ascertainment,
+        149 stone_ndu.stone.0116,
+        150 stone_ndu.stone.0117,
+        151 stone_ndu.stone.0118,
+        152 stone_ndu.stone.0119,
+        153 sun_0ascertainment,
+        154 sun_ndu.sun.0120,
+        155 tongue_0ascertainment,
+        156 tongue_ndu.tongue.0121,
+        157 tooth_0ascertainment,
+        158 tooth_ndu.tooth.0122,
+        159 tooth_ndu.tooth.0123,
+        160 tree_0ascertainment,
+        161 tree_ndu.tree.0124,
+        162 two_0ascertainment,
+        163 two_ndu.two.0125,
+        164 two_ndu.two.0126,
+        165 two_ndu.two.0127,
+        166 two_ndu.two.0128,
+        167 water_0ascertainment,
+        168 water_ndu.water.0129,
+        169 water_ndu.water.0130
+;
+
+MATRIX
+ambulas     01000010010010101000001010100001001000000100000000000100000001000?0100010101000000001000000100000010000001000101001001000100100010100111010000100000100001010100101000011
+gaikundi_2  001010100100?0?0100000?01001000100010000001000000000010000000100010???00100????????0??????0100001010000000100101000100010100100010100111001000?????00100010?0100101000001
+hanga_hundi 0????01001001010100000?0?000100100??????0???????????0100000001000?010001000????????0??????010000000100000100010100010000010010001010011101000001000010000?010??0100100001
+iatmul      00010001010010100100001010100001001000000001000000000100000000100?0100010000100000000100000100000000100000100101000010000100010010100111010000001000010001010100100010001
+kwusaun     01000010001010?00100001010100000100010000000100000000010001000010?0010000100010000000010000100000000010001000101000100000100100010100101001000100000001001010100101000001
+manambu     00100010010010?0001000?010000101001000000000010000000010000000100?0100000100001000000001000010000000100001000100100001000100100010100101010000000100010001010010101000001
+maprik      01000010010010?0100000?010100001001000000000001000000001000001000?0100000101000000001000000100000010000001000101000001000100100010100101010000100000100001010100101000001
+ngala       01000010010010?0000100?010000101000001000000000100000010000101000?0001000100000100000000100001000000001001000101000001000010001010010101000100100000001001010100100001001
+nyaura      00010001010010?0010000?010100001001000000000000010000010100000100?0100000100100000000100000000100000100000010101000010000100100010100101010000100000010001010100100010001
+wosera      00100010010010?00100001010100001000000100000000001000001000001000?0100010000000010001000000100000010000001000101000001000100100010100101010000100000100001010100101000001
+yelogu      00100010010010?00000101010100001001000000000000000100100000001000?0100010000000001000000010100000010000000100101000010000100100010100101000010000010000101010100101000001
+yengoru     01000001010010?0010000?010100000100000010000000000010000010000010?0010000100000000100000010000010000000101000101000000100100100010100101001000100000001001010100101000001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-8;
+    charset breast = 9-11;
+    charset come = 12-13;
+    charset die = 14-15;
+    charset dog = 16-21;
+    charset drink = 22-23;
+    charset ear = 24-25;
+    charset eye = 26-30;
+    charset fire = 31-33;
+    charset fish = 34-40;
+    charset full = 41-52;
+    charset hand = 53-60;
+    charset hear = 61-64;
+    charset horn = 65-66;
+    charset knee = 67-70;
+    charset leaf = 71-74;
+    charset liver = 75-83;
+    charset louse = 84-90;
+    charset mountain = 91-97;
+    charset name = 98-104;
+    charset new = 105-108;
+    charset night = 109-110;
+    charset nose = 111-113;
+    charset one = 114-120;
+    charset path = 121-123;
+    charset person = 124-127;
+    charset pl = 128-129;
+    charset see = 130-132;
+    charset sg = 133-136;
+    charset skin = 137-141;
+    charset star = 142-147;
+    charset stone = 148-152;
+    charset sun = 153-154;
+    charset tongue = 155-156;
+    charset tooth = 157-159;
+    charset tree = 160-161;
+    charset two = 162-166;
+    charset water = 167-169;
+END;

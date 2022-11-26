@@ -1,0 +1,159 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=6 NCHAR=103;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_manubaran.blood.0005,
+        3 blood_manubaran.blood.0006,
+        4 bone_0ascertainment,
+        5 bone_manubaran.bone.0007,
+        6 breast_0ascertainment,
+        7 breast_manubaran.breast.0008,
+        8 breast_manubaran.breast.0009,
+        9 come_0ascertainment,
+        10 come_manubaran.come.0010,
+        11 come_manubaran.come.0011,
+        12 dog_0ascertainment,
+        13 dog_manubaran.dog.0012,
+        14 drink_0ascertainment,
+        15 drink_manubaran.drink.0013,
+        16 ear_0ascertainment,
+        17 ear_manubaran.ear.0014,
+        18 eye_0ascertainment,
+        19 eye_manubaran.eye.0015,
+        20 eye_manubaran.eye.0016,
+        21 eye_manubaran.eye.0017,
+        22 fire_0ascertainment,
+        23 fire_manubaran.fire.0018,
+        24 fire_manubaran.fire.0019,
+        25 fish_0ascertainment,
+        26 fish_manubaran.fish.0020,
+        27 fish_manubaran.fish.0021,
+        28 fish_manubaran.fish.0022,
+        29 full_0ascertainment,
+        30 full_manubaran.full.0023,
+        31 full_manubaran.full.0024,
+        32 full_manubaran.full.0025,
+        33 full_manubaran.full.0026,
+        34 full_manubaran.full.0027,
+        35 hear_0ascertainment,
+        36 hear_manubaran.hear.0028,
+        37 knee_0ascertainment,
+        38 knee_manubaran.knee.0029,
+        39 knee_manubaran.knee.0030,
+        40 knee_manubaran.knee.0031,
+        41 knee_manubaran.knee.0032,
+        42 leaf_0ascertainment,
+        43 leaf_manubaran.leaf.0033,
+        44 liver_0ascertainment,
+        45 liver_manubaran.liver.0034,
+        46 liver_manubaran.liver.0035,
+        47 louse_0ascertainment,
+        48 louse_manubaran.louse.0036,
+        49 mountain_0ascertainment,
+        50 mountain_manubaran.mountain.0037,
+        51 mountain_manubaran.mountain.0038,
+        52 name_0ascertainment,
+        53 name_manubaran.name.0039,
+        54 new_0ascertainment,
+        55 new_manubaran.new.0040,
+        56 night_0ascertainment,
+        57 night_manubaran.night.0041,
+        58 night_manubaran.night.0042,
+        59 nose_0ascertainment,
+        60 nose_manubaran.nose.0043,
+        61 one_0ascertainment,
+        62 one_manubaran.one.0044,
+        63 one_manubaran.one.0045,
+        64 path_0ascertainment,
+        65 path_manubaran.path.0046,
+        66 path_manubaran.path.0047,
+        67 person_0ascertainment,
+        68 person_manubaran.person.0048,
+        69 pl_0ascertainment,
+        70 pl_manubaran.1pl.0001,
+        71 see_0ascertainment,
+        72 see_manubaran.see.0049,
+        73 see_manubaran.see.0050,
+        74 see_manubaran.see.0051,
+        75 sg_0ascertainment,
+        76 sg_manubaran.1sg.0002,
+        77 sg_manubaran.2sg.0003,
+        78 sg_manubaran.2sg.0004,
+        79 skin_0ascertainment,
+        80 skin_manubaran.skin.0052,
+        81 skin_manubaran.skin.0053,
+        82 skin_manubaran.skin.0054,
+        83 skin_manubaran.skin.0055,
+        84 star_0ascertainment,
+        85 star_manubaran.star.0056,
+        86 star_manubaran.star.0057,
+        87 star_manubaran.star.0058,
+        88 stone_0ascertainment,
+        89 stone_manubaran.stone.0059,
+        90 sun_0ascertainment,
+        91 sun_manubaran.sun.0060,
+        92 tongue_0ascertainment,
+        93 tongue_manubaran.tongue.0061,
+        94 tooth_0ascertainment,
+        95 tooth_manubaran.tooth.0062,
+        96 tree_0ascertainment,
+        97 tree_manubaran.tree.0063,
+        98 tree_manubaran.tree.0064,
+        99 two_0ascertainment,
+        100 two_manubaran.two.0065,
+        101 two_manubaran.two.0066,
+        102 water_0ascertainment,
+        103 water_manubaran.water.0067
+;
+
+MATRIX
+doromu           01001011010010101011001001100100100101010010110101001010110?0100100?01010001100110001100101010101001001
+doromu_aramaika  0100100101001010100100100010010000010????0101001010010?001010100100?01010001100100000100101010101001001
+doromu_bareika   010010010100101010100010001001000001001000101001010010?011010100100?01010001100010000100101010101001001
+doromu_lofaika   0100100101001010101000100100001010010????0100101010010?011010100100?0?010001100100001000101010101001001
+maria            01101001011010101000101000010001010100101010100100101010110?0100010101001101110001100110101010101100101
+maria_maranomu_1 0100100100101010100010010010000100010????0101001001010?011010010010?01000101100000100100101010101000101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-5;
+    charset breast = 6-8;
+    charset come = 9-11;
+    charset dog = 12-13;
+    charset drink = 14-15;
+    charset ear = 16-17;
+    charset eye = 18-21;
+    charset fire = 22-24;
+    charset fish = 25-28;
+    charset full = 29-34;
+    charset hear = 35-36;
+    charset knee = 37-41;
+    charset leaf = 42-43;
+    charset liver = 44-46;
+    charset louse = 47-48;
+    charset mountain = 49-51;
+    charset name = 52-53;
+    charset new = 54-55;
+    charset night = 56-58;
+    charset nose = 59-60;
+    charset one = 61-63;
+    charset path = 64-66;
+    charset person = 67-68;
+    charset pl = 69-70;
+    charset see = 71-74;
+    charset sg = 75-78;
+    charset skin = 79-83;
+    charset star = 84-87;
+    charset stone = 88-89;
+    charset sun = 90-91;
+    charset tongue = 92-93;
+    charset tooth = 94-95;
+    charset tree = 96-98;
+    charset two = 99-101;
+    charset water = 102-103;
+END;

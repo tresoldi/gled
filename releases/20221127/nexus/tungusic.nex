@@ -1,0 +1,309 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=24 NCHAR=232;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_tungusic.blood.0010,
+        3 bone_0ascertainment,
+        4 bone_tungusic.bone.0011,
+        5 bone_tungusic.bone.0012,
+        6 bone_tungusic.bone.0013,
+        7 breast_0ascertainment,
+        8 breast_tungusic.breast.0014,
+        9 breast_tungusic.breast.0015,
+        10 breast_tungusic.breast.0016,
+        11 breast_tungusic.breast.0017,
+        12 come_0ascertainment,
+        13 come_tungusic.come.0018,
+        14 come_tungusic.come.0019,
+        15 come_tungusic.come.0020,
+        16 come_tungusic.come.0021,
+        17 come_tungusic.come.0022,
+        18 come_tungusic.come.0023,
+        19 die_0ascertainment,
+        20 die_tungusic.die.0024,
+        21 die_tungusic.die.0025,
+        22 die_tungusic.die.0026,
+        23 die_tungusic.die.0027,
+        24 die_tungusic.die.0028,
+        25 die_tungusic.die.0029,
+        26 die_tungusic.die.0030,
+        27 die_tungusic.die.0031,
+        28 dog_0ascertainment,
+        29 dog_tungusic.dog.0032,
+        30 dog_tungusic.dog.0033,
+        31 dog_tungusic.dog.0034,
+        32 drink_0ascertainment,
+        33 drink_tungusic.drink.0035,
+        34 drink_tungusic.drink.0036,
+        35 drink_tungusic.drink.0037,
+        36 drink_tungusic.drink.0038,
+        37 ear_0ascertainment,
+        38 ear_tungusic.ear.0039,
+        39 ear_tungusic.ear.0040,
+        40 ear_tungusic.ear.0041,
+        41 ear_tungusic.ear.0042,
+        42 ear_tungusic.ear.0043,
+        43 eye_0ascertainment,
+        44 eye_tungusic.eye.0044,
+        45 eye_tungusic.eye.0045,
+        46 eye_tungusic.eye.0046,
+        47 eye_tungusic.eye.0047,
+        48 eye_tungusic.eye.0048,
+        49 eye_tungusic.eye.0049,
+        50 fire_0ascertainment,
+        51 fire_tungusic.fire.0050,
+        52 fire_tungusic.fire.0051,
+        53 fire_tungusic.fire.0052,
+        54 fire_tungusic.fire.0053,
+        55 fire_tungusic.fire.0054,
+        56 fire_tungusic.fire.0055,
+        57 fish_0ascertainment,
+        58 fish_tungusic.fish.0056,
+        59 fish_tungusic.fish.0057,
+        60 fish_tungusic.fish.0058,
+        61 fish_tungusic.fish.0059,
+        62 fish_tungusic.fish.0060,
+        63 full_0ascertainment,
+        64 full_tungusic.full.0061,
+        65 full_tungusic.full.0062,
+        66 full_tungusic.full.0063,
+        67 full_tungusic.full.0064,
+        68 full_tungusic.full.0065,
+        69 full_tungusic.full.0066,
+        70 full_tungusic.full.0067,
+        71 full_tungusic.full.0068,
+        72 full_tungusic.full.0069,
+        73 hand_0ascertainment,
+        74 hand_tungusic.hand.0070,
+        75 hand_tungusic.hand.0071,
+        76 hand_tungusic.hand.0072,
+        77 hear_0ascertainment,
+        78 hear_tungusic.hear.0073,
+        79 hear_tungusic.hear.0074,
+        80 horn_0ascertainment,
+        81 horn_tungusic.horn.0075,
+        82 horn_tungusic.horn.0076,
+        83 horn_tungusic.horn.0077,
+        84 horn_tungusic.horn.0078,
+        85 horn_tungusic.horn.0079,
+        86 horn_tungusic.horn.0080,
+        87 horn_tungusic.horn.0081,
+        88 horn_tungusic.horn.0082,
+        89 horn_tungusic.horn.0083,
+        90 knee_0ascertainment,
+        91 knee_tungusic.knee.0084,
+        92 knee_tungusic.knee.0085,
+        93 knee_tungusic.knee.0086,
+        94 leaf_0ascertainment,
+        95 leaf_tungusic.leaf.0087,
+        96 leaf_tungusic.leaf.0088,
+        97 leaf_tungusic.leaf.0089,
+        98 leaf_tungusic.leaf.0090,
+        99 leaf_tungusic.leaf.0091,
+        100 liver_0ascertainment,
+        101 liver_tungusic.liver.0092,
+        102 liver_tungusic.liver.0093,
+        103 liver_tungusic.liver.0094,
+        104 louse_0ascertainment,
+        105 louse_tungusic.louse.0095,
+        106 louse_tungusic.louse.0096,
+        107 louse_tungusic.louse.0097,
+        108 mountain_0ascertainment,
+        109 mountain_tungusic.mountain.0098,
+        110 mountain_tungusic.mountain.0099,
+        111 mountain_tungusic.mountain.0100,
+        112 mountain_tungusic.mountain.0101,
+        113 mountain_tungusic.mountain.0102,
+        114 mountain_tungusic.mountain.0103,
+        115 mountain_tungusic.mountain.0104,
+        116 mountain_tungusic.mountain.0105,
+        117 mountain_tungusic.mountain.0106,
+        118 mountain_tungusic.mountain.0107,
+        119 name_0ascertainment,
+        120 name_tungusic.name.0108,
+        121 name_tungusic.name.0109,
+        122 new_0ascertainment,
+        123 new_tungusic.new.0110,
+        124 new_tungusic.new.0111,
+        125 new_tungusic.new.0112,
+        126 new_tungusic.new.0113,
+        127 new_tungusic.new.0114,
+        128 new_tungusic.new.0115,
+        129 new_tungusic.new.0116,
+        130 new_tungusic.new.0117,
+        131 new_tungusic.new.0118,
+        132 night_0ascertainment,
+        133 night_tungusic.night.0119,
+        134 night_tungusic.night.0120,
+        135 night_tungusic.night.0121,
+        136 night_tungusic.night.0122,
+        137 night_tungusic.night.0123,
+        138 night_tungusic.night.0124,
+        139 night_tungusic.night.0125,
+        140 nose_0ascertainment,
+        141 nose_tungusic.nose.0126,
+        142 nose_tungusic.nose.0127,
+        143 nose_tungusic.nose.0128,
+        144 nose_tungusic.nose.0129,
+        145 nose_tungusic.nose.0130,
+        146 nose_tungusic.nose.0131,
+        147 nose_tungusic.nose.0132,
+        148 one_0ascertainment,
+        149 one_tungusic.one.0133,
+        150 one_tungusic.one.0134,
+        151 one_tungusic.one.0135,
+        152 one_tungusic.one.0136,
+        153 path_0ascertainment,
+        154 path_tungusic.path.0137,
+        155 path_tungusic.path.0138,
+        156 path_tungusic.path.0139,
+        157 path_tungusic.path.0140,
+        158 path_tungusic.path.0141,
+        159 path_tungusic.path.0142,
+        160 path_tungusic.path.0143,
+        161 path_tungusic.path.0144,
+        162 path_tungusic.path.0145,
+        163 person_0ascertainment,
+        164 person_tungusic.person.0146,
+        165 person_tungusic.person.0147,
+        166 person_tungusic.person.0148,
+        167 person_tungusic.person.0149,
+        168 person_tungusic.person.0150,
+        169 person_tungusic.person.0151,
+        170 person_tungusic.person.0152,
+        171 pl_0ascertainment,
+        172 pl_tungusic.1pl.0001,
+        173 pl_tungusic.1pl.0002,
+        174 pl_tungusic.1pl.0003,
+        175 pl_tungusic.1pl.0004,
+        176 pl_tungusic.1pl.0005,
+        177 pl_tungusic.1pl.0006,
+        178 see_0ascertainment,
+        179 see_tungusic.see.0153,
+        180 see_tungusic.see.0154,
+        181 see_tungusic.see.0155,
+        182 see_tungusic.see.0156,
+        183 see_tungusic.see.0157,
+        184 see_tungusic.see.0158,
+        185 see_tungusic.see.0159,
+        186 sg_0ascertainment,
+        187 sg_tungusic.1sg.0007,
+        188 sg_tungusic.1sg.0008,
+        189 sg_tungusic.2sg.0009,
+        190 skin_0ascertainment,
+        191 skin_tungusic.skin.0160,
+        192 skin_tungusic.skin.0161,
+        193 skin_tungusic.skin.0162,
+        194 skin_tungusic.skin.0163,
+        195 skin_tungusic.skin.0164,
+        196 skin_tungusic.skin.0165,
+        197 skin_tungusic.skin.0166,
+        198 skin_tungusic.skin.0167,
+        199 star_0ascertainment,
+        200 star_tungusic.star.0168,
+        201 stone_0ascertainment,
+        202 stone_tungusic.stone.0169,
+        203 stone_tungusic.stone.0170,
+        204 stone_tungusic.stone.0171,
+        205 stone_tungusic.stone.0172,
+        206 sun_0ascertainment,
+        207 sun_tungusic.sun.0173,
+        208 sun_tungusic.sun.0174,
+        209 sun_tungusic.sun.0175,
+        210 tongue_0ascertainment,
+        211 tongue_tungusic.tongue.0176,
+        212 tongue_tungusic.tongue.0177,
+        213 tongue_tungusic.tongue.0178,
+        214 tooth_0ascertainment,
+        215 tooth_tungusic.tooth.0179,
+        216 tooth_tungusic.tooth.0180,
+        217 tooth_tungusic.tooth.0181,
+        218 tooth_tungusic.tooth.0182,
+        219 tree_0ascertainment,
+        220 tree_tungusic.tree.0183,
+        221 tree_tungusic.tree.0184,
+        222 tree_tungusic.tree.0185,
+        223 tree_tungusic.tree.0186,
+        224 tree_tungusic.tree.0187,
+        225 two_0ascertainment,
+        226 two_tungusic.two.0188,
+        227 two_tungusic.two.0189,
+        228 two_tungusic.two.0190,
+        229 two_tungusic.two.0191,
+        230 water_0ascertainment,
+        231 water_tungusic.water.0192,
+        232 water_tungusic.water.0193
+;
+
+MATRIX
+aihui_manchu            01010001000010000001000000001000????010000010000001000000100000?????????01000100100000000010001000001000???010000000000100?????????0100000001000000010000?????????010000000110000010000010101010000000010100001000???0100001000001000010
+even                    0100100010000100000010000000100010000010000010000001000000100001000010000100010001000000100100100000010010000100000000010010010000000100000001000000100001000000000010000000100000010000001010010010000100100001001000010000101001000010
+evenki                  0101000010000100000110000000100001000100000001000000100000100000100000000010010000100000000100100000010010000010000000010001000000000100100001000000100001000000000001000000010000001000001010001000000100010010101100010000010001000010
+evenki_poligus_literary 0101000010000100000100000000100000100100000010000000100000100000100000000100010000010000000100100000010010000001000000010000100000000100000001000000100001000000000000100000010000000100001010001000000100100000100100010000100001000010
+ewen                    0100100????0010000000100010010001000001000000010000001000010000?????????01000100?????????0???0010000???0???0000010000001000001000000010000000100000010000010000000001000000??????0000010001010010010000?0010000100???0010000001001000010
+ewenki_2                0101000????0010000010000000010000010010000000100000010000010000?????????01000100?????????0???0100000???0???0000001000001000100000000010001000100000010000100000000000010000??????001000000101000010000010010001000???0010000100001000010
+hezhe                   0101000????0010000010000000010000010010000001000000010100100000?????????01000100?????????0???0?????0???0???0000000100001000010000000001000001000000010000100000000000001000??????001000000101000001000010010001000???0010000100000100010
+jurchen                 0101000001000100000100000000100000100100000010000000100001000000100000000100010000001000000100100000100010001000000000001000100000000100000010000000100001000000000000010000001000010000001010000011000100100010000010010000100000100010
+kur_urmi                0101000????0010000010000000010000010010000001000000010000010000?????????01000100?????????0???0100000???0???0000001000001000010000000010000001000000010000100000000000010000??????001000000011000001000010010001000???0010000100001000010
+manchu                  0101000110001010000000100010101000110100000001000000001001000000100001000100010000001000000010100000100001001000000001010000001001000101000010000000100000010000010100100001000010110000001010000000110101000010000010100100100001000010
+nanai_2                 0101000????0100000000001000001000010010000001000000000010001000?????????01000100001000000000100010000010???00000001000010000000100000100000010000000100001000000000000010001000000001000000110000001000100100010001000010000100001000010
+nanai_china             01010000010001000001000000001000001001000000100000??????0100000?????????01000100?????????00100100000???01000??????????0??00010000000???????010000000100001000000000000010001001000010000001010000011000100100010000010010000100000100010
+naykhin_nanai           0101000110000001000000010000010000100100000010000010000100010000010000000100010000100000000010001000001000100000001000011000000100000100000010000000110001000000000000010001000000001000000110000001000100100010001000010000100001000010
+negidal                 010???0????0010000010000000010000010010000000100000010000010000?????????01000100?????????0???0100000???0???0000001000001000010000000010000000100000010000000100000000010000??????001000000101000001000010010001000???0010000100001000010
+negidal_verchovski      010001001000010000010000000010000010010000000100000010000010000?????????0100010000000100000100100000010010000000010000010000100000000100000001000000100000000100000000100000001000010000001010000010000100100010001000010000100000010010
+oroch                   01010000001000001000000010001000001000011100100100001000000010000010001101000110000000100001001000000100???00000010000010000000010000100001000100000100000000010000000010001000000000001001010100010000100001010001000010000100001000001
+orochi                  0101000010000100000100000000100000100100000010000000100000010000100000000100010000010000000100100000010010000000000100010000100000000100000000010000100001000000000000010000001000010000001010000010000100100010001000010000100001000010
+oroqen                  0101000010000100000100000000100000100100000001000000100000100000100000000100010000000101000100000100010010000000010000010000100000000100000001000000100001000000000000100001000000010000001010000110000100100000101000010000100001000010
+sibe_manchu             010100010000100000010000000000100010010000000100000000100100000?????????00010100?????????0???0?????01000???0100000000001000000000100100000001000000000100?????????0000001101000010110000001010????????0?01000010000010100000000101000010
+solon                   0101000????0010000010000000010000010010000001000000100000000010?????????01000100?????????0???0000100???0???0000000001001000010000000010000000000100010000000000100001000000??????001000000101000001000010010001000???0010000100001000010
+udehe                   0101000100000100000100000000100000100001000000001000100000010000000100000100010000010000000100100000010010000000010000010000000000100100000000100000100001000000000000010000000100010000001010000010000100100010001000010000100001000001
+uilta                   0101000????0000001010000000001000010010000001000000000010001000?????????01000100?????????0???0001000???0???0000000100001000000000100010000000000010000010100000000000001000??????001000000101000000100010010001000???0001000100001000010
+ulcha                   0101000010001000000100000000010000100100000010000000000100010000100000000100010000010000000010001000001000100010000000010000000001000100000000000010100001000000000000010001000000010000001010000001000100100010001000010000100000001010
+xibe                    0101000????0100000010000000010100010010000000100000000100100000?????????01000100?????????0???0000010???0???0100000000001000000000100100000001000000010000000000010000000010??????001000000101010000000010100001000???0100000100001000010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-6;
+    charset breast = 7-11;
+    charset come = 12-18;
+    charset die = 19-27;
+    charset dog = 28-31;
+    charset drink = 32-36;
+    charset ear = 37-42;
+    charset eye = 43-49;
+    charset fire = 50-56;
+    charset fish = 57-62;
+    charset full = 63-72;
+    charset hand = 73-76;
+    charset hear = 77-79;
+    charset horn = 80-89;
+    charset knee = 90-93;
+    charset leaf = 94-99;
+    charset liver = 100-103;
+    charset louse = 104-107;
+    charset mountain = 108-118;
+    charset name = 119-121;
+    charset new = 122-131;
+    charset night = 132-139;
+    charset nose = 140-147;
+    charset one = 148-152;
+    charset path = 153-162;
+    charset person = 163-170;
+    charset pl = 171-177;
+    charset see = 178-185;
+    charset sg = 186-189;
+    charset skin = 190-198;
+    charset star = 199-200;
+    charset stone = 201-205;
+    charset sun = 206-209;
+    charset tongue = 210-213;
+    charset tooth = 214-218;
+    charset tree = 219-224;
+    charset two = 225-229;
+    charset water = 230-232;
+END;

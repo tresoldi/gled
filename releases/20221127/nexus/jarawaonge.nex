@@ -1,0 +1,141 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=91;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_jarawaonge.blood.0005,
+        3 bone_0ascertainment,
+        4 bone_jarawaonge.bone.0006,
+        5 breast_0ascertainment,
+        6 breast_jarawaonge.breast.0007,
+        7 come_0ascertainment,
+        8 come_jarawaonge.come.0008,
+        9 come_jarawaonge.come.0009,
+        10 come_jarawaonge.come.0010,
+        11 come_jarawaonge.come.0011,
+        12 die_0ascertainment,
+        13 die_jarawaonge.die.0012,
+        14 dog_0ascertainment,
+        15 dog_jarawaonge.dog.0013,
+        16 dog_jarawaonge.dog.0014,
+        17 drink_0ascertainment,
+        18 drink_jarawaonge.drink.0015,
+        19 drink_jarawaonge.drink.0016,
+        20 ear_0ascertainment,
+        21 ear_jarawaonge.ear.0017,
+        22 eye_0ascertainment,
+        23 eye_jarawaonge.eye.0018,
+        24 fire_0ascertainment,
+        25 fire_jarawaonge.fire.0019,
+        26 fish_0ascertainment,
+        27 fish_jarawaonge.fish.0020,
+        28 fish_jarawaonge.fish.0021,
+        29 hand_0ascertainment,
+        30 hand_jarawaonge.hand.0022,
+        31 horn_0ascertainment,
+        32 horn_jarawaonge.horn.0023,
+        33 knee_0ascertainment,
+        34 knee_jarawaonge.knee.0024,
+        35 knee_jarawaonge.knee.0025,
+        36 leaf_0ascertainment,
+        37 leaf_jarawaonge.leaf.0026,
+        38 liver_0ascertainment,
+        39 liver_jarawaonge.liver.0027,
+        40 louse_0ascertainment,
+        41 louse_jarawaonge.louse.0028,
+        42 louse_jarawaonge.louse.0029,
+        43 name_0ascertainment,
+        44 name_jarawaonge.name.0030,
+        45 night_0ascertainment,
+        46 night_jarawaonge.night.0031,
+        47 night_jarawaonge.night.0032,
+        48 nose_0ascertainment,
+        49 nose_jarawaonge.nose.0033,
+        50 one_0ascertainment,
+        51 one_jarawaonge.one.0034,
+        52 one_jarawaonge.one.0035,
+        53 person_0ascertainment,
+        54 person_jarawaonge.person.0036,
+        55 person_jarawaonge.person.0037,
+        56 person_jarawaonge.person.0038,
+        57 pl_0ascertainment,
+        58 pl_jarawaonge.1pl.0001,
+        59 pl_jarawaonge.1pl.0002,
+        60 see_0ascertainment,
+        61 see_jarawaonge.see.0039,
+        62 see_jarawaonge.see.0040,
+        63 sg_0ascertainment,
+        64 sg_jarawaonge.1sg.0003,
+        65 sg_jarawaonge.2sg.0004,
+        66 skin_0ascertainment,
+        67 skin_jarawaonge.skin.0041,
+        68 star_0ascertainment,
+        69 star_jarawaonge.star.0042,
+        70 star_jarawaonge.star.0043,
+        71 stone_0ascertainment,
+        72 stone_jarawaonge.stone.0044,
+        73 stone_jarawaonge.stone.0045,
+        74 sun_0ascertainment,
+        75 sun_jarawaonge.sun.0046,
+        76 sun_jarawaonge.sun.0047,
+        77 tongue_0ascertainment,
+        78 tongue_jarawaonge.tongue.0048,
+        79 tongue_jarawaonge.tongue.0049,
+        80 tongue_jarawaonge.tongue.0050,
+        81 tooth_0ascertainment,
+        82 tooth_jarawaonge.tooth.0051,
+        83 tooth_jarawaonge.tooth.0052,
+        84 tooth_jarawaonge.tooth.0053,
+        85 tree_0ascertainment,
+        86 tree_jarawaonge.tree.0054,
+        87 two_0ascertainment,
+        88 two_jarawaonge.two.0055,
+        89 two_jarawaonge.two.0056,
+        90 water_0ascertainment,
+        91 water_jarawaonge.water.0057
+;
+
+MATRIX
+jarawa 01010101010010110100101010100101010010?0110101001010010001001101101010010010010101000101001
+onge   010?010010101001011010101001010?00101010??0100101001001100101001101001011011001000110100101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-11;
+    charset die = 12-13;
+    charset dog = 14-16;
+    charset drink = 17-19;
+    charset ear = 20-21;
+    charset eye = 22-23;
+    charset fire = 24-25;
+    charset fish = 26-28;
+    charset hand = 29-30;
+    charset horn = 31-32;
+    charset knee = 33-35;
+    charset leaf = 36-37;
+    charset liver = 38-39;
+    charset louse = 40-42;
+    charset name = 43-44;
+    charset night = 45-47;
+    charset nose = 48-49;
+    charset one = 50-52;
+    charset person = 53-56;
+    charset pl = 57-59;
+    charset see = 60-62;
+    charset sg = 63-65;
+    charset skin = 66-67;
+    charset star = 68-70;
+    charset stone = 71-73;
+    charset sun = 74-76;
+    charset tongue = 77-80;
+    charset tooth = 81-84;
+    charset tree = 85-86;
+    charset two = 87-89;
+    charset water = 90-91;
+END;

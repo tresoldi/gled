@@ -1,0 +1,166 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=5 NCHAR=109;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_pomoan.blood.0007,
+        3 bone_0ascertainment,
+        4 bone_pomoan.bone.0008,
+        5 bone_pomoan.bone.0009,
+        6 bone_pomoan.bone.0010,
+        7 bone_pomoan.bone.0011,
+        8 breast_0ascertainment,
+        9 breast_pomoan.breast.0012,
+        10 come_0ascertainment,
+        11 come_pomoan.come.0013,
+        12 die_0ascertainment,
+        13 die_pomoan.die.0014,
+        14 die_pomoan.die.0015,
+        15 dog_0ascertainment,
+        16 dog_pomoan.dog.0016,
+        17 drink_0ascertainment,
+        18 drink_pomoan.drink.0017,
+        19 drink_pomoan.drink.0018,
+        20 drink_pomoan.drink.0019,
+        21 ear_0ascertainment,
+        22 ear_pomoan.ear.0020,
+        23 eye_0ascertainment,
+        24 eye_pomoan.eye.0021,
+        25 eye_pomoan.eye.0022,
+        26 fire_0ascertainment,
+        27 fire_pomoan.fire.0023,
+        28 fire_pomoan.fire.0024,
+        29 fish_0ascertainment,
+        30 fish_pomoan.fish.0025,
+        31 hand_0ascertainment,
+        32 hand_pomoan.hand.0026,
+        33 hear_0ascertainment,
+        34 hear_pomoan.hear.0027,
+        35 hear_pomoan.hear.0028,
+        36 horn_0ascertainment,
+        37 horn_pomoan.horn.0029,
+        38 horn_pomoan.horn.0030,
+        39 knee_0ascertainment,
+        40 knee_pomoan.knee.0031,
+        41 leaf_0ascertainment,
+        42 leaf_pomoan.leaf.0032,
+        43 leaf_pomoan.leaf.0033,
+        44 liver_0ascertainment,
+        45 liver_pomoan.liver.0034,
+        46 liver_pomoan.liver.0035,
+        47 liver_pomoan.liver.0036,
+        48 louse_0ascertainment,
+        49 louse_pomoan.louse.0037,
+        50 louse_pomoan.louse.0038,
+        51 mountain_0ascertainment,
+        52 mountain_pomoan.mountain.0039,
+        53 mountain_pomoan.mountain.0040,
+        54 name_0ascertainment,
+        55 name_pomoan.name.0041,
+        56 new_0ascertainment,
+        57 new_pomoan.new.0042,
+        58 night_0ascertainment,
+        59 night_pomoan.night.0043,
+        60 nose_0ascertainment,
+        61 nose_pomoan.nose.0044,
+        62 one_0ascertainment,
+        63 one_pomoan.one.0045,
+        64 one_pomoan.one.0046,
+        65 path_0ascertainment,
+        66 path_pomoan.path.0047,
+        67 path_pomoan.path.0048,
+        68 path_pomoan.path.0049,
+        69 person_0ascertainment,
+        70 person_pomoan.person.0050,
+        71 pl_0ascertainment,
+        72 pl_pomoan.1pl.0001,
+        73 pl_pomoan.1pl.0002,
+        74 pl_pomoan.1pl.0003,
+        75 see_0ascertainment,
+        76 see_pomoan.see.0051,
+        77 see_pomoan.see.0052,
+        78 see_pomoan.see.0053,
+        79 see_pomoan.see.0054,
+        80 see_pomoan.see.0055,
+        81 sg_0ascertainment,
+        82 sg_pomoan.1sg.0004,
+        83 sg_pomoan.1sg.0005,
+        84 sg_pomoan.2sg.0006,
+        85 skin_0ascertainment,
+        86 skin_pomoan.skin.0056,
+        87 skin_pomoan.skin.0057,
+        88 star_0ascertainment,
+        89 star_pomoan.star.0058,
+        90 stone_0ascertainment,
+        91 stone_pomoan.stone.0059,
+        92 sun_0ascertainment,
+        93 sun_pomoan.sun.0060,
+        94 sun_pomoan.sun.0061,
+        95 tongue_0ascertainment,
+        96 tongue_pomoan.tongue.0062,
+        97 tongue_pomoan.tongue.0063,
+        98 tongue_pomoan.tongue.0064,
+        99 tooth_0ascertainment,
+        100 tooth_pomoan.tooth.0065,
+        101 tooth_pomoan.tooth.0066,
+        102 tooth_pomoan.tooth.0067,
+        103 tree_0ascertainment,
+        104 tree_pomoan.tree.0068,
+        105 two_0ascertainment,
+        106 two_pomoan.two.0069,
+        107 two_pomoan.two.0070,
+        108 water_0ascertainment,
+        109 water_pomoan.water.0071
+;
+
+MATRIX
+kashaya       0101000010?010010???0101001001010100100101001000110100?010101010010001010001000001010100101010010001000101001
+pomo_central  010010001010010?0100010??01001010??0010?0010???001001010101010??00100?010000100001010100?01001010000100101001
+pomo_eastern  0100010010?0??0?001001010001010?0010010?00100100010010101010100100110?001000010000110010?01001001000010100101
+pomo_northern 010100001010010?01000100101001010100010?01100010010010101010100100100?010000001001010??0?01001010000100101001
+southern_pomo 010000101010??0?0001010??010010?0100100?0??01000010100101010100101000?000100000100110100?01010000101000101001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-7;
+    charset breast = 8-9;
+    charset come = 10-11;
+    charset die = 12-14;
+    charset dog = 15-16;
+    charset drink = 17-20;
+    charset ear = 21-22;
+    charset eye = 23-25;
+    charset fire = 26-28;
+    charset fish = 29-30;
+    charset hand = 31-32;
+    charset hear = 33-35;
+    charset horn = 36-38;
+    charset knee = 39-40;
+    charset leaf = 41-43;
+    charset liver = 44-47;
+    charset louse = 48-50;
+    charset mountain = 51-53;
+    charset name = 54-55;
+    charset new = 56-57;
+    charset night = 58-59;
+    charset nose = 60-61;
+    charset one = 62-64;
+    charset path = 65-68;
+    charset person = 69-70;
+    charset pl = 71-74;
+    charset see = 75-80;
+    charset sg = 81-84;
+    charset skin = 85-87;
+    charset star = 88-89;
+    charset stone = 90-91;
+    charset sun = 92-94;
+    charset tongue = 95-98;
+    charset tooth = 99-102;
+    charset tree = 103-104;
+    charset two = 105-107;
+    charset water = 108-109;
+END;

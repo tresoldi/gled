@@ -1,0 +1,161 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=107;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_yangmanic.blood.0005,
+        3 blood_yangmanic.blood.0006,
+        4 blood_yangmanic.blood.0007,
+        5 bone_0ascertainment,
+        6 bone_yangmanic.bone.0008,
+        7 breast_0ascertainment,
+        8 breast_yangmanic.breast.0009,
+        9 come_0ascertainment,
+        10 come_yangmanic.come.0010,
+        11 die_0ascertainment,
+        12 die_yangmanic.die.0011,
+        13 die_yangmanic.die.0012,
+        14 die_yangmanic.die.0013,
+        15 dog_0ascertainment,
+        16 dog_yangmanic.dog.0014,
+        17 dog_yangmanic.dog.0015,
+        18 dog_yangmanic.dog.0016,
+        19 drink_0ascertainment,
+        20 drink_yangmanic.drink.0017,
+        21 drink_yangmanic.drink.0018,
+        22 ear_0ascertainment,
+        23 ear_yangmanic.ear.0019,
+        24 ear_yangmanic.ear.0020,
+        25 eye_0ascertainment,
+        26 eye_yangmanic.eye.0021,
+        27 fire_0ascertainment,
+        28 fire_yangmanic.fire.0022,
+        29 fire_yangmanic.fire.0023,
+        30 fish_0ascertainment,
+        31 fish_yangmanic.fish.0024,
+        32 full_0ascertainment,
+        33 full_yangmanic.full.0025,
+        34 full_yangmanic.full.0026,
+        35 hand_0ascertainment,
+        36 hand_yangmanic.hand.0027,
+        37 hand_yangmanic.hand.0028,
+        38 hear_0ascertainment,
+        39 hear_yangmanic.hear.0029,
+        40 hear_yangmanic.hear.0030,
+        41 horn_0ascertainment,
+        42 horn_yangmanic.horn.0031,
+        43 knee_0ascertainment,
+        44 knee_yangmanic.knee.0032,
+        45 leaf_0ascertainment,
+        46 leaf_yangmanic.leaf.0033,
+        47 leaf_yangmanic.leaf.0034,
+        48 liver_0ascertainment,
+        49 liver_yangmanic.liver.0035,
+        50 liver_yangmanic.liver.0036,
+        51 louse_0ascertainment,
+        52 louse_yangmanic.louse.0037,
+        53 mountain_0ascertainment,
+        54 mountain_yangmanic.mountain.0038,
+        55 mountain_yangmanic.mountain.0039,
+        56 mountain_yangmanic.mountain.0040,
+        57 name_0ascertainment,
+        58 name_yangmanic.name.0041,
+        59 new_0ascertainment,
+        60 new_yangmanic.new.0042,
+        61 new_yangmanic.new.0043,
+        62 night_0ascertainment,
+        63 night_yangmanic.night.0044,
+        64 night_yangmanic.night.0045,
+        65 night_yangmanic.night.0046,
+        66 one_0ascertainment,
+        67 one_yangmanic.one.0047,
+        68 path_0ascertainment,
+        69 path_yangmanic.path.0048,
+        70 path_yangmanic.path.0049,
+        71 person_0ascertainment,
+        72 person_yangmanic.person.0050,
+        73 person_yangmanic.person.0051,
+        74 pl_0ascertainment,
+        75 pl_yangmanic.1pl.0001,
+        76 see_0ascertainment,
+        77 see_yangmanic.see.0052,
+        78 see_yangmanic.see.0053,
+        79 see_yangmanic.see.0054,
+        80 sg_0ascertainment,
+        81 sg_yangmanic.1sg.0002,
+        82 sg_yangmanic.2sg.0003,
+        83 sg_yangmanic.2sg.0004,
+        84 skin_0ascertainment,
+        85 skin_yangmanic.skin.0055,
+        86 star_0ascertainment,
+        87 star_yangmanic.star.0056,
+        88 star_yangmanic.star.0057,
+        89 stone_0ascertainment,
+        90 stone_yangmanic.stone.0058,
+        91 stone_yangmanic.stone.0059,
+        92 sun_0ascertainment,
+        93 sun_yangmanic.sun.0060,
+        94 sun_yangmanic.sun.0061,
+        95 tongue_0ascertainment,
+        96 tongue_yangmanic.tongue.0062,
+        97 tongue_yangmanic.tongue.0063,
+        98 tooth_0ascertainment,
+        99 tooth_yangmanic.tooth.0064,
+        100 tooth_yangmanic.tooth.0065,
+        101 tree_0ascertainment,
+        102 tree_yangmanic.tree.0066,
+        103 tree_yangmanic.tree.0067,
+        104 two_0ascertainment,
+        105 two_yangmanic.two.0068,
+        106 water_0ascertainment,
+        107 water_yangmanic.water.0069
+;
+
+MATRIX
+wardaman 01010101010101010101001101011010100100100101010010010101010100101010100100101010111010100100110110100100101
+yangman  0010010?010010001000100101010010010010010?01001001010010010010010010010010?00100100010010010010100010010?01
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-6;
+    charset breast = 7-8;
+    charset come = 9-10;
+    charset die = 11-14;
+    charset dog = 15-18;
+    charset drink = 19-21;
+    charset ear = 22-24;
+    charset eye = 25-26;
+    charset fire = 27-29;
+    charset fish = 30-31;
+    charset full = 32-34;
+    charset hand = 35-37;
+    charset hear = 38-40;
+    charset horn = 41-42;
+    charset knee = 43-44;
+    charset leaf = 45-47;
+    charset liver = 48-50;
+    charset louse = 51-52;
+    charset mountain = 53-56;
+    charset name = 57-58;
+    charset new = 59-61;
+    charset night = 62-65;
+    charset one = 66-67;
+    charset path = 68-70;
+    charset person = 71-73;
+    charset pl = 74-75;
+    charset see = 76-79;
+    charset sg = 80-83;
+    charset skin = 84-85;
+    charset star = 86-88;
+    charset stone = 89-91;
+    charset sun = 92-94;
+    charset tongue = 95-97;
+    charset tooth = 98-100;
+    charset tree = 101-103;
+    charset two = 104-105;
+    charset water = 106-107;
+END;

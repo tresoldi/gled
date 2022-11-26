@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Kakua_cacu1241
+			NukakMaku_nuka1242
+			;
+End;
+Begin trees;
+	Translate
+		   1 Kakua_cacu1241,
+		   2 NukakMaku_nuka1242
+;
+tree TREE1 = (1[&height=0.0,length=7.453334113177401,length_95%_HPD={0.5565,20.5649},length_median=1.9746,length_range={0.3233,494.4994},rate=0.991365966806636,rate_95%_HPD={0.6689,1.2554},rate_median=1.0039,rate_range={0.1761,1.2554}]:7.453334113177401,2[&height=0.0,length=7.453334113177401,length_95%_HPD={0.5565,20.5649},length_median=1.9746,length_range={0.3233,494.4994},rate=0.9894773045390879,rate_95%_HPD={0.666,1.2554},rate_median=1.0021,rate_range={0.1761,1.2554}]:7.453334113177401)[&CAheight_95%_HPD={0.5565,20.5649},CAheight_mean=7.453334113177401,CAheight_median=1.9746,CAheight_range={0.3233,494.4994},height=7.453334113177401,height_95%_HPD={0.5565,20.5649},height_median=1.9746,height_range={0.3233,494.4994},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

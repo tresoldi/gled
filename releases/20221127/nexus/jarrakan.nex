@@ -1,0 +1,163 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=108;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_jarrakan.blood.0005,
+        3 blood_jarrakan.blood.0006,
+        4 bone_0ascertainment,
+        5 bone_jarrakan.bone.0007,
+        6 bone_jarrakan.bone.0008,
+        7 breast_0ascertainment,
+        8 breast_jarrakan.breast.0009,
+        9 breast_jarrakan.breast.0010,
+        10 come_0ascertainment,
+        11 come_jarrakan.come.0011,
+        12 die_0ascertainment,
+        13 die_jarrakan.die.0012,
+        14 die_jarrakan.die.0013,
+        15 dog_0ascertainment,
+        16 dog_jarrakan.dog.0014,
+        17 drink_0ascertainment,
+        18 drink_jarrakan.drink.0015,
+        19 drink_jarrakan.drink.0016,
+        20 drink_jarrakan.drink.0017,
+        21 ear_0ascertainment,
+        22 ear_jarrakan.ear.0018,
+        23 ear_jarrakan.ear.0019,
+        24 ear_jarrakan.ear.0020,
+        25 ear_jarrakan.ear.0021,
+        26 eye_0ascertainment,
+        27 eye_jarrakan.eye.0022,
+        28 fire_0ascertainment,
+        29 fire_jarrakan.fire.0023,
+        30 fish_0ascertainment,
+        31 fish_jarrakan.fish.0024,
+        32 full_0ascertainment,
+        33 full_jarrakan.full.0025,
+        34 full_jarrakan.full.0026,
+        35 hand_0ascertainment,
+        36 hand_jarrakan.hand.0027,
+        37 hear_0ascertainment,
+        38 hear_jarrakan.hear.0028,
+        39 hear_jarrakan.hear.0029,
+        40 horn_0ascertainment,
+        41 horn_jarrakan.horn.0030,
+        42 knee_0ascertainment,
+        43 knee_jarrakan.knee.0031,
+        44 knee_jarrakan.knee.0032,
+        45 leaf_0ascertainment,
+        46 leaf_jarrakan.leaf.0033,
+        47 liver_0ascertainment,
+        48 liver_jarrakan.liver.0034,
+        49 louse_0ascertainment,
+        50 louse_jarrakan.louse.0035,
+        51 louse_jarrakan.louse.0036,
+        52 mountain_0ascertainment,
+        53 mountain_jarrakan.mountain.0037,
+        54 name_0ascertainment,
+        55 name_jarrakan.name.0038,
+        56 name_jarrakan.name.0039,
+        57 new_0ascertainment,
+        58 new_jarrakan.new.0040,
+        59 night_0ascertainment,
+        60 night_jarrakan.night.0041,
+        61 nose_0ascertainment,
+        62 nose_jarrakan.nose.0042,
+        63 one_0ascertainment,
+        64 one_jarrakan.one.0043,
+        65 one_jarrakan.one.0044,
+        66 path_0ascertainment,
+        67 path_jarrakan.path.0045,
+        68 path_jarrakan.path.0046,
+        69 person_0ascertainment,
+        70 person_jarrakan.person.0047,
+        71 pl_0ascertainment,
+        72 pl_jarrakan.1pl.0001,
+        73 pl_jarrakan.1pl.0002,
+        74 see_0ascertainment,
+        75 see_jarrakan.see.0048,
+        76 see_jarrakan.see.0049,
+        77 sg_0ascertainment,
+        78 sg_jarrakan.1sg.0003,
+        79 sg_jarrakan.2sg.0004,
+        80 skin_0ascertainment,
+        81 skin_jarrakan.skin.0050,
+        82 skin_jarrakan.skin.0051,
+        83 skin_jarrakan.skin.0052,
+        84 star_0ascertainment,
+        85 star_jarrakan.star.0053,
+        86 star_jarrakan.star.0054,
+        87 stone_0ascertainment,
+        88 stone_jarrakan.stone.0055,
+        89 stone_jarrakan.stone.0056,
+        90 sun_0ascertainment,
+        91 sun_jarrakan.sun.0057,
+        92 sun_jarrakan.sun.0058,
+        93 sun_jarrakan.sun.0059,
+        94 tongue_0ascertainment,
+        95 tongue_jarrakan.tongue.0060,
+        96 tooth_0ascertainment,
+        97 tooth_jarrakan.tooth.0061,
+        98 tooth_jarrakan.tooth.0062,
+        99 tree_0ascertainment,
+        100 tree_jarrakan.tree.0063,
+        101 tree_jarrakan.tree.0064,
+        102 two_0ascertainment,
+        103 two_jarrakan.two.0065,
+        104 two_jarrakan.two.0066,
+        105 two_jarrakan.two.0067,
+        106 water_0ascertainment,
+        107 water_jarrakan.water.0068,
+        108 water_jarrakan.water.0069
+;
+
+MATRIX
+kitja    0100100100101001010001000010101010010100?01001010100101001010?0100100101001001101000100100100010100100100010
+miriwung 0010010110?0010?001100111010?0?00101011010010?0?0010?0010101010010110?00100101100110010010011010010010011001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-9;
+    charset come = 10-11;
+    charset die = 12-14;
+    charset dog = 15-16;
+    charset drink = 17-20;
+    charset ear = 21-25;
+    charset eye = 26-27;
+    charset fire = 28-29;
+    charset fish = 30-31;
+    charset full = 32-34;
+    charset hand = 35-36;
+    charset hear = 37-39;
+    charset horn = 40-41;
+    charset knee = 42-44;
+    charset leaf = 45-46;
+    charset liver = 47-48;
+    charset louse = 49-51;
+    charset mountain = 52-53;
+    charset name = 54-56;
+    charset new = 57-58;
+    charset night = 59-60;
+    charset nose = 61-62;
+    charset one = 63-65;
+    charset path = 66-68;
+    charset person = 69-70;
+    charset pl = 71-73;
+    charset see = 74-76;
+    charset sg = 77-79;
+    charset skin = 80-83;
+    charset star = 84-86;
+    charset stone = 87-89;
+    charset sun = 90-93;
+    charset tongue = 94-95;
+    charset tooth = 96-98;
+    charset tree = 99-101;
+    charset two = 102-105;
+    charset water = 106-108;
+END;

@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Ayoreo_ayor1240
+			Chamacoco_cham1315
+			;
+End;
+Begin trees;
+	Translate
+		   1 Ayoreo_ayor1240,
+		   2 Chamacoco_cham1315
+;
+tree TREE1 = (1[&height=0.0,length=31.267803939212108,length_95%_HPD={0.5479,63.6063},length_median=2.525,length_range={0.4667,2328.0754},rate=0.9893595680863844,rate_95%_HPD={0.6608,1.2554},rate_median=1.0024,rate_range={0.1404,1.2554}]:31.267803939212108,2[&height=0.0,length=31.267803939212108,length_95%_HPD={0.5479,63.6063},length_median=2.525,length_range={0.4667,2328.0754},rate=0.9894183363327356,rate_95%_HPD={0.6598,1.2554},rate_median=1.0028,rate_range={0.1404,1.2554}]:31.267803939212108)[&CAheight_95%_HPD={0.5479,63.6063},CAheight_mean=31.267803939212108,CAheight_median=2.525,CAheight_range={0.4667,2328.0754},height=31.267803939212108,height_95%_HPD={0.5479,63.6063},height_median=2.525,height_range={0.4667,2328.0754},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

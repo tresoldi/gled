@@ -1,0 +1,128 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=76;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kakiae.blood.0129,
+        3 bone_0ascertainment,
+        4 bone_kakiae.bone.0140,
+        5 breast_0ascertainment,
+        6 breast_kakiae.breast.0014,
+        7 come_0ascertainment,
+        8 come_kakiae.come.0013,
+        9 die_0ascertainment,
+        10 die_kakiae.die.0486,
+        11 dog_0ascertainment,
+        12 dog_kakiae.dog.0001,
+        13 drink_0ascertainment,
+        14 drink_kakiae.drink.0016,
+        15 ear_0ascertainment,
+        16 ear_kakiae.ear.0266,
+        17 eye_0ascertainment,
+        18 eye_kakiae.eye.0004,
+        19 fire_0ascertainment,
+        20 fire_kakiae.fire.0440,
+        21 fish_0ascertainment,
+        22 fish_kakiae.fish.0304,
+        23 full_0ascertainment,
+        24 full_kakiae.full.0169,
+        25 hand_0ascertainment,
+        26 hand_kakiae.hand.0288,
+        27 hear_0ascertainment,
+        28 hear_kakiae.hear.0556,
+        29 hear_kakiae.hear.0557,
+        30 leaf_0ascertainment,
+        31 leaf_kakiae.leaf.0149,
+        32 liver_0ascertainment,
+        33 liver_kakiae.liver.0010,
+        34 louse_0ascertainment,
+        35 louse_kakiae.louse.0160,
+        36 mountain_0ascertainment,
+        37 mountain_kakiae.mountain.0001,
+        38 name_0ascertainment,
+        39 name_kakiae.name.0335,
+        40 new_0ascertainment,
+        41 new_kakiae.new.0408,
+        42 night_0ascertainment,
+        43 night_kakiae.night.0002,
+        44 nose_0ascertainment,
+        45 nose_kakiae.nose.0452,
+        46 one_0ascertainment,
+        47 one_kakiae.one.0005,
+        48 path_0ascertainment,
+        49 path_kakiae.path.0017,
+        50 person_0ascertainment,
+        51 person_kakiae.person.0557,
+        52 pl_0ascertainment,
+        53 pl_kakiae.1pl.0026,
+        54 see_0ascertainment,
+        55 see_kakiae.see.0058,
+        56 sg_0ascertainment,
+        57 sg_kakiae.1sg.0007,
+        58 sg_kakiae.2sg.0008,
+        59 skin_0ascertainment,
+        60 skin_kakiae.skin.0158,
+        61 star_0ascertainment,
+        62 star_kakiae.star.0012,
+        63 stone_0ascertainment,
+        64 stone_kakiae.stone.0235,
+        65 sun_0ascertainment,
+        66 sun_kakiae.sun.0041,
+        67 tongue_0ascertainment,
+        68 tongue_kakiae.tongue.0007,
+        69 tooth_0ascertainment,
+        70 tooth_kakiae.tooth.0430,
+        71 tree_0ascertainment,
+        72 tree_kakiae.tree.0037,
+        73 two_0ascertainment,
+        74 two_kakiae.two.0336,
+        75 water_0ascertainment,
+        76 water_kakiae.water.0341
+;
+
+MATRIX
+kaki_ae 0101010101010101010101010101101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset full = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-29;
+    charset leaf = 30-31;
+    charset liver = 32-33;
+    charset louse = 34-35;
+    charset mountain = 36-37;
+    charset name = 38-39;
+    charset new = 40-41;
+    charset night = 42-43;
+    charset nose = 44-45;
+    charset one = 46-47;
+    charset path = 48-49;
+    charset person = 50-51;
+    charset pl = 52-53;
+    charset see = 54-55;
+    charset sg = 56-58;
+    charset skin = 59-60;
+    charset star = 61-62;
+    charset stone = 63-64;
+    charset sun = 65-66;
+    charset tongue = 67-68;
+    charset tooth = 69-70;
+    charset tree = 71-72;
+    charset two = 73-74;
+    charset water = 75-76;
+END;

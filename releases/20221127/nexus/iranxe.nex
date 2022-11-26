@@ -1,0 +1,113 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=66;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_iranxe.blood.0353,
+        3 breast_0ascertainment,
+        4 breast_iranxe.breast.0392,
+        5 die_0ascertainment,
+        6 die_iranxe.die.0457,
+        7 dog_0ascertainment,
+        8 dog_iranxe.dog.0033,
+        9 drink_0ascertainment,
+        10 drink_iranxe.drink.0501,
+        11 drink_iranxe.drink.0502,
+        12 ear_0ascertainment,
+        13 ear_iranxe.ear.0201,
+        14 eye_0ascertainment,
+        15 eye_iranxe.eye.0400,
+        16 fire_0ascertainment,
+        17 fire_iranxe.fire.0421,
+        18 fish_0ascertainment,
+        19 fish_iranxe.fish.0403,
+        20 hand_0ascertainment,
+        21 hand_iranxe.hand.0059,
+        22 hear_0ascertainment,
+        23 hear_iranxe.hear.0525,
+        24 knee_0ascertainment,
+        25 knee_iranxe.knee.0357,
+        26 leaf_0ascertainment,
+        27 leaf_iranxe.leaf.0015,
+        28 liver_0ascertainment,
+        29 liver_iranxe.liver.0454,
+        30 louse_0ascertainment,
+        31 louse_iranxe.louse.0053,
+        32 mountain_0ascertainment,
+        33 mountain_iranxe.mountain.0014,
+        34 name_0ascertainment,
+        35 name_iranxe.name.0319,
+        36 night_0ascertainment,
+        37 night_iranxe.night.0232,
+        38 nose_0ascertainment,
+        39 nose_iranxe.nose.0437,
+        40 one_0ascertainment,
+        41 one_iranxe.one.0332,
+        42 path_0ascertainment,
+        43 path_iranxe.path.0431,
+        44 see_0ascertainment,
+        45 see_iranxe.see.0017,
+        46 sg_0ascertainment,
+        47 sg_iranxe.1sg.0255,
+        48 sg_iranxe.2sg.0307,
+        49 skin_0ascertainment,
+        50 skin_iranxe.skin.0006,
+        51 star_0ascertainment,
+        52 star_iranxe.star.0444,
+        53 stone_0ascertainment,
+        54 stone_iranxe.stone.0579,
+        55 sun_0ascertainment,
+        56 sun_iranxe.sun.0163,
+        57 tongue_0ascertainment,
+        58 tongue_iranxe.tongue.0355,
+        59 tooth_0ascertainment,
+        60 tooth_iranxe.tooth.0410,
+        61 tree_0ascertainment,
+        62 tree_iranxe.tree.0385,
+        63 two_0ascertainment,
+        64 two_iranxe.two.0318,
+        65 water_0ascertainment,
+        66 water_iranxe.water.0015
+;
+
+MATRIX
+irantxe 010101010110101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset breast = 3-4;
+    charset die = 5-6;
+    charset dog = 7-8;
+    charset drink = 9-11;
+    charset ear = 12-13;
+    charset eye = 14-15;
+    charset fire = 16-17;
+    charset fish = 18-19;
+    charset hand = 20-21;
+    charset hear = 22-23;
+    charset knee = 24-25;
+    charset leaf = 26-27;
+    charset liver = 28-29;
+    charset louse = 30-31;
+    charset mountain = 32-33;
+    charset name = 34-35;
+    charset night = 36-37;
+    charset nose = 38-39;
+    charset one = 40-41;
+    charset path = 42-43;
+    charset see = 44-45;
+    charset sg = 46-48;
+    charset skin = 49-50;
+    charset star = 51-52;
+    charset stone = 53-54;
+    charset sun = 55-56;
+    charset tongue = 57-58;
+    charset tooth = 59-60;
+    charset tree = 61-62;
+    charset two = 63-64;
+    charset water = 65-66;
+END;

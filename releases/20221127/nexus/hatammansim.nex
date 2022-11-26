@@ -1,0 +1,136 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=83;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_hatammansim.blood.0002,
+        3 bone_0ascertainment,
+        4 bone_hatammansim.bone.0231,
+        5 breast_0ascertainment,
+        6 breast_hatammansim.breast.0155,
+        7 come_0ascertainment,
+        8 come_hatammansim.come.0363,
+        9 die_0ascertainment,
+        10 die_hatammansim.die.0009,
+        11 dog_0ascertainment,
+        12 dog_hatammansim.dog.0119,
+        13 drink_0ascertainment,
+        14 drink_hatammansim.drink.0470,
+        15 ear_0ascertainment,
+        16 ear_hatammansim.ear.0020,
+        17 eye_0ascertainment,
+        18 eye_hatammansim.eye.0378,
+        19 fire_0ascertainment,
+        20 fire_hatammansim.fire.0408,
+        21 fish_0ascertainment,
+        22 fish_hatammansim.fish.0027,
+        23 full_0ascertainment,
+        24 full_hatammansim.full.0465,
+        25 hand_0ascertainment,
+        26 hand_hatammansim.hand.0315,
+        27 hear_0ascertainment,
+        28 hear_hatammansim.hear.0499,
+        29 horn_0ascertainment,
+        30 horn_hatammansim.horn.0304,
+        31 horn_hatammansim.horn.0305,
+        32 knee_0ascertainment,
+        33 knee_hatammansim.knee.0340,
+        34 leaf_0ascertainment,
+        35 leaf_hatammansim.leaf.0332,
+        36 liver_0ascertainment,
+        37 liver_hatammansim.liver.0431,
+        38 louse_0ascertainment,
+        39 louse_hatammansim.louse.0365,
+        40 louse_hatammansim.louse.0366,
+        41 mountain_0ascertainment,
+        42 mountain_hatammansim.mountain.0394,
+        43 name_0ascertainment,
+        44 name_hatammansim.name.0001,
+        45 new_0ascertainment,
+        46 new_hatammansim.new.0008,
+        47 new_hatammansim.new.0364,
+        48 night_0ascertainment,
+        49 night_hatammansim.night.0223,
+        50 nose_0ascertainment,
+        51 nose_hatammansim.nose.0416,
+        52 one_0ascertainment,
+        53 one_hatammansim.one.0321,
+        54 path_0ascertainment,
+        55 path_hatammansim.path.0003,
+        56 path_hatammansim.path.0407,
+        57 person_0ascertainment,
+        58 person_hatammansim.person.0038,
+        59 pl_0ascertainment,
+        60 pl_hatammansim.1pl.0041,
+        61 see_0ascertainment,
+        62 see_hatammansim.see.0017,
+        63 sg_0ascertainment,
+        64 sg_hatammansim.1sg.0007,
+        65 sg_hatammansim.2sg.0291,
+        66 skin_0ascertainment,
+        67 skin_hatammansim.skin.0435,
+        68 star_0ascertainment,
+        69 star_hatammansim.star.0422,
+        70 stone_0ascertainment,
+        71 stone_hatammansim.stone.0071,
+        72 stone_hatammansim.stone.0550,
+        73 sun_0ascertainment,
+        74 sun_hatammansim.sun.0339,
+        75 sun_hatammansim.sun.0340,
+        76 tongue_0ascertainment,
+        77 tongue_hatammansim.tongue.0337,
+        78 tree_0ascertainment,
+        79 tree_hatammansim.tree.0365,
+        80 two_0ascertainment,
+        81 two_hatammansim.two.0297,
+        82 water_0ascertainment,
+        83 water_hatammansim.water.0314
+;
+
+MATRIX
+hatam 01010101010101010101010101010110101010110101011010101011010101011010101101101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset full = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-28;
+    charset horn = 29-31;
+    charset knee = 32-33;
+    charset leaf = 34-35;
+    charset liver = 36-37;
+    charset louse = 38-40;
+    charset mountain = 41-42;
+    charset name = 43-44;
+    charset new = 45-47;
+    charset night = 48-49;
+    charset nose = 50-51;
+    charset one = 52-53;
+    charset path = 54-56;
+    charset person = 57-58;
+    charset pl = 59-60;
+    charset see = 61-62;
+    charset sg = 63-65;
+    charset skin = 66-67;
+    charset star = 68-69;
+    charset stone = 70-72;
+    charset sun = 73-75;
+    charset tongue = 76-77;
+    charset tree = 78-79;
+    charset two = 80-81;
+    charset water = 82-83;
+END;

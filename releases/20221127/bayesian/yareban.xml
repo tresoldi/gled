@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="AnemeWake_anem1248" />
+    <taxon id="Moikodi_moik1239" />
+    <taxon id="Yareba_yare1248" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_yareban" name="data_yareban" dataType="integer">
+    <sequence id="language_data_yareban:AnemeWake_anem1248" taxon="AnemeWake_anem1248" value="0100100100001000010000100010010010010010010010010010010001001001001001000010" />
+    <sequence id="language_data_yareban:Moikodi_moik1239" taxon="Moikodi_moik1239" value="0100010010000100001000010010010001010010010010010001001000101001001000100010" />
+    <sequence id="language_data_yareban:Yareba_yare1248" taxon="Yareba_yare1248" value="01101000011000110001101010010010010110010010010110??010101101101100100011001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="blood,breast,dog,eye,fish,full,hand,knee,liver,louse,mountain,name,new,path,person,star,stone,sun,tongue,tree,two,water">
+        <parameter id="featureClockRate:yareban:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:yareban" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:yareban" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:yareban" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:yareban" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Yareba_yare1248,(AnemeWake_anem1248,Moikodi_moik1239));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:yareban" name="distribution">
+          <input id="featureClockRateCompound:yareban" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="blood,breast,dog,eye,fish,full,hand,knee,liver,louse,mountain,name,new,path,person,star,stone,sun,tongue,tree,two,water">
+              <var idref="featureClockRate:yareban:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:yareban" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:yareban" beta="@featureClockRateGammaScale:yareban" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:yareban" name="distribution" x="@featureClockRateGammaScale:yareban">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:yareban" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:yareban" name="distribution" x="@covarion_alpha.s:yareban">
+          <Uniform id="CovAlphaUniform:yareban" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:yareban" name="distribution" x="@covarion_s.s:yareban">
+          <Gamma id="Gamma.0:yareban" name="distr">
+            <parameter id="covarion_switch_gamma_param1:yareban" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:yareban" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:yareban:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:blood" spec="SiteModel" mutationRate="@featureClockRate:yareban:blood" proportionInvariant="0">
+            <substModel id="covarion.s:yareban" spec="BinaryCovarion" alpha="@covarion_alpha.s:yareban" switchRate="@covarion_s.s:yareban">
+              <vfrequencies id="yareban:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.66 0.34</vfrequencies>
+              <parameter id="yareban:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="yareban:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_yareban:blood" spec="FilteredAlignment" data="@data_yareban" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:breast" spec="SiteModel" mutationRate="@featureClockRate:yareban:breast" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:breast" spec="FilteredAlignment" data="@data_yareban" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:dog" spec="SiteModel" mutationRate="@featureClockRate:yareban:dog" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:dog" spec="FilteredAlignment" data="@data_yareban" filter="7-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:eye" spec="SiteModel" mutationRate="@featureClockRate:yareban:eye" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:eye" spec="FilteredAlignment" data="@data_yareban" filter="12-16" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:fish" spec="SiteModel" mutationRate="@featureClockRate:yareban:fish" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:fish" spec="FilteredAlignment" data="@data_yareban" filter="17-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:full" spec="SiteModel" mutationRate="@featureClockRate:yareban:full" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:full" spec="FilteredAlignment" data="@data_yareban" filter="22-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:hand" spec="SiteModel" mutationRate="@featureClockRate:yareban:hand" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:hand" spec="FilteredAlignment" data="@data_yareban" filter="26-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:knee" spec="SiteModel" mutationRate="@featureClockRate:yareban:knee" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:knee" spec="FilteredAlignment" data="@data_yareban" filter="29-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:liver" spec="SiteModel" mutationRate="@featureClockRate:yareban:liver" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:liver" spec="FilteredAlignment" data="@data_yareban" filter="32-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:louse" spec="SiteModel" mutationRate="@featureClockRate:yareban:louse" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:louse" spec="FilteredAlignment" data="@data_yareban" filter="35-37" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:mountain" spec="SiteModel" mutationRate="@featureClockRate:yareban:mountain" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:mountain" spec="FilteredAlignment" data="@data_yareban" filter="38-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:name" spec="SiteModel" mutationRate="@featureClockRate:yareban:name" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:name" spec="FilteredAlignment" data="@data_yareban" filter="41-43" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:new" spec="SiteModel" mutationRate="@featureClockRate:yareban:new" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:new" spec="FilteredAlignment" data="@data_yareban" filter="44-46" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:path" spec="SiteModel" mutationRate="@featureClockRate:yareban:path" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:path" spec="FilteredAlignment" data="@data_yareban" filter="47-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:person" spec="SiteModel" mutationRate="@featureClockRate:yareban:person" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:person" spec="FilteredAlignment" data="@data_yareban" filter="50-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:star" spec="SiteModel" mutationRate="@featureClockRate:yareban:star" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:star" spec="FilteredAlignment" data="@data_yareban" filter="53-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:stone" spec="SiteModel" mutationRate="@featureClockRate:yareban:stone" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:stone" spec="FilteredAlignment" data="@data_yareban" filter="57-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:sun" spec="SiteModel" mutationRate="@featureClockRate:yareban:sun" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:sun" spec="FilteredAlignment" data="@data_yareban" filter="60-62" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:tongue" spec="SiteModel" mutationRate="@featureClockRate:yareban:tongue" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:tongue" spec="FilteredAlignment" data="@data_yareban" filter="63-65" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:tree" spec="SiteModel" mutationRate="@featureClockRate:yareban:tree" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:tree" spec="FilteredAlignment" data="@data_yareban" filter="66-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:two" spec="SiteModel" mutationRate="@featureClockRate:yareban:two" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:two" spec="FilteredAlignment" data="@data_yareban" filter="69-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:yareban:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.yareban:water" spec="SiteModel" mutationRate="@featureClockRate:yareban:water" proportionInvariant="0" substModel="@covarion.s:yareban" />
+          <data id="feature_data_yareban:water" spec="FilteredAlignment" data="@data_yareban" filter="74-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:yareban" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:yareban" name="up" />
+      <parameter idref="featureClockRateGammaScale:yareban" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:yareban" spec="ScaleOperator" parameter="@covarion_alpha.s:yareban" scaleFactor="0.5" weight="1.0" />
+    <operator id="yareban:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:yareban" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="blood,breast,dog,eye,fish,full,hand,knee,liver,louse,mountain,name,new,path,person,star,stone,sun,tongue,tree,two,water">
+        <parameter idref="featureClockRate:yareban:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="22" estimate="false">2 2 4 4 4 3 2 2 2 2 2 2 2 2 2 3 2 2 2 2 4 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="yareban.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="blood,breast,dog,eye,fish,full,hand,knee,liver,louse,mountain,name,new,path,person,star,stone,sun,tongue,tree,two,water">
+        <log idref="featureClockRate:yareban:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:yareban" />
+      <log idref="covarion_alpha.s:yareban" />
+      <log idref="covarion_s.s:yareban" />
+    </logger>
+    <logger mode="tree" fileName="yareban.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

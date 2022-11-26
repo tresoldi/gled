@@ -1,0 +1,144 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=90;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_tangkic.blood.0005,
+        3 bone_0ascertainment,
+        4 bone_tangkic.bone.0006,
+        5 breast_0ascertainment,
+        6 breast_tangkic.breast.0007,
+        7 breast_tangkic.breast.0008,
+        8 come_0ascertainment,
+        9 come_tangkic.come.0009,
+        10 come_tangkic.come.0010,
+        11 come_tangkic.come.0011,
+        12 die_0ascertainment,
+        13 die_tangkic.die.0012,
+        14 die_tangkic.die.0013,
+        15 die_tangkic.die.0014,
+        16 dog_0ascertainment,
+        17 dog_tangkic.dog.0015,
+        18 dog_tangkic.dog.0016,
+        19 drink_0ascertainment,
+        20 drink_tangkic.drink.0017,
+        21 ear_0ascertainment,
+        22 ear_tangkic.ear.0018,
+        23 eye_0ascertainment,
+        24 eye_tangkic.eye.0019,
+        25 fire_0ascertainment,
+        26 fire_tangkic.fire.0020,
+        27 fish_0ascertainment,
+        28 fish_tangkic.fish.0021,
+        29 full_0ascertainment,
+        30 full_tangkic.full.0022,
+        31 full_tangkic.full.0023,
+        32 hand_0ascertainment,
+        33 hand_tangkic.hand.0024,
+        34 hear_0ascertainment,
+        35 hear_tangkic.hear.0025,
+        36 knee_0ascertainment,
+        37 knee_tangkic.knee.0026,
+        38 leaf_0ascertainment,
+        39 leaf_tangkic.leaf.0027,
+        40 leaf_tangkic.leaf.0028,
+        41 liver_0ascertainment,
+        42 liver_tangkic.liver.0029,
+        43 louse_0ascertainment,
+        44 louse_tangkic.louse.0030,
+        45 mountain_0ascertainment,
+        46 mountain_tangkic.mountain.0031,
+        47 name_0ascertainment,
+        48 name_tangkic.name.0032,
+        49 new_0ascertainment,
+        50 new_tangkic.new.0033,
+        51 night_0ascertainment,
+        52 night_tangkic.night.0034,
+        53 nose_0ascertainment,
+        54 nose_tangkic.nose.0035,
+        55 one_0ascertainment,
+        56 one_tangkic.one.0036,
+        57 path_0ascertainment,
+        58 path_tangkic.path.0037,
+        59 path_tangkic.path.0038,
+        60 person_0ascertainment,
+        61 person_tangkic.person.0039,
+        62 pl_0ascertainment,
+        63 pl_tangkic.1pl.0001,
+        64 see_0ascertainment,
+        65 see_tangkic.see.0040,
+        66 sg_0ascertainment,
+        67 sg_tangkic.1sg.0002,
+        68 sg_tangkic.2sg.0003,
+        69 sg_tangkic.2sg.0004,
+        70 skin_0ascertainment,
+        71 skin_tangkic.skin.0041,
+        72 skin_tangkic.skin.0042,
+        73 star_0ascertainment,
+        74 star_tangkic.star.0043,
+        75 star_tangkic.star.0044,
+        76 stone_0ascertainment,
+        77 stone_tangkic.stone.0045,
+        78 sun_0ascertainment,
+        79 sun_tangkic.sun.0046,
+        80 tongue_0ascertainment,
+        81 tongue_tangkic.tongue.0047,
+        82 tooth_0ascertainment,
+        83 tooth_tangkic.tooth.0048,
+        84 tree_0ascertainment,
+        85 tree_tangkic.tree.0049,
+        86 tree_tangkic.tree.0050,
+        87 two_0ascertainment,
+        88 two_tangkic.two.0051,
+        89 water_0ascertainment,
+        90 water_tangkic.water.0052
+;
+
+MATRIX
+ganggalida 0101010010101010100101010101010010?0101001010101010101010100101010110010010010101010100101
+kayardild  010100100100010001010?01010101101010?00101010?0?0?01010?0010?0?010111001001010101010010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-11;
+    charset die = 12-15;
+    charset dog = 16-18;
+    charset drink = 19-20;
+    charset ear = 21-22;
+    charset eye = 23-24;
+    charset fire = 25-26;
+    charset fish = 27-28;
+    charset full = 29-31;
+    charset hand = 32-33;
+    charset hear = 34-35;
+    charset knee = 36-37;
+    charset leaf = 38-40;
+    charset liver = 41-42;
+    charset louse = 43-44;
+    charset mountain = 45-46;
+    charset name = 47-48;
+    charset new = 49-50;
+    charset night = 51-52;
+    charset nose = 53-54;
+    charset one = 55-56;
+    charset path = 57-59;
+    charset person = 60-61;
+    charset pl = 62-63;
+    charset see = 64-65;
+    charset sg = 66-69;
+    charset skin = 70-72;
+    charset star = 73-75;
+    charset stone = 76-77;
+    charset sun = 78-79;
+    charset tongue = 80-81;
+    charset tooth = 82-83;
+    charset tree = 84-86;
+    charset two = 87-88;
+    charset water = 89-90;
+END;

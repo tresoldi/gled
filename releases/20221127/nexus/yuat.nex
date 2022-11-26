@@ -1,0 +1,218 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=6 NCHAR=160;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_yuat.blood.0010,
+        3 bone_0ascertainment,
+        4 bone_yuat.bone.0011,
+        5 breast_0ascertainment,
+        6 breast_yuat.breast.0012,
+        7 breast_yuat.breast.0013,
+        8 breast_yuat.breast.0014,
+        9 come_0ascertainment,
+        10 come_yuat.come.0015,
+        11 come_yuat.come.0016,
+        12 come_yuat.come.0017,
+        13 come_yuat.come.0018,
+        14 die_0ascertainment,
+        15 die_yuat.die.0019,
+        16 die_yuat.die.0020,
+        17 die_yuat.die.0021,
+        18 dog_0ascertainment,
+        19 dog_yuat.dog.0022,
+        20 dog_yuat.dog.0023,
+        21 drink_0ascertainment,
+        22 drink_yuat.drink.0024,
+        23 drink_yuat.drink.0025,
+        24 ear_0ascertainment,
+        25 ear_yuat.ear.0026,
+        26 ear_yuat.ear.0027,
+        27 eye_0ascertainment,
+        28 eye_yuat.eye.0028,
+        29 eye_yuat.eye.0029,
+        30 eye_yuat.eye.0030,
+        31 eye_yuat.eye.0031,
+        32 fire_0ascertainment,
+        33 fire_yuat.fire.0032,
+        34 fire_yuat.fire.0033,
+        35 fire_yuat.fire.0034,
+        36 fish_0ascertainment,
+        37 fish_yuat.fish.0035,
+        38 fish_yuat.fish.0036,
+        39 fish_yuat.fish.0037,
+        40 fish_yuat.fish.0038,
+        41 fish_yuat.fish.0039,
+        42 fish_yuat.fish.0040,
+        43 full_0ascertainment,
+        44 full_yuat.full.0041,
+        45 full_yuat.full.0042,
+        46 hand_0ascertainment,
+        47 hand_yuat.hand.0043,
+        48 hand_yuat.hand.0044,
+        49 hand_yuat.hand.0045,
+        50 hand_yuat.hand.0046,
+        51 hear_0ascertainment,
+        52 hear_yuat.hear.0047,
+        53 hear_yuat.hear.0048,
+        54 hear_yuat.hear.0049,
+        55 hear_yuat.hear.0050,
+        56 hear_yuat.hear.0051,
+        57 hear_yuat.hear.0052,
+        58 knee_0ascertainment,
+        59 knee_yuat.knee.0053,
+        60 knee_yuat.knee.0054,
+        61 knee_yuat.knee.0055,
+        62 knee_yuat.knee.0056,
+        63 knee_yuat.knee.0057,
+        64 leaf_0ascertainment,
+        65 leaf_yuat.leaf.0058,
+        66 leaf_yuat.leaf.0059,
+        67 leaf_yuat.leaf.0060,
+        68 leaf_yuat.leaf.0061,
+        69 leaf_yuat.leaf.0062,
+        70 liver_0ascertainment,
+        71 liver_yuat.liver.0063,
+        72 liver_yuat.liver.0064,
+        73 liver_yuat.liver.0065,
+        74 liver_yuat.liver.0066,
+        75 liver_yuat.liver.0067,
+        76 louse_0ascertainment,
+        77 louse_yuat.louse.0068,
+        78 mountain_0ascertainment,
+        79 mountain_yuat.mountain.0069,
+        80 mountain_yuat.mountain.0070,
+        81 mountain_yuat.mountain.0071,
+        82 mountain_yuat.mountain.0072,
+        83 name_0ascertainment,
+        84 name_yuat.name.0073,
+        85 new_0ascertainment,
+        86 new_yuat.new.0074,
+        87 new_yuat.new.0075,
+        88 night_0ascertainment,
+        89 night_yuat.night.0076,
+        90 night_yuat.night.0077,
+        91 nose_0ascertainment,
+        92 nose_yuat.nose.0078,
+        93 nose_yuat.nose.0079,
+        94 one_0ascertainment,
+        95 one_yuat.one.0080,
+        96 one_yuat.one.0081,
+        97 one_yuat.one.0082,
+        98 one_yuat.one.0083,
+        99 one_yuat.one.0084,
+        100 path_0ascertainment,
+        101 path_yuat.path.0085,
+        102 path_yuat.path.0086,
+        103 path_yuat.path.0087,
+        104 path_yuat.path.0088,
+        105 path_yuat.path.0089,
+        106 path_yuat.path.0090,
+        107 person_0ascertainment,
+        108 person_yuat.person.0091,
+        109 person_yuat.person.0092,
+        110 person_yuat.person.0093,
+        111 person_yuat.person.0094,
+        112 pl_0ascertainment,
+        113 pl_yuat.1pl.0001,
+        114 pl_yuat.1pl.0002,
+        115 pl_yuat.1pl.0003,
+        116 see_0ascertainment,
+        117 see_yuat.see.0095,
+        118 see_yuat.see.0096,
+        119 see_yuat.see.0097,
+        120 see_yuat.see.0098,
+        121 sg_0ascertainment,
+        122 sg_yuat.1sg.0004,
+        123 sg_yuat.1sg.0005,
+        124 sg_yuat.2sg.0006,
+        125 sg_yuat.2sg.0007,
+        126 sg_yuat.2sg.0008,
+        127 sg_yuat.2sg.0009,
+        128 skin_0ascertainment,
+        129 skin_yuat.skin.0099,
+        130 skin_yuat.skin.0100,
+        131 skin_yuat.skin.0101,
+        132 skin_yuat.skin.0102,
+        133 skin_yuat.skin.0103,
+        134 skin_yuat.skin.0104,
+        135 star_0ascertainment,
+        136 star_yuat.star.0105,
+        137 star_yuat.star.0106,
+        138 stone_0ascertainment,
+        139 stone_yuat.stone.0107,
+        140 stone_yuat.stone.0108,
+        141 stone_yuat.stone.0109,
+        142 stone_yuat.stone.0110,
+        143 sun_0ascertainment,
+        144 sun_yuat.sun.0111,
+        145 sun_yuat.sun.0112,
+        146 sun_yuat.sun.0113,
+        147 tongue_0ascertainment,
+        148 tongue_yuat.tongue.0114,
+        149 tooth_0ascertainment,
+        150 tooth_yuat.tooth.0115,
+        151 tree_0ascertainment,
+        152 tree_yuat.tree.0116,
+        153 tree_yuat.tree.0117,
+        154 two_0ascertainment,
+        155 two_yuat.two.0118,
+        156 two_yuat.two.0119,
+        157 two_yuat.two.0120,
+        158 water_0ascertainment,
+        159 water_yuat.water.0121,
+        160 water_yuat.water.0122
+;
+
+MATRIX
+biwat_3     0101010001000010001001001001000010001000000100100001000010100000100000100000101000010100100100100000100000010000???010000100000010000001001000010001010100100010
+bun         010100100????0???0010??00100100010000100000??001000??????00100000100000100001001000?0??00101000100000100000010001000????0101000001000001000100001001010100010010
+changriwa   0101000100100001001000100100010010000010000??00100001000000010000010000010001000100?0010100100001000001000000100010001000100100000100000100010000101010100001001
+kyaimbarang 010101000001000010100??0010000100100??????0010001000010000?????0100000?????0100100010100100??00001000001000????0???000100010011000010001000100000101010100010010
+kyenele     01010100000010???0100??00100100010000001010??00001000010000001000001000001001001000?0100100010000010000010000010010000010101000000001001000100000101010100010010
+mekmek      010101000????0???0100??00100100000100000100??00100000001000000100000100000101001010?01001001001000000000010????00010????0101000000000101000001010001010110010010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-8;
+    charset come = 9-13;
+    charset die = 14-17;
+    charset dog = 18-20;
+    charset drink = 21-23;
+    charset ear = 24-26;
+    charset eye = 27-31;
+    charset fire = 32-35;
+    charset fish = 36-42;
+    charset full = 43-45;
+    charset hand = 46-50;
+    charset hear = 51-57;
+    charset knee = 58-63;
+    charset leaf = 64-69;
+    charset liver = 70-75;
+    charset louse = 76-77;
+    charset mountain = 78-82;
+    charset name = 83-84;
+    charset new = 85-87;
+    charset night = 88-90;
+    charset nose = 91-93;
+    charset one = 94-99;
+    charset path = 100-106;
+    charset person = 107-111;
+    charset pl = 112-115;
+    charset see = 116-120;
+    charset sg = 121-127;
+    charset skin = 128-134;
+    charset star = 135-137;
+    charset stone = 138-142;
+    charset sun = 143-146;
+    charset tongue = 147-148;
+    charset tooth = 149-150;
+    charset tree = 151-153;
+    charset two = 154-157;
+    charset water = 158-160;
+END;

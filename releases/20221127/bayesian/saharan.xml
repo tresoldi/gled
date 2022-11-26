@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Beria_zagh1240,Berti_bert1249,CentralKanuri_cent2050,Dazaga_daza1242,MangaKanuri_mang1399,Tedaga_teda1241">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_saharan" name="data_saharan" dataType="integer">
+    <sequence id="language_data_saharan:Beria_zagh1240" taxon="Beria_zagh1240" value="01000100000010010001001000001001010010000100001000100010010001000000100001000010000100000010010000100000000010000001000001000010001000001000000100010010000010000100000000100000010001000001000000100010000" />
+    <sequence id="language_data_saharan:Berti_bert1249" taxon="Berti_bert1249" value="0010001001001001000100?????0????0100????00100001100100??001000100100????001100100000100000??0010000100000000010001001001010000100001000001000000100??001000001000010010000010010010000101000100100100010000" />
+    <sequence id="language_data_saharan:CentralKanuri_cent2050" taxon="CentralKanuri_cent2050" value="01000000100010000101000010100100010000100001000100001001000100001000001000001000100000110010000010000100010000010000001000010000100001100010000001010000010000010000100000000100001000010100001000010000100" />
+    <sequence id="language_data_saharan:Dazaga_daza1242" taxon="Dazaga_daza1242" value="01010001001011001001000101000100001001000001100100001001000100010010010000010001010001011010000100001000101000110000010000100001000010000010110???001000100000100001001110001001010100010000010010100001001" />
+    <sequence id="language_data_saharan:MangaKanuri_mang1399" taxon="MangaKanuri_mang1399" value="010000001000100001010000100001100100000100010001000010010???00001000000100001000100000100001000010000010000000001000001000011000100000100001000001010000001000010000100000000100001000010000001000001000010" />
+    <sequence id="language_data_saharan:Tedaga_teda1241" taxon="Tedaga_teda1241" value="01010001001011001001100001000100001001000001000100001001000100010010010000010001010001011010000100001001101000110000010000100001000010000010110???001000100000100001001110001001010100010000010010100001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:saharan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:saharan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:saharan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:saharan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:saharan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="((Beria_zagh1240,Berti_bert1249),((CentralKanuri_cent2050,MangaKanuri_mang1399),(Dazaga_daza1242,Tedaga_teda1241)));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:saharan" name="distribution">
+          <input id="featureClockRateCompound:saharan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:saharan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:saharan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:saharan" beta="@featureClockRateGammaScale:saharan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:saharan" name="distribution" x="@featureClockRateGammaScale:saharan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:saharan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:saharan" name="distribution" x="@covarion_alpha.s:saharan">
+          <Uniform id="CovAlphaUniform:saharan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:saharan" name="distribution" x="@covarion_s.s:saharan">
+          <Gamma id="Gamma.0:saharan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:saharan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:saharan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:saharan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:1pl" spec="SiteModel" mutationRate="@featureClockRate:saharan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:saharan" spec="BinaryCovarion" alpha="@covarion_alpha.s:saharan" switchRate="@covarion_s.s:saharan">
+              <vfrequencies id="saharan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.77 0.23</vfrequencies>
+              <parameter id="saharan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="saharan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_saharan:1pl" spec="FilteredAlignment" data="@data_saharan" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:1sg" spec="SiteModel" mutationRate="@featureClockRate:saharan:1sg" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:1sg" spec="FilteredAlignment" data="@data_saharan" filter="5-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:2sg" spec="SiteModel" mutationRate="@featureClockRate:saharan:2sg" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:2sg" spec="FilteredAlignment" data="@data_saharan" filter="12-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:blood" spec="SiteModel" mutationRate="@featureClockRate:saharan:blood" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:blood" spec="FilteredAlignment" data="@data_saharan" filter="15-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:breast" spec="SiteModel" mutationRate="@featureClockRate:saharan:breast" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:breast" spec="FilteredAlignment" data="@data_saharan" filter="19-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:come" spec="SiteModel" mutationRate="@featureClockRate:saharan:come" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:come" spec="FilteredAlignment" data="@data_saharan" filter="22-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:die" spec="SiteModel" mutationRate="@featureClockRate:saharan:die" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:die" spec="FilteredAlignment" data="@data_saharan" filter="28-32" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:dog" spec="SiteModel" mutationRate="@featureClockRate:saharan:dog" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:dog" spec="FilteredAlignment" data="@data_saharan" filter="33-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:drink" spec="SiteModel" mutationRate="@featureClockRate:saharan:drink" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:drink" spec="FilteredAlignment" data="@data_saharan" filter="36-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:ear" spec="SiteModel" mutationRate="@featureClockRate:saharan:ear" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:ear" spec="FilteredAlignment" data="@data_saharan" filter="41-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:eye" spec="SiteModel" mutationRate="@featureClockRate:saharan:eye" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:eye" spec="FilteredAlignment" data="@data_saharan" filter="46-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:fire" spec="SiteModel" mutationRate="@featureClockRate:saharan:fire" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:fire" spec="FilteredAlignment" data="@data_saharan" filter="50-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:fish" spec="SiteModel" mutationRate="@featureClockRate:saharan:fish" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:fish" spec="FilteredAlignment" data="@data_saharan" filter="54-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:full" spec="SiteModel" mutationRate="@featureClockRate:saharan:full" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:full" spec="FilteredAlignment" data="@data_saharan" filter="57-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:hand" spec="SiteModel" mutationRate="@featureClockRate:saharan:hand" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:hand" spec="FilteredAlignment" data="@data_saharan" filter="61-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:hear" spec="SiteModel" mutationRate="@featureClockRate:saharan:hear" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:hear" spec="FilteredAlignment" data="@data_saharan" filter="68-72" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:horn" spec="SiteModel" mutationRate="@featureClockRate:saharan:horn" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:horn" spec="FilteredAlignment" data="@data_saharan" filter="73-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:knee" spec="SiteModel" mutationRate="@featureClockRate:saharan:knee" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:knee" spec="FilteredAlignment" data="@data_saharan" filter="78-82" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:leaf" spec="SiteModel" mutationRate="@featureClockRate:saharan:leaf" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:leaf" spec="FilteredAlignment" data="@data_saharan" filter="83-89" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:liver" spec="SiteModel" mutationRate="@featureClockRate:saharan:liver" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:liver" spec="FilteredAlignment" data="@data_saharan" filter="90-92" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:louse" spec="SiteModel" mutationRate="@featureClockRate:saharan:louse" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:louse" spec="FilteredAlignment" data="@data_saharan" filter="93-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:mountain" spec="SiteModel" mutationRate="@featureClockRate:saharan:mountain" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:mountain" spec="FilteredAlignment" data="@data_saharan" filter="98-107" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:name" spec="SiteModel" mutationRate="@featureClockRate:saharan:name" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:name" spec="FilteredAlignment" data="@data_saharan" filter="108-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:new" spec="SiteModel" mutationRate="@featureClockRate:saharan:new" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:new" spec="FilteredAlignment" data="@data_saharan" filter="115-120" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:night" spec="SiteModel" mutationRate="@featureClockRate:saharan:night" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:night" spec="FilteredAlignment" data="@data_saharan" filter="121-125" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:nose" spec="SiteModel" mutationRate="@featureClockRate:saharan:nose" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:nose" spec="FilteredAlignment" data="@data_saharan" filter="126-129" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:one" spec="SiteModel" mutationRate="@featureClockRate:saharan:one" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:one" spec="FilteredAlignment" data="@data_saharan" filter="130-135" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:path" spec="SiteModel" mutationRate="@featureClockRate:saharan:path" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:path" spec="FilteredAlignment" data="@data_saharan" filter="136-142" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:person" spec="SiteModel" mutationRate="@featureClockRate:saharan:person" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:person" spec="FilteredAlignment" data="@data_saharan" filter="143-146" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:see" spec="SiteModel" mutationRate="@featureClockRate:saharan:see" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:see" spec="FilteredAlignment" data="@data_saharan" filter="147-149" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:skin" spec="SiteModel" mutationRate="@featureClockRate:saharan:skin" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:skin" spec="FilteredAlignment" data="@data_saharan" filter="150-155" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:star" spec="SiteModel" mutationRate="@featureClockRate:saharan:star" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:star" spec="FilteredAlignment" data="@data_saharan" filter="156-160" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:stone" spec="SiteModel" mutationRate="@featureClockRate:saharan:stone" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:stone" spec="FilteredAlignment" data="@data_saharan" filter="161-169" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:sun" spec="SiteModel" mutationRate="@featureClockRate:saharan:sun" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:sun" spec="FilteredAlignment" data="@data_saharan" filter="170-176" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:tongue" spec="SiteModel" mutationRate="@featureClockRate:saharan:tongue" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:tongue" spec="FilteredAlignment" data="@data_saharan" filter="177-180" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:tooth" spec="SiteModel" mutationRate="@featureClockRate:saharan:tooth" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:tooth" spec="FilteredAlignment" data="@data_saharan" filter="181-186" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:tree" spec="SiteModel" mutationRate="@featureClockRate:saharan:tree" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:tree" spec="FilteredAlignment" data="@data_saharan" filter="187-193" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:two" spec="SiteModel" mutationRate="@featureClockRate:saharan:two" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:two" spec="FilteredAlignment" data="@data_saharan" filter="194-197" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:saharan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.saharan:water" spec="SiteModel" mutationRate="@featureClockRate:saharan:water" proportionInvariant="0" substModel="@covarion.s:saharan" />
+          <data id="feature_data_saharan:water" spec="FilteredAlignment" data="@data_saharan" filter="198-203" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:saharan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:saharan" name="up" />
+      <parameter idref="featureClockRateGammaScale:saharan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:saharan" spec="ScaleOperator" parameter="@covarion_alpha.s:saharan" scaleFactor="0.5" weight="1.0" />
+    <operator id="saharan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:saharan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:saharan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="39" estimate="false">3 6 2 3 2 5 4 2 4 4 3 3 2 3 6 4 4 4 6 2 4 9 6 5 4 3 5 6 3 2 5 4 8 6 3 5 6 3 5</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="saharan.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:saharan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:saharan" />
+      <log idref="covarion_alpha.s:saharan" />
+      <log idref="covarion_s.s:saharan" />
+    </logger>
+    <logger mode="tree" fileName="saharan.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,156 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=4 NCHAR=100;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kwalean.blood.0008,
+        3 blood_kwalean.blood.0009,
+        4 bone_0ascertainment,
+        5 bone_kwalean.bone.0010,
+        6 breast_0ascertainment,
+        7 breast_kwalean.breast.0011,
+        8 come_0ascertainment,
+        9 come_kwalean.come.0012,
+        10 come_kwalean.come.0013,
+        11 die_0ascertainment,
+        12 die_kwalean.die.0014,
+        13 dog_0ascertainment,
+        14 dog_kwalean.dog.0015,
+        15 drink_0ascertainment,
+        16 drink_kwalean.drink.0016,
+        17 drink_kwalean.drink.0017,
+        18 ear_0ascertainment,
+        19 ear_kwalean.ear.0018,
+        20 ear_kwalean.ear.0019,
+        21 eye_0ascertainment,
+        22 eye_kwalean.eye.0020,
+        23 fire_0ascertainment,
+        24 fire_kwalean.fire.0021,
+        25 fire_kwalean.fire.0022,
+        26 fish_0ascertainment,
+        27 fish_kwalean.fish.0023,
+        28 fish_kwalean.fish.0024,
+        29 full_0ascertainment,
+        30 full_kwalean.full.0025,
+        31 hand_0ascertainment,
+        32 hand_kwalean.hand.0026,
+        33 hear_0ascertainment,
+        34 hear_kwalean.hear.0027,
+        35 hear_kwalean.hear.0028,
+        36 hear_kwalean.hear.0029,
+        37 knee_0ascertainment,
+        38 knee_kwalean.knee.0030,
+        39 knee_kwalean.knee.0031,
+        40 knee_kwalean.knee.0032,
+        41 leaf_0ascertainment,
+        42 leaf_kwalean.leaf.0033,
+        43 leaf_kwalean.leaf.0034,
+        44 liver_0ascertainment,
+        45 liver_kwalean.liver.0035,
+        46 liver_kwalean.liver.0036,
+        47 louse_0ascertainment,
+        48 louse_kwalean.louse.0037,
+        49 mountain_0ascertainment,
+        50 mountain_kwalean.mountain.0038,
+        51 name_0ascertainment,
+        52 name_kwalean.name.0039,
+        53 new_0ascertainment,
+        54 new_kwalean.new.0040,
+        55 new_kwalean.new.0041,
+        56 night_0ascertainment,
+        57 night_kwalean.night.0042,
+        58 night_kwalean.night.0043,
+        59 night_kwalean.night.0044,
+        60 night_kwalean.night.0045,
+        61 nose_0ascertainment,
+        62 nose_kwalean.nose.0046,
+        63 one_0ascertainment,
+        64 one_kwalean.one.0047,
+        65 path_0ascertainment,
+        66 path_kwalean.path.0048,
+        67 person_0ascertainment,
+        68 person_kwalean.person.0049,
+        69 pl_0ascertainment,
+        70 pl_kwalean.1pl.0001,
+        71 pl_kwalean.1pl.0002,
+        72 see_0ascertainment,
+        73 see_kwalean.see.0050,
+        74 see_kwalean.see.0051,
+        75 sg_0ascertainment,
+        76 sg_kwalean.1sg.0003,
+        77 sg_kwalean.1sg.0004,
+        78 sg_kwalean.2sg.0005,
+        79 sg_kwalean.2sg.0006,
+        80 sg_kwalean.2sg.0007,
+        81 skin_0ascertainment,
+        82 skin_kwalean.skin.0052,
+        83 skin_kwalean.skin.0053,
+        84 star_0ascertainment,
+        85 star_kwalean.star.0054,
+        86 stone_0ascertainment,
+        87 stone_kwalean.stone.0055,
+        88 sun_0ascertainment,
+        89 sun_kwalean.sun.0056,
+        90 tongue_0ascertainment,
+        91 tongue_kwalean.tongue.0057,
+        92 tooth_0ascertainment,
+        93 tooth_kwalean.tooth.0058,
+        94 tree_0ascertainment,
+        95 tree_kwalean.tree.0059,
+        96 tree_kwalean.tree.0060,
+        97 two_0ascertainment,
+        98 two_kwalean.two.0061,
+        99 water_0ascertainment,
+        100 water_kwalean.water.0062
+;
+
+MATRIX
+humene          01001010100?0101001001010010010?01000100010010010101010011000?01010?01001001011001001010101010100101
+humene_manugoro 01001010100?0101001001010010010?010000100100100101010??001000101010?01001001011001001010101010100101
+kwale           01001010100?0100100101001001010?00100001001010010101001000110?01010?00100100110100101010101010010101
+uare            001010100101010010010100100101010001000100100101010100100001010101010??00100100000101010101010010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-5;
+    charset breast = 6-7;
+    charset come = 8-10;
+    charset die = 11-12;
+    charset dog = 13-14;
+    charset drink = 15-17;
+    charset ear = 18-20;
+    charset eye = 21-22;
+    charset fire = 23-25;
+    charset fish = 26-28;
+    charset full = 29-30;
+    charset hand = 31-32;
+    charset hear = 33-36;
+    charset knee = 37-40;
+    charset leaf = 41-43;
+    charset liver = 44-46;
+    charset louse = 47-48;
+    charset mountain = 49-50;
+    charset name = 51-52;
+    charset new = 53-55;
+    charset night = 56-60;
+    charset nose = 61-62;
+    charset one = 63-64;
+    charset path = 65-66;
+    charset person = 67-68;
+    charset pl = 69-71;
+    charset see = 72-74;
+    charset sg = 75-80;
+    charset skin = 81-83;
+    charset star = 84-85;
+    charset stone = 86-87;
+    charset sun = 88-89;
+    charset tongue = 90-91;
+    charset tooth = 92-93;
+    charset tree = 94-96;
+    charset two = 97-98;
+    charset water = 99-100;
+END;

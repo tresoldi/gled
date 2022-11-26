@@ -1,0 +1,136 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=85;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_shabo.blood.0138,
+        3 bone_0ascertainment,
+        4 bone_shabo.bone.0103,
+        5 bone_shabo.bone.0333,
+        6 breast_0ascertainment,
+        7 breast_shabo.breast.0153,
+        8 come_0ascertainment,
+        9 come_shabo.come.0013,
+        10 die_0ascertainment,
+        11 die_shabo.die.0001,
+        12 dog_0ascertainment,
+        13 dog_shabo.dog.0155,
+        14 dog_shabo.dog.0446,
+        15 drink_0ascertainment,
+        16 drink_shabo.drink.0830,
+        17 ear_0ascertainment,
+        18 ear_shabo.ear.0002,
+        19 eye_0ascertainment,
+        20 eye_shabo.eye.0640,
+        21 fire_0ascertainment,
+        22 fire_shabo.fire.0650,
+        23 fish_0ascertainment,
+        24 fish_shabo.fish.0603,
+        25 hand_0ascertainment,
+        26 hand_shabo.hand.0491,
+        27 hear_0ascertainment,
+        28 hear_shabo.hear.0902,
+        29 hear_shabo.hear.0903,
+        30 horn_0ascertainment,
+        31 horn_shabo.horn.0055,
+        32 knee_0ascertainment,
+        33 knee_shabo.knee.0007,
+        34 knee_shabo.knee.0549,
+        35 leaf_0ascertainment,
+        36 leaf_shabo.leaf.0052,
+        37 leaf_shabo.leaf.0492,
+        38 liver_0ascertainment,
+        39 liver_shabo.liver.0752,
+        40 louse_0ascertainment,
+        41 louse_shabo.louse.0001,
+        42 name_0ascertainment,
+        43 name_shabo.name.0491,
+        44 new_0ascertainment,
+        45 new_shabo.new.0618,
+        46 new_shabo.new.0619,
+        47 night_0ascertainment,
+        48 night_shabo.night.0061,
+        49 one_0ascertainment,
+        50 one_shabo.one.0036,
+        51 path_0ascertainment,
+        52 path_shabo.path.0677,
+        53 path_shabo.path.0678,
+        54 person_0ascertainment,
+        55 person_shabo.person.0047,
+        56 person_shabo.person.0870,
+        57 pl_0ascertainment,
+        58 pl_shabo.1pl.0148,
+        59 pl_shabo.1pl.0743,
+        60 see_0ascertainment,
+        61 see_shabo.see.0001,
+        62 see_shabo.see.0546,
+        63 sg_0ascertainment,
+        64 sg_shabo.1sg.0005,
+        65 sg_shabo.1sg.0419,
+        66 sg_shabo.2sg.0143,
+        67 sg_shabo.2sg.0498,
+        68 skin_0ascertainment,
+        69 skin_shabo.skin.0543,
+        70 star_0ascertainment,
+        71 star_shabo.star.0153,
+        72 stone_0ascertainment,
+        73 stone_shabo.stone.0108,
+        74 sun_0ascertainment,
+        75 sun_shabo.sun.0543,
+        76 tongue_0ascertainment,
+        77 tongue_shabo.tongue.0055,
+        78 tooth_0ascertainment,
+        79 tooth_shabo.tooth.0099,
+        80 tree_0ascertainment,
+        81 tree_shabo.tree.0585,
+        82 two_0ascertainment,
+        83 two_shabo.two.0001,
+        84 water_0ascertainment,
+        85 water_shabo.water.0492
+;
+
+MATRIX
+shabo 0101101010101101010101010101101011011010101011010101101101101101111010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-7;
+    charset come = 8-9;
+    charset die = 10-11;
+    charset dog = 12-14;
+    charset drink = 15-16;
+    charset ear = 17-18;
+    charset eye = 19-20;
+    charset fire = 21-22;
+    charset fish = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-29;
+    charset horn = 30-31;
+    charset knee = 32-34;
+    charset leaf = 35-37;
+    charset liver = 38-39;
+    charset louse = 40-41;
+    charset name = 42-43;
+    charset new = 44-46;
+    charset night = 47-48;
+    charset one = 49-50;
+    charset path = 51-53;
+    charset person = 54-56;
+    charset pl = 57-59;
+    charset see = 60-62;
+    charset sg = 63-67;
+    charset skin = 68-69;
+    charset star = 70-71;
+    charset stone = 72-73;
+    charset sun = 74-75;
+    charset tongue = 76-77;
+    charset tooth = 78-79;
+    charset tree = 80-81;
+    charset two = 82-83;
+    charset water = 84-85;
+END;

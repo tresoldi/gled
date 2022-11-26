@@ -1,0 +1,132 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=83;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_piawi.blood.0004,
+        3 bone_0ascertainment,
+        4 bone_piawi.bone.0005,
+        5 breast_0ascertainment,
+        6 breast_piawi.breast.0006,
+        7 come_0ascertainment,
+        8 come_piawi.come.0007,
+        9 come_piawi.come.0008,
+        10 die_0ascertainment,
+        11 die_piawi.die.0009,
+        12 dog_0ascertainment,
+        13 dog_piawi.dog.0010,
+        14 ear_0ascertainment,
+        15 ear_piawi.ear.0011,
+        16 ear_piawi.ear.0012,
+        17 eye_0ascertainment,
+        18 eye_piawi.eye.0013,
+        19 fire_0ascertainment,
+        20 fire_piawi.fire.0014,
+        21 full_0ascertainment,
+        22 full_piawi.full.0015,
+        23 full_piawi.full.0016,
+        24 hand_0ascertainment,
+        25 hand_piawi.hand.0017,
+        26 hand_piawi.hand.0018,
+        27 hear_0ascertainment,
+        28 hear_piawi.hear.0019,
+        29 hear_piawi.hear.0020,
+        30 leaf_0ascertainment,
+        31 leaf_piawi.leaf.0021,
+        32 louse_0ascertainment,
+        33 louse_piawi.louse.0022,
+        34 louse_piawi.louse.0023,
+        35 mountain_0ascertainment,
+        36 mountain_piawi.mountain.0024,
+        37 mountain_piawi.mountain.0025,
+        38 name_0ascertainment,
+        39 name_piawi.name.0026,
+        40 name_piawi.name.0027,
+        41 new_0ascertainment,
+        42 new_piawi.new.0028,
+        43 new_piawi.new.0029,
+        44 night_0ascertainment,
+        45 night_piawi.night.0030,
+        46 night_piawi.night.0031,
+        47 nose_0ascertainment,
+        48 nose_piawi.nose.0032,
+        49 one_0ascertainment,
+        50 one_piawi.one.0033,
+        51 one_piawi.one.0034,
+        52 path_0ascertainment,
+        53 path_piawi.path.0035,
+        54 path_piawi.path.0036,
+        55 see_0ascertainment,
+        56 see_piawi.see.0037,
+        57 see_piawi.see.0038,
+        58 sg_0ascertainment,
+        59 sg_piawi.1sg.0001,
+        60 sg_piawi.1sg.0002,
+        61 sg_piawi.2sg.0003,
+        62 skin_0ascertainment,
+        63 skin_piawi.skin.0039,
+        64 skin_piawi.skin.0040,
+        65 star_0ascertainment,
+        66 star_piawi.star.0041,
+        67 stone_0ascertainment,
+        68 stone_piawi.stone.0042,
+        69 sun_0ascertainment,
+        70 sun_piawi.sun.0043,
+        71 tongue_0ascertainment,
+        72 tongue_piawi.tongue.0044,
+        73 tongue_piawi.tongue.0045,
+        74 tooth_0ascertainment,
+        75 tooth_piawi.tooth.0046,
+        76 tooth_piawi.tooth.0047,
+        77 tree_0ascertainment,
+        78 tree_piawi.tree.0048,
+        79 two_0ascertainment,
+        80 two_piawi.two.0049,
+        81 two_piawi.two.0050,
+        82 water_0ascertainment,
+        83 water_piawi.water.0051
+;
+
+MATRIX
+pinai_hagahai_aramo     0?0?0101001010100101010010010010100100100100100101001001001000100101010110100101001
+pinai_hagahai_pinai_1   0?0?0100101010010101001001001010010010010010010100100100100100010101010010010100101
+pinai_hagahai_wakadadap 01010100101010010101001001001010010010010010010100100100100110010101010010010100101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-9;
+    charset die = 10-11;
+    charset dog = 12-13;
+    charset ear = 14-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset full = 21-23;
+    charset hand = 24-26;
+    charset hear = 27-29;
+    charset leaf = 30-31;
+    charset louse = 32-34;
+    charset mountain = 35-37;
+    charset name = 38-40;
+    charset new = 41-43;
+    charset night = 44-46;
+    charset nose = 47-48;
+    charset one = 49-51;
+    charset path = 52-54;
+    charset see = 55-57;
+    charset sg = 58-61;
+    charset skin = 62-64;
+    charset star = 65-66;
+    charset stone = 67-68;
+    charset sun = 69-70;
+    charset tongue = 71-73;
+    charset tooth = 74-76;
+    charset tree = 77-78;
+    charset two = 79-81;
+    charset water = 82-83;
+END;

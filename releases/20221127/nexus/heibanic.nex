@@ -1,0 +1,275 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=11 NCHAR=211;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_heibanic.blood.0009,
+        3 blood_heibanic.blood.0010,
+        4 bone_0ascertainment,
+        5 bone_heibanic.bone.0011,
+        6 bone_heibanic.bone.0012,
+        7 breast_0ascertainment,
+        8 breast_heibanic.breast.0013,
+        9 breast_heibanic.breast.0014,
+        10 come_0ascertainment,
+        11 come_heibanic.come.0015,
+        12 come_heibanic.come.0016,
+        13 come_heibanic.come.0017,
+        14 come_heibanic.come.0018,
+        15 come_heibanic.come.0019,
+        16 come_heibanic.come.0020,
+        17 come_heibanic.come.0021,
+        18 die_0ascertainment,
+        19 die_heibanic.die.0022,
+        20 die_heibanic.die.0023,
+        21 die_heibanic.die.0024,
+        22 die_heibanic.die.0025,
+        23 dog_0ascertainment,
+        24 dog_heibanic.dog.0026,
+        25 drink_0ascertainment,
+        26 drink_heibanic.drink.0027,
+        27 drink_heibanic.drink.0028,
+        28 drink_heibanic.drink.0029,
+        29 drink_heibanic.drink.0030,
+        30 drink_heibanic.drink.0031,
+        31 drink_heibanic.drink.0032,
+        32 ear_0ascertainment,
+        33 ear_heibanic.ear.0033,
+        34 ear_heibanic.ear.0034,
+        35 ear_heibanic.ear.0035,
+        36 eye_0ascertainment,
+        37 eye_heibanic.eye.0036,
+        38 eye_heibanic.eye.0037,
+        39 eye_heibanic.eye.0038,
+        40 fire_0ascertainment,
+        41 fire_heibanic.fire.0039,
+        42 fire_heibanic.fire.0040,
+        43 fire_heibanic.fire.0041,
+        44 fire_heibanic.fire.0042,
+        45 fish_0ascertainment,
+        46 fish_heibanic.fish.0043,
+        47 full_0ascertainment,
+        48 full_heibanic.full.0044,
+        49 full_heibanic.full.0045,
+        50 full_heibanic.full.0046,
+        51 full_heibanic.full.0047,
+        52 full_heibanic.full.0048,
+        53 full_heibanic.full.0049,
+        54 full_heibanic.full.0050,
+        55 full_heibanic.full.0051,
+        56 hand_0ascertainment,
+        57 hand_heibanic.hand.0052,
+        58 hand_heibanic.hand.0053,
+        59 hand_heibanic.hand.0054,
+        60 hand_heibanic.hand.0055,
+        61 hand_heibanic.hand.0056,
+        62 hear_0ascertainment,
+        63 hear_heibanic.hear.0057,
+        64 hear_heibanic.hear.0058,
+        65 hear_heibanic.hear.0059,
+        66 hear_heibanic.hear.0060,
+        67 horn_0ascertainment,
+        68 horn_heibanic.horn.0061,
+        69 horn_heibanic.horn.0062,
+        70 horn_heibanic.horn.0063,
+        71 knee_0ascertainment,
+        72 knee_heibanic.knee.0064,
+        73 leaf_0ascertainment,
+        74 leaf_heibanic.leaf.0065,
+        75 leaf_heibanic.leaf.0066,
+        76 leaf_heibanic.leaf.0067,
+        77 liver_0ascertainment,
+        78 liver_heibanic.liver.0068,
+        79 liver_heibanic.liver.0069,
+        80 liver_heibanic.liver.0070,
+        81 liver_heibanic.liver.0071,
+        82 liver_heibanic.liver.0072,
+        83 louse_0ascertainment,
+        84 louse_heibanic.louse.0073,
+        85 louse_heibanic.louse.0074,
+        86 louse_heibanic.louse.0075,
+        87 louse_heibanic.louse.0076,
+        88 louse_heibanic.louse.0077,
+        89 louse_heibanic.louse.0078,
+        90 louse_heibanic.louse.0079,
+        91 mountain_0ascertainment,
+        92 mountain_heibanic.mountain.0080,
+        93 mountain_heibanic.mountain.0081,
+        94 mountain_heibanic.mountain.0082,
+        95 mountain_heibanic.mountain.0083,
+        96 mountain_heibanic.mountain.0084,
+        97 mountain_heibanic.mountain.0085,
+        98 mountain_heibanic.mountain.0086,
+        99 mountain_heibanic.mountain.0087,
+        100 name_0ascertainment,
+        101 name_heibanic.name.0088,
+        102 new_0ascertainment,
+        103 new_heibanic.new.0089,
+        104 new_heibanic.new.0090,
+        105 new_heibanic.new.0091,
+        106 new_heibanic.new.0092,
+        107 new_heibanic.new.0093,
+        108 night_0ascertainment,
+        109 night_heibanic.night.0094,
+        110 night_heibanic.night.0095,
+        111 night_heibanic.night.0096,
+        112 night_heibanic.night.0097,
+        113 night_heibanic.night.0098,
+        114 nose_0ascertainment,
+        115 nose_heibanic.nose.0099,
+        116 nose_heibanic.nose.0100,
+        117 nose_heibanic.nose.0101,
+        118 nose_heibanic.nose.0102,
+        119 nose_heibanic.nose.0103,
+        120 one_0ascertainment,
+        121 one_heibanic.one.0104,
+        122 one_heibanic.one.0105,
+        123 one_heibanic.one.0106,
+        124 one_heibanic.one.0107,
+        125 one_heibanic.one.0108,
+        126 one_heibanic.one.0109,
+        127 one_heibanic.one.0110,
+        128 one_heibanic.one.0111,
+        129 one_heibanic.one.0112,
+        130 path_0ascertainment,
+        131 path_heibanic.path.0113,
+        132 path_heibanic.path.0114,
+        133 path_heibanic.path.0115,
+        134 person_0ascertainment,
+        135 person_heibanic.person.0116,
+        136 person_heibanic.person.0117,
+        137 person_heibanic.person.0118,
+        138 person_heibanic.person.0119,
+        139 person_heibanic.person.0120,
+        140 person_heibanic.person.0121,
+        141 person_heibanic.person.0122,
+        142 person_heibanic.person.0123,
+        143 pl_0ascertainment,
+        144 pl_heibanic.1pl.0001,
+        145 pl_heibanic.1pl.0002,
+        146 pl_heibanic.1pl.0003,
+        147 pl_heibanic.1pl.0004,
+        148 see_0ascertainment,
+        149 see_heibanic.see.0124,
+        150 see_heibanic.see.0125,
+        151 see_heibanic.see.0126,
+        152 see_heibanic.see.0127,
+        153 see_heibanic.see.0128,
+        154 see_heibanic.see.0129,
+        155 see_heibanic.see.0130,
+        156 see_heibanic.see.0131,
+        157 see_heibanic.see.0132,
+        158 see_heibanic.see.0133,
+        159 see_heibanic.see.0134,
+        160 sg_0ascertainment,
+        161 sg_heibanic.1sg.0005,
+        162 sg_heibanic.1sg.0006,
+        163 sg_heibanic.1sg.0007,
+        164 sg_heibanic.2sg.0008,
+        165 skin_0ascertainment,
+        166 skin_heibanic.skin.0135,
+        167 skin_heibanic.skin.0136,
+        168 skin_heibanic.skin.0137,
+        169 skin_heibanic.skin.0138,
+        170 skin_heibanic.skin.0139,
+        171 star_0ascertainment,
+        172 star_heibanic.star.0140,
+        173 star_heibanic.star.0141,
+        174 star_heibanic.star.0142,
+        175 star_heibanic.star.0143,
+        176 star_heibanic.star.0144,
+        177 stone_0ascertainment,
+        178 stone_heibanic.stone.0145,
+        179 stone_heibanic.stone.0146,
+        180 stone_heibanic.stone.0147,
+        181 stone_heibanic.stone.0148,
+        182 stone_heibanic.stone.0149,
+        183 stone_heibanic.stone.0150,
+        184 sun_0ascertainment,
+        185 sun_heibanic.sun.0151,
+        186 sun_heibanic.sun.0152,
+        187 tongue_0ascertainment,
+        188 tongue_heibanic.tongue.0153,
+        189 tongue_heibanic.tongue.0154,
+        190 tooth_0ascertainment,
+        191 tooth_heibanic.tooth.0155,
+        192 tooth_heibanic.tooth.0156,
+        193 tree_0ascertainment,
+        194 tree_heibanic.tree.0157,
+        195 tree_heibanic.tree.0158,
+        196 tree_heibanic.tree.0159,
+        197 two_0ascertainment,
+        198 two_heibanic.two.0160,
+        199 two_heibanic.two.0161,
+        200 two_heibanic.two.0162,
+        201 two_heibanic.two.0163,
+        202 two_heibanic.two.0164,
+        203 two_heibanic.two.0165,
+        204 two_heibanic.two.0166,
+        205 water_0ascertainment,
+        206 water_heibanic.water.0167,
+        207 water_heibanic.water.0168,
+        208 water_heibanic.water.0169,
+        209 water_heibanic.water.0170,
+        210 water_heibanic.water.0171,
+        211 water_heibanic.water.0172
+;
+
+MATRIX
+abul       0100100100100000001000010100000010001000100001010000000010000010000100010100010000010000000100000000101000001000001000001000000000100010000000010000100000000000100101000001000001000000100100100100010000000100000
+ebang      01001001001000000010000101000000100010001000010010000000100000100001000101000100000???????0100000000101000001000001000000100000000100010000000010000100000000000100101000000100001000000100100100100010000000100000
+ko1        0100010010010100000100010100000010000100100001000100000010000001000???010100001000001000000010000000101000000100000100000010000000010001000000001000010000000000100100100000010000100000100100010010001000000010000
+laru_sudan 0100100100100000000010010100000010001000100001000010000001000010000100010100000100010000000010000000101000000100000010000001000000100000100000010000001000000010010101000001000000010000100100100100010000000001000
+logol      0100100100100000001000010??????01000100010000?010000000010000000100100010100010000000100000100000000101000000100000100000000100000100000010000010000000100000000001100010000010001000000010100100100000100000000100
+moro       01001001001000100010000100100000010000100100010100000000100000001001000100100000100???????0001000000100100000100000001000000010000100000001000000100000010010000100100001000001000001000100100100100001000000010000
+rere       0100100100100000000010010001000010001000100001000001000000100000100???0101000?????000010000000100000101000000010000010000000100000010010000000010000000001000000100101000001000001000000100010100100000010000100000
+shirumba   0100100100100000001000010100000010001000001001000000100010000000100010010100000001010000000000010000100010000001000010000000001000100000000100010000000000100000100101000000100000000100100100100100001000000000010
+tiro       010010010010000100100001000010000100100000010101000000000001000100001001001001000000000100000000100010000100010000?????00000010000100000000010000010000000010000100100001000000101000000100100100100000001000010000
+utoro      0100100100100000001000010000010010001000100001000000010000100010010010010100010000010000010000000100101000000000100010000000000100100010000000010000100000001000100101000001000001000000100100100100000000100100000
+warnang    00100101000010001000010100000010001001001000010000000010000010010000010100010?????000000100000000010100000100001000000100000000010001000000001010000000000000100100100000100100000000010100100100001000000010000001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-9;
+    charset come = 10-17;
+    charset die = 18-22;
+    charset dog = 23-24;
+    charset drink = 25-31;
+    charset ear = 32-35;
+    charset eye = 36-39;
+    charset fire = 40-44;
+    charset fish = 45-46;
+    charset full = 47-55;
+    charset hand = 56-61;
+    charset hear = 62-66;
+    charset horn = 67-70;
+    charset knee = 71-72;
+    charset leaf = 73-76;
+    charset liver = 77-82;
+    charset louse = 83-90;
+    charset mountain = 91-99;
+    charset name = 100-101;
+    charset new = 102-107;
+    charset night = 108-113;
+    charset nose = 114-119;
+    charset one = 120-129;
+    charset path = 130-133;
+    charset person = 134-142;
+    charset pl = 143-147;
+    charset see = 148-159;
+    charset sg = 160-164;
+    charset skin = 165-170;
+    charset star = 171-176;
+    charset stone = 177-183;
+    charset sun = 184-186;
+    charset tongue = 187-189;
+    charset tooth = 190-192;
+    charset tree = 193-196;
+    charset two = 197-204;
+    charset water = 205-211;
+END;

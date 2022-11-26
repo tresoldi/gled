@@ -1,0 +1,144 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=93;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kayagaric.blood.0004,
+        3 blood_kayagaric.blood.0005,
+        4 blood_kayagaric.blood.0006,
+        5 bone_0ascertainment,
+        6 bone_kayagaric.bone.0007,
+        7 breast_0ascertainment,
+        8 breast_kayagaric.breast.0008,
+        9 breast_kayagaric.breast.0009,
+        10 come_0ascertainment,
+        11 come_kayagaric.come.0010,
+        12 die_0ascertainment,
+        13 die_kayagaric.die.0011,
+        14 die_kayagaric.die.0012,
+        15 dog_0ascertainment,
+        16 dog_kayagaric.dog.0013,
+        17 dog_kayagaric.dog.0014,
+        18 ear_0ascertainment,
+        19 ear_kayagaric.ear.0015,
+        20 ear_kayagaric.ear.0016,
+        21 ear_kayagaric.ear.0017,
+        22 eye_0ascertainment,
+        23 eye_kayagaric.eye.0018,
+        24 fire_0ascertainment,
+        25 fire_kayagaric.fire.0019,
+        26 fish_0ascertainment,
+        27 fish_kayagaric.fish.0020,
+        28 fish_kayagaric.fish.0021,
+        29 full_0ascertainment,
+        30 full_kayagaric.full.0022,
+        31 full_kayagaric.full.0023,
+        32 hand_0ascertainment,
+        33 hand_kayagaric.hand.0024,
+        34 hear_0ascertainment,
+        35 hear_kayagaric.hear.0025,
+        36 knee_0ascertainment,
+        37 knee_kayagaric.knee.0026,
+        38 leaf_0ascertainment,
+        39 leaf_kayagaric.leaf.0027,
+        40 leaf_kayagaric.leaf.0028,
+        41 louse_0ascertainment,
+        42 louse_kayagaric.louse.0029,
+        43 louse_kayagaric.louse.0030,
+        44 new_0ascertainment,
+        45 new_kayagaric.new.0031,
+        46 new_kayagaric.new.0032,
+        47 night_0ascertainment,
+        48 night_kayagaric.night.0033,
+        49 night_kayagaric.night.0034,
+        50 nose_0ascertainment,
+        51 nose_kayagaric.nose.0035,
+        52 nose_kayagaric.nose.0036,
+        53 one_0ascertainment,
+        54 one_kayagaric.one.0037,
+        55 one_kayagaric.one.0038,
+        56 path_0ascertainment,
+        57 path_kayagaric.path.0039,
+        58 path_kayagaric.path.0040,
+        59 person_0ascertainment,
+        60 person_kayagaric.person.0041,
+        61 person_kayagaric.person.0042,
+        62 pl_0ascertainment,
+        63 pl_kayagaric.1pl.0001,
+        64 see_0ascertainment,
+        65 see_kayagaric.see.0043,
+        66 see_kayagaric.see.0044,
+        67 sg_0ascertainment,
+        68 sg_kayagaric.1sg.0002,
+        69 sg_kayagaric.2sg.0003,
+        70 skin_0ascertainment,
+        71 skin_kayagaric.skin.0045,
+        72 star_0ascertainment,
+        73 star_kayagaric.star.0046,
+        74 stone_0ascertainment,
+        75 stone_kayagaric.stone.0047,
+        76 stone_kayagaric.stone.0048,
+        77 stone_kayagaric.stone.0049,
+        78 sun_0ascertainment,
+        79 sun_kayagaric.sun.0050,
+        80 sun_kayagaric.sun.0051,
+        81 tongue_0ascertainment,
+        82 tongue_kayagaric.tongue.0052,
+        83 tongue_kayagaric.tongue.0053,
+        84 tooth_0ascertainment,
+        85 tooth_kayagaric.tooth.0054,
+        86 tree_0ascertainment,
+        87 tree_kayagaric.tree.0055,
+        88 tree_kayagaric.tree.0056,
+        89 two_0ascertainment,
+        90 two_kayagaric.two.0057,
+        91 two_kayagaric.two.0058,
+        92 water_0ascertainment,
+        93 water_kayagaric.water.0059
+;
+
+MATRIX
+kajgir    0100010??0?010010010001010100??010?0101001001001001001001001001010011010101000100100101001001
+kaugat    001001010010010010010010100101001010100100100101000100100100101001011010100100010010100100101
+tamagario 000101001010??010000101010100010101010100??01000101001001001001010011010100010100100101001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-6;
+    charset breast = 7-9;
+    charset come = 10-11;
+    charset die = 12-14;
+    charset dog = 15-17;
+    charset ear = 18-21;
+    charset eye = 22-23;
+    charset fire = 24-25;
+    charset fish = 26-28;
+    charset full = 29-31;
+    charset hand = 32-33;
+    charset hear = 34-35;
+    charset knee = 36-37;
+    charset leaf = 38-40;
+    charset louse = 41-43;
+    charset new = 44-46;
+    charset night = 47-49;
+    charset nose = 50-52;
+    charset one = 53-55;
+    charset path = 56-58;
+    charset person = 59-61;
+    charset pl = 62-63;
+    charset see = 64-66;
+    charset sg = 67-69;
+    charset skin = 70-71;
+    charset star = 72-73;
+    charset stone = 74-77;
+    charset sun = 78-80;
+    charset tongue = 81-83;
+    charset tooth = 84-85;
+    charset tree = 86-88;
+    charset two = 89-91;
+    charset water = 92-93;
+END;

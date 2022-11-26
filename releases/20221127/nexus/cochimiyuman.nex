@@ -1,0 +1,259 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=7 NCHAR=199;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_cochimiyuman.blood.0013,
+        3 bone_0ascertainment,
+        4 bone_cochimiyuman.bone.0014,
+        5 bone_cochimiyuman.bone.0015,
+        6 breast_0ascertainment,
+        7 breast_cochimiyuman.breast.0016,
+        8 breast_cochimiyuman.breast.0017,
+        9 come_0ascertainment,
+        10 come_cochimiyuman.come.0018,
+        11 come_cochimiyuman.come.0019,
+        12 come_cochimiyuman.come.0020,
+        13 come_cochimiyuman.come.0021,
+        14 come_cochimiyuman.come.0022,
+        15 come_cochimiyuman.come.0023,
+        16 come_cochimiyuman.come.0024,
+        17 come_cochimiyuman.come.0025,
+        18 come_cochimiyuman.come.0026,
+        19 die_0ascertainment,
+        20 die_cochimiyuman.die.0027,
+        21 die_cochimiyuman.die.0028,
+        22 die_cochimiyuman.die.0029,
+        23 dog_0ascertainment,
+        24 dog_cochimiyuman.dog.0030,
+        25 dog_cochimiyuman.dog.0031,
+        26 dog_cochimiyuman.dog.0032,
+        27 drink_0ascertainment,
+        28 drink_cochimiyuman.drink.0033,
+        29 drink_cochimiyuman.drink.0034,
+        30 drink_cochimiyuman.drink.0035,
+        31 drink_cochimiyuman.drink.0036,
+        32 drink_cochimiyuman.drink.0037,
+        33 drink_cochimiyuman.drink.0038,
+        34 ear_0ascertainment,
+        35 ear_cochimiyuman.ear.0039,
+        36 ear_cochimiyuman.ear.0040,
+        37 ear_cochimiyuman.ear.0041,
+        38 eye_0ascertainment,
+        39 eye_cochimiyuman.eye.0042,
+        40 eye_cochimiyuman.eye.0043,
+        41 eye_cochimiyuman.eye.0044,
+        42 eye_cochimiyuman.eye.0045,
+        43 eye_cochimiyuman.eye.0046,
+        44 eye_cochimiyuman.eye.0047,
+        45 fire_0ascertainment,
+        46 fire_cochimiyuman.fire.0048,
+        47 fire_cochimiyuman.fire.0049,
+        48 fire_cochimiyuman.fire.0050,
+        49 fire_cochimiyuman.fire.0051,
+        50 fire_cochimiyuman.fire.0052,
+        51 fish_0ascertainment,
+        52 fish_cochimiyuman.fish.0053,
+        53 fish_cochimiyuman.fish.0054,
+        54 full_0ascertainment,
+        55 full_cochimiyuman.full.0055,
+        56 full_cochimiyuman.full.0056,
+        57 full_cochimiyuman.full.0057,
+        58 full_cochimiyuman.full.0058,
+        59 full_cochimiyuman.full.0059,
+        60 full_cochimiyuman.full.0060,
+        61 full_cochimiyuman.full.0061,
+        62 full_cochimiyuman.full.0062,
+        63 full_cochimiyuman.full.0063,
+        64 full_cochimiyuman.full.0064,
+        65 hand_0ascertainment,
+        66 hand_cochimiyuman.hand.0065,
+        67 hand_cochimiyuman.hand.0066,
+        68 hear_0ascertainment,
+        69 hear_cochimiyuman.hear.0067,
+        70 hear_cochimiyuman.hear.0068,
+        71 hear_cochimiyuman.hear.0069,
+        72 hear_cochimiyuman.hear.0070,
+        73 horn_0ascertainment,
+        74 horn_cochimiyuman.horn.0071,
+        75 knee_0ascertainment,
+        76 knee_cochimiyuman.knee.0072,
+        77 leaf_0ascertainment,
+        78 leaf_cochimiyuman.leaf.0073,
+        79 leaf_cochimiyuman.leaf.0074,
+        80 leaf_cochimiyuman.leaf.0075,
+        81 leaf_cochimiyuman.leaf.0076,
+        82 liver_0ascertainment,
+        83 liver_cochimiyuman.liver.0077,
+        84 liver_cochimiyuman.liver.0078,
+        85 liver_cochimiyuman.liver.0079,
+        86 liver_cochimiyuman.liver.0080,
+        87 louse_0ascertainment,
+        88 louse_cochimiyuman.louse.0081,
+        89 louse_cochimiyuman.louse.0082,
+        90 louse_cochimiyuman.louse.0083,
+        91 louse_cochimiyuman.louse.0084,
+        92 louse_cochimiyuman.louse.0085,
+        93 mountain_0ascertainment,
+        94 mountain_cochimiyuman.mountain.0086,
+        95 mountain_cochimiyuman.mountain.0087,
+        96 mountain_cochimiyuman.mountain.0088,
+        97 mountain_cochimiyuman.mountain.0089,
+        98 name_0ascertainment,
+        99 name_cochimiyuman.name.0090,
+        100 name_cochimiyuman.name.0091,
+        101 name_cochimiyuman.name.0092,
+        102 new_0ascertainment,
+        103 new_cochimiyuman.new.0093,
+        104 new_cochimiyuman.new.0094,
+        105 new_cochimiyuman.new.0095,
+        106 new_cochimiyuman.new.0096,
+        107 night_0ascertainment,
+        108 night_cochimiyuman.night.0097,
+        109 night_cochimiyuman.night.0098,
+        110 night_cochimiyuman.night.0099,
+        111 night_cochimiyuman.night.0100,
+        112 night_cochimiyuman.night.0101,
+        113 night_cochimiyuman.night.0102,
+        114 nose_0ascertainment,
+        115 nose_cochimiyuman.nose.0103,
+        116 nose_cochimiyuman.nose.0104,
+        117 nose_cochimiyuman.nose.0105,
+        118 one_0ascertainment,
+        119 one_cochimiyuman.one.0106,
+        120 one_cochimiyuman.one.0107,
+        121 one_cochimiyuman.one.0108,
+        122 one_cochimiyuman.one.0109,
+        123 one_cochimiyuman.one.0110,
+        124 one_cochimiyuman.one.0111,
+        125 one_cochimiyuman.one.0112,
+        126 path_0ascertainment,
+        127 path_cochimiyuman.path.0113,
+        128 path_cochimiyuman.path.0114,
+        129 path_cochimiyuman.path.0115,
+        130 person_0ascertainment,
+        131 person_cochimiyuman.person.0116,
+        132 person_cochimiyuman.person.0117,
+        133 person_cochimiyuman.person.0118,
+        134 person_cochimiyuman.person.0119,
+        135 pl_0ascertainment,
+        136 pl_cochimiyuman.1pl.0001,
+        137 pl_cochimiyuman.1pl.0002,
+        138 pl_cochimiyuman.1pl.0003,
+        139 pl_cochimiyuman.1pl.0004,
+        140 pl_cochimiyuman.1pl.0005,
+        141 pl_cochimiyuman.1pl.0006,
+        142 see_0ascertainment,
+        143 see_cochimiyuman.see.0120,
+        144 see_cochimiyuman.see.0121,
+        145 see_cochimiyuman.see.0122,
+        146 see_cochimiyuman.see.0123,
+        147 see_cochimiyuman.see.0124,
+        148 see_cochimiyuman.see.0125,
+        149 sg_0ascertainment,
+        150 sg_cochimiyuman.1sg.0007,
+        151 sg_cochimiyuman.1sg.0008,
+        152 sg_cochimiyuman.2sg.0009,
+        153 sg_cochimiyuman.2sg.0010,
+        154 sg_cochimiyuman.2sg.0011,
+        155 sg_cochimiyuman.2sg.0012,
+        156 skin_0ascertainment,
+        157 skin_cochimiyuman.skin.0126,
+        158 skin_cochimiyuman.skin.0127,
+        159 skin_cochimiyuman.skin.0128,
+        160 skin_cochimiyuman.skin.0129,
+        161 skin_cochimiyuman.skin.0130,
+        162 skin_cochimiyuman.skin.0131,
+        163 star_0ascertainment,
+        164 star_cochimiyuman.star.0132,
+        165 star_cochimiyuman.star.0133,
+        166 star_cochimiyuman.star.0134,
+        167 stone_0ascertainment,
+        168 stone_cochimiyuman.stone.0135,
+        169 stone_cochimiyuman.stone.0136,
+        170 stone_cochimiyuman.stone.0137,
+        171 stone_cochimiyuman.stone.0138,
+        172 sun_0ascertainment,
+        173 sun_cochimiyuman.sun.0139,
+        174 sun_cochimiyuman.sun.0140,
+        175 sun_cochimiyuman.sun.0141,
+        176 tongue_0ascertainment,
+        177 tongue_cochimiyuman.tongue.0142,
+        178 tooth_0ascertainment,
+        179 tooth_cochimiyuman.tooth.0143,
+        180 tooth_cochimiyuman.tooth.0144,
+        181 tooth_cochimiyuman.tooth.0145,
+        182 tooth_cochimiyuman.tooth.0146,
+        183 tooth_cochimiyuman.tooth.0147,
+        184 tooth_cochimiyuman.tooth.0148,
+        185 tree_0ascertainment,
+        186 tree_cochimiyuman.tree.0149,
+        187 tree_cochimiyuman.tree.0150,
+        188 tree_cochimiyuman.tree.0151,
+        189 tree_cochimiyuman.tree.0152,
+        190 tree_cochimiyuman.tree.0153,
+        191 tree_cochimiyuman.tree.0154,
+        192 two_0ascertainment,
+        193 two_cochimiyuman.two.0155,
+        194 two_cochimiyuman.two.0156,
+        195 water_0ascertainment,
+        196 water_cochimiyuman.water.0157,
+        197 water_cochimiyuman.water.0158,
+        198 water_cochimiyuman.water.0159,
+        199 water_cochimiyuman.water.0160
+;
+
+MATRIX
+cochimi  010100100100000010010001000100001010001000000?????0??01000000000010010000?0?010000????0?????0????01000????01000010101010000100???010000100001010000101010010??????0100010000100010100010010001001001010
+diegueno 0101000100100000000???01000010000001000100000100000??001000010000010010001010????0100001000101000001001000001000000100010000101000010000100000010000001010001001000010001000010010010000001000000100100
+kiliwa   0101000100010000000100010000010000001000100001000001000010000100001010000101001000010000100000100000101100000100001000001000001000????0001000000100000101000??????0100000100001010010000000100001100100
+maricopa 010100??0000100000001001000000100000100001000010000010000100000000100010010?00010000110?????0????00010????00001000010000010000100001000??????00001000??????0??????00010000100100100010000??????00100100
+mohave   01010001000001000100010010000010000010000101000100001000001000100010001001010001001000000100000100001010010000100001000000100010000010000010000001000010010001001000010????00100100010010??????00100101
+mojave   010100??0000101000000101100000100000100001000000100010000100000000100010010100010010000?????0????00010????00001000010000010000100001000??????00001000??????0??????00010000100100100010000??????00100100
+yavapai  0100100100000001000101000100000100001000001000000100100000010001001000010101000010100000001000101000100010000001000100000010000110010100000100000010001010000010010001000010010010000100000010100100100
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-8;
+    charset come = 9-18;
+    charset die = 19-22;
+    charset dog = 23-26;
+    charset drink = 27-33;
+    charset ear = 34-37;
+    charset eye = 38-44;
+    charset fire = 45-50;
+    charset fish = 51-53;
+    charset full = 54-64;
+    charset hand = 65-67;
+    charset hear = 68-72;
+    charset horn = 73-74;
+    charset knee = 75-76;
+    charset leaf = 77-81;
+    charset liver = 82-86;
+    charset louse = 87-92;
+    charset mountain = 93-97;
+    charset name = 98-101;
+    charset new = 102-106;
+    charset night = 107-113;
+    charset nose = 114-117;
+    charset one = 118-125;
+    charset path = 126-129;
+    charset person = 130-134;
+    charset pl = 135-141;
+    charset see = 142-148;
+    charset sg = 149-155;
+    charset skin = 156-162;
+    charset star = 163-166;
+    charset stone = 167-171;
+    charset sun = 172-175;
+    charset tongue = 176-177;
+    charset tooth = 178-184;
+    charset tree = 185-191;
+    charset two = 192-194;
+    charset water = 195-199;
+END;

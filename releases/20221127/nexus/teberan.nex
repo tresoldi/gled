@@ -1,0 +1,217 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=6 NCHAR=158;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_teberan.blood.0009,
+        3 blood_teberan.blood.0010,
+        4 blood_teberan.blood.0011,
+        5 blood_teberan.blood.0012,
+        6 blood_teberan.blood.0013,
+        7 bone_0ascertainment,
+        8 bone_teberan.bone.0014,
+        9 breast_0ascertainment,
+        10 breast_teberan.breast.0015,
+        11 breast_teberan.breast.0016,
+        12 breast_teberan.breast.0017,
+        13 breast_teberan.breast.0018,
+        14 come_0ascertainment,
+        15 come_teberan.come.0019,
+        16 come_teberan.come.0020,
+        17 come_teberan.come.0021,
+        18 come_teberan.come.0022,
+        19 die_0ascertainment,
+        20 die_teberan.die.0023,
+        21 die_teberan.die.0024,
+        22 die_teberan.die.0025,
+        23 die_teberan.die.0026,
+        24 die_teberan.die.0027,
+        25 dog_0ascertainment,
+        26 dog_teberan.dog.0028,
+        27 dog_teberan.dog.0029,
+        28 drink_0ascertainment,
+        29 drink_teberan.drink.0030,
+        30 drink_teberan.drink.0031,
+        31 drink_teberan.drink.0032,
+        32 ear_0ascertainment,
+        33 ear_teberan.ear.0033,
+        34 ear_teberan.ear.0034,
+        35 ear_teberan.ear.0035,
+        36 eye_0ascertainment,
+        37 eye_teberan.eye.0036,
+        38 eye_teberan.eye.0037,
+        39 fire_0ascertainment,
+        40 fire_teberan.fire.0038,
+        41 fire_teberan.fire.0039,
+        42 fish_0ascertainment,
+        43 fish_teberan.fish.0040,
+        44 fish_teberan.fish.0041,
+        45 fish_teberan.fish.0042,
+        46 fish_teberan.fish.0043,
+        47 fish_teberan.fish.0044,
+        48 full_0ascertainment,
+        49 full_teberan.full.0045,
+        50 full_teberan.full.0046,
+        51 full_teberan.full.0047,
+        52 full_teberan.full.0048,
+        53 full_teberan.full.0049,
+        54 full_teberan.full.0050,
+        55 hand_0ascertainment,
+        56 hand_teberan.hand.0051,
+        57 hear_0ascertainment,
+        58 hear_teberan.hear.0052,
+        59 hear_teberan.hear.0053,
+        60 hear_teberan.hear.0054,
+        61 hear_teberan.hear.0055,
+        62 horn_0ascertainment,
+        63 horn_teberan.horn.0056,
+        64 horn_teberan.horn.0057,
+        65 knee_0ascertainment,
+        66 knee_teberan.knee.0058,
+        67 leaf_0ascertainment,
+        68 leaf_teberan.leaf.0059,
+        69 leaf_teberan.leaf.0060,
+        70 liver_0ascertainment,
+        71 liver_teberan.liver.0061,
+        72 liver_teberan.liver.0062,
+        73 liver_teberan.liver.0063,
+        74 louse_0ascertainment,
+        75 louse_teberan.louse.0064,
+        76 mountain_0ascertainment,
+        77 mountain_teberan.mountain.0065,
+        78 mountain_teberan.mountain.0066,
+        79 mountain_teberan.mountain.0067,
+        80 mountain_teberan.mountain.0068,
+        81 mountain_teberan.mountain.0069,
+        82 name_0ascertainment,
+        83 name_teberan.name.0070,
+        84 name_teberan.name.0071,
+        85 name_teberan.name.0072,
+        86 name_teberan.name.0073,
+        87 new_0ascertainment,
+        88 new_teberan.new.0074,
+        89 night_0ascertainment,
+        90 night_teberan.night.0075,
+        91 night_teberan.night.0076,
+        92 night_teberan.night.0077,
+        93 night_teberan.night.0078,
+        94 night_teberan.night.0079,
+        95 nose_0ascertainment,
+        96 nose_teberan.nose.0080,
+        97 nose_teberan.nose.0081,
+        98 nose_teberan.nose.0082,
+        99 nose_teberan.nose.0083,
+        100 one_0ascertainment,
+        101 one_teberan.one.0084,
+        102 one_teberan.one.0085,
+        103 one_teberan.one.0086,
+        104 one_teberan.one.0087,
+        105 one_teberan.one.0088,
+        106 path_0ascertainment,
+        107 path_teberan.path.0089,
+        108 person_0ascertainment,
+        109 person_teberan.person.0090,
+        110 person_teberan.person.0091,
+        111 pl_0ascertainment,
+        112 pl_teberan.1pl.0001,
+        113 pl_teberan.1pl.0002,
+        114 pl_teberan.1pl.0003,
+        115 see_0ascertainment,
+        116 see_teberan.see.0092,
+        117 see_teberan.see.0093,
+        118 see_teberan.see.0094,
+        119 see_teberan.see.0095,
+        120 sg_0ascertainment,
+        121 sg_teberan.1sg.0004,
+        122 sg_teberan.1sg.0005,
+        123 sg_teberan.2sg.0006,
+        124 sg_teberan.2sg.0007,
+        125 sg_teberan.2sg.0008,
+        126 skin_0ascertainment,
+        127 skin_teberan.skin.0096,
+        128 skin_teberan.skin.0097,
+        129 star_0ascertainment,
+        130 star_teberan.star.0098,
+        131 star_teberan.star.0099,
+        132 star_teberan.star.0100,
+        133 star_teberan.star.0101,
+        134 stone_0ascertainment,
+        135 stone_teberan.stone.0102,
+        136 stone_teberan.stone.0103,
+        137 stone_teberan.stone.0104,
+        138 sun_0ascertainment,
+        139 sun_teberan.sun.0105,
+        140 sun_teberan.sun.0106,
+        141 sun_teberan.sun.0107,
+        142 sun_teberan.sun.0108,
+        143 tongue_0ascertainment,
+        144 tongue_teberan.tongue.0109,
+        145 tongue_teberan.tongue.0110,
+        146 tongue_teberan.tongue.0111,
+        147 tooth_0ascertainment,
+        148 tooth_teberan.tooth.0112,
+        149 tooth_teberan.tooth.0113,
+        150 tree_0ascertainment,
+        151 tree_teberan.tree.0114,
+        152 two_0ascertainment,
+        153 two_teberan.two.0115,
+        154 two_teberan.two.0116,
+        155 two_teberan.two.0117,
+        156 water_0ascertainment,
+        157 water_teberan.water.0118,
+        158 water_teberan.water.0119
+;
+
+MATRIX
+daribi        0100000101000010000100000100100010001001001000001000000?0100001001010010001010000010000101000001000010000010100100010000101000100100001000100001000100?0100010
+folopa        00100001001000010000100001000100010001001001000001000001001000??0100100100100100000100010010000010000100001001010000100010011001001000010001000010001010010010
+folopa_boro   0001000100100000100001000010001001000100100010000010000?000100010100100010100100000100010001000001000010001001010000010001000001001000001001000010001010010010
+folopa_sopese 0000100100100000100000100010001000100100100001000001000?00010001010010???01000100001000100010000010001000010??001000010001000001000100010001000010001010001001
+folopa_suri   0001000100010000100000010010001000100100100000100000100?000100010100100100100001000010010000100001000001001001010000010001000001000010010000100001001010010010
+tebera        0000010100001000010000100010100001000100101000000000010?000010010100100100100000100001010000010000100000101001000100001001000001000100010000010010001010001010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-6;
+    charset bone = 7-8;
+    charset breast = 9-13;
+    charset come = 14-18;
+    charset die = 19-24;
+    charset dog = 25-27;
+    charset drink = 28-31;
+    charset ear = 32-35;
+    charset eye = 36-38;
+    charset fire = 39-41;
+    charset fish = 42-47;
+    charset full = 48-54;
+    charset hand = 55-56;
+    charset hear = 57-61;
+    charset horn = 62-64;
+    charset knee = 65-66;
+    charset leaf = 67-69;
+    charset liver = 70-73;
+    charset louse = 74-75;
+    charset mountain = 76-81;
+    charset name = 82-86;
+    charset new = 87-88;
+    charset night = 89-94;
+    charset nose = 95-99;
+    charset one = 100-105;
+    charset path = 106-107;
+    charset person = 108-110;
+    charset pl = 111-114;
+    charset see = 115-119;
+    charset sg = 120-125;
+    charset skin = 126-128;
+    charset star = 129-133;
+    charset stone = 134-137;
+    charset sun = 138-142;
+    charset tongue = 143-146;
+    charset tooth = 147-149;
+    charset tree = 150-151;
+    charset two = 152-155;
+    charset water = 156-158;
+END;

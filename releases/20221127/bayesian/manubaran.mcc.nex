@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Doromu-Koki_doro1266
+			MariaPapuaNewGuinea_mari1438
+			;
+End;
+Begin trees;
+	Translate
+		   1 Doromu-Koki_doro1266,
+		   2 MariaPapuaNewGuinea_mari1438
+;
+tree TREE1 = (1[&height=0.0,length=5.303965786842587,length_95%_HPD={0.3215,20.7699},length_median=1.386,length_range={0.2309,240.7686},rate=0.9866072785442973,rate_95%_HPD={0.6433,1.2552},rate_median=1.0012,rate_range={0.1082,1.2554}]:5.303965786842587,2[&height=0.0,length=5.303965786842587,length_95%_HPD={0.3215,20.7699},length_median=1.386,length_range={0.2309,240.7686},rate=0.9865468506298826,rate_95%_HPD={0.6433,1.2552},rate_median=1.0005,rate_range={0.1342,1.2554}]:5.303965786842587)[&CAheight_95%_HPD={0.3215,20.7699},CAheight_mean=5.303965786842587,CAheight_median=1.386,CAheight_range={0.2309,240.7686},height=5.303965786842587,height_95%_HPD={0.3215,20.7699},height_median=1.386,height_range={0.2309,240.7686},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

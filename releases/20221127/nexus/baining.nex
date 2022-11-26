@@ -1,0 +1,193 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=137;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_baining.blood.0006,
+        3 blood_baining.blood.0007,
+        4 blood_baining.blood.0008,
+        5 bone_0ascertainment,
+        6 bone_baining.bone.0009,
+        7 bone_baining.bone.0010,
+        8 breast_0ascertainment,
+        9 breast_baining.breast.0011,
+        10 breast_baining.breast.0012,
+        11 breast_baining.breast.0013,
+        12 come_0ascertainment,
+        13 come_baining.come.0014,
+        14 come_baining.come.0015,
+        15 come_baining.come.0016,
+        16 die_0ascertainment,
+        17 die_baining.die.0017,
+        18 die_baining.die.0018,
+        19 dog_0ascertainment,
+        20 dog_baining.dog.0019,
+        21 dog_baining.dog.0020,
+        22 dog_baining.dog.0021,
+        23 drink_0ascertainment,
+        24 drink_baining.drink.0022,
+        25 drink_baining.drink.0023,
+        26 drink_baining.drink.0024,
+        27 ear_0ascertainment,
+        28 ear_baining.ear.0025,
+        29 ear_baining.ear.0026,
+        30 eye_0ascertainment,
+        31 eye_baining.eye.0027,
+        32 eye_baining.eye.0028,
+        33 fire_0ascertainment,
+        34 fire_baining.fire.0029,
+        35 fire_baining.fire.0030,
+        36 fish_0ascertainment,
+        37 fish_baining.fish.0031,
+        38 fish_baining.fish.0032,
+        39 fish_baining.fish.0033,
+        40 full_0ascertainment,
+        41 full_baining.full.0034,
+        42 hand_0ascertainment,
+        43 hand_baining.hand.0035,
+        44 hand_baining.hand.0036,
+        45 hand_baining.hand.0037,
+        46 hear_0ascertainment,
+        47 hear_baining.hear.0038,
+        48 hear_baining.hear.0039,
+        49 horn_0ascertainment,
+        50 horn_baining.horn.0040,
+        51 horn_baining.horn.0041,
+        52 knee_0ascertainment,
+        53 knee_baining.knee.0042,
+        54 knee_baining.knee.0043,
+        55 leaf_0ascertainment,
+        56 leaf_baining.leaf.0044,
+        57 leaf_baining.leaf.0045,
+        58 leaf_baining.leaf.0046,
+        59 liver_0ascertainment,
+        60 liver_baining.liver.0047,
+        61 liver_baining.liver.0048,
+        62 liver_baining.liver.0049,
+        63 louse_0ascertainment,
+        64 louse_baining.louse.0050,
+        65 louse_baining.louse.0051,
+        66 louse_baining.louse.0052,
+        67 mountain_0ascertainment,
+        68 mountain_baining.mountain.0053,
+        69 name_0ascertainment,
+        70 name_baining.name.0054,
+        71 name_baining.name.0055,
+        72 new_0ascertainment,
+        73 new_baining.new.0056,
+        74 new_baining.new.0057,
+        75 new_baining.new.0058,
+        76 night_0ascertainment,
+        77 night_baining.night.0059,
+        78 night_baining.night.0060,
+        79 night_baining.night.0061,
+        80 nose_0ascertainment,
+        81 nose_baining.nose.0062,
+        82 one_0ascertainment,
+        83 one_baining.one.0063,
+        84 one_baining.one.0064,
+        85 one_baining.one.0065,
+        86 path_0ascertainment,
+        87 path_baining.path.0066,
+        88 path_baining.path.0067,
+        89 path_baining.path.0068,
+        90 person_0ascertainment,
+        91 person_baining.person.0069,
+        92 person_baining.person.0070,
+        93 pl_0ascertainment,
+        94 pl_baining.1pl.0001,
+        95 see_0ascertainment,
+        96 see_baining.see.0071,
+        97 see_baining.see.0072,
+        98 see_baining.see.0073,
+        99 sg_0ascertainment,
+        100 sg_baining.1sg.0002,
+        101 sg_baining.1sg.0003,
+        102 sg_baining.1sg.0004,
+        103 sg_baining.2sg.0005,
+        104 skin_0ascertainment,
+        105 skin_baining.skin.0074,
+        106 skin_baining.skin.0075,
+        107 skin_baining.skin.0076,
+        108 star_0ascertainment,
+        109 star_baining.star.0077,
+        110 star_baining.star.0078,
+        111 stone_0ascertainment,
+        112 stone_baining.stone.0079,
+        113 stone_baining.stone.0080,
+        114 sun_0ascertainment,
+        115 sun_baining.sun.0081,
+        116 sun_baining.sun.0082,
+        117 sun_baining.sun.0083,
+        118 tongue_0ascertainment,
+        119 tongue_baining.tongue.0084,
+        120 tongue_baining.tongue.0085,
+        121 tongue_baining.tongue.0086,
+        122 tooth_0ascertainment,
+        123 tooth_baining.tooth.0087,
+        124 tooth_baining.tooth.0088,
+        125 tooth_baining.tooth.0089,
+        126 tooth_baining.tooth.0090,
+        127 tree_0ascertainment,
+        128 tree_baining.tree.0091,
+        129 tree_baining.tree.0092,
+        130 two_0ascertainment,
+        131 two_baining.two.0093,
+        132 two_baining.two.0094,
+        133 two_baining.two.0095,
+        134 two_baining.two.0096,
+        135 water_0ascertainment,
+        136 water_baining.water.0097,
+        137 water_baining.water.0098
+;
+
+MATRIX
+mali     0100010010001000100100010001001001001000101000100??01001000100010001010010001000101000100010010100010010100010010010001000100001001001010
+qaget_2  001001000100010001001000100010010010010010010001010001001000100010010010010001001001000100??0?0010001000010001010001000100010000100100001
+ura_png2 000100100010001001000100010100100100001010001001001010000100010001010100001000101000100010010?0001000100001010001000100010001101000010010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-7;
+    charset breast = 8-11;
+    charset come = 12-15;
+    charset die = 16-18;
+    charset dog = 19-22;
+    charset drink = 23-26;
+    charset ear = 27-29;
+    charset eye = 30-32;
+    charset fire = 33-35;
+    charset fish = 36-39;
+    charset full = 40-41;
+    charset hand = 42-45;
+    charset hear = 46-48;
+    charset horn = 49-51;
+    charset knee = 52-54;
+    charset leaf = 55-58;
+    charset liver = 59-62;
+    charset louse = 63-66;
+    charset mountain = 67-68;
+    charset name = 69-71;
+    charset new = 72-75;
+    charset night = 76-79;
+    charset nose = 80-81;
+    charset one = 82-85;
+    charset path = 86-89;
+    charset person = 90-92;
+    charset pl = 93-94;
+    charset see = 95-98;
+    charset sg = 99-103;
+    charset skin = 104-107;
+    charset star = 108-110;
+    charset stone = 111-113;
+    charset sun = 114-117;
+    charset tongue = 118-121;
+    charset tooth = 122-126;
+    charset tree = 127-129;
+    charset two = 130-134;
+    charset water = 135-137;
+END;

@@ -1,0 +1,136 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=83;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_itonama.blood.0356,
+        3 bone_0ascertainment,
+        4 bone_itonama.bone.0079,
+        5 breast_0ascertainment,
+        6 breast_itonama.breast.0393,
+        7 come_0ascertainment,
+        8 come_itonama.come.0003,
+        9 come_itonama.come.0381,
+        10 die_0ascertainment,
+        11 die_itonama.die.0009,
+        12 dog_0ascertainment,
+        13 dog_itonama.dog.0116,
+        14 drink_0ascertainment,
+        15 drink_itonama.drink.0506,
+        16 drink_itonama.drink.0507,
+        17 ear_0ascertainment,
+        18 ear_itonama.ear.0008,
+        19 eye_0ascertainment,
+        20 eye_itonama.eye.0404,
+        21 fire_0ascertainment,
+        22 fire_itonama.fire.0106,
+        23 fish_0ascertainment,
+        24 fish_itonama.fish.0018,
+        25 full_0ascertainment,
+        26 full_itonama.full.0498,
+        27 hand_0ascertainment,
+        28 hand_itonama.hand.0082,
+        29 hear_0ascertainment,
+        30 hear_itonama.hear.0529,
+        31 horn_0ascertainment,
+        32 horn_itonama.horn.0325,
+        33 knee_0ascertainment,
+        34 knee_itonama.knee.0358,
+        35 leaf_0ascertainment,
+        36 leaf_itonama.leaf.0095,
+        37 liver_0ascertainment,
+        38 liver_itonama.liver.0457,
+        39 louse_0ascertainment,
+        40 louse_itonama.louse.0390,
+        41 name_0ascertainment,
+        42 name_itonama.name.0320,
+        43 new_0ascertainment,
+        44 new_itonama.new.0020,
+        45 night_0ascertainment,
+        46 night_itonama.night.0375,
+        47 nose_0ascertainment,
+        48 nose_itonama.nose.0031,
+        49 one_0ascertainment,
+        50 one_itonama.one.0066,
+        51 path_0ascertainment,
+        52 path_itonama.path.0131,
+        53 person_0ascertainment,
+        54 person_itonama.person.0038,
+        55 pl_0ascertainment,
+        56 pl_itonama.1pl.0425,
+        57 pl_itonama.1pl.0426,
+        58 see_0ascertainment,
+        59 see_itonama.see.0179,
+        60 sg_0ascertainment,
+        61 sg_itonama.1sg.0257,
+        62 sg_itonama.1sg.0258,
+        63 sg_itonama.2sg.0308,
+        64 sg_itonama.2sg.0309,
+        65 skin_0ascertainment,
+        66 skin_itonama.skin.0006,
+        67 star_0ascertainment,
+        68 star_itonama.star.0447,
+        69 stone_0ascertainment,
+        70 stone_itonama.stone.0018,
+        71 stone_itonama.stone.0583,
+        72 sun_0ascertainment,
+        73 sun_itonama.sun.0029,
+        74 tongue_0ascertainment,
+        75 tongue_itonama.tongue.0358,
+        76 tooth_0ascertainment,
+        77 tooth_itonama.tooth.0413,
+        78 tree_0ascertainment,
+        79 tree_itonama.tree.0015,
+        80 two_0ascertainment,
+        81 two_itonama.two.0013,
+        82 water_0ascertainment,
+        83 water_itonama.water.0327
+;
+
+MATRIX
+itonama 01010101101010110101010101010101010101010101010101010101101011110101011010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-9;
+    charset die = 10-11;
+    charset dog = 12-13;
+    charset drink = 14-16;
+    charset ear = 17-18;
+    charset eye = 19-20;
+    charset fire = 21-22;
+    charset fish = 23-24;
+    charset full = 25-26;
+    charset hand = 27-28;
+    charset hear = 29-30;
+    charset horn = 31-32;
+    charset knee = 33-34;
+    charset leaf = 35-36;
+    charset liver = 37-38;
+    charset louse = 39-40;
+    charset name = 41-42;
+    charset new = 43-44;
+    charset night = 45-46;
+    charset nose = 47-48;
+    charset one = 49-50;
+    charset path = 51-52;
+    charset person = 53-54;
+    charset pl = 55-57;
+    charset see = 58-59;
+    charset sg = 60-64;
+    charset skin = 65-66;
+    charset star = 67-68;
+    charset stone = 69-71;
+    charset sun = 72-73;
+    charset tongue = 74-75;
+    charset tooth = 76-77;
+    charset tree = 78-79;
+    charset two = 80-81;
+    charset water = 82-83;
+END;

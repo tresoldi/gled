@@ -1,0 +1,319 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=23 NCHAR=243;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_tucanoan.blood.0012,
+        3 blood_tucanoan.blood.0013,
+        4 blood_tucanoan.blood.0014,
+        5 blood_tucanoan.blood.0015,
+        6 bone_0ascertainment,
+        7 bone_tucanoan.bone.0016,
+        8 bone_tucanoan.bone.0017,
+        9 bone_tucanoan.bone.0018,
+        10 breast_0ascertainment,
+        11 breast_tucanoan.breast.0019,
+        12 breast_tucanoan.breast.0020,
+        13 breast_tucanoan.breast.0021,
+        14 come_0ascertainment,
+        15 come_tucanoan.come.0022,
+        16 come_tucanoan.come.0023,
+        17 come_tucanoan.come.0024,
+        18 come_tucanoan.come.0025,
+        19 come_tucanoan.come.0026,
+        20 come_tucanoan.come.0027,
+        21 come_tucanoan.come.0028,
+        22 die_0ascertainment,
+        23 die_tucanoan.die.0029,
+        24 die_tucanoan.die.0030,
+        25 die_tucanoan.die.0031,
+        26 die_tucanoan.die.0032,
+        27 die_tucanoan.die.0033,
+        28 die_tucanoan.die.0034,
+        29 die_tucanoan.die.0035,
+        30 die_tucanoan.die.0036,
+        31 die_tucanoan.die.0037,
+        32 die_tucanoan.die.0038,
+        33 die_tucanoan.die.0039,
+        34 die_tucanoan.die.0040,
+        35 die_tucanoan.die.0041,
+        36 dog_0ascertainment,
+        37 dog_tucanoan.dog.0042,
+        38 dog_tucanoan.dog.0043,
+        39 dog_tucanoan.dog.0044,
+        40 dog_tucanoan.dog.0045,
+        41 dog_tucanoan.dog.0046,
+        42 dog_tucanoan.dog.0047,
+        43 dog_tucanoan.dog.0048,
+        44 dog_tucanoan.dog.0049,
+        45 dog_tucanoan.dog.0050,
+        46 dog_tucanoan.dog.0051,
+        47 drink_0ascertainment,
+        48 drink_tucanoan.drink.0052,
+        49 drink_tucanoan.drink.0053,
+        50 drink_tucanoan.drink.0054,
+        51 drink_tucanoan.drink.0055,
+        52 ear_0ascertainment,
+        53 ear_tucanoan.ear.0056,
+        54 ear_tucanoan.ear.0057,
+        55 eye_0ascertainment,
+        56 eye_tucanoan.eye.0058,
+        57 eye_tucanoan.eye.0059,
+        58 eye_tucanoan.eye.0060,
+        59 eye_tucanoan.eye.0061,
+        60 fire_0ascertainment,
+        61 fire_tucanoan.fire.0062,
+        62 fire_tucanoan.fire.0063,
+        63 fire_tucanoan.fire.0064,
+        64 fish_0ascertainment,
+        65 fish_tucanoan.fish.0065,
+        66 fish_tucanoan.fish.0066,
+        67 fish_tucanoan.fish.0067,
+        68 full_0ascertainment,
+        69 full_tucanoan.full.0068,
+        70 full_tucanoan.full.0069,
+        71 full_tucanoan.full.0070,
+        72 full_tucanoan.full.0071,
+        73 full_tucanoan.full.0072,
+        74 full_tucanoan.full.0073,
+        75 full_tucanoan.full.0074,
+        76 full_tucanoan.full.0075,
+        77 full_tucanoan.full.0076,
+        78 full_tucanoan.full.0077,
+        79 full_tucanoan.full.0078,
+        80 full_tucanoan.full.0079,
+        81 hand_0ascertainment,
+        82 hand_tucanoan.hand.0080,
+        83 hand_tucanoan.hand.0081,
+        84 hand_tucanoan.hand.0082,
+        85 hand_tucanoan.hand.0083,
+        86 hand_tucanoan.hand.0084,
+        87 hand_tucanoan.hand.0085,
+        88 hear_0ascertainment,
+        89 hear_tucanoan.hear.0086,
+        90 hear_tucanoan.hear.0087,
+        91 hear_tucanoan.hear.0088,
+        92 hear_tucanoan.hear.0089,
+        93 hear_tucanoan.hear.0090,
+        94 hear_tucanoan.hear.0091,
+        95 hear_tucanoan.hear.0092,
+        96 hear_tucanoan.hear.0093,
+        97 hear_tucanoan.hear.0094,
+        98 horn_0ascertainment,
+        99 horn_tucanoan.horn.0095,
+        100 horn_tucanoan.horn.0096,
+        101 horn_tucanoan.horn.0097,
+        102 horn_tucanoan.horn.0098,
+        103 horn_tucanoan.horn.0099,
+        104 horn_tucanoan.horn.0100,
+        105 horn_tucanoan.horn.0101,
+        106 horn_tucanoan.horn.0102,
+        107 horn_tucanoan.horn.0103,
+        108 knee_0ascertainment,
+        109 knee_tucanoan.knee.0104,
+        110 knee_tucanoan.knee.0105,
+        111 knee_tucanoan.knee.0106,
+        112 knee_tucanoan.knee.0107,
+        113 knee_tucanoan.knee.0108,
+        114 knee_tucanoan.knee.0109,
+        115 knee_tucanoan.knee.0110,
+        116 knee_tucanoan.knee.0111,
+        117 knee_tucanoan.knee.0112,
+        118 leaf_0ascertainment,
+        119 leaf_tucanoan.leaf.0113,
+        120 leaf_tucanoan.leaf.0114,
+        121 leaf_tucanoan.leaf.0115,
+        122 leaf_tucanoan.leaf.0116,
+        123 leaf_tucanoan.leaf.0117,
+        124 leaf_tucanoan.leaf.0118,
+        125 liver_0ascertainment,
+        126 liver_tucanoan.liver.0119,
+        127 liver_tucanoan.liver.0120,
+        128 liver_tucanoan.liver.0121,
+        129 liver_tucanoan.liver.0122,
+        130 liver_tucanoan.liver.0123,
+        131 louse_0ascertainment,
+        132 louse_tucanoan.louse.0124,
+        133 louse_tucanoan.louse.0125,
+        134 louse_tucanoan.louse.0126,
+        135 louse_tucanoan.louse.0127,
+        136 louse_tucanoan.louse.0128,
+        137 louse_tucanoan.louse.0129,
+        138 mountain_0ascertainment,
+        139 mountain_tucanoan.mountain.0130,
+        140 mountain_tucanoan.mountain.0131,
+        141 mountain_tucanoan.mountain.0132,
+        142 mountain_tucanoan.mountain.0133,
+        143 mountain_tucanoan.mountain.0134,
+        144 mountain_tucanoan.mountain.0135,
+        145 mountain_tucanoan.mountain.0136,
+        146 mountain_tucanoan.mountain.0137,
+        147 name_0ascertainment,
+        148 name_tucanoan.name.0138,
+        149 name_tucanoan.name.0139,
+        150 name_tucanoan.name.0140,
+        151 new_0ascertainment,
+        152 new_tucanoan.new.0141,
+        153 new_tucanoan.new.0142,
+        154 new_tucanoan.new.0143,
+        155 night_0ascertainment,
+        156 night_tucanoan.night.0144,
+        157 nose_0ascertainment,
+        158 nose_tucanoan.nose.0145,
+        159 nose_tucanoan.nose.0146,
+        160 nose_tucanoan.nose.0147,
+        161 nose_tucanoan.nose.0148,
+        162 nose_tucanoan.nose.0149,
+        163 nose_tucanoan.nose.0150,
+        164 one_0ascertainment,
+        165 one_tucanoan.one.0151,
+        166 one_tucanoan.one.0152,
+        167 one_tucanoan.one.0153,
+        168 one_tucanoan.one.0154,
+        169 one_tucanoan.one.0155,
+        170 one_tucanoan.one.0156,
+        171 path_0ascertainment,
+        172 path_tucanoan.path.0157,
+        173 path_tucanoan.path.0158,
+        174 path_tucanoan.path.0159,
+        175 person_0ascertainment,
+        176 person_tucanoan.person.0160,
+        177 pl_0ascertainment,
+        178 pl_tucanoan.1pl.0001,
+        179 pl_tucanoan.1pl.0002,
+        180 pl_tucanoan.1pl.0003,
+        181 pl_tucanoan.1pl.0004,
+        182 pl_tucanoan.1pl.0005,
+        183 pl_tucanoan.1pl.0006,
+        184 see_0ascertainment,
+        185 see_tucanoan.see.0161,
+        186 see_tucanoan.see.0162,
+        187 see_tucanoan.see.0163,
+        188 see_tucanoan.see.0164,
+        189 see_tucanoan.see.0165,
+        190 see_tucanoan.see.0166,
+        191 see_tucanoan.see.0167,
+        192 see_tucanoan.see.0168,
+        193 sg_0ascertainment,
+        194 sg_tucanoan.1sg.0007,
+        195 sg_tucanoan.2sg.0008,
+        196 sg_tucanoan.2sg.0009,
+        197 sg_tucanoan.2sg.0010,
+        198 sg_tucanoan.2sg.0011,
+        199 skin_0ascertainment,
+        200 skin_tucanoan.skin.0169,
+        201 skin_tucanoan.skin.0170,
+        202 star_0ascertainment,
+        203 star_tucanoan.star.0171,
+        204 star_tucanoan.star.0172,
+        205 star_tucanoan.star.0173,
+        206 star_tucanoan.star.0174,
+        207 stone_0ascertainment,
+        208 stone_tucanoan.stone.0175,
+        209 stone_tucanoan.stone.0176,
+        210 sun_0ascertainment,
+        211 sun_tucanoan.sun.0177,
+        212 sun_tucanoan.sun.0178,
+        213 sun_tucanoan.sun.0179,
+        214 sun_tucanoan.sun.0180,
+        215 sun_tucanoan.sun.0181,
+        216 sun_tucanoan.sun.0182,
+        217 sun_tucanoan.sun.0183,
+        218 sun_tucanoan.sun.0184,
+        219 sun_tucanoan.sun.0185,
+        220 sun_tucanoan.sun.0186,
+        221 tongue_0ascertainment,
+        222 tongue_tucanoan.tongue.0187,
+        223 tongue_tucanoan.tongue.0188,
+        224 tongue_tucanoan.tongue.0189,
+        225 tongue_tucanoan.tongue.0190,
+        226 tooth_0ascertainment,
+        227 tooth_tucanoan.tooth.0191,
+        228 tooth_tucanoan.tooth.0192,
+        229 tooth_tucanoan.tooth.0193,
+        230 tooth_tucanoan.tooth.0194,
+        231 tree_0ascertainment,
+        232 tree_tucanoan.tree.0195,
+        233 tree_tucanoan.tree.0196,
+        234 two_0ascertainment,
+        235 two_tucanoan.two.0197,
+        236 two_tucanoan.two.0198,
+        237 two_tucanoan.two.0199,
+        238 two_tucanoan.two.0200,
+        239 two_tucanoan.two.0201,
+        240 two_tucanoan.two.0202,
+        241 water_0ascertainment,
+        242 water_tucanoan.water.0203,
+        243 water_tucanoan.water.0204
+;
+
+MATRIX
+bara             010000100010001000000010000000000000100000000001000010010000100010001100000000000100000010000000001000000000100000000010000001000001000000110000000100010001010000001000000100010110000010000000011000010010000100100000000001000010000100100000010
+barasano         0100000100100001000000010000000000001000000000010000100100001000100001000010000001000000010000000001000000000100000000010000010000010000000100000001000100010100000001000001000100101000????????011000010010000100100000000001000001000100100000010
+carapana         010000100010000100000000100000010000010000000101000010010000101010000100000100000100000010000000000010000000010000000010000001000001000000110000000100010001010000001000000100010110000010000000011000010010000110??????????01000010000100100000010
+cubeo            001000010010001000001000010000000000001000000000100010001000010010000100000010000010000000100000101000000000001000001000100000100000100000001000000010011001001000000010000100010010100001000001011000010001000100010000000101000001000100100000010
+desano           010000010010000010000000001000000000000100000000010010000100100010000010000000000010000000010000000001000000100000000010000001000000010000010100000100010001010000000100000100010010010010100000011000010000100100001000000000100001000100100000010
+guanano          01000001001000100000000000010000000000010000000100001001000010001000????????????010000001000000000?????????0?????????000010000010000100000????????0100010001000100000001000100010010000010000000011000010001010100??????????01000000100??0100000010
+koreguaje        01000000100100000110000000001000000000001000000010001000100001001100????????????000100000000100000?????????0?????????001000000001000100000????????0001010001001000000000100100010001000010000000011000010010000100??????????00010001000??0010000010
+koreguaye        001000001010000000100000000001000000000010000000100010001000010011000001100000000001000000000100000000100000000100000001000000001000100000000010000001010001000010000000100100010001001010000000011010010010000100000100000000010001000100001000010
+macuna           010000010010000100000000000000100000100000000001000010010000100010000101000000000100000010000000001000000000010000000010000001000001000000110000000100010001010000000001000100010010010000010000011000010010000100000010000001000001000100100000001
+orejon           00010000101000000010000000000100000000000100000010001000100001000100????????????000100000000010000000001000000010000000100000000100??????0010000000100010001000010000000100100010010100000001000011000001010000100000100000000010001000100100000010
+piratapuyo       010000010010000100000000000100000000000100000001000010010000100010000100000001000000100010000000001000000000010000000010000000010000100000110000000100010001010000001000000100010110000010000000011000010001000100000001000001000010000100100000010
+secoya           001000001010000000100000000001000000000000100000100010001000010010000000100000000001000000000100000000001000000100000001000000001000100000010010000001000101000010000000100100010010100000001000011001010010000100000100000000010001000100000100010
+siona            001000010010000000100000000001000000000000100000100010001000010010000100000010000000010010000000000000000100000010000001000000001000100000000001000001010001000010000000100100010001001000000100011001010010000100000100000000010001000100000010010
+siriano          010000010010000010000000000000010000000100000000010010000010100010000000010000000010000000010000000001000000100000000010000001000000001000110000000100010001010000000000010100010010010000100000011000010010000100001000000000100001000100100000010
+tanimuca         0010000100100000000100100000000000000000000100001000100010001000100001000000001000000010000000100000000000101000000000000010000001000001000000001001000100010000010001000001000100101000????????011000010000100100000000100000001010000010100000010
+tanimuca_retuara 00100001001000000001001000100000000000000000100010001000100010001000????????????000000100000001000?????????0?????????000001000000100000100????????01000100010000010001000001000?0??????0????????011000010000100100??????????00001010000??0000001010
+tatuyo           010000100010000100000001000000000000010000000101000010010000001010000100000100000100000001000000000100000000010000000010000001000001000000110000000100010001010000001000000100010110000000000010011000010010000100??????????01000010000100100000010
+tucano           010000010010000100000000000000001000000100000001000010010000100010000100000000010100100010000000000001000000010001000010000001000000000100110000000100010001010000001000000100010110000000100000011000010010000100000000010001000010000100100000010
+tuyuca           010000010010000100000000000000000100000100000001000010010000100010001100000000000100000010000000000001000000100000000010000001000001000000110000000100010001010000001000000100010110000010000000011000010010000100100000000001000010000100100000010
+waimaha          01000011001000???????010000000000000??????????010000100100001000???0????????????010000001000000000?????????0?????????01000000100000??????0????????0100010001010000001000000101010110000000100000011000010010000100??????????01000010000??0100000010
+wanano           010000010010001000000000000100000000000100000001000010010000100010000100000001000100000010000000001000000000010000000000000101010000100000010000000100010001000100000001000100010110000010000000011000010001000100100000000001000010000100100000010
+yahuna           00001001000010000100000000000000001000000001000000100100100010000010????????????0??????00000000100?????????000000010000000100?????00000010000000010???0???010000001001000000100?00001000????????010100010000100100000000101000001000010010000001010
+yuruti           010000010010000100000001000000010000000100000001000010010000100010001100000000000100000010000000001000000000000000010010000001000001000000100000000100010001010000001000000100010110000010000000011000010010000100100000000001000010000100100000010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-9;
+    charset breast = 10-13;
+    charset come = 14-21;
+    charset die = 22-35;
+    charset dog = 36-46;
+    charset drink = 47-51;
+    charset ear = 52-54;
+    charset eye = 55-59;
+    charset fire = 60-63;
+    charset fish = 64-67;
+    charset full = 68-80;
+    charset hand = 81-87;
+    charset hear = 88-97;
+    charset horn = 98-107;
+    charset knee = 108-117;
+    charset leaf = 118-124;
+    charset liver = 125-130;
+    charset louse = 131-137;
+    charset mountain = 138-146;
+    charset name = 147-150;
+    charset new = 151-154;
+    charset night = 155-156;
+    charset nose = 157-163;
+    charset one = 164-170;
+    charset path = 171-174;
+    charset person = 175-176;
+    charset pl = 177-183;
+    charset see = 184-192;
+    charset sg = 193-198;
+    charset skin = 199-201;
+    charset star = 202-206;
+    charset stone = 207-209;
+    charset sun = 210-220;
+    charset tongue = 221-225;
+    charset tooth = 226-230;
+    charset tree = 231-233;
+    charset two = 234-240;
+    charset water = 241-243;
+END;

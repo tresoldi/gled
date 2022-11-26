@@ -1,0 +1,122 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=77;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_elamite.blood.0040,
+        3 come_0ascertainment,
+        4 come_elamite.come.0316,
+        5 come_elamite.come.0317,
+        6 die_0ascertainment,
+        7 die_elamite.die.0368,
+        8 die_elamite.die.0369,
+        9 dog_0ascertainment,
+        10 dog_elamite.dog.0260,
+        11 ear_0ascertainment,
+        12 ear_elamite.ear.0002,
+        13 eye_0ascertainment,
+        14 eye_elamite.eye.0324,
+        15 eye_elamite.eye.0325,
+        16 fire_0ascertainment,
+        17 fire_elamite.fire.0360,
+        18 full_0ascertainment,
+        19 full_elamite.full.0391,
+        20 full_elamite.full.0392,
+        21 hand_0ascertainment,
+        22 hand_elamite.hand.0085,
+        23 hand_elamite.hand.0287,
+        24 hear_0ascertainment,
+        25 hear_elamite.hear.0369,
+        26 hear_elamite.hear.0430,
+        27 horn_0ascertainment,
+        28 horn_elamite.horn.0069,
+        29 liver_0ascertainment,
+        30 liver_elamite.liver.0369,
+        31 mountain_0ascertainment,
+        32 mountain_elamite.mountain.0066,
+        33 name_0ascertainment,
+        34 name_elamite.name.0263,
+        35 night_0ascertainment,
+        36 night_elamite.night.0057,
+        37 night_elamite.night.0310,
+        38 nose_0ascertainment,
+        39 nose_elamite.nose.0356,
+        40 one_0ascertainment,
+        41 one_elamite.one.0005,
+        42 one_elamite.one.0045,
+        43 path_0ascertainment,
+        44 path_elamite.path.0208,
+        45 path_elamite.path.0362,
+        46 pl_0ascertainment,
+        47 pl_elamite.1pl.0346,
+        48 pl_elamite.1pl.0347,
+        49 see_0ascertainment,
+        50 see_elamite.see.0001,
+        51 see_elamite.see.0058,
+        52 sg_0ascertainment,
+        53 sg_elamite.1sg.0055,
+        54 sg_elamite.2sg.0045,
+        55 sg_elamite.2sg.0077,
+        56 skin_0ascertainment,
+        57 skin_elamite.skin.0142,
+        58 star_0ascertainment,
+        59 star_elamite.star.0245,
+        60 stone_0ascertainment,
+        61 stone_elamite.stone.0463,
+        62 stone_elamite.stone.0464,
+        63 sun_0ascertainment,
+        64 sun_elamite.sun.0041,
+        65 sun_elamite.sun.0099,
+        66 tongue_0ascertainment,
+        67 tongue_elamite.tongue.0297,
+        68 tongue_elamite.tongue.0298,
+        69 tooth_0ascertainment,
+        70 tooth_elamite.tooth.0118,
+        71 tooth_elamite.tooth.0119,
+        72 tree_0ascertainment,
+        73 tree_elamite.tree.0305,
+        74 two_0ascertainment,
+        75 two_elamite.two.0010,
+        76 water_0ascertainment,
+        77 water_elamite.water.0276
+;
+
+MATRIX
+elamite 01011011010101101011011011010101010110101101101101101110101011011011011010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset come = 3-5;
+    charset die = 6-8;
+    charset dog = 9-10;
+    charset ear = 11-12;
+    charset eye = 13-15;
+    charset fire = 16-17;
+    charset full = 18-20;
+    charset hand = 21-23;
+    charset hear = 24-26;
+    charset horn = 27-28;
+    charset liver = 29-30;
+    charset mountain = 31-32;
+    charset name = 33-34;
+    charset night = 35-37;
+    charset nose = 38-39;
+    charset one = 40-42;
+    charset path = 43-45;
+    charset pl = 46-48;
+    charset see = 49-51;
+    charset sg = 52-55;
+    charset skin = 56-57;
+    charset star = 58-59;
+    charset stone = 60-62;
+    charset sun = 63-65;
+    charset tongue = 66-68;
+    charset tooth = 69-71;
+    charset tree = 72-73;
+    charset two = 74-75;
+    charset water = 76-77;
+END;

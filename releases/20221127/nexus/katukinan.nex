@@ -1,0 +1,107 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=62;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_katukinan.blood.0079,
+        3 bone_0ascertainment,
+        4 bone_katukinan.bone.0255,
+        5 die_0ascertainment,
+        6 die_katukinan.die.0498,
+        7 dog_0ascertainment,
+        8 dog_katukinan.dog.0001,
+        9 ear_0ascertainment,
+        10 ear_katukinan.ear.0270,
+        11 eye_0ascertainment,
+        12 eye_katukinan.eye.0426,
+        13 fire_0ascertainment,
+        14 fire_katukinan.fire.0233,
+        15 fish_0ascertainment,
+        16 fish_katukinan.fish.0064,
+        17 fish_katukinan.fish.0429,
+        18 hand_0ascertainment,
+        19 hand_katukinan.hand.0042,
+        20 hear_0ascertainment,
+        21 hear_katukinan.hear.0570,
+        22 horn_0ascertainment,
+        23 horn_katukinan.horn.0343,
+        24 knee_0ascertainment,
+        25 knee_katukinan.knee.0312,
+        26 leaf_0ascertainment,
+        27 leaf_katukinan.leaf.0046,
+        28 liver_0ascertainment,
+        29 liver_katukinan.liver.0217,
+        30 mountain_0ascertainment,
+        31 mountain_katukinan.mountain.0454,
+        32 new_0ascertainment,
+        33 new_katukinan.new.0011,
+        34 night_0ascertainment,
+        35 night_katukinan.night.0319,
+        36 nose_0ascertainment,
+        37 nose_katukinan.nose.0460,
+        38 one_0ascertainment,
+        39 one_katukinan.one.0362,
+        40 path_0ascertainment,
+        41 path_katukinan.path.0087,
+        42 pl_0ascertainment,
+        43 pl_katukinan.1pl.0461,
+        44 sg_0ascertainment,
+        45 sg_katukinan.1sg.0280,
+        46 sg_katukinan.2sg.0336,
+        47 skin_0ascertainment,
+        48 skin_katukinan.skin.0090,
+        49 star_0ascertainment,
+        50 star_katukinan.star.0475,
+        51 stone_0ascertainment,
+        52 stone_katukinan.stone.0627,
+        53 sun_0ascertainment,
+        54 sun_katukinan.sun.0004,
+        55 tongue_0ascertainment,
+        56 tongue_katukinan.tongue.0380,
+        57 tree_0ascertainment,
+        58 tree_katukinan.tree.0405,
+        59 two_0ascertainment,
+        60 two_katukinan.two.0344,
+        61 water_0ascertainment,
+        62 water_katukinan.water.0346
+;
+
+MATRIX
+kanamari 01010101010101011010101010101010101010101010110101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset die = 5-6;
+    charset dog = 7-8;
+    charset ear = 9-10;
+    charset eye = 11-12;
+    charset fire = 13-14;
+    charset fish = 15-17;
+    charset hand = 18-19;
+    charset hear = 20-21;
+    charset horn = 22-23;
+    charset knee = 24-25;
+    charset leaf = 26-27;
+    charset liver = 28-29;
+    charset mountain = 30-31;
+    charset new = 32-33;
+    charset night = 34-35;
+    charset nose = 36-37;
+    charset one = 38-39;
+    charset path = 40-41;
+    charset pl = 42-43;
+    charset sg = 44-46;
+    charset skin = 47-48;
+    charset star = 49-50;
+    charset stone = 51-52;
+    charset sun = 53-54;
+    charset tongue = 55-56;
+    charset tree = 57-58;
+    charset two = 59-60;
+    charset water = 61-62;
+END;

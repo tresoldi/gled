@@ -1,0 +1,155 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=101;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_nihali.blood.0008,
+        3 bone_0ascertainment,
+        4 bone_nihali.bone.0009,
+        5 breast_0ascertainment,
+        6 breast_nihali.breast.0010,
+        7 breast_nihali.breast.0011,
+        8 come_0ascertainment,
+        9 come_nihali.come.0012,
+        10 come_nihali.come.0013,
+        11 come_nihali.come.0014,
+        12 die_0ascertainment,
+        13 die_nihali.die.0015,
+        14 die_nihali.die.0016,
+        15 dog_0ascertainment,
+        16 dog_nihali.dog.0017,
+        17 dog_nihali.dog.0018,
+        18 drink_0ascertainment,
+        19 drink_nihali.drink.0019,
+        20 ear_0ascertainment,
+        21 ear_nihali.ear.0020,
+        22 ear_nihali.ear.0021,
+        23 eye_0ascertainment,
+        24 eye_nihali.eye.0022,
+        25 eye_nihali.eye.0023,
+        26 fire_0ascertainment,
+        27 fire_nihali.fire.0024,
+        28 fire_nihali.fire.0025,
+        29 fish_0ascertainment,
+        30 fish_nihali.fish.0026,
+        31 full_0ascertainment,
+        32 full_nihali.full.0027,
+        33 hand_0ascertainment,
+        34 hand_nihali.hand.0028,
+        35 hear_0ascertainment,
+        36 hear_nihali.hear.0029,
+        37 horn_0ascertainment,
+        38 horn_nihali.horn.0030,
+        39 knee_0ascertainment,
+        40 knee_nihali.knee.0031,
+        41 knee_nihali.knee.0032,
+        42 leaf_0ascertainment,
+        43 leaf_nihali.leaf.0033,
+        44 leaf_nihali.leaf.0034,
+        45 liver_0ascertainment,
+        46 liver_nihali.liver.0035,
+        47 louse_0ascertainment,
+        48 louse_nihali.louse.0036,
+        49 louse_nihali.louse.0037,
+        50 mountain_0ascertainment,
+        51 mountain_nihali.mountain.0038,
+        52 mountain_nihali.mountain.0039,
+        53 mountain_nihali.mountain.0040,
+        54 new_0ascertainment,
+        55 new_nihali.new.0041,
+        56 night_0ascertainment,
+        57 night_nihali.night.0042,
+        58 nose_0ascertainment,
+        59 nose_nihali.nose.0043,
+        60 one_0ascertainment,
+        61 one_nihali.one.0044,
+        62 one_nihali.one.0045,
+        63 path_0ascertainment,
+        64 path_nihali.path.0046,
+        65 path_nihali.path.0047,
+        66 person_0ascertainment,
+        67 person_nihali.person.0048,
+        68 person_nihali.person.0049,
+        69 person_nihali.person.0050,
+        70 pl_0ascertainment,
+        71 pl_nihali.1pl.0001,
+        72 pl_nihali.1pl.0002,
+        73 pl_nihali.1pl.0003,
+        74 see_0ascertainment,
+        75 see_nihali.see.0051,
+        76 sg_0ascertainment,
+        77 sg_nihali.1sg.0004,
+        78 sg_nihali.1sg.0005,
+        79 sg_nihali.2sg.0006,
+        80 sg_nihali.2sg.0007,
+        81 skin_0ascertainment,
+        82 skin_nihali.skin.0052,
+        83 star_0ascertainment,
+        84 star_nihali.star.0053,
+        85 star_nihali.star.0054,
+        86 stone_0ascertainment,
+        87 stone_nihali.stone.0055,
+        88 stone_nihali.stone.0056,
+        89 sun_0ascertainment,
+        90 sun_nihali.sun.0057,
+        91 tongue_0ascertainment,
+        92 tongue_nihali.tongue.0058,
+        93 tooth_0ascertainment,
+        94 tooth_nihali.tooth.0059,
+        95 tree_0ascertainment,
+        96 tree_nihali.tree.0060,
+        97 tree_nihali.tree.0061,
+        98 two_0ascertainment,
+        99 two_nihali.two.0062,
+        100 water_0ascertainment,
+        101 water_nihali.water.0063
+;
+
+MATRIX
+nahali 0101010010101001001010010011010101010?0100110?01001010?01010110??0100010001010110?0100100101010110101
+nihali 0101001001101100101001001001010101010101101101011001001010?010011001100110101110010010110101010110101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-11;
+    charset die = 12-14;
+    charset dog = 15-17;
+    charset drink = 18-19;
+    charset ear = 20-22;
+    charset eye = 23-25;
+    charset fire = 26-28;
+    charset fish = 29-30;
+    charset full = 31-32;
+    charset hand = 33-34;
+    charset hear = 35-36;
+    charset horn = 37-38;
+    charset knee = 39-41;
+    charset leaf = 42-44;
+    charset liver = 45-46;
+    charset louse = 47-49;
+    charset mountain = 50-53;
+    charset new = 54-55;
+    charset night = 56-57;
+    charset nose = 58-59;
+    charset one = 60-62;
+    charset path = 63-65;
+    charset person = 66-69;
+    charset pl = 70-73;
+    charset see = 74-75;
+    charset sg = 76-80;
+    charset skin = 81-82;
+    charset star = 83-85;
+    charset stone = 86-88;
+    charset sun = 89-90;
+    charset tongue = 91-92;
+    charset tooth = 93-94;
+    charset tree = 95-97;
+    charset two = 98-99;
+    charset water = 100-101;
+END;

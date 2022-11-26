@@ -1,0 +1,127 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=75;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_masep.blood.0026,
+        3 bone_0ascertainment,
+        4 bone_masep.bone.0001,
+        5 come_0ascertainment,
+        6 come_masep.come.0487,
+        7 die_0ascertainment,
+        8 die_masep.die.0032,
+        9 dog_0ascertainment,
+        10 dog_masep.dog.0378,
+        11 ear_0ascertainment,
+        12 ear_masep.ear.0314,
+        13 eye_0ascertainment,
+        14 eye_masep.eye.0033,
+        15 fire_0ascertainment,
+        16 fire_masep.fire.0544,
+        17 fish_0ascertainment,
+        18 fish_masep.fish.0046,
+        19 full_0ascertainment,
+        20 full_masep.full.0685,
+        21 hand_0ascertainment,
+        22 hand_masep.hand.0002,
+        23 hear_0ascertainment,
+        24 hear_masep.hear.0717,
+        25 horn_0ascertainment,
+        26 horn_masep.horn.0003,
+        27 knee_0ascertainment,
+        28 knee_masep.knee.0455,
+        29 leaf_0ascertainment,
+        30 leaf_masep.leaf.0009,
+        31 liver_0ascertainment,
+        32 liver_masep.liver.0604,
+        33 louse_0ascertainment,
+        34 louse_masep.louse.0028,
+        35 mountain_0ascertainment,
+        36 mountain_masep.mountain.0576,
+        37 name_0ascertainment,
+        38 name_masep.name.0031,
+        39 new_0ascertainment,
+        40 new_masep.new.0512,
+        41 night_0ascertainment,
+        42 night_masep.night.0005,
+        43 nose_0ascertainment,
+        44 nose_masep.nose.0200,
+        45 one_0ascertainment,
+        46 one_masep.one.0006,
+        47 path_0ascertainment,
+        48 path_masep.path.0003,
+        49 person_0ascertainment,
+        50 person_masep.person.0711,
+        51 pl_0ascertainment,
+        52 pl_masep.1pl.0186,
+        53 see_0ascertainment,
+        54 see_masep.see.0017,
+        55 sg_0ascertainment,
+        56 sg_masep.1sg.0314,
+        57 sg_masep.2sg.0061,
+        58 skin_0ascertainment,
+        59 skin_masep.skin.0579,
+        60 star_0ascertainment,
+        61 star_masep.star.0333,
+        62 stone_0ascertainment,
+        63 stone_masep.stone.0773,
+        64 sun_0ascertainment,
+        65 sun_masep.sun.0004,
+        66 tongue_0ascertainment,
+        67 tongue_masep.tongue.0462,
+        68 tooth_0ascertainment,
+        69 tooth_masep.tooth.0032,
+        70 tree_0ascertainment,
+        71 tree_masep.tree.0078,
+        72 two_0ascertainment,
+        73 two_masep.two.0426,
+        74 water_0ascertainment,
+        75 water_masep.water.0054
+;
+
+MATRIX
+massep 010101010101010101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset come = 5-6;
+    charset die = 7-8;
+    charset dog = 9-10;
+    charset ear = 11-12;
+    charset eye = 13-14;
+    charset fire = 15-16;
+    charset fish = 17-18;
+    charset full = 19-20;
+    charset hand = 21-22;
+    charset hear = 23-24;
+    charset horn = 25-26;
+    charset knee = 27-28;
+    charset leaf = 29-30;
+    charset liver = 31-32;
+    charset louse = 33-34;
+    charset mountain = 35-36;
+    charset name = 37-38;
+    charset new = 39-40;
+    charset night = 41-42;
+    charset nose = 43-44;
+    charset one = 45-46;
+    charset path = 47-48;
+    charset person = 49-50;
+    charset pl = 51-52;
+    charset see = 53-54;
+    charset sg = 55-57;
+    charset skin = 58-59;
+    charset star = 60-61;
+    charset stone = 62-63;
+    charset sun = 64-65;
+    charset tongue = 66-67;
+    charset tooth = 68-69;
+    charset tree = 70-71;
+    charset two = 72-73;
+    charset water = 74-75;
+END;

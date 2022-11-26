@@ -1,0 +1,267 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=9 NCHAR=205;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_iroquoian.blood.0008,
+        3 blood_iroquoian.blood.0009,
+        4 blood_iroquoian.blood.0010,
+        5 blood_iroquoian.blood.0011,
+        6 bone_0ascertainment,
+        7 bone_iroquoian.bone.0012,
+        8 bone_iroquoian.bone.0013,
+        9 bone_iroquoian.bone.0014,
+        10 bone_iroquoian.bone.0015,
+        11 bone_iroquoian.bone.0016,
+        12 breast_0ascertainment,
+        13 breast_iroquoian.breast.0017,
+        14 breast_iroquoian.breast.0018,
+        15 breast_iroquoian.breast.0019,
+        16 breast_iroquoian.breast.0020,
+        17 breast_iroquoian.breast.0021,
+        18 come_0ascertainment,
+        19 come_iroquoian.come.0022,
+        20 come_iroquoian.come.0023,
+        21 come_iroquoian.come.0024,
+        22 come_iroquoian.come.0025,
+        23 come_iroquoian.come.0026,
+        24 come_iroquoian.come.0027,
+        25 come_iroquoian.come.0028,
+        26 come_iroquoian.come.0029,
+        27 die_0ascertainment,
+        28 die_iroquoian.die.0030,
+        29 die_iroquoian.die.0031,
+        30 die_iroquoian.die.0032,
+        31 dog_0ascertainment,
+        32 dog_iroquoian.dog.0033,
+        33 dog_iroquoian.dog.0034,
+        34 dog_iroquoian.dog.0035,
+        35 dog_iroquoian.dog.0036,
+        36 dog_iroquoian.dog.0037,
+        37 dog_iroquoian.dog.0038,
+        38 dog_iroquoian.dog.0039,
+        39 dog_iroquoian.dog.0040,
+        40 drink_0ascertainment,
+        41 drink_iroquoian.drink.0041,
+        42 drink_iroquoian.drink.0042,
+        43 drink_iroquoian.drink.0043,
+        44 ear_0ascertainment,
+        45 ear_iroquoian.ear.0044,
+        46 ear_iroquoian.ear.0045,
+        47 eye_0ascertainment,
+        48 eye_iroquoian.eye.0046,
+        49 eye_iroquoian.eye.0047,
+        50 eye_iroquoian.eye.0048,
+        51 eye_iroquoian.eye.0049,
+        52 fire_0ascertainment,
+        53 fire_iroquoian.fire.0050,
+        54 fire_iroquoian.fire.0051,
+        55 fire_iroquoian.fire.0052,
+        56 fire_iroquoian.fire.0053,
+        57 fish_0ascertainment,
+        58 fish_iroquoian.fish.0054,
+        59 fish_iroquoian.fish.0055,
+        60 fish_iroquoian.fish.0056,
+        61 fish_iroquoian.fish.0057,
+        62 full_0ascertainment,
+        63 full_iroquoian.full.0058,
+        64 full_iroquoian.full.0059,
+        65 full_iroquoian.full.0060,
+        66 full_iroquoian.full.0061,
+        67 full_iroquoian.full.0062,
+        68 full_iroquoian.full.0063,
+        69 hand_0ascertainment,
+        70 hand_iroquoian.hand.0064,
+        71 hand_iroquoian.hand.0065,
+        72 hand_iroquoian.hand.0066,
+        73 hand_iroquoian.hand.0067,
+        74 hand_iroquoian.hand.0068,
+        75 hear_0ascertainment,
+        76 hear_iroquoian.hear.0069,
+        77 hear_iroquoian.hear.0070,
+        78 hear_iroquoian.hear.0071,
+        79 hear_iroquoian.hear.0072,
+        80 horn_0ascertainment,
+        81 horn_iroquoian.horn.0073,
+        82 horn_iroquoian.horn.0074,
+        83 horn_iroquoian.horn.0075,
+        84 knee_0ascertainment,
+        85 knee_iroquoian.knee.0076,
+        86 knee_iroquoian.knee.0077,
+        87 knee_iroquoian.knee.0078,
+        88 knee_iroquoian.knee.0079,
+        89 knee_iroquoian.knee.0080,
+        90 knee_iroquoian.knee.0081,
+        91 knee_iroquoian.knee.0082,
+        92 knee_iroquoian.knee.0083,
+        93 leaf_0ascertainment,
+        94 leaf_iroquoian.leaf.0084,
+        95 leaf_iroquoian.leaf.0085,
+        96 leaf_iroquoian.leaf.0086,
+        97 liver_0ascertainment,
+        98 liver_iroquoian.liver.0087,
+        99 liver_iroquoian.liver.0088,
+        100 liver_iroquoian.liver.0089,
+        101 liver_iroquoian.liver.0090,
+        102 liver_iroquoian.liver.0091,
+        103 louse_0ascertainment,
+        104 louse_iroquoian.louse.0092,
+        105 louse_iroquoian.louse.0093,
+        106 louse_iroquoian.louse.0094,
+        107 louse_iroquoian.louse.0095,
+        108 louse_iroquoian.louse.0096,
+        109 louse_iroquoian.louse.0097,
+        110 mountain_0ascertainment,
+        111 mountain_iroquoian.mountain.0098,
+        112 mountain_iroquoian.mountain.0099,
+        113 mountain_iroquoian.mountain.0100,
+        114 mountain_iroquoian.mountain.0101,
+        115 name_0ascertainment,
+        116 name_iroquoian.name.0102,
+        117 name_iroquoian.name.0103,
+        118 name_iroquoian.name.0104,
+        119 new_0ascertainment,
+        120 new_iroquoian.new.0105,
+        121 new_iroquoian.new.0106,
+        122 night_0ascertainment,
+        123 night_iroquoian.night.0107,
+        124 night_iroquoian.night.0108,
+        125 nose_0ascertainment,
+        126 nose_iroquoian.nose.0109,
+        127 nose_iroquoian.nose.0110,
+        128 nose_iroquoian.nose.0111,
+        129 one_0ascertainment,
+        130 one_iroquoian.one.0112,
+        131 one_iroquoian.one.0113,
+        132 one_iroquoian.one.0114,
+        133 path_0ascertainment,
+        134 path_iroquoian.path.0115,
+        135 path_iroquoian.path.0116,
+        136 path_iroquoian.path.0117,
+        137 path_iroquoian.path.0118,
+        138 path_iroquoian.path.0119,
+        139 person_0ascertainment,
+        140 person_iroquoian.person.0120,
+        141 person_iroquoian.person.0121,
+        142 pl_0ascertainment,
+        143 pl_iroquoian.1pl.0001,
+        144 pl_iroquoian.1pl.0002,
+        145 see_0ascertainment,
+        146 see_iroquoian.see.0122,
+        147 see_iroquoian.see.0123,
+        148 see_iroquoian.see.0124,
+        149 sg_0ascertainment,
+        150 sg_iroquoian.1sg.0003,
+        151 sg_iroquoian.1sg.0004,
+        152 sg_iroquoian.1sg.0005,
+        153 sg_iroquoian.2sg.0006,
+        154 sg_iroquoian.2sg.0007,
+        155 skin_0ascertainment,
+        156 skin_iroquoian.skin.0125,
+        157 skin_iroquoian.skin.0126,
+        158 skin_iroquoian.skin.0127,
+        159 skin_iroquoian.skin.0128,
+        160 skin_iroquoian.skin.0129,
+        161 skin_iroquoian.skin.0130,
+        162 skin_iroquoian.skin.0131,
+        163 star_0ascertainment,
+        164 star_iroquoian.star.0132,
+        165 star_iroquoian.star.0133,
+        166 star_iroquoian.star.0134,
+        167 stone_0ascertainment,
+        168 stone_iroquoian.stone.0135,
+        169 stone_iroquoian.stone.0136,
+        170 stone_iroquoian.stone.0137,
+        171 stone_iroquoian.stone.0138,
+        172 stone_iroquoian.stone.0139,
+        173 stone_iroquoian.stone.0140,
+        174 sun_0ascertainment,
+        175 sun_iroquoian.sun.0141,
+        176 sun_iroquoian.sun.0142,
+        177 sun_iroquoian.sun.0143,
+        178 sun_iroquoian.sun.0144,
+        179 sun_iroquoian.sun.0145,
+        180 sun_iroquoian.sun.0146,
+        181 tongue_0ascertainment,
+        182 tongue_iroquoian.tongue.0147,
+        183 tongue_iroquoian.tongue.0148,
+        184 tooth_0ascertainment,
+        185 tooth_iroquoian.tooth.0149,
+        186 tooth_iroquoian.tooth.0150,
+        187 tooth_iroquoian.tooth.0151,
+        188 tooth_iroquoian.tooth.0152,
+        189 tree_0ascertainment,
+        190 tree_iroquoian.tree.0153,
+        191 tree_iroquoian.tree.0154,
+        192 tree_iroquoian.tree.0155,
+        193 tree_iroquoian.tree.0156,
+        194 tree_iroquoian.tree.0157,
+        195 two_0ascertainment,
+        196 two_iroquoian.two.0158,
+        197 two_iroquoian.two.0159,
+        198 two_iroquoian.two.0160,
+        199 water_0ascertainment,
+        200 water_iroquoian.water.0161,
+        201 water_iroquoian.water.0162,
+        202 water_iroquoian.water.0163,
+        203 water_iroquoian.water.0164,
+        204 water_iroquoian.water.0165,
+        205 water_iroquoian.water.0166
+;
+
+MATRIX
+cayuga       0100001000001000001000000001000100000000100010010000100001000010000001000001000010001000000001000100000100000010000100010010010001000100000100100100010010010000000100010000001000000100100001000001000100000
+cherokee     0010000100000100000100000000100010000000010001001100010000100001000000100000100001000100000000100010000010000001000010001001001000100010000010010010001010001001000010001000000100000010010000100000100010000
+mohawk       0100000010000010001000010001010001000000001010010000100100010010000001000001000010000010000001000101000001000010000100010010010001000001000100100100010010010010000001000100001000000100101000011001000100000
+oneida       0100000010000001001000000001000000100000100010010000001000010010010001000001000010000001000001000100000001000010100100010010010001000001000100100001010010000100000001000100000010000100001000001001000001000
+onondaga     0100000011000001100010000001000000010000100010010000101001000010000000010001000010000000100001000100000000100010000100010010010001000001000100100100010010010010000001000100001000000100100000000101000001000
+seneca       0100000001001000001001001001000000001000100010010000101000010010001101010001001010000000010001000100000001000010000100010010010001000001000100100100010010010000000100010000001000000100100000001001000001000
+tuscarora    0101000000100000101000100101000000000100001010010000100000010000100000001000010000100000001000010100000000010010010100010010010000010001110100100100010010000010000100000011000001100100100000010000010000100
+wendat_huron 0001100001000001001000000001000000000010001010010000001000001010000000010101000010000000000101000000100001001010000001010010000101000001000100010100000110000010100100000001101000010100100100011001000000010
+wyandot      0001100001000001101000000001000000000010001010010010101000010010000000000101001010000000000101000000110001000010000001010010000101000001000100100100010001000010010100000001101000010100000100011001000000011
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-11;
+    charset breast = 12-17;
+    charset come = 18-26;
+    charset die = 27-30;
+    charset dog = 31-39;
+    charset drink = 40-43;
+    charset ear = 44-46;
+    charset eye = 47-51;
+    charset fire = 52-56;
+    charset fish = 57-61;
+    charset full = 62-68;
+    charset hand = 69-74;
+    charset hear = 75-79;
+    charset horn = 80-83;
+    charset knee = 84-92;
+    charset leaf = 93-96;
+    charset liver = 97-102;
+    charset louse = 103-109;
+    charset mountain = 110-114;
+    charset name = 115-118;
+    charset new = 119-121;
+    charset night = 122-124;
+    charset nose = 125-128;
+    charset one = 129-132;
+    charset path = 133-138;
+    charset person = 139-141;
+    charset pl = 142-144;
+    charset see = 145-148;
+    charset sg = 149-154;
+    charset skin = 155-162;
+    charset star = 163-166;
+    charset stone = 167-173;
+    charset sun = 174-180;
+    charset tongue = 181-183;
+    charset tooth = 184-188;
+    charset tree = 189-194;
+    charset two = 195-198;
+    charset water = 199-205;
+END;

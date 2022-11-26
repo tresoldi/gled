@@ -1,0 +1,186 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=132;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_westbomberai.blood.0007,
+        3 blood_westbomberai.blood.0008,
+        4 blood_westbomberai.blood.0009,
+        5 blood_westbomberai.blood.0010,
+        6 bone_0ascertainment,
+        7 bone_westbomberai.bone.0011,
+        8 bone_westbomberai.bone.0012,
+        9 breast_0ascertainment,
+        10 breast_westbomberai.breast.0013,
+        11 breast_westbomberai.breast.0014,
+        12 come_0ascertainment,
+        13 come_westbomberai.come.0015,
+        14 come_westbomberai.come.0016,
+        15 come_westbomberai.come.0017,
+        16 die_0ascertainment,
+        17 die_westbomberai.die.0018,
+        18 die_westbomberai.die.0019,
+        19 die_westbomberai.die.0020,
+        20 dog_0ascertainment,
+        21 dog_westbomberai.dog.0021,
+        22 dog_westbomberai.dog.0022,
+        23 dog_westbomberai.dog.0023,
+        24 drink_0ascertainment,
+        25 drink_westbomberai.drink.0024,
+        26 drink_westbomberai.drink.0025,
+        27 ear_0ascertainment,
+        28 ear_westbomberai.ear.0026,
+        29 ear_westbomberai.ear.0027,
+        30 ear_westbomberai.ear.0028,
+        31 eye_0ascertainment,
+        32 eye_westbomberai.eye.0029,
+        33 eye_westbomberai.eye.0030,
+        34 fire_0ascertainment,
+        35 fire_westbomberai.fire.0031,
+        36 fire_westbomberai.fire.0032,
+        37 fire_westbomberai.fire.0033,
+        38 fish_0ascertainment,
+        39 fish_westbomberai.fish.0034,
+        40 hand_0ascertainment,
+        41 hand_westbomberai.hand.0035,
+        42 hand_westbomberai.hand.0036,
+        43 hear_0ascertainment,
+        44 hear_westbomberai.hear.0037,
+        45 hear_westbomberai.hear.0038,
+        46 knee_0ascertainment,
+        47 knee_westbomberai.knee.0039,
+        48 knee_westbomberai.knee.0040,
+        49 leaf_0ascertainment,
+        50 leaf_westbomberai.leaf.0041,
+        51 leaf_westbomberai.leaf.0042,
+        52 leaf_westbomberai.leaf.0043,
+        53 liver_0ascertainment,
+        54 liver_westbomberai.liver.0044,
+        55 liver_westbomberai.liver.0045,
+        56 louse_0ascertainment,
+        57 louse_westbomberai.louse.0046,
+        58 louse_westbomberai.louse.0047,
+        59 mountain_0ascertainment,
+        60 mountain_westbomberai.mountain.0048,
+        61 mountain_westbomberai.mountain.0049,
+        62 mountain_westbomberai.mountain.0050,
+        63 mountain_westbomberai.mountain.0051,
+        64 name_0ascertainment,
+        65 name_westbomberai.name.0052,
+        66 name_westbomberai.name.0053,
+        67 new_0ascertainment,
+        68 new_westbomberai.new.0054,
+        69 new_westbomberai.new.0055,
+        70 new_westbomberai.new.0056,
+        71 night_0ascertainment,
+        72 night_westbomberai.night.0057,
+        73 night_westbomberai.night.0058,
+        74 night_westbomberai.night.0059,
+        75 nose_0ascertainment,
+        76 nose_westbomberai.nose.0060,
+        77 nose_westbomberai.nose.0061,
+        78 nose_westbomberai.nose.0062,
+        79 one_0ascertainment,
+        80 one_westbomberai.one.0063,
+        81 one_westbomberai.one.0064,
+        82 one_westbomberai.one.0065,
+        83 path_0ascertainment,
+        84 path_westbomberai.path.0066,
+        85 path_westbomberai.path.0067,
+        86 person_0ascertainment,
+        87 person_westbomberai.person.0068,
+        88 person_westbomberai.person.0069,
+        89 person_westbomberai.person.0070,
+        90 pl_0ascertainment,
+        91 pl_westbomberai.1pl.0001,
+        92 pl_westbomberai.1pl.0002,
+        93 see_0ascertainment,
+        94 see_westbomberai.see.0071,
+        95 see_westbomberai.see.0072,
+        96 sg_0ascertainment,
+        97 sg_westbomberai.1sg.0003,
+        98 sg_westbomberai.1sg.0004,
+        99 sg_westbomberai.2sg.0005,
+        100 sg_westbomberai.2sg.0006,
+        101 skin_0ascertainment,
+        102 skin_westbomberai.skin.0073,
+        103 skin_westbomberai.skin.0074,
+        104 skin_westbomberai.skin.0075,
+        105 star_0ascertainment,
+        106 star_westbomberai.star.0076,
+        107 star_westbomberai.star.0077,
+        108 star_westbomberai.star.0078,
+        109 stone_0ascertainment,
+        110 stone_westbomberai.stone.0079,
+        111 stone_westbomberai.stone.0080,
+        112 sun_0ascertainment,
+        113 sun_westbomberai.sun.0081,
+        114 sun_westbomberai.sun.0082,
+        115 sun_westbomberai.sun.0083,
+        116 tongue_0ascertainment,
+        117 tongue_westbomberai.tongue.0084,
+        118 tongue_westbomberai.tongue.0085,
+        119 tongue_westbomberai.tongue.0086,
+        120 tooth_0ascertainment,
+        121 tooth_westbomberai.tooth.0087,
+        122 tooth_westbomberai.tooth.0088,
+        123 tree_0ascertainment,
+        124 tree_westbomberai.tree.0089,
+        125 tree_westbomberai.tree.0090,
+        126 tree_westbomberai.tree.0091,
+        127 two_0ascertainment,
+        128 two_westbomberai.two.0092,
+        129 two_westbomberai.two.0093,
+        130 water_0ascertainment,
+        131 water_westbomberai.water.0094,
+        132 water_westbomberai.water.0095
+;
+
+MATRIX
+iha    010010100100100010001000100100010010001010010010010001001001001010010001000100010001001000100100101001000100010010101000100100010010
+karas  00100001001001000100010001001000100100101000100100100??00100100001001000100010001000100100100010101000100010001001000100010010001001
+mbaham 00010010010000100010001010000101000010100101001000010010100001001000010001000100010??00010010100010100010001010000100010100001010010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-8;
+    charset breast = 9-11;
+    charset come = 12-15;
+    charset die = 16-19;
+    charset dog = 20-23;
+    charset drink = 24-26;
+    charset ear = 27-30;
+    charset eye = 31-33;
+    charset fire = 34-37;
+    charset fish = 38-39;
+    charset hand = 40-42;
+    charset hear = 43-45;
+    charset knee = 46-48;
+    charset leaf = 49-52;
+    charset liver = 53-55;
+    charset louse = 56-58;
+    charset mountain = 59-63;
+    charset name = 64-66;
+    charset new = 67-70;
+    charset night = 71-74;
+    charset nose = 75-78;
+    charset one = 79-82;
+    charset path = 83-85;
+    charset person = 86-89;
+    charset pl = 90-92;
+    charset see = 93-95;
+    charset sg = 96-100;
+    charset skin = 101-104;
+    charset star = 105-108;
+    charset stone = 109-111;
+    charset sun = 112-115;
+    charset tongue = 116-119;
+    charset tooth = 120-122;
+    charset tree = 123-126;
+    charset two = 127-129;
+    charset water = 130-132;
+END;

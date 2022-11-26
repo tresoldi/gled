@@ -1,0 +1,202 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=5 NCHAR=144;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_guahiboan.blood.0007,
+        3 bone_0ascertainment,
+        4 bone_guahiboan.bone.0008,
+        5 bone_guahiboan.bone.0009,
+        6 bone_guahiboan.bone.0010,
+        7 bone_guahiboan.bone.0011,
+        8 breast_0ascertainment,
+        9 breast_guahiboan.breast.0012,
+        10 come_0ascertainment,
+        11 come_guahiboan.come.0013,
+        12 come_guahiboan.come.0014,
+        13 come_guahiboan.come.0015,
+        14 come_guahiboan.come.0016,
+        15 come_guahiboan.come.0017,
+        16 die_0ascertainment,
+        17 die_guahiboan.die.0018,
+        18 dog_0ascertainment,
+        19 dog_guahiboan.dog.0019,
+        20 dog_guahiboan.dog.0020,
+        21 dog_guahiboan.dog.0021,
+        22 drink_0ascertainment,
+        23 drink_guahiboan.drink.0022,
+        24 ear_0ascertainment,
+        25 ear_guahiboan.ear.0023,
+        26 ear_guahiboan.ear.0024,
+        27 eye_0ascertainment,
+        28 eye_guahiboan.eye.0025,
+        29 eye_guahiboan.eye.0026,
+        30 fire_0ascertainment,
+        31 fire_guahiboan.fire.0027,
+        32 fire_guahiboan.fire.0028,
+        33 fire_guahiboan.fire.0029,
+        34 fire_guahiboan.fire.0030,
+        35 fire_guahiboan.fire.0031,
+        36 fish_0ascertainment,
+        37 fish_guahiboan.fish.0032,
+        38 fish_guahiboan.fish.0033,
+        39 fish_guahiboan.fish.0034,
+        40 full_0ascertainment,
+        41 full_guahiboan.full.0035,
+        42 full_guahiboan.full.0036,
+        43 full_guahiboan.full.0037,
+        44 hand_0ascertainment,
+        45 hand_guahiboan.hand.0038,
+        46 hand_guahiboan.hand.0039,
+        47 hear_0ascertainment,
+        48 hear_guahiboan.hear.0040,
+        49 hear_guahiboan.hear.0041,
+        50 hear_guahiboan.hear.0042,
+        51 horn_0ascertainment,
+        52 horn_guahiboan.horn.0043,
+        53 horn_guahiboan.horn.0044,
+        54 knee_0ascertainment,
+        55 knee_guahiboan.knee.0045,
+        56 knee_guahiboan.knee.0046,
+        57 knee_guahiboan.knee.0047,
+        58 knee_guahiboan.knee.0048,
+        59 knee_guahiboan.knee.0049,
+        60 leaf_0ascertainment,
+        61 leaf_guahiboan.leaf.0050,
+        62 leaf_guahiboan.leaf.0051,
+        63 leaf_guahiboan.leaf.0052,
+        64 liver_0ascertainment,
+        65 liver_guahiboan.liver.0053,
+        66 louse_0ascertainment,
+        67 louse_guahiboan.louse.0054,
+        68 louse_guahiboan.louse.0055,
+        69 mountain_0ascertainment,
+        70 mountain_guahiboan.mountain.0056,
+        71 mountain_guahiboan.mountain.0057,
+        72 mountain_guahiboan.mountain.0058,
+        73 mountain_guahiboan.mountain.0059,
+        74 mountain_guahiboan.mountain.0060,
+        75 mountain_guahiboan.mountain.0061,
+        76 mountain_guahiboan.mountain.0062,
+        77 name_0ascertainment,
+        78 name_guahiboan.name.0063,
+        79 new_0ascertainment,
+        80 new_guahiboan.new.0064,
+        81 night_0ascertainment,
+        82 night_guahiboan.night.0065,
+        83 nose_0ascertainment,
+        84 nose_guahiboan.nose.0066,
+        85 nose_guahiboan.nose.0067,
+        86 one_0ascertainment,
+        87 one_guahiboan.one.0068,
+        88 one_guahiboan.one.0069,
+        89 one_guahiboan.one.0070,
+        90 path_0ascertainment,
+        91 path_guahiboan.path.0071,
+        92 path_guahiboan.path.0072,
+        93 person_0ascertainment,
+        94 person_guahiboan.person.0073,
+        95 person_guahiboan.person.0074,
+        96 person_guahiboan.person.0075,
+        97 pl_0ascertainment,
+        98 pl_guahiboan.1pl.0001,
+        99 pl_guahiboan.1pl.0002,
+        100 pl_guahiboan.1pl.0003,
+        101 see_0ascertainment,
+        102 see_guahiboan.see.0076,
+        103 see_guahiboan.see.0077,
+        104 sg_0ascertainment,
+        105 sg_guahiboan.1sg.0004,
+        106 sg_guahiboan.2sg.0005,
+        107 sg_guahiboan.2sg.0006,
+        108 skin_0ascertainment,
+        109 skin_guahiboan.skin.0078,
+        110 skin_guahiboan.skin.0079,
+        111 star_0ascertainment,
+        112 star_guahiboan.star.0080,
+        113 star_guahiboan.star.0081,
+        114 star_guahiboan.star.0082,
+        115 star_guahiboan.star.0083,
+        116 star_guahiboan.star.0084,
+        117 stone_0ascertainment,
+        118 stone_guahiboan.stone.0085,
+        119 sun_0ascertainment,
+        120 sun_guahiboan.sun.0086,
+        121 sun_guahiboan.sun.0087,
+        122 sun_guahiboan.sun.0088,
+        123 sun_guahiboan.sun.0089,
+        124 tongue_0ascertainment,
+        125 tongue_guahiboan.tongue.0090,
+        126 tongue_guahiboan.tongue.0091,
+        127 tongue_guahiboan.tongue.0092,
+        128 tooth_0ascertainment,
+        129 tooth_guahiboan.tooth.0093,
+        130 tooth_guahiboan.tooth.0094,
+        131 tooth_guahiboan.tooth.0095,
+        132 tooth_guahiboan.tooth.0096,
+        133 tooth_guahiboan.tooth.0097,
+        134 tree_0ascertainment,
+        135 tree_guahiboan.tree.0098,
+        136 two_0ascertainment,
+        137 two_guahiboan.two.0099,
+        138 two_guahiboan.two.0100,
+        139 two_guahiboan.two.0101,
+        140 two_guahiboan.two.0102,
+        141 two_guahiboan.two.0103,
+        142 water_0ascertainment,
+        143 water_guahiboan.water.0104,
+        144 water_guahiboan.water.0105
+;
+
+MATRIX
+cuiba     010100001010001010100010100100100100110010001001000100100000110010100100001001010101001000100100010001101100100100000101000010001000001010000010
+guahibo   010010001010000010100010100010110000010010001001000010010000010010100010000001010100101000100100010001001100100010010101001010000100001001000010
+guayabero 010001001001000010010010010010010010100001000101010010001000001010010001000101010100101010100100001001001100010001000100100001000010001000100001
+jitnu     010001001000100010001010100010001000001000101000100010000100001010100000100001010100101000100010000101001110010000100100010010000001001000010001
+playero   010000101000010010100010100010100000001010001001000010000010010010100000010001010100100100010001010001001100100100000101001000100000101000001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-7;
+    charset breast = 8-9;
+    charset come = 10-15;
+    charset die = 16-17;
+    charset dog = 18-21;
+    charset drink = 22-23;
+    charset ear = 24-26;
+    charset eye = 27-29;
+    charset fire = 30-35;
+    charset fish = 36-39;
+    charset full = 40-43;
+    charset hand = 44-46;
+    charset hear = 47-50;
+    charset horn = 51-53;
+    charset knee = 54-59;
+    charset leaf = 60-63;
+    charset liver = 64-65;
+    charset louse = 66-68;
+    charset mountain = 69-76;
+    charset name = 77-78;
+    charset new = 79-80;
+    charset night = 81-82;
+    charset nose = 83-85;
+    charset one = 86-89;
+    charset path = 90-92;
+    charset person = 93-96;
+    charset pl = 97-100;
+    charset see = 101-103;
+    charset sg = 104-107;
+    charset skin = 108-110;
+    charset star = 111-116;
+    charset stone = 117-118;
+    charset sun = 119-123;
+    charset tongue = 124-127;
+    charset tooth = 128-133;
+    charset tree = 134-135;
+    charset two = 136-141;
+    charset water = 142-144;
+END;

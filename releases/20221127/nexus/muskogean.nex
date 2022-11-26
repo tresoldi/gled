@@ -1,0 +1,206 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=6 NCHAR=147;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_muskogean.blood.0009,
+        3 blood_muskogean.blood.0010,
+        4 blood_muskogean.blood.0011,
+        5 blood_muskogean.blood.0012,
+        6 bone_0ascertainment,
+        7 bone_muskogean.bone.0013,
+        8 breast_0ascertainment,
+        9 breast_muskogean.breast.0014,
+        10 breast_muskogean.breast.0015,
+        11 breast_muskogean.breast.0016,
+        12 come_0ascertainment,
+        13 come_muskogean.come.0017,
+        14 come_muskogean.come.0018,
+        15 come_muskogean.come.0019,
+        16 come_muskogean.come.0020,
+        17 come_muskogean.come.0021,
+        18 die_0ascertainment,
+        19 die_muskogean.die.0022,
+        20 die_muskogean.die.0023,
+        21 die_muskogean.die.0024,
+        22 dog_0ascertainment,
+        23 dog_muskogean.dog.0025,
+        24 drink_0ascertainment,
+        25 drink_muskogean.drink.0026,
+        26 drink_muskogean.drink.0027,
+        27 drink_muskogean.drink.0028,
+        28 ear_0ascertainment,
+        29 ear_muskogean.ear.0029,
+        30 ear_muskogean.ear.0030,
+        31 ear_muskogean.ear.0031,
+        32 ear_muskogean.ear.0032,
+        33 eye_0ascertainment,
+        34 eye_muskogean.eye.0033,
+        35 eye_muskogean.eye.0034,
+        36 eye_muskogean.eye.0035,
+        37 fire_0ascertainment,
+        38 fire_muskogean.fire.0036,
+        39 fire_muskogean.fire.0037,
+        40 fire_muskogean.fire.0038,
+        41 fire_muskogean.fire.0039,
+        42 fish_0ascertainment,
+        43 fish_muskogean.fish.0040,
+        44 full_0ascertainment,
+        45 full_muskogean.full.0041,
+        46 full_muskogean.full.0042,
+        47 full_muskogean.full.0043,
+        48 full_muskogean.full.0044,
+        49 hand_0ascertainment,
+        50 hand_muskogean.hand.0045,
+        51 hand_muskogean.hand.0046,
+        52 hear_0ascertainment,
+        53 hear_muskogean.hear.0047,
+        54 hear_muskogean.hear.0048,
+        55 hear_muskogean.hear.0049,
+        56 horn_0ascertainment,
+        57 horn_muskogean.horn.0050,
+        58 horn_muskogean.horn.0051,
+        59 knee_0ascertainment,
+        60 knee_muskogean.knee.0052,
+        61 knee_muskogean.knee.0053,
+        62 knee_muskogean.knee.0054,
+        63 knee_muskogean.knee.0055,
+        64 leaf_0ascertainment,
+        65 leaf_muskogean.leaf.0056,
+        66 liver_0ascertainment,
+        67 liver_muskogean.liver.0057,
+        68 liver_muskogean.liver.0058,
+        69 louse_0ascertainment,
+        70 louse_muskogean.louse.0059,
+        71 louse_muskogean.louse.0060,
+        72 louse_muskogean.louse.0061,
+        73 louse_muskogean.louse.0062,
+        74 mountain_0ascertainment,
+        75 mountain_muskogean.mountain.0063,
+        76 mountain_muskogean.mountain.0064,
+        77 mountain_muskogean.mountain.0065,
+        78 mountain_muskogean.mountain.0066,
+        79 mountain_muskogean.mountain.0067,
+        80 name_0ascertainment,
+        81 name_muskogean.name.0068,
+        82 name_muskogean.name.0069,
+        83 new_0ascertainment,
+        84 new_muskogean.new.0070,
+        85 new_muskogean.new.0071,
+        86 new_muskogean.new.0072,
+        87 new_muskogean.new.0073,
+        88 night_0ascertainment,
+        89 night_muskogean.night.0074,
+        90 night_muskogean.night.0075,
+        91 night_muskogean.night.0076,
+        92 night_muskogean.night.0077,
+        93 nose_0ascertainment,
+        94 nose_muskogean.nose.0078,
+        95 nose_muskogean.nose.0079,
+        96 nose_muskogean.nose.0080,
+        97 nose_muskogean.nose.0081,
+        98 one_0ascertainment,
+        99 one_muskogean.one.0082,
+        100 one_muskogean.one.0083,
+        101 one_muskogean.one.0084,
+        102 path_0ascertainment,
+        103 path_muskogean.path.0085,
+        104 path_muskogean.path.0086,
+        105 person_0ascertainment,
+        106 person_muskogean.person.0087,
+        107 person_muskogean.person.0088,
+        108 person_muskogean.person.0089,
+        109 pl_0ascertainment,
+        110 pl_muskogean.1pl.0001,
+        111 pl_muskogean.1pl.0002,
+        112 pl_muskogean.1pl.0003,
+        113 see_0ascertainment,
+        114 see_muskogean.see.0090,
+        115 sg_0ascertainment,
+        116 sg_muskogean.1sg.0004,
+        117 sg_muskogean.2sg.0005,
+        118 sg_muskogean.2sg.0006,
+        119 sg_muskogean.2sg.0007,
+        120 sg_muskogean.2sg.0008,
+        121 skin_0ascertainment,
+        122 skin_muskogean.skin.0091,
+        123 skin_muskogean.skin.0092,
+        124 skin_muskogean.skin.0093,
+        125 star_0ascertainment,
+        126 star_muskogean.star.0094,
+        127 star_muskogean.star.0095,
+        128 star_muskogean.star.0096,
+        129 star_muskogean.star.0097,
+        130 stone_0ascertainment,
+        131 stone_muskogean.stone.0098,
+        132 stone_muskogean.stone.0099,
+        133 sun_0ascertainment,
+        134 sun_muskogean.sun.0100,
+        135 tongue_0ascertainment,
+        136 tongue_muskogean.tongue.0101,
+        137 tooth_0ascertainment,
+        138 tooth_muskogean.tooth.0102,
+        139 tree_0ascertainment,
+        140 tree_muskogean.tree.0103,
+        141 tree_muskogean.tree.0104,
+        142 two_0ascertainment,
+        143 two_muskogean.two.0105,
+        144 two_muskogean.two.0106,
+        145 water_0ascertainment,
+        146 water_muskogean.water.0107,
+        147 water_muskogean.water.0108
+;
+
+MATRIX
+alabama   0100001010001000001000101000100001000100001010000100100010010000?0100100001000001001000010000100001000100100010001011000010001000010010101010010010
+chickasaw 0010001010000100001000101000010000100010001010000100100010001000?0010010000100001000100001000010001000100010010001011000001000100010010101010010010
+choctaw   0010001010000100001000101000010000100010001010000100010010000100?0010010000010001000100000100100001000100010010001011000001000100010010101010010010
+creek     0001001001000010000100100100001000010001001001000010001001000010?0100001000001000100010000100001000100010001001001010100000100010001010101010001001
+koasati   010000101000000100100010100010000100010000100010010010001001000010100100000000101001000000010100001000100100000101000010010001000010010101010010010
+mikasuki  0000101000100000100010100010000101000000101000010100100010010000?010000010?????00100001000100000100010100100010001010001000100001010010101001010010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-7;
+    charset breast = 8-11;
+    charset come = 12-17;
+    charset die = 18-21;
+    charset dog = 22-23;
+    charset drink = 24-27;
+    charset ear = 28-32;
+    charset eye = 33-36;
+    charset fire = 37-41;
+    charset fish = 42-43;
+    charset full = 44-48;
+    charset hand = 49-51;
+    charset hear = 52-55;
+    charset horn = 56-58;
+    charset knee = 59-63;
+    charset leaf = 64-65;
+    charset liver = 66-68;
+    charset louse = 69-73;
+    charset mountain = 74-79;
+    charset name = 80-82;
+    charset new = 83-87;
+    charset night = 88-92;
+    charset nose = 93-97;
+    charset one = 98-101;
+    charset path = 102-104;
+    charset person = 105-108;
+    charset pl = 109-112;
+    charset see = 113-114;
+    charset sg = 115-120;
+    charset skin = 121-124;
+    charset star = 125-129;
+    charset stone = 130-132;
+    charset sun = 133-134;
+    charset tongue = 135-136;
+    charset tooth = 137-138;
+    charset tree = 139-141;
+    charset two = 142-144;
+    charset water = 145-147;
+END;

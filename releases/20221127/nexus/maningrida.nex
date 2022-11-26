@@ -1,0 +1,195 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=139;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_maningrida.blood.0007,
+        3 blood_maningrida.blood.0008,
+        4 blood_maningrida.blood.0009,
+        5 bone_0ascertainment,
+        6 bone_maningrida.bone.0010,
+        7 bone_maningrida.bone.0011,
+        8 bone_maningrida.bone.0012,
+        9 bone_maningrida.bone.0013,
+        10 breast_0ascertainment,
+        11 breast_maningrida.breast.0014,
+        12 breast_maningrida.breast.0015,
+        13 breast_maningrida.breast.0016,
+        14 come_0ascertainment,
+        15 come_maningrida.come.0017,
+        16 come_maningrida.come.0018,
+        17 come_maningrida.come.0019,
+        18 die_0ascertainment,
+        19 die_maningrida.die.0020,
+        20 die_maningrida.die.0021,
+        21 dog_0ascertainment,
+        22 dog_maningrida.dog.0022,
+        23 dog_maningrida.dog.0023,
+        24 dog_maningrida.dog.0024,
+        25 drink_0ascertainment,
+        26 drink_maningrida.drink.0025,
+        27 drink_maningrida.drink.0026,
+        28 drink_maningrida.drink.0027,
+        29 ear_0ascertainment,
+        30 ear_maningrida.ear.0028,
+        31 eye_0ascertainment,
+        32 eye_maningrida.eye.0029,
+        33 eye_maningrida.eye.0030,
+        34 fire_0ascertainment,
+        35 fire_maningrida.fire.0031,
+        36 fire_maningrida.fire.0032,
+        37 fire_maningrida.fire.0033,
+        38 fish_0ascertainment,
+        39 fish_maningrida.fish.0034,
+        40 fish_maningrida.fish.0035,
+        41 fish_maningrida.fish.0036,
+        42 full_0ascertainment,
+        43 full_maningrida.full.0037,
+        44 full_maningrida.full.0038,
+        45 full_maningrida.full.0039,
+        46 hand_0ascertainment,
+        47 hand_maningrida.hand.0040,
+        48 hand_maningrida.hand.0041,
+        49 hand_maningrida.hand.0042,
+        50 hear_0ascertainment,
+        51 hear_maningrida.hear.0043,
+        52 hear_maningrida.hear.0044,
+        53 horn_0ascertainment,
+        54 horn_maningrida.horn.0045,
+        55 knee_0ascertainment,
+        56 knee_maningrida.knee.0046,
+        57 knee_maningrida.knee.0047,
+        58 knee_maningrida.knee.0048,
+        59 leaf_0ascertainment,
+        60 leaf_maningrida.leaf.0049,
+        61 leaf_maningrida.leaf.0050,
+        62 liver_0ascertainment,
+        63 liver_maningrida.liver.0051,
+        64 liver_maningrida.liver.0052,
+        65 louse_0ascertainment,
+        66 louse_maningrida.louse.0053,
+        67 louse_maningrida.louse.0054,
+        68 louse_maningrida.louse.0055,
+        69 louse_maningrida.louse.0056,
+        70 mountain_0ascertainment,
+        71 mountain_maningrida.mountain.0057,
+        72 mountain_maningrida.mountain.0058,
+        73 name_0ascertainment,
+        74 name_maningrida.name.0059,
+        75 name_maningrida.name.0060,
+        76 name_maningrida.name.0061,
+        77 new_0ascertainment,
+        78 new_maningrida.new.0062,
+        79 night_0ascertainment,
+        80 night_maningrida.night.0063,
+        81 night_maningrida.night.0064,
+        82 nose_0ascertainment,
+        83 nose_maningrida.nose.0065,
+        84 nose_maningrida.nose.0066,
+        85 one_0ascertainment,
+        86 one_maningrida.one.0067,
+        87 one_maningrida.one.0068,
+        88 path_0ascertainment,
+        89 path_maningrida.path.0069,
+        90 path_maningrida.path.0070,
+        91 person_0ascertainment,
+        92 person_maningrida.person.0071,
+        93 person_maningrida.person.0072,
+        94 person_maningrida.person.0073,
+        95 pl_0ascertainment,
+        96 pl_maningrida.1pl.0001,
+        97 pl_maningrida.1pl.0002,
+        98 see_0ascertainment,
+        99 see_maningrida.see.0074,
+        100 sg_0ascertainment,
+        101 sg_maningrida.1sg.0003,
+        102 sg_maningrida.2sg.0004,
+        103 sg_maningrida.2sg.0005,
+        104 sg_maningrida.2sg.0006,
+        105 skin_0ascertainment,
+        106 skin_maningrida.skin.0075,
+        107 skin_maningrida.skin.0076,
+        108 star_0ascertainment,
+        109 star_maningrida.star.0077,
+        110 star_maningrida.star.0078,
+        111 star_maningrida.star.0079,
+        112 star_maningrida.star.0080,
+        113 stone_0ascertainment,
+        114 stone_maningrida.stone.0081,
+        115 stone_maningrida.stone.0082,
+        116 stone_maningrida.stone.0083,
+        117 sun_0ascertainment,
+        118 sun_maningrida.sun.0084,
+        119 sun_maningrida.sun.0085,
+        120 sun_maningrida.sun.0086,
+        121 tongue_0ascertainment,
+        122 tongue_maningrida.tongue.0087,
+        123 tongue_maningrida.tongue.0088,
+        124 tongue_maningrida.tongue.0089,
+        125 tooth_0ascertainment,
+        126 tooth_maningrida.tooth.0090,
+        127 tooth_maningrida.tooth.0091,
+        128 tree_0ascertainment,
+        129 tree_maningrida.tree.0092,
+        130 tree_maningrida.tree.0093,
+        131 tree_maningrida.tree.0094,
+        132 two_0ascertainment,
+        133 two_maningrida.two.0095,
+        134 two_maningrida.two.0096,
+        135 two_maningrida.two.0097,
+        136 water_0ascertainment,
+        137 water_maningrida.water.0098,
+        138 water_maningrida.water.0099,
+        139 water_maningrida.water.0100
+;
+
+MATRIX
+burarra   01000100001000100010010001000101001000100010001000100101000??010010000100100010100100100??0100010010110001001000010001000100010010001000100
+djeebbana 001000101001000100100010001001001001000110???00100010?0010010001001010??0010010??0010010100010001010101000100100001000100010001001000100010
+guragone  00010001000010001001000100010101000010100001100010100?00010010100001000100010100101001000100010??010000101000011000100010001010000100010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-9;
+    charset breast = 10-13;
+    charset come = 14-17;
+    charset die = 18-20;
+    charset dog = 21-24;
+    charset drink = 25-28;
+    charset ear = 29-30;
+    charset eye = 31-33;
+    charset fire = 34-37;
+    charset fish = 38-41;
+    charset full = 42-45;
+    charset hand = 46-49;
+    charset hear = 50-52;
+    charset horn = 53-54;
+    charset knee = 55-58;
+    charset leaf = 59-61;
+    charset liver = 62-64;
+    charset louse = 65-69;
+    charset mountain = 70-72;
+    charset name = 73-76;
+    charset new = 77-78;
+    charset night = 79-81;
+    charset nose = 82-84;
+    charset one = 85-87;
+    charset path = 88-90;
+    charset person = 91-94;
+    charset pl = 95-97;
+    charset see = 98-99;
+    charset sg = 100-104;
+    charset skin = 105-107;
+    charset star = 108-112;
+    charset stone = 113-116;
+    charset sun = 117-120;
+    charset tongue = 121-124;
+    charset tooth = 125-127;
+    charset tree = 128-131;
+    charset two = 132-135;
+    charset water = 136-139;
+END;

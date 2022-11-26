@@ -1,0 +1,346 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=15 NCHAR=278;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_siouan.blood.0028,
+        3 blood_siouan.blood.0029,
+        4 blood_siouan.blood.0030,
+        5 blood_siouan.blood.0031,
+        6 blood_siouan.blood.0032,
+        7 blood_siouan.blood.0033,
+        8 blood_siouan.blood.0034,
+        9 blood_siouan.blood.0035,
+        10 bone_0ascertainment,
+        11 bone_siouan.bone.0036,
+        12 bone_siouan.bone.0037,
+        13 breast_0ascertainment,
+        14 breast_siouan.breast.0038,
+        15 breast_siouan.breast.0039,
+        16 breast_siouan.breast.0040,
+        17 breast_siouan.breast.0041,
+        18 breast_siouan.breast.0042,
+        19 breast_siouan.breast.0043,
+        20 come_0ascertainment,
+        21 come_siouan.come.0044,
+        22 come_siouan.come.0045,
+        23 come_siouan.come.0046,
+        24 come_siouan.come.0047,
+        25 come_siouan.come.0048,
+        26 come_siouan.come.0049,
+        27 die_0ascertainment,
+        28 die_siouan.die.0050,
+        29 die_siouan.die.0051,
+        30 die_siouan.die.0052,
+        31 die_siouan.die.0053,
+        32 dog_0ascertainment,
+        33 dog_siouan.dog.0054,
+        34 dog_siouan.dog.0055,
+        35 dog_siouan.dog.0056,
+        36 dog_siouan.dog.0057,
+        37 dog_siouan.dog.0058,
+        38 drink_0ascertainment,
+        39 drink_siouan.drink.0059,
+        40 drink_siouan.drink.0060,
+        41 drink_siouan.drink.0061,
+        42 drink_siouan.drink.0062,
+        43 drink_siouan.drink.0063,
+        44 drink_siouan.drink.0064,
+        45 drink_siouan.drink.0065,
+        46 drink_siouan.drink.0066,
+        47 ear_0ascertainment,
+        48 ear_siouan.ear.0067,
+        49 ear_siouan.ear.0068,
+        50 ear_siouan.ear.0069,
+        51 ear_siouan.ear.0070,
+        52 ear_siouan.ear.0071,
+        53 ear_siouan.ear.0072,
+        54 ear_siouan.ear.0073,
+        55 eye_0ascertainment,
+        56 eye_siouan.eye.0074,
+        57 eye_siouan.eye.0075,
+        58 eye_siouan.eye.0076,
+        59 eye_siouan.eye.0077,
+        60 fire_0ascertainment,
+        61 fire_siouan.fire.0078,
+        62 fire_siouan.fire.0079,
+        63 fire_siouan.fire.0080,
+        64 fire_siouan.fire.0081,
+        65 fire_siouan.fire.0082,
+        66 fish_0ascertainment,
+        67 fish_siouan.fish.0083,
+        68 fish_siouan.fish.0084,
+        69 fish_siouan.fish.0085,
+        70 fish_siouan.fish.0086,
+        71 fish_siouan.fish.0087,
+        72 fish_siouan.fish.0088,
+        73 full_0ascertainment,
+        74 full_siouan.full.0089,
+        75 full_siouan.full.0090,
+        76 full_siouan.full.0091,
+        77 full_siouan.full.0092,
+        78 full_siouan.full.0093,
+        79 full_siouan.full.0094,
+        80 full_siouan.full.0095,
+        81 full_siouan.full.0096,
+        82 full_siouan.full.0097,
+        83 full_siouan.full.0098,
+        84 hand_0ascertainment,
+        85 hand_siouan.hand.0099,
+        86 hand_siouan.hand.0100,
+        87 hand_siouan.hand.0101,
+        88 hand_siouan.hand.0102,
+        89 hand_siouan.hand.0103,
+        90 hear_0ascertainment,
+        91 hear_siouan.hear.0104,
+        92 hear_siouan.hear.0105,
+        93 horn_0ascertainment,
+        94 horn_siouan.horn.0106,
+        95 horn_siouan.horn.0107,
+        96 horn_siouan.horn.0108,
+        97 horn_siouan.horn.0109,
+        98 horn_siouan.horn.0110,
+        99 knee_0ascertainment,
+        100 knee_siouan.knee.0111,
+        101 knee_siouan.knee.0112,
+        102 knee_siouan.knee.0113,
+        103 knee_siouan.knee.0114,
+        104 knee_siouan.knee.0115,
+        105 knee_siouan.knee.0116,
+        106 leaf_0ascertainment,
+        107 leaf_siouan.leaf.0117,
+        108 leaf_siouan.leaf.0118,
+        109 leaf_siouan.leaf.0119,
+        110 leaf_siouan.leaf.0120,
+        111 leaf_siouan.leaf.0121,
+        112 leaf_siouan.leaf.0122,
+        113 liver_0ascertainment,
+        114 liver_siouan.liver.0123,
+        115 liver_siouan.liver.0124,
+        116 liver_siouan.liver.0125,
+        117 liver_siouan.liver.0126,
+        118 liver_siouan.liver.0127,
+        119 liver_siouan.liver.0128,
+        120 liver_siouan.liver.0129,
+        121 louse_0ascertainment,
+        122 louse_siouan.louse.0130,
+        123 louse_siouan.louse.0131,
+        124 louse_siouan.louse.0132,
+        125 louse_siouan.louse.0133,
+        126 louse_siouan.louse.0134,
+        127 mountain_0ascertainment,
+        128 mountain_siouan.mountain.0135,
+        129 mountain_siouan.mountain.0136,
+        130 mountain_siouan.mountain.0137,
+        131 mountain_siouan.mountain.0138,
+        132 mountain_siouan.mountain.0139,
+        133 mountain_siouan.mountain.0140,
+        134 mountain_siouan.mountain.0141,
+        135 mountain_siouan.mountain.0142,
+        136 mountain_siouan.mountain.0143,
+        137 mountain_siouan.mountain.0144,
+        138 mountain_siouan.mountain.0145,
+        139 name_0ascertainment,
+        140 name_siouan.name.0146,
+        141 name_siouan.name.0147,
+        142 new_0ascertainment,
+        143 new_siouan.new.0148,
+        144 new_siouan.new.0149,
+        145 new_siouan.new.0150,
+        146 night_0ascertainment,
+        147 night_siouan.night.0151,
+        148 night_siouan.night.0152,
+        149 night_siouan.night.0153,
+        150 night_siouan.night.0154,
+        151 night_siouan.night.0155,
+        152 night_siouan.night.0156,
+        153 night_siouan.night.0157,
+        154 night_siouan.night.0158,
+        155 night_siouan.night.0159,
+        156 night_siouan.night.0160,
+        157 nose_0ascertainment,
+        158 nose_siouan.nose.0161,
+        159 nose_siouan.nose.0162,
+        160 nose_siouan.nose.0163,
+        161 one_0ascertainment,
+        162 one_siouan.one.0164,
+        163 one_siouan.one.0165,
+        164 one_siouan.one.0166,
+        165 one_siouan.one.0167,
+        166 one_siouan.one.0168,
+        167 path_0ascertainment,
+        168 path_siouan.path.0169,
+        169 path_siouan.path.0170,
+        170 path_siouan.path.0171,
+        171 path_siouan.path.0172,
+        172 path_siouan.path.0173,
+        173 path_siouan.path.0174,
+        174 path_siouan.path.0175,
+        175 person_0ascertainment,
+        176 person_siouan.person.0176,
+        177 person_siouan.person.0177,
+        178 person_siouan.person.0178,
+        179 person_siouan.person.0179,
+        180 pl_0ascertainment,
+        181 pl_siouan.1pl.0001,
+        182 pl_siouan.1pl.0002,
+        183 pl_siouan.1pl.0003,
+        184 pl_siouan.1pl.0004,
+        185 pl_siouan.1pl.0005,
+        186 pl_siouan.1pl.0006,
+        187 pl_siouan.1pl.0007,
+        188 pl_siouan.1pl.0008,
+        189 pl_siouan.1pl.0009,
+        190 pl_siouan.1pl.0010,
+        191 pl_siouan.1pl.0011,
+        192 pl_siouan.1pl.0012,
+        193 see_0ascertainment,
+        194 see_siouan.see.0180,
+        195 see_siouan.see.0181,
+        196 see_siouan.see.0182,
+        197 see_siouan.see.0183,
+        198 see_siouan.see.0184,
+        199 see_siouan.see.0185,
+        200 sg_0ascertainment,
+        201 sg_siouan.1sg.0013,
+        202 sg_siouan.1sg.0014,
+        203 sg_siouan.1sg.0015,
+        204 sg_siouan.1sg.0016,
+        205 sg_siouan.1sg.0017,
+        206 sg_siouan.1sg.0018,
+        207 sg_siouan.1sg.0019,
+        208 sg_siouan.1sg.0020,
+        209 sg_siouan.2sg.0021,
+        210 sg_siouan.2sg.0022,
+        211 sg_siouan.2sg.0023,
+        212 sg_siouan.2sg.0024,
+        213 sg_siouan.2sg.0025,
+        214 sg_siouan.2sg.0026,
+        215 sg_siouan.2sg.0027,
+        216 skin_0ascertainment,
+        217 skin_siouan.skin.0186,
+        218 skin_siouan.skin.0187,
+        219 skin_siouan.skin.0188,
+        220 skin_siouan.skin.0189,
+        221 skin_siouan.skin.0190,
+        222 skin_siouan.skin.0191,
+        223 skin_siouan.skin.0192,
+        224 skin_siouan.skin.0193,
+        225 skin_siouan.skin.0194,
+        226 skin_siouan.skin.0195,
+        227 star_0ascertainment,
+        228 star_siouan.star.0196,
+        229 star_siouan.star.0197,
+        230 star_siouan.star.0198,
+        231 star_siouan.star.0199,
+        232 star_siouan.star.0200,
+        233 star_siouan.star.0201,
+        234 stone_0ascertainment,
+        235 stone_siouan.stone.0202,
+        236 stone_siouan.stone.0203,
+        237 stone_siouan.stone.0204,
+        238 stone_siouan.stone.0205,
+        239 stone_siouan.stone.0206,
+        240 stone_siouan.stone.0207,
+        241 stone_siouan.stone.0208,
+        242 stone_siouan.stone.0209,
+        243 stone_siouan.stone.0210,
+        244 sun_0ascertainment,
+        245 sun_siouan.sun.0211,
+        246 sun_siouan.sun.0212,
+        247 sun_siouan.sun.0213,
+        248 sun_siouan.sun.0214,
+        249 sun_siouan.sun.0215,
+        250 sun_siouan.sun.0216,
+        251 sun_siouan.sun.0217,
+        252 sun_siouan.sun.0218,
+        253 tongue_0ascertainment,
+        254 tongue_siouan.tongue.0219,
+        255 tongue_siouan.tongue.0220,
+        256 tongue_siouan.tongue.0221,
+        257 tooth_0ascertainment,
+        258 tooth_siouan.tooth.0222,
+        259 tooth_siouan.tooth.0223,
+        260 tooth_siouan.tooth.0224,
+        261 tree_0ascertainment,
+        262 tree_siouan.tree.0225,
+        263 tree_siouan.tree.0226,
+        264 tree_siouan.tree.0227,
+        265 tree_siouan.tree.0228,
+        266 tree_siouan.tree.0229,
+        267 tree_siouan.tree.0230,
+        268 tree_siouan.tree.0231,
+        269 tree_siouan.tree.0232,
+        270 two_0ascertainment,
+        271 two_siouan.two.0233,
+        272 two_siouan.two.0234,
+        273 water_0ascertainment,
+        274 water_siouan.water.0235,
+        275 water_siouan.water.0236,
+        276 water_siouan.water.0237,
+        277 water_siouan.water.0238,
+        278 water_siouan.water.0239
+;
+
+MATRIX
+assiniboine 01000000001001000000??????0100001000001000000001000000010000100000??????0100000000001000001001000001000000100000010000000100000100000000000100???0100000000001000100000100000001000010000000000001000000000000001000000010000000000100000010000000001000000001000100010000000010010000
+biloxi      0010000000100100000010000001010010000001000000001000000010001000001000010??????????0010000100100000010000001010000100000001000001000000000010010000100000010010000100001100000001000010000000000001000001000000001000000??????????0100000010000000000100000001000010001000000010001000
+catawba     000100000010010000001000000010000100000010000000010000000100100000010000001000000000001000100?????00010000001000001000000?????0001000000000??0010000100000000100010000000100000010000010000000000001000001000000001010000100000000001000000100000100001000000???0001000100000010000100
+crow        000010000010010000001000000100000010000001000000001100010000010010??????00010000001000010010001001000010000001000001000000010000001000000001000010001000000000100100000000100001000000010000010000001000001000000001000000100000000001000000100000000001000001000010000010000010000011
+dakota      01000000001000100000100000010000100000100000000000010001000010000000100000001000000010000010010000000001000001000100000001000000000100000001001000000100000001000100000010000001000010000000000001000000000100001000000000010000000100000001000000000000100001000100010000000010010000
+hidatsa     0000010000100110000011000001000000101000001001000010010100000010000001000000010000000001001000010000000010000010001000000?????0000001000000110001000001000010010010000000001010????0000010000010000010000000100000010000000010000000010000000100001000000101010001100????????010010000
+kansa       00000010001001000000100000010000100000000001000100000001000010000010000000000010000010000010010000000010000000010000100101000000000001000001001000000001000000100100000000001001000010000000000000101000000001000000100000010001010000100000001000001100000001100100010000000010010000
+lakhota     0100000000100100000000100001000010000010000000000001000????01000000010000??????????01000001001000001000000100000010000000100000000010000000??01000100000000001000100000???????0????0100000000000010000000001000010000000??????????0100000011000000001000000001000100010000000011010000
+lakota      01000000001001100000100000010000100000100000000000010001000010000000100000000001000010000010010000010000001000000100000001000000000100000001001000100000000001000100000010000000010010000000000101000000000111011000111000010000100100000001000000001000000001000100010000000010010000
+mandan      0000000100100001001010000001000000010000001000000000100000100001001000000000000010000000100100001000001000000100000001000100000000010000000100100000000010000100010000001000000????000000100000000000100000100001000000000000101000000011000000100001000000001000100000001000010010000
+ofo         000000001010000010000001000100001000000000001001000000000100100000100000000000001000010000100100000??????0000100000000100000100000000010000??010000000000100000100010000100000010000????????????00100000???????????????000000010000100000000000010000000001000010010010000000010001000
+omaha_ponca 00000010001000000100100000010000100000000001000100000001000010000010000000000010000010000010010000000010000000010100000001000100000000010001001000000001000000100100000000001001000000000010000000100000000001000001000000010001000000100010000000001000000001000100000000100010001000
+osage       00000010001001000000100010010010100000000001000100000001000010000010000000000010000000010010010000000010000000010000100001000000000000001001001000000001001000100100100100000001000000000001000000101000000001000000100000000001000000100000001000001000000001000100010000000010001000
+quapaw      0000001000100100000010000001000010000000000100010000000100001000001000000000001000001000001001000000001000000100010000000100000???????????01001000??????????01000?????01000000010000????????????00100000???????????????000010000000000100000001000001000000001000100000000010010001000
+winnebago   01000000000101000000100101010000100000000001000100010001000010000000001000000000010010000010010000000010000001000100000001000000000100000101001000000001000000100000010010000001001000000000100000000010000000100001000000010000000100000001000000001000000001000100000000001010001000
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-9;
+    charset bone = 10-12;
+    charset breast = 13-19;
+    charset come = 20-26;
+    charset die = 27-31;
+    charset dog = 32-37;
+    charset drink = 38-46;
+    charset ear = 47-54;
+    charset eye = 55-59;
+    charset fire = 60-65;
+    charset fish = 66-72;
+    charset full = 73-83;
+    charset hand = 84-89;
+    charset hear = 90-92;
+    charset horn = 93-98;
+    charset knee = 99-105;
+    charset leaf = 106-112;
+    charset liver = 113-120;
+    charset louse = 121-126;
+    charset mountain = 127-138;
+    charset name = 139-141;
+    charset new = 142-145;
+    charset night = 146-156;
+    charset nose = 157-160;
+    charset one = 161-166;
+    charset path = 167-174;
+    charset person = 175-179;
+    charset pl = 180-192;
+    charset see = 193-199;
+    charset sg = 200-215;
+    charset skin = 216-226;
+    charset star = 227-233;
+    charset stone = 234-243;
+    charset sun = 244-252;
+    charset tongue = 253-256;
+    charset tooth = 257-260;
+    charset tree = 261-269;
+    charset two = 270-272;
+    charset water = 273-278;
+END;

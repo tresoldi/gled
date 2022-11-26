@@ -1,0 +1,245 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=5 NCHAR=187;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_abkhazadyge.blood.0010,
+        3 blood_abkhazadyge.blood.0011,
+        4 blood_abkhazadyge.blood.0012,
+        5 bone_0ascertainment,
+        6 bone_abkhazadyge.bone.0013,
+        7 bone_abkhazadyge.bone.0014,
+        8 bone_abkhazadyge.bone.0015,
+        9 breast_0ascertainment,
+        10 breast_abkhazadyge.breast.0016,
+        11 breast_abkhazadyge.breast.0017,
+        12 breast_abkhazadyge.breast.0018,
+        13 breast_abkhazadyge.breast.0019,
+        14 breast_abkhazadyge.breast.0020,
+        15 come_0ascertainment,
+        16 come_abkhazadyge.come.0021,
+        17 come_abkhazadyge.come.0022,
+        18 come_abkhazadyge.come.0023,
+        19 die_0ascertainment,
+        20 die_abkhazadyge.die.0024,
+        21 die_abkhazadyge.die.0025,
+        22 die_abkhazadyge.die.0026,
+        23 die_abkhazadyge.die.0027,
+        24 dog_0ascertainment,
+        25 dog_abkhazadyge.dog.0028,
+        26 dog_abkhazadyge.dog.0029,
+        27 dog_abkhazadyge.dog.0030,
+        28 dog_abkhazadyge.dog.0031,
+        29 drink_0ascertainment,
+        30 drink_abkhazadyge.drink.0032,
+        31 drink_abkhazadyge.drink.0033,
+        32 drink_abkhazadyge.drink.0034,
+        33 ear_0ascertainment,
+        34 ear_abkhazadyge.ear.0035,
+        35 ear_abkhazadyge.ear.0036,
+        36 eye_0ascertainment,
+        37 eye_abkhazadyge.eye.0037,
+        38 eye_abkhazadyge.eye.0038,
+        39 eye_abkhazadyge.eye.0039,
+        40 fire_0ascertainment,
+        41 fire_abkhazadyge.fire.0040,
+        42 fire_abkhazadyge.fire.0041,
+        43 fire_abkhazadyge.fire.0042,
+        44 fish_0ascertainment,
+        45 fish_abkhazadyge.fish.0043,
+        46 fish_abkhazadyge.fish.0044,
+        47 fish_abkhazadyge.fish.0045,
+        48 fish_abkhazadyge.fish.0046,
+        49 full_0ascertainment,
+        50 full_abkhazadyge.full.0047,
+        51 full_abkhazadyge.full.0048,
+        52 full_abkhazadyge.full.0049,
+        53 full_abkhazadyge.full.0050,
+        54 full_abkhazadyge.full.0051,
+        55 hand_0ascertainment,
+        56 hand_abkhazadyge.hand.0052,
+        57 hand_abkhazadyge.hand.0053,
+        58 hand_abkhazadyge.hand.0054,
+        59 hand_abkhazadyge.hand.0055,
+        60 hear_0ascertainment,
+        61 hear_abkhazadyge.hear.0056,
+        62 hear_abkhazadyge.hear.0057,
+        63 hear_abkhazadyge.hear.0058,
+        64 horn_0ascertainment,
+        65 horn_abkhazadyge.horn.0059,
+        66 horn_abkhazadyge.horn.0060,
+        67 horn_abkhazadyge.horn.0061,
+        68 horn_abkhazadyge.horn.0062,
+        69 knee_0ascertainment,
+        70 knee_abkhazadyge.knee.0063,
+        71 knee_abkhazadyge.knee.0064,
+        72 knee_abkhazadyge.knee.0065,
+        73 leaf_0ascertainment,
+        74 leaf_abkhazadyge.leaf.0066,
+        75 leaf_abkhazadyge.leaf.0067,
+        76 leaf_abkhazadyge.leaf.0068,
+        77 leaf_abkhazadyge.leaf.0069,
+        78 leaf_abkhazadyge.leaf.0070,
+        79 liver_0ascertainment,
+        80 liver_abkhazadyge.liver.0071,
+        81 liver_abkhazadyge.liver.0072,
+        82 liver_abkhazadyge.liver.0073,
+        83 liver_abkhazadyge.liver.0074,
+        84 liver_abkhazadyge.liver.0075,
+        85 louse_0ascertainment,
+        86 louse_abkhazadyge.louse.0076,
+        87 louse_abkhazadyge.louse.0077,
+        88 louse_abkhazadyge.louse.0078,
+        89 mountain_0ascertainment,
+        90 mountain_abkhazadyge.mountain.0079,
+        91 mountain_abkhazadyge.mountain.0080,
+        92 mountain_abkhazadyge.mountain.0081,
+        93 mountain_abkhazadyge.mountain.0082,
+        94 mountain_abkhazadyge.mountain.0083,
+        95 mountain_abkhazadyge.mountain.0084,
+        96 name_0ascertainment,
+        97 name_abkhazadyge.name.0085,
+        98 name_abkhazadyge.name.0086,
+        99 name_abkhazadyge.name.0087,
+        100 new_0ascertainment,
+        101 new_abkhazadyge.new.0088,
+        102 new_abkhazadyge.new.0089,
+        103 new_abkhazadyge.new.0090,
+        104 new_abkhazadyge.new.0091,
+        105 new_abkhazadyge.new.0092,
+        106 night_0ascertainment,
+        107 night_abkhazadyge.night.0093,
+        108 night_abkhazadyge.night.0094,
+        109 night_abkhazadyge.night.0095,
+        110 night_abkhazadyge.night.0096,
+        111 night_abkhazadyge.night.0097,
+        112 night_abkhazadyge.night.0098,
+        113 nose_0ascertainment,
+        114 nose_abkhazadyge.nose.0099,
+        115 nose_abkhazadyge.nose.0100,
+        116 nose_abkhazadyge.nose.0101,
+        117 nose_abkhazadyge.nose.0102,
+        118 one_0ascertainment,
+        119 one_abkhazadyge.one.0103,
+        120 one_abkhazadyge.one.0104,
+        121 one_abkhazadyge.one.0105,
+        122 one_abkhazadyge.one.0106,
+        123 path_0ascertainment,
+        124 path_abkhazadyge.path.0107,
+        125 path_abkhazadyge.path.0108,
+        126 path_abkhazadyge.path.0109,
+        127 person_0ascertainment,
+        128 person_abkhazadyge.person.0110,
+        129 person_abkhazadyge.person.0111,
+        130 person_abkhazadyge.person.0112,
+        131 person_abkhazadyge.person.0113,
+        132 person_abkhazadyge.person.0114,
+        133 pl_0ascertainment,
+        134 pl_abkhazadyge.1pl.0001,
+        135 pl_abkhazadyge.1pl.0002,
+        136 pl_abkhazadyge.1pl.0003,
+        137 pl_abkhazadyge.1pl.0004,
+        138 pl_abkhazadyge.1pl.0005,
+        139 see_0ascertainment,
+        140 see_abkhazadyge.see.0115,
+        141 see_abkhazadyge.see.0116,
+        142 see_abkhazadyge.see.0117,
+        143 sg_0ascertainment,
+        144 sg_abkhazadyge.1sg.0006,
+        145 sg_abkhazadyge.1sg.0007,
+        146 sg_abkhazadyge.2sg.0008,
+        147 sg_abkhazadyge.2sg.0009,
+        148 skin_0ascertainment,
+        149 skin_abkhazadyge.skin.0118,
+        150 skin_abkhazadyge.skin.0119,
+        151 skin_abkhazadyge.skin.0120,
+        152 skin_abkhazadyge.skin.0121,
+        153 skin_abkhazadyge.skin.0122,
+        154 star_0ascertainment,
+        155 star_abkhazadyge.star.0123,
+        156 star_abkhazadyge.star.0124,
+        157 star_abkhazadyge.star.0125,
+        158 star_abkhazadyge.star.0126,
+        159 stone_0ascertainment,
+        160 stone_abkhazadyge.stone.0127,
+        161 stone_abkhazadyge.stone.0128,
+        162 stone_abkhazadyge.stone.0129,
+        163 stone_abkhazadyge.stone.0130,
+        164 sun_0ascertainment,
+        165 sun_abkhazadyge.sun.0131,
+        166 sun_abkhazadyge.sun.0132,
+        167 sun_abkhazadyge.sun.0133,
+        168 sun_abkhazadyge.sun.0134,
+        169 tongue_0ascertainment,
+        170 tongue_abkhazadyge.tongue.0135,
+        171 tongue_abkhazadyge.tongue.0136,
+        172 tooth_0ascertainment,
+        173 tooth_abkhazadyge.tooth.0137,
+        174 tooth_abkhazadyge.tooth.0138,
+        175 tooth_abkhazadyge.tooth.0139,
+        176 tree_0ascertainment,
+        177 tree_abkhazadyge.tree.0140,
+        178 tree_abkhazadyge.tree.0141,
+        179 tree_abkhazadyge.tree.0142,
+        180 tree_abkhazadyge.tree.0143,
+        181 two_0ascertainment,
+        182 two_abkhazadyge.two.0144,
+        183 two_abkhazadyge.two.0145,
+        184 two_abkhazadyge.two.0146,
+        185 water_0ascertainment,
+        186 water_abkhazadyge.water.0147,
+        187 water_abkhazadyge.water.0148
+;
+
+MATRIX
+abaza     010001000100000100010000100001000100100010001000010000010010100010000100010000010001010001000000100010000010000001000010000???0100000100000100010100100000100001000010000100100010000100010
+abkhaz_2  0010001000100001000100001000010001001000010001000100000100001000010001000010000010000100001000000100010000010000001000010101000010000010000100011100010000010000100001000100010010000010010
+adyghe_2  0001000100010000100010000100001000100100001000100010100010000100001000100001000001000010000100000010001000001000000100001000100001000001000010001010001000001000010000100010001001000001001
+kabardian 0001000100010000100010000010001000100010001000100010010????0010000100010000010000010001000001000001000010000010000010000100???0000100000100010001010000100001000010000100010001000100001001
+ubykh     0001010000001100010001100001000100101000010000010001000001000010000100010000010000010001000001100010000010000011000010001000010000010000010001010100000010000100001000010100001000010001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-8;
+    charset breast = 9-14;
+    charset come = 15-18;
+    charset die = 19-23;
+    charset dog = 24-28;
+    charset drink = 29-32;
+    charset ear = 33-35;
+    charset eye = 36-39;
+    charset fire = 40-43;
+    charset fish = 44-48;
+    charset full = 49-54;
+    charset hand = 55-59;
+    charset hear = 60-63;
+    charset horn = 64-68;
+    charset knee = 69-72;
+    charset leaf = 73-78;
+    charset liver = 79-84;
+    charset louse = 85-88;
+    charset mountain = 89-95;
+    charset name = 96-99;
+    charset new = 100-105;
+    charset night = 106-112;
+    charset nose = 113-117;
+    charset one = 118-122;
+    charset path = 123-126;
+    charset person = 127-132;
+    charset pl = 133-138;
+    charset see = 139-142;
+    charset sg = 143-147;
+    charset skin = 148-153;
+    charset star = 154-158;
+    charset stone = 159-163;
+    charset sun = 164-168;
+    charset tongue = 169-171;
+    charset tooth = 172-175;
+    charset tree = 176-180;
+    charset two = 181-184;
+    charset water = 185-187;
+END;

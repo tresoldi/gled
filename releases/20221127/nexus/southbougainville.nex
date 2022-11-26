@@ -1,0 +1,214 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=158;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_southbougainville.blood.0007,
+        3 blood_southbougainville.blood.0008,
+        4 blood_southbougainville.blood.0009,
+        5 blood_southbougainville.blood.0010,
+        6 bone_0ascertainment,
+        7 bone_southbougainville.bone.0011,
+        8 bone_southbougainville.bone.0012,
+        9 breast_0ascertainment,
+        10 breast_southbougainville.breast.0013,
+        11 breast_southbougainville.breast.0014,
+        12 breast_southbougainville.breast.0015,
+        13 breast_southbougainville.breast.0016,
+        14 breast_southbougainville.breast.0017,
+        15 come_0ascertainment,
+        16 come_southbougainville.come.0018,
+        17 come_southbougainville.come.0019,
+        18 come_southbougainville.come.0020,
+        19 die_0ascertainment,
+        20 die_southbougainville.die.0021,
+        21 die_southbougainville.die.0022,
+        22 die_southbougainville.die.0023,
+        23 dog_0ascertainment,
+        24 dog_southbougainville.dog.0024,
+        25 dog_southbougainville.dog.0025,
+        26 dog_southbougainville.dog.0026,
+        27 dog_southbougainville.dog.0027,
+        28 dog_southbougainville.dog.0028,
+        29 drink_0ascertainment,
+        30 drink_southbougainville.drink.0029,
+        31 ear_0ascertainment,
+        32 ear_southbougainville.ear.0030,
+        33 ear_southbougainville.ear.0031,
+        34 ear_southbougainville.ear.0032,
+        35 eye_0ascertainment,
+        36 eye_southbougainville.eye.0033,
+        37 eye_southbougainville.eye.0034,
+        38 eye_southbougainville.eye.0035,
+        39 fire_0ascertainment,
+        40 fire_southbougainville.fire.0036,
+        41 fire_southbougainville.fire.0037,
+        42 fire_southbougainville.fire.0038,
+        43 fire_southbougainville.fire.0039,
+        44 fish_0ascertainment,
+        45 fish_southbougainville.fish.0040,
+        46 fish_southbougainville.fish.0041,
+        47 fish_southbougainville.fish.0042,
+        48 fish_southbougainville.fish.0043,
+        49 full_0ascertainment,
+        50 full_southbougainville.full.0044,
+        51 full_southbougainville.full.0045,
+        52 full_southbougainville.full.0046,
+        53 hand_0ascertainment,
+        54 hand_southbougainville.hand.0047,
+        55 hand_southbougainville.hand.0048,
+        56 hear_0ascertainment,
+        57 hear_southbougainville.hear.0049,
+        58 hear_southbougainville.hear.0050,
+        59 hear_southbougainville.hear.0051,
+        60 hear_southbougainville.hear.0052,
+        61 horn_0ascertainment,
+        62 horn_southbougainville.horn.0053,
+        63 knee_0ascertainment,
+        64 knee_southbougainville.knee.0054,
+        65 knee_southbougainville.knee.0055,
+        66 knee_southbougainville.knee.0056,
+        67 leaf_0ascertainment,
+        68 leaf_southbougainville.leaf.0057,
+        69 leaf_southbougainville.leaf.0058,
+        70 liver_0ascertainment,
+        71 liver_southbougainville.liver.0059,
+        72 louse_0ascertainment,
+        73 louse_southbougainville.louse.0060,
+        74 louse_southbougainville.louse.0061,
+        75 louse_southbougainville.louse.0062,
+        76 mountain_0ascertainment,
+        77 mountain_southbougainville.mountain.0063,
+        78 mountain_southbougainville.mountain.0064,
+        79 mountain_southbougainville.mountain.0065,
+        80 mountain_southbougainville.mountain.0066,
+        81 mountain_southbougainville.mountain.0067,
+        82 name_0ascertainment,
+        83 name_southbougainville.name.0068,
+        84 name_southbougainville.name.0069,
+        85 name_southbougainville.name.0070,
+        86 new_0ascertainment,
+        87 new_southbougainville.new.0071,
+        88 new_southbougainville.new.0072,
+        89 new_southbougainville.new.0073,
+        90 new_southbougainville.new.0074,
+        91 night_0ascertainment,
+        92 night_southbougainville.night.0075,
+        93 night_southbougainville.night.0076,
+        94 night_southbougainville.night.0077,
+        95 nose_0ascertainment,
+        96 nose_southbougainville.nose.0078,
+        97 nose_southbougainville.nose.0079,
+        98 one_0ascertainment,
+        99 one_southbougainville.one.0080,
+        100 path_0ascertainment,
+        101 path_southbougainville.path.0081,
+        102 path_southbougainville.path.0082,
+        103 path_southbougainville.path.0083,
+        104 path_southbougainville.path.0084,
+        105 path_southbougainville.path.0085,
+        106 path_southbougainville.path.0086,
+        107 path_southbougainville.path.0087,
+        108 person_0ascertainment,
+        109 person_southbougainville.person.0088,
+        110 person_southbougainville.person.0089,
+        111 pl_0ascertainment,
+        112 pl_southbougainville.1pl.0001,
+        113 pl_southbougainville.1pl.0002,
+        114 see_0ascertainment,
+        115 see_southbougainville.see.0090,
+        116 see_southbougainville.see.0091,
+        117 see_southbougainville.see.0092,
+        118 see_southbougainville.see.0093,
+        119 see_southbougainville.see.0094,
+        120 sg_0ascertainment,
+        121 sg_southbougainville.1sg.0003,
+        122 sg_southbougainville.1sg.0004,
+        123 sg_southbougainville.2sg.0005,
+        124 sg_southbougainville.2sg.0006,
+        125 skin_0ascertainment,
+        126 skin_southbougainville.skin.0095,
+        127 skin_southbougainville.skin.0096,
+        128 skin_southbougainville.skin.0097,
+        129 skin_southbougainville.skin.0098,
+        130 skin_southbougainville.skin.0099,
+        131 star_0ascertainment,
+        132 star_southbougainville.star.0100,
+        133 star_southbougainville.star.0101,
+        134 stone_0ascertainment,
+        135 stone_southbougainville.stone.0102,
+        136 stone_southbougainville.stone.0103,
+        137 stone_southbougainville.stone.0104,
+        138 sun_0ascertainment,
+        139 sun_southbougainville.sun.0105,
+        140 sun_southbougainville.sun.0106,
+        141 sun_southbougainville.sun.0107,
+        142 sun_southbougainville.sun.0108,
+        143 tongue_0ascertainment,
+        144 tongue_southbougainville.tongue.0109,
+        145 tooth_0ascertainment,
+        146 tooth_southbougainville.tooth.0110,
+        147 tooth_southbougainville.tooth.0111,
+        148 tree_0ascertainment,
+        149 tree_southbougainville.tree.0112,
+        150 two_0ascertainment,
+        151 two_southbougainville.two.0113,
+        152 two_southbougainville.two.0114,
+        153 two_southbougainville.two.0115,
+        154 two_southbougainville.two.0116,
+        155 water_0ascertainment,
+        156 water_southbougainville.water.0117,
+        157 water_southbougainville.water.0118,
+        158 water_southbougainville.water.0119
+;
+
+MATRIX
+buin   0100101001001101000100010011010100010001000010110100010010000?011101001010001000001000100101100100101001111010010010100010100101110100101010010101001010110100
+motuna 0010001000100000100101001000010010001100101001000010011001010?01000110?0010001011011100100001101001001001000??0010010110????01000001100100010001001010????0101
+nasioi 0001000100010000010010000100010001000100010000100001010000100101000100?000100010001000001000100010100010000001001000100001010010000010010000100?0??0?001100010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-8;
+    charset breast = 9-14;
+    charset come = 15-18;
+    charset die = 19-22;
+    charset dog = 23-28;
+    charset drink = 29-30;
+    charset ear = 31-34;
+    charset eye = 35-38;
+    charset fire = 39-43;
+    charset fish = 44-48;
+    charset full = 49-52;
+    charset hand = 53-55;
+    charset hear = 56-60;
+    charset horn = 61-62;
+    charset knee = 63-66;
+    charset leaf = 67-69;
+    charset liver = 70-71;
+    charset louse = 72-75;
+    charset mountain = 76-81;
+    charset name = 82-85;
+    charset new = 86-90;
+    charset night = 91-94;
+    charset nose = 95-97;
+    charset one = 98-99;
+    charset path = 100-107;
+    charset person = 108-110;
+    charset pl = 111-113;
+    charset see = 114-119;
+    charset sg = 120-124;
+    charset skin = 125-130;
+    charset star = 131-133;
+    charset stone = 134-137;
+    charset sun = 138-142;
+    charset tongue = 143-144;
+    charset tooth = 145-147;
+    charset tree = 148-149;
+    charset two = 150-154;
+    charset water = 155-158;
+END;

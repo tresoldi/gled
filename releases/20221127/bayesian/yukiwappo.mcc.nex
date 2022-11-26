@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			NorthernYukian_yuki1243
+			Wappo_wapp1239
+			;
+End;
+Begin trees;
+	Translate
+		   1 NorthernYukian_yuki1243,
+		   2 Wappo_wapp1239
+;
+tree TREE1 = (1[&height=0.0,length=5.5391819236152715,length_95%_HPD={0.5445,18.779},length_median=2.1272,length_range={0.4659,217.0876},rate=0.9849293541291781,rate_95%_HPD={0.5596,1.2553},rate_median=1.0025,rate_range={0.1236,1.2553}]:5.5391819236152715,2[&height=0.0,length=5.5391819236152715,length_95%_HPD={0.5445,18.779},length_median=2.1272,length_range={0.4659,217.0876},rate=0.9866408518296366,rate_95%_HPD={0.5746,1.2553},rate_median=1.0014,rate_range={0.1236,1.2554}]:5.5391819236152715)[&CAheight_95%_HPD={0.5445,18.779},CAheight_mean=5.5391819236152715,CAheight_median=2.1272,CAheight_range={0.4659,217.0876},height=5.5391819236152715,height_95%_HPD={0.5445,18.779},height_median=2.1272,height_range={0.4659,217.0876},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

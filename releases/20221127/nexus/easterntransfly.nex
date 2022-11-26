@@ -1,0 +1,273 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=18 NCHAR=202;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_easterntransfly.blood.0009,
+        3 blood_easterntransfly.blood.0010,
+        4 blood_easterntransfly.blood.0011,
+        5 blood_easterntransfly.blood.0012,
+        6 blood_easterntransfly.blood.0013,
+        7 blood_easterntransfly.blood.0014,
+        8 blood_easterntransfly.blood.0015,
+        9 blood_easterntransfly.blood.0016,
+        10 bone_0ascertainment,
+        11 bone_easterntransfly.bone.0017,
+        12 bone_easterntransfly.bone.0018,
+        13 breast_0ascertainment,
+        14 breast_easterntransfly.breast.0019,
+        15 come_0ascertainment,
+        16 come_easterntransfly.come.0020,
+        17 come_easterntransfly.come.0021,
+        18 come_easterntransfly.come.0022,
+        19 come_easterntransfly.come.0023,
+        20 come_easterntransfly.come.0024,
+        21 come_easterntransfly.come.0025,
+        22 die_0ascertainment,
+        23 die_easterntransfly.die.0026,
+        24 die_easterntransfly.die.0027,
+        25 die_easterntransfly.die.0028,
+        26 die_easterntransfly.die.0029,
+        27 die_easterntransfly.die.0030,
+        28 die_easterntransfly.die.0031,
+        29 die_easterntransfly.die.0032,
+        30 die_easterntransfly.die.0033,
+        31 dog_0ascertainment,
+        32 dog_easterntransfly.dog.0034,
+        33 dog_easterntransfly.dog.0035,
+        34 dog_easterntransfly.dog.0036,
+        35 drink_0ascertainment,
+        36 drink_easterntransfly.drink.0037,
+        37 drink_easterntransfly.drink.0038,
+        38 drink_easterntransfly.drink.0039,
+        39 drink_easterntransfly.drink.0040,
+        40 ear_0ascertainment,
+        41 ear_easterntransfly.ear.0041,
+        42 ear_easterntransfly.ear.0042,
+        43 ear_easterntransfly.ear.0043,
+        44 ear_easterntransfly.ear.0044,
+        45 ear_easterntransfly.ear.0045,
+        46 eye_0ascertainment,
+        47 eye_easterntransfly.eye.0046,
+        48 eye_easterntransfly.eye.0047,
+        49 eye_easterntransfly.eye.0048,
+        50 eye_easterntransfly.eye.0049,
+        51 eye_easterntransfly.eye.0050,
+        52 eye_easterntransfly.eye.0051,
+        53 fire_0ascertainment,
+        54 fire_easterntransfly.fire.0052,
+        55 fire_easterntransfly.fire.0053,
+        56 fire_easterntransfly.fire.0054,
+        57 fire_easterntransfly.fire.0055,
+        58 fire_easterntransfly.fire.0056,
+        59 fish_0ascertainment,
+        60 fish_easterntransfly.fish.0057,
+        61 fish_easterntransfly.fish.0058,
+        62 fish_easterntransfly.fish.0059,
+        63 fish_easterntransfly.fish.0060,
+        64 fish_easterntransfly.fish.0061,
+        65 full_0ascertainment,
+        66 full_easterntransfly.full.0062,
+        67 full_easterntransfly.full.0063,
+        68 full_easterntransfly.full.0064,
+        69 full_easterntransfly.full.0065,
+        70 full_easterntransfly.full.0066,
+        71 full_easterntransfly.full.0067,
+        72 full_easterntransfly.full.0068,
+        73 hand_0ascertainment,
+        74 hand_easterntransfly.hand.0069,
+        75 hand_easterntransfly.hand.0070,
+        76 hand_easterntransfly.hand.0071,
+        77 hear_0ascertainment,
+        78 hear_easterntransfly.hear.0072,
+        79 hear_easterntransfly.hear.0073,
+        80 hear_easterntransfly.hear.0074,
+        81 hear_easterntransfly.hear.0075,
+        82 horn_0ascertainment,
+        83 horn_easterntransfly.horn.0076,
+        84 horn_easterntransfly.horn.0077,
+        85 horn_easterntransfly.horn.0078,
+        86 knee_0ascertainment,
+        87 knee_easterntransfly.knee.0079,
+        88 knee_easterntransfly.knee.0080,
+        89 knee_easterntransfly.knee.0081,
+        90 knee_easterntransfly.knee.0082,
+        91 knee_easterntransfly.knee.0083,
+        92 knee_easterntransfly.knee.0084,
+        93 knee_easterntransfly.knee.0085,
+        94 knee_easterntransfly.knee.0086,
+        95 leaf_0ascertainment,
+        96 leaf_easterntransfly.leaf.0087,
+        97 leaf_easterntransfly.leaf.0088,
+        98 leaf_easterntransfly.leaf.0089,
+        99 liver_0ascertainment,
+        100 liver_easterntransfly.liver.0090,
+        101 liver_easterntransfly.liver.0091,
+        102 liver_easterntransfly.liver.0092,
+        103 liver_easterntransfly.liver.0093,
+        104 liver_easterntransfly.liver.0094,
+        105 louse_0ascertainment,
+        106 louse_easterntransfly.louse.0095,
+        107 mountain_0ascertainment,
+        108 mountain_easterntransfly.mountain.0096,
+        109 mountain_easterntransfly.mountain.0097,
+        110 mountain_easterntransfly.mountain.0098,
+        111 mountain_easterntransfly.mountain.0099,
+        112 mountain_easterntransfly.mountain.0100,
+        113 mountain_easterntransfly.mountain.0101,
+        114 name_0ascertainment,
+        115 name_easterntransfly.name.0102,
+        116 new_0ascertainment,
+        117 new_easterntransfly.new.0103,
+        118 new_easterntransfly.new.0104,
+        119 new_easterntransfly.new.0105,
+        120 night_0ascertainment,
+        121 night_easterntransfly.night.0106,
+        122 night_easterntransfly.night.0107,
+        123 night_easterntransfly.night.0108,
+        124 night_easterntransfly.night.0109,
+        125 night_easterntransfly.night.0110,
+        126 nose_0ascertainment,
+        127 nose_easterntransfly.nose.0111,
+        128 nose_easterntransfly.nose.0112,
+        129 one_0ascertainment,
+        130 one_easterntransfly.one.0113,
+        131 one_easterntransfly.one.0114,
+        132 one_easterntransfly.one.0115,
+        133 path_0ascertainment,
+        134 path_easterntransfly.path.0116,
+        135 path_easterntransfly.path.0117,
+        136 path_easterntransfly.path.0118,
+        137 path_easterntransfly.path.0119,
+        138 person_0ascertainment,
+        139 person_easterntransfly.person.0120,
+        140 person_easterntransfly.person.0121,
+        141 person_easterntransfly.person.0122,
+        142 pl_0ascertainment,
+        143 pl_easterntransfly.1pl.0001,
+        144 pl_easterntransfly.1pl.0002,
+        145 pl_easterntransfly.1pl.0003,
+        146 see_0ascertainment,
+        147 see_easterntransfly.see.0123,
+        148 see_easterntransfly.see.0124,
+        149 see_easterntransfly.see.0125,
+        150 sg_0ascertainment,
+        151 sg_easterntransfly.1sg.0004,
+        152 sg_easterntransfly.1sg.0005,
+        153 sg_easterntransfly.1sg.0006,
+        154 sg_easterntransfly.2sg.0007,
+        155 sg_easterntransfly.2sg.0008,
+        156 skin_0ascertainment,
+        157 skin_easterntransfly.skin.0126,
+        158 skin_easterntransfly.skin.0127,
+        159 skin_easterntransfly.skin.0128,
+        160 skin_easterntransfly.skin.0129,
+        161 skin_easterntransfly.skin.0130,
+        162 star_0ascertainment,
+        163 star_easterntransfly.star.0131,
+        164 star_easterntransfly.star.0132,
+        165 star_easterntransfly.star.0133,
+        166 star_easterntransfly.star.0134,
+        167 star_easterntransfly.star.0135,
+        168 stone_0ascertainment,
+        169 stone_easterntransfly.stone.0136,
+        170 stone_easterntransfly.stone.0137,
+        171 stone_easterntransfly.stone.0138,
+        172 stone_easterntransfly.stone.0139,
+        173 stone_easterntransfly.stone.0140,
+        174 stone_easterntransfly.stone.0141,
+        175 stone_easterntransfly.stone.0142,
+        176 stone_easterntransfly.stone.0143,
+        177 sun_0ascertainment,
+        178 sun_easterntransfly.sun.0144,
+        179 sun_easterntransfly.sun.0145,
+        180 sun_easterntransfly.sun.0146,
+        181 sun_easterntransfly.sun.0147,
+        182 sun_easterntransfly.sun.0148,
+        183 sun_easterntransfly.sun.0149,
+        184 tongue_0ascertainment,
+        185 tongue_easterntransfly.tongue.0150,
+        186 tongue_easterntransfly.tongue.0151,
+        187 tooth_0ascertainment,
+        188 tooth_easterntransfly.tooth.0152,
+        189 tooth_easterntransfly.tooth.0153,
+        190 tooth_easterntransfly.tooth.0154,
+        191 tooth_easterntransfly.tooth.0155,
+        192 tooth_easterntransfly.tooth.0156,
+        193 tree_0ascertainment,
+        194 tree_easterntransfly.tree.0157,
+        195 tree_easterntransfly.tree.0158,
+        196 tree_easterntransfly.tree.0159,
+        197 tree_easterntransfly.tree.0160,
+        198 two_0ascertainment,
+        199 two_easterntransfly.two.0161,
+        200 two_easterntransfly.two.0162,
+        201 water_0ascertainment,
+        202 water_easterntransfly.water.0163
+;
+
+MATRIX
+bine_kunini    01000000001001010001001000000001000100001000001000000100000100000???????0100010000???01000000001000100000101000000?01000100000100100010000???01000???01001001000001000001000000001000000100100000100001001
+gizrra_kupere  001000000010010010000001000000001000100001000001000000100000100001000000001000100010000100000000100?????01001000001001000100001000100010001000???010000100100100000100000100000000100000100010000010000101
+gizrra_togo    0010000000100100100000010000000010001000010000010000001000001000010000000010001000100001000000001000100001001000001001000100001000100010001000???010000100100100000100000100000000100000100010000010000101
+gizrra_waidoro 0010000000100100100000010000000010001000010000010000001000001000001000000010001000100001000000001000100001001000001001000100001000100010001000010010000100100100000100000010000000100000100010000010000101
+meriam         0001000000010100100010001000000???000100001000001000000100000100000100000001000100???0001000000100000100010001000010001000100001000100010001000010???00011000010000010000001000000010000??0001000001000101
+ume            0000100000100100010000000100000001000010100000000100000010000010000010000100000010???000010000010001000001000010001000100001001001000000100010001001000101000001000001001000000000001000100000100000100101
+wipi_abam      0000010000100100010000000100000001000010000100000010000010000010000010000100000010010000010000000100001001000010001000100001001001000000100010001001000101000001000001001000000000010000100000100000100101
+wipi_dorogori  0000010000100100010000000010000001000010000010000100000010000010000001000100000010???000010000010001000001000010001000100001001001000000100010???001000101000001000001001000000000010000100000010000100101
+wipi_gamaewe   0000010000100100010000000100000001001000000010000001000010000010000010000100000010001000001001010001000001001000001000100001001001000000100010001001000101000001000001000000100000001000100000100000100101
+wipi_guiam     0000001000100100010000000001000001001000000010000100000010000001000000100100000010???00000010001000000010?00000100100010000100100100000010???0???001000101000001000001000000010000000100010000010000100101
+wipi_iamega    0000000100100100010000000100000001001000100000000010000001000010000000010100000010001000000010010000000101000010001000100001001001000000100010001001000101000001000001000000100000001000100000100000100101
+wipi_kapal     0000000100100100010000000000100001001000000010000010000001000010000000010100000010001000000100010001000001000001001000100001001001000000100010001001000101000001000001001000100000001000100000100000100101
+wipi_kuru      0000010000100100010000000100000001001000000010000010000010000010000010000100000010001000010000010001000001000010001000100001001001000000100010001001000101000001000001001000000000010000100000010000100101
+wipi_peawa     0000010000100100010000000100000001000010000010000010000010000010000010000100000010010000010000010001000001000010001000100001001001000000100010001001000101000001000001001000000000010000100000100000100101
+wipi_podari    0000000010100100010000000100000001001000100000000001000001000010000000010100000010???000000100010001000001000010001000100001001001000000100010???001000101000001000001001000000000001000100000100000100101
+wipi_wipim     0000000100100100010000000000010001001000100000000001000010000010000000010100000010001000000100010001000001000001001000100001001001000000100010001001000101000001000001000000001000001000100000100000100101
+wipi_wonie     00000100001001000100000001000000010010001000000000100000010000100???????0100000010???000000100010000000101000010001000100001001001000000100010???001000101000001000001000000000100001000100000100000100101
+wipi_yuta      0????????0100100001000????????00010010000000100000100000010000100???????01000????0???0000100000???0?????0?00000010?000100000101001000000100010???000100101000000100000100000100000000010100000100000100101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-9;
+    charset bone = 10-12;
+    charset breast = 13-14;
+    charset come = 15-21;
+    charset die = 22-30;
+    charset dog = 31-34;
+    charset drink = 35-39;
+    charset ear = 40-45;
+    charset eye = 46-52;
+    charset fire = 53-58;
+    charset fish = 59-64;
+    charset full = 65-72;
+    charset hand = 73-76;
+    charset hear = 77-81;
+    charset horn = 82-85;
+    charset knee = 86-94;
+    charset leaf = 95-98;
+    charset liver = 99-104;
+    charset louse = 105-106;
+    charset mountain = 107-113;
+    charset name = 114-115;
+    charset new = 116-119;
+    charset night = 120-125;
+    charset nose = 126-128;
+    charset one = 129-132;
+    charset path = 133-137;
+    charset person = 138-141;
+    charset pl = 142-145;
+    charset see = 146-149;
+    charset sg = 150-155;
+    charset skin = 156-161;
+    charset star = 162-167;
+    charset stone = 168-176;
+    charset sun = 177-183;
+    charset tongue = 184-186;
+    charset tooth = 187-192;
+    charset tree = 193-197;
+    charset two = 198-200;
+    charset water = 201-202;
+END;

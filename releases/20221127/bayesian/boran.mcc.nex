@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Bora_bora1263
+			Muinane_muin1242
+			;
+End;
+Begin trees;
+	Translate
+		   1 Bora_bora1263,
+		   2 Muinane_muin1242
+;
+tree TREE1 = (1[&height=0.0,length=4.153682963407294,length_95%_HPD={0.2768,17.4654},length_median=1.4395,length_range={0.2274,109.5239},rate=0.9898235752849422,rate_95%_HPD={0.6479,1.2554},rate_median=1.0032,rate_range={0.0788,1.2554}]:4.153682963407294,2[&height=0.0,length=4.153682963407294,length_95%_HPD={0.2768,17.4654},length_median=1.4395,length_range={0.2274,109.5239},rate=0.9864210357928432,rate_95%_HPD={0.6465,1.2554},rate_median=1.0016,rate_range={0.1149,1.2554}]:4.153682963407294)[&CAheight_95%_HPD={0.2768,17.4654},CAheight_mean=4.153682963407294,CAheight_median=1.4395,CAheight_range={0.2274,109.5239},height=4.153682963407294,height_95%_HPD={0.2768,17.4654},height_median=1.4395,height_range={0.2274,109.5239},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

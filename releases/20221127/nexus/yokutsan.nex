@@ -1,0 +1,167 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=5 NCHAR=112;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_yokutsan.blood.0004,
+        3 blood_yokutsan.blood.0005,
+        4 bone_0ascertainment,
+        5 bone_yokutsan.bone.0006,
+        6 bone_yokutsan.bone.0007,
+        7 breast_0ascertainment,
+        8 breast_yokutsan.breast.0008,
+        9 come_0ascertainment,
+        10 come_yokutsan.come.0009,
+        11 come_yokutsan.come.0010,
+        12 die_0ascertainment,
+        13 die_yokutsan.die.0011,
+        14 dog_0ascertainment,
+        15 dog_yokutsan.dog.0012,
+        16 dog_yokutsan.dog.0013,
+        17 drink_0ascertainment,
+        18 drink_yokutsan.drink.0014,
+        19 ear_0ascertainment,
+        20 ear_yokutsan.ear.0015,
+        21 ear_yokutsan.ear.0016,
+        22 eye_0ascertainment,
+        23 eye_yokutsan.eye.0017,
+        24 fire_0ascertainment,
+        25 fire_yokutsan.fire.0018,
+        26 fish_0ascertainment,
+        27 fish_yokutsan.fish.0019,
+        28 hand_0ascertainment,
+        29 hand_yokutsan.hand.0020,
+        30 hand_yokutsan.hand.0021,
+        31 hand_yokutsan.hand.0022,
+        32 horn_0ascertainment,
+        33 horn_yokutsan.horn.0023,
+        34 horn_yokutsan.horn.0024,
+        35 knee_0ascertainment,
+        36 knee_yokutsan.knee.0025,
+        37 leaf_0ascertainment,
+        38 leaf_yokutsan.leaf.0026,
+        39 liver_0ascertainment,
+        40 liver_yokutsan.liver.0027,
+        41 liver_yokutsan.liver.0028,
+        42 louse_0ascertainment,
+        43 louse_yokutsan.louse.0029,
+        44 mountain_0ascertainment,
+        45 mountain_yokutsan.mountain.0030,
+        46 mountain_yokutsan.mountain.0031,
+        47 mountain_yokutsan.mountain.0032,
+        48 name_0ascertainment,
+        49 name_yokutsan.name.0033,
+        50 name_yokutsan.name.0034,
+        51 name_yokutsan.name.0035,
+        52 night_0ascertainment,
+        53 night_yokutsan.night.0036,
+        54 night_yokutsan.night.0037,
+        55 nose_0ascertainment,
+        56 nose_yokutsan.nose.0038,
+        57 one_0ascertainment,
+        58 one_yokutsan.one.0039,
+        59 path_0ascertainment,
+        60 path_yokutsan.path.0040,
+        61 path_yokutsan.path.0041,
+        62 person_0ascertainment,
+        63 person_yokutsan.person.0042,
+        64 person_yokutsan.person.0043,
+        65 person_yokutsan.person.0044,
+        66 person_yokutsan.person.0045,
+        67 person_yokutsan.person.0046,
+        68 pl_0ascertainment,
+        69 pl_yokutsan.1pl.0001,
+        70 see_0ascertainment,
+        71 see_yokutsan.see.0047,
+        72 see_yokutsan.see.0048,
+        73 see_yokutsan.see.0049,
+        74 see_yokutsan.see.0050,
+        75 see_yokutsan.see.0051,
+        76 sg_0ascertainment,
+        77 sg_yokutsan.1sg.0002,
+        78 sg_yokutsan.2sg.0003,
+        79 skin_0ascertainment,
+        80 skin_yokutsan.skin.0052,
+        81 skin_yokutsan.skin.0053,
+        82 skin_yokutsan.skin.0054,
+        83 star_0ascertainment,
+        84 star_yokutsan.star.0055,
+        85 star_yokutsan.star.0056,
+        86 star_yokutsan.star.0057,
+        87 stone_0ascertainment,
+        88 stone_yokutsan.stone.0058,
+        89 stone_yokutsan.stone.0059,
+        90 stone_yokutsan.stone.0060,
+        91 stone_yokutsan.stone.0061,
+        92 sun_0ascertainment,
+        93 sun_yokutsan.sun.0062,
+        94 sun_yokutsan.sun.0063,
+        95 sun_yokutsan.sun.0064,
+        96 sun_yokutsan.sun.0065,
+        97 tongue_0ascertainment,
+        98 tongue_yokutsan.tongue.0066,
+        99 tongue_yokutsan.tongue.0067,
+        100 tongue_yokutsan.tongue.0068,
+        101 tongue_yokutsan.tongue.0069,
+        102 tooth_0ascertainment,
+        103 tooth_yokutsan.tooth.0070,
+        104 tooth_yokutsan.tooth.0071,
+        105 tree_0ascertainment,
+        106 tree_yokutsan.tree.0072,
+        107 tree_yokutsan.tree.0073,
+        108 tree_yokutsan.tree.0074,
+        109 two_0ascertainment,
+        110 two_yokutsan.two.0075,
+        111 water_0ascertainment,
+        112 water_yokutsan.water.0076
+;
+
+MATRIX
+palewyami        0100100?0??0?01001010010101010001001010100101000100010010101001000001010000011010001000100001000010000100???0101
+tulamni          0100100?0??01010010010101010010001010?00101001101000100101010001000010010000110010010000100001000010001001000101
+yawdanchi        0100100?0??0?0100101001010100100100101010010100001001001010010001010?0001000??0001001000010000100001001000100101
+yokuts_tinlinneh 001001010100?0010101001010100010??0?010??0?0100000100101010??000010010000100110???010000001000010000100100010101
+yokuts_unknown   010010010010?0100101001010100010??0?010??0?0100000100101010??000001010000010110???000100010000100001001001000101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-8;
+    charset come = 9-11;
+    charset die = 12-13;
+    charset dog = 14-16;
+    charset drink = 17-18;
+    charset ear = 19-21;
+    charset eye = 22-23;
+    charset fire = 24-25;
+    charset fish = 26-27;
+    charset hand = 28-31;
+    charset horn = 32-34;
+    charset knee = 35-36;
+    charset leaf = 37-38;
+    charset liver = 39-41;
+    charset louse = 42-43;
+    charset mountain = 44-47;
+    charset name = 48-51;
+    charset night = 52-54;
+    charset nose = 55-56;
+    charset one = 57-58;
+    charset path = 59-61;
+    charset person = 62-67;
+    charset pl = 68-69;
+    charset see = 70-75;
+    charset sg = 76-78;
+    charset skin = 79-82;
+    charset star = 83-86;
+    charset stone = 87-91;
+    charset sun = 92-96;
+    charset tongue = 97-101;
+    charset tooth = 102-104;
+    charset tree = 105-108;
+    charset two = 109-110;
+    charset water = 111-112;
+END;

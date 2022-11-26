@@ -1,0 +1,111 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=64;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_usku.blood.0533,
+        3 bone_0ascertainment,
+        4 bone_usku.bone.0067,
+        5 breast_0ascertainment,
+        6 breast_usku.breast.0007,
+        7 come_0ascertainment,
+        8 come_usku.come.0668,
+        9 ear_0ascertainment,
+        10 ear_usku.ear.0014,
+        11 eye_0ascertainment,
+        12 eye_usku.eye.0679,
+        13 fire_0ascertainment,
+        14 fire_usku.fire.0003,
+        15 fish_0ascertainment,
+        16 fish_usku.fish.0638,
+        17 hand_0ascertainment,
+        18 hand_usku.hand.0044,
+        19 hear_0ascertainment,
+        20 hear_usku.hear.0974,
+        21 knee_0ascertainment,
+        22 knee_usku.knee.0078,
+        23 leaf_0ascertainment,
+        24 leaf_usku.leaf.0407,
+        25 louse_0ascertainment,
+        26 louse_usku.louse.0001,
+        27 mountain_0ascertainment,
+        28 mountain_usku.mountain.0002,
+        29 new_0ascertainment,
+        30 new_usku.new.0047,
+        31 night_0ascertainment,
+        32 night_usku.night.0624,
+        33 nose_0ascertainment,
+        34 nose_usku.nose.0343,
+        35 one_0ascertainment,
+        36 one_usku.one.0051,
+        37 path_0ascertainment,
+        38 path_usku.path.0030,
+        39 person_0ascertainment,
+        40 person_usku.person.0947,
+        41 pl_0ascertainment,
+        42 pl_usku.1pl.0547,
+        43 see_0ascertainment,
+        44 see_usku.see.0017,
+        45 sg_0ascertainment,
+        46 sg_usku.1sg.0085,
+        47 skin_0ascertainment,
+        48 skin_usku.skin.0807,
+        49 star_0ascertainment,
+        50 star_usku.star.0386,
+        51 stone_0ascertainment,
+        52 stone_usku.stone.0172,
+        53 sun_0ascertainment,
+        54 sun_usku.sun.0028,
+        55 tongue_0ascertainment,
+        56 tongue_usku.tongue.0595,
+        57 tooth_0ascertainment,
+        58 tooth_usku.tooth.0180,
+        59 tree_0ascertainment,
+        60 tree_usku.tree.0319,
+        61 two_0ascertainment,
+        62 two_usku.two.0550,
+        63 water_0ascertainment,
+        64 water_usku.water.0272
+;
+
+MATRIX
+usku 0101010101010101010101010101010101010101010101010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset ear = 9-10;
+    charset eye = 11-12;
+    charset fire = 13-14;
+    charset fish = 15-16;
+    charset hand = 17-18;
+    charset hear = 19-20;
+    charset knee = 21-22;
+    charset leaf = 23-24;
+    charset louse = 25-26;
+    charset mountain = 27-28;
+    charset new = 29-30;
+    charset night = 31-32;
+    charset nose = 33-34;
+    charset one = 35-36;
+    charset path = 37-38;
+    charset person = 39-40;
+    charset pl = 41-42;
+    charset see = 43-44;
+    charset sg = 45-46;
+    charset skin = 47-48;
+    charset star = 49-50;
+    charset stone = 51-52;
+    charset sun = 53-54;
+    charset tongue = 55-56;
+    charset tooth = 57-58;
+    charset tree = 59-60;
+    charset two = 61-62;
+    charset water = 63-64;
+END;

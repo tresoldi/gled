@@ -1,0 +1,129 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=76;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_seri.blood.0020,
+        3 bone_0ascertainment,
+        4 bone_seri.bone.0139,
+        5 breast_0ascertainment,
+        6 breast_seri.breast.0625,
+        7 come_0ascertainment,
+        8 come_seri.come.0625,
+        9 die_0ascertainment,
+        10 die_seri.die.0783,
+        11 dog_0ascertainment,
+        12 dog_seri.dog.0445,
+        13 drink_0ascertainment,
+        14 drink_seri.drink.0369,
+        15 ear_0ascertainment,
+        16 ear_seri.ear.0128,
+        17 eye_0ascertainment,
+        18 eye_seri.eye.0168,
+        19 fire_0ascertainment,
+        20 fire_seri.fire.0649,
+        21 fish_0ascertainment,
+        22 fish_seri.fish.0600,
+        23 full_0ascertainment,
+        24 full_seri.full.0855,
+        25 hand_0ascertainment,
+        26 hand_seri.hand.0274,
+        27 hear_0ascertainment,
+        28 hear_seri.hear.0900,
+        29 horn_0ascertainment,
+        30 horn_seri.horn.0505,
+        31 knee_0ascertainment,
+        32 knee_seri.knee.0548,
+        33 leaf_0ascertainment,
+        34 leaf_seri.leaf.0491,
+        35 liver_0ascertainment,
+        36 liver_seri.liver.0750,
+        37 louse_0ascertainment,
+        38 louse_seri.louse.0635,
+        39 mountain_0ascertainment,
+        40 mountain_seri.mountain.0689,
+        41 name_0ascertainment,
+        42 name_seri.name.0489,
+        43 new_0ascertainment,
+        44 new_seri.new.0617,
+        45 night_0ascertainment,
+        46 night_seri.night.0077,
+        47 nose_0ascertainment,
+        48 nose_seri.nose.0696,
+        49 one_0ascertainment,
+        50 one_seri.one.0044,
+        51 path_0ascertainment,
+        52 path_seri.path.0675,
+        53 person_0ascertainment,
+        54 person_seri.person.0869,
+        55 see_0ascertainment,
+        56 see_seri.see.0545,
+        57 sg_0ascertainment,
+        58 sg_seri.2sg.0020,
+        59 skin_0ascertainment,
+        60 skin_seri.skin.0751,
+        61 star_0ascertainment,
+        62 star_seri.star.0712,
+        63 stone_0ascertainment,
+        64 stone_seri.stone.0954,
+        65 sun_0ascertainment,
+        66 sun_seri.sun.0541,
+        67 tongue_0ascertainment,
+        68 tongue_seri.tongue.0027,
+        69 tooth_0ascertainment,
+        70 tooth_seri.tooth.0649,
+        71 tree_0ascertainment,
+        72 tree_seri.tree.0584,
+        73 two_0ascertainment,
+        74 two_seri.two.0518,
+        75 water_0ascertainment,
+        76 water_seri.water.0225
+;
+
+MATRIX
+seri 0101010101010101010101010101010101010101010101010101010101010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset full = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-28;
+    charset horn = 29-30;
+    charset knee = 31-32;
+    charset leaf = 33-34;
+    charset liver = 35-36;
+    charset louse = 37-38;
+    charset mountain = 39-40;
+    charset name = 41-42;
+    charset new = 43-44;
+    charset night = 45-46;
+    charset nose = 47-48;
+    charset one = 49-50;
+    charset path = 51-52;
+    charset person = 53-54;
+    charset see = 55-56;
+    charset sg = 57-58;
+    charset skin = 59-60;
+    charset star = 61-62;
+    charset stone = 63-64;
+    charset sun = 65-66;
+    charset tongue = 67-68;
+    charset tooth = 69-70;
+    charset tree = 71-72;
+    charset two = 73-74;
+    charset water = 75-76;
+END;

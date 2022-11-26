@@ -1,0 +1,212 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=9 NCHAR=150;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_chocoan.blood.0010,
+        3 blood_chocoan.blood.0011,
+        4 blood_chocoan.blood.0012,
+        5 blood_chocoan.blood.0013,
+        6 bone_0ascertainment,
+        7 bone_chocoan.bone.0014,
+        8 bone_chocoan.bone.0015,
+        9 bone_chocoan.bone.0016,
+        10 breast_0ascertainment,
+        11 breast_chocoan.breast.0017,
+        12 breast_chocoan.breast.0018,
+        13 breast_chocoan.breast.0019,
+        14 come_0ascertainment,
+        15 come_chocoan.come.0020,
+        16 come_chocoan.come.0021,
+        17 come_chocoan.come.0022,
+        18 come_chocoan.come.0023,
+        19 die_0ascertainment,
+        20 die_chocoan.die.0024,
+        21 die_chocoan.die.0025,
+        22 die_chocoan.die.0026,
+        23 die_chocoan.die.0027,
+        24 die_chocoan.die.0028,
+        25 die_chocoan.die.0029,
+        26 dog_0ascertainment,
+        27 dog_chocoan.dog.0030,
+        28 dog_chocoan.dog.0031,
+        29 dog_chocoan.dog.0032,
+        30 drink_0ascertainment,
+        31 drink_chocoan.drink.0033,
+        32 ear_0ascertainment,
+        33 ear_chocoan.ear.0034,
+        34 eye_0ascertainment,
+        35 eye_chocoan.eye.0035,
+        36 fire_0ascertainment,
+        37 fire_chocoan.fire.0036,
+        38 fire_chocoan.fire.0037,
+        39 fire_chocoan.fire.0038,
+        40 fish_0ascertainment,
+        41 fish_chocoan.fish.0039,
+        42 fish_chocoan.fish.0040,
+        43 fish_chocoan.fish.0041,
+        44 fish_chocoan.fish.0042,
+        45 full_0ascertainment,
+        46 full_chocoan.full.0043,
+        47 full_chocoan.full.0044,
+        48 hand_0ascertainment,
+        49 hand_chocoan.hand.0045,
+        50 hear_0ascertainment,
+        51 hear_chocoan.hear.0046,
+        52 hear_chocoan.hear.0047,
+        53 hear_chocoan.hear.0048,
+        54 horn_0ascertainment,
+        55 horn_chocoan.horn.0049,
+        56 knee_0ascertainment,
+        57 knee_chocoan.knee.0050,
+        58 knee_chocoan.knee.0051,
+        59 knee_chocoan.knee.0052,
+        60 knee_chocoan.knee.0053,
+        61 knee_chocoan.knee.0054,
+        62 leaf_0ascertainment,
+        63 leaf_chocoan.leaf.0055,
+        64 liver_0ascertainment,
+        65 liver_chocoan.liver.0056,
+        66 liver_chocoan.liver.0057,
+        67 liver_chocoan.liver.0058,
+        68 louse_0ascertainment,
+        69 louse_chocoan.louse.0059,
+        70 louse_chocoan.louse.0060,
+        71 mountain_0ascertainment,
+        72 mountain_chocoan.mountain.0061,
+        73 mountain_chocoan.mountain.0062,
+        74 mountain_chocoan.mountain.0063,
+        75 mountain_chocoan.mountain.0064,
+        76 mountain_chocoan.mountain.0065,
+        77 name_0ascertainment,
+        78 name_chocoan.name.0066,
+        79 new_0ascertainment,
+        80 new_chocoan.new.0067,
+        81 new_chocoan.new.0068,
+        82 night_0ascertainment,
+        83 night_chocoan.night.0069,
+        84 night_chocoan.night.0070,
+        85 night_chocoan.night.0071,
+        86 night_chocoan.night.0072,
+        87 nose_0ascertainment,
+        88 nose_chocoan.nose.0073,
+        89 one_0ascertainment,
+        90 one_chocoan.one.0074,
+        91 one_chocoan.one.0075,
+        92 one_chocoan.one.0076,
+        93 path_0ascertainment,
+        94 path_chocoan.path.0077,
+        95 path_chocoan.path.0078,
+        96 path_chocoan.path.0079,
+        97 path_chocoan.path.0080,
+        98 path_chocoan.path.0081,
+        99 person_0ascertainment,
+        100 person_chocoan.person.0082,
+        101 person_chocoan.person.0083,
+        102 pl_0ascertainment,
+        103 pl_chocoan.1pl.0001,
+        104 pl_chocoan.1pl.0002,
+        105 pl_chocoan.1pl.0003,
+        106 see_0ascertainment,
+        107 see_chocoan.see.0084,
+        108 see_chocoan.see.0085,
+        109 see_chocoan.see.0086,
+        110 see_chocoan.see.0087,
+        111 see_chocoan.see.0088,
+        112 see_chocoan.see.0089,
+        113 sg_0ascertainment,
+        114 sg_chocoan.1sg.0004,
+        115 sg_chocoan.2sg.0005,
+        116 sg_chocoan.2sg.0006,
+        117 sg_chocoan.2sg.0007,
+        118 sg_chocoan.2sg.0008,
+        119 sg_chocoan.2sg.0009,
+        120 skin_0ascertainment,
+        121 skin_chocoan.skin.0090,
+        122 skin_chocoan.skin.0091,
+        123 star_0ascertainment,
+        124 star_chocoan.star.0092,
+        125 star_chocoan.star.0093,
+        126 star_chocoan.star.0094,
+        127 star_chocoan.star.0095,
+        128 star_chocoan.star.0096,
+        129 stone_0ascertainment,
+        130 stone_chocoan.stone.0097,
+        131 stone_chocoan.stone.0098,
+        132 sun_0ascertainment,
+        133 sun_chocoan.sun.0099,
+        134 sun_chocoan.sun.0100,
+        135 sun_chocoan.sun.0101,
+        136 tongue_0ascertainment,
+        137 tongue_chocoan.tongue.0102,
+        138 tongue_chocoan.tongue.0103,
+        139 tooth_0ascertainment,
+        140 tooth_chocoan.tooth.0104,
+        141 tree_0ascertainment,
+        142 tree_chocoan.tree.0105,
+        143 tree_chocoan.tree.0106,
+        144 two_0ascertainment,
+        145 two_chocoan.two.0107,
+        146 two_chocoan.two.0108,
+        147 water_0ascertainment,
+        148 water_chocoan.water.0109,
+        149 water_chocoan.water.0110,
+        150 water_chocoan.water.0111
+;
+
+MATRIX
+catio           010000100010001000010000001000101010100010000100101000?01000001010001001000001010010000101000100000100100010000001101000??0100000100100010010100100100
+embera_chami    0????0100010000100010000001000101010100010000??0101000?0010000101000100?????01010001000101000?????0100100001000001101100??0010000100110010010100100100
+embera_darien   0????0100010001000010000001000101010100010000??0101000?0001000?010001000100001010010000101000?????0100100001000001101000??0100000100100010010100100010
+embera_northern 001000100010001010010101100100101010100010000??0101000?0?????0101100??0?????01010010000100100010100100100000100101100000100001000100???010010??0??0010
+embera_tado     0????0100010001000010000001000101010100010000100101000?00001001010001000010001010010100101000?????0100100001000001101000??0010000100110010010100100100
+epena_basurudo  0????0010001001000010000001000101010100010000100101000?0001000101000100?????01010010000101000?????0100100001000001101000010?????0100010010010100100100
+epena_saija     010000100010001000010100001000101010100001000100101000?0000010101000100?????01010000100101000?????0100100001000001101000??0010000010001010010100100100
+northern_embera 0001000010???000100??????01000101010010000100010100100?0001000101000010000100?010010000101000?????0??0100000010001010000010000100100010010010100100010
+wounaan         000010100000100001001010000010101010001000010100100010100010001000101000000101001000010100010001010010011000001001100010??0000010100100001010010010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-9;
+    charset breast = 10-13;
+    charset come = 14-18;
+    charset die = 19-25;
+    charset dog = 26-29;
+    charset drink = 30-31;
+    charset ear = 32-33;
+    charset eye = 34-35;
+    charset fire = 36-39;
+    charset fish = 40-44;
+    charset full = 45-47;
+    charset hand = 48-49;
+    charset hear = 50-53;
+    charset horn = 54-55;
+    charset knee = 56-61;
+    charset leaf = 62-63;
+    charset liver = 64-67;
+    charset louse = 68-70;
+    charset mountain = 71-76;
+    charset name = 77-78;
+    charset new = 79-81;
+    charset night = 82-86;
+    charset nose = 87-88;
+    charset one = 89-92;
+    charset path = 93-98;
+    charset person = 99-101;
+    charset pl = 102-105;
+    charset see = 106-112;
+    charset sg = 113-119;
+    charset skin = 120-122;
+    charset star = 123-128;
+    charset stone = 129-131;
+    charset sun = 132-135;
+    charset tongue = 136-138;
+    charset tooth = 139-140;
+    charset tree = 141-143;
+    charset two = 144-146;
+    charset water = 147-150;
+END;

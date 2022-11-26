@@ -1,0 +1,202 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=14 NCHAR=135;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_totonacan.blood.0005,
+        3 bone_0ascertainment,
+        4 bone_totonacan.bone.0006,
+        5 breast_0ascertainment,
+        6 breast_totonacan.breast.0007,
+        7 breast_totonacan.breast.0008,
+        8 come_0ascertainment,
+        9 come_totonacan.come.0009,
+        10 come_totonacan.come.0010,
+        11 die_0ascertainment,
+        12 die_totonacan.die.0011,
+        13 dog_0ascertainment,
+        14 dog_totonacan.dog.0012,
+        15 dog_totonacan.dog.0013,
+        16 drink_0ascertainment,
+        17 drink_totonacan.drink.0014,
+        18 drink_totonacan.drink.0015,
+        19 drink_totonacan.drink.0016,
+        20 drink_totonacan.drink.0017,
+        21 ear_0ascertainment,
+        22 ear_totonacan.ear.0018,
+        23 ear_totonacan.ear.0019,
+        24 ear_totonacan.ear.0020,
+        25 eye_0ascertainment,
+        26 eye_totonacan.eye.0021,
+        27 eye_totonacan.eye.0022,
+        28 eye_totonacan.eye.0023,
+        29 fire_0ascertainment,
+        30 fire_totonacan.fire.0024,
+        31 fire_totonacan.fire.0025,
+        32 fire_totonacan.fire.0026,
+        33 fish_0ascertainment,
+        34 fish_totonacan.fish.0027,
+        35 fish_totonacan.fish.0028,
+        36 fish_totonacan.fish.0029,
+        37 fish_totonacan.fish.0030,
+        38 full_0ascertainment,
+        39 full_totonacan.full.0031,
+        40 hand_0ascertainment,
+        41 hand_totonacan.hand.0032,
+        42 hear_0ascertainment,
+        43 hear_totonacan.hear.0033,
+        44 horn_0ascertainment,
+        45 horn_totonacan.horn.0034,
+        46 knee_0ascertainment,
+        47 knee_totonacan.knee.0035,
+        48 leaf_0ascertainment,
+        49 leaf_totonacan.leaf.0036,
+        50 leaf_totonacan.leaf.0037,
+        51 leaf_totonacan.leaf.0038,
+        52 leaf_totonacan.leaf.0039,
+        53 leaf_totonacan.leaf.0040,
+        54 liver_0ascertainment,
+        55 liver_totonacan.liver.0041,
+        56 liver_totonacan.liver.0042,
+        57 louse_0ascertainment,
+        58 louse_totonacan.louse.0043,
+        59 mountain_0ascertainment,
+        60 mountain_totonacan.mountain.0044,
+        61 mountain_totonacan.mountain.0045,
+        62 mountain_totonacan.mountain.0046,
+        63 mountain_totonacan.mountain.0047,
+        64 mountain_totonacan.mountain.0048,
+        65 name_0ascertainment,
+        66 name_totonacan.name.0049,
+        67 name_totonacan.name.0050,
+        68 new_0ascertainment,
+        69 new_totonacan.new.0051,
+        70 night_0ascertainment,
+        71 night_totonacan.night.0052,
+        72 nose_0ascertainment,
+        73 nose_totonacan.nose.0053,
+        74 nose_totonacan.nose.0054,
+        75 nose_totonacan.nose.0055,
+        76 nose_totonacan.nose.0056,
+        77 one_0ascertainment,
+        78 one_totonacan.one.0057,
+        79 one_totonacan.one.0058,
+        80 one_totonacan.one.0059,
+        81 one_totonacan.one.0060,
+        82 one_totonacan.one.0061,
+        83 one_totonacan.one.0062,
+        84 one_totonacan.one.0063,
+        85 path_0ascertainment,
+        86 path_totonacan.path.0064,
+        87 path_totonacan.path.0065,
+        88 path_totonacan.path.0066,
+        89 path_totonacan.path.0067,
+        90 path_totonacan.path.0068,
+        91 person_0ascertainment,
+        92 person_totonacan.person.0069,
+        93 person_totonacan.person.0070,
+        94 person_totonacan.person.0071,
+        95 person_totonacan.person.0072,
+        96 person_totonacan.person.0073,
+        97 pl_0ascertainment,
+        98 pl_totonacan.1pl.0001,
+        99 see_0ascertainment,
+        100 see_totonacan.see.0074,
+        101 see_totonacan.see.0075,
+        102 sg_0ascertainment,
+        103 sg_totonacan.1sg.0002,
+        104 sg_totonacan.2sg.0003,
+        105 sg_totonacan.2sg.0004,
+        106 skin_0ascertainment,
+        107 skin_totonacan.skin.0076,
+        108 skin_totonacan.skin.0077,
+        109 skin_totonacan.skin.0078,
+        110 skin_totonacan.skin.0079,
+        111 star_0ascertainment,
+        112 star_totonacan.star.0080,
+        113 stone_0ascertainment,
+        114 stone_totonacan.stone.0081,
+        115 stone_totonacan.stone.0082,
+        116 sun_0ascertainment,
+        117 sun_totonacan.sun.0083,
+        118 sun_totonacan.sun.0084,
+        119 tongue_0ascertainment,
+        120 tongue_totonacan.tongue.0085,
+        121 tooth_0ascertainment,
+        122 tooth_totonacan.tooth.0086,
+        123 tooth_totonacan.tooth.0087,
+        124 tree_0ascertainment,
+        125 tree_totonacan.tree.0088,
+        126 tree_totonacan.tree.0089,
+        127 tree_totonacan.tree.0090,
+        128 two_0ascertainment,
+        129 two_totonacan.two.0091,
+        130 two_totonacan.two.0092,
+        131 two_totonacan.two.0093,
+        132 two_totonacan.two.0094,
+        133 water_0ascertainment,
+        134 water_totonacan.water.0095,
+        135 water_totonacan.water.0096
+;
+
+MATRIX
+papantla_totonac      01010100100101001000010101000100010000101010?010100000100101000001001010100001000000010000010000010100110010000101001001010010001000010
+tepehua_huehuetla     010101001001001010000010001000100010001010101010010000100100100001001010010000100000001000001000010010101010000101000101001001001100001
+tepehua_pisa_flores   010101101001001001000010001000100001001010101010010000100100010001001010010000010000001000001000010010101010000101000101001010001000001
+tepehua_tlachichilco  010100101101001010000010001000100001001010101010010000100100001001001010010000001000001000001000010010101010000100100101001000100010001
+totonac_coatepec      01010100100101001000000101000100000010?0101010101000001001010000010010101000000001000010000?????01010011001000010100100?010010000010010
+totonac_coyutla       010101001001010010000001010001000000101010101010001000??0?01000001001010100001000000000100010000010100110010000101001001010010000010010
+totonac_filomena_mata 010101001001010010000001010001000000101010101010001000100101000001001010100000000010000010010000010010110001000101001001010010001000010
+totonac_highland      010101001001010010000001010001000000101010101010100000100101000001001010100001000000000100000100010100110010000101001001010010001000010
+totonac_misantla      01010100100101000010001000010001000010?01010?010000100010101000000101010001000000001000001010000010010110000100101001001001010000001001
+totonac_olintla       010101001001010010000001010001000000101010101010100000100101000001001010100001000000001000010000010100110010000101001001010010000010010
+totonac_ozelonacaxtla 010101001001010000010001010001000000101010101010100000100101000001001010100001000000000010010001010100110010000101001001010010001000010
+totonac_tejeria       010101001001010010000010010000010000101010101010100000100100000101001010000100000001001000000010010010110000010101001001010010001000001
+totonac_upper_nexaca  010101001001010010000010010000010000101010101010000010100101000001001010000100000001001000010000010010110000010101001001010010001000001
+xicotepec_totonac     010101001001010010000010010000010000101010101010100000100100000101001010000100000001001000010000010010110000010101001001010010001000001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-10;
+    charset die = 11-12;
+    charset dog = 13-15;
+    charset drink = 16-20;
+    charset ear = 21-24;
+    charset eye = 25-28;
+    charset fire = 29-32;
+    charset fish = 33-37;
+    charset full = 38-39;
+    charset hand = 40-41;
+    charset hear = 42-43;
+    charset horn = 44-45;
+    charset knee = 46-47;
+    charset leaf = 48-53;
+    charset liver = 54-56;
+    charset louse = 57-58;
+    charset mountain = 59-64;
+    charset name = 65-67;
+    charset new = 68-69;
+    charset night = 70-71;
+    charset nose = 72-76;
+    charset one = 77-84;
+    charset path = 85-90;
+    charset person = 91-96;
+    charset pl = 97-98;
+    charset see = 99-101;
+    charset sg = 102-105;
+    charset skin = 106-110;
+    charset star = 111-112;
+    charset stone = 113-115;
+    charset sun = 116-118;
+    charset tongue = 119-120;
+    charset tooth = 121-123;
+    charset tree = 124-127;
+    charset two = 128-132;
+    charset water = 133-135;
+END;

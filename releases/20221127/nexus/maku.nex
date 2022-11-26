@@ -1,0 +1,103 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=59;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_maku.blood.0069,
+        3 bone_0ascertainment,
+        4 bone_maku.bone.0001,
+        5 breast_0ascertainment,
+        6 breast_maku.breast.0008,
+        7 die_0ascertainment,
+        8 die_maku.die.0085,
+        9 drink_0ascertainment,
+        10 drink_maku.drink.0647,
+        11 ear_0ascertainment,
+        12 ear_maku.ear.0307,
+        13 eye_0ascertainment,
+        14 eye_maku.eye.0499,
+        15 fire_0ascertainment,
+        16 fire_maku.fire.0524,
+        17 hand_0ascertainment,
+        18 hand_maku.hand.0080,
+        19 hear_0ascertainment,
+        20 hear_maku.hear.0693,
+        21 leaf_0ascertainment,
+        22 leaf_maku.leaf.0420,
+        23 liver_0ascertainment,
+        24 liver_maku.liver.0588,
+        25 name_0ascertainment,
+        26 name_maku.name.0070,
+        27 new_0ascertainment,
+        28 new_maku.new.0195,
+        29 night_0ascertainment,
+        30 night_maku.night.0002,
+        31 nose_0ascertainment,
+        32 nose_maku.nose.0097,
+        33 one_0ascertainment,
+        34 one_maku.one.0412,
+        35 path_0ascertainment,
+        36 path_maku.path.0003,
+        37 person_0ascertainment,
+        38 person_maku.person.0685,
+        39 pl_0ascertainment,
+        40 pl_maku.1pl.0012,
+        41 see_0ascertainment,
+        42 see_maku.see.0043,
+        43 sg_0ascertainment,
+        44 sg_maku.1sg.0007,
+        45 sg_maku.2sg.0071,
+        46 skin_0ascertainment,
+        47 skin_maku.skin.0580,
+        48 star_0ascertainment,
+        49 star_maku.star.0564,
+        50 stone_0ascertainment,
+        51 stone_maku.stone.0752,
+        52 tongue_0ascertainment,
+        53 tongue_maku.tongue.0449,
+        54 tooth_0ascertainment,
+        55 tooth_maku.tooth.0519,
+        56 two_0ascertainment,
+        57 two_maku.two.0065,
+        58 water_0ascertainment,
+        59 water_maku.water.0062
+;
+
+MATRIX
+maku 01010101010101010101010101010101010101010101101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset die = 7-8;
+    charset drink = 9-10;
+    charset ear = 11-12;
+    charset eye = 13-14;
+    charset fire = 15-16;
+    charset hand = 17-18;
+    charset hear = 19-20;
+    charset leaf = 21-22;
+    charset liver = 23-24;
+    charset name = 25-26;
+    charset new = 27-28;
+    charset night = 29-30;
+    charset nose = 31-32;
+    charset one = 33-34;
+    charset path = 35-36;
+    charset person = 37-38;
+    charset pl = 39-40;
+    charset see = 41-42;
+    charset sg = 43-45;
+    charset skin = 46-47;
+    charset star = 48-49;
+    charset stone = 50-51;
+    charset tongue = 52-53;
+    charset tooth = 54-55;
+    charset two = 56-57;
+    charset water = 58-59;
+END;

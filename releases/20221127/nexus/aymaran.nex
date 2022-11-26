@@ -1,0 +1,170 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=7 NCHAR=110;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_aymaran.blood.0005,
+        3 bone_0ascertainment,
+        4 bone_aymaran.bone.0006,
+        5 breast_0ascertainment,
+        6 breast_aymaran.breast.0007,
+        7 come_0ascertainment,
+        8 come_aymaran.come.0008,
+        9 come_aymaran.come.0009,
+        10 die_0ascertainment,
+        11 die_aymaran.die.0010,
+        12 die_aymaran.die.0011,
+        13 dog_0ascertainment,
+        14 dog_aymaran.dog.0012,
+        15 dog_aymaran.dog.0013,
+        16 dog_aymaran.dog.0014,
+        17 dog_aymaran.dog.0015,
+        18 drink_0ascertainment,
+        19 drink_aymaran.drink.0016,
+        20 drink_aymaran.drink.0017,
+        21 ear_0ascertainment,
+        22 ear_aymaran.ear.0018,
+        23 ear_aymaran.ear.0019,
+        24 eye_0ascertainment,
+        25 eye_aymaran.eye.0020,
+        26 fire_0ascertainment,
+        27 fire_aymaran.fire.0021,
+        28 fire_aymaran.fire.0022,
+        29 fish_0ascertainment,
+        30 fish_aymaran.fish.0023,
+        31 full_0ascertainment,
+        32 full_aymaran.full.0024,
+        33 hand_0ascertainment,
+        34 hand_aymaran.hand.0025,
+        35 hear_0ascertainment,
+        36 hear_aymaran.hear.0026,
+        37 hear_aymaran.hear.0027,
+        38 hear_aymaran.hear.0028,
+        39 horn_0ascertainment,
+        40 horn_aymaran.horn.0029,
+        41 knee_0ascertainment,
+        42 knee_aymaran.knee.0030,
+        43 knee_aymaran.knee.0031,
+        44 leaf_0ascertainment,
+        45 leaf_aymaran.leaf.0032,
+        46 leaf_aymaran.leaf.0033,
+        47 leaf_aymaran.leaf.0034,
+        48 liver_0ascertainment,
+        49 liver_aymaran.liver.0035,
+        50 louse_0ascertainment,
+        51 louse_aymaran.louse.0036,
+        52 mountain_0ascertainment,
+        53 mountain_aymaran.mountain.0037,
+        54 mountain_aymaran.mountain.0038,
+        55 mountain_aymaran.mountain.0039,
+        56 mountain_aymaran.mountain.0040,
+        57 name_0ascertainment,
+        58 name_aymaran.name.0041,
+        59 name_aymaran.name.0042,
+        60 new_0ascertainment,
+        61 new_aymaran.new.0043,
+        62 night_0ascertainment,
+        63 night_aymaran.night.0044,
+        64 night_aymaran.night.0045,
+        65 nose_0ascertainment,
+        66 nose_aymaran.nose.0046,
+        67 one_0ascertainment,
+        68 one_aymaran.one.0047,
+        69 path_0ascertainment,
+        70 path_aymaran.path.0048,
+        71 path_aymaran.path.0049,
+        72 path_aymaran.path.0050,
+        73 person_0ascertainment,
+        74 person_aymaran.person.0051,
+        75 pl_0ascertainment,
+        76 pl_aymaran.1pl.0001,
+        77 pl_aymaran.1pl.0002,
+        78 see_0ascertainment,
+        79 see_aymaran.see.0052,
+        80 see_aymaran.see.0053,
+        81 see_aymaran.see.0054,
+        82 sg_0ascertainment,
+        83 sg_aymaran.1sg.0003,
+        84 sg_aymaran.2sg.0004,
+        85 skin_0ascertainment,
+        86 skin_aymaran.skin.0055,
+        87 skin_aymaran.skin.0056,
+        88 star_0ascertainment,
+        89 star_aymaran.star.0057,
+        90 stone_0ascertainment,
+        91 stone_aymaran.stone.0058,
+        92 sun_0ascertainment,
+        93 sun_aymaran.sun.0059,
+        94 sun_aymaran.sun.0060,
+        95 sun_aymaran.sun.0061,
+        96 tongue_0ascertainment,
+        97 tongue_aymaran.tongue.0062,
+        98 tooth_0ascertainment,
+        99 tooth_aymaran.tooth.0063,
+        100 tooth_aymaran.tooth.0064,
+        101 tooth_aymaran.tooth.0065,
+        102 tree_0ascertainment,
+        103 tree_aymaran.tree.0066,
+        104 tree_aymaran.tree.0067,
+        105 tree_aymaran.tree.0068,
+        106 two_0ascertainment,
+        107 two_aymaran.two.0069,
+        108 two_aymaran.two.0070,
+        109 water_0ascertainment,
+        110 water_aymaran.water.0071
+;
+
+MATRIX
+central_aymara    01010101001001100010011010110101010100010100101010101001010010100101010001011010001101001010110010100010001001
+huacana           01010101001000100010001010100?010100100101001000?0101000001010100101001001001011000101001010100010100010001001
+jaqaru            01010100101100010011001010100101010001010110010010100110001010110101010001001000101100101010110010010001101101
+kawki             01010100101000001010001010100?010100010101000100?0100010001010110101010001001000100100101010100010011001001001
+puki              01010101001001000010001010100?010100100101001000?0101000001010100101010001001010000101001010100010100010001001
+southern_aymara   01010?0100100????01000101010010?010010010100100010?0????001010100101010001001010001101001010010010100010001001
+sullkatiti_titiri 01010101001001000010001010100?010100100101001000?0101000001010100101000101001011000101001010101010100010001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-9;
+    charset die = 10-12;
+    charset dog = 13-17;
+    charset drink = 18-20;
+    charset ear = 21-23;
+    charset eye = 24-25;
+    charset fire = 26-28;
+    charset fish = 29-30;
+    charset full = 31-32;
+    charset hand = 33-34;
+    charset hear = 35-38;
+    charset horn = 39-40;
+    charset knee = 41-43;
+    charset leaf = 44-47;
+    charset liver = 48-49;
+    charset louse = 50-51;
+    charset mountain = 52-56;
+    charset name = 57-59;
+    charset new = 60-61;
+    charset night = 62-64;
+    charset nose = 65-66;
+    charset one = 67-68;
+    charset path = 69-72;
+    charset person = 73-74;
+    charset pl = 75-77;
+    charset see = 78-81;
+    charset sg = 82-84;
+    charset skin = 85-87;
+    charset star = 88-89;
+    charset stone = 90-91;
+    charset sun = 92-95;
+    charset tongue = 96-97;
+    charset tooth = 98-101;
+    charset tree = 102-105;
+    charset two = 106-108;
+    charset water = 109-110;
+END;

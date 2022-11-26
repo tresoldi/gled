@@ -1,0 +1,143 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=89;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_nimboranic.blood.0006,
+        3 bone_0ascertainment,
+        4 bone_nimboranic.bone.0007,
+        5 breast_0ascertainment,
+        6 breast_nimboranic.breast.0008,
+        7 come_0ascertainment,
+        8 come_nimboranic.come.0009,
+        9 come_nimboranic.come.0010,
+        10 come_nimboranic.come.0011,
+        11 come_nimboranic.come.0012,
+        12 die_0ascertainment,
+        13 die_nimboranic.die.0013,
+        14 dog_0ascertainment,
+        15 dog_nimboranic.dog.0014,
+        16 drink_0ascertainment,
+        17 drink_nimboranic.drink.0015,
+        18 ear_0ascertainment,
+        19 ear_nimboranic.ear.0016,
+        20 eye_0ascertainment,
+        21 eye_nimboranic.eye.0017,
+        22 fire_0ascertainment,
+        23 fire_nimboranic.fire.0018,
+        24 fish_0ascertainment,
+        25 fish_nimboranic.fish.0019,
+        26 fish_nimboranic.fish.0020,
+        27 full_0ascertainment,
+        28 full_nimboranic.full.0021,
+        29 hand_0ascertainment,
+        30 hand_nimboranic.hand.0022,
+        31 hand_nimboranic.hand.0023,
+        32 hear_0ascertainment,
+        33 hear_nimboranic.hear.0024,
+        34 knee_0ascertainment,
+        35 knee_nimboranic.knee.0025,
+        36 knee_nimboranic.knee.0026,
+        37 leaf_0ascertainment,
+        38 leaf_nimboranic.leaf.0027,
+        39 louse_0ascertainment,
+        40 louse_nimboranic.louse.0028,
+        41 mountain_0ascertainment,
+        42 mountain_nimboranic.mountain.0029,
+        43 name_0ascertainment,
+        44 name_nimboranic.name.0030,
+        45 new_0ascertainment,
+        46 new_nimboranic.new.0031,
+        47 new_nimboranic.new.0032,
+        48 new_nimboranic.new.0033,
+        49 night_0ascertainment,
+        50 night_nimboranic.night.0034,
+        51 nose_0ascertainment,
+        52 nose_nimboranic.nose.0035,
+        53 one_0ascertainment,
+        54 one_nimboranic.one.0036,
+        55 one_nimboranic.one.0037,
+        56 path_0ascertainment,
+        57 path_nimboranic.path.0038,
+        58 person_0ascertainment,
+        59 person_nimboranic.person.0039,
+        60 pl_0ascertainment,
+        61 pl_nimboranic.1pl.0001,
+        62 pl_nimboranic.1pl.0002,
+        63 see_0ascertainment,
+        64 see_nimboranic.see.0040,
+        65 see_nimboranic.see.0041,
+        66 see_nimboranic.see.0042,
+        67 sg_0ascertainment,
+        68 sg_nimboranic.1sg.0003,
+        69 sg_nimboranic.2sg.0004,
+        70 sg_nimboranic.2sg.0005,
+        71 skin_0ascertainment,
+        72 skin_nimboranic.skin.0043,
+        73 star_0ascertainment,
+        74 star_nimboranic.star.0044,
+        75 stone_0ascertainment,
+        76 stone_nimboranic.stone.0045,
+        77 sun_0ascertainment,
+        78 sun_nimboranic.sun.0046,
+        79 tongue_0ascertainment,
+        80 tongue_nimboranic.tongue.0047,
+        81 tooth_0ascertainment,
+        82 tooth_nimboranic.tooth.0048,
+        83 tree_0ascertainment,
+        84 tree_nimboranic.tree.0049,
+        85 tree_nimboranic.tree.0050,
+        86 two_0ascertainment,
+        87 two_nimboranic.two.0051,
+        88 water_0ascertainment,
+        89 water_nimboranic.water.0052
+;
+
+MATRIX
+mekwei_kendate 0?0?01010000101010101010110?01001010010?010101000?010??0?01010010001100101010101010100101
+mekwei_maribu  01010100100010?010101010100100101001010?010101000101010010?001001001110101010101010010101
+mekwei_wabron  010101000110101010101010110?0100101001010101001101010010101011000101100101010101010100101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-11;
+    charset die = 12-13;
+    charset dog = 14-15;
+    charset drink = 16-17;
+    charset ear = 18-19;
+    charset eye = 20-21;
+    charset fire = 22-23;
+    charset fish = 24-26;
+    charset full = 27-28;
+    charset hand = 29-31;
+    charset hear = 32-33;
+    charset knee = 34-36;
+    charset leaf = 37-38;
+    charset louse = 39-40;
+    charset mountain = 41-42;
+    charset name = 43-44;
+    charset new = 45-48;
+    charset night = 49-50;
+    charset nose = 51-52;
+    charset one = 53-55;
+    charset path = 56-57;
+    charset person = 58-59;
+    charset pl = 60-62;
+    charset see = 63-66;
+    charset sg = 67-70;
+    charset skin = 71-72;
+    charset star = 73-74;
+    charset stone = 75-76;
+    charset sun = 77-78;
+    charset tongue = 79-80;
+    charset tooth = 81-82;
+    charset tree = 83-85;
+    charset two = 86-87;
+    charset water = 88-89;
+END;

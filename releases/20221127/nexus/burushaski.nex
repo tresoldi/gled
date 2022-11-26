@@ -1,0 +1,145 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=92;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_burushaski.blood.0216,
+        3 bone_0ascertainment,
+        4 bone_burushaski.bone.0013,
+        5 bone_burushaski.bone.0158,
+        6 breast_0ascertainment,
+        7 breast_burushaski.breast.0206,
+        8 come_0ascertainment,
+        9 come_burushaski.come.0001,
+        10 come_burushaski.come.0162,
+        11 die_0ascertainment,
+        12 die_burushaski.die.0252,
+        13 die_burushaski.die.0253,
+        14 dog_0ascertainment,
+        15 dog_burushaski.dog.0021,
+        16 drink_0ascertainment,
+        17 drink_burushaski.drink.0257,
+        18 ear_0ascertainment,
+        19 ear_burushaski.ear.0011,
+        20 eye_0ascertainment,
+        21 eye_burushaski.eye.0157,
+        22 eye_burushaski.eye.0225,
+        23 fire_0ascertainment,
+        24 fire_burushaski.fire.0252,
+        25 full_0ascertainment,
+        26 full_burushaski.full.0267,
+        27 full_burushaski.full.0268,
+        28 hand_0ascertainment,
+        29 hand_burushaski.hand.0205,
+        30 hear_0ascertainment,
+        31 hear_burushaski.hear.0296,
+        32 horn_0ascertainment,
+        33 horn_burushaski.horn.0146,
+        34 knee_0ascertainment,
+        35 knee_burushaski.knee.0003,
+        36 knee_burushaski.knee.0013,
+        37 leaf_0ascertainment,
+        38 leaf_burushaski.leaf.0034,
+        39 leaf_burushaski.leaf.0051,
+        40 liver_0ascertainment,
+        41 liver_burushaski.liver.0255,
+        42 louse_0ascertainment,
+        43 louse_burushaski.louse.0180,
+        44 mountain_0ascertainment,
+        45 mountain_burushaski.mountain.0020,
+        46 mountain_burushaski.mountain.0234,
+        47 name_0ascertainment,
+        48 name_burushaski.name.0175,
+        49 name_burushaski.name.0176,
+        50 new_0ascertainment,
+        51 new_burushaski.new.0236,
+        52 night_0ascertainment,
+        53 night_burushaski.night.0222,
+        54 nose_0ascertainment,
+        55 nose_burushaski.nose.0253,
+        56 one_0ascertainment,
+        57 one_burushaski.one.0023,
+        58 one_burushaski.one.0203,
+        59 path_0ascertainment,
+        60 path_burushaski.path.0248,
+        61 person_0ascertainment,
+        62 person_burushaski.person.0307,
+        63 pl_0ascertainment,
+        64 pl_burushaski.1pl.0233,
+        65 see_0ascertainment,
+        66 see_burushaski.see.0001,
+        67 see_burushaski.see.0197,
+        68 sg_0ascertainment,
+        69 sg_burushaski.1sg.0007,
+        70 sg_burushaski.1sg.0085,
+        71 sg_burushaski.2sg.0020,
+        72 sg_burushaski.2sg.0175,
+        73 skin_0ascertainment,
+        74 skin_burushaski.skin.0006,
+        75 skin_burushaski.skin.0267,
+        76 star_0ascertainment,
+        77 star_burushaski.star.0012,
+        78 star_burushaski.star.0031,
+        79 stone_0ascertainment,
+        80 stone_burushaski.stone.0301,
+        81 sun_0ascertainment,
+        82 sun_burushaski.sun.0012,
+        83 tongue_0ascertainment,
+        84 tongue_burushaski.tongue.0037,
+        85 tooth_0ascertainment,
+        86 tooth_burushaski.tooth.0252,
+        87 tree_0ascertainment,
+        88 tree_burushaski.tree.0225,
+        89 two_0ascertainment,
+        90 two_burushaski.two.0181,
+        91 water_0ascertainment,
+        92 water_burushaski.water.0195
+;
+
+MATRIX
+burushaski 01011010110110101010110101101010101101101010110110101010110101010110111101101101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-7;
+    charset come = 8-10;
+    charset die = 11-13;
+    charset dog = 14-15;
+    charset drink = 16-17;
+    charset ear = 18-19;
+    charset eye = 20-22;
+    charset fire = 23-24;
+    charset full = 25-27;
+    charset hand = 28-29;
+    charset hear = 30-31;
+    charset horn = 32-33;
+    charset knee = 34-36;
+    charset leaf = 37-39;
+    charset liver = 40-41;
+    charset louse = 42-43;
+    charset mountain = 44-46;
+    charset name = 47-49;
+    charset new = 50-51;
+    charset night = 52-53;
+    charset nose = 54-55;
+    charset one = 56-58;
+    charset path = 59-60;
+    charset person = 61-62;
+    charset pl = 63-64;
+    charset see = 65-67;
+    charset sg = 68-72;
+    charset skin = 73-75;
+    charset star = 76-78;
+    charset stone = 79-80;
+    charset sun = 81-82;
+    charset tongue = 83-84;
+    charset tooth = 85-86;
+    charset tree = 87-88;
+    charset two = 89-90;
+    charset water = 91-92;
+END;

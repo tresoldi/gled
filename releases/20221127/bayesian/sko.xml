@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Bauni_wara1302,Isaka_kris1246,Puare_puar1240,Rawo_rawo1244,Skou_nucl1634,Vanimo_vani1248,Womo-Sumararu_womo1238,Wutung_wutu1244">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_sko" name="data_sko" dataType="integer">
+    <sequence id="language_data_sko:Bauni_wara1302" taxon="Bauni_wara1302" value="010001000100010100000101001000010010000010000010110000010000010000001000000001001001001000001000101001000100000100000000101000100000000010000100001000001000110101000001000000010000000100001010010000000100000010000001100011000010000010000010100100000010000100000010000101000100000001001101001000101010010000" />
+    <sequence id="language_data_sko:Isaka_kris1246" taxon="Isaka_kris1246" value="01100101011000100000001000000????001000001000000010000001000000100000001000000100000001000000100000010000001000000000100000000010000000100000010000010000100000000100000010000000100000001000000000100000000100000010000000010000000000000100000000000100000000010000000100000000010000000100000000010000000010000" />
+    <sequence id="language_data_sko:Puare_puar1240" taxon="Puare_puar1240" value="0010010001000000010000000100000100001000000100000001000?????01000000000001000000010000001000?????0100000000000100000?????????000010000000100000100000100????????00001000010000000001000000010000000010010??????000000010000000000100000000000100000000000100000000100000001000000000010000010000000000010000010000" />
+    <sequence id="language_data_sko:Rawo_rawo1244" taxon="Rawo_rawo1244" value="00100100010000001000000010000????001000000100000001000000101001000000001000000010000000010000010001000000000010000000001000000001000000100000001000100000001000000010000001000000010000000100000000100000000010000000100000000001000000000001000000000001100000001000000001000000000010000010000000001000000000100" />
+    <sequence id="language_data_sko:Skou_nucl1634" taxon="Skou_nucl1634" value="000100100101001000000000000100100000010000001000100000000010000010000100100000000010000001100001000100100010000001100000010000010010000000100100000100000000001000000100000100000000100000000100001000000100001001000000000000000001100000000001000000000001100010000000000010000010000000100010000010000000010000" />
+    <sequence id="language_data_sko:Vanimo_vani1248" taxon="Vanimo_vani1248" value="0011001001000011000000010000011000?????0???????01000000?????00100000011010000010000000110000?????00100000010100000001010000000???????01000000100000100000010000000100000110000001000000010000000001000000011000001101000000001110000000001010000000011010000000010000001010000000011100000100000000100000000011000" />
+    <sequence id="language_data_sko:Womo-Sumararu_womo1238" taxon="Womo-Sumararu_womo1238" value="0001001001000000001000001000000100?????0???????00000110?????00000100000000100000010000001000?????01000000??????????0000000010000000100000001000010000010????????01000000000011000000010000000001000001000??????000000000010000000000010000000000010000000100000000010000000000100000001000010000000000000100000010" />
+    <sequence id="language_data_sko:Wutung_wutu1244" taxon="Wutung_wutu1244" value="00010???010000000001000000010000100000100000010010000000100000000010000000010000000010000100?????0000001000000001000000000001000000010??????010000010000000000100010000???????000010000010000000000000100??????000000000001000000000001000000001000000000000010000001000000000010000000100000000100000000001000001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:sko:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:sko" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:sko" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:sko" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:sko" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Isaka_kris1246,(Bauni_wara1302,(Puare_puar1240,(Rawo_rawo1244,Womo-Sumararu_womo1238)),(Skou_nucl1634,(Vanimo_vani1248,Wutung_wutu1244))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:sko" name="distribution">
+          <input id="featureClockRateCompound:sko" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:sko:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:sko" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:sko" beta="@featureClockRateGammaScale:sko" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:sko" name="distribution" x="@featureClockRateGammaScale:sko">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:sko" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:sko" name="distribution" x="@covarion_alpha.s:sko">
+          <Uniform id="CovAlphaUniform:sko" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:sko" name="distribution" x="@covarion_s.s:sko">
+          <Gamma id="Gamma.0:sko" name="distr">
+            <parameter id="covarion_switch_gamma_param1:sko" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:sko" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:sko:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:1pl" spec="SiteModel" mutationRate="@featureClockRate:sko:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:sko" spec="BinaryCovarion" alpha="@covarion_alpha.s:sko" switchRate="@covarion_s.s:sko">
+              <vfrequencies id="sko:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.85 0.15</vfrequencies>
+              <parameter id="sko:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="sko:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_sko:1pl" spec="FilteredAlignment" data="@data_sko" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:1sg" spec="SiteModel" mutationRate="@featureClockRate:sko:1sg" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:1sg" spec="FilteredAlignment" data="@data_sko" filter="5-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:2sg" spec="SiteModel" mutationRate="@featureClockRate:sko:2sg" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:2sg" spec="FilteredAlignment" data="@data_sko" filter="9-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:blood" spec="SiteModel" mutationRate="@featureClockRate:sko:blood" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:blood" spec="FilteredAlignment" data="@data_sko" filter="13-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:bone" spec="SiteModel" mutationRate="@featureClockRate:sko:bone" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:bone" spec="FilteredAlignment" data="@data_sko" filter="21-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:breast" spec="SiteModel" mutationRate="@featureClockRate:sko:breast" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:breast" spec="FilteredAlignment" data="@data_sko" filter="29-33" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:come" spec="SiteModel" mutationRate="@featureClockRate:sko:come" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:come" spec="FilteredAlignment" data="@data_sko" filter="34-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:die" spec="SiteModel" mutationRate="@featureClockRate:sko:die" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:die" spec="FilteredAlignment" data="@data_sko" filter="40-47" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:dog" spec="SiteModel" mutationRate="@featureClockRate:sko:dog" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:dog" spec="FilteredAlignment" data="@data_sko" filter="48-54" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:drink" spec="SiteModel" mutationRate="@featureClockRate:sko:drink" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:drink" spec="FilteredAlignment" data="@data_sko" filter="55-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:ear" spec="SiteModel" mutationRate="@featureClockRate:sko:ear" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:ear" spec="FilteredAlignment" data="@data_sko" filter="61-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:eye" spec="SiteModel" mutationRate="@featureClockRate:sko:eye" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:eye" spec="FilteredAlignment" data="@data_sko" filter="68-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:fire" spec="SiteModel" mutationRate="@featureClockRate:sko:fire" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:fire" spec="FilteredAlignment" data="@data_sko" filter="77-85" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:fish" spec="SiteModel" mutationRate="@featureClockRate:sko:fish" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:fish" spec="FilteredAlignment" data="@data_sko" filter="86-91" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:full" spec="SiteModel" mutationRate="@featureClockRate:sko:full" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:full" spec="FilteredAlignment" data="@data_sko" filter="92-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:hand" spec="SiteModel" mutationRate="@featureClockRate:sko:hand" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:hand" spec="FilteredAlignment" data="@data_sko" filter="98-104" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:hear" spec="SiteModel" mutationRate="@featureClockRate:sko:hear" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:hear" spec="FilteredAlignment" data="@data_sko" filter="105-115" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:knee" spec="SiteModel" mutationRate="@featureClockRate:sko:knee" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:knee" spec="FilteredAlignment" data="@data_sko" filter="116-125" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:leaf" spec="SiteModel" mutationRate="@featureClockRate:sko:leaf" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:leaf" spec="FilteredAlignment" data="@data_sko" filter="126-133" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:liver" spec="SiteModel" mutationRate="@featureClockRate:sko:liver" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:liver" spec="FilteredAlignment" data="@data_sko" filter="134-140" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:louse" spec="SiteModel" mutationRate="@featureClockRate:sko:louse" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:louse" spec="FilteredAlignment" data="@data_sko" filter="141-145" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:mountain" spec="SiteModel" mutationRate="@featureClockRate:sko:mountain" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:mountain" spec="FilteredAlignment" data="@data_sko" filter="146-151" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:name" spec="SiteModel" mutationRate="@featureClockRate:sko:name" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:name" spec="FilteredAlignment" data="@data_sko" filter="152-160" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:new" spec="SiteModel" mutationRate="@featureClockRate:sko:new" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:new" spec="FilteredAlignment" data="@data_sko" filter="161-166" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:night" spec="SiteModel" mutationRate="@featureClockRate:sko:night" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:night" spec="FilteredAlignment" data="@data_sko" filter="167-174" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:nose" spec="SiteModel" mutationRate="@featureClockRate:sko:nose" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:nose" spec="FilteredAlignment" data="@data_sko" filter="175-182" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:one" spec="SiteModel" mutationRate="@featureClockRate:sko:one" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:one" spec="FilteredAlignment" data="@data_sko" filter="183-192" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:path" spec="SiteModel" mutationRate="@featureClockRate:sko:path" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:path" spec="FilteredAlignment" data="@data_sko" filter="193-200" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:person" spec="SiteModel" mutationRate="@featureClockRate:sko:person" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:person" spec="FilteredAlignment" data="@data_sko" filter="201-207" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:see" spec="SiteModel" mutationRate="@featureClockRate:sko:see" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:see" spec="FilteredAlignment" data="@data_sko" filter="208-219" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:skin" spec="SiteModel" mutationRate="@featureClockRate:sko:skin" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:skin" spec="FilteredAlignment" data="@data_sko" filter="220-231" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:star" spec="SiteModel" mutationRate="@featureClockRate:sko:star" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:star" spec="FilteredAlignment" data="@data_sko" filter="232-242" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:stone" spec="SiteModel" mutationRate="@featureClockRate:sko:stone" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:stone" spec="FilteredAlignment" data="@data_sko" filter="243-254" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:sun" spec="SiteModel" mutationRate="@featureClockRate:sko:sun" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:sun" spec="FilteredAlignment" data="@data_sko" filter="255-261" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:tongue" spec="SiteModel" mutationRate="@featureClockRate:sko:tongue" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:tongue" spec="FilteredAlignment" data="@data_sko" filter="262-272" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:tooth" spec="SiteModel" mutationRate="@featureClockRate:sko:tooth" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:tooth" spec="FilteredAlignment" data="@data_sko" filter="273-280" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:tree" spec="SiteModel" mutationRate="@featureClockRate:sko:tree" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:tree" spec="FilteredAlignment" data="@data_sko" filter="281-289" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:two" spec="SiteModel" mutationRate="@featureClockRate:sko:two" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:two" spec="FilteredAlignment" data="@data_sko" filter="290-300" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:sko:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.sko:water" spec="SiteModel" mutationRate="@featureClockRate:sko:water" proportionInvariant="0" substModel="@covarion.s:sko" />
+          <data id="feature_data_sko:water" spec="FilteredAlignment" data="@data_sko" filter="301-306" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:sko" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:sko" name="up" />
+      <parameter idref="featureClockRateGammaScale:sko" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:sko" spec="ScaleOperator" parameter="@covarion_alpha.s:sko" scaleFactor="0.5" weight="1.0" />
+    <operator id="sko:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:sko" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:sko:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="39" estimate="false">3 3 3 7 7 4 5 7 6 5 6 8 8 5 5 6 10 9 7 6 4 5 8 5 7 7 9 7 6 11 11 10 11 6 10 7 8 10 5</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="sko.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:sko:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:sko" />
+      <log idref="covarion_alpha.s:sko" />
+      <log idref="covarion_s.s:sko" />
+    </logger>
+    <logger mode="tree" fileName="sko.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

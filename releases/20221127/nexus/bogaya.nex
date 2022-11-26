@@ -1,0 +1,121 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=71;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_bogaya.blood.0176,
+        3 bone_0ascertainment,
+        4 bone_bogaya.bone.0003,
+        5 breast_0ascertainment,
+        6 breast_bogaya.breast.0217,
+        7 come_0ascertainment,
+        8 come_bogaya.come.0005,
+        9 dog_0ascertainment,
+        10 dog_bogaya.dog.0177,
+        11 ear_0ascertainment,
+        12 ear_bogaya.ear.0036,
+        13 eye_0ascertainment,
+        14 eye_bogaya.eye.0105,
+        15 fire_0ascertainment,
+        16 fire_bogaya.fire.0185,
+        17 fish_0ascertainment,
+        18 fish_bogaya.fish.0011,
+        19 full_0ascertainment,
+        20 full_bogaya.full.0235,
+        21 hand_0ascertainment,
+        22 hand_bogaya.hand.0184,
+        23 hear_0ascertainment,
+        24 hear_bogaya.hear.0001,
+        25 knee_0ascertainment,
+        26 knee_bogaya.knee.0125,
+        27 leaf_0ascertainment,
+        28 leaf_bogaya.leaf.0100,
+        29 louse_0ascertainment,
+        30 louse_bogaya.louse.0026,
+        31 mountain_0ascertainment,
+        32 mountain_bogaya.mountain.0002,
+        33 name_0ascertainment,
+        34 name_bogaya.name.0019,
+        35 new_0ascertainment,
+        36 new_bogaya.new.0145,
+        37 night_0ascertainment,
+        38 night_bogaya.night.0002,
+        39 nose_0ascertainment,
+        40 nose_bogaya.nose.0002,
+        41 one_0ascertainment,
+        42 one_bogaya.one.0001,
+        43 path_0ascertainment,
+        44 path_bogaya.path.0002,
+        45 person_0ascertainment,
+        46 person_bogaya.person.0047,
+        47 pl_0ascertainment,
+        48 pl_bogaya.1pl.0089,
+        49 see_0ascertainment,
+        50 see_bogaya.see.0181,
+        51 sg_0ascertainment,
+        52 sg_bogaya.1sg.0068,
+        53 sg_bogaya.2sg.0099,
+        54 skin_0ascertainment,
+        55 skin_bogaya.skin.0002,
+        56 star_0ascertainment,
+        57 star_bogaya.star.0231,
+        58 stone_0ascertainment,
+        59 stone_bogaya.stone.0108,
+        60 sun_0ascertainment,
+        61 sun_bogaya.sun.0004,
+        62 tongue_0ascertainment,
+        63 tongue_bogaya.tongue.0188,
+        64 tooth_0ascertainment,
+        65 tooth_bogaya.tooth.0229,
+        66 tree_0ascertainment,
+        67 tree_bogaya.tree.0064,
+        68 two_0ascertainment,
+        69 two_bogaya.two.0138,
+        70 water_0ascertainment,
+        71 water_bogaya.water.0131
+;
+
+MATRIX
+bogaya 01010101010101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset dog = 9-10;
+    charset ear = 11-12;
+    charset eye = 13-14;
+    charset fire = 15-16;
+    charset fish = 17-18;
+    charset full = 19-20;
+    charset hand = 21-22;
+    charset hear = 23-24;
+    charset knee = 25-26;
+    charset leaf = 27-28;
+    charset louse = 29-30;
+    charset mountain = 31-32;
+    charset name = 33-34;
+    charset new = 35-36;
+    charset night = 37-38;
+    charset nose = 39-40;
+    charset one = 41-42;
+    charset path = 43-44;
+    charset person = 45-46;
+    charset pl = 47-48;
+    charset see = 49-50;
+    charset sg = 51-53;
+    charset skin = 54-55;
+    charset star = 56-57;
+    charset stone = 58-59;
+    charset sun = 60-61;
+    charset tongue = 62-63;
+    charset tooth = 64-65;
+    charset tree = 66-67;
+    charset two = 68-69;
+    charset water = 70-71;
+END;

@@ -1,0 +1,337 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=12 NCHAR=272;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_angan.blood.0014,
+        3 blood_angan.blood.0015,
+        4 blood_angan.blood.0016,
+        5 blood_angan.blood.0017,
+        6 blood_angan.blood.0018,
+        7 blood_angan.blood.0019,
+        8 blood_angan.blood.0020,
+        9 blood_angan.blood.0021,
+        10 bone_0ascertainment,
+        11 bone_angan.bone.0022,
+        12 bone_angan.bone.0023,
+        13 bone_angan.bone.0024,
+        14 breast_0ascertainment,
+        15 breast_angan.breast.0025,
+        16 breast_angan.breast.0026,
+        17 breast_angan.breast.0027,
+        18 breast_angan.breast.0028,
+        19 breast_angan.breast.0029,
+        20 come_0ascertainment,
+        21 come_angan.come.0030,
+        22 come_angan.come.0031,
+        23 come_angan.come.0032,
+        24 come_angan.come.0033,
+        25 come_angan.come.0034,
+        26 come_angan.come.0035,
+        27 die_0ascertainment,
+        28 die_angan.die.0036,
+        29 die_angan.die.0037,
+        30 die_angan.die.0038,
+        31 die_angan.die.0039,
+        32 die_angan.die.0040,
+        33 die_angan.die.0041,
+        34 die_angan.die.0042,
+        35 die_angan.die.0043,
+        36 dog_0ascertainment,
+        37 dog_angan.dog.0044,
+        38 dog_angan.dog.0045,
+        39 dog_angan.dog.0046,
+        40 dog_angan.dog.0047,
+        41 dog_angan.dog.0048,
+        42 dog_angan.dog.0049,
+        43 dog_angan.dog.0050,
+        44 dog_angan.dog.0051,
+        45 drink_0ascertainment,
+        46 drink_angan.drink.0052,
+        47 drink_angan.drink.0053,
+        48 drink_angan.drink.0054,
+        49 drink_angan.drink.0055,
+        50 drink_angan.drink.0056,
+        51 ear_0ascertainment,
+        52 ear_angan.ear.0057,
+        53 ear_angan.ear.0058,
+        54 ear_angan.ear.0059,
+        55 eye_0ascertainment,
+        56 eye_angan.eye.0060,
+        57 eye_angan.eye.0061,
+        58 eye_angan.eye.0062,
+        59 eye_angan.eye.0063,
+        60 fire_0ascertainment,
+        61 fire_angan.fire.0064,
+        62 fire_angan.fire.0065,
+        63 fish_0ascertainment,
+        64 fish_angan.fish.0066,
+        65 fish_angan.fish.0067,
+        66 fish_angan.fish.0068,
+        67 fish_angan.fish.0069,
+        68 fish_angan.fish.0070,
+        69 fish_angan.fish.0071,
+        70 fish_angan.fish.0072,
+        71 fish_angan.fish.0073,
+        72 full_0ascertainment,
+        73 full_angan.full.0074,
+        74 full_angan.full.0075,
+        75 hand_0ascertainment,
+        76 hand_angan.hand.0076,
+        77 hand_angan.hand.0077,
+        78 hear_0ascertainment,
+        79 hear_angan.hear.0078,
+        80 hear_angan.hear.0079,
+        81 hear_angan.hear.0080,
+        82 hear_angan.hear.0081,
+        83 hear_angan.hear.0082,
+        84 hear_angan.hear.0083,
+        85 hear_angan.hear.0084,
+        86 hear_angan.hear.0085,
+        87 hear_angan.hear.0086,
+        88 hear_angan.hear.0087,
+        89 horn_0ascertainment,
+        90 horn_angan.horn.0088,
+        91 horn_angan.horn.0089,
+        92 horn_angan.horn.0090,
+        93 horn_angan.horn.0091,
+        94 knee_0ascertainment,
+        95 knee_angan.knee.0092,
+        96 knee_angan.knee.0093,
+        97 knee_angan.knee.0094,
+        98 knee_angan.knee.0095,
+        99 knee_angan.knee.0096,
+        100 knee_angan.knee.0097,
+        101 knee_angan.knee.0098,
+        102 knee_angan.knee.0099,
+        103 leaf_0ascertainment,
+        104 leaf_angan.leaf.0100,
+        105 leaf_angan.leaf.0101,
+        106 leaf_angan.leaf.0102,
+        107 leaf_angan.leaf.0103,
+        108 leaf_angan.leaf.0104,
+        109 leaf_angan.leaf.0105,
+        110 leaf_angan.leaf.0106,
+        111 leaf_angan.leaf.0107,
+        112 liver_0ascertainment,
+        113 liver_angan.liver.0108,
+        114 liver_angan.liver.0109,
+        115 liver_angan.liver.0110,
+        116 liver_angan.liver.0111,
+        117 liver_angan.liver.0112,
+        118 louse_0ascertainment,
+        119 louse_angan.louse.0113,
+        120 louse_angan.louse.0114,
+        121 louse_angan.louse.0115,
+        122 mountain_0ascertainment,
+        123 mountain_angan.mountain.0116,
+        124 mountain_angan.mountain.0117,
+        125 mountain_angan.mountain.0118,
+        126 mountain_angan.mountain.0119,
+        127 mountain_angan.mountain.0120,
+        128 mountain_angan.mountain.0121,
+        129 name_0ascertainment,
+        130 name_angan.name.0122,
+        131 name_angan.name.0123,
+        132 name_angan.name.0124,
+        133 name_angan.name.0125,
+        134 name_angan.name.0126,
+        135 name_angan.name.0127,
+        136 name_angan.name.0128,
+        137 new_0ascertainment,
+        138 new_angan.new.0129,
+        139 new_angan.new.0130,
+        140 new_angan.new.0131,
+        141 new_angan.new.0132,
+        142 new_angan.new.0133,
+        143 new_angan.new.0134,
+        144 night_0ascertainment,
+        145 night_angan.night.0135,
+        146 night_angan.night.0136,
+        147 night_angan.night.0137,
+        148 night_angan.night.0138,
+        149 night_angan.night.0139,
+        150 night_angan.night.0140,
+        151 nose_0ascertainment,
+        152 nose_angan.nose.0141,
+        153 nose_angan.nose.0142,
+        154 nose_angan.nose.0143,
+        155 nose_angan.nose.0144,
+        156 one_0ascertainment,
+        157 one_angan.one.0145,
+        158 one_angan.one.0146,
+        159 one_angan.one.0147,
+        160 one_angan.one.0148,
+        161 one_angan.one.0149,
+        162 one_angan.one.0150,
+        163 one_angan.one.0151,
+        164 one_angan.one.0152,
+        165 one_angan.one.0153,
+        166 one_angan.one.0154,
+        167 path_0ascertainment,
+        168 path_angan.path.0155,
+        169 path_angan.path.0156,
+        170 path_angan.path.0157,
+        171 path_angan.path.0158,
+        172 path_angan.path.0159,
+        173 path_angan.path.0160,
+        174 path_angan.path.0161,
+        175 path_angan.path.0162,
+        176 person_0ascertainment,
+        177 person_angan.person.0163,
+        178 person_angan.person.0164,
+        179 person_angan.person.0165,
+        180 person_angan.person.0166,
+        181 pl_0ascertainment,
+        182 pl_angan.1pl.0001,
+        183 pl_angan.1pl.0002,
+        184 pl_angan.1pl.0003,
+        185 pl_angan.1pl.0004,
+        186 see_0ascertainment,
+        187 see_angan.see.0167,
+        188 see_angan.see.0168,
+        189 see_angan.see.0169,
+        190 see_angan.see.0170,
+        191 see_angan.see.0171,
+        192 see_angan.see.0172,
+        193 see_angan.see.0173,
+        194 see_angan.see.0174,
+        195 see_angan.see.0175,
+        196 see_angan.see.0176,
+        197 sg_0ascertainment,
+        198 sg_angan.1sg.0005,
+        199 sg_angan.1sg.0006,
+        200 sg_angan.1sg.0007,
+        201 sg_angan.2sg.0008,
+        202 sg_angan.2sg.0009,
+        203 sg_angan.2sg.0010,
+        204 sg_angan.2sg.0011,
+        205 sg_angan.2sg.0012,
+        206 sg_angan.2sg.0013,
+        207 skin_0ascertainment,
+        208 skin_angan.skin.0177,
+        209 skin_angan.skin.0178,
+        210 skin_angan.skin.0179,
+        211 skin_angan.skin.0180,
+        212 skin_angan.skin.0181,
+        213 skin_angan.skin.0182,
+        214 star_0ascertainment,
+        215 star_angan.star.0183,
+        216 star_angan.star.0184,
+        217 star_angan.star.0185,
+        218 star_angan.star.0186,
+        219 star_angan.star.0187,
+        220 star_angan.star.0188,
+        221 star_angan.star.0189,
+        222 star_angan.star.0190,
+        223 star_angan.star.0191,
+        224 stone_0ascertainment,
+        225 stone_angan.stone.0192,
+        226 stone_angan.stone.0193,
+        227 stone_angan.stone.0194,
+        228 stone_angan.stone.0195,
+        229 sun_0ascertainment,
+        230 sun_angan.sun.0196,
+        231 sun_angan.sun.0197,
+        232 sun_angan.sun.0198,
+        233 sun_angan.sun.0199,
+        234 sun_angan.sun.0200,
+        235 sun_angan.sun.0201,
+        236 sun_angan.sun.0202,
+        237 sun_angan.sun.0203,
+        238 tongue_0ascertainment,
+        239 tongue_angan.tongue.0204,
+        240 tongue_angan.tongue.0205,
+        241 tongue_angan.tongue.0206,
+        242 tongue_angan.tongue.0207,
+        243 tongue_angan.tongue.0208,
+        244 tongue_angan.tongue.0209,
+        245 tongue_angan.tongue.0210,
+        246 tongue_angan.tongue.0211,
+        247 tooth_0ascertainment,
+        248 tooth_angan.tooth.0212,
+        249 tooth_angan.tooth.0213,
+        250 tooth_angan.tooth.0214,
+        251 tree_0ascertainment,
+        252 tree_angan.tree.0215,
+        253 tree_angan.tree.0216,
+        254 tree_angan.tree.0217,
+        255 tree_angan.tree.0218,
+        256 tree_angan.tree.0219,
+        257 two_0ascertainment,
+        258 two_angan.two.0220,
+        259 two_angan.two.0221,
+        260 two_angan.two.0222,
+        261 two_angan.two.0223,
+        262 two_angan.two.0224,
+        263 two_angan.two.0225,
+        264 two_angan.two.0226,
+        265 two_angan.two.0227,
+        266 water_0ascertainment,
+        267 water_angan.water.0228,
+        268 water_angan.water.0229,
+        269 water_angan.water.0230,
+        270 water_angan.water.0231,
+        271 water_angan.water.0232,
+        272 water_angan.water.0233
+;
+
+MATRIX
+ampale    010000001010001000001000000100000000100000000100000100010000100100000000100??010000000000100001000001001000000001000001000100000010000000100000010000001000010000000000100000000100001000010000000000100100000010000001000000000100001000000001000000001000100000100000000100000
+angaataha 001000000001001000000100000100000000010000000100000010001000010010000000010??001000000000010000100000000100000000100000100010000001000000010000001000000100001000000000010000000010000100001000000000100010000001000000100000000010000100000000100000000100010000010000000010000
+ankave    000100000000100100000010000010000000001000000100000100000100100101000000100??000100000000100001000000000010000000010001000001000000100000100000000100001000000100000000001000010100001000000100000000100001000000100000010000000001000010000000010000001000001000100000000001000
+baruya    000010000010001000001000010001000000000100000010000001010000100100000000??0100000100000001000000100001000010000010000010000001000000100000010010000100010000??????????0000100000????01000000010000000100100000000010000001000000100000001000000001000001000100000????????0100000
+ivori     000100000010000010001000000000100000000010000100000100000010100000100000100??000001000000001001000000000000100000001000010000010000001000100000000001001000000010000000001000000001000010000001000000010001000000100000010000000100000000100000000100001000100000001000000000100
+kamasa    000001000010000001001000000000010000000001000100000001010000100000010000010??000000100000100001000000000001000001000001000100000000000100100000000000100010000001000000000010000100001000010000000000100000100010000000000100000100001000000000001000001000000100000100000000010
+kapau     000000100010001000001000000100000000100000000100000001000010100000001000100??000100000000100001000000000000010000100001000000100000000010100000010000001000000000100000000001000000101000000000100000100000010000001000000010000100001000000000010000001000100000000010000100000
+kawacha   000000100010001000001000000000001000100000000001000001010000100000000100100??000000010000100000001000000001000001000001000000100000010000100000010000000001000000010000000001000100001000000000010000100000100010000000001000000100001000000000001000001000000100100000000100000
+lohiki    000100000010000010000001000010000000000010000000100100000010100000000010100??000000001000000100000100000000001000000101000000001000001000000100000001001000000000001000001000000001000001000000001000100001010000100000000001000000100000010000010000101000000010000001000000100
+menya     000000100010001000101000000000001000000000100100000001000010100????????010001000000100000????0000100000000000010100000???0000100000010000100000000010001000000000000100100000000000101000000000000100100000001000001000010000010100000000001000001000000010100000000100000100000
+simbari   000000100010001000000000100000000100000100000000010001000100100100000000100??000000000100100000000010000001000001000001000000100000010000000010000010001000000000000010000100000100000001000000000010001100000000010000000000100100000001000100000010001000000100000000100100001
+yagwoia   000000010010000010001000000000000010000000010100000001000010100000001000100??000000000010100001000000000001000001000001000100000000010000100000010000001000000000010000000000100100001000010000000000100000100000000100001000000100001000000000000001001000000100000000010100000
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-9;
+    charset bone = 10-13;
+    charset breast = 14-19;
+    charset come = 20-26;
+    charset die = 27-35;
+    charset dog = 36-44;
+    charset drink = 45-50;
+    charset ear = 51-54;
+    charset eye = 55-59;
+    charset fire = 60-62;
+    charset fish = 63-71;
+    charset full = 72-74;
+    charset hand = 75-77;
+    charset hear = 78-88;
+    charset horn = 89-93;
+    charset knee = 94-102;
+    charset leaf = 103-111;
+    charset liver = 112-117;
+    charset louse = 118-121;
+    charset mountain = 122-128;
+    charset name = 129-136;
+    charset new = 137-143;
+    charset night = 144-150;
+    charset nose = 151-155;
+    charset one = 156-166;
+    charset path = 167-175;
+    charset person = 176-180;
+    charset pl = 181-185;
+    charset see = 186-196;
+    charset sg = 197-206;
+    charset skin = 207-213;
+    charset star = 214-223;
+    charset stone = 224-228;
+    charset sun = 229-237;
+    charset tongue = 238-246;
+    charset tooth = 247-250;
+    charset tree = 251-256;
+    charset two = 257-265;
+    charset water = 266-272;
+END;

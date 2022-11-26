@@ -1,0 +1,132 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=80;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_vilela.blood.0012,
+        3 bone_0ascertainment,
+        4 bone_vilela.bone.0038,
+        5 breast_0ascertainment,
+        6 breast_vilela.breast.0677,
+        7 come_0ascertainment,
+        8 come_vilela.come.0671,
+        9 die_0ascertainment,
+        10 die_vilela.die.0858,
+        11 die_vilela.die.0859,
+        12 dog_0ascertainment,
+        13 dog_vilela.dog.0116,
+        14 drink_0ascertainment,
+        15 drink_vilela.drink.0132,
+        16 ear_0ascertainment,
+        17 ear_vilela.ear.0398,
+        18 eye_0ascertainment,
+        19 eye_vilela.eye.0680,
+        20 fire_0ascertainment,
+        21 fire_vilela.fire.0247,
+        22 fire_vilela.fire.0695,
+        23 fish_0ascertainment,
+        24 fish_vilela.fish.0642,
+        25 hand_0ascertainment,
+        26 hand_vilela.hand.0015,
+        27 hear_0ascertainment,
+        28 hear_vilela.hear.0979,
+        29 horn_0ascertainment,
+        30 horn_vilela.horn.0549,
+        31 knee_0ascertainment,
+        32 knee_vilela.knee.0003,
+        33 leaf_0ascertainment,
+        34 leaf_vilela.leaf.0519,
+        35 liver_0ascertainment,
+        36 liver_vilela.liver.0817,
+        37 louse_0ascertainment,
+        38 louse_vilela.louse.0686,
+        39 mountain_0ascertainment,
+        40 mountain_vilela.mountain.0099,
+        41 name_0ascertainment,
+        42 name_vilela.name.0092,
+        43 night_0ascertainment,
+        44 night_vilela.night.0067,
+        45 nose_0ascertainment,
+        46 nose_vilela.nose.0072,
+        47 one_0ascertainment,
+        48 one_vilela.one.0067,
+        49 path_0ascertainment,
+        50 path_vilela.path.0026,
+        51 person_0ascertainment,
+        52 person_vilela.person.0038,
+        53 person_vilela.person.0051,
+        54 person_vilela.person.0329,
+        55 pl_0ascertainment,
+        56 pl_vilela.1pl.0800,
+        57 see_0ascertainment,
+        58 see_vilela.see.0579,
+        59 sg_0ascertainment,
+        60 sg_vilela.1sg.0007,
+        61 sg_vilela.2sg.0055,
+        62 skin_0ascertainment,
+        63 skin_vilela.skin.0006,
+        64 star_0ascertainment,
+        65 star_vilela.star.0243,
+        66 stone_0ascertainment,
+        67 stone_vilela.stone.1029,
+        68 sun_0ascertainment,
+        69 sun_vilela.sun.0147,
+        70 tongue_0ascertainment,
+        71 tongue_vilela.tongue.0221,
+        72 tooth_0ascertainment,
+        73 tooth_vilela.tooth.0708,
+        74 tooth_vilela.tooth.0709,
+        75 tree_0ascertainment,
+        76 tree_vilela.tree.0534,
+        77 two_0ascertainment,
+        78 two_vilela.two.0553,
+        79 water_0ascertainment,
+        80 water_vilela.water.0054
+;
+
+MATRIX
+vilela 01010101011010101010110101010101010101010101010101011101010110101010101011010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-11;
+    charset dog = 12-13;
+    charset drink = 14-15;
+    charset ear = 16-17;
+    charset eye = 18-19;
+    charset fire = 20-22;
+    charset fish = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-28;
+    charset horn = 29-30;
+    charset knee = 31-32;
+    charset leaf = 33-34;
+    charset liver = 35-36;
+    charset louse = 37-38;
+    charset mountain = 39-40;
+    charset name = 41-42;
+    charset night = 43-44;
+    charset nose = 45-46;
+    charset one = 47-48;
+    charset path = 49-50;
+    charset person = 51-54;
+    charset pl = 55-56;
+    charset see = 57-58;
+    charset sg = 59-61;
+    charset skin = 62-63;
+    charset star = 64-65;
+    charset stone = 66-67;
+    charset sun = 68-69;
+    charset tongue = 70-71;
+    charset tooth = 72-74;
+    charset tree = 75-76;
+    charset two = 77-78;
+    charset water = 79-80;
+END;

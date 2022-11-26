@@ -1,0 +1,202 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=4 NCHAR=145;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_maban.blood.0008,
+        3 bone_0ascertainment,
+        4 bone_maban.bone.0009,
+        5 bone_maban.bone.0010,
+        6 bone_maban.bone.0011,
+        7 breast_0ascertainment,
+        8 breast_maban.breast.0012,
+        9 come_0ascertainment,
+        10 come_maban.come.0013,
+        11 die_0ascertainment,
+        12 die_maban.die.0014,
+        13 die_maban.die.0015,
+        14 die_maban.die.0016,
+        15 die_maban.die.0017,
+        16 dog_0ascertainment,
+        17 dog_maban.dog.0018,
+        18 dog_maban.dog.0019,
+        19 dog_maban.dog.0020,
+        20 drink_0ascertainment,
+        21 drink_maban.drink.0021,
+        22 drink_maban.drink.0022,
+        23 drink_maban.drink.0023,
+        24 ear_0ascertainment,
+        25 ear_maban.ear.0024,
+        26 ear_maban.ear.0025,
+        27 eye_0ascertainment,
+        28 eye_maban.eye.0026,
+        29 fire_0ascertainment,
+        30 fire_maban.fire.0027,
+        31 fish_0ascertainment,
+        32 fish_maban.fish.0028,
+        33 full_0ascertainment,
+        34 full_maban.full.0029,
+        35 full_maban.full.0030,
+        36 full_maban.full.0031,
+        37 hand_0ascertainment,
+        38 hand_maban.hand.0032,
+        39 hand_maban.hand.0033,
+        40 hear_0ascertainment,
+        41 hear_maban.hear.0034,
+        42 hear_maban.hear.0035,
+        43 horn_0ascertainment,
+        44 horn_maban.horn.0036,
+        45 knee_0ascertainment,
+        46 knee_maban.knee.0037,
+        47 knee_maban.knee.0038,
+        48 leaf_0ascertainment,
+        49 leaf_maban.leaf.0039,
+        50 leaf_maban.leaf.0040,
+        51 leaf_maban.leaf.0041,
+        52 leaf_maban.leaf.0042,
+        53 liver_0ascertainment,
+        54 liver_maban.liver.0043,
+        55 liver_maban.liver.0044,
+        56 liver_maban.liver.0045,
+        57 louse_0ascertainment,
+        58 louse_maban.louse.0046,
+        59 louse_maban.louse.0047,
+        60 louse_maban.louse.0048,
+        61 mountain_0ascertainment,
+        62 mountain_maban.mountain.0049,
+        63 mountain_maban.mountain.0050,
+        64 mountain_maban.mountain.0051,
+        65 mountain_maban.mountain.0052,
+        66 mountain_maban.mountain.0053,
+        67 name_0ascertainment,
+        68 name_maban.name.0054,
+        69 new_0ascertainment,
+        70 new_maban.new.0055,
+        71 new_maban.new.0056,
+        72 new_maban.new.0057,
+        73 night_0ascertainment,
+        74 night_maban.night.0058,
+        75 night_maban.night.0059,
+        76 night_maban.night.0060,
+        77 nose_0ascertainment,
+        78 nose_maban.nose.0061,
+        79 nose_maban.nose.0062,
+        80 nose_maban.nose.0063,
+        81 one_0ascertainment,
+        82 one_maban.one.0064,
+        83 one_maban.one.0065,
+        84 one_maban.one.0066,
+        85 one_maban.one.0067,
+        86 one_maban.one.0068,
+        87 path_0ascertainment,
+        88 path_maban.path.0069,
+        89 path_maban.path.0070,
+        90 path_maban.path.0071,
+        91 person_0ascertainment,
+        92 person_maban.person.0072,
+        93 person_maban.person.0073,
+        94 person_maban.person.0074,
+        95 pl_0ascertainment,
+        96 pl_maban.1pl.0001,
+        97 pl_maban.1pl.0002,
+        98 pl_maban.1pl.0003,
+        99 see_0ascertainment,
+        100 see_maban.see.0075,
+        101 see_maban.see.0076,
+        102 see_maban.see.0077,
+        103 see_maban.see.0078,
+        104 see_maban.see.0079,
+        105 sg_0ascertainment,
+        106 sg_maban.1sg.0004,
+        107 sg_maban.1sg.0005,
+        108 sg_maban.1sg.0006,
+        109 sg_maban.2sg.0007,
+        110 skin_0ascertainment,
+        111 skin_maban.skin.0080,
+        112 skin_maban.skin.0081,
+        113 skin_maban.skin.0082,
+        114 star_0ascertainment,
+        115 star_maban.star.0083,
+        116 star_maban.star.0084,
+        117 star_maban.star.0085,
+        118 star_maban.star.0086,
+        119 star_maban.star.0087,
+        120 stone_0ascertainment,
+        121 stone_maban.stone.0088,
+        122 stone_maban.stone.0089,
+        123 stone_maban.stone.0090,
+        124 sun_0ascertainment,
+        125 sun_maban.sun.0091,
+        126 sun_maban.sun.0092,
+        127 tongue_0ascertainment,
+        128 tongue_maban.tongue.0093,
+        129 tongue_maban.tongue.0094,
+        130 tongue_maban.tongue.0095,
+        131 tongue_maban.tongue.0096,
+        132 tooth_0ascertainment,
+        133 tooth_maban.tooth.0097,
+        134 tooth_maban.tooth.0098,
+        135 tree_0ascertainment,
+        136 tree_maban.tree.0099,
+        137 tree_maban.tree.0100,
+        138 tree_maban.tree.0101,
+        139 tree_maban.tree.0102,
+        140 two_0ascertainment,
+        141 two_maban.two.0103,
+        142 water_0ascertainment,
+        143 water_maban.water.0104,
+        144 water_maban.water.0105,
+        145 water_maban.water.0106
+;
+
+MATRIX
+kibet     01010001010100001010101010010?0101000100110101001000010001000100000101000100010001000001000100010001001001001010001000001000100100101001010010100
+maba_chad 0100100101001000010010001001010100100100??0101000101001000100010000100110010001000100100100100001000100000100001000100100100100010001000100010010
+masalit   0100100101000100001001001001010100100100010100100100000100010001000100100001000100010000010011010000010101010000100010000010010001000101001010001
+runga     010101010100001010001000010101010101001001010100001001000100000011010010010001000000100???0100000100001001000010000001001000100100101000010010100
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-6;
+    charset breast = 7-8;
+    charset come = 9-10;
+    charset die = 11-15;
+    charset dog = 16-19;
+    charset drink = 20-23;
+    charset ear = 24-26;
+    charset eye = 27-28;
+    charset fire = 29-30;
+    charset fish = 31-32;
+    charset full = 33-36;
+    charset hand = 37-39;
+    charset hear = 40-42;
+    charset horn = 43-44;
+    charset knee = 45-47;
+    charset leaf = 48-52;
+    charset liver = 53-56;
+    charset louse = 57-60;
+    charset mountain = 61-66;
+    charset name = 67-68;
+    charset new = 69-72;
+    charset night = 73-76;
+    charset nose = 77-80;
+    charset one = 81-86;
+    charset path = 87-90;
+    charset person = 91-94;
+    charset pl = 95-98;
+    charset see = 99-104;
+    charset sg = 105-109;
+    charset skin = 110-113;
+    charset star = 114-119;
+    charset stone = 120-123;
+    charset sun = 124-126;
+    charset tongue = 127-131;
+    charset tooth = 132-134;
+    charset tree = 135-139;
+    charset two = 140-141;
+    charset water = 142-145;
+END;

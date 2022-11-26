@@ -1,0 +1,173 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=5 NCHAR=115;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_chicham.blood.0007,
+        3 blood_chicham.blood.0008,
+        4 bone_0ascertainment,
+        5 bone_chicham.bone.0009,
+        6 breast_0ascertainment,
+        7 breast_chicham.breast.0010,
+        8 breast_chicham.breast.0011,
+        9 breast_chicham.breast.0012,
+        10 come_0ascertainment,
+        11 come_chicham.come.0013,
+        12 come_chicham.come.0014,
+        13 come_chicham.come.0015,
+        14 come_chicham.come.0016,
+        15 die_0ascertainment,
+        16 die_chicham.die.0017,
+        17 die_chicham.die.0018,
+        18 dog_0ascertainment,
+        19 dog_chicham.dog.0019,
+        20 dog_chicham.dog.0020,
+        21 dog_chicham.dog.0021,
+        22 drink_0ascertainment,
+        23 drink_chicham.drink.0022,
+        24 drink_chicham.drink.0023,
+        25 drink_chicham.drink.0024,
+        26 ear_0ascertainment,
+        27 ear_chicham.ear.0025,
+        28 eye_0ascertainment,
+        29 eye_chicham.eye.0026,
+        30 fire_0ascertainment,
+        31 fire_chicham.fire.0027,
+        32 fish_0ascertainment,
+        33 fish_chicham.fish.0028,
+        34 fish_chicham.fish.0029,
+        35 full_0ascertainment,
+        36 full_chicham.full.0030,
+        37 full_chicham.full.0031,
+        38 full_chicham.full.0032,
+        39 full_chicham.full.0033,
+        40 full_chicham.full.0034,
+        41 hand_0ascertainment,
+        42 hand_chicham.hand.0035,
+        43 hand_chicham.hand.0036,
+        44 hand_chicham.hand.0037,
+        45 hear_0ascertainment,
+        46 hear_chicham.hear.0038,
+        47 hear_chicham.hear.0039,
+        48 hear_chicham.hear.0040,
+        49 horn_0ascertainment,
+        50 horn_chicham.horn.0041,
+        51 horn_chicham.horn.0042,
+        52 knee_0ascertainment,
+        53 knee_chicham.knee.0043,
+        54 leaf_0ascertainment,
+        55 leaf_chicham.leaf.0044,
+        56 liver_0ascertainment,
+        57 liver_chicham.liver.0045,
+        58 liver_chicham.liver.0046,
+        59 louse_0ascertainment,
+        60 louse_chicham.louse.0047,
+        61 mountain_0ascertainment,
+        62 mountain_chicham.mountain.0048,
+        63 mountain_chicham.mountain.0049,
+        64 mountain_chicham.mountain.0050,
+        65 mountain_chicham.mountain.0051,
+        66 name_0ascertainment,
+        67 name_chicham.name.0052,
+        68 new_0ascertainment,
+        69 new_chicham.new.0053,
+        70 night_0ascertainment,
+        71 night_chicham.night.0054,
+        72 night_chicham.night.0055,
+        73 nose_0ascertainment,
+        74 nose_chicham.nose.0056,
+        75 one_0ascertainment,
+        76 one_chicham.one.0057,
+        77 path_0ascertainment,
+        78 path_chicham.path.0058,
+        79 person_0ascertainment,
+        80 person_chicham.person.0059,
+        81 person_chicham.person.0060,
+        82 person_chicham.person.0061,
+        83 pl_0ascertainment,
+        84 pl_chicham.1pl.0001,
+        85 pl_chicham.1pl.0002,
+        86 pl_chicham.1pl.0003,
+        87 pl_chicham.1pl.0004,
+        88 see_0ascertainment,
+        89 see_chicham.see.0062,
+        90 see_chicham.see.0063,
+        91 see_chicham.see.0064,
+        92 see_chicham.see.0065,
+        93 sg_0ascertainment,
+        94 sg_chicham.1sg.0005,
+        95 sg_chicham.2sg.0006,
+        96 skin_0ascertainment,
+        97 skin_chicham.skin.0066,
+        98 skin_chicham.skin.0067,
+        99 star_0ascertainment,
+        100 star_chicham.star.0068,
+        101 stone_0ascertainment,
+        102 stone_chicham.stone.0069,
+        103 sun_0ascertainment,
+        104 sun_chicham.sun.0070,
+        105 tongue_0ascertainment,
+        106 tongue_chicham.tongue.0071,
+        107 tooth_0ascertainment,
+        108 tooth_chicham.tooth.0072,
+        109 tree_0ascertainment,
+        110 tree_chicham.tree.0073,
+        111 two_0ascertainment,
+        112 two_chicham.two.0074,
+        113 water_0ascertainment,
+        114 water_chicham.water.0075,
+        115 water_chicham.water.0076
+;
+
+MATRIX
+achuar       010010100010000100110010001010101001000001000100010010101001010000101010010?010100010010100001101001010101010101010
+aguaruna     0100100100011001001000100010101010010100010000100010101010010011001010100101010010010000011001101001010101010101010
+huambisa     0100101000100101001000100010101010010010010001010110101010010001001010110101010001001000010101101001010101010101011
+jivaro_shuar 00101010001000011010000100101010100010010010010001101010010100011010101001010100100????0010101100101010101010101010
+shuar        01001000101000010011100010101010010?????000101000??0?01010010????01010100101010100000100110001101001010?01010?01010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-5;
+    charset breast = 6-9;
+    charset come = 10-14;
+    charset die = 15-17;
+    charset dog = 18-21;
+    charset drink = 22-25;
+    charset ear = 26-27;
+    charset eye = 28-29;
+    charset fire = 30-31;
+    charset fish = 32-34;
+    charset full = 35-40;
+    charset hand = 41-44;
+    charset hear = 45-48;
+    charset horn = 49-51;
+    charset knee = 52-53;
+    charset leaf = 54-55;
+    charset liver = 56-58;
+    charset louse = 59-60;
+    charset mountain = 61-65;
+    charset name = 66-67;
+    charset new = 68-69;
+    charset night = 70-72;
+    charset nose = 73-74;
+    charset one = 75-76;
+    charset path = 77-78;
+    charset person = 79-82;
+    charset pl = 83-87;
+    charset see = 88-92;
+    charset sg = 93-95;
+    charset skin = 96-98;
+    charset star = 99-100;
+    charset stone = 101-102;
+    charset sun = 103-104;
+    charset tongue = 105-106;
+    charset tooth = 107-108;
+    charset tree = 109-110;
+    charset two = 111-112;
+    charset water = 113-115;
+END;

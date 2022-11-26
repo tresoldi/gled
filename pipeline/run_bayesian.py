@@ -1,0 +1,301 @@
+#!/usr/bin/env python3
+
+"""
+Run Bayesian analyses and collect results.
+"""
+
+# Import Python standard libraries
+from collections import defaultdict
+from pathlib import Path
+import csv
+import glob
+import itertools
+import logging
+import random
+import re
+import subprocess
+
+# Import 3rd party
+from ete3 import Tree
+
+# Import other modules
+import common
+
+BASE_PATH = Path(__file__).parent
+
+# Define path to executables
+BEAST2_PATH = Path("/home/tiagot/software/BEAST.v2.6.7.Linux/beast/bin")
+
+PROBLEMATIC_FAMILIES = ["bookkeeping"]
+
+
+def run_inference(BAYES_PATH, languoids):
+
+    # Collect all models
+    models_pattern = BAYES_PATH / "*.xml"
+    for model in glob.glob(str(models_pattern)):
+        model_filename = Path(model)
+        basename = model_filename.stem
+        logging.info(f"Running BEAST2 for {basename}...")
+
+        # Run BEAST2
+        subprocess.run(
+            [
+                str(BEAST2_PATH / "beast"),
+                model_filename.name,  # quote names with spaces
+            ],
+            cwd=BAYES_PATH,
+        )
+
+        # Run Treeannotator
+        # TODO: move to phyltr?
+        beast2_trees = BAYES_PATH / f"{basename}.nex"
+        subprocess.run(
+            [
+                str(BEAST2_PATH / "treeannotator"),
+                "-burnin",
+                "50",
+                "-noSA",
+                str(beast2_trees),
+                f"{basename}.mcc.nex",
+            ],
+            cwd=BAYES_PATH,
+        )
+
+        # Remove files that are big and not necessary for release
+        beast2_trees.unlink()
+
+
+def extract_tree(nexus):
+    """
+    Extract a tree from an MCC nexus file.
+    """
+
+    in_translate = False
+    translate = {}
+    basename = Path(nexus).stem
+    basename = basename[: basename.find(".")]
+    with open(nexus) as handler:
+        for line in handler.readlines():
+            if "Translate" in line:
+                in_translate = True
+            elif in_translate:
+                if ";" in line:
+                    in_translate = False
+                else:
+                    source, target = line.strip().replace(",", "").split()
+                    translate[source] = f"{target}"
+            elif "tree TREE1 =" in line:
+                tree_line = line.strip()[line.index("(") :]
+                tree_line = re.sub(r"\[[^]]+\]", "", tree_line)
+                tree = Tree(tree_line)
+
+    # Translate names
+    for node in tree.traverse():
+        if node.name in translate:
+            node.name = translate[node.name]
+
+    return tree
+
+
+def collect_global_tree(family_distances, languoids, BAYES_PATH, OUTPUT_PATH):
+    """
+    Collect all trees into a single, global tree.
+    """
+
+    # Collect all trees and the longest distance
+    max_dist = defaultdict(int)
+    trees = {}
+    for tree_file in glob.glob(str(BAYES_PATH / "*.mcc.nex")):
+        # Extract tree, write it to disk, and append to collection
+        tree = extract_tree(tree_file)
+        tree_name = common.slug(Path(tree_file).stem.split(".")[0], level="full")
+        if tree_name in PROBLEMATIC_FAMILIES:
+            continue
+
+        with open(OUTPUT_PATH / f"{tree_name}.tree", "w") as handler:
+            handler.write(tree.write(format=1))
+        trees[tree_name] = tree
+
+        # Get the biggest distance
+        dist = max([leaf.get_distance(tree) for leaf in tree.iter_leaves()])
+        if max_dist[tree_name] < dist:
+            max_dist[tree_name] = dist
+
+    # Rescale the trees in `trees` so that their biggest distance
+    # matches the one in `family_distances` (in order to later have
+    # all at the same distances from the dummy root)
+    family_depth = {}
+    for family, tree in trees.items():
+        if family in family_distances:
+            # Compute the correction factor and apply it to the
+            # entire tree
+            corr = family_distances[family] / max_dist[family]
+        else:
+            corr = max(family_distances.values()) / max_dist[family]
+
+        for node in tree.traverse():
+            node.dist = node.dist * corr
+
+        family_depth[family] = max(
+            [tree.get_distance(leaf) for leaf in tree.get_leaves()]
+        )
+
+    # Build global tree; in order to have the resulting tree without
+    # all isolates together, we first collect all families (including isolates),
+    # shuffle, and finally add to the global tree
+    final_trees = []
+
+    for family, tree in trees.items():
+        final_trees.append([tree, 2.0 - family_depth[family]])
+
+    # Add all language isolates from Glottolog that are in our database
+    isolates_glottolog = [
+        glottocode for glottocode in languoids if languoids[glottocode].isolate
+    ]
+    with open(OUTPUT_PATH.parent / "gled.tsv", encoding="utf-8") as handler:
+        isolates_gled = sorted(
+            set(
+                [
+                    "%s_%s"
+                    % (
+                        common.slug(row["GLOTTOLOG_NAME"], level="simple"),
+                        row["GLOTTOCODE"],
+                    )
+                    for row in csv.DictReader(handler, delimiter="\t")
+                    if row["GLOTTOCODE"] in isolates_glottolog
+                ]
+            )
+        )
+    for lang in isolates_gled:
+        final_trees.append([Tree(name=lang), 2.0])
+
+    random.seed("gled")
+    random.shuffle(final_trees)
+    global_tree = Tree()
+    for tree, dist in final_trees:
+        global_tree.add_child(tree, dist=dist)
+
+    return global_tree
+
+
+def get_distances(global_tree, OUTPUT_PATH):
+    logging.info("Collecting distances from Bayesian global tree")
+
+    # Collect pairwise distances between leaves and deepest leaf instance
+    distances = {}
+    leaves = global_tree.get_leaves()
+    for lang1, lang2 in itertools.combinations_with_replacement(leaves, 2):
+        dist = lang1.get_distance(lang2)
+        distances[lang1.name, lang2.name] = dist
+        distances[lang2.name, lang1.name] = dist
+
+    # Build the matrix and write
+    with open(OUTPUT_PATH / "global.dst", "w", encoding="utf-8") as handler:
+        handler.write(" %i\n" % len(leaves))
+        lang_names = sorted([leaf.name for leaf in leaves])
+        for lang1 in lang_names:
+            lang_vector = []
+            for lang2 in lang_names:
+                lang_vector.append("%.6f" % distances[lang1, lang2])
+
+            handler.write(lang1)
+            handler.write(" ")
+            handler.write(" ".join(lang_vector))
+            handler.write("\n")
+
+
+def dst2dict(filename):
+    """
+    Return the contents of a distance matrix files as a dictionary.
+    """
+
+    header = True
+    taxa = []
+    matrix = []
+    with open(filename, encoding="utf-8") as handler:
+        for line in handler.readlines():
+            line = re.sub(r"\s+", " ", line.strip())
+            if header:
+                header = False
+            else:
+                tokens = line.split()
+                taxa.append(tokens[0])
+                matrix.append([float(v) for v in tokens[1:]])
+
+    dst = {}
+    for taxon1, row in zip(taxa, matrix):
+        for taxon2, value in zip(taxa, row):
+            dst[taxon1, taxon2] = value
+
+    return dst
+
+
+def collect_distances(BAYES_PATH, PHYLO_PATH):
+    # Read the glottocode/doculect mapping
+    with open(BAYES_PATH / "glottomap.tsv", encoding="utf-8") as handler:
+        glottomap = list(csv.DictReader(handler, delimiter="\t"))
+        doculects = sorted([entry["Doculect"] for entry in glottomap])
+
+    # Iterate over all distance files -- while we could collect this
+    # information while computing it, for code separation it is better
+    # to just consider it external
+    file_pattern = str(PHYLO_PATH / "*.dst")
+    dst = {}
+    for dst_file in glob.glob(file_pattern):
+        family_name = Path(dst_file).stem
+        logging.info(f"Collecting precomputed distance for `{family_name}`")
+        family_dst = dst2dict(dst_file)
+        family_dst = {
+            (lang1, lang2): value
+            for (lang1, lang2), value in family_dst.items()
+            if lang1 in doculects and lang2 in doculects
+        }
+
+        # Get the family maximum distance if enough values were collected
+        values = list(family_dst.values())
+        if len(values) >= 2:
+            dst[family_name] = max(values)
+
+    return dst
+
+
+def main():
+    """
+    Script entry point.
+    """
+
+    # Instantiate `glottolog` object and cache languoids
+    logging.info("Caching Glottolog languoids...")
+    glottolog = common.get_glottolog()
+    languoids = {}
+    for lang in glottolog.languoids():
+        languoids[lang.glottocode] = lang
+    logging.info(f"Cached {len(languoids)} languoids.")
+
+    # Grab the path to the latest release, and create the Bayesian
+    # directory if possible
+    releases = sorted(glob.glob(str(BASE_PATH.parent / "releases" / "*")))
+    BAYES_PATH = Path(releases[-1]) / "bayesian"
+    PHYLO_PATH = BAYES_PATH.parent / "phylo"
+    TREES_PATH = BAYES_PATH.parent / "trees"
+    TREES_PATH.mkdir(exist_ok=True)
+
+    # Collect the pre-computed distances for all the doculects
+    # that are part of the Bayesian tree
+    distances = collect_distances(BAYES_PATH, PHYLO_PATH)
+
+    # Run the inference for all trees
+    run_inference(BAYES_PATH, languoids)
+
+    # Build the global tree
+    global_tree = collect_global_tree(distances, languoids, BAYES_PATH, TREES_PATH)
+    with open(TREES_PATH / "global.tree", "w") as handler:
+        handler.write(global_tree.write(format=1))
+
+    get_distances(global_tree, BAYES_PATH.parent)
+
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+    main()

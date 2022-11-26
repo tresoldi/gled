@@ -1,0 +1,133 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=85;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_rashad.blood.0364,
+        3 bone_0ascertainment,
+        4 bone_rashad.bone.0019,
+        5 bone_rashad.bone.0136,
+        6 breast_0ascertainment,
+        7 breast_rashad.breast.0205,
+        8 breast_rashad.breast.0515,
+        9 come_0ascertainment,
+        10 come_rashad.come.0251,
+        11 die_0ascertainment,
+        12 die_rashad.die.0489,
+        13 dog_0ascertainment,
+        14 dog_rashad.dog.0021,
+        15 dog_rashad.dog.0453,
+        16 drink_0ascertainment,
+        17 drink_rashad.drink.0846,
+        18 ear_0ascertainment,
+        19 ear_rashad.ear.0020,
+        20 ear_rashad.ear.0381,
+        21 eye_0ascertainment,
+        22 eye_rashad.eye.0441,
+        23 fire_0ascertainment,
+        24 fire_rashad.fire.0051,
+        25 fire_rashad.fire.0550,
+        26 fish_0ascertainment,
+        27 fish_rashad.fish.0615,
+        28 hand_0ascertainment,
+        29 hand_rashad.hand.0025,
+        30 horn_0ascertainment,
+        31 horn_rashad.horn.0517,
+        32 horn_rashad.horn.0518,
+        33 knee_0ascertainment,
+        34 knee_rashad.knee.0117,
+        35 knee_rashad.knee.0561,
+        36 leaf_0ascertainment,
+        37 leaf_rashad.leaf.0015,
+        38 leaf_rashad.leaf.0217,
+        39 liver_0ascertainment,
+        40 liver_rashad.liver.0010,
+        41 liver_rashad.liver.0768,
+        42 mountain_0ascertainment,
+        43 mountain_rashad.mountain.0704,
+        44 mountain_rashad.mountain.0705,
+        45 name_0ascertainment,
+        46 name_rashad.name.0014,
+        47 name_rashad.name.0500,
+        48 night_0ascertainment,
+        49 night_rashad.night.0006,
+        50 nose_0ascertainment,
+        51 nose_rashad.nose.0475,
+        52 one_0ascertainment,
+        53 one_rashad.one.0024,
+        54 path_0ascertainment,
+        55 path_rashad.path.0045,
+        56 path_rashad.path.0699,
+        57 person_0ascertainment,
+        58 person_rashad.person.0589,
+        59 person_rashad.person.0897,
+        60 see_0ascertainment,
+        61 see_rashad.see.0017,
+        62 skin_0ascertainment,
+        63 skin_rashad.skin.0263,
+        64 skin_rashad.skin.0774,
+        65 star_0ascertainment,
+        66 star_rashad.star.0039,
+        67 star_rashad.star.0728,
+        68 stone_0ascertainment,
+        69 stone_rashad.stone.0162,
+        70 stone_rashad.stone.0978,
+        71 sun_0ascertainment,
+        72 sun_rashad.sun.0549,
+        73 tongue_0ascertainment,
+        74 tongue_rashad.tongue.0017,
+        75 tongue_rashad.tongue.0104,
+        76 tooth_0ascertainment,
+        77 tooth_rashad.tooth.0002,
+        78 tooth_rashad.tooth.0660,
+        79 tree_0ascertainment,
+        80 tree_rashad.tree.0001,
+        81 tree_rashad.tree.0086,
+        82 two_0ascertainment,
+        83 two_rashad.two.0226,
+        84 water_0ascertainment,
+        85 water_rashad.water.0501
+;
+
+MATRIX
+tagoi 0101101101010110101101011010101101101101101101101010101101101011011011010110110110101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-8;
+    charset come = 9-10;
+    charset die = 11-12;
+    charset dog = 13-15;
+    charset drink = 16-17;
+    charset ear = 18-20;
+    charset eye = 21-22;
+    charset fire = 23-25;
+    charset fish = 26-27;
+    charset hand = 28-29;
+    charset horn = 30-32;
+    charset knee = 33-35;
+    charset leaf = 36-38;
+    charset liver = 39-41;
+    charset mountain = 42-44;
+    charset name = 45-47;
+    charset night = 48-49;
+    charset nose = 50-51;
+    charset one = 52-53;
+    charset path = 54-56;
+    charset person = 57-59;
+    charset see = 60-61;
+    charset skin = 62-64;
+    charset star = 65-67;
+    charset stone = 68-70;
+    charset sun = 71-72;
+    charset tongue = 73-75;
+    charset tooth = 76-78;
+    charset tree = 79-81;
+    charset two = 82-83;
+    charset water = 84-85;
+END;

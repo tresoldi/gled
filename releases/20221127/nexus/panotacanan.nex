@@ -1,0 +1,381 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=27 NCHAR=301;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_panotacanan.blood.0012,
+        3 blood_panotacanan.blood.0013,
+        4 blood_panotacanan.blood.0014,
+        5 bone_0ascertainment,
+        6 bone_panotacanan.bone.0015,
+        7 bone_panotacanan.bone.0016,
+        8 bone_panotacanan.bone.0017,
+        9 bone_panotacanan.bone.0018,
+        10 bone_panotacanan.bone.0019,
+        11 breast_0ascertainment,
+        12 breast_panotacanan.breast.0020,
+        13 breast_panotacanan.breast.0021,
+        14 breast_panotacanan.breast.0022,
+        15 breast_panotacanan.breast.0023,
+        16 breast_panotacanan.breast.0024,
+        17 come_0ascertainment,
+        18 come_panotacanan.come.0025,
+        19 come_panotacanan.come.0026,
+        20 come_panotacanan.come.0027,
+        21 come_panotacanan.come.0028,
+        22 come_panotacanan.come.0029,
+        23 come_panotacanan.come.0030,
+        24 come_panotacanan.come.0031,
+        25 come_panotacanan.come.0032,
+        26 come_panotacanan.come.0033,
+        27 die_0ascertainment,
+        28 die_panotacanan.die.0034,
+        29 die_panotacanan.die.0035,
+        30 die_panotacanan.die.0036,
+        31 die_panotacanan.die.0037,
+        32 die_panotacanan.die.0038,
+        33 die_panotacanan.die.0039,
+        34 die_panotacanan.die.0040,
+        35 die_panotacanan.die.0041,
+        36 die_panotacanan.die.0042,
+        37 die_panotacanan.die.0043,
+        38 die_panotacanan.die.0044,
+        39 die_panotacanan.die.0045,
+        40 dog_0ascertainment,
+        41 dog_panotacanan.dog.0046,
+        42 dog_panotacanan.dog.0047,
+        43 dog_panotacanan.dog.0048,
+        44 dog_panotacanan.dog.0049,
+        45 dog_panotacanan.dog.0050,
+        46 dog_panotacanan.dog.0051,
+        47 dog_panotacanan.dog.0052,
+        48 dog_panotacanan.dog.0053,
+        49 dog_panotacanan.dog.0054,
+        50 drink_0ascertainment,
+        51 drink_panotacanan.drink.0055,
+        52 drink_panotacanan.drink.0056,
+        53 drink_panotacanan.drink.0057,
+        54 drink_panotacanan.drink.0058,
+        55 drink_panotacanan.drink.0059,
+        56 drink_panotacanan.drink.0060,
+        57 drink_panotacanan.drink.0061,
+        58 drink_panotacanan.drink.0062,
+        59 drink_panotacanan.drink.0063,
+        60 drink_panotacanan.drink.0064,
+        61 drink_panotacanan.drink.0065,
+        62 drink_panotacanan.drink.0066,
+        63 drink_panotacanan.drink.0067,
+        64 ear_0ascertainment,
+        65 ear_panotacanan.ear.0068,
+        66 ear_panotacanan.ear.0069,
+        67 ear_panotacanan.ear.0070,
+        68 ear_panotacanan.ear.0071,
+        69 ear_panotacanan.ear.0072,
+        70 eye_0ascertainment,
+        71 eye_panotacanan.eye.0073,
+        72 eye_panotacanan.eye.0074,
+        73 fire_0ascertainment,
+        74 fire_panotacanan.fire.0075,
+        75 fire_panotacanan.fire.0076,
+        76 fire_panotacanan.fire.0077,
+        77 fire_panotacanan.fire.0078,
+        78 fire_panotacanan.fire.0079,
+        79 fire_panotacanan.fire.0080,
+        80 fire_panotacanan.fire.0081,
+        81 fire_panotacanan.fire.0082,
+        82 fish_0ascertainment,
+        83 fish_panotacanan.fish.0083,
+        84 fish_panotacanan.fish.0084,
+        85 fish_panotacanan.fish.0085,
+        86 fish_panotacanan.fish.0086,
+        87 fish_panotacanan.fish.0087,
+        88 fish_panotacanan.fish.0088,
+        89 fish_panotacanan.fish.0089,
+        90 fish_panotacanan.fish.0090,
+        91 fish_panotacanan.fish.0091,
+        92 fish_panotacanan.fish.0092,
+        93 full_0ascertainment,
+        94 full_panotacanan.full.0093,
+        95 full_panotacanan.full.0094,
+        96 full_panotacanan.full.0095,
+        97 full_panotacanan.full.0096,
+        98 full_panotacanan.full.0097,
+        99 full_panotacanan.full.0098,
+        100 full_panotacanan.full.0099,
+        101 full_panotacanan.full.0100,
+        102 full_panotacanan.full.0101,
+        103 full_panotacanan.full.0102,
+        104 full_panotacanan.full.0103,
+        105 full_panotacanan.full.0104,
+        106 hand_0ascertainment,
+        107 hand_panotacanan.hand.0105,
+        108 hand_panotacanan.hand.0106,
+        109 hand_panotacanan.hand.0107,
+        110 hand_panotacanan.hand.0108,
+        111 hand_panotacanan.hand.0109,
+        112 hear_0ascertainment,
+        113 hear_panotacanan.hear.0110,
+        114 hear_panotacanan.hear.0111,
+        115 hear_panotacanan.hear.0112,
+        116 hear_panotacanan.hear.0113,
+        117 hear_panotacanan.hear.0114,
+        118 hear_panotacanan.hear.0115,
+        119 hear_panotacanan.hear.0116,
+        120 hear_panotacanan.hear.0117,
+        121 hear_panotacanan.hear.0118,
+        122 hear_panotacanan.hear.0119,
+        123 hear_panotacanan.hear.0120,
+        124 horn_0ascertainment,
+        125 horn_panotacanan.horn.0121,
+        126 horn_panotacanan.horn.0122,
+        127 horn_panotacanan.horn.0123,
+        128 horn_panotacanan.horn.0124,
+        129 horn_panotacanan.horn.0125,
+        130 horn_panotacanan.horn.0126,
+        131 knee_0ascertainment,
+        132 knee_panotacanan.knee.0127,
+        133 knee_panotacanan.knee.0128,
+        134 knee_panotacanan.knee.0129,
+        135 knee_panotacanan.knee.0130,
+        136 knee_panotacanan.knee.0131,
+        137 knee_panotacanan.knee.0132,
+        138 leaf_0ascertainment,
+        139 leaf_panotacanan.leaf.0133,
+        140 leaf_panotacanan.leaf.0134,
+        141 leaf_panotacanan.leaf.0135,
+        142 leaf_panotacanan.leaf.0136,
+        143 leaf_panotacanan.leaf.0137,
+        144 leaf_panotacanan.leaf.0138,
+        145 leaf_panotacanan.leaf.0139,
+        146 leaf_panotacanan.leaf.0140,
+        147 liver_0ascertainment,
+        148 liver_panotacanan.liver.0141,
+        149 liver_panotacanan.liver.0142,
+        150 louse_0ascertainment,
+        151 louse_panotacanan.louse.0143,
+        152 louse_panotacanan.louse.0144,
+        153 louse_panotacanan.louse.0145,
+        154 louse_panotacanan.louse.0146,
+        155 louse_panotacanan.louse.0147,
+        156 louse_panotacanan.louse.0148,
+        157 louse_panotacanan.louse.0149,
+        158 mountain_0ascertainment,
+        159 mountain_panotacanan.mountain.0150,
+        160 mountain_panotacanan.mountain.0151,
+        161 mountain_panotacanan.mountain.0152,
+        162 mountain_panotacanan.mountain.0153,
+        163 mountain_panotacanan.mountain.0154,
+        164 mountain_panotacanan.mountain.0155,
+        165 mountain_panotacanan.mountain.0156,
+        166 mountain_panotacanan.mountain.0157,
+        167 mountain_panotacanan.mountain.0158,
+        168 mountain_panotacanan.mountain.0159,
+        169 mountain_panotacanan.mountain.0160,
+        170 mountain_panotacanan.mountain.0161,
+        171 name_0ascertainment,
+        172 name_panotacanan.name.0162,
+        173 name_panotacanan.name.0163,
+        174 new_0ascertainment,
+        175 new_panotacanan.new.0164,
+        176 new_panotacanan.new.0165,
+        177 new_panotacanan.new.0166,
+        178 new_panotacanan.new.0167,
+        179 new_panotacanan.new.0168,
+        180 new_panotacanan.new.0169,
+        181 new_panotacanan.new.0170,
+        182 new_panotacanan.new.0171,
+        183 night_0ascertainment,
+        184 night_panotacanan.night.0172,
+        185 night_panotacanan.night.0173,
+        186 night_panotacanan.night.0174,
+        187 night_panotacanan.night.0175,
+        188 night_panotacanan.night.0176,
+        189 night_panotacanan.night.0177,
+        190 night_panotacanan.night.0178,
+        191 night_panotacanan.night.0179,
+        192 night_panotacanan.night.0180,
+        193 nose_0ascertainment,
+        194 nose_panotacanan.nose.0181,
+        195 nose_panotacanan.nose.0182,
+        196 nose_panotacanan.nose.0183,
+        197 nose_panotacanan.nose.0184,
+        198 one_0ascertainment,
+        199 one_panotacanan.one.0185,
+        200 one_panotacanan.one.0186,
+        201 one_panotacanan.one.0187,
+        202 one_panotacanan.one.0188,
+        203 one_panotacanan.one.0189,
+        204 one_panotacanan.one.0190,
+        205 one_panotacanan.one.0191,
+        206 one_panotacanan.one.0192,
+        207 path_0ascertainment,
+        208 path_panotacanan.path.0193,
+        209 path_panotacanan.path.0194,
+        210 path_panotacanan.path.0195,
+        211 path_panotacanan.path.0196,
+        212 path_panotacanan.path.0197,
+        213 person_0ascertainment,
+        214 person_panotacanan.person.0198,
+        215 person_panotacanan.person.0199,
+        216 person_panotacanan.person.0200,
+        217 person_panotacanan.person.0201,
+        218 person_panotacanan.person.0202,
+        219 person_panotacanan.person.0203,
+        220 person_panotacanan.person.0204,
+        221 person_panotacanan.person.0205,
+        222 person_panotacanan.person.0206,
+        223 pl_0ascertainment,
+        224 pl_panotacanan.1pl.0001,
+        225 pl_panotacanan.1pl.0002,
+        226 pl_panotacanan.1pl.0003,
+        227 pl_panotacanan.1pl.0004,
+        228 see_0ascertainment,
+        229 see_panotacanan.see.0207,
+        230 see_panotacanan.see.0208,
+        231 see_panotacanan.see.0209,
+        232 see_panotacanan.see.0210,
+        233 see_panotacanan.see.0211,
+        234 sg_0ascertainment,
+        235 sg_panotacanan.1sg.0005,
+        236 sg_panotacanan.1sg.0006,
+        237 sg_panotacanan.1sg.0007,
+        238 sg_panotacanan.1sg.0008,
+        239 sg_panotacanan.1sg.0009,
+        240 sg_panotacanan.1sg.0010,
+        241 sg_panotacanan.2sg.0011,
+        242 skin_0ascertainment,
+        243 skin_panotacanan.skin.0212,
+        244 skin_panotacanan.skin.0213,
+        245 skin_panotacanan.skin.0214,
+        246 skin_panotacanan.skin.0215,
+        247 skin_panotacanan.skin.0216,
+        248 skin_panotacanan.skin.0217,
+        249 star_0ascertainment,
+        250 star_panotacanan.star.0218,
+        251 star_panotacanan.star.0219,
+        252 star_panotacanan.star.0220,
+        253 star_panotacanan.star.0221,
+        254 star_panotacanan.star.0222,
+        255 star_panotacanan.star.0223,
+        256 star_panotacanan.star.0224,
+        257 star_panotacanan.star.0225,
+        258 stone_0ascertainment,
+        259 stone_panotacanan.stone.0226,
+        260 stone_panotacanan.stone.0227,
+        261 stone_panotacanan.stone.0228,
+        262 stone_panotacanan.stone.0229,
+        263 stone_panotacanan.stone.0230,
+        264 stone_panotacanan.stone.0231,
+        265 stone_panotacanan.stone.0232,
+        266 stone_panotacanan.stone.0233,
+        267 stone_panotacanan.stone.0234,
+        268 sun_0ascertainment,
+        269 sun_panotacanan.sun.0235,
+        270 sun_panotacanan.sun.0236,
+        271 sun_panotacanan.sun.0237,
+        272 sun_panotacanan.sun.0238,
+        273 tongue_0ascertainment,
+        274 tongue_panotacanan.tongue.0239,
+        275 tongue_panotacanan.tongue.0240,
+        276 tongue_panotacanan.tongue.0241,
+        277 tongue_panotacanan.tongue.0242,
+        278 tongue_panotacanan.tongue.0243,
+        279 tongue_panotacanan.tongue.0244,
+        280 tooth_0ascertainment,
+        281 tooth_panotacanan.tooth.0245,
+        282 tooth_panotacanan.tooth.0246,
+        283 tooth_panotacanan.tooth.0247,
+        284 tree_0ascertainment,
+        285 tree_panotacanan.tree.0248,
+        286 tree_panotacanan.tree.0249,
+        287 tree_panotacanan.tree.0250,
+        288 tree_panotacanan.tree.0251,
+        289 two_0ascertainment,
+        290 two_panotacanan.two.0252,
+        291 two_panotacanan.two.0253,
+        292 two_panotacanan.two.0254,
+        293 water_0ascertainment,
+        294 water_panotacanan.water.0255,
+        295 water_panotacanan.water.0256,
+        296 water_panotacanan.water.0257,
+        297 water_panotacanan.water.0258,
+        298 water_panotacanan.water.0259,
+        299 water_panotacanan.water.0260,
+        300 water_panotacanan.water.0261,
+        301 water_panotacanan.water.0262
+;
+
+MATRIX
+amahuaca              0100010000011000010000001001000000000000100000000010000000000000100000100100000010??????????0????????????010000010000000000010000001000000100000000100100000001100000000000100100000000100000000010000????????01000001000000000100001000001000001010000001000000001100000000100001000100100010000100010000100
+araona                010001000001000000100000000010000000000001000000000100100000000001000001001000000010000000000100001000000001000001000000000001000000100010010000000100010000000100000000100010100010000010000000001000100000000010000010000100001000010000010000100100000????????00100000000010001000000010001000010010001000
+arara_pano            01000100000010000?????????0100000000000000100000001000000000000000100010010000000001000000000010000000000000100010000000000010000001000000100000000100100000000100000000000100010000000100000000010000010000000010000?????????0100000010001000001001000000100000000100000000010001000000100010000100001000000
+capanahua             0100010000011000010100000000010000000100000100000000100000000000100100100100000000010000000000010000001000110000100000000000001000010000001000000001000010000001000000000001001000000001000000000100000100000001000001000000000100001000100000001001000101000000001000000000100001100000100000100100010000000
+cashibo               0100001000001000010000000001010000000000?????????000010000000000000100100101000000??????????0????????????010000000100000000010000001000000100000000100000100100110000000000100????????00010000000100000010000001000001000000000????0100000???????0101000000100000001000000001000010000001000????0100000100000
+cavinena_1            010001000000010000010000000010000000000000001000000000100000000001000001010000000010100000000100000000000000010000010000000001000000010000001000000100000010000100000000000010001000000000100000000100100000000001000?????????0010000100000010001001000000001000000010000000010001000000010001000010010000000
+chacobo               01000100000010000001100000010000000000101000000000?????????????010000010010000000010000000010000100000010011000010000000000000100001000000100100000100???????001010000000001000001000000000100000100000100000001000000010000000100001000000000001001000000010000000100000100100001100000100000100100010000000
+ese_ejja              0010010000010000000001000000100000000000000001000000001000000000010000010010000000??????????0????????????0010000000010000000??????000010000100000001000000100001001000000000100000100000001000000010000001000000001000001000000????00100000000001000010000000100000001000000010001000000010001000010010000010
+huarayo_ese_ejja      001001000001000000000100000010000000000000000100000000100000000001000001001000000000100000000000010000000001000000000100000001000000001000010000000100000010000000100000000??0????????00000010000????00000100000001000000100100010000100000101001000010000000100000001000000010001000000010001000010010000000
+huariapano            0100010000001000000000100000001000000000000000100000000100000000100000100100000000001000000000010000000000100000???????????000010001000000100000000100100000000001000000000100100000000100000000010000001000000100000100000000010000?????00000101010000000010000001000000000100001000000100000100100010000001
+kashibo_alto_aguaytia 010001000000100001000000000001000000000000110000000000010000000000010010000010000000101000000????????????0100000001000000000??????010000001000000001001000000000100000000001001000000100000001000100000010000001000000000010000100001000000000011011000000010000000100000000100001000000100010000100000100000
+kashibo_bajo_aguaytia 010001000000100001000000000001000000000000110000000000010000000000010010000010000000101000000????????????0100000001000000000??????010000001000000001001000000000100000000001001000000100010000000100000010000001000001000010000100001000000000011011000000010000000100000000100001000000100010000100000100000
+kashibo_san_alejandro 010001000000100001000000000001000000000000010000000000010000000000010010000010000000101000000????????????0100000001000000000??????010000001000000001001000000000000100000001001000000100000001000100000010000001000001000000010100001000000000011011000000010000000100000000100001000000100010000100000100000
+kashibo_sungaroyacu   010001000000100001000000000001000000000000110000000000010000000000010010000010000000101000000????????????0100000001000000000??????010000001000000001001000000000100000000001001000000100000001000100000010000001000000000010000100001000000000011011000000010000000100000000100001000000100010000100000100000
+katukina_pano         01000100000010000?????????0000010000000000100000000000001000000000100010010000000000100000000000001000000000100010000000000010000001000000100000000100100000000100000000000100100000000001000000010000010000000100000?????????0100000010000001001000001001000000000000100000100001000000100000100100001000000
+kaxarari              010000010000100000010000000000001000000000001000000000000100000000001010010000000000010000000000000100000010000000000010000010000000010000000100000100100000000000001000000100000001000000100000010000010000000100000?????????0001000001000001001001000000000010000001000000100001000000100000100100001000000
+kaxinawa              010001000000001000010000000000000100000000100000000000000010000010000010010000000000001000000000001000000010000010000000000010000001000000100000000100100000000100000000000100100000000100000000010000010000000100000?????????0100000010001000001001000001000000000100000000100001000000100010000100000100000
+marubo                01000100000010000?????????0000000010000000000001000000001000000000100010010000000001000000000000001000000000100010000000000010000001000000100000000100100000000100000000000100100000000100000000010000010000000100000?????????0100000010000001001010000001000000000001000000100000010000100000100100001000000
+matis                 010000001000100000000001000100000000000000000001000000001000000010000010000001000000000100000000000010000010000000000001000000001001000000100000000100000001000000000100000100000100000000100000010000000001000100000?????????010000?????00000101001000000010000001000000000001001000000100000100100001000000
+matses                00010000010?????00000001000????????????0?????????00000000001000010000010001000000000000010000????????????0000010000000001000??????00010000????????0010???????00000000010000??0000000100000000010000010000000100?????0?????????0100001000000000101001000000010000001000000010000100001000100000010001000010000
+poyanawa              01000100000010000?????????0000000001000000010000000000000000100010000010000000100001000000000010000000000010000000000000010010000001000000000010000100100000000100000000000100000100000100000000010000010000000100000?????????010000?????00001001001000000000001000000010000100001000000100000100100001000000
+shanenawa             01000100000010000?????????0100000000000000100000000000000000010010000010010000000000000001000010000000000000100010000000000010000001000000100000000100100000000100000000000100100000000000000001010000010000000010000?????????0100000010000000001001000000100000000000100000100001000000100000100100010000000
+sharanahua            01000100000010010?????????0100000000000000100000101000000000000010100010010000000000000000100010000000001010100010000000000010000001000000100001000100???????00100000000010100100000000100000000010000010000000100000?????????010000?????00000001001000001100000000000001000110001000000101010100100010000000
+shipibo               0100010000001000010000000100000000001000000100000000000100000010100000100100000000000011000000000010010000110000100000000000000001010000001000000001001000000000010000000001001000000001000000000100000000001101000001000000000100001000000000101001000000010000001000000000100001000010100000100100000100000
+tacana                01000100000100000000010000001000000000000001000000?????????????001000001000000010010000000000100000000000001000000000000001001000000000100000000100100000010000100000000000010000010000010000000001000100000000010000?????????001010010000010000100100000????????00010000000010001000000010001000010000001000
+yaminawa              01000100000010000?????????0100000000000000000000101000000000000000100010010000000001000000000010000000000010000010000000000010000001000000000000010100100000000000000001000100100000000100000000010000010000000000010?????????0100000010001000001001000000000000100000001000010001000000001000100100000100000
+yawanawa              01000100000010000?????????010000000000000010000000100000000000001000001001000000000100000000001000000000001000001000000000001000000??????0100000000100100000000100000000000100100000000100000000010000010000000010000?????????0100000010001000001001000000100000000000100000100001000000100000100100001000000
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-10;
+    charset breast = 11-16;
+    charset come = 17-26;
+    charset die = 27-39;
+    charset dog = 40-49;
+    charset drink = 50-63;
+    charset ear = 64-69;
+    charset eye = 70-72;
+    charset fire = 73-81;
+    charset fish = 82-92;
+    charset full = 93-105;
+    charset hand = 106-111;
+    charset hear = 112-123;
+    charset horn = 124-130;
+    charset knee = 131-137;
+    charset leaf = 138-146;
+    charset liver = 147-149;
+    charset louse = 150-157;
+    charset mountain = 158-170;
+    charset name = 171-173;
+    charset new = 174-182;
+    charset night = 183-192;
+    charset nose = 193-197;
+    charset one = 198-206;
+    charset path = 207-212;
+    charset person = 213-222;
+    charset pl = 223-227;
+    charset see = 228-233;
+    charset sg = 234-241;
+    charset skin = 242-248;
+    charset star = 249-257;
+    charset stone = 258-267;
+    charset sun = 268-272;
+    charset tongue = 273-279;
+    charset tooth = 280-283;
+    charset tree = 284-288;
+    charset two = 289-292;
+    charset water = 293-301;
+END;

@@ -1,0 +1,173 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=117;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_chapacuran.blood.0006,
+        3 blood_chapacuran.blood.0007,
+        4 blood_chapacuran.blood.0008,
+        5 bone_0ascertainment,
+        6 bone_chapacuran.bone.0009,
+        7 bone_chapacuran.bone.0010,
+        8 breast_0ascertainment,
+        9 breast_chapacuran.breast.0011,
+        10 breast_chapacuran.breast.0012,
+        11 come_0ascertainment,
+        12 come_chapacuran.come.0013,
+        13 come_chapacuran.come.0014,
+        14 die_0ascertainment,
+        15 die_chapacuran.die.0015,
+        16 die_chapacuran.die.0016,
+        17 dog_0ascertainment,
+        18 dog_chapacuran.dog.0017,
+        19 dog_chapacuran.dog.0018,
+        20 drink_0ascertainment,
+        21 drink_chapacuran.drink.0019,
+        22 ear_0ascertainment,
+        23 ear_chapacuran.ear.0020,
+        24 ear_chapacuran.ear.0021,
+        25 ear_chapacuran.ear.0022,
+        26 eye_0ascertainment,
+        27 eye_chapacuran.eye.0023,
+        28 fire_0ascertainment,
+        29 fire_chapacuran.fire.0024,
+        30 fish_0ascertainment,
+        31 fish_chapacuran.fish.0025,
+        32 fish_chapacuran.fish.0026,
+        33 fish_chapacuran.fish.0027,
+        34 fish_chapacuran.fish.0028,
+        35 full_0ascertainment,
+        36 full_chapacuran.full.0029,
+        37 full_chapacuran.full.0030,
+        38 full_chapacuran.full.0031,
+        39 hand_0ascertainment,
+        40 hand_chapacuran.hand.0032,
+        41 hand_chapacuran.hand.0033,
+        42 hand_chapacuran.hand.0034,
+        43 hear_0ascertainment,
+        44 hear_chapacuran.hear.0035,
+        45 horn_0ascertainment,
+        46 horn_chapacuran.horn.0036,
+        47 horn_chapacuran.horn.0037,
+        48 knee_0ascertainment,
+        49 knee_chapacuran.knee.0038,
+        50 knee_chapacuran.knee.0039,
+        51 knee_chapacuran.knee.0040,
+        52 leaf_0ascertainment,
+        53 leaf_chapacuran.leaf.0041,
+        54 leaf_chapacuran.leaf.0042,
+        55 liver_0ascertainment,
+        56 liver_chapacuran.liver.0043,
+        57 louse_0ascertainment,
+        58 louse_chapacuran.louse.0044,
+        59 louse_chapacuran.louse.0045,
+        60 louse_chapacuran.louse.0046,
+        61 mountain_0ascertainment,
+        62 mountain_chapacuran.mountain.0047,
+        63 mountain_chapacuran.mountain.0048,
+        64 name_0ascertainment,
+        65 name_chapacuran.name.0049,
+        66 name_chapacuran.name.0050,
+        67 name_chapacuran.name.0051,
+        68 new_0ascertainment,
+        69 new_chapacuran.new.0052,
+        70 night_0ascertainment,
+        71 night_chapacuran.night.0053,
+        72 nose_0ascertainment,
+        73 nose_chapacuran.nose.0054,
+        74 nose_chapacuran.nose.0055,
+        75 nose_chapacuran.nose.0056,
+        76 one_0ascertainment,
+        77 one_chapacuran.one.0057,
+        78 one_chapacuran.one.0058,
+        79 path_0ascertainment,
+        80 path_chapacuran.path.0059,
+        81 person_0ascertainment,
+        82 person_chapacuran.person.0060,
+        83 person_chapacuran.person.0061,
+        84 pl_0ascertainment,
+        85 pl_chapacuran.1pl.0001,
+        86 pl_chapacuran.1pl.0002,
+        87 see_0ascertainment,
+        88 see_chapacuran.see.0062,
+        89 sg_0ascertainment,
+        90 sg_chapacuran.1sg.0003,
+        91 sg_chapacuran.2sg.0004,
+        92 sg_chapacuran.2sg.0005,
+        93 skin_0ascertainment,
+        94 skin_chapacuran.skin.0063,
+        95 star_0ascertainment,
+        96 star_chapacuran.star.0064,
+        97 star_chapacuran.star.0065,
+        98 stone_0ascertainment,
+        99 stone_chapacuran.stone.0066,
+        100 sun_0ascertainment,
+        101 sun_chapacuran.sun.0067,
+        102 sun_chapacuran.sun.0068,
+        103 sun_chapacuran.sun.0069,
+        104 sun_chapacuran.sun.0070,
+        105 tongue_0ascertainment,
+        106 tongue_chapacuran.tongue.0071,
+        107 tongue_chapacuran.tongue.0072,
+        108 tongue_chapacuran.tongue.0073,
+        109 tooth_0ascertainment,
+        110 tooth_chapacuran.tooth.0074,
+        111 tree_0ascertainment,
+        112 tree_chapacuran.tree.0075,
+        113 two_0ascertainment,
+        114 two_chapacuran.two.0076,
+        115 two_chapacuran.two.0077,
+        116 water_0ascertainment,
+        117 water_chapacuran.water.0078
+;
+
+MATRIX
+more      01000100100100100100?0100010101001010001000?01001000100101000??0100010101000??010100100?0100010100101001010001010??01
+oro_win   00100010010010010??01001001010010000100010010010010001010010010001001010010010010010010101100100101001000010010101001
+pakaanova 000100101000100100101000101010001000010001010010001010010001001000101010001001010??0010101010101001000100001010100101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-7;
+    charset breast = 8-10;
+    charset come = 11-13;
+    charset die = 14-16;
+    charset dog = 17-19;
+    charset drink = 20-21;
+    charset ear = 22-25;
+    charset eye = 26-27;
+    charset fire = 28-29;
+    charset fish = 30-34;
+    charset full = 35-38;
+    charset hand = 39-42;
+    charset hear = 43-44;
+    charset horn = 45-47;
+    charset knee = 48-51;
+    charset leaf = 52-54;
+    charset liver = 55-56;
+    charset louse = 57-60;
+    charset mountain = 61-63;
+    charset name = 64-67;
+    charset new = 68-69;
+    charset night = 70-71;
+    charset nose = 72-75;
+    charset one = 76-78;
+    charset path = 79-80;
+    charset person = 81-83;
+    charset pl = 84-86;
+    charset see = 87-88;
+    charset sg = 89-92;
+    charset skin = 93-94;
+    charset star = 95-97;
+    charset stone = 98-99;
+    charset sun = 100-104;
+    charset tongue = 105-108;
+    charset tooth = 109-110;
+    charset tree = 111-112;
+    charset two = 113-115;
+    charset water = 116-117;
+END;

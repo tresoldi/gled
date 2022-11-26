@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Angor_ango1254
+			DeraIndonesia_dera1245
+			;
+End;
+Begin trees;
+	Translate
+		   1 Angor_ango1254,
+		   2 DeraIndonesia_dera1245
+;
+tree TREE1 = (1[&height=0.0,length=9.456050489902113,length_95%_HPD={0.2801,37.3284},length_median=2.1956,length_range={0.2801,382.628},rate=0.991762907418517,rate_95%_HPD={0.675,1.2554},rate_median=1.0003,rate_range={0.0498,1.2554}]:9.456050489902113,2[&height=0.0,length=9.456050489902113,length_95%_HPD={0.2801,37.3284},length_median=2.1956,length_range={0.2801,382.628},rate=0.9897412717456491,rate_95%_HPD={0.6744,1.2554},rate_median=1.0001,rate_range={0.0498,1.2554}]:9.456050489902113)[&CAheight_95%_HPD={0.2801,37.3284},CAheight_mean=9.456050489902113,CAheight_median=2.1956,CAheight_range={0.2801,382.628},height=9.456050489902113,height_95%_HPD={0.2801,37.3284},height_median=2.1956,height_range={0.2801,382.628},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

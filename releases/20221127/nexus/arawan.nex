@@ -1,0 +1,197 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=7 NCHAR=137;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_arawan.blood.0009,
+        3 bone_0ascertainment,
+        4 bone_arawan.bone.0010,
+        5 breast_0ascertainment,
+        6 breast_arawan.breast.0011,
+        7 breast_arawan.breast.0012,
+        8 come_0ascertainment,
+        9 come_arawan.come.0013,
+        10 come_arawan.come.0014,
+        11 come_arawan.come.0015,
+        12 die_0ascertainment,
+        13 die_arawan.die.0016,
+        14 die_arawan.die.0017,
+        15 die_arawan.die.0018,
+        16 die_arawan.die.0019,
+        17 die_arawan.die.0020,
+        18 dog_0ascertainment,
+        19 dog_arawan.dog.0021,
+        20 dog_arawan.dog.0022,
+        21 dog_arawan.dog.0023,
+        22 dog_arawan.dog.0024,
+        23 dog_arawan.dog.0025,
+        24 drink_0ascertainment,
+        25 drink_arawan.drink.0026,
+        26 drink_arawan.drink.0027,
+        27 drink_arawan.drink.0028,
+        28 drink_arawan.drink.0029,
+        29 ear_0ascertainment,
+        30 ear_arawan.ear.0030,
+        31 ear_arawan.ear.0031,
+        32 eye_0ascertainment,
+        33 eye_arawan.eye.0032,
+        34 fire_0ascertainment,
+        35 fire_arawan.fire.0033,
+        36 fire_arawan.fire.0034,
+        37 fish_0ascertainment,
+        38 fish_arawan.fish.0035,
+        39 fish_arawan.fish.0036,
+        40 fish_arawan.fish.0037,
+        41 full_0ascertainment,
+        42 full_arawan.full.0038,
+        43 full_arawan.full.0039,
+        44 full_arawan.full.0040,
+        45 full_arawan.full.0041,
+        46 full_arawan.full.0042,
+        47 full_arawan.full.0043,
+        48 full_arawan.full.0044,
+        49 hand_0ascertainment,
+        50 hand_arawan.hand.0045,
+        51 hand_arawan.hand.0046,
+        52 hear_0ascertainment,
+        53 hear_arawan.hear.0047,
+        54 hear_arawan.hear.0048,
+        55 hear_arawan.hear.0049,
+        56 horn_0ascertainment,
+        57 horn_arawan.horn.0050,
+        58 horn_arawan.horn.0051,
+        59 horn_arawan.horn.0052,
+        60 horn_arawan.horn.0053,
+        61 knee_0ascertainment,
+        62 knee_arawan.knee.0054,
+        63 knee_arawan.knee.0055,
+        64 knee_arawan.knee.0056,
+        65 knee_arawan.knee.0057,
+        66 knee_arawan.knee.0058,
+        67 knee_arawan.knee.0059,
+        68 leaf_0ascertainment,
+        69 leaf_arawan.leaf.0060,
+        70 leaf_arawan.leaf.0061,
+        71 leaf_arawan.leaf.0062,
+        72 leaf_arawan.leaf.0063,
+        73 leaf_arawan.leaf.0064,
+        74 liver_0ascertainment,
+        75 liver_arawan.liver.0065,
+        76 louse_0ascertainment,
+        77 louse_arawan.louse.0066,
+        78 mountain_0ascertainment,
+        79 mountain_arawan.mountain.0067,
+        80 mountain_arawan.mountain.0068,
+        81 mountain_arawan.mountain.0069,
+        82 name_0ascertainment,
+        83 name_arawan.name.0070,
+        84 new_0ascertainment,
+        85 new_arawan.new.0071,
+        86 night_0ascertainment,
+        87 night_arawan.night.0072,
+        88 night_arawan.night.0073,
+        89 nose_0ascertainment,
+        90 nose_arawan.nose.0074,
+        91 nose_arawan.nose.0075,
+        92 nose_arawan.nose.0076,
+        93 one_0ascertainment,
+        94 one_arawan.one.0077,
+        95 one_arawan.one.0078,
+        96 path_0ascertainment,
+        97 path_arawan.path.0079,
+        98 person_0ascertainment,
+        99 person_arawan.person.0080,
+        100 pl_0ascertainment,
+        101 pl_arawan.1pl.0001,
+        102 pl_arawan.1pl.0002,
+        103 see_0ascertainment,
+        104 see_arawan.see.0081,
+        105 see_arawan.see.0082,
+        106 see_arawan.see.0083,
+        107 see_arawan.see.0084,
+        108 sg_0ascertainment,
+        109 sg_arawan.1sg.0003,
+        110 sg_arawan.1sg.0004,
+        111 sg_arawan.1sg.0005,
+        112 sg_arawan.2sg.0006,
+        113 sg_arawan.2sg.0007,
+        114 sg_arawan.2sg.0008,
+        115 skin_0ascertainment,
+        116 skin_arawan.skin.0085,
+        117 skin_arawan.skin.0086,
+        118 star_0ascertainment,
+        119 star_arawan.star.0087,
+        120 star_arawan.star.0088,
+        121 stone_0ascertainment,
+        122 stone_arawan.stone.0089,
+        123 stone_arawan.stone.0090,
+        124 sun_0ascertainment,
+        125 sun_arawan.sun.0091,
+        126 sun_arawan.sun.0092,
+        127 tongue_0ascertainment,
+        128 tongue_arawan.tongue.0093,
+        129 tooth_0ascertainment,
+        130 tooth_arawan.tooth.0094,
+        131 tree_0ascertainment,
+        132 tree_arawan.tree.0095,
+        133 two_0ascertainment,
+        134 two_arawan.two.0096,
+        135 two_arawan.two.0097,
+        136 water_0ascertainment,
+        137 water_arawan.water.0098
+;
+
+MATRIX
+banawa       010101001000?????010000010000100101001000100000001001000????0??????010000010101000?010??0100010010?0??010000??????0100100100100?010101001
+deni         01010100100010000001000010000100100101000010000001000100100001000000100000101011001010100010010010?01001100010010001001000101001010101001
+jamamadi     01010100???0?????010000010000100101001000???????01001000????0??????01000001010100010100101000??010?0??010000??????01001001001001010101001
+jarawara     01010100101001001010001010000110101001000001000001101000010000100010010010101010001010010100011010?01000010010011001001001001001010101001
+kulina_araua 010101001000001000001000010001001010010100001001010010000010000100000010001010100010101000100100?010??00100010010001001000101001010101001
+madija       01010100100000100000100000100100101001000000010001001000001000001000100000101010001010100010010010?01000100010010000101000101001010101001
+paumari      010?0010010000010000010000010100101000100000001001000010000100000100000100101000101010100001010010?01100001001100101000101000101010100101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-11;
+    charset die = 12-17;
+    charset dog = 18-23;
+    charset drink = 24-28;
+    charset ear = 29-31;
+    charset eye = 32-33;
+    charset fire = 34-36;
+    charset fish = 37-40;
+    charset full = 41-48;
+    charset hand = 49-51;
+    charset hear = 52-55;
+    charset horn = 56-60;
+    charset knee = 61-67;
+    charset leaf = 68-73;
+    charset liver = 74-75;
+    charset louse = 76-77;
+    charset mountain = 78-81;
+    charset name = 82-83;
+    charset new = 84-85;
+    charset night = 86-88;
+    charset nose = 89-92;
+    charset one = 93-95;
+    charset path = 96-97;
+    charset person = 98-99;
+    charset pl = 100-102;
+    charset see = 103-107;
+    charset sg = 108-114;
+    charset skin = 115-117;
+    charset star = 118-120;
+    charset stone = 121-123;
+    charset sun = 124-126;
+    charset tongue = 127-128;
+    charset tooth = 129-130;
+    charset tree = 131-132;
+    charset two = 133-135;
+    charset water = 136-137;
+END;

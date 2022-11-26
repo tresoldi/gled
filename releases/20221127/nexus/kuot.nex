@@ -1,0 +1,132 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=79;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kuot.blood.0207,
+        3 bone_0ascertainment,
+        4 bone_kuot.bone.0273,
+        5 breast_0ascertainment,
+        6 breast_kuot.breast.0012,
+        7 come_0ascertainment,
+        8 come_kuot.come.0443,
+        9 die_0ascertainment,
+        10 die_kuot.die.0057,
+        11 dog_0ascertainment,
+        12 dog_kuot.dog.0021,
+        13 drink_0ascertainment,
+        14 drink_kuot.drink.0605,
+        15 ear_0ascertainment,
+        16 ear_kuot.ear.0291,
+        17 eye_0ascertainment,
+        18 eye_kuot.eye.0473,
+        19 fire_0ascertainment,
+        20 fire_kuot.fire.0499,
+        21 fish_0ascertainment,
+        22 fish_kuot.fish.0040,
+        23 full_0ascertainment,
+        24 full_kuot.full.0117,
+        25 hand_0ascertainment,
+        26 hand_kuot.hand.0380,
+        27 hear_0ascertainment,
+        28 hear_kuot.hear.0639,
+        29 knee_0ascertainment,
+        30 knee_kuot.knee.0118,
+        31 leaf_0ascertainment,
+        32 leaf_kuot.leaf.0392,
+        33 liver_0ascertainment,
+        34 liver_kuot.liver.0003,
+        35 liver_kuot.liver.0549,
+        36 louse_0ascertainment,
+        37 louse_kuot.louse.0469,
+        38 mountain_0ascertainment,
+        39 mountain_kuot.mountain.0516,
+        40 name_0ascertainment,
+        41 name_kuot.name.0258,
+        42 new_0ascertainment,
+        43 new_kuot.new.0462,
+        44 night_0ascertainment,
+        45 night_kuot.night.0366,
+        46 nose_0ascertainment,
+        47 nose_kuot.nose.0512,
+        48 one_0ascertainment,
+        49 one_kuot.one.0024,
+        50 path_0ascertainment,
+        51 path_kuot.path.0017,
+        52 person_0ascertainment,
+        53 person_kuot.person.0097,
+        54 pl_0ascertainment,
+        55 pl_kuot.1pl.0527,
+        56 see_0ascertainment,
+        57 see_kuot.see.0411,
+        58 sg_0ascertainment,
+        59 sg_kuot.1sg.0306,
+        60 sg_kuot.2sg.0023,
+        61 skin_0ascertainment,
+        62 skin_kuot.skin.0546,
+        63 star_0ascertainment,
+        64 star_kuot.star.0532,
+        65 stone_0ascertainment,
+        66 stone_kuot.stone.0700,
+        67 sun_0ascertainment,
+        68 sun_kuot.sun.0054,
+        69 sun_kuot.sun.0408,
+        70 tongue_0ascertainment,
+        71 tongue_kuot.tongue.0416,
+        72 tooth_0ascertainment,
+        73 tooth_kuot.tooth.0492,
+        74 tree_0ascertainment,
+        75 tree_kuot.tree.0438,
+        76 two_0ascertainment,
+        77 two_kuot.two.0385,
+        78 water_0ascertainment,
+        79 water_kuot.water.0382
+;
+
+MATRIX
+kuot 0101010101010101010101010101010101101010101010101010101010110101010110101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset full = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-28;
+    charset knee = 29-30;
+    charset leaf = 31-32;
+    charset liver = 33-35;
+    charset louse = 36-37;
+    charset mountain = 38-39;
+    charset name = 40-41;
+    charset new = 42-43;
+    charset night = 44-45;
+    charset nose = 46-47;
+    charset one = 48-49;
+    charset path = 50-51;
+    charset person = 52-53;
+    charset pl = 54-55;
+    charset see = 56-57;
+    charset sg = 58-60;
+    charset skin = 61-62;
+    charset star = 63-64;
+    charset stone = 65-66;
+    charset sun = 67-69;
+    charset tongue = 70-71;
+    charset tooth = 72-73;
+    charset tree = 74-75;
+    charset two = 76-77;
+    charset water = 78-79;
+END;

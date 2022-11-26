@@ -1,0 +1,290 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=12 NCHAR=225;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_surmic.blood.0010,
+        3 blood_surmic.blood.0011,
+        4 blood_surmic.blood.0012,
+        5 bone_0ascertainment,
+        6 bone_surmic.bone.0013,
+        7 bone_surmic.bone.0014,
+        8 bone_surmic.bone.0015,
+        9 bone_surmic.bone.0016,
+        10 bone_surmic.bone.0017,
+        11 breast_0ascertainment,
+        12 breast_surmic.breast.0018,
+        13 breast_surmic.breast.0019,
+        14 breast_surmic.breast.0020,
+        15 breast_surmic.breast.0021,
+        16 breast_surmic.breast.0022,
+        17 breast_surmic.breast.0023,
+        18 breast_surmic.breast.0024,
+        19 breast_surmic.breast.0025,
+        20 come_0ascertainment,
+        21 come_surmic.come.0026,
+        22 come_surmic.come.0027,
+        23 come_surmic.come.0028,
+        24 come_surmic.come.0029,
+        25 come_surmic.come.0030,
+        26 come_surmic.come.0031,
+        27 come_surmic.come.0032,
+        28 die_0ascertainment,
+        29 die_surmic.die.0033,
+        30 die_surmic.die.0034,
+        31 die_surmic.die.0035,
+        32 die_surmic.die.0036,
+        33 die_surmic.die.0037,
+        34 die_surmic.die.0038,
+        35 die_surmic.die.0039,
+        36 dog_0ascertainment,
+        37 dog_surmic.dog.0040,
+        38 dog_surmic.dog.0041,
+        39 dog_surmic.dog.0042,
+        40 dog_surmic.dog.0043,
+        41 dog_surmic.dog.0044,
+        42 dog_surmic.dog.0045,
+        43 drink_0ascertainment,
+        44 drink_surmic.drink.0046,
+        45 drink_surmic.drink.0047,
+        46 drink_surmic.drink.0048,
+        47 drink_surmic.drink.0049,
+        48 drink_surmic.drink.0050,
+        49 drink_surmic.drink.0051,
+        50 drink_surmic.drink.0052,
+        51 ear_0ascertainment,
+        52 ear_surmic.ear.0053,
+        53 ear_surmic.ear.0054,
+        54 ear_surmic.ear.0055,
+        55 eye_0ascertainment,
+        56 eye_surmic.eye.0056,
+        57 eye_surmic.eye.0057,
+        58 eye_surmic.eye.0058,
+        59 eye_surmic.eye.0059,
+        60 fire_0ascertainment,
+        61 fire_surmic.fire.0060,
+        62 fire_surmic.fire.0061,
+        63 fire_surmic.fire.0062,
+        64 fish_0ascertainment,
+        65 fish_surmic.fish.0063,
+        66 fish_surmic.fish.0064,
+        67 fish_surmic.fish.0065,
+        68 fish_surmic.fish.0066,
+        69 fish_surmic.fish.0067,
+        70 fish_surmic.fish.0068,
+        71 full_0ascertainment,
+        72 full_surmic.full.0069,
+        73 full_surmic.full.0070,
+        74 hand_0ascertainment,
+        75 hand_surmic.hand.0071,
+        76 hand_surmic.hand.0072,
+        77 hand_surmic.hand.0073,
+        78 hand_surmic.hand.0074,
+        79 hand_surmic.hand.0075,
+        80 hear_0ascertainment,
+        81 hear_surmic.hear.0076,
+        82 hear_surmic.hear.0077,
+        83 horn_0ascertainment,
+        84 horn_surmic.horn.0078,
+        85 horn_surmic.horn.0079,
+        86 horn_surmic.horn.0080,
+        87 horn_surmic.horn.0081,
+        88 knee_0ascertainment,
+        89 knee_surmic.knee.0082,
+        90 knee_surmic.knee.0083,
+        91 knee_surmic.knee.0084,
+        92 knee_surmic.knee.0085,
+        93 leaf_0ascertainment,
+        94 leaf_surmic.leaf.0086,
+        95 leaf_surmic.leaf.0087,
+        96 leaf_surmic.leaf.0088,
+        97 leaf_surmic.leaf.0089,
+        98 leaf_surmic.leaf.0090,
+        99 leaf_surmic.leaf.0091,
+        100 leaf_surmic.leaf.0092,
+        101 leaf_surmic.leaf.0093,
+        102 liver_0ascertainment,
+        103 liver_surmic.liver.0094,
+        104 liver_surmic.liver.0095,
+        105 liver_surmic.liver.0096,
+        106 liver_surmic.liver.0097,
+        107 liver_surmic.liver.0098,
+        108 liver_surmic.liver.0099,
+        109 liver_surmic.liver.0100,
+        110 louse_0ascertainment,
+        111 louse_surmic.louse.0101,
+        112 louse_surmic.louse.0102,
+        113 louse_surmic.louse.0103,
+        114 louse_surmic.louse.0104,
+        115 louse_surmic.louse.0105,
+        116 mountain_0ascertainment,
+        117 mountain_surmic.mountain.0106,
+        118 mountain_surmic.mountain.0107,
+        119 mountain_surmic.mountain.0108,
+        120 mountain_surmic.mountain.0109,
+        121 mountain_surmic.mountain.0110,
+        122 mountain_surmic.mountain.0111,
+        123 mountain_surmic.mountain.0112,
+        124 mountain_surmic.mountain.0113,
+        125 name_0ascertainment,
+        126 name_surmic.name.0114,
+        127 name_surmic.name.0115,
+        128 name_surmic.name.0116,
+        129 name_surmic.name.0117,
+        130 name_surmic.name.0118,
+        131 new_0ascertainment,
+        132 new_surmic.new.0119,
+        133 new_surmic.new.0120,
+        134 new_surmic.new.0121,
+        135 new_surmic.new.0122,
+        136 new_surmic.new.0123,
+        137 new_surmic.new.0124,
+        138 new_surmic.new.0125,
+        139 night_0ascertainment,
+        140 night_surmic.night.0126,
+        141 night_surmic.night.0127,
+        142 night_surmic.night.0128,
+        143 night_surmic.night.0129,
+        144 night_surmic.night.0130,
+        145 nose_0ascertainment,
+        146 nose_surmic.nose.0131,
+        147 nose_surmic.nose.0132,
+        148 nose_surmic.nose.0133,
+        149 nose_surmic.nose.0134,
+        150 one_0ascertainment,
+        151 one_surmic.one.0135,
+        152 one_surmic.one.0136,
+        153 one_surmic.one.0137,
+        154 path_0ascertainment,
+        155 path_surmic.path.0138,
+        156 path_surmic.path.0139,
+        157 path_surmic.path.0140,
+        158 path_surmic.path.0141,
+        159 path_surmic.path.0142,
+        160 path_surmic.path.0143,
+        161 path_surmic.path.0144,
+        162 path_surmic.path.0145,
+        163 person_0ascertainment,
+        164 person_surmic.person.0146,
+        165 person_surmic.person.0147,
+        166 person_surmic.person.0148,
+        167 person_surmic.person.0149,
+        168 person_surmic.person.0150,
+        169 person_surmic.person.0151,
+        170 pl_0ascertainment,
+        171 pl_surmic.1pl.0001,
+        172 pl_surmic.1pl.0002,
+        173 pl_surmic.1pl.0003,
+        174 pl_surmic.1pl.0004,
+        175 see_0ascertainment,
+        176 see_surmic.see.0152,
+        177 see_surmic.see.0153,
+        178 see_surmic.see.0154,
+        179 see_surmic.see.0155,
+        180 see_surmic.see.0156,
+        181 see_surmic.see.0157,
+        182 see_surmic.see.0158,
+        183 sg_0ascertainment,
+        184 sg_surmic.1sg.0005,
+        185 sg_surmic.1sg.0006,
+        186 sg_surmic.2sg.0007,
+        187 sg_surmic.2sg.0008,
+        188 sg_surmic.2sg.0009,
+        189 skin_0ascertainment,
+        190 skin_surmic.skin.0159,
+        191 skin_surmic.skin.0160,
+        192 skin_surmic.skin.0161,
+        193 skin_surmic.skin.0162,
+        194 skin_surmic.skin.0163,
+        195 star_0ascertainment,
+        196 star_surmic.star.0164,
+        197 star_surmic.star.0165,
+        198 stone_0ascertainment,
+        199 stone_surmic.stone.0166,
+        200 stone_surmic.stone.0167,
+        201 stone_surmic.stone.0168,
+        202 sun_0ascertainment,
+        203 sun_surmic.sun.0169,
+        204 sun_surmic.sun.0170,
+        205 sun_surmic.sun.0171,
+        206 sun_surmic.sun.0172,
+        207 sun_surmic.sun.0173,
+        208 sun_surmic.sun.0174,
+        209 sun_surmic.sun.0175,
+        210 tongue_0ascertainment,
+        211 tongue_surmic.tongue.0176,
+        212 tongue_surmic.tongue.0177,
+        213 tongue_surmic.tongue.0178,
+        214 tooth_0ascertainment,
+        215 tooth_surmic.tooth.0179,
+        216 tree_0ascertainment,
+        217 tree_surmic.tree.0180,
+        218 tree_surmic.tree.0181,
+        219 two_0ascertainment,
+        220 two_surmic.two.0182,
+        221 two_surmic.two.0183,
+        222 two_surmic.two.0184,
+        223 two_surmic.two.0185,
+        224 water_0ascertainment,
+        225 water_surmic.water.0186
+;
+
+MATRIX
+baale       01000100000100000000100000001000000010000001000000010001000010001000000??010000010010000100001000000001000000010000010000000010000010000000?????010000100010000000010000001000010000000101000100000100100010000000100010100100001
+didinga     01000100000010000000011000100100001001000001100000010001000001001000000100010000100100000100010000000001000000010000010000000100000???????0100000100001000010000000??????01001001100000101100100000100010001000000100010100100001
+kwegu       00100010000001000000001000000010000000100000010000001000100010000100000??00010001000100000100010000000001000001000000010000001000000100000001000001000010000100000001000000100000100000101000100000100010000100000010010010010101
+meen        00100001000010000000000100001000000010000000001000001001000010000010000??00100001000010000010001000000000100000100000001000000100000010000000100000100010000010000000100001000000010000101000010000010010000010000010010100100001
+mesengo     00010100000100000000100000000001000000010000000100000100011000100001000??00100001000001010000000100000000010000010000000100000010000001000000010000010001000001000000010000010000001000011000001000100001000001000010010100001001
+murle       01000000100000100000010000000000100000001000000010010001000010001000000??00001000101000001000000010000100000000001000000010000001000000100010000010000100000000100000010001000001000000101000100000100010000000100100010100100001
+mursi       00100000010010000000000100001000000010000000001000001001000010000000100??00000101000010010000100000000000100000100000000001001000000010000000001000100010000010000000100001000000000100100010000100100010000000010010010100100001
+narim_larim 010001000000000100000100000001000000000001000000100100010000100010000001000100001001000001000100000000100000000100000000000101000000000010010000010000100000010000000010001000001000000101000100000100010001000000001010100100001
+suri_chai   001000100000000010001000000010000000100000000010000010010000100000001000100000101000010010000100000000000100000100000000001001000000010000010001000100010010000000000001001000000100000101000000100100010000000010010010100100001
+tennet      010001000000100000000100000001000000000001000000100100010000100010000001000100001001000001000000001000100000000100000000010000000100000001010000010000100000000010000010001000001000000101000100000100010000000100001010100100001
+tirma       00100010000000000100000010001000000010000000000001001001000010000000010??000001010000100100000000001000000010000001000000010010000000100000?????000100010010000000000000101000000010000101000000010100010000000010010010100100001
+zilmamu     01000100000000000010000001000000010010000001000000000101000010001000000??0010000100????00100000000001000000010010000000000100?????0???????010000010000???000000001000010001000000000010101000100000100010010000000100010100????01
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-10;
+    charset breast = 11-19;
+    charset come = 20-27;
+    charset die = 28-35;
+    charset dog = 36-42;
+    charset drink = 43-50;
+    charset ear = 51-54;
+    charset eye = 55-59;
+    charset fire = 60-63;
+    charset fish = 64-70;
+    charset full = 71-73;
+    charset hand = 74-79;
+    charset hear = 80-82;
+    charset horn = 83-87;
+    charset knee = 88-92;
+    charset leaf = 93-101;
+    charset liver = 102-109;
+    charset louse = 110-115;
+    charset mountain = 116-124;
+    charset name = 125-130;
+    charset new = 131-138;
+    charset night = 139-144;
+    charset nose = 145-149;
+    charset one = 150-153;
+    charset path = 154-162;
+    charset person = 163-169;
+    charset pl = 170-174;
+    charset see = 175-182;
+    charset sg = 183-188;
+    charset skin = 189-194;
+    charset star = 195-197;
+    charset stone = 198-201;
+    charset sun = 202-209;
+    charset tongue = 210-213;
+    charset tooth = 214-215;
+    charset tree = 216-218;
+    charset two = 219-223;
+    charset water = 224-225;
+END;

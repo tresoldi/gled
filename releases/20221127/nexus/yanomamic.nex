@@ -1,0 +1,195 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=8 NCHAR=134;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_yanomamic.blood.0007,
+        3 blood_yanomamic.blood.0008,
+        4 blood_yanomamic.blood.0009,
+        5 bone_0ascertainment,
+        6 bone_yanomamic.bone.0010,
+        7 bone_yanomamic.bone.0011,
+        8 bone_yanomamic.bone.0012,
+        9 breast_0ascertainment,
+        10 breast_yanomamic.breast.0013,
+        11 breast_yanomamic.breast.0014,
+        12 breast_yanomamic.breast.0015,
+        13 breast_yanomamic.breast.0016,
+        14 come_0ascertainment,
+        15 come_yanomamic.come.0017,
+        16 come_yanomamic.come.0018,
+        17 come_yanomamic.come.0019,
+        18 die_0ascertainment,
+        19 die_yanomamic.die.0020,
+        20 die_yanomamic.die.0021,
+        21 die_yanomamic.die.0022,
+        22 die_yanomamic.die.0023,
+        23 dog_0ascertainment,
+        24 dog_yanomamic.dog.0024,
+        25 dog_yanomamic.dog.0025,
+        26 dog_yanomamic.dog.0026,
+        27 drink_0ascertainment,
+        28 drink_yanomamic.drink.0027,
+        29 ear_0ascertainment,
+        30 ear_yanomamic.ear.0028,
+        31 eye_0ascertainment,
+        32 eye_yanomamic.eye.0029,
+        33 fire_0ascertainment,
+        34 fire_yanomamic.fire.0030,
+        35 fish_0ascertainment,
+        36 fish_yanomamic.fish.0031,
+        37 fish_yanomamic.fish.0032,
+        38 full_0ascertainment,
+        39 full_yanomamic.full.0033,
+        40 full_yanomamic.full.0034,
+        41 full_yanomamic.full.0035,
+        42 full_yanomamic.full.0036,
+        43 full_yanomamic.full.0037,
+        44 hand_0ascertainment,
+        45 hand_yanomamic.hand.0038,
+        46 hand_yanomamic.hand.0039,
+        47 hand_yanomamic.hand.0040,
+        48 hand_yanomamic.hand.0041,
+        49 hear_0ascertainment,
+        50 hear_yanomamic.hear.0042,
+        51 horn_0ascertainment,
+        52 horn_yanomamic.horn.0043,
+        53 knee_0ascertainment,
+        54 knee_yanomamic.knee.0044,
+        55 leaf_0ascertainment,
+        56 leaf_yanomamic.leaf.0045,
+        57 leaf_yanomamic.leaf.0046,
+        58 liver_0ascertainment,
+        59 liver_yanomamic.liver.0047,
+        60 louse_0ascertainment,
+        61 louse_yanomamic.louse.0048,
+        62 mountain_0ascertainment,
+        63 mountain_yanomamic.mountain.0049,
+        64 mountain_yanomamic.mountain.0050,
+        65 mountain_yanomamic.mountain.0051,
+        66 mountain_yanomamic.mountain.0052,
+        67 mountain_yanomamic.mountain.0053,
+        68 name_0ascertainment,
+        69 name_yanomamic.name.0054,
+        70 name_yanomamic.name.0055,
+        71 name_yanomamic.name.0056,
+        72 name_yanomamic.name.0057,
+        73 new_0ascertainment,
+        74 new_yanomamic.new.0058,
+        75 night_0ascertainment,
+        76 night_yanomamic.night.0059,
+        77 night_yanomamic.night.0060,
+        78 night_yanomamic.night.0061,
+        79 nose_0ascertainment,
+        80 nose_yanomamic.nose.0062,
+        81 nose_yanomamic.nose.0063,
+        82 nose_yanomamic.nose.0064,
+        83 one_0ascertainment,
+        84 one_yanomamic.one.0065,
+        85 one_yanomamic.one.0066,
+        86 one_yanomamic.one.0067,
+        87 path_0ascertainment,
+        88 path_yanomamic.path.0068,
+        89 path_yanomamic.path.0069,
+        90 path_yanomamic.path.0070,
+        91 person_0ascertainment,
+        92 person_yanomamic.person.0071,
+        93 person_yanomamic.person.0072,
+        94 pl_0ascertainment,
+        95 pl_yanomamic.1pl.0001,
+        96 see_0ascertainment,
+        97 see_yanomamic.see.0073,
+        98 see_yanomamic.see.0074,
+        99 see_yanomamic.see.0075,
+        100 sg_0ascertainment,
+        101 sg_yanomamic.1sg.0002,
+        102 sg_yanomamic.1sg.0003,
+        103 sg_yanomamic.1sg.0004,
+        104 sg_yanomamic.2sg.0005,
+        105 sg_yanomamic.2sg.0006,
+        106 skin_0ascertainment,
+        107 skin_yanomamic.skin.0076,
+        108 skin_yanomamic.skin.0077,
+        109 skin_yanomamic.skin.0078,
+        110 skin_yanomamic.skin.0079,
+        111 star_0ascertainment,
+        112 star_yanomamic.star.0080,
+        113 star_yanomamic.star.0081,
+        114 stone_0ascertainment,
+        115 stone_yanomamic.stone.0082,
+        116 sun_0ascertainment,
+        117 sun_yanomamic.sun.0083,
+        118 sun_yanomamic.sun.0084,
+        119 tongue_0ascertainment,
+        120 tongue_yanomamic.tongue.0085,
+        121 tongue_yanomamic.tongue.0086,
+        122 tooth_0ascertainment,
+        123 tooth_yanomamic.tooth.0087,
+        124 tooth_yanomamic.tooth.0088,
+        125 tree_0ascertainment,
+        126 tree_yanomamic.tree.0089,
+        127 tree_yanomamic.tree.0090,
+        128 two_0ascertainment,
+        129 two_yanomamic.two.0091,
+        130 two_yanomamic.two.0092,
+        131 two_yanomamic.two.0093,
+        132 water_0ascertainment,
+        133 water_yanomamic.water.0094,
+        134 water_yanomamic.water.0095
+;
+
+MATRIX
+ninam      01100101010000100010000100010101010100?????01000010?0?01001010?????0100001010101010100010001001011001101101010010010??0100100??0110010
+sanima     00100010001000010001000010010101010100100000010001010101001010100010010101001000110010010000101011001101000100001010100010010100010011
+sanuma     0???0???0????00010010000100101010101000100000010010?01001010?001000000100100100010001001000??01000100100100100001010100010010100010010
+shirishana 01000100010000100010010100010101010100001000100001010101001010001000100001000101000100010001001010001101101000010010100100100010110010
+yanam_2    00100001010000???000100100010101010100000100100001010101001010000110100001010100010100010001101011001011000010010010010010010010010010
+yanomam    00100001000100010001000001010101010010000100000101010101001010100010100001010100010100010000101011001101000010011010100010010010010010
+yanomame   00100001000100010001000001010101010010000010000101010101001010100010100001010000010100001000101011001101000010011010100010010100010010
+yanomami   00010???000010100001000001010101010010100000000101010101001010100000100001010000100101001100101001000100100001001010100010010100011010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-8;
+    charset breast = 9-13;
+    charset come = 14-17;
+    charset die = 18-22;
+    charset dog = 23-26;
+    charset drink = 27-28;
+    charset ear = 29-30;
+    charset eye = 31-32;
+    charset fire = 33-34;
+    charset fish = 35-37;
+    charset full = 38-43;
+    charset hand = 44-48;
+    charset hear = 49-50;
+    charset horn = 51-52;
+    charset knee = 53-54;
+    charset leaf = 55-57;
+    charset liver = 58-59;
+    charset louse = 60-61;
+    charset mountain = 62-67;
+    charset name = 68-72;
+    charset new = 73-74;
+    charset night = 75-78;
+    charset nose = 79-82;
+    charset one = 83-86;
+    charset path = 87-90;
+    charset person = 91-93;
+    charset pl = 94-95;
+    charset see = 96-99;
+    charset sg = 100-105;
+    charset skin = 106-110;
+    charset star = 111-113;
+    charset stone = 114-115;
+    charset sun = 116-118;
+    charset tongue = 119-121;
+    charset tooth = 122-124;
+    charset tree = 125-127;
+    charset two = 128-131;
+    charset water = 132-134;
+END;

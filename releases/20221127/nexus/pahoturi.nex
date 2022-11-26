@@ -1,0 +1,119 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=71;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_pahoturi.blood.0012,
+        3 bone_0ascertainment,
+        4 bone_pahoturi.bone.0038,
+        5 breast_0ascertainment,
+        6 breast_pahoturi.breast.0015,
+        7 breast_pahoturi.breast.0024,
+        8 come_0ascertainment,
+        9 come_pahoturi.come.0003,
+        10 die_0ascertainment,
+        11 die_pahoturi.die.0036,
+        12 dog_0ascertainment,
+        13 dog_pahoturi.dog.0039,
+        14 drink_0ascertainment,
+        15 drink_pahoturi.drink.0037,
+        16 ear_0ascertainment,
+        17 ear_pahoturi.ear.0034,
+        18 eye_0ascertainment,
+        19 eye_pahoturi.eye.0041,
+        20 fire_0ascertainment,
+        21 fire_pahoturi.fire.0046,
+        22 fish_0ascertainment,
+        23 fish_pahoturi.fish.0045,
+        24 hand_0ascertainment,
+        25 hand_pahoturi.hand.0018,
+        26 hear_0ascertainment,
+        27 hear_pahoturi.hear.0046,
+        28 knee_0ascertainment,
+        29 knee_pahoturi.knee.0007,
+        30 knee_pahoturi.knee.0037,
+        31 leaf_0ascertainment,
+        32 leaf_pahoturi.leaf.0038,
+        33 leaf_pahoturi.leaf.0042,
+        34 liver_0ascertainment,
+        35 liver_pahoturi.liver.0045,
+        36 liver_pahoturi.liver.0046,
+        37 louse_0ascertainment,
+        38 louse_pahoturi.louse.0031,
+        39 mountain_0ascertainment,
+        40 mountain_pahoturi.mountain.0038,
+        41 name_0ascertainment,
+        42 name_pahoturi.name.0034,
+        43 night_0ascertainment,
+        44 night_pahoturi.night.0046,
+        45 nose_0ascertainment,
+        46 nose_pahoturi.nose.0022,
+        47 one_0ascertainment,
+        48 one_pahoturi.one.0010,
+        49 path_0ascertainment,
+        50 path_pahoturi.path.0044,
+        51 sg_0ascertainment,
+        52 sg_pahoturi.1sg.0010,
+        53 sg_pahoturi.2sg.0034,
+        54 skin_0ascertainment,
+        55 skin_pahoturi.skin.0044,
+        56 star_0ascertainment,
+        57 star_pahoturi.star.0045,
+        58 stone_0ascertainment,
+        59 stone_pahoturi.stone.0043,
+        60 sun_0ascertainment,
+        61 sun_pahoturi.sun.0030,
+        62 tongue_0ascertainment,
+        63 tongue_pahoturi.tongue.0043,
+        64 tooth_0ascertainment,
+        65 tooth_pahoturi.tooth.0040,
+        66 tree_0ascertainment,
+        67 tree_pahoturi.tree.0046,
+        68 two_0ascertainment,
+        69 two_pahoturi.two.0001,
+        70 water_0ascertainment,
+        71 water_pahoturi.water.0035
+;
+
+MATRIX
+agob_dabu 01010110101010101010101010101101101101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-9;
+    charset die = 10-11;
+    charset dog = 12-13;
+    charset drink = 14-15;
+    charset ear = 16-17;
+    charset eye = 18-19;
+    charset fire = 20-21;
+    charset fish = 22-23;
+    charset hand = 24-25;
+    charset hear = 26-27;
+    charset knee = 28-30;
+    charset leaf = 31-33;
+    charset liver = 34-36;
+    charset louse = 37-38;
+    charset mountain = 39-40;
+    charset name = 41-42;
+    charset night = 43-44;
+    charset nose = 45-46;
+    charset one = 47-48;
+    charset path = 49-50;
+    charset sg = 51-53;
+    charset skin = 54-55;
+    charset star = 56-57;
+    charset stone = 58-59;
+    charset sun = 60-61;
+    charset tongue = 62-63;
+    charset tooth = 64-65;
+    charset tree = 66-67;
+    charset two = 68-69;
+    charset water = 70-71;
+END;

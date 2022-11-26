@@ -1,0 +1,121 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=71;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_dibiyaso.blood.0129,
+        3 bone_0ascertainment,
+        4 bone_dibiyaso.bone.0001,
+        5 breast_0ascertainment,
+        6 breast_dibiyaso.breast.0030,
+        7 come_0ascertainment,
+        8 come_dibiyaso.come.0176,
+        9 dog_0ascertainment,
+        10 dog_dibiyaso.dog.0064,
+        11 ear_0ascertainment,
+        12 ear_dibiyaso.ear.0202,
+        13 eye_0ascertainment,
+        14 eye_dibiyaso.eye.0297,
+        15 fire_0ascertainment,
+        16 fire_dibiyaso.fire.0339,
+        17 fish_0ascertainment,
+        18 fish_dibiyaso.fish.0001,
+        19 full_0ascertainment,
+        20 full_dibiyaso.full.0087,
+        21 hand_0ascertainment,
+        22 hand_dibiyaso.hand.0013,
+        23 hear_0ascertainment,
+        24 hear_dibiyaso.hear.0396,
+        25 knee_0ascertainment,
+        26 knee_dibiyaso.knee.0007,
+        27 leaf_0ascertainment,
+        28 leaf_dibiyaso.leaf.0284,
+        29 louse_0ascertainment,
+        30 louse_dibiyaso.louse.0292,
+        31 mountain_0ascertainment,
+        32 mountain_dibiyaso.mountain.0316,
+        33 name_0ascertainment,
+        34 name_dibiyaso.name.0243,
+        35 new_0ascertainment,
+        36 new_dibiyaso.new.0016,
+        37 night_0ascertainment,
+        38 night_dibiyaso.night.0005,
+        39 nose_0ascertainment,
+        40 nose_dibiyaso.nose.0330,
+        41 one_0ascertainment,
+        42 one_dibiyaso.one.0263,
+        43 path_0ascertainment,
+        44 path_dibiyaso.path.0029,
+        45 person_0ascertainment,
+        46 person_dibiyaso.person.0395,
+        47 pl_0ascertainment,
+        48 pl_dibiyaso.1pl.0028,
+        49 see_0ascertainment,
+        50 see_dibiyaso.see.0038,
+        51 sg_0ascertainment,
+        52 sg_dibiyaso.1sg.0035,
+        53 sg_dibiyaso.2sg.0043,
+        54 skin_0ascertainment,
+        55 skin_dibiyaso.skin.0006,
+        56 star_0ascertainment,
+        57 star_dibiyaso.star.0333,
+        58 stone_0ascertainment,
+        59 stone_dibiyaso.stone.0347,
+        60 sun_0ascertainment,
+        61 sun_dibiyaso.sun.0027,
+        62 tongue_0ascertainment,
+        63 tongue_dibiyaso.tongue.0276,
+        64 tooth_0ascertainment,
+        65 tooth_dibiyaso.tooth.0047,
+        66 tree_0ascertainment,
+        67 tree_dibiyaso.tree.0305,
+        68 two_0ascertainment,
+        69 two_dibiyaso.two.0037,
+        70 water_0ascertainment,
+        71 water_dibiyaso.water.0012
+;
+
+MATRIX
+dibiyaso 01010101010101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset dog = 9-10;
+    charset ear = 11-12;
+    charset eye = 13-14;
+    charset fire = 15-16;
+    charset fish = 17-18;
+    charset full = 19-20;
+    charset hand = 21-22;
+    charset hear = 23-24;
+    charset knee = 25-26;
+    charset leaf = 27-28;
+    charset louse = 29-30;
+    charset mountain = 31-32;
+    charset name = 33-34;
+    charset new = 35-36;
+    charset night = 37-38;
+    charset nose = 39-40;
+    charset one = 41-42;
+    charset path = 43-44;
+    charset person = 45-46;
+    charset pl = 47-48;
+    charset see = 49-50;
+    charset sg = 51-53;
+    charset skin = 54-55;
+    charset star = 56-57;
+    charset stone = 58-59;
+    charset sun = 60-61;
+    charset tongue = 62-63;
+    charset tooth = 64-65;
+    charset tree = 66-67;
+    charset two = 68-69;
+    charset water = 70-71;
+END;

@@ -1,0 +1,194 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=138;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_turamakikori.blood.0009,
+        3 blood_turamakikori.blood.0010,
+        4 bone_0ascertainment,
+        5 bone_turamakikori.bone.0011,
+        6 bone_turamakikori.bone.0012,
+        7 breast_0ascertainment,
+        8 breast_turamakikori.breast.0013,
+        9 breast_turamakikori.breast.0014,
+        10 come_0ascertainment,
+        11 come_turamakikori.come.0015,
+        12 come_turamakikori.come.0016,
+        13 come_turamakikori.come.0017,
+        14 die_0ascertainment,
+        15 die_turamakikori.die.0018,
+        16 die_turamakikori.die.0019,
+        17 die_turamakikori.die.0020,
+        18 dog_0ascertainment,
+        19 dog_turamakikori.dog.0021,
+        20 drink_0ascertainment,
+        21 drink_turamakikori.drink.0022,
+        22 drink_turamakikori.drink.0023,
+        23 drink_turamakikori.drink.0024,
+        24 ear_0ascertainment,
+        25 ear_turamakikori.ear.0025,
+        26 ear_turamakikori.ear.0026,
+        27 eye_0ascertainment,
+        28 eye_turamakikori.eye.0027,
+        29 eye_turamakikori.eye.0028,
+        30 fire_0ascertainment,
+        31 fire_turamakikori.fire.0029,
+        32 fire_turamakikori.fire.0030,
+        33 fish_0ascertainment,
+        34 fish_turamakikori.fish.0031,
+        35 fish_turamakikori.fish.0032,
+        36 full_0ascertainment,
+        37 full_turamakikori.full.0033,
+        38 full_turamakikori.full.0034,
+        39 hand_0ascertainment,
+        40 hand_turamakikori.hand.0035,
+        41 hand_turamakikori.hand.0036,
+        42 hand_turamakikori.hand.0037,
+        43 hear_0ascertainment,
+        44 hear_turamakikori.hear.0038,
+        45 hear_turamakikori.hear.0039,
+        46 hear_turamakikori.hear.0040,
+        47 horn_0ascertainment,
+        48 horn_turamakikori.horn.0041,
+        49 horn_turamakikori.horn.0042,
+        50 knee_0ascertainment,
+        51 knee_turamakikori.knee.0043,
+        52 knee_turamakikori.knee.0044,
+        53 knee_turamakikori.knee.0045,
+        54 leaf_0ascertainment,
+        55 leaf_turamakikori.leaf.0046,
+        56 leaf_turamakikori.leaf.0047,
+        57 liver_0ascertainment,
+        58 liver_turamakikori.liver.0048,
+        59 liver_turamakikori.liver.0049,
+        60 liver_turamakikori.liver.0050,
+        61 louse_0ascertainment,
+        62 louse_turamakikori.louse.0051,
+        63 louse_turamakikori.louse.0052,
+        64 louse_turamakikori.louse.0053,
+        65 mountain_0ascertainment,
+        66 mountain_turamakikori.mountain.0054,
+        67 mountain_turamakikori.mountain.0055,
+        68 mountain_turamakikori.mountain.0056,
+        69 name_0ascertainment,
+        70 name_turamakikori.name.0057,
+        71 name_turamakikori.name.0058,
+        72 new_0ascertainment,
+        73 new_turamakikori.new.0059,
+        74 new_turamakikori.new.0060,
+        75 new_turamakikori.new.0061,
+        76 new_turamakikori.new.0062,
+        77 night_0ascertainment,
+        78 night_turamakikori.night.0063,
+        79 night_turamakikori.night.0064,
+        80 night_turamakikori.night.0065,
+        81 nose_0ascertainment,
+        82 nose_turamakikori.nose.0066,
+        83 nose_turamakikori.nose.0067,
+        84 nose_turamakikori.nose.0068,
+        85 one_0ascertainment,
+        86 one_turamakikori.one.0069,
+        87 one_turamakikori.one.0070,
+        88 path_0ascertainment,
+        89 path_turamakikori.path.0071,
+        90 person_0ascertainment,
+        91 person_turamakikori.person.0072,
+        92 person_turamakikori.person.0073,
+        93 pl_0ascertainment,
+        94 pl_turamakikori.1pl.0001,
+        95 pl_turamakikori.1pl.0002,
+        96 pl_turamakikori.1pl.0003,
+        97 see_0ascertainment,
+        98 see_turamakikori.see.0074,
+        99 see_turamakikori.see.0075,
+        100 see_turamakikori.see.0076,
+        101 sg_0ascertainment,
+        102 sg_turamakikori.1sg.0004,
+        103 sg_turamakikori.1sg.0005,
+        104 sg_turamakikori.2sg.0006,
+        105 sg_turamakikori.2sg.0007,
+        106 sg_turamakikori.2sg.0008,
+        107 skin_0ascertainment,
+        108 skin_turamakikori.skin.0077,
+        109 skin_turamakikori.skin.0078,
+        110 skin_turamakikori.skin.0079,
+        111 star_0ascertainment,
+        112 star_turamakikori.star.0080,
+        113 star_turamakikori.star.0081,
+        114 star_turamakikori.star.0082,
+        115 star_turamakikori.star.0083,
+        116 stone_0ascertainment,
+        117 stone_turamakikori.stone.0084,
+        118 stone_turamakikori.stone.0085,
+        119 sun_0ascertainment,
+        120 sun_turamakikori.sun.0086,
+        121 sun_turamakikori.sun.0087,
+        122 tongue_0ascertainment,
+        123 tongue_turamakikori.tongue.0088,
+        124 tongue_turamakikori.tongue.0089,
+        125 tooth_0ascertainment,
+        126 tooth_turamakikori.tooth.0090,
+        127 tooth_turamakikori.tooth.0091,
+        128 tooth_turamakikori.tooth.0092,
+        129 tree_0ascertainment,
+        130 tree_turamakikori.tree.0093,
+        131 two_0ascertainment,
+        132 two_turamakikori.two.0094,
+        133 two_turamakikori.two.0095,
+        134 two_turamakikori.two.0096,
+        135 water_0ascertainment,
+        136 water_turamakikori.water.0097,
+        137 water_turamakikori.water.0098,
+        138 water_turamakikori.water.0099
+;
+
+MATRIX
+mena  010010010010001000101000100100100100100100010001001000100100010001000100100001000100010010100101010001010001000100001001001001000?01000100
+omati 010010010001000100100100100010100100010010001001000100100010010000100100010000100010010010??0011001001010000100010001000101000100?00100010
+rumu  001001011000100010100010010010010010??00010001001000100100010011000101100011000100010010?001000100010110110001000110010??00100010100010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-9;
+    charset come = 10-13;
+    charset die = 14-17;
+    charset dog = 18-19;
+    charset drink = 20-23;
+    charset ear = 24-26;
+    charset eye = 27-29;
+    charset fire = 30-32;
+    charset fish = 33-35;
+    charset full = 36-38;
+    charset hand = 39-42;
+    charset hear = 43-46;
+    charset horn = 47-49;
+    charset knee = 50-53;
+    charset leaf = 54-56;
+    charset liver = 57-60;
+    charset louse = 61-64;
+    charset mountain = 65-68;
+    charset name = 69-71;
+    charset new = 72-76;
+    charset night = 77-80;
+    charset nose = 81-84;
+    charset one = 85-87;
+    charset path = 88-89;
+    charset person = 90-92;
+    charset pl = 93-96;
+    charset see = 97-100;
+    charset sg = 101-106;
+    charset skin = 107-110;
+    charset star = 111-115;
+    charset stone = 116-118;
+    charset sun = 119-121;
+    charset tongue = 122-124;
+    charset tooth = 125-128;
+    charset tree = 129-130;
+    charset two = 131-134;
+    charset water = 135-138;
+END;

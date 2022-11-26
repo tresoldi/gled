@@ -1,0 +1,165 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=111;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_nambiquaran.blood.0006,
+        3 blood_nambiquaran.blood.0007,
+        4 bone_0ascertainment,
+        5 bone_nambiquaran.bone.0008,
+        6 bone_nambiquaran.bone.0009,
+        7 breast_0ascertainment,
+        8 breast_nambiquaran.breast.0010,
+        9 breast_nambiquaran.breast.0011,
+        10 come_0ascertainment,
+        11 come_nambiquaran.come.0012,
+        12 come_nambiquaran.come.0013,
+        13 die_0ascertainment,
+        14 die_nambiquaran.die.0014,
+        15 die_nambiquaran.die.0015,
+        16 dog_0ascertainment,
+        17 dog_nambiquaran.dog.0016,
+        18 dog_nambiquaran.dog.0017,
+        19 drink_0ascertainment,
+        20 drink_nambiquaran.drink.0018,
+        21 drink_nambiquaran.drink.0019,
+        22 ear_0ascertainment,
+        23 ear_nambiquaran.ear.0020,
+        24 ear_nambiquaran.ear.0021,
+        25 eye_0ascertainment,
+        26 eye_nambiquaran.eye.0022,
+        27 eye_nambiquaran.eye.0023,
+        28 fire_0ascertainment,
+        29 fire_nambiquaran.fire.0024,
+        30 fire_nambiquaran.fire.0025,
+        31 fish_0ascertainment,
+        32 fish_nambiquaran.fish.0026,
+        33 fish_nambiquaran.fish.0027,
+        34 full_0ascertainment,
+        35 full_nambiquaran.full.0028,
+        36 full_nambiquaran.full.0029,
+        37 hand_0ascertainment,
+        38 hand_nambiquaran.hand.0030,
+        39 hand_nambiquaran.hand.0031,
+        40 hear_0ascertainment,
+        41 hear_nambiquaran.hear.0032,
+        42 hear_nambiquaran.hear.0033,
+        43 horn_0ascertainment,
+        44 horn_nambiquaran.horn.0034,
+        45 horn_nambiquaran.horn.0035,
+        46 knee_0ascertainment,
+        47 knee_nambiquaran.knee.0036,
+        48 knee_nambiquaran.knee.0037,
+        49 leaf_0ascertainment,
+        50 leaf_nambiquaran.leaf.0038,
+        51 leaf_nambiquaran.leaf.0039,
+        52 liver_0ascertainment,
+        53 liver_nambiquaran.liver.0040,
+        54 louse_0ascertainment,
+        55 louse_nambiquaran.louse.0041,
+        56 louse_nambiquaran.louse.0042,
+        57 mountain_0ascertainment,
+        58 mountain_nambiquaran.mountain.0043,
+        59 name_0ascertainment,
+        60 name_nambiquaran.name.0044,
+        61 name_nambiquaran.name.0045,
+        62 new_0ascertainment,
+        63 new_nambiquaran.new.0046,
+        64 new_nambiquaran.new.0047,
+        65 night_0ascertainment,
+        66 night_nambiquaran.night.0048,
+        67 nose_0ascertainment,
+        68 nose_nambiquaran.nose.0049,
+        69 nose_nambiquaran.nose.0050,
+        70 one_0ascertainment,
+        71 one_nambiquaran.one.0051,
+        72 one_nambiquaran.one.0052,
+        73 path_0ascertainment,
+        74 path_nambiquaran.path.0053,
+        75 path_nambiquaran.path.0054,
+        76 pl_0ascertainment,
+        77 pl_nambiquaran.1pl.0001,
+        78 pl_nambiquaran.1pl.0002,
+        79 see_0ascertainment,
+        80 see_nambiquaran.see.0055,
+        81 see_nambiquaran.see.0056,
+        82 sg_0ascertainment,
+        83 sg_nambiquaran.1sg.0003,
+        84 sg_nambiquaran.2sg.0004,
+        85 sg_nambiquaran.2sg.0005,
+        86 skin_0ascertainment,
+        87 skin_nambiquaran.skin.0057,
+        88 skin_nambiquaran.skin.0058,
+        89 star_0ascertainment,
+        90 star_nambiquaran.star.0059,
+        91 star_nambiquaran.star.0060,
+        92 stone_0ascertainment,
+        93 stone_nambiquaran.stone.0061,
+        94 stone_nambiquaran.stone.0062,
+        95 sun_0ascertainment,
+        96 sun_nambiquaran.sun.0063,
+        97 sun_nambiquaran.sun.0064,
+        98 tongue_0ascertainment,
+        99 tongue_nambiquaran.tongue.0065,
+        100 tongue_nambiquaran.tongue.0066,
+        101 tooth_0ascertainment,
+        102 tooth_nambiquaran.tooth.0067,
+        103 tree_0ascertainment,
+        104 tree_nambiquaran.tree.0068,
+        105 tree_nambiquaran.tree.0069,
+        106 tree_nambiquaran.tree.0070,
+        107 two_0ascertainment,
+        108 two_nambiquaran.two.0071,
+        109 water_0ascertainment,
+        110 water_nambiquaran.water.0072,
+        111 water_nambiquaran.water.0073
+;
+
+MATRIX
+nambikwara 010010010010010010010010010010010010010010010010010010100101001001010010010010010011001001001001001001010001010
+sabane     001001001001001001001001001001001001001001001001001010010?0010010?001001001001001010100100100100100101001101001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-9;
+    charset come = 10-12;
+    charset die = 13-15;
+    charset dog = 16-18;
+    charset drink = 19-21;
+    charset ear = 22-24;
+    charset eye = 25-27;
+    charset fire = 28-30;
+    charset fish = 31-33;
+    charset full = 34-36;
+    charset hand = 37-39;
+    charset hear = 40-42;
+    charset horn = 43-45;
+    charset knee = 46-48;
+    charset leaf = 49-51;
+    charset liver = 52-53;
+    charset louse = 54-56;
+    charset mountain = 57-58;
+    charset name = 59-61;
+    charset new = 62-64;
+    charset night = 65-66;
+    charset nose = 67-69;
+    charset one = 70-72;
+    charset path = 73-75;
+    charset pl = 76-78;
+    charset see = 79-81;
+    charset sg = 82-85;
+    charset skin = 86-88;
+    charset star = 89-91;
+    charset stone = 92-94;
+    charset sun = 95-97;
+    charset tongue = 98-100;
+    charset tooth = 101-102;
+    charset tree = 103-106;
+    charset two = 107-108;
+    charset water = 109-111;
+END;

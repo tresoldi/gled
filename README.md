@@ -1,72 +1,75 @@
 # A Global Lexical Dataset (GLED) with cognate annotation and phonological alignments
 
-[![Release](https://img.shields.io/badge/Release-20220707-informational)](https://img.shields.io/badge/Release-20220707-informational)
-[![Lemmas](https://img.shields.io/badge/Lemmas-286054-success)](https://img.shields.io/badge/Lemmas-286054-success)
-[![Languages](https://img.shields.io/badge/Languages-6654-success)](https://img.shields.io/badge/Languages-6654-success)
-[![Languages](https://img.shields.io/badge/Families-388-success)](https://img.shields.io/badge/Families-388-success)
-[![Cognatesets](https://img.shields.io/badge/Cognatesets-97906-success)](https://img.shields.io/badge/Cognatesets-97906-success)
-[![Tokens](https://img.shields.io/badge/Tokens-2148614-success)](https://img.shields.io/badge/Tokens-2148614-success)
+
+[![Release](https://img.shields.io/badge/Release-20221127-informational)](https://img.shields.io/badge/Release-20221127-informational)
+[![Lemmas](https://img.shields.io/badge/Lemmas-262859-success)](https://img.shields.io/badge/Lemmas-262859-success)
+[![Languages](https://img.shields.io/badge/Languages-6572-success)](https://img.shields.io/badge/Languages-6572-success)
+[![Families](https://img.shields.io/badge/Families-344-success)](https://img.shields.io/badge/Families-344-success)
+[![Cognatesets](https://img.shields.io/badge/Cognatesets-48125-success)](https://img.shields.io/badge/Cognatesets-48125-success)
+[![Tokens](https://img.shields.io/badge/Tokens-1934833-success)](https://img.shields.io/badge/Tokens-1934833-success)
+    
 
 [![CC-BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)
 [![DOI](https://zenodo.org/badge/452418748.svg)](https://zenodo.org/badge/latestdoi/452418748)
 
 ## Statistics
 
-The 20220707 release comprises:
 
-  - Entries: 286054
-  - Doculects: 6654
-  - Families: 388
-  - Cognate sets: 97906
-  - Tokens: 2148614
-  - Mean cognate set size: 2.92
+The 20221127 release comprises:
+
+  - Entries: 262859
+  - Doculects: 6572
+  - Families: 344 (including isolates)
+  - Cognate sets: 48125
+  - Tokens: 1934833
+
 
 
 ## Contents
 
-The dataset is offered as a single textual tabular file, supported by
+The dataset is offered as a single tabular file, supported by
 [Frictionless](https://frictionlessdata.io/) metadata,
 to simplify its usage. It is released with the full pipeline for processing, allowing to
 replicate the data and generate future versions. A complementary version following the
-[CLDF standard](https://cldf.clld.org/) (Forkel et al. 2018) will be available on the next releases.
+[CLDF standard](https://cldf.clld.org/) (Forkel et al. 2018) is planned for the next releases.
 
 The main file released by this project is `data/gled.{releasedate}.tsv`.
-This tabular source is
-accompanied by a dataset schema description following the Frictionless
-standard in `gled.yaml`, but the latter is not necessary if you
+A dataset schema description following the Frictionless standard (`gled.{releasedate}.yaml`) accompanies the release, but it is unnecessary if you
 open the main file as a tabular source within a programming
-language or a spreadsheet program. In most environment for analysis and
+language or a spreadsheet program. In most environments for analysis and
 development, it should be enough to read the data as a tabular (`"CSV"`)
 file, specifying tabulations (`"\t"`) as delimiters. The encoding is UTF-8.
 
 Field names are all in uppercase strict ASCII. The file is sorted
 in ascending order following the value of fields `FAMILY`, `COGSET`, and `ID`.
-Concepts are linked to the [Concepticon](https://concepticon.clld.org/) (List et al. 2021) reference catalog
+Concepts are linked to the [Concepticon](https://concepticon.clld.org/) (List et al. 2022) reference catalog
 for comparative concepts, and language varieties are linked to 
-[Glottolog](http://glottolog.org/) (Hammarström et al. 2021)
+[Glottolog](http://glottolog.org/) (Hammarström et al. 2022)
 
 | Field name     | Type     | Description                                                                                                                                                                                                                                                  |
 |----------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ID             | String   | A unique identifier for the lemma, as used in ASJP. E.g.: `ADYGHE-34-2`, `KABARDIAN-34-1`.                                                                                                                                                                   |
-| DOCULECT       | String   | The name of the doculect ("language"), in uppercase. E.g.: `ADYGHE`, `KABARDIAN`.                                                                                                                                                                            |
-| DOCULECT_DATE  | Integer  | The year associated with the doculect; empty fields should be assumed as living languages. E.g.: `1992`.                                                                                                                                                     |
-| GLOTTOCODE     | String   | The languoid associated to the doculect in the Glottolog catalog. E.g.: `adyg1241`, `kaba1278`.                                                                                                                                                              |
-| GLOTTOLOG_NAME | String   | The language name associated with the `GLOTTOCODE` languoid in the Glottolog catalog. Please note that the mapping between ASJP and Glottolog doculects is not guaranteed to be bijective. E.g.: `Adyghe`, `Kabardian`.                                      |
-| FAMILY         | String   | The language family for the `DOCULECT`, as specified in ASJP (note that Glottolog's classification might disagree). E.g.: `Abkhaz-Adyge`, `Dravidian`.                                                                                                       |
-| CONCEPT        | String   | The normalized gloss for the lemma's concept, as specified in the Concepticon project. E.g.: `HORN (ANATOMY)`, `KNEE`.                                                                                                                                       |
-| IPA            | String   | A sequence of normalized CLTS BIPA graphemes (i.e., phonemes), separated by spaces. E.g.: `b ʒ ə`, `b ʒ ɐ qʼʷ ə`.                                                                                                                                            |
-| ALIGNMENT      | String   | A sequence of BIPA graphemes and dashes (representing gaps) expressing the lemma's alignment in its cognate set. E.g.: `b ʒ ə - -`, `b ʒ ɐ qʼʷ ə`.                                                                                                           |
-| COGSET         | String   | A label identifying the cognate set to which the lemma belongs, also carrying information on linguistic family and concept. All in lowercase, with the cognate set index expressed by trailing digits. E.g.: `abkhaz_adyge_horn_47`, `abkhaz_adyge_knee_49`. |
+| ID             | String   | A unique identifier for the lemma, including information on the language name, concept, and a unique numerical index. E.g.: `DHOFARI_ARABIC.bone-25610`, `AKUNNU.ear-67416`.                                                                                                                                                                   |
+| DOCULECT       | String   | A mandatory field with the name of the doculect ("language"), in uppercase with underscores for separating words. E.g.: `DHOFARI_ARABIC`, `AKUNNU`.                                                                                                                                                                            |
+| LANGUAGE_NAME  | String  | A mandatory field with a name associated with the doculect; in cases without hard-coded exceptions, either the Glottolog name or, if not available, a version of the doculect name. E.g.: `Dhofari Arabic`, `Akpes`.                                                                                                                                                     |
+| GLOTTOCODE     | String   | The languoid associated with the doculect in the Glottolog catalog, if any. E.g.: `dhof1235`, `akpe1248`.                                                                                                                                                              |
+| GLOTTOLOG_NAME | String   | The language name associated with the `GLOTTOCODE` languoid in the Glottolog catalog, if any. Please note that the mapping between ASJP and Glottolog doculects is not guaranteed to be bijective. E.g.: `Dhofari Arabic`, `Akpes`.                                      |
+| FAMILY         | String   | A mandatory field with the language family name for the `DOCULECT`, as specified in ASJP (note that Glottolog's classification might disagree). E.g.: `Afro-Asiatic`, `Atlantic-Congo`.                                                                                                       |
+| CONCEPT        | String   | A mandatory field with the normalized gloss for the lemma's concept. E.g.: `bone`, `hear`.                                                                                                                                       |
+| CONCEPTICON_ID        | Integer   | A mandatory field with the concept ID as mapped by the Concepticon project. E.g.: `1394`, `1247`.                                                                                                                                       |
+| ASJP_FORM        | String   | A mandatory field with the normalized form for the lemma as reported in the source ASJP (using normalized ASJP_CODE). E.g.: `Xa8im`, `anSu`.                                                                                                                                       |
+| FORM            | String   | A mandatory field with the sequence of normalized CLTS BIPA graphemes (i.e., phonemes). E.g.: `χɐθim`, `ɐnʃu`.                                                                                                                                            |
+| IPA            | String   | A mandatory field with the sequence of normalized CLTS BIPA graphemes (i.e., phonemes), with tokens separated by spaces. E.g.: `χ ɐ θ i m`, `ɐ n ʃ u`.                                                                                                                                            |
+| ALIGNMENT      | String   | A mandatory field with the sequence of BIPA graphemes and dashes (representing gaps), expressing the lemma's alignment in its cognate set. E.g.: `χ ɐ θ - i m - -`, `ɐ n ʃ u -`.                                                                                                           |
+| COGSET         | String   | A mandatory label identifying the cognate set to which the lemma belongs, also carrying information on linguistic family and concept. All in lowercase, with the cognate set index expressed by trailing digits. E.g.: `afroasiatic.bone.0054`, `atlanticcongo.ear.0056`. |
+| COGSET_INT         | Integer   | A mandatory label identifying the cognate set to which the lemma belongs, mapping to a unique global 1-based index for the cognate sets. It is provided to ease the usage of software that mandates numeric cognate set identifiers. E.g.: `312`, `5254`. |
 
-The `nexus/` directory carries individual per-family NEXUS files encoding the
-presence or absence of each applicable cognate set. All the characters have an
+The `nexus/` directory carries individual per-family NEXUS files, encoding the
+presence or absence of each applicable cognate set. All the characters include an
 ascertainment correction.
 
 The software pipeline for downloading, processing, and
 releasing new versions of the dataset is available in the `pipeline/`
-directory. Please note that, due to the processing time necessary for
-the core step of automatic cognate detection, the entire process
-can take days on a normal desktop or laptop computer.
+directory. 
 
 ## Background
 
@@ -92,17 +95,16 @@ but they keep the ASJPcode transcription and focus on identifying phylogenetic s
 The most popular method for automatic cognate detection, LexStat (List 2012), can be
 used with ASJPcode, but the standard implementation (List and Forkel 2021) cannot be
 used for an overall cognate detection because of the high number of data-points.
-In preliminary experiments, even with 256 Gb of RAM the methods were ultimately unable
-to process large families such Afro-Asiatic and Indo-European.
+In preliminary experiments, even with 256 Gb of RAM the methods ultimately could not process large families such Afro-Asiatic and Indo-European.
 
 Aiming at providing a dataset that is easy to use and conforming to FAIR principles of data
 management (Wilkinson et al. 2016), I am releasing a dataset derived from ASJP, where are
-all lemmas are given in a broad IPA transcription and annotated for cognacy, with the
+lemmas are given in a broad IPA transcription and annotated for cognacy, with the
 resulting cognate sets phonologically aligned. I have also prepared the collection to
 remove spurious cognate sets and to obtain a more feasible volume of data-points, producing
 a single dataset that is suitable for testing hypotheses on language evolution. It allows
 to prototype studies and benchmark methods that can later apply to higher quality
-datasets, such as those provided by the Lexibank project (List et al. under review).
+datasets, such as those provided by the Lexibank project (List et al. 2022).
 Remember to consider all the limitations of these data before making any claims
 in terms of language evolution or relationship.
 
@@ -115,16 +117,16 @@ and Cysouw 2018) and CLTS (Anderson et al. 2018), which I had previously prepare
 from the dataset languages that did not fit the original design (e.g., artificial
 languages, reconstructions, isolates, duplicates, etc.;
 these might be included in future releases). I ran per-family cognate detection using
-a custom extension of Lexstat (List 2012), available in the released pipeline, which partitions
-the work into partially overlapping subsets and then joins the results with methods of
-community detection (Csárdi 2006). At last, I produced phonological alignments of the
+Lexstat (List 2012) for small and medium (i.e., less than 10,000 items) language
+families, and reproducing the cognate dection from Jäger 2019 for the others.
+At last, I produced phonological alignments of the
 resulting cognate sets using LingPy (List and Forkel 2021) and organized the data into
 a tabular resource.
 
 ## Known limitations
 
 Despite the dataset providing an accessible entry-point for research in quantitative
-historical linguistics, it suffers from several limitations both inherited from ASJP and
+historical linguistics, it suffers from several limitations, both inherited from ASJP and
 induced by the data manipulation. Limitations of the first kind have been amply discussed
 in the literature, including in the papers presenting the ASJP project, and don't need
 to be addressed here.
@@ -132,25 +134,15 @@ to be addressed here.
 Limitations caused by the data manipulation fall into three categories, mirroring the major
 steps of processing. First, the reconstruction from ASJPcode to IPA, despite aiming for
 rather broad transcriptions, is most times only approximate, as by design a single
-orthographic profile was employed. While entries were highlighted for review using
-internal tools and occasionally hard-coded in their transcription, in many situations
+orthographic profile was employed. While some entries were highlighted for review using
+internal tools and later hard-coded in their transcription, in many situations
 these are less precise than what a manual review would achieve. Second, the lower
 quality of the phonological data increased the error rate of automatic cognate
-detection, already impaired in the case of large language families by a supplementary
-round of result aggregation and community detection. Manual inspection of several concepts
+detection. Manual inspection of several concepts
 and families highlighted noticeable inaccuracies, which were not amended to preserve
 reproducibility, to avert any human bias, and to ensure a global comparability. Third,
 automatic alignment is likewise subject to errors, even more when an alignment includes
 lemmas which don't appear to fit to their cognate set.
-
-## Changelog
-
-Release 20220706:
-  - Second public release, improvements to language mapping and to pipeline in line
-    with future work.
-
-Release 20220127:
-  - First public release.
 
 ## Community guidelines
 
@@ -158,7 +150,7 @@ While the author can be contacted directly for support, it is recommended that
 third parties use GitHub standard features, such as issues and pull requests, to
 contribute, report problems, or seek support.
 
-Contributing guidelines, including a code of conduct, can be found in the
+Contributing guidelines, including a code of conduct, are given in the
 `CONTRIBUTING.md` file.
 
 ## License
@@ -166,7 +158,7 @@ Contributing guidelines, including a code of conduct, can be found in the
 As the original ASJP data, this dataset is released under the terms of the
 [Creative Commons Attribution 4.0 International (CC BY 4.0)] license. You are
 free to share and adapt the data, as long as you give appropriate credit,
-provide a link to the license, indicate if changes were made, and don't
+provide a link to the license, indicate your changes (if any), and don't
 establish additional restrictions on the derivative work.
 
 ## Author and citation

@@ -1,0 +1,174 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=120;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_northbougainville.blood.0008,
+        3 blood_northbougainville.blood.0009,
+        4 bone_0ascertainment,
+        5 bone_northbougainville.bone.0010,
+        6 bone_northbougainville.bone.0011,
+        7 breast_0ascertainment,
+        8 breast_northbougainville.breast.0012,
+        9 come_0ascertainment,
+        10 come_northbougainville.come.0013,
+        11 come_northbougainville.come.0014,
+        12 come_northbougainville.come.0015,
+        13 die_0ascertainment,
+        14 die_northbougainville.die.0016,
+        15 die_northbougainville.die.0017,
+        16 die_northbougainville.die.0018,
+        17 dog_0ascertainment,
+        18 dog_northbougainville.dog.0019,
+        19 dog_northbougainville.dog.0020,
+        20 dog_northbougainville.dog.0021,
+        21 drink_0ascertainment,
+        22 drink_northbougainville.drink.0022,
+        23 ear_0ascertainment,
+        24 ear_northbougainville.ear.0023,
+        25 ear_northbougainville.ear.0024,
+        26 eye_0ascertainment,
+        27 eye_northbougainville.eye.0025,
+        28 eye_northbougainville.eye.0026,
+        29 fire_0ascertainment,
+        30 fire_northbougainville.fire.0027,
+        31 fire_northbougainville.fire.0028,
+        32 fire_northbougainville.fire.0029,
+        33 fire_northbougainville.fire.0030,
+        34 fish_0ascertainment,
+        35 fish_northbougainville.fish.0031,
+        36 fish_northbougainville.fish.0032,
+        37 hand_0ascertainment,
+        38 hand_northbougainville.hand.0033,
+        39 hand_northbougainville.hand.0034,
+        40 hand_northbougainville.hand.0035,
+        41 hear_0ascertainment,
+        42 hear_northbougainville.hear.0036,
+        43 hear_northbougainville.hear.0037,
+        44 horn_0ascertainment,
+        45 horn_northbougainville.horn.0038,
+        46 knee_0ascertainment,
+        47 knee_northbougainville.knee.0039,
+        48 knee_northbougainville.knee.0040,
+        49 leaf_0ascertainment,
+        50 leaf_northbougainville.leaf.0041,
+        51 leaf_northbougainville.leaf.0042,
+        52 leaf_northbougainville.leaf.0043,
+        53 liver_0ascertainment,
+        54 liver_northbougainville.liver.0044,
+        55 liver_northbougainville.liver.0045,
+        56 louse_0ascertainment,
+        57 louse_northbougainville.louse.0046,
+        58 mountain_0ascertainment,
+        59 mountain_northbougainville.mountain.0047,
+        60 name_0ascertainment,
+        61 name_northbougainville.name.0048,
+        62 name_northbougainville.name.0049,
+        63 new_0ascertainment,
+        64 new_northbougainville.new.0050,
+        65 new_northbougainville.new.0051,
+        66 night_0ascertainment,
+        67 night_northbougainville.night.0052,
+        68 night_northbougainville.night.0053,
+        69 night_northbougainville.night.0054,
+        70 nose_0ascertainment,
+        71 nose_northbougainville.nose.0055,
+        72 nose_northbougainville.nose.0056,
+        73 nose_northbougainville.nose.0057,
+        74 one_0ascertainment,
+        75 one_northbougainville.one.0058,
+        76 one_northbougainville.one.0059,
+        77 path_0ascertainment,
+        78 path_northbougainville.path.0060,
+        79 path_northbougainville.path.0061,
+        80 person_0ascertainment,
+        81 person_northbougainville.person.0062,
+        82 pl_0ascertainment,
+        83 pl_northbougainville.1pl.0001,
+        84 pl_northbougainville.1pl.0002,
+        85 pl_northbougainville.1pl.0003,
+        86 see_0ascertainment,
+        87 see_northbougainville.see.0063,
+        88 sg_0ascertainment,
+        89 sg_northbougainville.1sg.0004,
+        90 sg_northbougainville.1sg.0005,
+        91 sg_northbougainville.1sg.0006,
+        92 sg_northbougainville.2sg.0007,
+        93 skin_0ascertainment,
+        94 skin_northbougainville.skin.0064,
+        95 skin_northbougainville.skin.0065,
+        96 skin_northbougainville.skin.0066,
+        97 star_0ascertainment,
+        98 star_northbougainville.star.0067,
+        99 star_northbougainville.star.0068,
+        100 stone_0ascertainment,
+        101 stone_northbougainville.stone.0069,
+        102 stone_northbougainville.stone.0070,
+        103 sun_0ascertainment,
+        104 sun_northbougainville.sun.0071,
+        105 sun_northbougainville.sun.0072,
+        106 tongue_0ascertainment,
+        107 tongue_northbougainville.tongue.0073,
+        108 tooth_0ascertainment,
+        109 tooth_northbougainville.tooth.0074,
+        110 tooth_northbougainville.tooth.0075,
+        111 tree_0ascertainment,
+        112 tree_northbougainville.tree.0076,
+        113 tree_northbougainville.tree.0077,
+        114 two_0ascertainment,
+        115 two_northbougainville.two.0078,
+        116 two_northbougainville.two.0079,
+        117 water_0ascertainment,
+        118 water_northbougainville.water.0080,
+        119 water_northbougainville.water.0081,
+        120 water_northbougainville.water.0082
+;
+
+MATRIX
+rapoisi 0100100?010001000100010100100100001001000100101001000100101010010010001010100100?0101010101101000??0100100?0100100100101
+rotokas 001001010011001100110?0010010011100100110010?0010011001010?0010010011001000100101001001001010011011001001010010010010010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-8;
+    charset come = 9-12;
+    charset die = 13-16;
+    charset dog = 17-20;
+    charset drink = 21-22;
+    charset ear = 23-25;
+    charset eye = 26-28;
+    charset fire = 29-33;
+    charset fish = 34-36;
+    charset hand = 37-40;
+    charset hear = 41-43;
+    charset horn = 44-45;
+    charset knee = 46-48;
+    charset leaf = 49-52;
+    charset liver = 53-55;
+    charset louse = 56-57;
+    charset mountain = 58-59;
+    charset name = 60-62;
+    charset new = 63-65;
+    charset night = 66-69;
+    charset nose = 70-73;
+    charset one = 74-76;
+    charset path = 77-79;
+    charset person = 80-81;
+    charset pl = 82-85;
+    charset see = 86-87;
+    charset sg = 88-92;
+    charset skin = 93-96;
+    charset star = 97-99;
+    charset stone = 100-102;
+    charset sun = 103-105;
+    charset tongue = 106-107;
+    charset tooth = 108-110;
+    charset tree = 111-113;
+    charset two = 114-116;
+    charset water = 117-120;
+END;

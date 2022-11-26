@@ -1,0 +1,134 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=80;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_tunica.blood.0526,
+        3 bone_0ascertainment,
+        4 bone_tunica.bone.0018,
+        5 breast_0ascertainment,
+        6 breast_tunica.breast.0012,
+        7 come_0ascertainment,
+        8 come_tunica.come.0114,
+        9 die_0ascertainment,
+        10 die_tunica.die.0847,
+        11 dog_0ascertainment,
+        12 dog_tunica.dog.0312,
+        13 drink_0ascertainment,
+        14 drink_tunica.drink.0884,
+        15 ear_0ascertainment,
+        16 ear_tunica.ear.0391,
+        17 eye_0ascertainment,
+        18 eye_tunica.eye.0267,
+        19 fire_0ascertainment,
+        20 fire_tunica.fire.0682,
+        21 fish_0ascertainment,
+        22 fish_tunica.fish.0633,
+        23 full_0ascertainment,
+        24 full_tunica.full.0018,
+        25 hand_0ascertainment,
+        26 hand_tunica.hand.0523,
+        27 hear_0ascertainment,
+        28 hear_tunica.hear.0955,
+        29 horn_0ascertainment,
+        30 horn_tunica.horn.0540,
+        31 knee_0ascertainment,
+        32 knee_tunica.knee.0583,
+        33 leaf_0ascertainment,
+        34 leaf_tunica.leaf.0513,
+        35 liver_0ascertainment,
+        36 liver_tunica.liver.0804,
+        37 louse_0ascertainment,
+        38 louse_tunica.louse.0675,
+        39 mountain_0ascertainment,
+        40 mountain_tunica.mountain.0054,
+        41 name_0ascertainment,
+        42 name_tunica.name.0504,
+        43 new_0ascertainment,
+        44 new_tunica.new.0339,
+        45 night_0ascertainment,
+        46 night_tunica.night.0616,
+        47 nose_0ascertainment,
+        48 nose_tunica.nose.0741,
+        49 one_0ascertainment,
+        50 one_tunica.one.0026,
+        51 path_0ascertainment,
+        52 path_tunica.path.0720,
+        53 person_0ascertainment,
+        54 person_tunica.person.0937,
+        55 pl_0ascertainment,
+        56 pl_tunica.1pl.0793,
+        57 see_0ascertainment,
+        58 see_tunica.see.0573,
+        59 sg_0ascertainment,
+        60 sg_tunica.1sg.0027,
+        61 sg_tunica.2sg.0512,
+        62 skin_0ascertainment,
+        63 skin_tunica.skin.0799,
+        64 star_0ascertainment,
+        65 star_tunica.star.0012,
+        66 stone_0ascertainment,
+        67 stone_tunica.stone.1006,
+        68 sun_0ascertainment,
+        69 sun_tunica.sun.0044,
+        70 tongue_0ascertainment,
+        71 tongue_tunica.tongue.0588,
+        72 tooth_0ascertainment,
+        73 tooth_tunica.tooth.0185,
+        74 tooth_tunica.tooth.0697,
+        75 tree_0ascertainment,
+        76 tree_tunica.tree.0217,
+        77 two_0ascertainment,
+        78 two_tunica.two.0001,
+        79 water_0ascertainment,
+        80 water_tunica.water.0002
+;
+
+MATRIX
+tunica 01010101010101010101010101010101010101010101010101010101010110101010101011010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset full = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-28;
+    charset horn = 29-30;
+    charset knee = 31-32;
+    charset leaf = 33-34;
+    charset liver = 35-36;
+    charset louse = 37-38;
+    charset mountain = 39-40;
+    charset name = 41-42;
+    charset new = 43-44;
+    charset night = 45-46;
+    charset nose = 47-48;
+    charset one = 49-50;
+    charset path = 51-52;
+    charset person = 53-54;
+    charset pl = 55-56;
+    charset see = 57-58;
+    charset sg = 59-61;
+    charset skin = 62-63;
+    charset star = 64-65;
+    charset stone = 66-67;
+    charset sun = 68-69;
+    charset tongue = 70-71;
+    charset tooth = 72-74;
+    charset tree = 75-76;
+    charset two = 77-78;
+    charset water = 79-80;
+END;

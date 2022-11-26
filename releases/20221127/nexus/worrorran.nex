@@ -1,0 +1,165 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=111;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_worrorran.blood.0005,
+        3 bone_0ascertainment,
+        4 bone_worrorran.bone.0006,
+        5 bone_worrorran.bone.0007,
+        6 bone_worrorran.bone.0008,
+        7 bone_worrorran.bone.0009,
+        8 breast_0ascertainment,
+        9 breast_worrorran.breast.0010,
+        10 breast_worrorran.breast.0011,
+        11 come_0ascertainment,
+        12 come_worrorran.come.0012,
+        13 come_worrorran.come.0013,
+        14 come_worrorran.come.0014,
+        15 die_0ascertainment,
+        16 die_worrorran.die.0015,
+        17 die_worrorran.die.0016,
+        18 dog_0ascertainment,
+        19 dog_worrorran.dog.0017,
+        20 dog_worrorran.dog.0018,
+        21 drink_0ascertainment,
+        22 drink_worrorran.drink.0019,
+        23 drink_worrorran.drink.0020,
+        24 ear_0ascertainment,
+        25 ear_worrorran.ear.0021,
+        26 ear_worrorran.ear.0022,
+        27 eye_0ascertainment,
+        28 eye_worrorran.eye.0023,
+        29 eye_worrorran.eye.0024,
+        30 eye_worrorran.eye.0025,
+        31 fire_0ascertainment,
+        32 fire_worrorran.fire.0026,
+        33 fire_worrorran.fire.0027,
+        34 fish_0ascertainment,
+        35 fish_worrorran.fish.0028,
+        36 full_0ascertainment,
+        37 full_worrorran.full.0029,
+        38 hand_0ascertainment,
+        39 hand_worrorran.hand.0030,
+        40 hand_worrorran.hand.0031,
+        41 hand_worrorran.hand.0032,
+        42 hand_worrorran.hand.0033,
+        43 hear_0ascertainment,
+        44 hear_worrorran.hear.0034,
+        45 knee_0ascertainment,
+        46 knee_worrorran.knee.0035,
+        47 knee_worrorran.knee.0036,
+        48 knee_worrorran.knee.0037,
+        49 leaf_0ascertainment,
+        50 leaf_worrorran.leaf.0038,
+        51 liver_0ascertainment,
+        52 liver_worrorran.liver.0039,
+        53 liver_worrorran.liver.0040,
+        54 louse_0ascertainment,
+        55 louse_worrorran.louse.0041,
+        56 mountain_0ascertainment,
+        57 mountain_worrorran.mountain.0042,
+        58 name_0ascertainment,
+        59 name_worrorran.name.0043,
+        60 new_0ascertainment,
+        61 new_worrorran.new.0044,
+        62 night_0ascertainment,
+        63 night_worrorran.night.0045,
+        64 nose_0ascertainment,
+        65 nose_worrorran.nose.0046,
+        66 nose_worrorran.nose.0047,
+        67 one_0ascertainment,
+        68 one_worrorran.one.0048,
+        69 one_worrorran.one.0049,
+        70 one_worrorran.one.0050,
+        71 path_0ascertainment,
+        72 path_worrorran.path.0051,
+        73 person_0ascertainment,
+        74 person_worrorran.person.0052,
+        75 person_worrorran.person.0053,
+        76 person_worrorran.person.0054,
+        77 pl_0ascertainment,
+        78 pl_worrorran.1pl.0001,
+        79 see_0ascertainment,
+        80 see_worrorran.see.0055,
+        81 see_worrorran.see.0056,
+        82 sg_0ascertainment,
+        83 sg_worrorran.1sg.0002,
+        84 sg_worrorran.2sg.0003,
+        85 sg_worrorran.2sg.0004,
+        86 skin_0ascertainment,
+        87 skin_worrorran.skin.0057,
+        88 star_0ascertainment,
+        89 star_worrorran.star.0058,
+        90 star_worrorran.star.0059,
+        91 stone_0ascertainment,
+        92 stone_worrorran.stone.0060,
+        93 stone_worrorran.stone.0061,
+        94 stone_worrorran.stone.0062,
+        95 sun_0ascertainment,
+        96 sun_worrorran.sun.0063,
+        97 tongue_0ascertainment,
+        98 tongue_worrorran.tongue.0064,
+        99 tooth_0ascertainment,
+        100 tooth_worrorran.tooth.0065,
+        101 tooth_worrorran.tooth.0066,
+        102 tooth_worrorran.tooth.0067,
+        103 tree_0ascertainment,
+        104 tree_worrorran.tree.0068,
+        105 tree_worrorran.tree.0069,
+        106 two_0ascertainment,
+        107 two_worrorran.two.0070,
+        108 two_worrorran.two.0071,
+        109 water_0ascertainment,
+        110 water_worrorran.water.0072,
+        111 water_worrorran.water.0073
+;
+
+MATRIX
+ngarinyin 0?01011010010101101101001101010100?0?010110101010?010010?0?0?0?01001010?010101011011001010011101010101010010010
+worrorra  010010000100100100010010??0010001010100100010010010010?0101010100100100100100101001010?0010010010?0010001001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-7;
+    charset breast = 8-10;
+    charset come = 11-14;
+    charset die = 15-17;
+    charset dog = 18-20;
+    charset drink = 21-23;
+    charset ear = 24-26;
+    charset eye = 27-30;
+    charset fire = 31-33;
+    charset fish = 34-35;
+    charset full = 36-37;
+    charset hand = 38-42;
+    charset hear = 43-44;
+    charset knee = 45-48;
+    charset leaf = 49-50;
+    charset liver = 51-53;
+    charset louse = 54-55;
+    charset mountain = 56-57;
+    charset name = 58-59;
+    charset new = 60-61;
+    charset night = 62-63;
+    charset nose = 64-66;
+    charset one = 67-70;
+    charset path = 71-72;
+    charset person = 73-76;
+    charset pl = 77-78;
+    charset see = 79-81;
+    charset sg = 82-85;
+    charset skin = 86-87;
+    charset star = 88-90;
+    charset stone = 91-94;
+    charset sun = 95-96;
+    charset tongue = 97-98;
+    charset tooth = 99-102;
+    charset tree = 103-105;
+    charset two = 106-108;
+    charset water = 109-111;
+END;

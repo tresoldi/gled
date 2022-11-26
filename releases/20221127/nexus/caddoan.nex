@@ -1,0 +1,239 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=5 NCHAR=181;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_caddoan.blood.0009,
+        3 blood_caddoan.blood.0010,
+        4 blood_caddoan.blood.0011,
+        5 bone_0ascertainment,
+        6 bone_caddoan.bone.0012,
+        7 bone_caddoan.bone.0013,
+        8 breast_0ascertainment,
+        9 breast_caddoan.breast.0014,
+        10 breast_caddoan.breast.0015,
+        11 breast_caddoan.breast.0016,
+        12 breast_caddoan.breast.0017,
+        13 breast_caddoan.breast.0018,
+        14 breast_caddoan.breast.0019,
+        15 come_0ascertainment,
+        16 come_caddoan.come.0020,
+        17 come_caddoan.come.0021,
+        18 come_caddoan.come.0022,
+        19 die_0ascertainment,
+        20 die_caddoan.die.0023,
+        21 die_caddoan.die.0024,
+        22 die_caddoan.die.0025,
+        23 die_caddoan.die.0026,
+        24 die_caddoan.die.0027,
+        25 dog_0ascertainment,
+        26 dog_caddoan.dog.0028,
+        27 dog_caddoan.dog.0029,
+        28 dog_caddoan.dog.0030,
+        29 dog_caddoan.dog.0031,
+        30 dog_caddoan.dog.0032,
+        31 dog_caddoan.dog.0033,
+        32 drink_0ascertainment,
+        33 drink_caddoan.drink.0034,
+        34 drink_caddoan.drink.0035,
+        35 ear_0ascertainment,
+        36 ear_caddoan.ear.0036,
+        37 ear_caddoan.ear.0037,
+        38 ear_caddoan.ear.0038,
+        39 eye_0ascertainment,
+        40 eye_caddoan.eye.0039,
+        41 eye_caddoan.eye.0040,
+        42 fire_0ascertainment,
+        43 fire_caddoan.fire.0041,
+        44 fire_caddoan.fire.0042,
+        45 fire_caddoan.fire.0043,
+        46 fire_caddoan.fire.0044,
+        47 fire_caddoan.fire.0045,
+        48 fish_0ascertainment,
+        49 fish_caddoan.fish.0046,
+        50 fish_caddoan.fish.0047,
+        51 fish_caddoan.fish.0048,
+        52 fish_caddoan.fish.0049,
+        53 fish_caddoan.fish.0050,
+        54 full_0ascertainment,
+        55 full_caddoan.full.0051,
+        56 full_caddoan.full.0052,
+        57 full_caddoan.full.0053,
+        58 hand_0ascertainment,
+        59 hand_caddoan.hand.0054,
+        60 hand_caddoan.hand.0055,
+        61 hand_caddoan.hand.0056,
+        62 hear_0ascertainment,
+        63 hear_caddoan.hear.0057,
+        64 hear_caddoan.hear.0058,
+        65 hear_caddoan.hear.0059,
+        66 horn_0ascertainment,
+        67 horn_caddoan.horn.0060,
+        68 horn_caddoan.horn.0061,
+        69 knee_0ascertainment,
+        70 knee_caddoan.knee.0062,
+        71 knee_caddoan.knee.0063,
+        72 knee_caddoan.knee.0064,
+        73 knee_caddoan.knee.0065,
+        74 knee_caddoan.knee.0066,
+        75 leaf_0ascertainment,
+        76 leaf_caddoan.leaf.0067,
+        77 leaf_caddoan.leaf.0068,
+        78 leaf_caddoan.leaf.0069,
+        79 leaf_caddoan.leaf.0070,
+        80 leaf_caddoan.leaf.0071,
+        81 liver_0ascertainment,
+        82 liver_caddoan.liver.0072,
+        83 liver_caddoan.liver.0073,
+        84 louse_0ascertainment,
+        85 louse_caddoan.louse.0074,
+        86 mountain_0ascertainment,
+        87 mountain_caddoan.mountain.0075,
+        88 mountain_caddoan.mountain.0076,
+        89 mountain_caddoan.mountain.0077,
+        90 mountain_caddoan.mountain.0078,
+        91 name_0ascertainment,
+        92 name_caddoan.name.0079,
+        93 name_caddoan.name.0080,
+        94 name_caddoan.name.0081,
+        95 new_0ascertainment,
+        96 new_caddoan.new.0082,
+        97 new_caddoan.new.0083,
+        98 new_caddoan.new.0084,
+        99 night_0ascertainment,
+        100 night_caddoan.night.0085,
+        101 night_caddoan.night.0086,
+        102 night_caddoan.night.0087,
+        103 night_caddoan.night.0088,
+        104 night_caddoan.night.0089,
+        105 nose_0ascertainment,
+        106 nose_caddoan.nose.0090,
+        107 nose_caddoan.nose.0091,
+        108 nose_caddoan.nose.0092,
+        109 one_0ascertainment,
+        110 one_caddoan.one.0093,
+        111 one_caddoan.one.0094,
+        112 one_caddoan.one.0095,
+        113 one_caddoan.one.0096,
+        114 one_caddoan.one.0097,
+        115 path_0ascertainment,
+        116 path_caddoan.path.0098,
+        117 path_caddoan.path.0099,
+        118 path_caddoan.path.0100,
+        119 person_0ascertainment,
+        120 person_caddoan.person.0101,
+        121 person_caddoan.person.0102,
+        122 person_caddoan.person.0103,
+        123 person_caddoan.person.0104,
+        124 pl_0ascertainment,
+        125 pl_caddoan.1pl.0001,
+        126 pl_caddoan.1pl.0002,
+        127 pl_caddoan.1pl.0003,
+        128 see_0ascertainment,
+        129 see_caddoan.see.0105,
+        130 see_caddoan.see.0106,
+        131 see_caddoan.see.0107,
+        132 see_caddoan.see.0108,
+        133 sg_0ascertainment,
+        134 sg_caddoan.1sg.0004,
+        135 sg_caddoan.1sg.0005,
+        136 sg_caddoan.1sg.0006,
+        137 sg_caddoan.2sg.0007,
+        138 sg_caddoan.2sg.0008,
+        139 skin_0ascertainment,
+        140 skin_caddoan.skin.0109,
+        141 skin_caddoan.skin.0110,
+        142 skin_caddoan.skin.0111,
+        143 skin_caddoan.skin.0112,
+        144 skin_caddoan.skin.0113,
+        145 star_0ascertainment,
+        146 star_caddoan.star.0114,
+        147 star_caddoan.star.0115,
+        148 star_caddoan.star.0116,
+        149 stone_0ascertainment,
+        150 stone_caddoan.stone.0117,
+        151 stone_caddoan.stone.0118,
+        152 stone_caddoan.stone.0119,
+        153 stone_caddoan.stone.0120,
+        154 stone_caddoan.stone.0121,
+        155 sun_0ascertainment,
+        156 sun_caddoan.sun.0122,
+        157 sun_caddoan.sun.0123,
+        158 tongue_0ascertainment,
+        159 tongue_caddoan.tongue.0124,
+        160 tongue_caddoan.tongue.0125,
+        161 tooth_0ascertainment,
+        162 tooth_caddoan.tooth.0126,
+        163 tooth_caddoan.tooth.0127,
+        164 tooth_caddoan.tooth.0128,
+        165 tooth_caddoan.tooth.0129,
+        166 tooth_caddoan.tooth.0130,
+        167 tree_0ascertainment,
+        168 tree_caddoan.tree.0131,
+        169 tree_caddoan.tree.0132,
+        170 tree_caddoan.tree.0133,
+        171 two_0ascertainment,
+        172 two_caddoan.two.0134,
+        173 two_caddoan.two.0135,
+        174 two_caddoan.two.0136,
+        175 water_0ascertainment,
+        176 water_caddoan.water.0137,
+        177 water_caddoan.water.0138,
+        178 water_caddoan.water.0139,
+        179 water_caddoan.water.0140,
+        180 water_caddoan.water.0141,
+        181 water_caddoan.water.0142
+;
+
+MATRIX
+arikara 0100010010001001000100100100000010010001001000001000001000100010001001000101000001001010000100010001000001000100000100010000???010000?????0100000???010000010010010000010001000100000
+caddo   0010001001000000100010000010000001001000100100000100000100010001000100100000100000101001000010001000100000100010000010001000100001000100100010000100001000010001001000010000100010000
+kitsai  01000100001001000100010000010000100???0100001000001000???000100010100001000001000100?000100???0???00010000010001000010000100010000100010010001000010000100010010000100001000010001000
+pawnee  010001000001000100000010000010001001000100000100000100???0001010001001000000001001001000010001000100001000010000100001010000???010000?????0000100001000010001010000010010001000000100
+wichita 0001010010000001000000010000011010000101000000100000100010100010001000001000000101001010000100001000000100100000010100000010001000010001000000010010000001010010000001000100100000011
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-7;
+    charset breast = 8-14;
+    charset come = 15-18;
+    charset die = 19-24;
+    charset dog = 25-31;
+    charset drink = 32-34;
+    charset ear = 35-38;
+    charset eye = 39-41;
+    charset fire = 42-47;
+    charset fish = 48-53;
+    charset full = 54-57;
+    charset hand = 58-61;
+    charset hear = 62-65;
+    charset horn = 66-68;
+    charset knee = 69-74;
+    charset leaf = 75-80;
+    charset liver = 81-83;
+    charset louse = 84-85;
+    charset mountain = 86-90;
+    charset name = 91-94;
+    charset new = 95-98;
+    charset night = 99-104;
+    charset nose = 105-108;
+    charset one = 109-114;
+    charset path = 115-118;
+    charset person = 119-123;
+    charset pl = 124-127;
+    charset see = 128-132;
+    charset sg = 133-138;
+    charset skin = 139-144;
+    charset star = 145-148;
+    charset stone = 149-154;
+    charset sun = 155-157;
+    charset tongue = 158-160;
+    charset tooth = 161-166;
+    charset tree = 167-170;
+    charset two = 171-174;
+    charset water = 175-181;
+END;

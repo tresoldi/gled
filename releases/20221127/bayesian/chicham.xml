@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Achuar-Shiwiar_achu1248,Aguaruna_agua1253,Huambisa_huam1247,Shuar_shua1257">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_chicham" name="data_chicham" dataType="integer">
+    <sequence id="language_data_chicham:Achuar-Shiwiar_achu1248" taxon="Achuar-Shiwiar_achu1248" value="01001010010001000010011001000100100000100010001001001000010010001000010010" />
+    <sequence id="language_data_chicham:Aguaruna_agua1253" taxon="Aguaruna_agua1253" value="01000010001000110010010001000100101000100001000101000110010001000110010010" />
+    <sequence id="language_data_chicham:Huambisa_huam1247" taxon="Huambisa_huam1247" value="00100010010001001010010001000100100100100010101101000010011000100101010011" />
+    <sequence id="language_data_chicham:Shuar_shua1257" taxon="Shuar_shua1257" value="00010011010101000011011100110110010010011010001101100011010011001101011010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,blood,breast,come,die,dog,drink,fish,full,hand,hear,horn,liver,mountain,night,person,see,skin,water">
+        <parameter id="featureClockRate:chicham:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:chicham" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:chicham" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:chicham" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:chicham" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Aguaruna_agua1253,(Achuar-Shiwiar_achu1248,Huambisa_huam1247,Shuar_shua1257));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:chicham" name="distribution">
+          <input id="featureClockRateCompound:chicham" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,blood,breast,come,die,dog,drink,fish,full,hand,hear,horn,liver,mountain,night,person,see,skin,water">
+              <var idref="featureClockRate:chicham:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:chicham" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:chicham" beta="@featureClockRateGammaScale:chicham" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:chicham" name="distribution" x="@featureClockRateGammaScale:chicham">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:chicham" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:chicham" name="distribution" x="@covarion_alpha.s:chicham">
+          <Uniform id="CovAlphaUniform:chicham" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:chicham" name="distribution" x="@covarion_s.s:chicham">
+          <Gamma id="Gamma.0:chicham" name="distr">
+            <parameter id="covarion_switch_gamma_param1:chicham" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:chicham" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:chicham:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:1pl" spec="SiteModel" mutationRate="@featureClockRate:chicham:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:chicham" spec="BinaryCovarion" alpha="@covarion_alpha.s:chicham" switchRate="@covarion_s.s:chicham">
+              <vfrequencies id="chicham:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.65 0.35</vfrequencies>
+              <parameter id="chicham:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="chicham:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_chicham:1pl" spec="FilteredAlignment" data="@data_chicham" filter="1-5" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:blood" spec="SiteModel" mutationRate="@featureClockRate:chicham:blood" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:blood" spec="FilteredAlignment" data="@data_chicham" filter="6-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:breast" spec="SiteModel" mutationRate="@featureClockRate:chicham:breast" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:breast" spec="FilteredAlignment" data="@data_chicham" filter="9-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:come" spec="SiteModel" mutationRate="@featureClockRate:chicham:come" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:come" spec="FilteredAlignment" data="@data_chicham" filter="13-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:die" spec="SiteModel" mutationRate="@featureClockRate:chicham:die" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:die" spec="FilteredAlignment" data="@data_chicham" filter="18-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:dog" spec="SiteModel" mutationRate="@featureClockRate:chicham:dog" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:dog" spec="FilteredAlignment" data="@data_chicham" filter="21-24" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:drink" spec="SiteModel" mutationRate="@featureClockRate:chicham:drink" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:drink" spec="FilteredAlignment" data="@data_chicham" filter="25-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:fish" spec="SiteModel" mutationRate="@featureClockRate:chicham:fish" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:fish" spec="FilteredAlignment" data="@data_chicham" filter="29-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:full" spec="SiteModel" mutationRate="@featureClockRate:chicham:full" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:full" spec="FilteredAlignment" data="@data_chicham" filter="32-37" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:hand" spec="SiteModel" mutationRate="@featureClockRate:chicham:hand" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:hand" spec="FilteredAlignment" data="@data_chicham" filter="38-41" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:hear" spec="SiteModel" mutationRate="@featureClockRate:chicham:hear" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:hear" spec="FilteredAlignment" data="@data_chicham" filter="42-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:horn" spec="SiteModel" mutationRate="@featureClockRate:chicham:horn" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:horn" spec="FilteredAlignment" data="@data_chicham" filter="46-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:liver" spec="SiteModel" mutationRate="@featureClockRate:chicham:liver" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:liver" spec="FilteredAlignment" data="@data_chicham" filter="49-51" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:mountain" spec="SiteModel" mutationRate="@featureClockRate:chicham:mountain" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:mountain" spec="FilteredAlignment" data="@data_chicham" filter="52-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:night" spec="SiteModel" mutationRate="@featureClockRate:chicham:night" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:night" spec="FilteredAlignment" data="@data_chicham" filter="57-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:person" spec="SiteModel" mutationRate="@featureClockRate:chicham:person" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:person" spec="FilteredAlignment" data="@data_chicham" filter="60-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:see" spec="SiteModel" mutationRate="@featureClockRate:chicham:see" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:see" spec="FilteredAlignment" data="@data_chicham" filter="64-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:skin" spec="SiteModel" mutationRate="@featureClockRate:chicham:skin" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:skin" spec="FilteredAlignment" data="@data_chicham" filter="69-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chicham:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chicham:water" spec="SiteModel" mutationRate="@featureClockRate:chicham:water" proportionInvariant="0" substModel="@covarion.s:chicham" />
+          <data id="feature_data_chicham:water" spec="FilteredAlignment" data="@data_chicham" filter="72-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:chicham" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:chicham" name="up" />
+      <parameter idref="featureClockRateGammaScale:chicham" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:chicham" spec="ScaleOperator" parameter="@covarion_alpha.s:chicham" scaleFactor="0.5" weight="1.0" />
+    <operator id="chicham:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:chicham" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,blood,breast,come,die,dog,drink,fish,full,hand,hear,horn,liver,mountain,night,person,see,skin,water">
+        <parameter idref="featureClockRate:chicham:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="19" estimate="false">4 2 3 4 2 3 3 2 5 3 3 2 2 4 2 3 4 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="chicham.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,blood,breast,come,die,dog,drink,fish,full,hand,hear,horn,liver,mountain,night,person,see,skin,water">
+        <log idref="featureClockRate:chicham:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:chicham" />
+      <log idref="covarion_alpha.s:chicham" />
+      <log idref="covarion_s.s:chicham" />
+    </logger>
+    <logger mode="tree" fileName="chicham.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,152 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=97;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_ongota.blood.0007,
+        3 bone_0ascertainment,
+        4 bone_ongota.bone.0008,
+        5 breast_0ascertainment,
+        6 breast_ongota.breast.0009,
+        7 come_0ascertainment,
+        8 come_ongota.come.0010,
+        9 come_ongota.come.0011,
+        10 die_0ascertainment,
+        11 die_ongota.die.0012,
+        12 die_ongota.die.0013,
+        13 die_ongota.die.0014,
+        14 dog_0ascertainment,
+        15 dog_ongota.dog.0015,
+        16 dog_ongota.dog.0016,
+        17 drink_0ascertainment,
+        18 drink_ongota.drink.0017,
+        19 drink_ongota.drink.0018,
+        20 ear_0ascertainment,
+        21 ear_ongota.ear.0019,
+        22 eye_0ascertainment,
+        23 eye_ongota.eye.0020,
+        24 eye_ongota.eye.0021,
+        25 fire_0ascertainment,
+        26 fire_ongota.fire.0022,
+        27 fish_0ascertainment,
+        28 fish_ongota.fish.0023,
+        29 full_0ascertainment,
+        30 full_ongota.full.0024,
+        31 hand_0ascertainment,
+        32 hand_ongota.hand.0025,
+        33 hand_ongota.hand.0026,
+        34 hear_0ascertainment,
+        35 hear_ongota.hear.0027,
+        36 hear_ongota.hear.0028,
+        37 horn_0ascertainment,
+        38 horn_ongota.horn.0029,
+        39 knee_0ascertainment,
+        40 knee_ongota.knee.0030,
+        41 leaf_0ascertainment,
+        42 leaf_ongota.leaf.0031,
+        43 liver_0ascertainment,
+        44 liver_ongota.liver.0032,
+        45 liver_ongota.liver.0033,
+        46 louse_0ascertainment,
+        47 louse_ongota.louse.0034,
+        48 mountain_0ascertainment,
+        49 mountain_ongota.mountain.0035,
+        50 mountain_ongota.mountain.0036,
+        51 name_0ascertainment,
+        52 name_ongota.name.0037,
+        53 new_0ascertainment,
+        54 new_ongota.new.0038,
+        55 night_0ascertainment,
+        56 night_ongota.night.0039,
+        57 nose_0ascertainment,
+        58 nose_ongota.nose.0040,
+        59 one_0ascertainment,
+        60 one_ongota.one.0041,
+        61 path_0ascertainment,
+        62 path_ongota.path.0042,
+        63 path_ongota.path.0043,
+        64 person_0ascertainment,
+        65 person_ongota.person.0044,
+        66 pl_0ascertainment,
+        67 pl_ongota.1pl.0001,
+        68 pl_ongota.1pl.0002,
+        69 see_0ascertainment,
+        70 see_ongota.see.0045,
+        71 see_ongota.see.0046,
+        72 sg_0ascertainment,
+        73 sg_ongota.1sg.0003,
+        74 sg_ongota.1sg.0004,
+        75 sg_ongota.2sg.0005,
+        76 sg_ongota.2sg.0006,
+        77 skin_0ascertainment,
+        78 skin_ongota.skin.0047,
+        79 skin_ongota.skin.0048,
+        80 star_0ascertainment,
+        81 star_ongota.star.0049,
+        82 star_ongota.star.0050,
+        83 stone_0ascertainment,
+        84 stone_ongota.stone.0051,
+        85 sun_0ascertainment,
+        86 sun_ongota.sun.0052,
+        87 tongue_0ascertainment,
+        88 tongue_ongota.tongue.0053,
+        89 tooth_0ascertainment,
+        90 tooth_ongota.tooth.0054,
+        91 tree_0ascertainment,
+        92 tree_ongota.tree.0055,
+        93 two_0ascertainment,
+        94 two_ongota.two.0056,
+        95 two_ongota.two.0057,
+        96 water_0ascertainment,
+        97 water_ongota.water.0058
+;
+
+MATRIX
+birayle 0?01010100100010010010100?01010100100101010100101001010101010110101001001010010010010101010101001
+ongota  01010100100110010010100101010?0010010?010100101001010?0?01010100?00100100111001001010101010100101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-9;
+    charset die = 10-13;
+    charset dog = 14-16;
+    charset drink = 17-19;
+    charset ear = 20-21;
+    charset eye = 22-24;
+    charset fire = 25-26;
+    charset fish = 27-28;
+    charset full = 29-30;
+    charset hand = 31-33;
+    charset hear = 34-36;
+    charset horn = 37-38;
+    charset knee = 39-40;
+    charset leaf = 41-42;
+    charset liver = 43-45;
+    charset louse = 46-47;
+    charset mountain = 48-50;
+    charset name = 51-52;
+    charset new = 53-54;
+    charset night = 55-56;
+    charset nose = 57-58;
+    charset one = 59-60;
+    charset path = 61-63;
+    charset person = 64-65;
+    charset pl = 66-68;
+    charset see = 69-71;
+    charset sg = 72-76;
+    charset skin = 77-79;
+    charset star = 80-82;
+    charset stone = 83-84;
+    charset sun = 85-86;
+    charset tongue = 87-88;
+    charset tooth = 89-90;
+    charset tree = 91-92;
+    charset two = 93-95;
+    charset water = 96-97;
+END;

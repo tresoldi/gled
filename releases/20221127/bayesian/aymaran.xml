@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="CentralAymara_cent2142" />
+    <taxon id="Jaqaru_jaqa1244" />
+    <taxon id="SouthernAymara_sout2996" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_aymaran" name="data_aymaran" dataType="integer">
+    <sequence id="language_data_aymaran:CentralAymara_cent2142" taxon="CentralAymara_cent2142" value="01101001001100010011011011001001010100101101001010110010011101000100010" />
+    <sequence id="language_data_aymaran:Jaqaru_jaqa1244" taxon="Jaqaru_jaqa1244" value="00100101100011011001010000101100100011000101101000001001011000110011011" />
+    <sequence id="language_data_aymaran:SouthernAymara_sout2996" taxon="SouthernAymara_sout2996" value="00101001000100010001010001001001000100000101001100110010011001000100010" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,come,die,dog,drink,ear,fire,hear,knee,leaf,mountain,name,night,path,see,skin,sun,tooth,tree,two">
+        <parameter id="featureClockRate:aymaran:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:aymaran" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:aymaran" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:aymaran" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:aymaran" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Jaqaru_jaqa1244,(CentralAymara_cent2142,SouthernAymara_sout2996));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:aymaran" name="distribution">
+          <input id="featureClockRateCompound:aymaran" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,come,die,dog,drink,ear,fire,hear,knee,leaf,mountain,name,night,path,see,skin,sun,tooth,tree,two">
+              <var idref="featureClockRate:aymaran:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:aymaran" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:aymaran" beta="@featureClockRateGammaScale:aymaran" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:aymaran" name="distribution" x="@featureClockRateGammaScale:aymaran">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:aymaran" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:aymaran" name="distribution" x="@covarion_alpha.s:aymaran">
+          <Uniform id="CovAlphaUniform:aymaran" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:aymaran" name="distribution" x="@covarion_s.s:aymaran">
+          <Gamma id="Gamma.0:aymaran" name="distr">
+            <parameter id="covarion_switch_gamma_param1:aymaran" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:aymaran" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:aymaran:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:1pl" spec="SiteModel" mutationRate="@featureClockRate:aymaran:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:aymaran" spec="BinaryCovarion" alpha="@covarion_alpha.s:aymaran" switchRate="@covarion_s.s:aymaran">
+              <vfrequencies id="aymaran:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.60 0.40</vfrequencies>
+              <parameter id="aymaran:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="aymaran:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_aymaran:1pl" spec="FilteredAlignment" data="@data_aymaran" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:come" spec="SiteModel" mutationRate="@featureClockRate:aymaran:come" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:come" spec="FilteredAlignment" data="@data_aymaran" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:die" spec="SiteModel" mutationRate="@featureClockRate:aymaran:die" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:die" spec="FilteredAlignment" data="@data_aymaran" filter="7-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:dog" spec="SiteModel" mutationRate="@featureClockRate:aymaran:dog" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:dog" spec="FilteredAlignment" data="@data_aymaran" filter="10-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:drink" spec="SiteModel" mutationRate="@featureClockRate:aymaran:drink" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:drink" spec="FilteredAlignment" data="@data_aymaran" filter="15-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:ear" spec="SiteModel" mutationRate="@featureClockRate:aymaran:ear" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:ear" spec="FilteredAlignment" data="@data_aymaran" filter="18-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:fire" spec="SiteModel" mutationRate="@featureClockRate:aymaran:fire" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:fire" spec="FilteredAlignment" data="@data_aymaran" filter="21-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:hear" spec="SiteModel" mutationRate="@featureClockRate:aymaran:hear" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:hear" spec="FilteredAlignment" data="@data_aymaran" filter="24-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:knee" spec="SiteModel" mutationRate="@featureClockRate:aymaran:knee" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:knee" spec="FilteredAlignment" data="@data_aymaran" filter="28-30" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:leaf" spec="SiteModel" mutationRate="@featureClockRate:aymaran:leaf" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:leaf" spec="FilteredAlignment" data="@data_aymaran" filter="31-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:mountain" spec="SiteModel" mutationRate="@featureClockRate:aymaran:mountain" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:mountain" spec="FilteredAlignment" data="@data_aymaran" filter="35-39" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:name" spec="SiteModel" mutationRate="@featureClockRate:aymaran:name" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:name" spec="FilteredAlignment" data="@data_aymaran" filter="40-42" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:night" spec="SiteModel" mutationRate="@featureClockRate:aymaran:night" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:night" spec="FilteredAlignment" data="@data_aymaran" filter="43-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:path" spec="SiteModel" mutationRate="@featureClockRate:aymaran:path" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:path" spec="FilteredAlignment" data="@data_aymaran" filter="46-49" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:see" spec="SiteModel" mutationRate="@featureClockRate:aymaran:see" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:see" spec="FilteredAlignment" data="@data_aymaran" filter="50-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:skin" spec="SiteModel" mutationRate="@featureClockRate:aymaran:skin" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:skin" spec="FilteredAlignment" data="@data_aymaran" filter="54-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:sun" spec="SiteModel" mutationRate="@featureClockRate:aymaran:sun" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:sun" spec="FilteredAlignment" data="@data_aymaran" filter="57-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:tooth" spec="SiteModel" mutationRate="@featureClockRate:aymaran:tooth" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:tooth" spec="FilteredAlignment" data="@data_aymaran" filter="61-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:tree" spec="SiteModel" mutationRate="@featureClockRate:aymaran:tree" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:tree" spec="FilteredAlignment" data="@data_aymaran" filter="65-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:aymaran:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.aymaran:two" spec="SiteModel" mutationRate="@featureClockRate:aymaran:two" proportionInvariant="0" substModel="@covarion.s:aymaran" />
+          <data id="feature_data_aymaran:two" spec="FilteredAlignment" data="@data_aymaran" filter="69-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:aymaran" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:aymaran" name="up" />
+      <parameter idref="featureClockRateGammaScale:aymaran" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:aymaran" spec="ScaleOperator" parameter="@covarion_alpha.s:aymaran" scaleFactor="0.5" weight="1.0" />
+    <operator id="aymaran:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:aymaran" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,come,die,dog,drink,ear,fire,hear,knee,leaf,mountain,name,night,path,see,skin,sun,tooth,tree,two">
+        <parameter idref="featureClockRate:aymaran:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="20" estimate="false">2 2 2 4 2 2 2 3 2 3 4 2 2 3 3 2 3 3 3 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="aymaran.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,come,die,dog,drink,ear,fire,hear,knee,leaf,mountain,name,night,path,see,skin,sun,tooth,tree,two">
+        <log idref="featureClockRate:aymaran:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:aymaran" />
+      <log idref="covarion_alpha.s:aymaran" />
+      <log idref="covarion_s.s:aymaran" />
+    </logger>
+    <logger mode="tree" fileName="aymaran.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

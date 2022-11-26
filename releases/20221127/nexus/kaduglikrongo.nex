@@ -1,0 +1,204 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=10 NCHAR=141;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kaduglikrongo.blood.0009,
+        3 blood_kaduglikrongo.blood.0010,
+        4 bone_0ascertainment,
+        5 bone_kaduglikrongo.bone.0011,
+        6 bone_kaduglikrongo.bone.0012,
+        7 breast_0ascertainment,
+        8 breast_kaduglikrongo.breast.0013,
+        9 come_0ascertainment,
+        10 come_kaduglikrongo.come.0014,
+        11 come_kaduglikrongo.come.0015,
+        12 come_kaduglikrongo.come.0016,
+        13 come_kaduglikrongo.come.0017,
+        14 die_0ascertainment,
+        15 die_kaduglikrongo.die.0018,
+        16 die_kaduglikrongo.die.0019,
+        17 die_kaduglikrongo.die.0020,
+        18 die_kaduglikrongo.die.0021,
+        19 dog_0ascertainment,
+        20 dog_kaduglikrongo.dog.0022,
+        21 dog_kaduglikrongo.dog.0023,
+        22 dog_kaduglikrongo.dog.0024,
+        23 drink_0ascertainment,
+        24 drink_kaduglikrongo.drink.0025,
+        25 drink_kaduglikrongo.drink.0026,
+        26 drink_kaduglikrongo.drink.0027,
+        27 ear_0ascertainment,
+        28 ear_kaduglikrongo.ear.0028,
+        29 eye_0ascertainment,
+        30 eye_kaduglikrongo.eye.0029,
+        31 eye_kaduglikrongo.eye.0030,
+        32 fire_0ascertainment,
+        33 fire_kaduglikrongo.fire.0031,
+        34 fish_0ascertainment,
+        35 fish_kaduglikrongo.fish.0032,
+        36 fish_kaduglikrongo.fish.0033,
+        37 fish_kaduglikrongo.fish.0034,
+        38 full_0ascertainment,
+        39 full_kaduglikrongo.full.0035,
+        40 hand_0ascertainment,
+        41 hand_kaduglikrongo.hand.0036,
+        42 hear_0ascertainment,
+        43 hear_kaduglikrongo.hear.0037,
+        44 horn_0ascertainment,
+        45 horn_kaduglikrongo.horn.0038,
+        46 horn_kaduglikrongo.horn.0039,
+        47 knee_0ascertainment,
+        48 knee_kaduglikrongo.knee.0040,
+        49 knee_kaduglikrongo.knee.0041,
+        50 knee_kaduglikrongo.knee.0042,
+        51 knee_kaduglikrongo.knee.0043,
+        52 leaf_0ascertainment,
+        53 leaf_kaduglikrongo.leaf.0044,
+        54 leaf_kaduglikrongo.leaf.0045,
+        55 liver_0ascertainment,
+        56 liver_kaduglikrongo.liver.0046,
+        57 liver_kaduglikrongo.liver.0047,
+        58 louse_0ascertainment,
+        59 louse_kaduglikrongo.louse.0048,
+        60 louse_kaduglikrongo.louse.0049,
+        61 louse_kaduglikrongo.louse.0050,
+        62 louse_kaduglikrongo.louse.0051,
+        63 mountain_0ascertainment,
+        64 mountain_kaduglikrongo.mountain.0052,
+        65 mountain_kaduglikrongo.mountain.0053,
+        66 mountain_kaduglikrongo.mountain.0054,
+        67 mountain_kaduglikrongo.mountain.0055,
+        68 name_0ascertainment,
+        69 name_kaduglikrongo.name.0056,
+        70 new_0ascertainment,
+        71 new_kaduglikrongo.new.0057,
+        72 new_kaduglikrongo.new.0058,
+        73 night_0ascertainment,
+        74 night_kaduglikrongo.night.0059,
+        75 nose_0ascertainment,
+        76 nose_kaduglikrongo.nose.0060,
+        77 nose_kaduglikrongo.nose.0061,
+        78 nose_kaduglikrongo.nose.0062,
+        79 nose_kaduglikrongo.nose.0063,
+        80 one_0ascertainment,
+        81 one_kaduglikrongo.one.0064,
+        82 one_kaduglikrongo.one.0065,
+        83 one_kaduglikrongo.one.0066,
+        84 path_0ascertainment,
+        85 path_kaduglikrongo.path.0067,
+        86 person_0ascertainment,
+        87 person_kaduglikrongo.person.0068,
+        88 person_kaduglikrongo.person.0069,
+        89 person_kaduglikrongo.person.0070,
+        90 person_kaduglikrongo.person.0071,
+        91 person_kaduglikrongo.person.0072,
+        92 person_kaduglikrongo.person.0073,
+        93 pl_0ascertainment,
+        94 pl_kaduglikrongo.1pl.0001,
+        95 pl_kaduglikrongo.1pl.0002,
+        96 pl_kaduglikrongo.1pl.0003,
+        97 pl_kaduglikrongo.1pl.0004,
+        98 see_0ascertainment,
+        99 see_kaduglikrongo.see.0074,
+        100 see_kaduglikrongo.see.0075,
+        101 see_kaduglikrongo.see.0076,
+        102 see_kaduglikrongo.see.0077,
+        103 see_kaduglikrongo.see.0078,
+        104 see_kaduglikrongo.see.0079,
+        105 sg_0ascertainment,
+        106 sg_kaduglikrongo.1sg.0005,
+        107 sg_kaduglikrongo.2sg.0006,
+        108 sg_kaduglikrongo.2sg.0007,
+        109 sg_kaduglikrongo.2sg.0008,
+        110 skin_0ascertainment,
+        111 skin_kaduglikrongo.skin.0080,
+        112 skin_kaduglikrongo.skin.0081,
+        113 skin_kaduglikrongo.skin.0082,
+        114 skin_kaduglikrongo.skin.0083,
+        115 skin_kaduglikrongo.skin.0084,
+        116 star_0ascertainment,
+        117 star_kaduglikrongo.star.0085,
+        118 star_kaduglikrongo.star.0086,
+        119 stone_0ascertainment,
+        120 stone_kaduglikrongo.stone.0087,
+        121 stone_kaduglikrongo.stone.0088,
+        122 stone_kaduglikrongo.stone.0089,
+        123 stone_kaduglikrongo.stone.0090,
+        124 stone_kaduglikrongo.stone.0091,
+        125 sun_0ascertainment,
+        126 sun_kaduglikrongo.sun.0092,
+        127 sun_kaduglikrongo.sun.0093,
+        128 sun_kaduglikrongo.sun.0094,
+        129 tongue_0ascertainment,
+        130 tongue_kaduglikrongo.tongue.0095,
+        131 tooth_0ascertainment,
+        132 tooth_kaduglikrongo.tooth.0096,
+        133 tree_0ascertainment,
+        134 tree_kaduglikrongo.tree.0097,
+        135 tree_kaduglikrongo.tree.0098,
+        136 tree_kaduglikrongo.tree.0099,
+        137 two_0ascertainment,
+        138 two_kaduglikrongo.two.0100,
+        139 two_kaduglikrongo.two.0101,
+        140 water_0ascertainment,
+        141 water_kaduglikrongo.water.0102
+;
+
+MATRIX
+chiroro   01001001010000????01100100010100101000?010?010010000100??0????01000010??010100001000101000000????0??????011000100000??0?????01000101010001001
+fama      01001001010100100101100???010100101000?0101001001000100??0????01000010??01001000100010??????010000??????011100010000100100000???0101010001001
+kadugli_2 01000101011000010001100100010100101000?0101010000100100??01000001000101001000100100010100000001000??????0111000100001001000001000101010001001
+kanga     01001001011000????01100???010100101000?01010??001000??0??0????0????0?0??010100001000101000000010001000000111000010001001000001000101010001001
+katcha    01001001001000100000100???0101001010001010101000010010010001000010001010010100001000100100000010000100000110000001001001000001000101010001001
+keiga     01000101000100????01100101010100100100?0101010001000100010001000010010??010000100100100010000010000010010111000100000100100000100101010100101
+krongo    01001001000100100000100010010010101000?0101010001000100??000010100001001010010000010100001000010000001000110000100001001000000100101010001001
+kurondi   00101001000100001000100100010100100010?01010??001000010??0????000010?010010010001000?00000100001000000100111000001001000010100100101001001001
+miri      01000101001010????01100100010100101000?0101010000100100??0????0010001010010001001000101000000010001000000111000100001001000001000101010001001
+tulishi   01001001010000100000110100010100101000?01010??000010100??0????001000?0??0?010000100010000001000010??????0101100000101000001000010101000101001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-8;
+    charset come = 9-13;
+    charset die = 14-18;
+    charset dog = 19-22;
+    charset drink = 23-26;
+    charset ear = 27-28;
+    charset eye = 29-31;
+    charset fire = 32-33;
+    charset fish = 34-37;
+    charset full = 38-39;
+    charset hand = 40-41;
+    charset hear = 42-43;
+    charset horn = 44-46;
+    charset knee = 47-51;
+    charset leaf = 52-54;
+    charset liver = 55-57;
+    charset louse = 58-62;
+    charset mountain = 63-67;
+    charset name = 68-69;
+    charset new = 70-72;
+    charset night = 73-74;
+    charset nose = 75-79;
+    charset one = 80-83;
+    charset path = 84-85;
+    charset person = 86-92;
+    charset pl = 93-97;
+    charset see = 98-104;
+    charset sg = 105-109;
+    charset skin = 110-115;
+    charset star = 116-118;
+    charset stone = 119-124;
+    charset sun = 125-128;
+    charset tongue = 129-130;
+    charset tooth = 131-132;
+    charset tree = 133-136;
+    charset two = 137-139;
+    charset water = 140-141;
+END;

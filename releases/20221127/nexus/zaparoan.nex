@@ -1,0 +1,220 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=4 NCHAR=163;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_zaparoan.blood.0012,
+        3 blood_zaparoan.blood.0013,
+        4 blood_zaparoan.blood.0014,
+        5 blood_zaparoan.blood.0015,
+        6 bone_0ascertainment,
+        7 bone_zaparoan.bone.0016,
+        8 bone_zaparoan.bone.0017,
+        9 bone_zaparoan.bone.0018,
+        10 breast_0ascertainment,
+        11 breast_zaparoan.breast.0019,
+        12 breast_zaparoan.breast.0020,
+        13 come_0ascertainment,
+        14 come_zaparoan.come.0021,
+        15 come_zaparoan.come.0022,
+        16 die_0ascertainment,
+        17 die_zaparoan.die.0023,
+        18 die_zaparoan.die.0024,
+        19 die_zaparoan.die.0025,
+        20 die_zaparoan.die.0026,
+        21 die_zaparoan.die.0027,
+        22 die_zaparoan.die.0028,
+        23 die_zaparoan.die.0029,
+        24 dog_0ascertainment,
+        25 dog_zaparoan.dog.0030,
+        26 dog_zaparoan.dog.0031,
+        27 dog_zaparoan.dog.0032,
+        28 drink_0ascertainment,
+        29 drink_zaparoan.drink.0033,
+        30 drink_zaparoan.drink.0034,
+        31 drink_zaparoan.drink.0035,
+        32 ear_0ascertainment,
+        33 ear_zaparoan.ear.0036,
+        34 ear_zaparoan.ear.0037,
+        35 ear_zaparoan.ear.0038,
+        36 eye_0ascertainment,
+        37 eye_zaparoan.eye.0039,
+        38 eye_zaparoan.eye.0040,
+        39 fire_0ascertainment,
+        40 fire_zaparoan.fire.0041,
+        41 fire_zaparoan.fire.0042,
+        42 fire_zaparoan.fire.0043,
+        43 fire_zaparoan.fire.0044,
+        44 fish_0ascertainment,
+        45 fish_zaparoan.fish.0045,
+        46 fish_zaparoan.fish.0046,
+        47 fish_zaparoan.fish.0047,
+        48 fish_zaparoan.fish.0048,
+        49 full_0ascertainment,
+        50 full_zaparoan.full.0049,
+        51 full_zaparoan.full.0050,
+        52 hand_0ascertainment,
+        53 hand_zaparoan.hand.0051,
+        54 hand_zaparoan.hand.0052,
+        55 hand_zaparoan.hand.0053,
+        56 hand_zaparoan.hand.0054,
+        57 hear_0ascertainment,
+        58 hear_zaparoan.hear.0055,
+        59 hear_zaparoan.hear.0056,
+        60 hear_zaparoan.hear.0057,
+        61 hear_zaparoan.hear.0058,
+        62 horn_0ascertainment,
+        63 horn_zaparoan.horn.0059,
+        64 knee_0ascertainment,
+        65 knee_zaparoan.knee.0060,
+        66 knee_zaparoan.knee.0061,
+        67 leaf_0ascertainment,
+        68 leaf_zaparoan.leaf.0062,
+        69 leaf_zaparoan.leaf.0063,
+        70 leaf_zaparoan.leaf.0064,
+        71 leaf_zaparoan.leaf.0065,
+        72 liver_0ascertainment,
+        73 liver_zaparoan.liver.0066,
+        74 liver_zaparoan.liver.0067,
+        75 liver_zaparoan.liver.0068,
+        76 louse_0ascertainment,
+        77 louse_zaparoan.louse.0069,
+        78 louse_zaparoan.louse.0070,
+        79 louse_zaparoan.louse.0071,
+        80 mountain_0ascertainment,
+        81 mountain_zaparoan.mountain.0072,
+        82 mountain_zaparoan.mountain.0073,
+        83 mountain_zaparoan.mountain.0074,
+        84 name_0ascertainment,
+        85 name_zaparoan.name.0075,
+        86 name_zaparoan.name.0076,
+        87 name_zaparoan.name.0077,
+        88 new_0ascertainment,
+        89 new_zaparoan.new.0078,
+        90 new_zaparoan.new.0079,
+        91 new_zaparoan.new.0080,
+        92 night_0ascertainment,
+        93 night_zaparoan.night.0081,
+        94 night_zaparoan.night.0082,
+        95 night_zaparoan.night.0083,
+        96 nose_0ascertainment,
+        97 nose_zaparoan.nose.0084,
+        98 nose_zaparoan.nose.0085,
+        99 one_0ascertainment,
+        100 one_zaparoan.one.0086,
+        101 one_zaparoan.one.0087,
+        102 path_0ascertainment,
+        103 path_zaparoan.path.0088,
+        104 path_zaparoan.path.0089,
+        105 person_0ascertainment,
+        106 person_zaparoan.person.0090,
+        107 person_zaparoan.person.0091,
+        108 person_zaparoan.person.0092,
+        109 person_zaparoan.person.0093,
+        110 person_zaparoan.person.0094,
+        111 person_zaparoan.person.0095,
+        112 pl_0ascertainment,
+        113 pl_zaparoan.1pl.0001,
+        114 pl_zaparoan.1pl.0002,
+        115 pl_zaparoan.1pl.0003,
+        116 pl_zaparoan.1pl.0004,
+        117 pl_zaparoan.1pl.0005,
+        118 see_0ascertainment,
+        119 see_zaparoan.see.0096,
+        120 see_zaparoan.see.0097,
+        121 sg_0ascertainment,
+        122 sg_zaparoan.1sg.0006,
+        123 sg_zaparoan.1sg.0007,
+        124 sg_zaparoan.1sg.0008,
+        125 sg_zaparoan.1sg.0009,
+        126 sg_zaparoan.2sg.0010,
+        127 sg_zaparoan.2sg.0011,
+        128 skin_0ascertainment,
+        129 skin_zaparoan.skin.0098,
+        130 skin_zaparoan.skin.0099,
+        131 skin_zaparoan.skin.0100,
+        132 star_0ascertainment,
+        133 star_zaparoan.star.0101,
+        134 star_zaparoan.star.0102,
+        135 star_zaparoan.star.0103,
+        136 stone_0ascertainment,
+        137 stone_zaparoan.stone.0104,
+        138 stone_zaparoan.stone.0105,
+        139 sun_0ascertainment,
+        140 sun_zaparoan.sun.0106,
+        141 sun_zaparoan.sun.0107,
+        142 sun_zaparoan.sun.0108,
+        143 sun_zaparoan.sun.0109,
+        144 tongue_0ascertainment,
+        145 tongue_zaparoan.tongue.0110,
+        146 tongue_zaparoan.tongue.0111,
+        147 tooth_0ascertainment,
+        148 tooth_zaparoan.tooth.0112,
+        149 tooth_zaparoan.tooth.0113,
+        150 tooth_zaparoan.tooth.0114,
+        151 tree_0ascertainment,
+        152 tree_zaparoan.tree.0115,
+        153 tree_zaparoan.tree.0116,
+        154 two_0ascertainment,
+        155 two_zaparoan.two.0117,
+        156 two_zaparoan.two.0118,
+        157 two_zaparoan.two.0119,
+        158 two_zaparoan.two.0120,
+        159 water_0ascertainment,
+        160 water_zaparoan.water.0121,
+        161 water_zaparoan.water.0122,
+        162 water_zaparoan.water.0123,
+        163 water_zaparoan.water.0124
+;
+
+MATRIX
+arabela   010000100010010010001000100010001000100100001000010010000100101010010000100010101000100010101000100??01001000100100100100100110010001000100100101001000100100001000
+cahuarano 0110001000??0100010001000100010001001000100001000??00100001000?0??0010000100100001000100???0???0100??0??001000100100000100100010???00100100010001000100010????00100
+iquito    000100100001010000100010010010001000100????000100??00010010000?0??00101000101000???00010010001101001000100010000001110100100010001000100100????01000100??0010100010
+zaparo    00001001101000100001000000100010001011000110000100100001000100?001000100???011000010???0???0???00101101000001000000100??0001010000100010010001000100010100001000001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-9;
+    charset breast = 10-12;
+    charset come = 13-15;
+    charset die = 16-23;
+    charset dog = 24-27;
+    charset drink = 28-31;
+    charset ear = 32-35;
+    charset eye = 36-38;
+    charset fire = 39-43;
+    charset fish = 44-48;
+    charset full = 49-51;
+    charset hand = 52-56;
+    charset hear = 57-61;
+    charset horn = 62-63;
+    charset knee = 64-66;
+    charset leaf = 67-71;
+    charset liver = 72-75;
+    charset louse = 76-79;
+    charset mountain = 80-83;
+    charset name = 84-87;
+    charset new = 88-91;
+    charset night = 92-95;
+    charset nose = 96-98;
+    charset one = 99-101;
+    charset path = 102-104;
+    charset person = 105-111;
+    charset pl = 112-117;
+    charset see = 118-120;
+    charset sg = 121-127;
+    charset skin = 128-131;
+    charset star = 132-135;
+    charset stone = 136-138;
+    charset sun = 139-143;
+    charset tongue = 144-146;
+    charset tooth = 147-150;
+    charset tree = 151-153;
+    charset two = 154-158;
+    charset water = 159-163;
+END;

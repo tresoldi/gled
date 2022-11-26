@@ -1,0 +1,195 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=139;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_goilalan.blood.0004,
+        3 blood_goilalan.blood.0005,
+        4 blood_goilalan.blood.0006,
+        5 bone_0ascertainment,
+        6 bone_goilalan.bone.0007,
+        7 bone_goilalan.bone.0008,
+        8 breast_0ascertainment,
+        9 breast_goilalan.breast.0009,
+        10 breast_goilalan.breast.0010,
+        11 come_0ascertainment,
+        12 come_goilalan.come.0011,
+        13 come_goilalan.come.0012,
+        14 come_goilalan.come.0013,
+        15 die_0ascertainment,
+        16 die_goilalan.die.0014,
+        17 die_goilalan.die.0015,
+        18 die_goilalan.die.0016,
+        19 dog_0ascertainment,
+        20 dog_goilalan.dog.0017,
+        21 dog_goilalan.dog.0018,
+        22 dog_goilalan.dog.0019,
+        23 drink_0ascertainment,
+        24 drink_goilalan.drink.0020,
+        25 drink_goilalan.drink.0021,
+        26 drink_goilalan.drink.0022,
+        27 ear_0ascertainment,
+        28 ear_goilalan.ear.0023,
+        29 eye_0ascertainment,
+        30 eye_goilalan.eye.0024,
+        31 eye_goilalan.eye.0025,
+        32 fire_0ascertainment,
+        33 fire_goilalan.fire.0026,
+        34 fire_goilalan.fire.0027,
+        35 fire_goilalan.fire.0028,
+        36 fish_0ascertainment,
+        37 fish_goilalan.fish.0029,
+        38 fish_goilalan.fish.0030,
+        39 fish_goilalan.fish.0031,
+        40 full_0ascertainment,
+        41 full_goilalan.full.0032,
+        42 full_goilalan.full.0033,
+        43 hand_0ascertainment,
+        44 hand_goilalan.hand.0034,
+        45 hand_goilalan.hand.0035,
+        46 hand_goilalan.hand.0036,
+        47 hear_0ascertainment,
+        48 hear_goilalan.hear.0037,
+        49 hear_goilalan.hear.0038,
+        50 horn_0ascertainment,
+        51 horn_goilalan.horn.0039,
+        52 knee_0ascertainment,
+        53 knee_goilalan.knee.0040,
+        54 leaf_0ascertainment,
+        55 leaf_goilalan.leaf.0041,
+        56 leaf_goilalan.leaf.0042,
+        57 leaf_goilalan.leaf.0043,
+        58 leaf_goilalan.leaf.0044,
+        59 liver_0ascertainment,
+        60 liver_goilalan.liver.0045,
+        61 louse_0ascertainment,
+        62 louse_goilalan.louse.0046,
+        63 louse_goilalan.louse.0047,
+        64 mountain_0ascertainment,
+        65 mountain_goilalan.mountain.0048,
+        66 mountain_goilalan.mountain.0049,
+        67 mountain_goilalan.mountain.0050,
+        68 name_0ascertainment,
+        69 name_goilalan.name.0051,
+        70 name_goilalan.name.0052,
+        71 name_goilalan.name.0053,
+        72 new_0ascertainment,
+        73 new_goilalan.new.0054,
+        74 new_goilalan.new.0055,
+        75 night_0ascertainment,
+        76 night_goilalan.night.0056,
+        77 night_goilalan.night.0057,
+        78 night_goilalan.night.0058,
+        79 nose_0ascertainment,
+        80 nose_goilalan.nose.0059,
+        81 nose_goilalan.nose.0060,
+        82 one_0ascertainment,
+        83 one_goilalan.one.0061,
+        84 one_goilalan.one.0062,
+        85 one_goilalan.one.0063,
+        86 path_0ascertainment,
+        87 path_goilalan.path.0064,
+        88 path_goilalan.path.0065,
+        89 path_goilalan.path.0066,
+        90 person_0ascertainment,
+        91 person_goilalan.person.0067,
+        92 person_goilalan.person.0068,
+        93 person_goilalan.person.0069,
+        94 pl_0ascertainment,
+        95 pl_goilalan.1pl.0001,
+        96 see_0ascertainment,
+        97 see_goilalan.see.0070,
+        98 see_goilalan.see.0071,
+        99 see_goilalan.see.0072,
+        100 see_goilalan.see.0073,
+        101 sg_0ascertainment,
+        102 sg_goilalan.1sg.0002,
+        103 sg_goilalan.2sg.0003,
+        104 skin_0ascertainment,
+        105 skin_goilalan.skin.0074,
+        106 skin_goilalan.skin.0075,
+        107 skin_goilalan.skin.0076,
+        108 star_0ascertainment,
+        109 star_goilalan.star.0077,
+        110 star_goilalan.star.0078,
+        111 star_goilalan.star.0079,
+        112 stone_0ascertainment,
+        113 stone_goilalan.stone.0080,
+        114 stone_goilalan.stone.0081,
+        115 stone_goilalan.stone.0082,
+        116 sun_0ascertainment,
+        117 sun_goilalan.sun.0083,
+        118 sun_goilalan.sun.0084,
+        119 sun_goilalan.sun.0085,
+        120 tongue_0ascertainment,
+        121 tongue_goilalan.tongue.0086,
+        122 tongue_goilalan.tongue.0087,
+        123 tongue_goilalan.tongue.0088,
+        124 tooth_0ascertainment,
+        125 tooth_goilalan.tooth.0089,
+        126 tooth_goilalan.tooth.0090,
+        127 tooth_goilalan.tooth.0091,
+        128 tree_0ascertainment,
+        129 tree_goilalan.tree.0092,
+        130 tree_goilalan.tree.0093,
+        131 tree_goilalan.tree.0094,
+        132 two_0ascertainment,
+        133 two_goilalan.two.0095,
+        134 two_goilalan.two.0096,
+        135 two_goilalan.two.0097,
+        136 water_0ascertainment,
+        137 water_goilalan.water.0098,
+        138 water_goilalan.water.0099,
+        139 water_goilalan.water.0100
+;
+
+MATRIX
+biangai 01000100??0100010001000100010100100010001001000100?0?010010?0??010001000??01000??0100010001000101001011010001000100010001000100010101000100
+fuyug   0010001010001000100010001001001001000100010010001010100100010100010001001000100100010001000100?00100010001000100010001000100010001000100010
+tauade  00010??001010100010001000101010000100010??00010??0?0?000100?0010001000100100010010001000100010100010011000100010001000100010001000100010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-7;
+    charset breast = 8-10;
+    charset come = 11-14;
+    charset die = 15-18;
+    charset dog = 19-22;
+    charset drink = 23-26;
+    charset ear = 27-28;
+    charset eye = 29-31;
+    charset fire = 32-35;
+    charset fish = 36-39;
+    charset full = 40-42;
+    charset hand = 43-46;
+    charset hear = 47-49;
+    charset horn = 50-51;
+    charset knee = 52-53;
+    charset leaf = 54-58;
+    charset liver = 59-60;
+    charset louse = 61-63;
+    charset mountain = 64-67;
+    charset name = 68-71;
+    charset new = 72-74;
+    charset night = 75-78;
+    charset nose = 79-81;
+    charset one = 82-85;
+    charset path = 86-89;
+    charset person = 90-93;
+    charset pl = 94-95;
+    charset see = 96-100;
+    charset sg = 101-103;
+    charset skin = 104-107;
+    charset star = 108-111;
+    charset stone = 112-115;
+    charset sun = 116-119;
+    charset tongue = 120-123;
+    charset tooth = 124-127;
+    charset tree = 128-131;
+    charset two = 132-135;
+    charset water = 136-139;
+END;

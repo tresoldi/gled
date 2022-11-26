@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Achumawi_achu1247
+			Atsugewi_atsu1245
+			;
+End;
+Begin trees;
+	Translate
+		   1 Achumawi_achu1247,
+		   2 Atsugewi_atsu1245
+;
+tree TREE1 = (1[&height=0.0,length=6.27246394721063,length_95%_HPD={0.6337,23.3305},length_median=2.9865,length_range={0.5751,112.2545},rate=0.9975459508098414,rate_95%_HPD={0.6755,1.2554},rate_median=1.0065,rate_range={0.1668,1.2554}]:6.27246394721063,2[&height=0.0,length=6.27246394721063,length_95%_HPD={0.6337,23.3305},length_median=2.9865,length_range={0.5751,112.2545},rate=0.9943251349730092,rate_95%_HPD={0.6615,1.2554},rate_median=1.0068,rate_range={0.0811,1.2554}]:6.27246394721063)[&CAheight_95%_HPD={0.6337,23.3305},CAheight_mean=6.27246394721063,CAheight_median=2.9865,CAheight_range={0.5751,112.2545},height=6.27246394721063,height_95%_HPD={0.6337,23.3305},height_median=2.9865,height_range={0.5751,112.2545},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

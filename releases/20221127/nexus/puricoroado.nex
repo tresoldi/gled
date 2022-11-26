@@ -1,0 +1,108 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=62;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_puricoroado.blood.0487,
+        3 bone_0ascertainment,
+        4 bone_puricoroado.bone.0120,
+        5 breast_0ascertainment,
+        6 breast_puricoroado.breast.0052,
+        7 die_0ascertainment,
+        8 die_puricoroado.die.0020,
+        9 dog_0ascertainment,
+        10 dog_puricoroado.dog.0435,
+        11 drink_0ascertainment,
+        12 drink_puricoroado.drink.0210,
+        13 ear_0ascertainment,
+        14 ear_puricoroado.ear.0059,
+        15 eye_0ascertainment,
+        16 eye_puricoroado.eye.0137,
+        17 fire_0ascertainment,
+        18 fire_puricoroado.fire.0063,
+        19 fish_0ascertainment,
+        20 fish_puricoroado.fish.0002,
+        21 hand_0ascertainment,
+        22 hand_puricoroado.hand.0079,
+        23 horn_0ascertainment,
+        24 horn_puricoroado.horn.0490,
+        25 knee_0ascertainment,
+        26 knee_puricoroado.knee.0007,
+        27 leaf_0ascertainment,
+        28 leaf_puricoroado.leaf.0057,
+        29 mountain_0ascertainment,
+        30 mountain_puricoroado.mountain.0669,
+        31 name_0ascertainment,
+        32 name_puricoroado.name.0125,
+        33 new_0ascertainment,
+        34 new_puricoroado.new.0599,
+        35 night_0ascertainment,
+        36 night_puricoroado.night.0561,
+        37 nose_0ascertainment,
+        38 nose_puricoroado.nose.0662,
+        39 one_0ascertainment,
+        40 one_puricoroado.one.0004,
+        41 path_0ascertainment,
+        42 path_puricoroado.path.0003,
+        43 sg_0ascertainment,
+        44 sg_puricoroado.2sg.0026,
+        45 skin_0ascertainment,
+        46 skin_puricoroado.skin.0717,
+        47 star_0ascertainment,
+        48 star_puricoroado.star.0065,
+        49 stone_0ascertainment,
+        50 stone_puricoroado.stone.0923,
+        51 sun_0ascertainment,
+        52 sun_puricoroado.sun.0523,
+        53 tongue_0ascertainment,
+        54 tongue_puricoroado.tongue.0535,
+        55 tooth_0ascertainment,
+        56 tooth_puricoroado.tooth.0060,
+        57 tree_0ascertainment,
+        58 tree_puricoroado.tree.0285,
+        59 two_0ascertainment,
+        60 two_puricoroado.two.0001,
+        61 water_0ascertainment,
+        62 water_puricoroado.water.0001
+;
+
+MATRIX
+puri 01010101010101010101010101010101010101010101010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset die = 7-8;
+    charset dog = 9-10;
+    charset drink = 11-12;
+    charset ear = 13-14;
+    charset eye = 15-16;
+    charset fire = 17-18;
+    charset fish = 19-20;
+    charset hand = 21-22;
+    charset horn = 23-24;
+    charset knee = 25-26;
+    charset leaf = 27-28;
+    charset mountain = 29-30;
+    charset name = 31-32;
+    charset new = 33-34;
+    charset night = 35-36;
+    charset nose = 37-38;
+    charset one = 39-40;
+    charset path = 41-42;
+    charset sg = 43-44;
+    charset skin = 45-46;
+    charset star = 47-48;
+    charset stone = 49-50;
+    charset sun = 51-52;
+    charset tongue = 53-54;
+    charset tooth = 55-56;
+    charset tree = 57-58;
+    charset two = 59-60;
+    charset water = 61-62;
+END;

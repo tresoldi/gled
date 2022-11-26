@@ -1,0 +1,143 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=90;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_alsea.blood.0074,
+        3 bone_0ascertainment,
+        4 bone_alsea.bone.0019,
+        5 breast_0ascertainment,
+        6 breast_alsea.breast.0070,
+        7 come_0ascertainment,
+        8 come_alsea.come.0013,
+        9 come_alsea.come.0022,
+        10 die_0ascertainment,
+        11 die_alsea.die.0022,
+        12 die_alsea.die.0070,
+        13 dog_0ascertainment,
+        14 dog_alsea.dog.0067,
+        15 dog_alsea.dog.0068,
+        16 drink_0ascertainment,
+        17 drink_alsea.drink.0073,
+        18 ear_0ascertainment,
+        19 ear_alsea.ear.0066,
+        20 eye_0ascertainment,
+        21 eye_alsea.eye.0079,
+        22 eye_alsea.eye.0080,
+        23 fire_0ascertainment,
+        24 fire_alsea.fire.0082,
+        25 fire_alsea.fire.0083,
+        26 fish_0ascertainment,
+        27 fish_alsea.fish.0081,
+        28 full_0ascertainment,
+        29 full_alsea.full.0018,
+        30 hand_0ascertainment,
+        31 hand_alsea.hand.0059,
+        32 hear_0ascertainment,
+        33 hear_alsea.hear.0087,
+        34 horn_0ascertainment,
+        35 horn_alsea.horn.0063,
+        36 horn_alsea.horn.0064,
+        37 knee_0ascertainment,
+        38 knee_alsea.knee.0003,
+        39 knee_alsea.knee.0065,
+        40 leaf_0ascertainment,
+        41 leaf_alsea.leaf.0071,
+        42 liver_0ascertainment,
+        43 liver_alsea.liver.0083,
+        44 mountain_0ascertainment,
+        45 mountain_alsea.mountain.0069,
+        46 mountain_alsea.mountain.0070,
+        47 name_0ascertainment,
+        48 name_alsea.name.0001,
+        49 new_0ascertainment,
+        50 new_alsea.new.0078,
+        51 night_0ascertainment,
+        52 night_alsea.night.0031,
+        53 night_alsea.night.0074,
+        54 nose_0ascertainment,
+        55 nose_alsea.nose.0087,
+        56 nose_alsea.nose.0088,
+        57 one_0ascertainment,
+        58 one_alsea.one.0078,
+        59 one_alsea.one.0079,
+        60 path_0ascertainment,
+        61 path_alsea.path.0014,
+        62 person_0ascertainment,
+        63 person_alsea.person.0094,
+        64 pl_0ascertainment,
+        65 pl_alsea.1pl.0070,
+        66 see_0ascertainment,
+        67 see_alsea.see.0016,
+        68 see_alsea.see.0017,
+        69 sg_0ascertainment,
+        70 sg_alsea.1sg.0060,
+        71 sg_alsea.2sg.0065,
+        72 skin_0ascertainment,
+        73 skin_alsea.skin.0086,
+        74 star_0ascertainment,
+        75 star_alsea.star.0082,
+        76 stone_0ascertainment,
+        77 stone_alsea.stone.0080,
+        78 sun_0ascertainment,
+        79 sun_alsea.sun.0029,
+        80 tongue_0ascertainment,
+        81 tongue_alsea.tongue.0077,
+        82 tooth_0ascertainment,
+        83 tooth_alsea.tooth.0075,
+        84 tree_0ascertainment,
+        85 tree_alsea.tree.0041,
+        86 tree_alsea.tree.0076,
+        87 two_0ascertainment,
+        88 two_alsea.two.0061,
+        89 water_0ascertainment,
+        90 water_alsea.water.0067
+;
+
+MATRIX
+alsea 010101011011011010101101101010101011011010101101010110110110101010110110101010101010110101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-9;
+    charset die = 10-12;
+    charset dog = 13-15;
+    charset drink = 16-17;
+    charset ear = 18-19;
+    charset eye = 20-22;
+    charset fire = 23-25;
+    charset fish = 26-27;
+    charset full = 28-29;
+    charset hand = 30-31;
+    charset hear = 32-33;
+    charset horn = 34-36;
+    charset knee = 37-39;
+    charset leaf = 40-41;
+    charset liver = 42-43;
+    charset mountain = 44-46;
+    charset name = 47-48;
+    charset new = 49-50;
+    charset night = 51-53;
+    charset nose = 54-56;
+    charset one = 57-59;
+    charset path = 60-61;
+    charset person = 62-63;
+    charset pl = 64-65;
+    charset see = 66-68;
+    charset sg = 69-71;
+    charset skin = 72-73;
+    charset star = 74-75;
+    charset stone = 76-77;
+    charset sun = 78-79;
+    charset tongue = 80-81;
+    charset tooth = 82-83;
+    charset tree = 84-86;
+    charset two = 87-88;
+    charset water = 89-90;
+END;

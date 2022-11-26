@@ -1,0 +1,130 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=77;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_bororoan.blood.0203,
+        3 bone_0ascertainment,
+        4 bone_bororoan.bone.0032,
+        5 breast_0ascertainment,
+        6 breast_bororoan.breast.0035,
+        7 come_0ascertainment,
+        8 come_bororoan.come.0003,
+        9 die_0ascertainment,
+        10 die_bororoan.die.0001,
+        11 dog_0ascertainment,
+        12 dog_bororoan.dog.0182,
+        13 drink_0ascertainment,
+        14 drink_bororoan.drink.0235,
+        15 ear_0ascertainment,
+        16 ear_bororoan.ear.0005,
+        17 eye_0ascertainment,
+        18 eye_bororoan.eye.0215,
+        19 fire_0ascertainment,
+        20 fire_bororoan.fire.0233,
+        21 fish_0ascertainment,
+        22 fish_bororoan.fish.0114,
+        23 full_0ascertainment,
+        24 full_bororoan.full.0244,
+        25 hand_0ascertainment,
+        26 hand_bororoan.hand.0191,
+        27 hear_0ascertainment,
+        28 hear_bororoan.hear.0271,
+        29 horn_0ascertainment,
+        30 horn_bororoan.horn.0033,
+        31 knee_0ascertainment,
+        32 knee_bororoan.knee.0003,
+        33 leaf_0ascertainment,
+        34 leaf_bororoan.leaf.0207,
+        35 liver_0ascertainment,
+        36 liver_bororoan.liver.0232,
+        37 louse_0ascertainment,
+        38 louse_bororoan.louse.0199,
+        39 mountain_0ascertainment,
+        40 mountain_bororoan.mountain.0215,
+        41 name_0ascertainment,
+        42 name_bororoan.name.0161,
+        43 new_0ascertainment,
+        44 new_bororoan.new.0003,
+        45 night_0ascertainment,
+        46 night_bororoan.night.0203,
+        47 nose_0ascertainment,
+        48 nose_bororoan.nose.0040,
+        49 one_0ascertainment,
+        50 one_bororoan.one.0192,
+        51 path_0ascertainment,
+        52 path_bororoan.path.0076,
+        53 pl_0ascertainment,
+        54 pl_bororoan.1pl.0215,
+        55 see_0ascertainment,
+        56 see_bororoan.see.0193,
+        57 sg_0ascertainment,
+        58 sg_bororoan.1sg.0008,
+        59 sg_bororoan.2sg.0060,
+        60 skin_0ascertainment,
+        61 skin_bororoan.skin.0243,
+        62 star_0ascertainment,
+        63 star_bororoan.star.0036,
+        64 stone_0ascertainment,
+        65 stone_bororoan.stone.0003,
+        66 sun_0ascertainment,
+        67 sun_bororoan.sun.0027,
+        68 tongue_0ascertainment,
+        69 tongue_bororoan.tongue.0017,
+        70 tooth_0ascertainment,
+        71 tooth_bororoan.tooth.0233,
+        72 tree_0ascertainment,
+        73 tree_bororoan.tree.0219,
+        74 two_0ascertainment,
+        75 two_bororoan.two.0001,
+        76 water_0ascertainment,
+        77 water_bororoan.water.0186
+;
+
+MATRIX
+bororo 01010101010101010101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset full = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-28;
+    charset horn = 29-30;
+    charset knee = 31-32;
+    charset leaf = 33-34;
+    charset liver = 35-36;
+    charset louse = 37-38;
+    charset mountain = 39-40;
+    charset name = 41-42;
+    charset new = 43-44;
+    charset night = 45-46;
+    charset nose = 47-48;
+    charset one = 49-50;
+    charset path = 51-52;
+    charset pl = 53-54;
+    charset see = 55-56;
+    charset sg = 57-59;
+    charset skin = 60-61;
+    charset star = 62-63;
+    charset stone = 64-65;
+    charset sun = 66-67;
+    charset tongue = 68-69;
+    charset tooth = 70-71;
+    charset tree = 72-73;
+    charset two = 74-75;
+    charset water = 76-77;
+END;

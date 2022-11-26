@@ -1,0 +1,182 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=126;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_sahaptian.blood.0008,
+        3 blood_sahaptian.blood.0009,
+        4 bone_0ascertainment,
+        5 bone_sahaptian.bone.0010,
+        6 breast_0ascertainment,
+        7 breast_sahaptian.breast.0011,
+        8 breast_sahaptian.breast.0012,
+        9 breast_sahaptian.breast.0013,
+        10 come_0ascertainment,
+        11 come_sahaptian.come.0014,
+        12 come_sahaptian.come.0015,
+        13 come_sahaptian.come.0016,
+        14 come_sahaptian.come.0017,
+        15 die_0ascertainment,
+        16 die_sahaptian.die.0018,
+        17 die_sahaptian.die.0019,
+        18 dog_0ascertainment,
+        19 dog_sahaptian.dog.0020,
+        20 dog_sahaptian.dog.0021,
+        21 drink_0ascertainment,
+        22 drink_sahaptian.drink.0022,
+        23 drink_sahaptian.drink.0023,
+        24 ear_0ascertainment,
+        25 ear_sahaptian.ear.0024,
+        26 ear_sahaptian.ear.0025,
+        27 eye_0ascertainment,
+        28 eye_sahaptian.eye.0026,
+        29 eye_sahaptian.eye.0027,
+        30 eye_sahaptian.eye.0028,
+        31 fire_0ascertainment,
+        32 fire_sahaptian.fire.0029,
+        33 fire_sahaptian.fire.0030,
+        34 fish_0ascertainment,
+        35 fish_sahaptian.fish.0031,
+        36 fish_sahaptian.fish.0032,
+        37 full_0ascertainment,
+        38 full_sahaptian.full.0033,
+        39 full_sahaptian.full.0034,
+        40 full_sahaptian.full.0035,
+        41 hand_0ascertainment,
+        42 hand_sahaptian.hand.0036,
+        43 hand_sahaptian.hand.0037,
+        44 hand_sahaptian.hand.0038,
+        45 hear_0ascertainment,
+        46 hear_sahaptian.hear.0039,
+        47 hear_sahaptian.hear.0040,
+        48 hear_sahaptian.hear.0041,
+        49 horn_0ascertainment,
+        50 horn_sahaptian.horn.0042,
+        51 horn_sahaptian.horn.0043,
+        52 knee_0ascertainment,
+        53 knee_sahaptian.knee.0044,
+        54 knee_sahaptian.knee.0045,
+        55 leaf_0ascertainment,
+        56 leaf_sahaptian.leaf.0046,
+        57 leaf_sahaptian.leaf.0047,
+        58 leaf_sahaptian.leaf.0048,
+        59 liver_0ascertainment,
+        60 liver_sahaptian.liver.0049,
+        61 liver_sahaptian.liver.0050,
+        62 louse_0ascertainment,
+        63 louse_sahaptian.louse.0051,
+        64 louse_sahaptian.louse.0052,
+        65 louse_sahaptian.louse.0053,
+        66 mountain_0ascertainment,
+        67 mountain_sahaptian.mountain.0054,
+        68 mountain_sahaptian.mountain.0055,
+        69 mountain_sahaptian.mountain.0056,
+        70 name_0ascertainment,
+        71 name_sahaptian.name.0057,
+        72 new_0ascertainment,
+        73 new_sahaptian.new.0058,
+        74 new_sahaptian.new.0059,
+        75 night_0ascertainment,
+        76 night_sahaptian.night.0060,
+        77 night_sahaptian.night.0061,
+        78 nose_0ascertainment,
+        79 nose_sahaptian.nose.0062,
+        80 one_0ascertainment,
+        81 one_sahaptian.one.0063,
+        82 one_sahaptian.one.0064,
+        83 path_0ascertainment,
+        84 path_sahaptian.path.0065,
+        85 person_0ascertainment,
+        86 person_sahaptian.person.0066,
+        87 person_sahaptian.person.0067,
+        88 person_sahaptian.person.0068,
+        89 pl_0ascertainment,
+        90 pl_sahaptian.1pl.0001,
+        91 pl_sahaptian.1pl.0002,
+        92 see_0ascertainment,
+        93 see_sahaptian.see.0069,
+        94 see_sahaptian.see.0070,
+        95 sg_0ascertainment,
+        96 sg_sahaptian.1sg.0003,
+        97 sg_sahaptian.1sg.0004,
+        98 sg_sahaptian.2sg.0005,
+        99 sg_sahaptian.2sg.0006,
+        100 sg_sahaptian.2sg.0007,
+        101 skin_0ascertainment,
+        102 skin_sahaptian.skin.0071,
+        103 star_0ascertainment,
+        104 star_sahaptian.star.0072,
+        105 star_sahaptian.star.0073,
+        106 stone_0ascertainment,
+        107 stone_sahaptian.stone.0074,
+        108 sun_0ascertainment,
+        109 sun_sahaptian.sun.0075,
+        110 sun_sahaptian.sun.0076,
+        111 sun_sahaptian.sun.0077,
+        112 sun_sahaptian.sun.0078,
+        113 tongue_0ascertainment,
+        114 tongue_sahaptian.tongue.0079,
+        115 tongue_sahaptian.tongue.0080,
+        116 tooth_0ascertainment,
+        117 tooth_sahaptian.tooth.0081,
+        118 tooth_sahaptian.tooth.0082,
+        119 tree_0ascertainment,
+        120 tree_sahaptian.tree.0083,
+        121 tree_sahaptian.tree.0084,
+        122 two_0ascertainment,
+        123 two_sahaptian.two.0085,
+        124 two_sahaptian.two.0086,
+        125 water_0ascertainment,
+        126 water_sahaptian.water.0087
+;
+
+MATRIX
+nez_perce         0100101010100101001001101001000100100100010101000100100100010010101000?011010010100101000100100111000?010010100101001001001001
+umatilla_sahaptin 001010010001000010010100010010001001001000100010001001001000100100011010100010100101001000100101001001001010011000100100100101
+yakima            001010???0001000100101000100010010??0001001000010??0??00010??0???001001010001010010100010010010100010?0??01000100??01000100101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-5;
+    charset breast = 6-9;
+    charset come = 10-14;
+    charset die = 15-17;
+    charset dog = 18-20;
+    charset drink = 21-23;
+    charset ear = 24-26;
+    charset eye = 27-30;
+    charset fire = 31-33;
+    charset fish = 34-36;
+    charset full = 37-40;
+    charset hand = 41-44;
+    charset hear = 45-48;
+    charset horn = 49-51;
+    charset knee = 52-54;
+    charset leaf = 55-58;
+    charset liver = 59-61;
+    charset louse = 62-65;
+    charset mountain = 66-69;
+    charset name = 70-71;
+    charset new = 72-74;
+    charset night = 75-77;
+    charset nose = 78-79;
+    charset one = 80-82;
+    charset path = 83-84;
+    charset person = 85-88;
+    charset pl = 89-91;
+    charset see = 92-94;
+    charset sg = 95-100;
+    charset skin = 101-102;
+    charset star = 103-105;
+    charset stone = 106-107;
+    charset sun = 108-112;
+    charset tongue = 113-115;
+    charset tooth = 116-118;
+    charset tree = 119-121;
+    charset two = 122-124;
+    charset water = 125-126;
+END;

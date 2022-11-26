@@ -1,0 +1,127 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=82;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_guamo.blood.0023,
+        3 blood_guamo.blood.0148,
+        4 bone_0ascertainment,
+        5 bone_guamo.bone.0061,
+        6 breast_0ascertainment,
+        7 breast_guamo.breast.0365,
+        8 die_0ascertainment,
+        9 die_guamo.die.0215,
+        10 die_guamo.die.0313,
+        11 dog_0ascertainment,
+        12 dog_guamo.dog.0022,
+        13 dog_guamo.dog.0078,
+        14 drink_0ascertainment,
+        15 drink_guamo.drink.0450,
+        16 drink_guamo.drink.0451,
+        17 ear_0ascertainment,
+        18 ear_guamo.ear.0018,
+        19 eye_0ascertainment,
+        20 eye_guamo.eye.0363,
+        21 eye_guamo.eye.0364,
+        22 fire_0ascertainment,
+        23 fire_guamo.fire.0212,
+        24 fish_0ascertainment,
+        25 fish_guamo.fish.0058,
+        26 fish_guamo.fish.0373,
+        27 hand_0ascertainment,
+        28 hand_guamo.hand.0018,
+        29 horn_0ascertainment,
+        30 horn_guamo.horn.0289,
+        31 horn_guamo.horn.0290,
+        32 knee_0ascertainment,
+        33 knee_guamo.knee.0328,
+        34 leaf_0ascertainment,
+        35 leaf_guamo.leaf.0324,
+        36 leaf_guamo.leaf.0325,
+        37 mountain_0ascertainment,
+        38 mountain_guamo.mountain.0095,
+        39 mountain_guamo.mountain.0199,
+        40 name_0ascertainment,
+        41 name_guamo.name.0293,
+        42 night_0ascertainment,
+        43 night_guamo.night.0284,
+        44 night_guamo.night.0343,
+        45 nose_0ascertainment,
+        46 nose_guamo.nose.0108,
+        47 one_0ascertainment,
+        48 one_guamo.one.0306,
+        49 one_guamo.one.0307,
+        50 pl_0ascertainment,
+        51 pl_guamo.1pl.0389,
+        52 pl_guamo.1pl.0390,
+        53 see_0ascertainment,
+        54 see_guamo.see.0151,
+        55 see_guamo.see.0267,
+        56 sg_0ascertainment,
+        57 sg_guamo.1sg.0007,
+        58 sg_guamo.1sg.0228,
+        59 sg_guamo.2sg.0060,
+        60 sg_guamo.2sg.0282,
+        61 skin_0ascertainment,
+        62 skin_guamo.skin.0419,
+        63 skin_guamo.skin.0420,
+        64 stone_0ascertainment,
+        65 stone_guamo.stone.0530,
+        66 stone_guamo.stone.0531,
+        67 sun_0ascertainment,
+        68 sun_guamo.sun.0027,
+        69 sun_guamo.sun.0095,
+        70 tongue_0ascertainment,
+        71 tongue_guamo.tongue.0328,
+        72 tooth_0ascertainment,
+        73 tooth_guamo.tooth.0017,
+        74 tooth_guamo.tooth.0383,
+        75 tree_0ascertainment,
+        76 tree_guamo.tree.0001,
+        77 tree_guamo.tree.0356,
+        78 two_0ascertainment,
+        79 two_guamo.two.0024,
+        80 two_guamo.two.0289,
+        81 water_0ascertainment,
+        82 water_guamo.water.0045
+;
+
+MATRIX
+guamo 0110101011011011010110101101011010110110101101011011011011110110110110101101101101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-5;
+    charset breast = 6-7;
+    charset die = 8-10;
+    charset dog = 11-13;
+    charset drink = 14-16;
+    charset ear = 17-18;
+    charset eye = 19-21;
+    charset fire = 22-23;
+    charset fish = 24-26;
+    charset hand = 27-28;
+    charset horn = 29-31;
+    charset knee = 32-33;
+    charset leaf = 34-36;
+    charset mountain = 37-39;
+    charset name = 40-41;
+    charset night = 42-44;
+    charset nose = 45-46;
+    charset one = 47-49;
+    charset pl = 50-52;
+    charset see = 53-55;
+    charset sg = 56-60;
+    charset skin = 61-63;
+    charset stone = 64-66;
+    charset sun = 67-69;
+    charset tongue = 70-71;
+    charset tooth = 72-74;
+    charset tree = 75-77;
+    charset two = 78-80;
+    charset water = 81-82;
+END;

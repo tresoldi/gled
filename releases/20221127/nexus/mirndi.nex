@@ -1,0 +1,231 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=4 NCHAR=175;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_mirndi.blood.0012,
+        3 blood_mirndi.blood.0013,
+        4 blood_mirndi.blood.0014,
+        5 bone_0ascertainment,
+        6 bone_mirndi.bone.0015,
+        7 bone_mirndi.bone.0016,
+        8 bone_mirndi.bone.0017,
+        9 breast_0ascertainment,
+        10 breast_mirndi.breast.0018,
+        11 breast_mirndi.breast.0019,
+        12 come_0ascertainment,
+        13 come_mirndi.come.0020,
+        14 come_mirndi.come.0021,
+        15 come_mirndi.come.0022,
+        16 die_0ascertainment,
+        17 die_mirndi.die.0023,
+        18 die_mirndi.die.0024,
+        19 die_mirndi.die.0025,
+        20 die_mirndi.die.0026,
+        21 dog_0ascertainment,
+        22 dog_mirndi.dog.0027,
+        23 dog_mirndi.dog.0028,
+        24 dog_mirndi.dog.0029,
+        25 dog_mirndi.dog.0030,
+        26 drink_0ascertainment,
+        27 drink_mirndi.drink.0031,
+        28 drink_mirndi.drink.0032,
+        29 drink_mirndi.drink.0033,
+        30 drink_mirndi.drink.0034,
+        31 drink_mirndi.drink.0035,
+        32 ear_0ascertainment,
+        33 ear_mirndi.ear.0036,
+        34 ear_mirndi.ear.0037,
+        35 ear_mirndi.ear.0038,
+        36 eye_0ascertainment,
+        37 eye_mirndi.eye.0039,
+        38 eye_mirndi.eye.0040,
+        39 eye_mirndi.eye.0041,
+        40 fire_0ascertainment,
+        41 fire_mirndi.fire.0042,
+        42 fire_mirndi.fire.0043,
+        43 fire_mirndi.fire.0044,
+        44 fire_mirndi.fire.0045,
+        45 fish_0ascertainment,
+        46 fish_mirndi.fish.0046,
+        47 fish_mirndi.fish.0047,
+        48 fish_mirndi.fish.0048,
+        49 full_0ascertainment,
+        50 full_mirndi.full.0049,
+        51 full_mirndi.full.0050,
+        52 full_mirndi.full.0051,
+        53 hand_0ascertainment,
+        54 hand_mirndi.hand.0052,
+        55 hand_mirndi.hand.0053,
+        56 hand_mirndi.hand.0054,
+        57 hand_mirndi.hand.0055,
+        58 hear_0ascertainment,
+        59 hear_mirndi.hear.0056,
+        60 hear_mirndi.hear.0057,
+        61 hear_mirndi.hear.0058,
+        62 hear_mirndi.hear.0059,
+        63 knee_0ascertainment,
+        64 knee_mirndi.knee.0060,
+        65 knee_mirndi.knee.0061,
+        66 knee_mirndi.knee.0062,
+        67 leaf_0ascertainment,
+        68 leaf_mirndi.leaf.0063,
+        69 leaf_mirndi.leaf.0064,
+        70 leaf_mirndi.leaf.0065,
+        71 leaf_mirndi.leaf.0066,
+        72 liver_0ascertainment,
+        73 liver_mirndi.liver.0067,
+        74 liver_mirndi.liver.0068,
+        75 liver_mirndi.liver.0069,
+        76 louse_0ascertainment,
+        77 louse_mirndi.louse.0070,
+        78 louse_mirndi.louse.0071,
+        79 louse_mirndi.louse.0072,
+        80 louse_mirndi.louse.0073,
+        81 louse_mirndi.louse.0074,
+        82 mountain_0ascertainment,
+        83 mountain_mirndi.mountain.0075,
+        84 mountain_mirndi.mountain.0076,
+        85 mountain_mirndi.mountain.0077,
+        86 name_0ascertainment,
+        87 name_mirndi.name.0078,
+        88 name_mirndi.name.0079,
+        89 name_mirndi.name.0080,
+        90 new_0ascertainment,
+        91 new_mirndi.new.0081,
+        92 new_mirndi.new.0082,
+        93 new_mirndi.new.0083,
+        94 new_mirndi.new.0084,
+        95 night_0ascertainment,
+        96 night_mirndi.night.0085,
+        97 night_mirndi.night.0086,
+        98 night_mirndi.night.0087,
+        99 night_mirndi.night.0088,
+        100 nose_0ascertainment,
+        101 nose_mirndi.nose.0089,
+        102 nose_mirndi.nose.0090,
+        103 one_0ascertainment,
+        104 one_mirndi.one.0091,
+        105 one_mirndi.one.0092,
+        106 one_mirndi.one.0093,
+        107 one_mirndi.one.0094,
+        108 path_0ascertainment,
+        109 path_mirndi.path.0095,
+        110 path_mirndi.path.0096,
+        111 path_mirndi.path.0097,
+        112 person_0ascertainment,
+        113 person_mirndi.person.0098,
+        114 person_mirndi.person.0099,
+        115 person_mirndi.person.0100,
+        116 person_mirndi.person.0101,
+        117 pl_0ascertainment,
+        118 pl_mirndi.1pl.0001,
+        119 pl_mirndi.1pl.0002,
+        120 pl_mirndi.1pl.0003,
+        121 pl_mirndi.1pl.0004,
+        122 see_0ascertainment,
+        123 see_mirndi.see.0102,
+        124 see_mirndi.see.0103,
+        125 see_mirndi.see.0104,
+        126 see_mirndi.see.0105,
+        127 sg_0ascertainment,
+        128 sg_mirndi.1sg.0005,
+        129 sg_mirndi.1sg.0006,
+        130 sg_mirndi.1sg.0007,
+        131 sg_mirndi.2sg.0008,
+        132 sg_mirndi.2sg.0009,
+        133 sg_mirndi.2sg.0010,
+        134 sg_mirndi.2sg.0011,
+        135 skin_0ascertainment,
+        136 skin_mirndi.skin.0106,
+        137 skin_mirndi.skin.0107,
+        138 skin_mirndi.skin.0108,
+        139 skin_mirndi.skin.0109,
+        140 skin_mirndi.skin.0110,
+        141 star_0ascertainment,
+        142 star_mirndi.star.0111,
+        143 star_mirndi.star.0112,
+        144 star_mirndi.star.0113,
+        145 stone_0ascertainment,
+        146 stone_mirndi.stone.0114,
+        147 stone_mirndi.stone.0115,
+        148 stone_mirndi.stone.0116,
+        149 stone_mirndi.stone.0117,
+        150 sun_0ascertainment,
+        151 sun_mirndi.sun.0118,
+        152 sun_mirndi.sun.0119,
+        153 sun_mirndi.sun.0120,
+        154 sun_mirndi.sun.0121,
+        155 tongue_0ascertainment,
+        156 tongue_mirndi.tongue.0122,
+        157 tongue_mirndi.tongue.0123,
+        158 tooth_0ascertainment,
+        159 tooth_mirndi.tooth.0124,
+        160 tooth_mirndi.tooth.0125,
+        161 tooth_mirndi.tooth.0126,
+        162 tooth_mirndi.tooth.0127,
+        163 tree_0ascertainment,
+        164 tree_mirndi.tree.0128,
+        165 tree_mirndi.tree.0129,
+        166 tree_mirndi.tree.0130,
+        167 two_0ascertainment,
+        168 two_mirndi.two.0131,
+        169 two_mirndi.two.0132,
+        170 water_0ascertainment,
+        171 water_mirndi.water.0133,
+        172 water_mirndi.water.0134,
+        173 water_mirndi.water.0135,
+        174 water_mirndi.water.0136,
+        175 water_mirndi.water.0137
+;
+
+MATRIX
+djamindjung 0100010001001000100001000010000010001000100001000100010000100001000100001000100000100010001000010000100100001000100001000010000100100001000001000100001000010010000100010010000
+djingili    0010001000100110010000100001001010000100010000100010001000010000110010000100010100010001000100001000010010000100010000101001000110011000100000110010000100001001000010001001100
+gudanji     000100010100???0001000010000100001000010001000100???000100001000100001000010?????00010???0001100010001000100001000100????000100???????00010000010001000010010000100010001000110
+wambaya     0001000101000010000100001000010000100010001100110001000010010100100000100010001010???000101000001010??0001100010000100010000010001100100001100010000100001010000010011001000101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-8;
+    charset breast = 9-11;
+    charset come = 12-15;
+    charset die = 16-20;
+    charset dog = 21-25;
+    charset drink = 26-31;
+    charset ear = 32-35;
+    charset eye = 36-39;
+    charset fire = 40-44;
+    charset fish = 45-48;
+    charset full = 49-52;
+    charset hand = 53-57;
+    charset hear = 58-62;
+    charset knee = 63-66;
+    charset leaf = 67-71;
+    charset liver = 72-75;
+    charset louse = 76-81;
+    charset mountain = 82-85;
+    charset name = 86-89;
+    charset new = 90-94;
+    charset night = 95-99;
+    charset nose = 100-102;
+    charset one = 103-107;
+    charset path = 108-111;
+    charset person = 112-116;
+    charset pl = 117-121;
+    charset see = 122-126;
+    charset sg = 127-134;
+    charset skin = 135-140;
+    charset star = 141-144;
+    charset stone = 145-149;
+    charset sun = 150-154;
+    charset tongue = 155-157;
+    charset tooth = 158-162;
+    charset tree = 163-166;
+    charset two = 167-169;
+    charset water = 170-175;
+END;

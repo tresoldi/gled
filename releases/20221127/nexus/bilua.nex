@@ -1,0 +1,138 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=84;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_bilua.blood.0004,
+        3 bone_0ascertainment,
+        4 bone_bilua.bone.0005,
+        5 breast_0ascertainment,
+        6 breast_bilua.breast.0006,
+        7 breast_bilua.breast.0007,
+        8 breast_bilua.breast.0008,
+        9 breast_bilua.breast.0009,
+        10 come_0ascertainment,
+        11 come_bilua.come.0010,
+        12 come_bilua.come.0011,
+        13 die_0ascertainment,
+        14 die_bilua.die.0012,
+        15 dog_0ascertainment,
+        16 dog_bilua.dog.0013,
+        17 drink_0ascertainment,
+        18 drink_bilua.drink.0014,
+        19 ear_0ascertainment,
+        20 ear_bilua.ear.0015,
+        21 eye_0ascertainment,
+        22 eye_bilua.eye.0016,
+        23 fire_0ascertainment,
+        24 fire_bilua.fire.0017,
+        25 fire_bilua.fire.0018,
+        26 fish_0ascertainment,
+        27 fish_bilua.fish.0019,
+        28 full_0ascertainment,
+        29 full_bilua.full.0020,
+        30 full_bilua.full.0021,
+        31 hand_0ascertainment,
+        32 hand_bilua.hand.0022,
+        33 hear_0ascertainment,
+        34 hear_bilua.hear.0023,
+        35 horn_0ascertainment,
+        36 horn_bilua.horn.0024,
+        37 knee_0ascertainment,
+        38 knee_bilua.knee.0025,
+        39 leaf_0ascertainment,
+        40 leaf_bilua.leaf.0026,
+        41 liver_0ascertainment,
+        42 liver_bilua.liver.0027,
+        43 louse_0ascertainment,
+        44 louse_bilua.louse.0028,
+        45 name_0ascertainment,
+        46 name_bilua.name.0029,
+        47 new_0ascertainment,
+        48 new_bilua.new.0030,
+        49 night_0ascertainment,
+        50 night_bilua.night.0031,
+        51 nose_0ascertainment,
+        52 nose_bilua.nose.0032,
+        53 one_0ascertainment,
+        54 one_bilua.one.0033,
+        55 one_bilua.one.0034,
+        56 path_0ascertainment,
+        57 path_bilua.path.0035,
+        58 person_0ascertainment,
+        59 person_bilua.person.0036,
+        60 pl_0ascertainment,
+        61 pl_bilua.1pl.0001,
+        62 see_0ascertainment,
+        63 see_bilua.see.0037,
+        64 sg_0ascertainment,
+        65 sg_bilua.1sg.0002,
+        66 sg_bilua.2sg.0003,
+        67 skin_0ascertainment,
+        68 skin_bilua.skin.0038,
+        69 star_0ascertainment,
+        70 star_bilua.star.0039,
+        71 stone_0ascertainment,
+        72 stone_bilua.stone.0040,
+        73 sun_0ascertainment,
+        74 sun_bilua.sun.0041,
+        75 tongue_0ascertainment,
+        76 tongue_bilua.tongue.0042,
+        77 tooth_0ascertainment,
+        78 tooth_bilua.tooth.0043,
+        79 tree_0ascertainment,
+        80 tree_bilua.tree.0044,
+        81 two_0ascertainment,
+        82 two_bilua.two.0045,
+        83 water_0ascertainment,
+        84 water_bilua.water.0046
+;
+
+MATRIX
+bilua         0101010110110?0?0101010110?01101010101010101010101010110101010?011010101010101010101
+ndovele_bilua 0101001000010101010101010010??01010?0?01010101010101010010101010100101010?01010?0101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-9;
+    charset come = 10-12;
+    charset die = 13-14;
+    charset dog = 15-16;
+    charset drink = 17-18;
+    charset ear = 19-20;
+    charset eye = 21-22;
+    charset fire = 23-25;
+    charset fish = 26-27;
+    charset full = 28-30;
+    charset hand = 31-32;
+    charset hear = 33-34;
+    charset horn = 35-36;
+    charset knee = 37-38;
+    charset leaf = 39-40;
+    charset liver = 41-42;
+    charset louse = 43-44;
+    charset name = 45-46;
+    charset new = 47-48;
+    charset night = 49-50;
+    charset nose = 51-52;
+    charset one = 53-55;
+    charset path = 56-57;
+    charset person = 58-59;
+    charset pl = 60-61;
+    charset see = 62-63;
+    charset sg = 64-66;
+    charset skin = 67-68;
+    charset star = 69-70;
+    charset stone = 71-72;
+    charset sun = 73-74;
+    charset tongue = 75-76;
+    charset tooth = 77-78;
+    charset tree = 79-80;
+    charset two = 81-82;
+    charset water = 83-84;
+END;

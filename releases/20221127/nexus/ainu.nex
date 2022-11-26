@@ -1,0 +1,205 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=23 NCHAR=129;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_ainu.blood.0009,
+        3 bone_0ascertainment,
+        4 bone_ainu.bone.0010,
+        5 breast_0ascertainment,
+        6 breast_ainu.breast.0011,
+        7 breast_ainu.breast.0012,
+        8 breast_ainu.breast.0013,
+        9 come_0ascertainment,
+        10 come_ainu.come.0014,
+        11 come_ainu.come.0015,
+        12 die_0ascertainment,
+        13 die_ainu.die.0016,
+        14 die_ainu.die.0017,
+        15 dog_0ascertainment,
+        16 dog_ainu.dog.0018,
+        17 drink_0ascertainment,
+        18 drink_ainu.drink.0019,
+        19 ear_0ascertainment,
+        20 ear_ainu.ear.0020,
+        21 ear_ainu.ear.0021,
+        22 ear_ainu.ear.0022,
+        23 eye_0ascertainment,
+        24 eye_ainu.eye.0023,
+        25 fire_0ascertainment,
+        26 fire_ainu.fire.0024,
+        27 fire_ainu.fire.0025,
+        28 fish_0ascertainment,
+        29 fish_ainu.fish.0026,
+        30 full_0ascertainment,
+        31 full_ainu.full.0027,
+        32 full_ainu.full.0028,
+        33 full_ainu.full.0029,
+        34 hand_0ascertainment,
+        35 hand_ainu.hand.0030,
+        36 hand_ainu.hand.0031,
+        37 hear_0ascertainment,
+        38 hear_ainu.hear.0032,
+        39 horn_0ascertainment,
+        40 horn_ainu.horn.0033,
+        41 knee_0ascertainment,
+        42 knee_ainu.knee.0034,
+        43 knee_ainu.knee.0035,
+        44 leaf_0ascertainment,
+        45 leaf_ainu.leaf.0036,
+        46 leaf_ainu.leaf.0037,
+        47 liver_0ascertainment,
+        48 liver_ainu.liver.0038,
+        49 liver_ainu.liver.0039,
+        50 liver_ainu.liver.0040,
+        51 liver_ainu.liver.0041,
+        52 liver_ainu.liver.0042,
+        53 liver_ainu.liver.0043,
+        54 louse_0ascertainment,
+        55 louse_ainu.louse.0044,
+        56 louse_ainu.louse.0045,
+        57 louse_ainu.louse.0046,
+        58 mountain_0ascertainment,
+        59 mountain_ainu.mountain.0047,
+        60 mountain_ainu.mountain.0048,
+        61 name_0ascertainment,
+        62 name_ainu.name.0049,
+        63 new_0ascertainment,
+        64 new_ainu.new.0050,
+        65 night_0ascertainment,
+        66 night_ainu.night.0051,
+        67 night_ainu.night.0052,
+        68 night_ainu.night.0053,
+        69 night_ainu.night.0054,
+        70 night_ainu.night.0055,
+        71 nose_0ascertainment,
+        72 nose_ainu.nose.0056,
+        73 nose_ainu.nose.0057,
+        74 nose_ainu.nose.0058,
+        75 one_0ascertainment,
+        76 one_ainu.one.0059,
+        77 path_0ascertainment,
+        78 path_ainu.path.0060,
+        79 path_ainu.path.0061,
+        80 path_ainu.path.0062,
+        81 person_0ascertainment,
+        82 person_ainu.person.0063,
+        83 pl_0ascertainment,
+        84 pl_ainu.1pl.0001,
+        85 pl_ainu.1pl.0002,
+        86 pl_ainu.1pl.0003,
+        87 pl_ainu.1pl.0004,
+        88 see_0ascertainment,
+        89 see_ainu.see.0064,
+        90 see_ainu.see.0065,
+        91 sg_0ascertainment,
+        92 sg_ainu.1sg.0005,
+        93 sg_ainu.1sg.0006,
+        94 sg_ainu.1sg.0007,
+        95 sg_ainu.2sg.0008,
+        96 skin_0ascertainment,
+        97 skin_ainu.skin.0066,
+        98 skin_ainu.skin.0067,
+        99 skin_ainu.skin.0068,
+        100 skin_ainu.skin.0069,
+        101 star_0ascertainment,
+        102 star_ainu.star.0070,
+        103 star_ainu.star.0071,
+        104 star_ainu.star.0072,
+        105 stone_0ascertainment,
+        106 stone_ainu.stone.0073,
+        107 stone_ainu.stone.0074,
+        108 sun_0ascertainment,
+        109 sun_ainu.sun.0075,
+        110 sun_ainu.sun.0076,
+        111 sun_ainu.sun.0077,
+        112 sun_ainu.sun.0078,
+        113 sun_ainu.sun.0079,
+        114 sun_ainu.sun.0080,
+        115 tongue_0ascertainment,
+        116 tongue_ainu.tongue.0081,
+        117 tongue_ainu.tongue.0082,
+        118 tongue_ainu.tongue.0083,
+        119 tooth_0ascertainment,
+        120 tooth_ainu.tooth.0084,
+        121 tree_0ascertainment,
+        122 tree_ainu.tree.0085,
+        123 tree_ainu.tree.0086,
+        124 two_0ascertainment,
+        125 two_ainu.two.0087,
+        126 water_0ascertainment,
+        127 water_ainu.water.0088,
+        128 water_ainu.water.0089,
+        129 water_ainu.water.0090
+;
+
+MATRIX
+ainu_asahikawa   010101000100100101010001010010100010010101001001000000100010010101000001000101000101000010010010100001000100100000010001010010100
+ainu_bihoro      010100100100100101010001010010010001010101001001000000100010010101000001000101000100100010010010010000100100100000010001010010100
+ainu_hiratori    010101000100100101010001010010100001010101001000100000100010010101000001000101000100010010010010100001000100100000010001011010100
+ainu_horobetsu   010101000100100101010001010010100001010101001000010000100010010101000001000101000101000010010010100001000100100000010001011010100
+ainu_kushiro     010101000100100101010001010010010010010101001001000000100010010101000001000101000100100010010010100001000100100000010001010010100
+ainu_maoka       010101000100100101010001001010100010010100100100001000110010010101000000100101000101000010001010110000010100100000001001010010010
+ainu_nairo       010100010100100101010001001010100010010100100100000100010010010101000000100101000100100010001010100101000100100000001001010010100
+ainu_nayoro      010100100100100101010001010010100010010101001001000000100010010101000001000101000101000010010010100001000100100000011001010010100
+ainu_niikappu    010101000100100101010001010010010001010101001000100000100010010101000001000101000100010010010010100001000100100000010001001010100
+ainu_nukkibetsu  010101000100100101010001010010100001010101001000100000100010010101000001000101000100010010010010100001000100100000010001001010100
+ainu_obihiro     010101000100100101010001010010100001010101001001000000100010010101000001000101000100100010010010100001000100100000010001010010100
+ainu_ochiho      010101000100100101010001001010100010010100100100100000110010010101000000100101000100100010001010100000010100010000001001010010010
+ainu_oshamambe   010101000100100101010001010010100010010101001000100000100010010101000001000101000100001010010010100001000100100000010001001010100
+ainu_raichishka  010100100100100101010001001010001001010100100100001000010010010101001000100101000100100010011010100000010100010000001001010010010
+ainu_samani      010101000100100101010001010010100010010101001001000000100010010101000001000101000100010010010010100001000100001000010001010010100
+ainu_saru        01010010010001010101000101001001001001010??01000100000???010010100100001000100100100010010010010001001000100000100010001001010100
+ainu_shiraura    010101000100100101010001001010001001010100100100001000010010010101000000100101000101000010011010010000010100010000001001010010010
+ainu_soya        010100100100100101010001011010010001010101001001000000100010010101000001000101000100100010001010100000010100001000001001011010100
+ainu_tarantomari 010101100100100101010001001010100010010100100100001000100010010101000000100101000100100010001010110000010100000010001001010010100
+ainu_yakumo      010101000100100101010001010010100001010101001000000010100010010101000001000101000101000010010010100001000100100000010001011010100
+hokkaido_ainu    010100100100100101010001010010100010010101001000010000001010010100100101000100010101010010010010100001000100100001010001010010010
+kuril_ainu       010101000??0100101001001010010???0100?010??0010??????0???0010?01000100010001010001000100010001000100000100101000000001010100?0001
+sakhalin_ainu    010101100010100101010101001010010010010101000100001000???01001010000100101010100010????010000110100000010100100000000101010010100
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-8;
+    charset come = 9-11;
+    charset die = 12-14;
+    charset dog = 15-16;
+    charset drink = 17-18;
+    charset ear = 19-22;
+    charset eye = 23-24;
+    charset fire = 25-27;
+    charset fish = 28-29;
+    charset full = 30-33;
+    charset hand = 34-36;
+    charset hear = 37-38;
+    charset horn = 39-40;
+    charset knee = 41-43;
+    charset leaf = 44-46;
+    charset liver = 47-53;
+    charset louse = 54-57;
+    charset mountain = 58-60;
+    charset name = 61-62;
+    charset new = 63-64;
+    charset night = 65-70;
+    charset nose = 71-74;
+    charset one = 75-76;
+    charset path = 77-80;
+    charset person = 81-82;
+    charset pl = 83-87;
+    charset see = 88-90;
+    charset sg = 91-95;
+    charset skin = 96-100;
+    charset star = 101-104;
+    charset stone = 105-107;
+    charset sun = 108-114;
+    charset tongue = 115-118;
+    charset tooth = 119-120;
+    charset tree = 121-123;
+    charset two = 124-125;
+    charset water = 126-129;
+END;

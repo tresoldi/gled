@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="Selknam_onaa1245" />
+    <taxon id="Tehuelche_tehu1242" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_chonan" name="data_chonan" dataType="integer">
+    <sequence id="language_data_chonan:Selknam_onaa1245" taxon="Selknam_onaa1245" value="01010100010010010010101010100100101010010010010101010110100100100100101011010010101001001001001001010100" />
+    <sequence id="language_data_chonan:Tehuelche_tehu1242" taxon="Tehuelche_tehu1242" value="001000110010010010010001000100100100010010010010001000100100100100100100??001001000100100100100100100011" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,full,hand,hear,knee,leaf,louse,mountain,new,night,one,path,see,skin,star,stone,sun,tongue,tooth,two,water">
+        <parameter id="featureClockRate:chonan:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:chonan" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:chonan" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:chonan" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:chonan" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Selknam_onaa1245,Tehuelche_tehu1242);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:chonan" name="distribution">
+          <input id="featureClockRateCompound:chonan" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,full,hand,hear,knee,leaf,louse,mountain,new,night,one,path,see,skin,star,stone,sun,tongue,tooth,two,water">
+              <var idref="featureClockRate:chonan:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:chonan" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:chonan" beta="@featureClockRateGammaScale:chonan" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:chonan" name="distribution" x="@featureClockRateGammaScale:chonan">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:chonan" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:chonan" name="distribution" x="@covarion_alpha.s:chonan">
+          <Uniform id="CovAlphaUniform:chonan" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:chonan" name="distribution" x="@covarion_s.s:chonan">
+          <Gamma id="Gamma.0:chonan" name="distr">
+            <parameter id="covarion_switch_gamma_param1:chonan" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:chonan" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:chonan:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:1pl" spec="SiteModel" mutationRate="@featureClockRate:chonan:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:chonan" spec="BinaryCovarion" alpha="@covarion_alpha.s:chonan" switchRate="@covarion_s.s:chonan">
+              <vfrequencies id="chonan:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.64 0.36</vfrequencies>
+              <parameter id="chonan:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="chonan:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_chonan:1pl" spec="FilteredAlignment" data="@data_chonan" filter="1-4" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:2sg" spec="SiteModel" mutationRate="@featureClockRate:chonan:2sg" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:2sg" spec="FilteredAlignment" data="@data_chonan" filter="5-8" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:blood" spec="SiteModel" mutationRate="@featureClockRate:chonan:blood" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:blood" spec="FilteredAlignment" data="@data_chonan" filter="9-11" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:bone" spec="SiteModel" mutationRate="@featureClockRate:chonan:bone" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:bone" spec="FilteredAlignment" data="@data_chonan" filter="12-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:breast" spec="SiteModel" mutationRate="@featureClockRate:chonan:breast" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:breast" spec="FilteredAlignment" data="@data_chonan" filter="15-17" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:come" spec="SiteModel" mutationRate="@featureClockRate:chonan:come" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:come" spec="FilteredAlignment" data="@data_chonan" filter="18-21" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:die" spec="SiteModel" mutationRate="@featureClockRate:chonan:die" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:die" spec="FilteredAlignment" data="@data_chonan" filter="22-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:dog" spec="SiteModel" mutationRate="@featureClockRate:chonan:dog" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:dog" spec="FilteredAlignment" data="@data_chonan" filter="26-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:drink" spec="SiteModel" mutationRate="@featureClockRate:chonan:drink" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:drink" spec="FilteredAlignment" data="@data_chonan" filter="29-31" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:eye" spec="SiteModel" mutationRate="@featureClockRate:chonan:eye" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:eye" spec="FilteredAlignment" data="@data_chonan" filter="32-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:fire" spec="SiteModel" mutationRate="@featureClockRate:chonan:fire" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:fire" spec="FilteredAlignment" data="@data_chonan" filter="36-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:full" spec="SiteModel" mutationRate="@featureClockRate:chonan:full" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:full" spec="FilteredAlignment" data="@data_chonan" filter="39-41" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:hand" spec="SiteModel" mutationRate="@featureClockRate:chonan:hand" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:hand" spec="FilteredAlignment" data="@data_chonan" filter="42-44" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:hear" spec="SiteModel" mutationRate="@featureClockRate:chonan:hear" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:hear" spec="FilteredAlignment" data="@data_chonan" filter="45-48" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:knee" spec="SiteModel" mutationRate="@featureClockRate:chonan:knee" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:knee" spec="FilteredAlignment" data="@data_chonan" filter="49-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:leaf" spec="SiteModel" mutationRate="@featureClockRate:chonan:leaf" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:leaf" spec="FilteredAlignment" data="@data_chonan" filter="53-55" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:louse" spec="SiteModel" mutationRate="@featureClockRate:chonan:louse" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:louse" spec="FilteredAlignment" data="@data_chonan" filter="56-58" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:mountain" spec="SiteModel" mutationRate="@featureClockRate:chonan:mountain" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:mountain" spec="FilteredAlignment" data="@data_chonan" filter="59-61" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:new" spec="SiteModel" mutationRate="@featureClockRate:chonan:new" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:new" spec="FilteredAlignment" data="@data_chonan" filter="62-64" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:night" spec="SiteModel" mutationRate="@featureClockRate:chonan:night" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:night" spec="FilteredAlignment" data="@data_chonan" filter="65-67" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:one" spec="SiteModel" mutationRate="@featureClockRate:chonan:one" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:one" spec="FilteredAlignment" data="@data_chonan" filter="68-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:path" spec="SiteModel" mutationRate="@featureClockRate:chonan:path" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:path" spec="FilteredAlignment" data="@data_chonan" filter="72-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:see" spec="SiteModel" mutationRate="@featureClockRate:chonan:see" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:see" spec="FilteredAlignment" data="@data_chonan" filter="75-77" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:skin" spec="SiteModel" mutationRate="@featureClockRate:chonan:skin" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:skin" spec="FilteredAlignment" data="@data_chonan" filter="78-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:star" spec="SiteModel" mutationRate="@featureClockRate:chonan:star" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:star" spec="FilteredAlignment" data="@data_chonan" filter="82-84" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:stone" spec="SiteModel" mutationRate="@featureClockRate:chonan:stone" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:stone" spec="FilteredAlignment" data="@data_chonan" filter="85-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:sun" spec="SiteModel" mutationRate="@featureClockRate:chonan:sun" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:sun" spec="FilteredAlignment" data="@data_chonan" filter="88-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:tongue" spec="SiteModel" mutationRate="@featureClockRate:chonan:tongue" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:tongue" spec="FilteredAlignment" data="@data_chonan" filter="91-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:tooth" spec="SiteModel" mutationRate="@featureClockRate:chonan:tooth" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:tooth" spec="FilteredAlignment" data="@data_chonan" filter="94-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:two" spec="SiteModel" mutationRate="@featureClockRate:chonan:two" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:two" spec="FilteredAlignment" data="@data_chonan" filter="97-100" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:chonan:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.chonan:water" spec="SiteModel" mutationRate="@featureClockRate:chonan:water" proportionInvariant="0" substModel="@covarion.s:chonan" />
+          <data id="feature_data_chonan:water" spec="FilteredAlignment" data="@data_chonan" filter="101-104" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:chonan" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:chonan" name="up" />
+      <parameter idref="featureClockRateGammaScale:chonan" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:chonan" spec="ScaleOperator" parameter="@covarion_alpha.s:chonan" scaleFactor="0.5" weight="1.0" />
+    <operator id="chonan:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:chonan" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,full,hand,hear,knee,leaf,louse,mountain,new,night,one,path,see,skin,star,stone,sun,tongue,tooth,two,water">
+        <parameter idref="featureClockRate:chonan:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="31" estimate="false">3 3 2 2 2 3 3 2 2 3 2 2 2 3 3 2 2 2 2 2 3 2 2 3 2 2 2 2 2 3 3</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="chonan.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,full,hand,hear,knee,leaf,louse,mountain,new,night,one,path,see,skin,star,stone,sun,tongue,tooth,two,water">
+        <log idref="featureClockRate:chonan:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:chonan" />
+      <log idref="covarion_alpha.s:chonan" />
+      <log idref="covarion_s.s:chonan" />
+    </logger>
+    <logger mode="tree" fileName="chonan.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="Lepki_lepk1238" />
+    <taxon id="Murkim_murk1238" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_lepkimurkimkembra" name="data_lepkimurkimkembra" dataType="integer">
+    <sequence id="language_data_lepkimurkimkembra:Lepki_lepk1238" taxon="Lepki_lepk1238" value="010010010010011010010000100010010001001001000100100100110100100110100010010010010010010010010" />
+    <sequence id="language_data_lepkimurkimkembra:Murkim_murk1238" taxon="Murkim_murk1238" value="001001001001010001001110011001001100100100110010010010100110010100011001011001001001001001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,hear,knee,leaf,liver,louse,name,new,night,nose,one,see,skin,star,stone,sun,tree,two">
+        <parameter id="featureClockRate:lepkimurkimkembra:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:lepkimurkimkembra" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:lepkimurkimkembra" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:lepkimurkimkembra" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:lepkimurkimkembra" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Lepki_lepk1238,Murkim_murk1238);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:lepkimurkimkembra" name="distribution">
+          <input id="featureClockRateCompound:lepkimurkimkembra" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,hear,knee,leaf,liver,louse,name,new,night,nose,one,see,skin,star,stone,sun,tree,two">
+              <var idref="featureClockRate:lepkimurkimkembra:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:lepkimurkimkembra" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:lepkimurkimkembra" beta="@featureClockRateGammaScale:lepkimurkimkembra" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:lepkimurkimkembra" name="distribution" x="@featureClockRateGammaScale:lepkimurkimkembra">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:lepkimurkimkembra" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:lepkimurkimkembra" name="distribution" x="@covarion_alpha.s:lepkimurkimkembra">
+          <Uniform id="CovAlphaUniform:lepkimurkimkembra" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:lepkimurkimkembra" name="distribution" x="@covarion_s.s:lepkimurkimkembra">
+          <Gamma id="Gamma.0:lepkimurkimkembra" name="distr">
+            <parameter id="covarion_switch_gamma_param1:lepkimurkimkembra" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:lepkimurkimkembra" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:lepkimurkimkembra:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:1pl" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:lepkimurkimkembra" spec="BinaryCovarion" alpha="@covarion_alpha.s:lepkimurkimkembra" switchRate="@covarion_s.s:lepkimurkimkembra">
+              <vfrequencies id="lepkimurkimkembra:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.63 0.37</vfrequencies>
+              <parameter id="lepkimurkimkembra:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="lepkimurkimkembra:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_lepkimurkimkembra:1pl" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:1sg" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:1sg" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:1sg" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:2sg" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:2sg" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:2sg" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="7-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:blood" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:blood" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:blood" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="10-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:bone" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:bone" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:bone" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="13-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:breast" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:breast" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:breast" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="16-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:come" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:come" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:come" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="19-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:die" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:die" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:die" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="24-27" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:dog" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:dog" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:dog" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="28-30" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:drink" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:drink" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:drink" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="31-34" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:eye" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:eye" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:eye" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="35-37" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:fire" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:fire" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:fire" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="38-40" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:hear" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:hear" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:hear" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="41-44" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:knee" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:knee" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:knee" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="45-47" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:leaf" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:leaf" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:leaf" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="48-50" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:liver" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:liver" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:liver" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="51-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:louse" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:louse" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:louse" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="54-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:name" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:name" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:name" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="57-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:new" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:new" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:new" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="60-62" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:night" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:night" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:night" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="63-65" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:nose" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:nose" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:nose" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="66-69" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:one" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:one" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:one" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="70-72" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:see" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:see" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:see" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="73-75" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:skin" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:skin" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:skin" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="76-78" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:star" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:star" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:star" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="79-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:stone" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:stone" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:stone" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="82-84" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:sun" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:sun" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:sun" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="85-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:tree" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:tree" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:tree" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="88-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:lepkimurkimkembra:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.lepkimurkimkembra:two" spec="SiteModel" mutationRate="@featureClockRate:lepkimurkimkembra:two" proportionInvariant="0" substModel="@covarion.s:lepkimurkimkembra" />
+          <data id="feature_data_lepkimurkimkembra:two" spec="FilteredAlignment" data="@data_lepkimurkimkembra" filter="91-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:lepkimurkimkembra" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:lepkimurkimkembra" name="up" />
+      <parameter idref="featureClockRateGammaScale:lepkimurkimkembra" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:lepkimurkimkembra" spec="ScaleOperator" parameter="@covarion_alpha.s:lepkimurkimkembra" scaleFactor="0.5" weight="1.0" />
+    <operator id="lepkimurkimkembra:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:lepkimurkimkembra" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,hear,knee,leaf,liver,louse,name,new,night,nose,one,see,skin,star,stone,sun,tree,two">
+        <parameter idref="featureClockRate:lepkimurkimkembra:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="29" estimate="false">2 2 2 2 2 2 4 3 2 3 2 2 3 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="lepkimurkimkembra.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,eye,fire,hear,knee,leaf,liver,louse,name,new,night,nose,one,see,skin,star,stone,sun,tree,two">
+        <log idref="featureClockRate:lepkimurkimkembra:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:lepkimurkimkembra" />
+      <log idref="covarion_alpha.s:lepkimurkimkembra" />
+      <log idref="covarion_s.s:lepkimurkimkembra" />
+    </logger>
+    <logger mode="tree" fileName="lepkimurkimkembra.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

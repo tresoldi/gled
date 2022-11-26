@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Humene_hume1246
+			Uare_uare1241
+			;
+End;
+Begin trees;
+	Translate
+		   1 Humene_hume1246,
+		   2 Uare_uare1241
+;
+tree TREE1 = (1[&height=0.0,length=25.48066576684675,length_95%_HPD={0.4076,33.9749},length_median=2.2971,length_range={0.3816,4098.0116},rate=0.9821105378924221,rate_95%_HPD={0.5896,1.2554},rate_median=1.0054,rate_range={0.1214,1.2554}]:25.48066576684675,2[&height=0.0,length=25.48066576684675,length_95%_HPD={0.4076,33.9749},length_median=2.2971,length_range={0.3816,4098.0116},rate=0.9856980003999196,rate_95%_HPD={0.5925,1.2554},rate_median=1.0056,rate_range={0.1214,1.2554}]:25.48066576684675)[&CAheight_95%_HPD={0.4076,33.9749},CAheight_mean=25.48066576684675,CAheight_median=2.2971,CAheight_range={0.3816,4098.0116},height=25.48066576684675,height_95%_HPD={0.4076,33.9749},height_median=2.2971,height_range={0.3816,4098.0116},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

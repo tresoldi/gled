@@ -1,0 +1,161 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=105;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_boran.blood.0008,
+        3 blood_boran.blood.0009,
+        4 blood_boran.blood.0010,
+        5 blood_boran.blood.0011,
+        6 bone_0ascertainment,
+        7 bone_boran.bone.0012,
+        8 breast_0ascertainment,
+        9 breast_boran.breast.0013,
+        10 come_0ascertainment,
+        11 come_boran.come.0014,
+        12 die_0ascertainment,
+        13 die_boran.die.0015,
+        14 die_boran.die.0016,
+        15 dog_0ascertainment,
+        16 dog_boran.dog.0017,
+        17 dog_boran.dog.0018,
+        18 dog_boran.dog.0019,
+        19 drink_0ascertainment,
+        20 drink_boran.drink.0020,
+        21 ear_0ascertainment,
+        22 ear_boran.ear.0021,
+        23 eye_0ascertainment,
+        24 eye_boran.eye.0022,
+        25 eye_boran.eye.0023,
+        26 fire_0ascertainment,
+        27 fire_boran.fire.0024,
+        28 fire_boran.fire.0025,
+        29 fish_0ascertainment,
+        30 fish_boran.fish.0026,
+        31 fish_boran.fish.0027,
+        32 full_0ascertainment,
+        33 full_boran.full.0028,
+        34 hand_0ascertainment,
+        35 hand_boran.hand.0029,
+        36 hear_0ascertainment,
+        37 hear_boran.hear.0030,
+        38 hear_boran.hear.0031,
+        39 horn_0ascertainment,
+        40 horn_boran.horn.0032,
+        41 horn_boran.horn.0033,
+        42 horn_boran.horn.0034,
+        43 knee_0ascertainment,
+        44 knee_boran.knee.0035,
+        45 leaf_0ascertainment,
+        46 leaf_boran.leaf.0036,
+        47 leaf_boran.leaf.0037,
+        48 liver_0ascertainment,
+        49 liver_boran.liver.0038,
+        50 liver_boran.liver.0039,
+        51 louse_0ascertainment,
+        52 louse_boran.louse.0040,
+        53 mountain_0ascertainment,
+        54 mountain_boran.mountain.0041,
+        55 mountain_boran.mountain.0042,
+        56 mountain_boran.mountain.0043,
+        57 name_0ascertainment,
+        58 name_boran.name.0044,
+        59 new_0ascertainment,
+        60 new_boran.new.0045,
+        61 new_boran.new.0046,
+        62 night_0ascertainment,
+        63 night_boran.night.0047,
+        64 nose_0ascertainment,
+        65 nose_boran.nose.0048,
+        66 one_0ascertainment,
+        67 one_boran.one.0049,
+        68 one_boran.one.0050,
+        69 path_0ascertainment,
+        70 path_boran.path.0051,
+        71 path_boran.path.0052,
+        72 person_0ascertainment,
+        73 person_boran.person.0053,
+        74 pl_0ascertainment,
+        75 pl_boran.1pl.0001,
+        76 pl_boran.1pl.0002,
+        77 see_0ascertainment,
+        78 see_boran.see.0054,
+        79 see_boran.see.0055,
+        80 sg_0ascertainment,
+        81 sg_boran.1sg.0003,
+        82 sg_boran.1sg.0004,
+        83 sg_boran.2sg.0005,
+        84 sg_boran.2sg.0006,
+        85 sg_boran.2sg.0007,
+        86 skin_0ascertainment,
+        87 skin_boran.skin.0056,
+        88 star_0ascertainment,
+        89 star_boran.star.0057,
+        90 stone_0ascertainment,
+        91 stone_boran.stone.0058,
+        92 stone_boran.stone.0059,
+        93 sun_0ascertainment,
+        94 sun_boran.sun.0060,
+        95 sun_boran.sun.0061,
+        96 tongue_0ascertainment,
+        97 tongue_boran.tongue.0062,
+        98 tooth_0ascertainment,
+        99 tooth_boran.tooth.0063,
+        100 tree_0ascertainment,
+        101 tree_boran.tree.0064,
+        102 two_0ascertainment,
+        103 two_boran.two.0065,
+        104 water_0ascertainment,
+        105 water_boran.water.0066
+;
+
+MATRIX
+bora    010000101010100100010101001001001010100100010100100101010101001010100100101001001010001010100100101010101
+mirana  001010101010100101010101001001001010100011010100100100100100101010100100100100100001001010100100101010101
+muinane 000100101010010010010100101100101010010100010010110101010101101010010010100101000101101010010010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-7;
+    charset breast = 8-9;
+    charset come = 10-11;
+    charset die = 12-14;
+    charset dog = 15-18;
+    charset drink = 19-20;
+    charset ear = 21-22;
+    charset eye = 23-25;
+    charset fire = 26-28;
+    charset fish = 29-31;
+    charset full = 32-33;
+    charset hand = 34-35;
+    charset hear = 36-38;
+    charset horn = 39-42;
+    charset knee = 43-44;
+    charset leaf = 45-47;
+    charset liver = 48-50;
+    charset louse = 51-52;
+    charset mountain = 53-56;
+    charset name = 57-58;
+    charset new = 59-61;
+    charset night = 62-63;
+    charset nose = 64-65;
+    charset one = 66-68;
+    charset path = 69-71;
+    charset person = 72-73;
+    charset pl = 74-76;
+    charset see = 77-79;
+    charset sg = 80-85;
+    charset skin = 86-87;
+    charset star = 88-89;
+    charset stone = 90-92;
+    charset sun = 93-95;
+    charset tongue = 96-97;
+    charset tooth = 98-99;
+    charset tree = 100-101;
+    charset two = 102-103;
+    charset water = 104-105;
+END;

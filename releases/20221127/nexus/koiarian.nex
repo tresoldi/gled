@@ -1,0 +1,174 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=119;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_koiarian.blood.0010,
+        3 bone_0ascertainment,
+        4 bone_koiarian.bone.0011,
+        5 bone_koiarian.bone.0012,
+        6 breast_0ascertainment,
+        7 breast_koiarian.breast.0013,
+        8 breast_koiarian.breast.0014,
+        9 come_0ascertainment,
+        10 come_koiarian.come.0015,
+        11 come_koiarian.come.0016,
+        12 die_0ascertainment,
+        13 die_koiarian.die.0017,
+        14 die_koiarian.die.0018,
+        15 die_koiarian.die.0019,
+        16 die_koiarian.die.0020,
+        17 die_koiarian.die.0021,
+        18 die_koiarian.die.0022,
+        19 dog_0ascertainment,
+        20 dog_koiarian.dog.0023,
+        21 dog_koiarian.dog.0024,
+        22 drink_0ascertainment,
+        23 drink_koiarian.drink.0025,
+        24 drink_koiarian.drink.0026,
+        25 drink_koiarian.drink.0027,
+        26 ear_0ascertainment,
+        27 ear_koiarian.ear.0028,
+        28 ear_koiarian.ear.0029,
+        29 eye_0ascertainment,
+        30 eye_koiarian.eye.0030,
+        31 fire_0ascertainment,
+        32 fire_koiarian.fire.0031,
+        33 fish_0ascertainment,
+        34 fish_koiarian.fish.0032,
+        35 fish_koiarian.fish.0033,
+        36 full_0ascertainment,
+        37 full_koiarian.full.0034,
+        38 full_koiarian.full.0035,
+        39 hand_0ascertainment,
+        40 hand_koiarian.hand.0036,
+        41 hand_koiarian.hand.0037,
+        42 hear_0ascertainment,
+        43 hear_koiarian.hear.0038,
+        44 hear_koiarian.hear.0039,
+        45 horn_0ascertainment,
+        46 horn_koiarian.horn.0040,
+        47 horn_koiarian.horn.0041,
+        48 knee_0ascertainment,
+        49 knee_koiarian.knee.0042,
+        50 knee_koiarian.knee.0043,
+        51 leaf_0ascertainment,
+        52 leaf_koiarian.leaf.0044,
+        53 leaf_koiarian.leaf.0045,
+        54 liver_0ascertainment,
+        55 liver_koiarian.liver.0046,
+        56 louse_0ascertainment,
+        57 louse_koiarian.louse.0047,
+        58 mountain_0ascertainment,
+        59 mountain_koiarian.mountain.0048,
+        60 mountain_koiarian.mountain.0049,
+        61 name_0ascertainment,
+        62 name_koiarian.name.0050,
+        63 new_0ascertainment,
+        64 new_koiarian.new.0051,
+        65 new_koiarian.new.0052,
+        66 night_0ascertainment,
+        67 night_koiarian.night.0053,
+        68 night_koiarian.night.0054,
+        69 nose_0ascertainment,
+        70 nose_koiarian.nose.0055,
+        71 one_0ascertainment,
+        72 one_koiarian.one.0056,
+        73 one_koiarian.one.0057,
+        74 path_0ascertainment,
+        75 path_koiarian.path.0058,
+        76 path_koiarian.path.0059,
+        77 path_koiarian.path.0060,
+        78 person_0ascertainment,
+        79 person_koiarian.person.0061,
+        80 person_koiarian.person.0062,
+        81 pl_0ascertainment,
+        82 pl_koiarian.1pl.0001,
+        83 pl_koiarian.1pl.0002,
+        84 see_0ascertainment,
+        85 see_koiarian.see.0063,
+        86 see_koiarian.see.0064,
+        87 sg_0ascertainment,
+        88 sg_koiarian.1sg.0003,
+        89 sg_koiarian.1sg.0004,
+        90 sg_koiarian.1sg.0005,
+        91 sg_koiarian.2sg.0006,
+        92 sg_koiarian.2sg.0007,
+        93 sg_koiarian.2sg.0008,
+        94 sg_koiarian.2sg.0009,
+        95 skin_0ascertainment,
+        96 skin_koiarian.skin.0065,
+        97 skin_koiarian.skin.0066,
+        98 star_0ascertainment,
+        99 star_koiarian.star.0067,
+        100 star_koiarian.star.0068,
+        101 stone_0ascertainment,
+        102 stone_koiarian.stone.0069,
+        103 sun_0ascertainment,
+        104 sun_koiarian.sun.0070,
+        105 sun_koiarian.sun.0071,
+        106 tongue_0ascertainment,
+        107 tongue_koiarian.tongue.0072,
+        108 tongue_koiarian.tongue.0073,
+        109 tooth_0ascertainment,
+        110 tooth_koiarian.tooth.0074,
+        111 tooth_koiarian.tooth.0075,
+        112 tree_0ascertainment,
+        113 tree_koiarian.tree.0076,
+        114 two_0ascertainment,
+        115 two_koiarian.two.0077,
+        116 two_koiarian.two.0078,
+        117 water_0ascertainment,
+        118 water_koiarian.water.0079,
+        119 water_koiarian.water.0080
+;
+
+MATRIX
+ese_managalasi 0?01101001001010000??010001001010100100100100??0100100?0101001010010010100101010010010010010000100100101001001001010010
+koiari_2       01001001001001011101100110010101001001011001011001001010100101001001010010010001011001001101110010010100100100101001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-8;
+    charset come = 9-11;
+    charset die = 12-18;
+    charset dog = 19-21;
+    charset drink = 22-25;
+    charset ear = 26-28;
+    charset eye = 29-30;
+    charset fire = 31-32;
+    charset fish = 33-35;
+    charset full = 36-38;
+    charset hand = 39-41;
+    charset hear = 42-44;
+    charset horn = 45-47;
+    charset knee = 48-50;
+    charset leaf = 51-53;
+    charset liver = 54-55;
+    charset louse = 56-57;
+    charset mountain = 58-60;
+    charset name = 61-62;
+    charset new = 63-65;
+    charset night = 66-68;
+    charset nose = 69-70;
+    charset one = 71-73;
+    charset path = 74-77;
+    charset person = 78-80;
+    charset pl = 81-83;
+    charset see = 84-86;
+    charset sg = 87-94;
+    charset skin = 95-97;
+    charset star = 98-100;
+    charset stone = 101-102;
+    charset sun = 103-105;
+    charset tongue = 106-108;
+    charset tooth = 109-111;
+    charset tree = 112-113;
+    charset two = 114-116;
+    charset water = 117-119;
+END;

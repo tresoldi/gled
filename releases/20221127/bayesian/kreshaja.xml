@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <taxon id="AjaSouthSudan_ajas1235" />
+    <taxon id="Kresh-Woro_gbay1288" />
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_kreshaja" name="data_kreshaja" dataType="integer">
+    <sequence id="language_data_kreshaja:AjaSouthSudan_ajas1235" taxon="AjaSouthSudan_ajas1235" value="010011011010010010100100100100100100100100100100100100100100100100100100100100010010010010010010" />
+    <sequence id="language_data_kreshaja:Kresh-Woro_gbay1288" taxon="Kresh-Woro_gbay1288" value="001010001001001001010010010010010010010010010010010010010010010010010010010011001001001001001001" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,ear,eye,fire,fish,hear,horn,knee,mountain,name,new,nose,one,path,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:kreshaja:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:kreshaja" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:kreshaja" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:kreshaja" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:kreshaja" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.RandomTree">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(AjaSouthSudan_ajas1235,Kresh-Woro_gbay1288);" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:kreshaja" name="distribution">
+          <input id="featureClockRateCompound:kreshaja" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,ear,eye,fire,fish,hear,horn,knee,mountain,name,new,nose,one,path,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:kreshaja:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:kreshaja" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:kreshaja" beta="@featureClockRateGammaScale:kreshaja" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:kreshaja" name="distribution" x="@featureClockRateGammaScale:kreshaja">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:kreshaja" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:kreshaja" name="distribution" x="@covarion_alpha.s:kreshaja">
+          <Uniform id="CovAlphaUniform:kreshaja" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:kreshaja" name="distribution" x="@covarion_s.s:kreshaja">
+          <Gamma id="Gamma.0:kreshaja" name="distr">
+            <parameter id="covarion_switch_gamma_param1:kreshaja" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:kreshaja" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:kreshaja:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:1pl" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:kreshaja" spec="BinaryCovarion" alpha="@covarion_alpha.s:kreshaja" switchRate="@covarion_s.s:kreshaja">
+              <vfrequencies id="kreshaja:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.65 0.35</vfrequencies>
+              <parameter id="kreshaja:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="kreshaja:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_kreshaja:1pl" spec="FilteredAlignment" data="@data_kreshaja" filter="1-3" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:1sg" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:1sg" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:1sg" spec="FilteredAlignment" data="@data_kreshaja" filter="4-6" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:2sg" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:2sg" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:2sg" spec="FilteredAlignment" data="@data_kreshaja" filter="7-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:blood" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:blood" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:blood" spec="FilteredAlignment" data="@data_kreshaja" filter="10-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:bone" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:bone" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:bone" spec="FilteredAlignment" data="@data_kreshaja" filter="13-15" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:breast" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:breast" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:breast" spec="FilteredAlignment" data="@data_kreshaja" filter="16-20" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:come" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:come" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:come" spec="FilteredAlignment" data="@data_kreshaja" filter="21-23" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:die" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:die" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:die" spec="FilteredAlignment" data="@data_kreshaja" filter="24-26" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:dog" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:dog" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:dog" spec="FilteredAlignment" data="@data_kreshaja" filter="27-29" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:ear" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:ear" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:ear" spec="FilteredAlignment" data="@data_kreshaja" filter="30-32" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:eye" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:eye" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:eye" spec="FilteredAlignment" data="@data_kreshaja" filter="33-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:fire" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:fire" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:fire" spec="FilteredAlignment" data="@data_kreshaja" filter="36-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:fish" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:fish" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:fish" spec="FilteredAlignment" data="@data_kreshaja" filter="39-41" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:hear" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:hear" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:hear" spec="FilteredAlignment" data="@data_kreshaja" filter="42-44" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:horn" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:horn" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:horn" spec="FilteredAlignment" data="@data_kreshaja" filter="45-47" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:knee" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:knee" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:knee" spec="FilteredAlignment" data="@data_kreshaja" filter="48-50" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:mountain" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:mountain" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:mountain" spec="FilteredAlignment" data="@data_kreshaja" filter="51-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:name" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:name" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:name" spec="FilteredAlignment" data="@data_kreshaja" filter="54-56" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:new" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:new" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:new" spec="FilteredAlignment" data="@data_kreshaja" filter="57-59" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:nose" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:nose" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:nose" spec="FilteredAlignment" data="@data_kreshaja" filter="60-62" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:one" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:one" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:one" spec="FilteredAlignment" data="@data_kreshaja" filter="63-65" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:path" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:path" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:path" spec="FilteredAlignment" data="@data_kreshaja" filter="66-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:skin" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:skin" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:skin" spec="FilteredAlignment" data="@data_kreshaja" filter="69-71" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:star" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:star" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:star" spec="FilteredAlignment" data="@data_kreshaja" filter="72-74" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:stone" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:stone" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:stone" spec="FilteredAlignment" data="@data_kreshaja" filter="75-78" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:sun" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:sun" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:sun" spec="FilteredAlignment" data="@data_kreshaja" filter="79-81" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:tongue" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:tongue" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:tongue" spec="FilteredAlignment" data="@data_kreshaja" filter="82-84" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:tooth" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:tooth" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:tooth" spec="FilteredAlignment" data="@data_kreshaja" filter="85-87" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:tree" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:tree" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:tree" spec="FilteredAlignment" data="@data_kreshaja" filter="88-90" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:two" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:two" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:two" spec="FilteredAlignment" data="@data_kreshaja" filter="91-93" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kreshaja:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kreshaja:water" spec="SiteModel" mutationRate="@featureClockRate:kreshaja:water" proportionInvariant="0" substModel="@covarion.s:kreshaja" />
+          <data id="feature_data_kreshaja:water" spec="FilteredAlignment" data="@data_kreshaja" filter="94-96" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:kreshaja" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:kreshaja" name="up" />
+      <parameter idref="featureClockRateGammaScale:kreshaja" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:kreshaja" spec="ScaleOperator" parameter="@covarion_alpha.s:kreshaja" scaleFactor="0.5" weight="1.0" />
+    <operator id="kreshaja:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:kreshaja" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,ear,eye,fire,fish,hear,horn,knee,mountain,name,new,nose,one,path,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:kreshaja:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="31" estimate="false">2 2 2 2 2 4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="kreshaja.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,ear,eye,fire,fish,hear,horn,knee,mountain,name,new,nose,one,path,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:kreshaja:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:kreshaja" />
+      <log idref="covarion_alpha.s:kreshaja" />
+      <log idref="covarion_s.s:kreshaja" />
+    </logger>
+    <logger mode="tree" fileName="kreshaja.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

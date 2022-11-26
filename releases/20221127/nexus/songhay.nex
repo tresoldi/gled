@@ -1,0 +1,205 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=9 NCHAR=143;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_songhay.blood.0011,
+        3 bone_0ascertainment,
+        4 bone_songhay.bone.0012,
+        5 breast_0ascertainment,
+        6 breast_songhay.breast.0013,
+        7 breast_songhay.breast.0014,
+        8 breast_songhay.breast.0015,
+        9 come_0ascertainment,
+        10 come_songhay.come.0016,
+        11 come_songhay.come.0017,
+        12 die_0ascertainment,
+        13 die_songhay.die.0018,
+        14 dog_0ascertainment,
+        15 dog_songhay.dog.0019,
+        16 drink_0ascertainment,
+        17 drink_songhay.drink.0020,
+        18 drink_songhay.drink.0021,
+        19 drink_songhay.drink.0022,
+        20 drink_songhay.drink.0023,
+        21 ear_0ascertainment,
+        22 ear_songhay.ear.0024,
+        23 eye_0ascertainment,
+        24 eye_songhay.eye.0025,
+        25 eye_songhay.eye.0026,
+        26 fire_0ascertainment,
+        27 fire_songhay.fire.0027,
+        28 fire_songhay.fire.0028,
+        29 fire_songhay.fire.0029,
+        30 fire_songhay.fire.0030,
+        31 fish_0ascertainment,
+        32 fish_songhay.fish.0031,
+        33 fish_songhay.fish.0032,
+        34 fish_songhay.fish.0033,
+        35 fish_songhay.fish.0034,
+        36 fish_songhay.fish.0035,
+        37 fish_songhay.fish.0036,
+        38 fish_songhay.fish.0037,
+        39 fish_songhay.fish.0038,
+        40 full_0ascertainment,
+        41 full_songhay.full.0039,
+        42 full_songhay.full.0040,
+        43 hand_0ascertainment,
+        44 hand_songhay.hand.0041,
+        45 hear_0ascertainment,
+        46 hear_songhay.hear.0042,
+        47 horn_0ascertainment,
+        48 horn_songhay.horn.0043,
+        49 horn_songhay.horn.0044,
+        50 horn_songhay.horn.0045,
+        51 horn_songhay.horn.0046,
+        52 knee_0ascertainment,
+        53 knee_songhay.knee.0047,
+        54 knee_songhay.knee.0048,
+        55 knee_songhay.knee.0049,
+        56 leaf_0ascertainment,
+        57 leaf_songhay.leaf.0050,
+        58 leaf_songhay.leaf.0051,
+        59 leaf_songhay.leaf.0052,
+        60 leaf_songhay.leaf.0053,
+        61 leaf_songhay.leaf.0054,
+        62 liver_0ascertainment,
+        63 liver_songhay.liver.0055,
+        64 liver_songhay.liver.0056,
+        65 liver_songhay.liver.0057,
+        66 louse_0ascertainment,
+        67 louse_songhay.louse.0058,
+        68 mountain_0ascertainment,
+        69 mountain_songhay.mountain.0059,
+        70 mountain_songhay.mountain.0060,
+        71 mountain_songhay.mountain.0061,
+        72 mountain_songhay.mountain.0062,
+        73 name_0ascertainment,
+        74 name_songhay.name.0063,
+        75 new_0ascertainment,
+        76 new_songhay.new.0064,
+        77 new_songhay.new.0065,
+        78 new_songhay.new.0066,
+        79 new_songhay.new.0067,
+        80 night_0ascertainment,
+        81 night_songhay.night.0068,
+        82 night_songhay.night.0069,
+        83 nose_0ascertainment,
+        84 nose_songhay.nose.0070,
+        85 nose_songhay.nose.0071,
+        86 one_0ascertainment,
+        87 one_songhay.one.0072,
+        88 path_0ascertainment,
+        89 path_songhay.path.0073,
+        90 path_songhay.path.0074,
+        91 path_songhay.path.0075,
+        92 path_songhay.path.0076,
+        93 path_songhay.path.0077,
+        94 path_songhay.path.0078,
+        95 person_0ascertainment,
+        96 person_songhay.person.0079,
+        97 pl_0ascertainment,
+        98 pl_songhay.1pl.0001,
+        99 pl_songhay.1pl.0002,
+        100 pl_songhay.1pl.0003,
+        101 pl_songhay.1pl.0004,
+        102 see_0ascertainment,
+        103 see_songhay.see.0080,
+        104 see_songhay.see.0081,
+        105 see_songhay.see.0082,
+        106 see_songhay.see.0083,
+        107 sg_0ascertainment,
+        108 sg_songhay.1sg.0005,
+        109 sg_songhay.1sg.0006,
+        110 sg_songhay.1sg.0007,
+        111 sg_songhay.1sg.0008,
+        112 sg_songhay.2sg.0009,
+        113 sg_songhay.2sg.0010,
+        114 skin_0ascertainment,
+        115 skin_songhay.skin.0084,
+        116 skin_songhay.skin.0085,
+        117 star_0ascertainment,
+        118 star_songhay.star.0086,
+        119 star_songhay.star.0087,
+        120 star_songhay.star.0088,
+        121 star_songhay.star.0089,
+        122 star_songhay.star.0090,
+        123 stone_0ascertainment,
+        124 stone_songhay.stone.0091,
+        125 stone_songhay.stone.0092,
+        126 sun_0ascertainment,
+        127 sun_songhay.sun.0093,
+        128 tongue_0ascertainment,
+        129 tongue_songhay.tongue.0094,
+        130 tongue_songhay.tongue.0095,
+        131 tongue_songhay.tongue.0096,
+        132 tooth_0ascertainment,
+        133 tooth_songhay.tooth.0097,
+        134 tooth_songhay.tooth.0098,
+        135 tooth_songhay.tooth.0099,
+        136 tree_0ascertainment,
+        137 tree_songhay.tree.0100,
+        138 tree_songhay.tree.0101,
+        139 two_0ascertainment,
+        140 two_songhay.two.0102,
+        141 water_0ascertainment,
+        142 water_songhay.water.0103,
+        143 water_songhay.water.0104
+;
+
+MATRIX
+dendi               01010100010010101000010100100001000000001001010100001000100000100010100001010000100100101000000101000010000100010010010000010010100010001001010
+djenne_chiini       01010100010010100100010100110000100000001001010????01000010000010010010001001000010100100100010100100001010100011010001000011010100010001001010
+korandje            0101001001001010010001010000100001000000100101001000100000100001001000100100010001010010001000010001000010010001001000010001001010000100??01010
+koroboro_senni      010101100100101000100101001000001010000010010100010010000100000100?0010001011000010100100100010101001011010110011010010000010010100010001001010
+koyra_chiini        01010100010010100100010100100000000100001001010001001000010000010010010001001000010100100100010100100001010100011010011000010010100010001001010
+tadaksahak          01010001001010100100010100001000000010001001010100000100000100010010010001000010010010100001000101000001000001010010000010010010010000101001001
+tasawaq             01010010010010100100010100001000000001001001010000100010000010???0100001010100000101001000001001010000010001000100010000010100100010001010010??
+tondi_songway_kiini 010101000100101000110101101000000000001011010101000010001000000010100100010001001001001000000101010000100000001100100?????010010100010000101010
+zarma               01010100010010100010010100000100001000001001010100001000100000010010????01010000100100100000010101000010000100010010010000010010100010001001010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-8;
+    charset come = 9-11;
+    charset die = 12-13;
+    charset dog = 14-15;
+    charset drink = 16-20;
+    charset ear = 21-22;
+    charset eye = 23-25;
+    charset fire = 26-30;
+    charset fish = 31-39;
+    charset full = 40-42;
+    charset hand = 43-44;
+    charset hear = 45-46;
+    charset horn = 47-51;
+    charset knee = 52-55;
+    charset leaf = 56-61;
+    charset liver = 62-65;
+    charset louse = 66-67;
+    charset mountain = 68-72;
+    charset name = 73-74;
+    charset new = 75-79;
+    charset night = 80-82;
+    charset nose = 83-85;
+    charset one = 86-87;
+    charset path = 88-94;
+    charset person = 95-96;
+    charset pl = 97-101;
+    charset see = 102-106;
+    charset sg = 107-113;
+    charset skin = 114-116;
+    charset star = 117-122;
+    charset stone = 123-125;
+    charset sun = 126-127;
+    charset tongue = 128-131;
+    charset tooth = 132-135;
+    charset tree = 136-138;
+    charset two = 139-140;
+    charset water = 141-143;
+END;

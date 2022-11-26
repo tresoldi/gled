@@ -1,0 +1,169 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=6 NCHAR=110;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_nivkh.blood.0006,
+        3 blood_nivkh.blood.0007,
+        4 bone_0ascertainment,
+        5 bone_nivkh.bone.0008,
+        6 bone_nivkh.bone.0009,
+        7 breast_0ascertainment,
+        8 breast_nivkh.breast.0010,
+        9 breast_nivkh.breast.0011,
+        10 breast_nivkh.breast.0012,
+        11 breast_nivkh.breast.0013,
+        12 come_0ascertainment,
+        13 come_nivkh.come.0014,
+        14 die_0ascertainment,
+        15 die_nivkh.die.0015,
+        16 dog_0ascertainment,
+        17 dog_nivkh.dog.0016,
+        18 drink_0ascertainment,
+        19 drink_nivkh.drink.0017,
+        20 ear_0ascertainment,
+        21 ear_nivkh.ear.0018,
+        22 ear_nivkh.ear.0019,
+        23 eye_0ascertainment,
+        24 eye_nivkh.eye.0020,
+        25 fire_0ascertainment,
+        26 fire_nivkh.fire.0021,
+        27 fire_nivkh.fire.0022,
+        28 fish_0ascertainment,
+        29 fish_nivkh.fish.0023,
+        30 full_0ascertainment,
+        31 full_nivkh.full.0024,
+        32 hand_0ascertainment,
+        33 hand_nivkh.hand.0025,
+        34 hand_nivkh.hand.0026,
+        35 hear_0ascertainment,
+        36 hear_nivkh.hear.0027,
+        37 horn_0ascertainment,
+        38 horn_nivkh.horn.0028,
+        39 knee_0ascertainment,
+        40 knee_nivkh.knee.0029,
+        41 leaf_0ascertainment,
+        42 leaf_nivkh.leaf.0030,
+        43 leaf_nivkh.leaf.0031,
+        44 liver_0ascertainment,
+        45 liver_nivkh.liver.0032,
+        46 liver_nivkh.liver.0033,
+        47 louse_0ascertainment,
+        48 louse_nivkh.louse.0034,
+        49 louse_nivkh.louse.0035,
+        50 louse_nivkh.louse.0036,
+        51 mountain_0ascertainment,
+        52 mountain_nivkh.mountain.0037,
+        53 mountain_nivkh.mountain.0038,
+        54 mountain_nivkh.mountain.0039,
+        55 mountain_nivkh.mountain.0040,
+        56 mountain_nivkh.mountain.0041,
+        57 name_0ascertainment,
+        58 name_nivkh.name.0042,
+        59 name_nivkh.name.0043,
+        60 new_0ascertainment,
+        61 new_nivkh.new.0044,
+        62 new_nivkh.new.0045,
+        63 night_0ascertainment,
+        64 night_nivkh.night.0046,
+        65 night_nivkh.night.0047,
+        66 night_nivkh.night.0048,
+        67 nose_0ascertainment,
+        68 nose_nivkh.nose.0049,
+        69 nose_nivkh.nose.0050,
+        70 one_0ascertainment,
+        71 one_nivkh.one.0051,
+        72 path_0ascertainment,
+        73 path_nivkh.path.0052,
+        74 person_0ascertainment,
+        75 person_nivkh.person.0053,
+        76 pl_0ascertainment,
+        77 pl_nivkh.1pl.0001,
+        78 pl_nivkh.1pl.0002,
+        79 pl_nivkh.1pl.0003,
+        80 see_0ascertainment,
+        81 see_nivkh.see.0054,
+        82 see_nivkh.see.0055,
+        83 see_nivkh.see.0056,
+        84 see_nivkh.see.0057,
+        85 sg_0ascertainment,
+        86 sg_nivkh.1sg.0004,
+        87 sg_nivkh.2sg.0005,
+        88 skin_0ascertainment,
+        89 skin_nivkh.skin.0058,
+        90 skin_nivkh.skin.0059,
+        91 skin_nivkh.skin.0060,
+        92 star_0ascertainment,
+        93 star_nivkh.star.0061,
+        94 stone_0ascertainment,
+        95 stone_nivkh.stone.0062,
+        96 stone_nivkh.stone.0063,
+        97 sun_0ascertainment,
+        98 sun_nivkh.sun.0064,
+        99 tongue_0ascertainment,
+        100 tongue_nivkh.tongue.0065,
+        101 tooth_0ascertainment,
+        102 tooth_nivkh.tooth.0066,
+        103 tooth_nivkh.tooth.0067,
+        104 tree_0ascertainment,
+        105 tree_nivkh.tree.0068,
+        106 two_0ascertainment,
+        107 two_nivkh.two.0069,
+        108 two_nivkh.two.0070,
+        109 water_0ascertainment,
+        110 water_nivkh.water.0071
+;
+
+MATRIX
+gilyak_amur           010010010000101010101001010010?0100101010100100100010100011010010001001010101010110001101000101101010100101101
+gilyak_east_sakhalin  00101000100010101010010101101010100101010110010010001100011010010000101010101000010001101100101101010110101101
+gilyak_north_sakhalin 01001000010010101010100101001010100101010100100001000100001010010000101010101010001001101000101001010100101101
+gilyak_south_sakhalin 00101000001010101010010101001010100101010110110???000100001001010000101010101000010001101010101001010100101001
+gilyak_west_sakhalin  0100110????0101010101001010010?0100101010100010???0000100??010010001101010101110000101101000101001010100101101
+nivkh                 0110100????0101010100101010010?0010?01010100100???0001010010100011011010?0101000010001101100101001010100101001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-11;
+    charset come = 12-13;
+    charset die = 14-15;
+    charset dog = 16-17;
+    charset drink = 18-19;
+    charset ear = 20-22;
+    charset eye = 23-24;
+    charset fire = 25-27;
+    charset fish = 28-29;
+    charset full = 30-31;
+    charset hand = 32-34;
+    charset hear = 35-36;
+    charset horn = 37-38;
+    charset knee = 39-40;
+    charset leaf = 41-43;
+    charset liver = 44-46;
+    charset louse = 47-50;
+    charset mountain = 51-56;
+    charset name = 57-59;
+    charset new = 60-62;
+    charset night = 63-66;
+    charset nose = 67-69;
+    charset one = 70-71;
+    charset path = 72-73;
+    charset person = 74-75;
+    charset pl = 76-79;
+    charset see = 80-84;
+    charset sg = 85-87;
+    charset skin = 88-91;
+    charset star = 92-93;
+    charset stone = 94-96;
+    charset sun = 97-98;
+    charset tongue = 99-100;
+    charset tooth = 101-103;
+    charset tree = 104-105;
+    charset two = 106-108;
+    charset water = 109-110;
+END;

@@ -1,0 +1,157 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=103;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_bulakariver.blood.0008,
+        3 bone_0ascertainment,
+        4 bone_bulakariver.bone.0009,
+        5 bone_bulakariver.bone.0010,
+        6 breast_0ascertainment,
+        7 breast_bulakariver.breast.0011,
+        8 breast_bulakariver.breast.0012,
+        9 breast_bulakariver.breast.0013,
+        10 breast_bulakariver.breast.0014,
+        11 come_0ascertainment,
+        12 come_bulakariver.come.0015,
+        13 come_bulakariver.come.0016,
+        14 come_bulakariver.come.0017,
+        15 die_0ascertainment,
+        16 die_bulakariver.die.0018,
+        17 die_bulakariver.die.0019,
+        18 dog_0ascertainment,
+        19 dog_bulakariver.dog.0020,
+        20 dog_bulakariver.dog.0021,
+        21 drink_0ascertainment,
+        22 drink_bulakariver.drink.0022,
+        23 drink_bulakariver.drink.0023,
+        24 ear_0ascertainment,
+        25 ear_bulakariver.ear.0024,
+        26 ear_bulakariver.ear.0025,
+        27 eye_0ascertainment,
+        28 eye_bulakariver.eye.0026,
+        29 fire_0ascertainment,
+        30 fire_bulakariver.fire.0027,
+        31 fish_0ascertainment,
+        32 fish_bulakariver.fish.0028,
+        33 fish_bulakariver.fish.0029,
+        34 full_0ascertainment,
+        35 full_bulakariver.full.0030,
+        36 hand_0ascertainment,
+        37 hand_bulakariver.hand.0031,
+        38 hand_bulakariver.hand.0032,
+        39 hear_0ascertainment,
+        40 hear_bulakariver.hear.0033,
+        41 knee_0ascertainment,
+        42 knee_bulakariver.knee.0034,
+        43 leaf_0ascertainment,
+        44 leaf_bulakariver.leaf.0035,
+        45 leaf_bulakariver.leaf.0036,
+        46 leaf_bulakariver.leaf.0037,
+        47 louse_0ascertainment,
+        48 louse_bulakariver.louse.0038,
+        49 louse_bulakariver.louse.0039,
+        50 mountain_0ascertainment,
+        51 mountain_bulakariver.mountain.0040,
+        52 name_0ascertainment,
+        53 name_bulakariver.name.0041,
+        54 new_0ascertainment,
+        55 new_bulakariver.new.0042,
+        56 night_0ascertainment,
+        57 night_bulakariver.night.0043,
+        58 night_bulakariver.night.0044,
+        59 nose_0ascertainment,
+        60 nose_bulakariver.nose.0045,
+        61 one_0ascertainment,
+        62 one_bulakariver.one.0046,
+        63 one_bulakariver.one.0047,
+        64 one_bulakariver.one.0048,
+        65 path_0ascertainment,
+        66 path_bulakariver.path.0049,
+        67 person_0ascertainment,
+        68 person_bulakariver.person.0050,
+        69 person_bulakariver.person.0051,
+        70 pl_0ascertainment,
+        71 pl_bulakariver.1pl.0001,
+        72 pl_bulakariver.1pl.0002,
+        73 see_0ascertainment,
+        74 see_bulakariver.see.0052,
+        75 see_bulakariver.see.0053,
+        76 sg_0ascertainment,
+        77 sg_bulakariver.1sg.0003,
+        78 sg_bulakariver.1sg.0004,
+        79 sg_bulakariver.2sg.0005,
+        80 sg_bulakariver.2sg.0006,
+        81 sg_bulakariver.2sg.0007,
+        82 skin_0ascertainment,
+        83 skin_bulakariver.skin.0054,
+        84 skin_bulakariver.skin.0055,
+        85 star_0ascertainment,
+        86 star_bulakariver.star.0056,
+        87 star_bulakariver.star.0057,
+        88 stone_0ascertainment,
+        89 stone_bulakariver.stone.0058,
+        90 stone_bulakariver.stone.0059,
+        91 sun_0ascertainment,
+        92 sun_bulakariver.sun.0060,
+        93 sun_bulakariver.sun.0061,
+        94 tongue_0ascertainment,
+        95 tongue_bulakariver.tongue.0062,
+        96 tooth_0ascertainment,
+        97 tooth_bulakariver.tooth.0063,
+        98 tree_0ascertainment,
+        99 tree_bulakariver.tree.0064,
+        100 two_0ascertainment,
+        101 two_bulakariver.two.0065,
+        102 water_0ascertainment,
+        103 water_bulakariver.water.0066
+;
+
+MATRIX
+jabsch     0101001101010001001001001001010100?010010101000100?0101011010100010100100??0111000100100110100101010101
+yelmek     01001001000011001001001001010100101001010100100010101010010100100?0010010100100110010010010010101010101
+yelmek_jab 0100100010010001001001001001010100?010010100010100?0101011010101010100100010111000100100100100101010?01
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-10;
+    charset come = 11-14;
+    charset die = 15-17;
+    charset dog = 18-20;
+    charset drink = 21-23;
+    charset ear = 24-26;
+    charset eye = 27-28;
+    charset fire = 29-30;
+    charset fish = 31-33;
+    charset full = 34-35;
+    charset hand = 36-38;
+    charset hear = 39-40;
+    charset knee = 41-42;
+    charset leaf = 43-46;
+    charset louse = 47-49;
+    charset mountain = 50-51;
+    charset name = 52-53;
+    charset new = 54-55;
+    charset night = 56-58;
+    charset nose = 59-60;
+    charset one = 61-64;
+    charset path = 65-66;
+    charset person = 67-69;
+    charset pl = 70-72;
+    charset see = 73-75;
+    charset sg = 76-81;
+    charset skin = 82-84;
+    charset star = 85-87;
+    charset stone = 88-90;
+    charset sun = 91-93;
+    charset tongue = 94-95;
+    charset tooth = 96-97;
+    charset tree = 98-99;
+    charset two = 100-101;
+    charset water = 102-103;
+END;

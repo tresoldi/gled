@@ -1,0 +1,209 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=6 NCHAR=150;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_southomotic.blood.0006,
+        3 blood_southomotic.blood.0007,
+        4 bone_0ascertainment,
+        5 bone_southomotic.bone.0008,
+        6 bone_southomotic.bone.0009,
+        7 breast_0ascertainment,
+        8 breast_southomotic.breast.0010,
+        9 breast_southomotic.breast.0011,
+        10 come_0ascertainment,
+        11 come_southomotic.come.0012,
+        12 come_southomotic.come.0013,
+        13 come_southomotic.come.0014,
+        14 come_southomotic.come.0015,
+        15 come_southomotic.come.0016,
+        16 die_0ascertainment,
+        17 die_southomotic.die.0017,
+        18 die_southomotic.die.0018,
+        19 die_southomotic.die.0019,
+        20 die_southomotic.die.0020,
+        21 die_southomotic.die.0021,
+        22 dog_0ascertainment,
+        23 dog_southomotic.dog.0022,
+        24 dog_southomotic.dog.0023,
+        25 dog_southomotic.dog.0024,
+        26 drink_0ascertainment,
+        27 drink_southomotic.drink.0025,
+        28 drink_southomotic.drink.0026,
+        29 ear_0ascertainment,
+        30 ear_southomotic.ear.0027,
+        31 eye_0ascertainment,
+        32 eye_southomotic.eye.0028,
+        33 eye_southomotic.eye.0029,
+        34 fire_0ascertainment,
+        35 fire_southomotic.fire.0030,
+        36 fire_southomotic.fire.0031,
+        37 fish_0ascertainment,
+        38 fish_southomotic.fish.0032,
+        39 fish_southomotic.fish.0033,
+        40 fish_southomotic.fish.0034,
+        41 full_0ascertainment,
+        42 full_southomotic.full.0035,
+        43 full_southomotic.full.0036,
+        44 hand_0ascertainment,
+        45 hand_southomotic.hand.0037,
+        46 hear_0ascertainment,
+        47 hear_southomotic.hear.0038,
+        48 hear_southomotic.hear.0039,
+        49 hear_southomotic.hear.0040,
+        50 hear_southomotic.hear.0041,
+        51 hear_southomotic.hear.0042,
+        52 horn_0ascertainment,
+        53 horn_southomotic.horn.0043,
+        54 horn_southomotic.horn.0044,
+        55 horn_southomotic.horn.0045,
+        56 knee_0ascertainment,
+        57 knee_southomotic.knee.0046,
+        58 knee_southomotic.knee.0047,
+        59 leaf_0ascertainment,
+        60 leaf_southomotic.leaf.0048,
+        61 leaf_southomotic.leaf.0049,
+        62 leaf_southomotic.leaf.0050,
+        63 leaf_southomotic.leaf.0051,
+        64 leaf_southomotic.leaf.0052,
+        65 liver_0ascertainment,
+        66 liver_southomotic.liver.0053,
+        67 liver_southomotic.liver.0054,
+        68 liver_southomotic.liver.0055,
+        69 louse_0ascertainment,
+        70 louse_southomotic.louse.0056,
+        71 mountain_0ascertainment,
+        72 mountain_southomotic.mountain.0057,
+        73 mountain_southomotic.mountain.0058,
+        74 mountain_southomotic.mountain.0059,
+        75 mountain_southomotic.mountain.0060,
+        76 mountain_southomotic.mountain.0061,
+        77 name_0ascertainment,
+        78 name_southomotic.name.0062,
+        79 new_0ascertainment,
+        80 new_southomotic.new.0063,
+        81 new_southomotic.new.0064,
+        82 night_0ascertainment,
+        83 night_southomotic.night.0065,
+        84 night_southomotic.night.0066,
+        85 night_southomotic.night.0067,
+        86 night_southomotic.night.0068,
+        87 nose_0ascertainment,
+        88 nose_southomotic.nose.0069,
+        89 one_0ascertainment,
+        90 one_southomotic.one.0070,
+        91 one_southomotic.one.0071,
+        92 path_0ascertainment,
+        93 path_southomotic.path.0072,
+        94 path_southomotic.path.0073,
+        95 path_southomotic.path.0074,
+        96 person_0ascertainment,
+        97 person_southomotic.person.0075,
+        98 person_southomotic.person.0076,
+        99 person_southomotic.person.0077,
+        100 pl_0ascertainment,
+        101 pl_southomotic.1pl.0001,
+        102 see_0ascertainment,
+        103 see_southomotic.see.0078,
+        104 see_southomotic.see.0079,
+        105 see_southomotic.see.0080,
+        106 sg_0ascertainment,
+        107 sg_southomotic.1sg.0002,
+        108 sg_southomotic.2sg.0003,
+        109 sg_southomotic.2sg.0004,
+        110 sg_southomotic.2sg.0005,
+        111 skin_0ascertainment,
+        112 skin_southomotic.skin.0081,
+        113 skin_southomotic.skin.0082,
+        114 skin_southomotic.skin.0083,
+        115 skin_southomotic.skin.0084,
+        116 skin_southomotic.skin.0085,
+        117 star_0ascertainment,
+        118 star_southomotic.star.0086,
+        119 star_southomotic.star.0087,
+        120 star_southomotic.star.0088,
+        121 star_southomotic.star.0089,
+        122 star_southomotic.star.0090,
+        123 stone_0ascertainment,
+        124 stone_southomotic.stone.0091,
+        125 stone_southomotic.stone.0092,
+        126 stone_southomotic.stone.0093,
+        127 sun_0ascertainment,
+        128 sun_southomotic.sun.0094,
+        129 sun_southomotic.sun.0095,
+        130 tongue_0ascertainment,
+        131 tongue_southomotic.tongue.0096,
+        132 tongue_southomotic.tongue.0097,
+        133 tongue_southomotic.tongue.0098,
+        134 tooth_0ascertainment,
+        135 tooth_southomotic.tooth.0099,
+        136 tooth_southomotic.tooth.0100,
+        137 tooth_southomotic.tooth.0101,
+        138 tooth_southomotic.tooth.0102,
+        139 tooth_southomotic.tooth.0103,
+        140 tree_0ascertainment,
+        141 tree_southomotic.tree.0104,
+        142 tree_southomotic.tree.0105,
+        143 tree_southomotic.tree.0106,
+        144 two_0ascertainment,
+        145 two_southomotic.two.0107,
+        146 two_southomotic.two.0108,
+        147 two_southomotic.two.0109,
+        148 two_southomotic.two.0110,
+        149 water_0ascertainment,
+        150 water_southomotic.water.0111
+;
+
+MATRIX
+ari         01001001001000001000001000100101001001000??01010000010001001000001000101000001010010000101001000100010100011000100000100000100010010001000001000100001
+banna       00101000100100000100000100100100101000100??01001000010001000100000100100100001001001000100100100010010100010100010000010000100001001000100000100010001
+dime        00100101000010000010000010100101000100010??01000100001000100010000010100010001001000100100100010001010010010010001000001000011010000100010000010001001
+gayil       00101001000001001000001000010101001001000??01000010000101000001001000100001001010001000101001000010010100011000000100101000100001010000001000100000101
+hamer_banna 0100100100000010000100010010010100100010010010?????01000100000010010010010000100100100010010???0???010001010000100010000100100001001001000000100010001
+karo        00101001000100000000100100100101001000100010100000101000100?????0010010000010100100001010010???0???010001010010100000000010100010001000000100100010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-9;
+    charset come = 10-15;
+    charset die = 16-21;
+    charset dog = 22-25;
+    charset drink = 26-28;
+    charset ear = 29-30;
+    charset eye = 31-33;
+    charset fire = 34-36;
+    charset fish = 37-40;
+    charset full = 41-43;
+    charset hand = 44-45;
+    charset hear = 46-51;
+    charset horn = 52-55;
+    charset knee = 56-58;
+    charset leaf = 59-64;
+    charset liver = 65-68;
+    charset louse = 69-70;
+    charset mountain = 71-76;
+    charset name = 77-78;
+    charset new = 79-81;
+    charset night = 82-86;
+    charset nose = 87-88;
+    charset one = 89-91;
+    charset path = 92-95;
+    charset person = 96-99;
+    charset pl = 100-101;
+    charset see = 102-105;
+    charset sg = 106-110;
+    charset skin = 111-116;
+    charset star = 117-122;
+    charset stone = 123-126;
+    charset sun = 127-129;
+    charset tongue = 130-133;
+    charset tooth = 134-139;
+    charset tree = 140-143;
+    charset two = 144-148;
+    charset water = 149-150;
+END;

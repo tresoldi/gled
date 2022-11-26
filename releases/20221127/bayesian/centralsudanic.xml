@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Aringa_arin1244,Avokaya_avok1242,Bagirmi_bagi1246,BakaSouthSudan_baka1274,Birri_birr1240,Bongo_bong1285,Dagba_dagb1248,Furu_furu1242,Gor_gorr1238,GulaCentralAfricanRepublic_gula1266,GulaChad_gula1269,Gulay_gula1268,JurModo_jurm1239,Kaba_kaba1281,Keliko_keli1248,Kenga_keng1240,Lendu_lend1245,Lese_lese1243,Logo_logo1259,Lugbara_lugb1240,Madi_madi1260,Mamvu_mamv1243,Mangbetu_mang1394,Mangbutu_mang1396,Mango_mang1398,Morokodo_moro1284,Morom_moro1281,Moru_moru1253,Nyamusa-Molo_nyam1279,Olubo_olub1238,Omi_omii1238,SaraKabaDeme_sara1322,Sinyar_siny1243,SouthernMadi_sout2828,Yulu-Binga_yulu1243">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_centralsudanic" name="data_centralsudanic" dataType="integer">
+    <sequence id="language_data_centralsudanic:Aringa_arin1244" taxon="Aringa_arin1244" value="0?????????????0???0?????????010000000000100000000000010000000000000001000000000000010000000000000001000000001000000000010000100000000000010000000000000010000000010000000000000100000000000010000000000000000000100000000010000000000000000000100000000000010000000000000010000000000000100000000000000001000000000000100000000000000000010000000000000100000000010000000010000000000100000000000000000000010000000000000000001000000000000100000000000000000000000100000000000000001000000001000000001000000000100000001000000000000100000000000" />
+    <sequence id="language_data_centralsudanic:Avokaya_avok1242" taxon="Avokaya_avok1242" value="0100000000000001000100001000010000000000100000000000010000000000000100100000000000010000000000000011000000001000000000100000100000000000110000000000000011000000001000000000000100000000000011000000000000000000010010000101000000000000000000010000000000010000000001110001000000000010010000001000000001000000000000100000000000000000110000000000010100000000010000001100000000001100000000000000000010010000000000000000011000000100000110000000000000000000001100000000000000001000000001000000001000000000100000001000000000000011000000100" />
+    <sequence id="language_data_centralsudanic:Bagirmi_bagi1246" taxon="Bagirmi_bagi1246" value="0010010000000001000?????????0010000000000100000000000010000000000000000100000000000010000000000000001000000001000000001000000100000000000010000000000000001000000?????????????0100000000000000100000000000000000001000000000100000000000000000001000000000001000000000000000100000000000001000000000000000100000000000110000000000000000001000000000000110000000001000000001000000000010000100000000000000000100000000000000000100000000000100000000000000000000000010100000000000001000000000100000000100000000010000000100000000000001000000000" />
+    <sequence id="language_data_centralsudanic:BakaSouthSudan_baka1274" taxon="BakaSouthSudan_baka1274" value="00100000000000010000100000000001000000000100000000000001000000000000000010000000000??????????????0001000000000100000001000000100000000000001000000000000001000000?????????????0100000000000000010000000000000000001000000000010000000000000000???????????0???????????????0???????????00000100000000000000010000000000001000000000000000010000000000000010000000000100000000010000000??????????????????????000010000000000000010000000000000001000000000000000000000001000000000000001000000000010000000010000000010000000010000000000010000000000" />
+    <sequence id="language_data_centralsudanic:Birri_birr1240" taxon="Birri_birr1240" value="01010000000000010001000000000000100000010000000000000000010000000000000011000000000010000000000000100000000001000000000010001000000000001000000000000000001000000?????????????0001000000000000000100000000000000001000000000000100000000000000???????????0???????????????0???????????0??????????????????0000100000000000010000000000000000001000000000010000000001000000???????????0??????????????????????000010000000000000000010000000000000100000000000000001001000000000000000001000000001000000001000000001000000000000100000000000010000000" />
+    <sequence id="language_data_centralsudanic:Bongo_bong1285" taxon="Bongo_bong1285" value="00100000000000010000100000000001000000000100000000000001000000000000010000000000000??????????????0001000000001000000001000000100000000000010000000000000001000000?????????????0100000000000000000010000000000000000100000001000000000000000000???????????0???????????????0???????????00000100000000000000100000000000001000000000000000000100000000000010000000000100000100000000000??????????????????????000010000000000000010000000000000001000000000000000000000000010000000000001000000001000000001000000000010000001000000000000001000000000" />
+    <sequence id="language_data_centralsudanic:Dagba_dagb1248" taxon="Dagba_dagb1248" value="0010000000000001000000100000001000000000010000000000011000000000000000010000000000001000000000000000100000000100000000100000???????????00000100000000000001000000001000000000001000000000000??????????????????00001000000????????????????????0???????????0???????????????0001000000000??????????????????00000100000000010000000000000000001000000000000000100000001000000001000000000000100000000000000000000000100000000000000100000000000000010000000000000000000000001000000010001000000000100000000100000000010000000000010000000001000000000" />
+    <sequence id="language_data_centralsudanic:Furu_furu1242" taxon="Furu_furu1242" value="00000100000000010000001000000010000000000000010000000000001000000000000100000000000000010000000000001000000000001000001000000100000000000100000000000000001000000?????????????0000100000000000000000100000000000001000000000000010000000000000000010000000000001000000000000100000000010000000000000000000100000000000100000000000000000001000000000000000100000010000000001000000000000100000000000000000000100000000000000000100000000000000000100000000000000000000100000000000001000000000100000000100000000010000000000001000000001000000000" />
+    <sequence id="language_data_centralsudanic:Gor_gorr1238" taxon="Gor_gorr1238" value="0?????????????01000000100000001000000000010000000000001000000000000000000010000000000000100000000000100000000000010000100000010000000000000000100000000000100000000010000000000000010000000000000000010000000000001000000000000001000000000000000001000000???????????????0???????????00000010000000000000000010000000000000100000000000000001000000000001000000000100000???????????00000001000000000000000000000100000000000000100000000000000000010000000000000000000001000000000001000000000100000000100000000010000000000001000000001000000000" />
+    <sequence id="language_data_centralsudanic:GulaCentralAfricanRepublic_gula1266" taxon="GulaCentralAfricanRepublic_gula1266" value="0?????????????0???0?????????001000000000000001000000001000000000000???????????????0000000100000000001000000001000000001000000100000000000100000000000000001000000000100000000000000010000000??????????????????000010000000000000000100000000000010000000000000001000000000001000000000??????????????????0????????????01000000000000000000010000000000000101000000??????00001000000000000000010000000000000000000001000000000000100000000000??????????????????????0000010000000000000100000000010000000010000000001000000????????????0010000000000" />
+    <sequence id="language_data_centralsudanic:GulaChad_gula1269" taxon="GulaChad_gula1269" value="0?????????????0???0?????????0010000000000100000000000010000000000000000000010000000000010000000000001000000000000100001000000100000000000010000000000000001000000?????????????0????????????000001000000000000000001000000000000000100000000000000000100000???????????????0000001000000??????????????????00000010000000000001000000000000010000000000000100000000001000000001000000000000000100000000000000000100000000000000000010000000000000000001000000000000000000100000000000001000000000000100000100000000010000000000000100000001000000000" />
+    <sequence id="language_data_centralsudanic:Gulay_gula1268" taxon="Gulay_gula1268" value="0010000000000001000000100000001000000000010000000000001000000000000000010000000000001000000000000000100000000100000000100000010000000000000000100000000000100000000010000000000100000000000000000000010000000000001000000000000000001000000000000000100000000000010000000000100000000000000010000000000000100000000000000001000000000000001000000000000000010000001000000001000000000000100000000000000000000000000100000000000100100000000000000000100000000000000100000000000000001000000000100000000100000000010000000000001000000001000000000" />
+    <sequence id="language_data_centralsudanic:JurModo_jurm1239" taxon="JurModo_jurm1239" value="00100010000000010000000010000001000000000100000000000010000000000000000010000000000000000000010000001000000000100000001000000100000000000010000000000000001000000000101000000000000000001000000100000000000000000010000000000000000000000010000000010000000000001000000000???????????000001000000000000000000000100000100000000000001000000000100000000000100000001000000010000000000100000000000000001000000010000000000000010000000000000000000000000000010000000000000000000100001000000000010000000000010000000001000000000000010001000000000" />
+    <sequence id="language_data_centralsudanic:Kaba_kaba1281" taxon="Kaba_kaba1281" value="0000001001000001000000000100001000000000010000000000001000000000000000010000000000001000000000000000100000000100000000100000010000000000001000001000000000100000000010000000000100000000000000000000001000000000001000000000000000000010000010???????????0000000010000000000100000000000000000100000000000100000000000000001000000000000000000010000000010010000001000000001000000000000000101000000000000010100000000000000000100000000000000000000001000000000000100000000000000001000000000100000000100000000010000000000001000000001000000000" />
+    <sequence id="language_data_centralsudanic:Keliko_keli1248" taxon="Keliko_keli1248" value="0100000000000001000100000000010000000000100000000000010000000000000010000000000000010000000000000001001000001000000000100000100000000000010000000000000010000000001000000000000100000000000010000000000100000000010010000001000000000001000000010000000000010000001000000000000010000000000000011000000001000000000000100000000000000000110000000000000100000000010000001000000000001100100000000000000000010000000000000000001010000000000000000000000100000000001100000000000001001000000001000000001000000000100000101000000000000010000000000" />
+    <sequence id="language_data_centralsudanic:Kenga_keng1240" taxon="Kenga_keng1240" value="0000010000100001000?????????001000000000010000000000000000010000000000000000100000001000000100000000100000000100000000100000010000000000001000000000000000100000010000000000100100000000000000000000000010000000001000000000000000000000100000001000000000000000100000000000000100000000000000000100000001000000000000000000010000000000001000000000100100000000000001000001000000000000000100000000000000000100000000000000000100000000100000001000000000000000000000100000000000000010000000000010000100000000010000000000000010000001000000000" />
+    <sequence id="language_data_centralsudanic:Lendu_lend1245" taxon="Lendu_lend1245" value="01000000000100010000000010000000001000000010000000000100000000000000100000000001000100000000000000000010000010000000101000000001000000000000000001000000000100000?????????????00000001000000??????????????????00000001000010000000000000000000???????????00000001000000010???????????000000000000001000000000010000000?????????????????0000000100000000000001000000010001000000010000000000000100000100000000010000000000000000000010000000000000000000010000000000000000001000000000001000001000000000000100000000100001000000000000000000100000" />
+    <sequence id="language_data_centralsudanic:Lese_lese1243" taxon="Lese_lese1243" value="01000000000000010000010000000000100000000010000000000000100000010000100000000000000001000000000000000100000000010000001000000010000010000010000000000010100000000?????????????0010000000000000001000000000000000001000000000001000000000000000000100000000000100000000000000010000000000001000000000001000010000000000001000000000000000000100000000000001000000000100000001000000000001000000000001000000000011000000000000000010000000000100000000000000000000000000100000000000000100000001000000001000000000001000000001000000000000100000000" />
+    <sequence id="language_data_centralsudanic:Logo_logo1259" taxon="Logo_logo1259" value="01000000000000010001000000000100000000001000000000000100000000000000100000000000000100000000000000100000000010000000001000001000000000000100000000000000000010000?????????????0100000000000010000000000100000001000000000000000000000100000000???????????01100000000000000???????????000000000001000000001000000000000100000000000000000100000000000000100000000010000001000000000000000000000010000000000010000000000000000010000001000000100000000000000000000001000000000000000001000000001000000000010000000100000001000000000000010000000000" />
+    <sequence id="language_data_centralsudanic:Lugbara_lugb1240" taxon="Lugbara_lugb1240" value="0100000000000001000100000000010000000000100000000000010000000000000???????????????0100000000000000010000000010000000000100001000000000000100000000000000100000000?????????????0100000000000010000000000000000000000010000000000000000001000000???????????00000000010000000???????????000000000001000000001000000000000100000000000000000010000000000000100000000010000001010000000001100000000000000000000010000000000000000001010000000000100000000000000000000101000000000000000001000000001000000001000000000100000101000000000000010000000000" />
+    <sequence id="language_data_centralsudanic:Madi_madi1260" taxon="Madi_madi1260" value="0100000000000001000000001000010000000001000000000000010000000000000001001000010000010000000000000010001000001010000000100000100000000000110000000000000010000000000000010000000100000000000010000000000000000000010010000100000000000000000000100000000000010000001000000010000000100000100000000000000001000000000000100000000000000000010000000000000100000000010000001000000000001000000000010000000000010000000000000000010010000000000000000000000001000000001000000000100000101000100001000000001000000001000000001000000000000010000000000" />
+    <sequence id="language_data_centralsudanic:Mamvu_mamv1243" taxon="Mamvu_mamv1243" value="0100000000000001000001000000000010000000001000000000000010001001010000000000001010000100000000000000010000010000000000100000000010000000000000000010000010000000000000001000010010000000000000001000000000000000001000000000001000000000100000000100000000???????????????00001000000001000100000000000000????????????0001000000000000000000100000000000000000100000100000001000000000000000000010000000000000010000000000000000010000000000000000000000100000000000000100000000000000100000001000000001000000000100000000000000001000010000010000" />
+    <sequence id="language_data_centralsudanic:Mangbetu_mang1394" taxon="Mangbetu_mang1394" value="010000000000100???0?????????00000001000000000010010100000000010000000000001000000100000000001000000000010101000000000010000001010000001000000000000100000000011000000000010000000000001100000000000000000100000?????????00000000000010000000000001000011100000000001000000???????????0000000000000001001000010000011100000000001000000000000000010000001000000000??????0000001000110000000000001000001000100010000001000001100000010000000000000100000000000000000000000000001000000001001000100000000010000000000001000????????????0000000001000" />
+    <sequence id="language_data_centralsudanic:Mangbutu_mang1396" taxon="Mangbutu_mang1396" value="010000000000010100000100000000001000000000100000001000000000001010001000000000000000010000000000000001000001000000000010000000000100010000000000001000001000000000000000001000000000000100000000000000000010000?????????000000000000000010000000010000000000000000001000000001000000000000100000000000000000000100000000000000001000000000010000000000000010000000001000000000100000??????????????????????000010000000000000000010000000000000000000000100000000000000100000000000000000001001000000001000000000001000000000000000100010000000000" />
+    <sequence id="language_data_centralsudanic:Mango_mang1398" taxon="Mango_mang1398" value="00100000000000010000001000000010000000000100000000000010000000000000000100000000000010000000000000001000000001000000001000000100000000000000001000000000001000000000100000000001000000000000000000000100000000000010000000000000000010000000000000001000000000000100000000001000000000??????????????????00100000000000000001000000000000000000000100000010000000001000000001000000000000000000000100000000000000100000000000000000100000000000000000000000100000000100000000000000001000000000100000000100000000010000000000001000000001000000000" />
+    <sequence id="language_data_centralsudanic:Morokodo_moro1284" taxon="Morokodo_moro1284" value="00100000000000010000000010000001000000000100000000000000000000010000001000000000000000001000000000000000100000100000001000000100000000000010000000000000001000000?????????????000000000001000001000000000000000000100000000000000000000100000000000100000000000010000000001000000000000000100000000000000100000000000000000000000100000000000010000000000010000000100000001000000000??????????????????????000000000001000000000010000000000000000000000000010000000000000000000100001000000000010000000000010000010000000000000000010001000000000" />
+    <sequence id="language_data_centralsudanic:Morom_moro1281" taxon="Morom_moro1281" value="0?????????????0???0?????????0010000000000100000000000010000000000000000000001000000000010000000000001000000000001000001000000100000000000010000000000000001000000?????????????0????????????0??????????????????00001000000000000000000000100000001000000000???????????????0001000000000??????????????????00100000000000000001000000000000000000000010000100000000001000000001000000000000000100000000000000000000000000100000000100000000000000000001000000000000000000100000000000000000000100000100000100000000010000000000000100000001000000000" />
+    <sequence id="language_data_centralsudanic:Moru_moru1253" taxon="Moru_moru1253" value="0100000000000001000100000000010000000001100100000000010000000000000110001000000000010000000000000010000000010000000000100000100000010000100000000000000010000001000000010000000100000000000010000000000000000001001000000100000000000000000000000000010000110000000000010000100000000011000000000010000001001000000000100000000000000000100000000000000100000000010000001100000000001000000000000000000000011010000000000000010010000000010100000000000000000000001000000000101000001000000001000000001000000001100100001000000000000110000000000" />
+    <sequence id="language_data_centralsudanic:Nyamusa-Molo_nyam1279" taxon="Nyamusa-Molo_nyam1279" value="00100000000000010000000010000001000000000100000000000010000000000000001000000000000000000000001000001000000000100000001000000100000000000010000000000000001000000?????????????0000100000001000010000000000010000001000000000000000000001000000000001000000000000110000000010000000000000001000000000000000000000100000000000000000100100000000100001000000100010001000000010000000000000000000010000000100000000000000010000000000000010000000000000000000010000001000000000000000001000000000010000000000010100000001000000000000010001000000010" />
+    <sequence id="language_data_centralsudanic:Olubo_olub1238" taxon="Olubo_olub1238" value="0100000000000001000100000000010000000001000000000000010000000000000000001000010000010000000000000010000000001000000000100000100000000000100000000000000010000000000000100000000100000000000010000000000000000000010010000000000000000000010000100000000000000000001000000000000001000000100000000000000001000000000000000000001000000000010000000000000100000000010000001000000000000000000000011000000000001000000000000000010000000100000100000000000000000000000000000000100000000000100001000000001000000001000000001000000000000010000000000" />
+    <sequence id="language_data_centralsudanic:Omi_omii1238" taxon="Omi_omii1238" value="0?????????????0???0?????????010000000000010000000000010000000000000000000010000000010000000000000010000000001000000000100000100000000000010000000000000010000000001000000000000100000000000000000000000100000000000000100010000000000000000000100000000000010000000000000001000000001000000000001000000001000000000000100000000000000000010000000000000100000000010000001000000000000100000000000000000000010000000000000000001000000000000100000000000000000000000100000000000000001000000001000000001000000000000000101000000000000010000000000" />
+    <sequence id="language_data_centralsudanic:SaraKabaDeme_sara1322" taxon="SaraKabaDeme_sara1322" value="001000000000000100000000100000100000000000000100000000100000000000000000100000000000000000100000100010000000000001010010000001000000000000000001000000000010000000000100000100010000000000000001000001000000000000100001000100000000010000000000100000000000000010000000000010000001000000000100000000000010000000000000000010000000000000100010000000000010000000001000000100000000??????????????????????000000100000000100000100000000000000000000010000000000000000000110000000001000000000010000000100000000010000000000001000000001000000000" />
+    <sequence id="language_data_centralsudanic:Sinyar_siny1243" taxon="Sinyar_siny1243" value="00001001000000001100000100100000010010000000100000000010000000100000000010000000000000100000000100001000000001000010000001100100000000000000010000001000001000000?????????????0010000000000000000001000000001000001000000????????????????????0001000000000000010000000010000001000000010000000000000010001000000010000000010000000000000000001000000000100000001000100000001000100000000010000000010000000000000010000001000000001000000000000001000000000001000000000100100000000001000000000001001100001001000010000001000000000000000001000000" />
+    <sequence id="language_data_centralsudanic:SouthernMadi_sout2828" taxon="SouthernMadi_sout2828" value="0?????????????0???0?????????01000000000000000001000001000000000000000001000000000001000000000000000000100000100000000010000000000010000001000000000000001000000001000000000000010010000000001000000000000000000001000000000000000000000010000001000000000000000000100000000000000010000010000000100000000100000000000010000000000000001001000000000000010000000001000000???????????00100000000000000000000010000000000000000000000000001000000000000000000000100000100000000000000001000000001000000001000000000000000101000000000000010000000000" />
+    <sequence id="language_data_centralsudanic:Yulu-Binga_yulu1243" taxon="Yulu-Binga_yulu1243" value="00000000100000010000000000010000000001000000000010000001000000000000100000000000000??????????????0001000000001000000001000000100000000000000000000000100001000000?????????????0000000100000000000000000000000100001000000000000000000000000100???????????0???????????????0???????????00010000000001000000000010000000000000000000001000000001000000000010000000001000010100000000000??????????????????????000010000000000000000001000000000000000000000000000010000000000000100000001000000001000000000010000000010000000000000010000000000000101" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:centralsudanic:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:centralsudanic" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:centralsudanic" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:centralsudanic" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:centralsudanic" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Lendu_lend1245,Mangbetu_mang1394,(Birri_birr1240,(Lese_lese1243,Mamvu_mamv1243,Mangbutu_mang1396)),(Moru_moru1253,(Madi_madi1260,Olubo_olub1238,SouthernMadi_sout2828),(Aringa_arin1244,Avokaya_avok1242,Logo_logo1259,Lugbara_lugb1240,(Keliko_keli1248,Omi_omii1238))),(Bongo_bong1285,Sinyar_siny1243,(BakaSouthSudan_baka1274,(Morokodo_moro1284,(JurModo_jurm1239,Nyamusa-Molo_nyam1279))),(Yulu-Binga_yulu1243,(GulaCentralAfricanRepublic_gula1266,((Furu_furu1242,SaraKabaDeme_sara1322),(Bagirmi_bagi1246,Kenga_keng1240,(GulaChad_gula1269,Morom_moro1281)),(Gulay_gula1268,Kaba_kaba1281,(Dagba_dagb1248,(Gor_gorr1238,Mango_mang1398))))))));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:centralsudanic" name="distribution">
+          <input id="featureClockRateCompound:centralsudanic" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:centralsudanic:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:centralsudanic" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:centralsudanic" beta="@featureClockRateGammaScale:centralsudanic" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:centralsudanic" name="distribution" x="@featureClockRateGammaScale:centralsudanic">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:centralsudanic" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:centralsudanic" name="distribution" x="@covarion_alpha.s:centralsudanic">
+          <Uniform id="CovAlphaUniform:centralsudanic" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:centralsudanic" name="distribution" x="@covarion_s.s:centralsudanic">
+          <Gamma id="Gamma.0:centralsudanic" name="distr">
+            <parameter id="covarion_switch_gamma_param1:centralsudanic" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:centralsudanic" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:centralsudanic:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:1pl" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:centralsudanic" spec="BinaryCovarion" alpha="@covarion_alpha.s:centralsudanic" switchRate="@covarion_s.s:centralsudanic">
+              <vfrequencies id="centralsudanic:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.92 0.08</vfrequencies>
+              <parameter id="centralsudanic:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="centralsudanic:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_centralsudanic:1pl" spec="FilteredAlignment" data="@data_centralsudanic" filter="1-14" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:1sg" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:1sg" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:1sg" spec="FilteredAlignment" data="@data_centralsudanic" filter="15-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:2sg" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:2sg" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:2sg" spec="FilteredAlignment" data="@data_centralsudanic" filter="19-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:blood" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:blood" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:blood" spec="FilteredAlignment" data="@data_centralsudanic" filter="29-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:bone" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:bone" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:bone" spec="FilteredAlignment" data="@data_centralsudanic" filter="39-52" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:breast" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:breast" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:breast" spec="FilteredAlignment" data="@data_centralsudanic" filter="53-66" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:come" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:come" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:come" spec="FilteredAlignment" data="@data_centralsudanic" filter="67-82" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:die" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:die" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:die" spec="FilteredAlignment" data="@data_centralsudanic" filter="83-97" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:dog" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:dog" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:dog" spec="FilteredAlignment" data="@data_centralsudanic" filter="98-106" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:drink" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:drink" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:drink" spec="FilteredAlignment" data="@data_centralsudanic" filter="107-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:ear" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:ear" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:ear" spec="FilteredAlignment" data="@data_centralsudanic" filter="118-123" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:eye" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:eye" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:eye" spec="FilteredAlignment" data="@data_centralsudanic" filter="124-135" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:fire" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:fire" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:fire" spec="FilteredAlignment" data="@data_centralsudanic" filter="136-151" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:fish" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:fish" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:fish" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:fish" spec="FilteredAlignment" data="@data_centralsudanic" filter="152-160" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:full" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:full" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:full" spec="FilteredAlignment" data="@data_centralsudanic" filter="161-174" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:hand" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:hand" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:hand" spec="FilteredAlignment" data="@data_centralsudanic" filter="175-187" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:hear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:hear" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:hear" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:hear" spec="FilteredAlignment" data="@data_centralsudanic" filter="188-206" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:horn" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:horn" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:horn" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:horn" spec="FilteredAlignment" data="@data_centralsudanic" filter="207-216" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:knee" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:knee" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:knee" spec="FilteredAlignment" data="@data_centralsudanic" filter="217-237" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:leaf" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:leaf" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:leaf" spec="FilteredAlignment" data="@data_centralsudanic" filter="238-249" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:liver" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:liver" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:liver" spec="FilteredAlignment" data="@data_centralsudanic" filter="250-265" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:louse" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:louse" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:louse" spec="FilteredAlignment" data="@data_centralsudanic" filter="266-277" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:mountain" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:mountain" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:mountain" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:mountain" spec="FilteredAlignment" data="@data_centralsudanic" filter="278-296" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:name" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:name" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:name" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:name" spec="FilteredAlignment" data="@data_centralsudanic" filter="297-309" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:new" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:new" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:new" spec="FilteredAlignment" data="@data_centralsudanic" filter="310-327" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:night" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:night" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:night" spec="FilteredAlignment" data="@data_centralsudanic" filter="328-342" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:nose" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:nose" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:nose" spec="FilteredAlignment" data="@data_centralsudanic" filter="343-352" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:one" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:one" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:one" spec="FilteredAlignment" data="@data_centralsudanic" filter="353-359" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:path" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:path" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:path" spec="FilteredAlignment" data="@data_centralsudanic" filter="360-371" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:person" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:person" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:person" spec="FilteredAlignment" data="@data_centralsudanic" filter="372-394" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:see" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:see" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:see" spec="FilteredAlignment" data="@data_centralsudanic" filter="395-412" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:skin" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:skin" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:skin" spec="FilteredAlignment" data="@data_centralsudanic" filter="413-426" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:star" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:star" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:star" spec="FilteredAlignment" data="@data_centralsudanic" filter="427-449" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:stone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:stone" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:stone" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:stone" spec="FilteredAlignment" data="@data_centralsudanic" filter="450-467" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:sun" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:sun" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:sun" spec="FilteredAlignment" data="@data_centralsudanic" filter="468-476" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:tongue" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:tongue" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:tongue" spec="FilteredAlignment" data="@data_centralsudanic" filter="477-485" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:tooth" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:tooth" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:tooth" spec="FilteredAlignment" data="@data_centralsudanic" filter="486-494" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:tree" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:tree" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:tree" spec="FilteredAlignment" data="@data_centralsudanic" filter="495-503" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:two" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:two" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:two" spec="FilteredAlignment" data="@data_centralsudanic" filter="504-516" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:centralsudanic:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.centralsudanic:water" spec="SiteModel" mutationRate="@featureClockRate:centralsudanic:water" proportionInvariant="0" substModel="@covarion.s:centralsudanic" />
+          <data id="feature_data_centralsudanic:water" spec="FilteredAlignment" data="@data_centralsudanic" filter="517-529" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:centralsudanic" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:centralsudanic" name="up" />
+      <parameter idref="featureClockRateGammaScale:centralsudanic" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:centralsudanic" spec="ScaleOperator" parameter="@covarion_alpha.s:centralsudanic" scaleFactor="0.5" weight="1.0" />
+    <operator id="centralsudanic:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:centralsudanic" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:centralsudanic:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="40" estimate="false">13 3 9 9 13 13 15 14 8 10 5 11 15 8 13 12 18 9 20 11 15 11 18 12 17 14 9 6 11 22 17 13 22 17 8 8 8 8 12 12</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="centralsudanic.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,fish,full,hand,hear,horn,knee,leaf,liver,louse,mountain,name,new,night,nose,one,path,person,see,skin,star,stone,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:centralsudanic:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:centralsudanic" />
+      <log idref="covarion_alpha.s:centralsudanic" />
+      <log idref="covarion_s.s:centralsudanic" />
+    </logger>
+    <logger mode="tree" fileName="centralsudanic.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

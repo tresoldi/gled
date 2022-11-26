@@ -1,0 +1,115 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=70;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_takelma.blood.0060,
+        3 bone_0ascertainment,
+        4 bone_takelma.bone.0346,
+        5 breast_0ascertainment,
+        6 breast_takelma.breast.0643,
+        7 breast_takelma.breast.0644,
+        8 come_0ascertainment,
+        9 come_takelma.come.0003,
+        10 come_takelma.come.0641,
+        11 come_takelma.come.0642,
+        12 die_0ascertainment,
+        13 die_takelma.die.0133,
+        14 die_takelma.die.0806,
+        15 dog_0ascertainment,
+        16 dog_takelma.dog.0049,
+        17 drink_0ascertainment,
+        18 drink_takelma.drink.0133,
+        19 drink_takelma.drink.0849,
+        20 ear_0ascertainment,
+        21 ear_takelma.ear.0382,
+        22 eye_0ascertainment,
+        23 eye_takelma.eye.0647,
+        24 fire_0ascertainment,
+        25 fire_takelma.fire.0023,
+        26 full_0ascertainment,
+        27 full_takelma.full.0005,
+        28 full_takelma.full.0881,
+        29 horn_0ascertainment,
+        30 horn_takelma.horn.0520,
+        31 knee_0ascertainment,
+        32 knee_takelma.knee.0006,
+        33 leaf_0ascertainment,
+        34 leaf_takelma.leaf.0143,
+        35 liver_0ascertainment,
+        36 liver_takelma.liver.0285,
+        37 louse_0ascertainment,
+        38 louse_takelma.louse.0050,
+        39 night_0ascertainment,
+        40 night_takelma.night.0055,
+        41 night_takelma.night.0196,
+        42 nose_0ascertainment,
+        43 nose_takelma.nose.0069,
+        44 one_0ascertainment,
+        45 one_takelma.one.0023,
+        46 person_0ascertainment,
+        47 person_takelma.person.0173,
+        48 pl_0ascertainment,
+        49 pl_takelma.1pl.0766,
+        50 sg_0ascertainment,
+        51 sg_takelma.1sg.0113,
+        52 sg_takelma.2sg.0116,
+        53 skin_0ascertainment,
+        54 skin_takelma.skin.0006,
+        55 stone_0ascertainment,
+        56 stone_takelma.stone.0003,
+        57 sun_0ascertainment,
+        58 sun_takelma.sun.0171,
+        59 tongue_0ascertainment,
+        60 tongue_takelma.tongue.0017,
+        61 tooth_0ascertainment,
+        62 tooth_takelma.tooth.0661,
+        63 tooth_takelma.tooth.0662,
+        64 tree_0ascertainment,
+        65 tree_takelma.tree.0039,
+        66 two_0ascertainment,
+        67 two_takelma.two.0002,
+        68 two_takelma.two.0041,
+        69 water_0ascertainment,
+        70 water_takelma.water.0502
+;
+
+MATRIX
+takelma 0101011011101101011010101011010101010101101010101011010101010110101101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-11;
+    charset die = 12-14;
+    charset dog = 15-16;
+    charset drink = 17-19;
+    charset ear = 20-21;
+    charset eye = 22-23;
+    charset fire = 24-25;
+    charset full = 26-28;
+    charset horn = 29-30;
+    charset knee = 31-32;
+    charset leaf = 33-34;
+    charset liver = 35-36;
+    charset louse = 37-38;
+    charset night = 39-41;
+    charset nose = 42-43;
+    charset one = 44-45;
+    charset person = 46-47;
+    charset pl = 48-49;
+    charset sg = 50-52;
+    charset skin = 53-54;
+    charset stone = 55-56;
+    charset sun = 57-58;
+    charset tongue = 59-60;
+    charset tooth = 61-63;
+    charset tree = 64-65;
+    charset two = 66-68;
+    charset water = 69-70;
+END;

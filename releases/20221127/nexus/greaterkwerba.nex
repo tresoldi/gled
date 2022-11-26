@@ -1,0 +1,191 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=135;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_greaterkwerba.blood.0009,
+        3 blood_greaterkwerba.blood.0010,
+        4 bone_0ascertainment,
+        5 bone_greaterkwerba.bone.0011,
+        6 bone_greaterkwerba.bone.0012,
+        7 breast_0ascertainment,
+        8 breast_greaterkwerba.breast.0013,
+        9 come_0ascertainment,
+        10 come_greaterkwerba.come.0014,
+        11 come_greaterkwerba.come.0015,
+        12 come_greaterkwerba.come.0016,
+        13 come_greaterkwerba.come.0017,
+        14 come_greaterkwerba.come.0018,
+        15 die_0ascertainment,
+        16 die_greaterkwerba.die.0019,
+        17 die_greaterkwerba.die.0020,
+        18 die_greaterkwerba.die.0021,
+        19 dog_0ascertainment,
+        20 dog_greaterkwerba.dog.0022,
+        21 dog_greaterkwerba.dog.0023,
+        22 drink_0ascertainment,
+        23 drink_greaterkwerba.drink.0024,
+        24 drink_greaterkwerba.drink.0025,
+        25 ear_0ascertainment,
+        26 ear_greaterkwerba.ear.0026,
+        27 ear_greaterkwerba.ear.0027,
+        28 eye_0ascertainment,
+        29 eye_greaterkwerba.eye.0028,
+        30 fire_0ascertainment,
+        31 fire_greaterkwerba.fire.0029,
+        32 fire_greaterkwerba.fire.0030,
+        33 fish_0ascertainment,
+        34 fish_greaterkwerba.fish.0031,
+        35 fish_greaterkwerba.fish.0032,
+        36 full_0ascertainment,
+        37 full_greaterkwerba.full.0033,
+        38 full_greaterkwerba.full.0034,
+        39 hand_0ascertainment,
+        40 hand_greaterkwerba.hand.0035,
+        41 hand_greaterkwerba.hand.0036,
+        42 hand_greaterkwerba.hand.0037,
+        43 hear_0ascertainment,
+        44 hear_greaterkwerba.hear.0038,
+        45 hear_greaterkwerba.hear.0039,
+        46 hear_greaterkwerba.hear.0040,
+        47 horn_0ascertainment,
+        48 horn_greaterkwerba.horn.0041,
+        49 knee_0ascertainment,
+        50 knee_greaterkwerba.knee.0042,
+        51 knee_greaterkwerba.knee.0043,
+        52 leaf_0ascertainment,
+        53 leaf_greaterkwerba.leaf.0044,
+        54 liver_0ascertainment,
+        55 liver_greaterkwerba.liver.0045,
+        56 liver_greaterkwerba.liver.0046,
+        57 louse_0ascertainment,
+        58 louse_greaterkwerba.louse.0047,
+        59 mountain_0ascertainment,
+        60 mountain_greaterkwerba.mountain.0048,
+        61 mountain_greaterkwerba.mountain.0049,
+        62 mountain_greaterkwerba.mountain.0050,
+        63 name_0ascertainment,
+        64 name_greaterkwerba.name.0051,
+        65 name_greaterkwerba.name.0052,
+        66 name_greaterkwerba.name.0053,
+        67 new_0ascertainment,
+        68 new_greaterkwerba.new.0054,
+        69 new_greaterkwerba.new.0055,
+        70 new_greaterkwerba.new.0056,
+        71 night_0ascertainment,
+        72 night_greaterkwerba.night.0057,
+        73 night_greaterkwerba.night.0058,
+        74 night_greaterkwerba.night.0059,
+        75 nose_0ascertainment,
+        76 nose_greaterkwerba.nose.0060,
+        77 nose_greaterkwerba.nose.0061,
+        78 nose_greaterkwerba.nose.0062,
+        79 one_0ascertainment,
+        80 one_greaterkwerba.one.0063,
+        81 one_greaterkwerba.one.0064,
+        82 one_greaterkwerba.one.0065,
+        83 path_0ascertainment,
+        84 path_greaterkwerba.path.0066,
+        85 path_greaterkwerba.path.0067,
+        86 path_greaterkwerba.path.0068,
+        87 person_0ascertainment,
+        88 person_greaterkwerba.person.0069,
+        89 pl_0ascertainment,
+        90 pl_greaterkwerba.1pl.0001,
+        91 pl_greaterkwerba.1pl.0002,
+        92 see_0ascertainment,
+        93 see_greaterkwerba.see.0070,
+        94 see_greaterkwerba.see.0071,
+        95 see_greaterkwerba.see.0072,
+        96 see_greaterkwerba.see.0073,
+        97 sg_0ascertainment,
+        98 sg_greaterkwerba.1sg.0003,
+        99 sg_greaterkwerba.1sg.0004,
+        100 sg_greaterkwerba.1sg.0005,
+        101 sg_greaterkwerba.1sg.0006,
+        102 sg_greaterkwerba.2sg.0007,
+        103 sg_greaterkwerba.2sg.0008,
+        104 skin_0ascertainment,
+        105 skin_greaterkwerba.skin.0074,
+        106 skin_greaterkwerba.skin.0075,
+        107 skin_greaterkwerba.skin.0076,
+        108 star_0ascertainment,
+        109 star_greaterkwerba.star.0077,
+        110 star_greaterkwerba.star.0078,
+        111 stone_0ascertainment,
+        112 stone_greaterkwerba.stone.0079,
+        113 stone_greaterkwerba.stone.0080,
+        114 sun_0ascertainment,
+        115 sun_greaterkwerba.sun.0081,
+        116 sun_greaterkwerba.sun.0082,
+        117 sun_greaterkwerba.sun.0083,
+        118 tongue_0ascertainment,
+        119 tongue_greaterkwerba.tongue.0084,
+        120 tongue_greaterkwerba.tongue.0085,
+        121 tongue_greaterkwerba.tongue.0086,
+        122 tooth_0ascertainment,
+        123 tooth_greaterkwerba.tooth.0087,
+        124 tree_0ascertainment,
+        125 tree_greaterkwerba.tree.0088,
+        126 tree_greaterkwerba.tree.0089,
+        127 tree_greaterkwerba.tree.0090,
+        128 two_0ascertainment,
+        129 two_greaterkwerba.two.0091,
+        130 two_greaterkwerba.two.0092,
+        131 two_greaterkwerba.two.0093,
+        132 water_0ascertainment,
+        133 water_greaterkwerba.water.0094,
+        134 water_greaterkwerba.water.0095,
+        135 water_greaterkwerba.water.0096
+;
+
+MATRIX
+adora            0100100?01000001000100??010010100100100100010001010010100101000100010001000100010001000101001000010001001000100100100010001010001000100
+kwerba_naidjbedj 0010100100100001000??010001010100010??001000100?0010?0??0?00100???001000100010001000100?0??00100001000000100100010010001001001000100010
+saberi_2         0??0110?00011100110010010??010010??001000100010?0??0?0010?00010011000100010001000100010?00101011000110100010010??0001000101000100010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-8;
+    charset come = 9-14;
+    charset die = 15-18;
+    charset dog = 19-21;
+    charset drink = 22-24;
+    charset ear = 25-27;
+    charset eye = 28-29;
+    charset fire = 30-32;
+    charset fish = 33-35;
+    charset full = 36-38;
+    charset hand = 39-42;
+    charset hear = 43-46;
+    charset horn = 47-48;
+    charset knee = 49-51;
+    charset leaf = 52-53;
+    charset liver = 54-56;
+    charset louse = 57-58;
+    charset mountain = 59-62;
+    charset name = 63-66;
+    charset new = 67-70;
+    charset night = 71-74;
+    charset nose = 75-78;
+    charset one = 79-82;
+    charset path = 83-86;
+    charset person = 87-88;
+    charset pl = 89-91;
+    charset see = 92-96;
+    charset sg = 97-103;
+    charset skin = 104-107;
+    charset star = 108-110;
+    charset stone = 111-113;
+    charset sun = 114-117;
+    charset tongue = 118-121;
+    charset tooth = 122-123;
+    charset tree = 124-127;
+    charset two = 128-131;
+    charset water = 132-135;
+END;

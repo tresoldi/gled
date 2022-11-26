@@ -1,0 +1,260 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=10 NCHAR=197;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_bosavi.blood.0006,
+        3 blood_bosavi.blood.0007,
+        4 blood_bosavi.blood.0008,
+        5 blood_bosavi.blood.0009,
+        6 bone_0ascertainment,
+        7 bone_bosavi.bone.0010,
+        8 bone_bosavi.bone.0011,
+        9 bone_bosavi.bone.0012,
+        10 breast_0ascertainment,
+        11 breast_bosavi.breast.0013,
+        12 breast_bosavi.breast.0014,
+        13 come_0ascertainment,
+        14 come_bosavi.come.0015,
+        15 come_bosavi.come.0016,
+        16 die_0ascertainment,
+        17 die_bosavi.die.0017,
+        18 die_bosavi.die.0018,
+        19 die_bosavi.die.0019,
+        20 dog_0ascertainment,
+        21 dog_bosavi.dog.0020,
+        22 dog_bosavi.dog.0021,
+        23 dog_bosavi.dog.0022,
+        24 drink_0ascertainment,
+        25 drink_bosavi.drink.0023,
+        26 drink_bosavi.drink.0024,
+        27 drink_bosavi.drink.0025,
+        28 ear_0ascertainment,
+        29 ear_bosavi.ear.0026,
+        30 ear_bosavi.ear.0027,
+        31 ear_bosavi.ear.0028,
+        32 ear_bosavi.ear.0029,
+        33 eye_0ascertainment,
+        34 eye_bosavi.eye.0030,
+        35 fire_0ascertainment,
+        36 fire_bosavi.fire.0031,
+        37 fire_bosavi.fire.0032,
+        38 fire_bosavi.fire.0033,
+        39 fish_0ascertainment,
+        40 fish_bosavi.fish.0034,
+        41 fish_bosavi.fish.0035,
+        42 fish_bosavi.fish.0036,
+        43 fish_bosavi.fish.0037,
+        44 fish_bosavi.fish.0038,
+        45 fish_bosavi.fish.0039,
+        46 fish_bosavi.fish.0040,
+        47 full_0ascertainment,
+        48 full_bosavi.full.0041,
+        49 full_bosavi.full.0042,
+        50 full_bosavi.full.0043,
+        51 full_bosavi.full.0044,
+        52 full_bosavi.full.0045,
+        53 full_bosavi.full.0046,
+        54 hand_0ascertainment,
+        55 hand_bosavi.hand.0047,
+        56 hand_bosavi.hand.0048,
+        57 hand_bosavi.hand.0049,
+        58 hand_bosavi.hand.0050,
+        59 hear_0ascertainment,
+        60 hear_bosavi.hear.0051,
+        61 hear_bosavi.hear.0052,
+        62 hear_bosavi.hear.0053,
+        63 horn_0ascertainment,
+        64 horn_bosavi.horn.0054,
+        65 horn_bosavi.horn.0055,
+        66 horn_bosavi.horn.0056,
+        67 knee_0ascertainment,
+        68 knee_bosavi.knee.0057,
+        69 knee_bosavi.knee.0058,
+        70 knee_bosavi.knee.0059,
+        71 knee_bosavi.knee.0060,
+        72 knee_bosavi.knee.0061,
+        73 leaf_0ascertainment,
+        74 leaf_bosavi.leaf.0062,
+        75 leaf_bosavi.leaf.0063,
+        76 leaf_bosavi.leaf.0064,
+        77 leaf_bosavi.leaf.0065,
+        78 leaf_bosavi.leaf.0066,
+        79 leaf_bosavi.leaf.0067,
+        80 leaf_bosavi.leaf.0068,
+        81 leaf_bosavi.leaf.0069,
+        82 liver_0ascertainment,
+        83 liver_bosavi.liver.0070,
+        84 liver_bosavi.liver.0071,
+        85 liver_bosavi.liver.0072,
+        86 louse_0ascertainment,
+        87 louse_bosavi.louse.0073,
+        88 louse_bosavi.louse.0074,
+        89 louse_bosavi.louse.0075,
+        90 louse_bosavi.louse.0076,
+        91 mountain_0ascertainment,
+        92 mountain_bosavi.mountain.0077,
+        93 mountain_bosavi.mountain.0078,
+        94 mountain_bosavi.mountain.0079,
+        95 mountain_bosavi.mountain.0080,
+        96 mountain_bosavi.mountain.0081,
+        97 mountain_bosavi.mountain.0082,
+        98 mountain_bosavi.mountain.0083,
+        99 name_0ascertainment,
+        100 name_bosavi.name.0084,
+        101 name_bosavi.name.0085,
+        102 name_bosavi.name.0086,
+        103 name_bosavi.name.0087,
+        104 name_bosavi.name.0088,
+        105 name_bosavi.name.0089,
+        106 new_0ascertainment,
+        107 new_bosavi.new.0090,
+        108 new_bosavi.new.0091,
+        109 new_bosavi.new.0092,
+        110 night_0ascertainment,
+        111 night_bosavi.night.0093,
+        112 night_bosavi.night.0094,
+        113 night_bosavi.night.0095,
+        114 night_bosavi.night.0096,
+        115 night_bosavi.night.0097,
+        116 nose_0ascertainment,
+        117 nose_bosavi.nose.0098,
+        118 nose_bosavi.nose.0099,
+        119 one_0ascertainment,
+        120 one_bosavi.one.0100,
+        121 one_bosavi.one.0101,
+        122 one_bosavi.one.0102,
+        123 one_bosavi.one.0103,
+        124 one_bosavi.one.0104,
+        125 one_bosavi.one.0105,
+        126 path_0ascertainment,
+        127 path_bosavi.path.0106,
+        128 path_bosavi.path.0107,
+        129 path_bosavi.path.0108,
+        130 path_bosavi.path.0109,
+        131 path_bosavi.path.0110,
+        132 path_bosavi.path.0111,
+        133 path_bosavi.path.0112,
+        134 person_0ascertainment,
+        135 person_bosavi.person.0113,
+        136 person_bosavi.person.0114,
+        137 person_bosavi.person.0115,
+        138 person_bosavi.person.0116,
+        139 person_bosavi.person.0117,
+        140 pl_0ascertainment,
+        141 pl_bosavi.1pl.0001,
+        142 see_0ascertainment,
+        143 see_bosavi.see.0118,
+        144 sg_0ascertainment,
+        145 sg_bosavi.1sg.0002,
+        146 sg_bosavi.2sg.0003,
+        147 sg_bosavi.2sg.0004,
+        148 sg_bosavi.2sg.0005,
+        149 skin_0ascertainment,
+        150 skin_bosavi.skin.0119,
+        151 skin_bosavi.skin.0120,
+        152 skin_bosavi.skin.0121,
+        153 skin_bosavi.skin.0122,
+        154 skin_bosavi.skin.0123,
+        155 star_0ascertainment,
+        156 star_bosavi.star.0124,
+        157 star_bosavi.star.0125,
+        158 star_bosavi.star.0126,
+        159 star_bosavi.star.0127,
+        160 star_bosavi.star.0128,
+        161 stone_0ascertainment,
+        162 stone_bosavi.stone.0129,
+        163 stone_bosavi.stone.0130,
+        164 stone_bosavi.stone.0131,
+        165 stone_bosavi.stone.0132,
+        166 stone_bosavi.stone.0133,
+        167 sun_0ascertainment,
+        168 sun_bosavi.sun.0134,
+        169 sun_bosavi.sun.0135,
+        170 sun_bosavi.sun.0136,
+        171 tongue_0ascertainment,
+        172 tongue_bosavi.tongue.0137,
+        173 tongue_bosavi.tongue.0138,
+        174 tongue_bosavi.tongue.0139,
+        175 tongue_bosavi.tongue.0140,
+        176 tongue_bosavi.tongue.0141,
+        177 tooth_0ascertainment,
+        178 tooth_bosavi.tooth.0142,
+        179 tooth_bosavi.tooth.0143,
+        180 tree_0ascertainment,
+        181 tree_bosavi.tree.0144,
+        182 tree_bosavi.tree.0145,
+        183 tree_bosavi.tree.0146,
+        184 two_0ascertainment,
+        185 two_bosavi.two.0147,
+        186 two_bosavi.two.0148,
+        187 two_bosavi.two.0149,
+        188 two_bosavi.two.0150,
+        189 two_bosavi.two.0151,
+        190 two_bosavi.two.0152,
+        191 two_bosavi.two.0153,
+        192 two_bosavi.two.0154,
+        193 water_0ascertainment,
+        194 water_bosavi.water.0155,
+        195 water_bosavi.water.0156,
+        196 water_bosavi.water.0157,
+        197 water_bosavi.water.0158
+;
+
+MATRIX
+aimele    0100001000100100???01000???01000010100010000000??????0100001000???0100000100000000???0100001000000010000001000100000100100000010000000100000101011000100000100000100000100010000010010001000000001000
+beami     0010000100010010???00100???001000100100010000001000000????00100???0010000010000000???0010000100000001000000100010000??0100000001000000?????0101010100010000010000010000010001000010001000100000000100
+bedamini  0010000100010010???00010???001000100110001000000100000????00100???0001000001000000???0010000010000000100000100010000??0010000000100000?????0101010110010000001000010000010001001010000100010000000010
+bosavi    0001001000100110100000101010????0101000000100000010000010001100???01000000001000001000????00001000000010001000001000100100000000010000?????0?010????0001000000100?????0100000100010001000001000001000
+edolo     00100001000100100100010001000100010010001100000010000010000010010000100000100000000100010000100000001000000100010000010101000001000000010000101010100000100001000010000010001000010001000100001000100
+etoro     0010000100010010???00100???001000100100010000001000000100000100???0010000010000000???0010000100000001000000100010000100100000001000000010000101010100010000010000010000010001000010001000100000000100
+kaluli    00010010001000101000001000101000010100000010000001000001000100001001000000000100001000001000000100000010001000001000100100001000010000100000101011000001000000100001000100000100010001000000100101000
+kasua     00001010001000100010001000101000010100000001000000100000100100000100100000000010000010001000000010000001001000000100010000100000001000001000101011000100000000010100000100010000010001000000010001000
+onabasulu 0001000100100010???00010???000100101000000001000000100000100010???0000100000000100???0000100000001000010001000000010010100000000000100000100101011000000010010000000100001000010010001000000001001000
+sunia     0001000010100010???00010???000010101000000000100000010100001000???0000010000000010???0001000000100000000100010001000100000010000000010000010101011000001000000100000010100010000001010000010000000001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-5;
+    charset bone = 6-9;
+    charset breast = 10-12;
+    charset come = 13-15;
+    charset die = 16-19;
+    charset dog = 20-23;
+    charset drink = 24-27;
+    charset ear = 28-32;
+    charset eye = 33-34;
+    charset fire = 35-38;
+    charset fish = 39-46;
+    charset full = 47-53;
+    charset hand = 54-58;
+    charset hear = 59-62;
+    charset horn = 63-66;
+    charset knee = 67-72;
+    charset leaf = 73-81;
+    charset liver = 82-85;
+    charset louse = 86-90;
+    charset mountain = 91-98;
+    charset name = 99-105;
+    charset new = 106-109;
+    charset night = 110-115;
+    charset nose = 116-118;
+    charset one = 119-125;
+    charset path = 126-133;
+    charset person = 134-139;
+    charset pl = 140-141;
+    charset see = 142-143;
+    charset sg = 144-148;
+    charset skin = 149-154;
+    charset star = 155-160;
+    charset stone = 161-166;
+    charset sun = 167-170;
+    charset tongue = 171-176;
+    charset tooth = 177-179;
+    charset tree = 180-183;
+    charset two = 184-192;
+    charset water = 193-197;
+END;

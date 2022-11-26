@@ -1,0 +1,144 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=93;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_xincan.blood.0026,
+        3 blood_xincan.blood.0545,
+        4 bone_0ascertainment,
+        5 bone_xincan.bone.0017,
+        6 bone_xincan.bone.0039,
+        7 breast_0ascertainment,
+        8 breast_xincan.breast.0012,
+        9 breast_xincan.breast.0693,
+        10 come_0ascertainment,
+        11 come_xincan.come.0005,
+        12 die_0ascertainment,
+        13 die_xincan.die.0169,
+        14 dog_0ascertainment,
+        15 dog_xincan.dog.0049,
+        16 dog_xincan.dog.0078,
+        17 drink_0ascertainment,
+        18 drink_xincan.drink.0120,
+        19 ear_0ascertainment,
+        20 ear_xincan.ear.0048,
+        21 ear_xincan.ear.0409,
+        22 eye_0ascertainment,
+        23 eye_xincan.eye.0708,
+        24 eye_xincan.eye.0709,
+        25 fire_0ascertainment,
+        26 fire_xincan.fire.0085,
+        27 fish_0ascertainment,
+        28 fish_xincan.fish.0002,
+        29 fish_xincan.fish.0102,
+        30 full_0ascertainment,
+        31 full_xincan.full.0993,
+        32 hand_0ascertainment,
+        33 hand_xincan.hand.0242,
+        34 hear_0ascertainment,
+        35 hear_xincan.hear.1011,
+        36 knee_0ascertainment,
+        37 knee_xincan.knee.0013,
+        38 knee_xincan.knee.0605,
+        39 leaf_0ascertainment,
+        40 leaf_xincan.leaf.0030,
+        41 liver_0ascertainment,
+        42 liver_xincan.liver.0118,
+        43 liver_xincan.liver.0844,
+        44 louse_0ascertainment,
+        45 louse_xincan.louse.0059,
+        46 mountain_0ascertainment,
+        47 mountain_xincan.mountain.0014,
+        48 mountain_xincan.mountain.0775,
+        49 name_0ascertainment,
+        50 name_xincan.name.0052,
+        51 night_0ascertainment,
+        52 night_xincan.night.0411,
+        53 nose_0ascertainment,
+        54 nose_xincan.nose.0069,
+        55 one_0ascertainment,
+        56 one_xincan.one.0023,
+        57 path_0ascertainment,
+        58 path_xincan.path.0017,
+        59 path_xincan.path.0437,
+        60 pl_0ascertainment,
+        61 pl_xincan.1pl.0012,
+        62 pl_xincan.1pl.0028,
+        63 see_0ascertainment,
+        64 see_xincan.see.0005,
+        65 see_xincan.see.0017,
+        66 sg_0ascertainment,
+        67 sg_xincan.1sg.0007,
+        68 sg_xincan.1sg.0035,
+        69 sg_xincan.2sg.0055,
+        70 sg_xincan.2sg.0557,
+        71 skin_0ascertainment,
+        72 skin_xincan.skin.0832,
+        73 skin_xincan.skin.0833,
+        74 star_0ascertainment,
+        75 star_xincan.star.0068,
+        76 stone_0ascertainment,
+        77 stone_xincan.stone.1068,
+        78 stone_xincan.stone.1069,
+        79 sun_0ascertainment,
+        80 sun_xincan.sun.0082,
+        81 tongue_0ascertainment,
+        82 tongue_xincan.tongue.0017,
+        83 tooth_0ascertainment,
+        84 tooth_xincan.tooth.0183,
+        85 tree_0ascertainment,
+        86 tree_xincan.tree.0501,
+        87 tree_xincan.tree.0644,
+        88 two_0ascertainment,
+        89 two_xincan.two.0001,
+        90 two_xincan.two.0571,
+        91 water_0ascertainment,
+        92 water_xincan.water.0549,
+        93 water_xincan.water.0550
+;
+
+MATRIX
+xinca 011011011010101101011011010110101010110101101011010101010110110110111101101011010101011011011
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-9;
+    charset come = 10-11;
+    charset die = 12-13;
+    charset dog = 14-16;
+    charset drink = 17-18;
+    charset ear = 19-21;
+    charset eye = 22-24;
+    charset fire = 25-26;
+    charset fish = 27-29;
+    charset full = 30-31;
+    charset hand = 32-33;
+    charset hear = 34-35;
+    charset knee = 36-38;
+    charset leaf = 39-40;
+    charset liver = 41-43;
+    charset louse = 44-45;
+    charset mountain = 46-48;
+    charset name = 49-50;
+    charset night = 51-52;
+    charset nose = 53-54;
+    charset one = 55-56;
+    charset path = 57-59;
+    charset pl = 60-62;
+    charset see = 63-65;
+    charset sg = 66-70;
+    charset skin = 71-73;
+    charset star = 74-75;
+    charset stone = 76-78;
+    charset sun = 79-80;
+    charset tongue = 81-82;
+    charset tooth = 83-84;
+    charset tree = 85-87;
+    charset two = 88-90;
+    charset water = 91-93;
+END;

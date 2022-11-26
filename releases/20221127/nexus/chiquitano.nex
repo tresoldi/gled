@@ -1,0 +1,157 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=103;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_chiquitano.blood.0242,
+        3 bone_0ascertainment,
+        4 bone_chiquitano.bone.0180,
+        5 bone_chiquitano.bone.0181,
+        6 breast_0ascertainment,
+        7 breast_chiquitano.breast.0012,
+        8 come_0ascertainment,
+        9 come_chiquitano.come.0203,
+        10 come_chiquitano.come.0257,
+        11 die_0ascertainment,
+        12 die_chiquitano.die.0154,
+        13 dog_0ascertainment,
+        14 dog_chiquitano.dog.0112,
+        15 drink_0ascertainment,
+        16 drink_chiquitano.drink.0313,
+        17 ear_0ascertainment,
+        18 ear_chiquitano.ear.0002,
+        19 ear_chiquitano.ear.0181,
+        20 eye_0ascertainment,
+        21 eye_chiquitano.eye.0261,
+        22 fire_0ascertainment,
+        23 fire_chiquitano.fire.0300,
+        24 fish_0ascertainment,
+        25 fish_chiquitano.fish.0275,
+        26 full_0ascertainment,
+        27 full_chiquitano.full.0313,
+        28 hand_0ascertainment,
+        29 hand_chiquitano.hand.0236,
+        30 hand_chiquitano.hand.0237,
+        31 hear_0ascertainment,
+        32 hear_chiquitano.hear.0345,
+        33 hear_chiquitano.hear.0346,
+        34 hear_chiquitano.hear.0347,
+        35 horn_0ascertainment,
+        36 horn_chiquitano.horn.0161,
+        37 horn_chiquitano.horn.0224,
+        38 knee_0ascertainment,
+        39 knee_chiquitano.knee.0006,
+        40 knee_chiquitano.knee.0246,
+        41 knee_chiquitano.knee.0247,
+        42 leaf_0ascertainment,
+        43 leaf_chiquitano.leaf.0252,
+        44 liver_0ascertainment,
+        45 liver_chiquitano.liver.0010,
+        46 liver_chiquitano.liver.0293,
+        47 louse_0ascertainment,
+        48 louse_chiquitano.louse.0021,
+        49 louse_chiquitano.louse.0257,
+        50 mountain_0ascertainment,
+        51 mountain_chiquitano.mountain.0048,
+        52 mountain_chiquitano.mountain.0271,
+        53 mountain_chiquitano.mountain.0272,
+        54 name_0ascertainment,
+        55 name_chiquitano.name.0208,
+        56 new_0ascertainment,
+        57 new_chiquitano.new.0265,
+        58 night_0ascertainment,
+        59 night_chiquitano.night.0067,
+        60 nose_0ascertainment,
+        61 nose_chiquitano.nose.0159,
+        62 one_0ascertainment,
+        63 one_chiquitano.one.0117,
+        64 one_chiquitano.one.0138,
+        65 one_chiquitano.one.0226,
+        66 path_0ascertainment,
+        67 path_chiquitano.path.0284,
+        68 path_chiquitano.path.0285,
+        69 person_0ascertainment,
+        70 person_chiquitano.person.0360,
+        71 pl_0ascertainment,
+        72 pl_chiquitano.1pl.0280,
+        73 see_0ascertainment,
+        74 see_chiquitano.see.0242,
+        75 see_chiquitano.see.0243,
+        76 sg_0ascertainment,
+        77 sg_chiquitano.1sg.0178,
+        78 sg_chiquitano.2sg.0214,
+        79 skin_0ascertainment,
+        80 skin_chiquitano.skin.0310,
+        81 skin_chiquitano.skin.0311,
+        82 skin_chiquitano.skin.0312,
+        83 star_0ascertainment,
+        84 star_chiquitano.star.0012,
+        85 star_chiquitano.star.0293,
+        86 star_chiquitano.star.0294,
+        87 stone_0ascertainment,
+        88 stone_chiquitano.stone.0358,
+        89 stone_chiquitano.stone.0359,
+        90 sun_0ascertainment,
+        91 sun_chiquitano.sun.0044,
+        92 tongue_0ascertainment,
+        93 tongue_chiquitano.tongue.0101,
+        94 tongue_chiquitano.tongue.0240,
+        95 tooth_0ascertainment,
+        96 tooth_chiquitano.tooth.0289,
+        97 tree_0ascertainment,
+        98 tree_chiquitano.tree.0264,
+        99 tree_chiquitano.tree.0265,
+        100 two_0ascertainment,
+        101 two_chiquitano.two.0212,
+        102 water_0ascertainment,
+        103 water_chiquitano.water.0229
+;
+
+MATRIX
+chiquitano 0101101011010101011010101010110111011011101011011011101010101011101101010110110111011101101011010110101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-5;
+    charset breast = 6-7;
+    charset come = 8-10;
+    charset die = 11-12;
+    charset dog = 13-14;
+    charset drink = 15-16;
+    charset ear = 17-19;
+    charset eye = 20-21;
+    charset fire = 22-23;
+    charset fish = 24-25;
+    charset full = 26-27;
+    charset hand = 28-30;
+    charset hear = 31-34;
+    charset horn = 35-37;
+    charset knee = 38-41;
+    charset leaf = 42-43;
+    charset liver = 44-46;
+    charset louse = 47-49;
+    charset mountain = 50-53;
+    charset name = 54-55;
+    charset new = 56-57;
+    charset night = 58-59;
+    charset nose = 60-61;
+    charset one = 62-65;
+    charset path = 66-68;
+    charset person = 69-70;
+    charset pl = 71-72;
+    charset see = 73-75;
+    charset sg = 76-78;
+    charset skin = 79-82;
+    charset star = 83-86;
+    charset stone = 87-89;
+    charset sun = 90-91;
+    charset tongue = 92-94;
+    charset tooth = 95-96;
+    charset tree = 97-99;
+    charset two = 100-101;
+    charset water = 102-103;
+END;

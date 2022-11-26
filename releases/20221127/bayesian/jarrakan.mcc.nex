@@ -1,0 +1,16 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=2;
+		Taxlabels
+			Kitja_kitj1240
+			Miriwung_miri1266
+			;
+End;
+Begin trees;
+	Translate
+		   1 Kitja_kitj1240,
+		   2 Miriwung_miri1266
+;
+tree TREE1 = (1[&height=0.0,length=7.7107847430514,length_95%_HPD={0.5603,24.8289},length_median=2.7092,length_range={0.4493,271.1616},rate=0.985696420715857,rate_95%_HPD={0.6164,1.2554},rate_median=1.0045,rate_range={0.0973,1.2554}]:7.7107847430514,2[&height=0.0,length=7.7107847430514,length_95%_HPD={0.5603,24.8289},length_median=2.7092,length_range={0.4493,271.1616},rate=0.9861390321935606,rate_95%_HPD={0.6164,1.2554},rate_median=1.0049,rate_range={0.0973,1.2554}]:7.7107847430514)[&CAheight_95%_HPD={0.5603,24.8289},CAheight_mean=7.7107847430514,CAheight_median=2.7092,CAheight_range={0.4493,271.1616},height=7.7107847430514,height_95%_HPD={0.5603,24.8289},height_median=2.7092,height_range={0.4493,271.1616},length=0.0,posterior=1.0,rate=1.0]:0.0;
+End;

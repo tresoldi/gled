@@ -1,0 +1,187 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=4 NCHAR=130;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_yukaghir.blood.0004,
+        3 blood_yukaghir.blood.0005,
+        4 bone_0ascertainment,
+        5 bone_yukaghir.bone.0006,
+        6 breast_0ascertainment,
+        7 breast_yukaghir.breast.0007,
+        8 breast_yukaghir.breast.0008,
+        9 breast_yukaghir.breast.0009,
+        10 come_0ascertainment,
+        11 come_yukaghir.come.0010,
+        12 come_yukaghir.come.0011,
+        13 come_yukaghir.come.0012,
+        14 die_0ascertainment,
+        15 die_yukaghir.die.0013,
+        16 die_yukaghir.die.0014,
+        17 die_yukaghir.die.0015,
+        18 die_yukaghir.die.0016,
+        19 die_yukaghir.die.0017,
+        20 dog_0ascertainment,
+        21 dog_yukaghir.dog.0018,
+        22 dog_yukaghir.dog.0019,
+        23 drink_0ascertainment,
+        24 drink_yukaghir.drink.0020,
+        25 drink_yukaghir.drink.0021,
+        26 ear_0ascertainment,
+        27 ear_yukaghir.ear.0022,
+        28 eye_0ascertainment,
+        29 eye_yukaghir.eye.0023,
+        30 eye_yukaghir.eye.0024,
+        31 eye_yukaghir.eye.0025,
+        32 fire_0ascertainment,
+        33 fire_yukaghir.fire.0026,
+        34 fish_0ascertainment,
+        35 fish_yukaghir.fish.0027,
+        36 fish_yukaghir.fish.0028,
+        37 full_0ascertainment,
+        38 full_yukaghir.full.0029,
+        39 full_yukaghir.full.0030,
+        40 full_yukaghir.full.0031,
+        41 hand_0ascertainment,
+        42 hand_yukaghir.hand.0032,
+        43 hand_yukaghir.hand.0033,
+        44 hand_yukaghir.hand.0034,
+        45 hear_0ascertainment,
+        46 hear_yukaghir.hear.0035,
+        47 hear_yukaghir.hear.0036,
+        48 hear_yukaghir.hear.0037,
+        49 horn_0ascertainment,
+        50 horn_yukaghir.horn.0038,
+        51 knee_0ascertainment,
+        52 knee_yukaghir.knee.0039,
+        53 knee_yukaghir.knee.0040,
+        54 leaf_0ascertainment,
+        55 leaf_yukaghir.leaf.0041,
+        56 leaf_yukaghir.leaf.0042,
+        57 liver_0ascertainment,
+        58 liver_yukaghir.liver.0043,
+        59 liver_yukaghir.liver.0044,
+        60 louse_0ascertainment,
+        61 louse_yukaghir.louse.0045,
+        62 mountain_0ascertainment,
+        63 mountain_yukaghir.mountain.0046,
+        64 mountain_yukaghir.mountain.0047,
+        65 mountain_yukaghir.mountain.0048,
+        66 mountain_yukaghir.mountain.0049,
+        67 mountain_yukaghir.mountain.0050,
+        68 name_0ascertainment,
+        69 name_yukaghir.name.0051,
+        70 name_yukaghir.name.0052,
+        71 new_0ascertainment,
+        72 new_yukaghir.new.0053,
+        73 new_yukaghir.new.0054,
+        74 night_0ascertainment,
+        75 night_yukaghir.night.0055,
+        76 night_yukaghir.night.0056,
+        77 nose_0ascertainment,
+        78 nose_yukaghir.nose.0057,
+        79 one_0ascertainment,
+        80 one_yukaghir.one.0058,
+        81 path_0ascertainment,
+        82 path_yukaghir.path.0059,
+        83 path_yukaghir.path.0060,
+        84 path_yukaghir.path.0061,
+        85 path_yukaghir.path.0062,
+        86 path_yukaghir.path.0063,
+        87 person_0ascertainment,
+        88 person_yukaghir.person.0064,
+        89 person_yukaghir.person.0065,
+        90 person_yukaghir.person.0066,
+        91 pl_0ascertainment,
+        92 pl_yukaghir.1pl.0001,
+        93 see_0ascertainment,
+        94 see_yukaghir.see.0067,
+        95 see_yukaghir.see.0068,
+        96 sg_0ascertainment,
+        97 sg_yukaghir.1sg.0002,
+        98 sg_yukaghir.2sg.0003,
+        99 skin_0ascertainment,
+        100 skin_yukaghir.skin.0069,
+        101 star_0ascertainment,
+        102 star_yukaghir.star.0070,
+        103 star_yukaghir.star.0071,
+        104 stone_0ascertainment,
+        105 stone_yukaghir.stone.0072,
+        106 stone_yukaghir.stone.0073,
+        107 stone_yukaghir.stone.0074,
+        108 stone_yukaghir.stone.0075,
+        109 stone_yukaghir.stone.0076,
+        110 sun_0ascertainment,
+        111 sun_yukaghir.sun.0077,
+        112 sun_yukaghir.sun.0078,
+        113 tongue_0ascertainment,
+        114 tongue_yukaghir.tongue.0079,
+        115 tooth_0ascertainment,
+        116 tooth_yukaghir.tooth.0080,
+        117 tooth_yukaghir.tooth.0081,
+        118 tree_0ascertainment,
+        119 tree_yukaghir.tree.0082,
+        120 two_0ascertainment,
+        121 two_yukaghir.two.0083,
+        122 two_yukaghir.two.0084,
+        123 two_yukaghir.two.0085,
+        124 two_yukaghir.two.0086,
+        125 two_yukaghir.two.0087,
+        126 two_yukaghir.two.0088,
+        127 water_0ascertainment,
+        128 water_yukaghir.water.0089,
+        129 water_yukaghir.water.0090,
+        130 water_yukaghir.water.0091
+;
+
+MATRIX
+kolyma_yukagir    0100?01010101010000010010010100010100???010101000?0100100??010100100100??01001010101000100010??01101010010100010010??0101000000101
+northern_yukaghir 0010100100010001001001001010010010010100001000100100100101001001000001010001010101000000100101001101001001000001010100100100000010
+southern_yukaghir 01001001001000001000100100100010101000100???001001010010001010001000100010100101010010000101001011010100?????010010010100010100100
+yukaghir_tundra   0010100100100000010001001010010010010101001000110100100101001001001001010001010100100100100100101101001010011001010100100001010010
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-5;
+    charset breast = 6-9;
+    charset come = 10-13;
+    charset die = 14-19;
+    charset dog = 20-22;
+    charset drink = 23-25;
+    charset ear = 26-27;
+    charset eye = 28-31;
+    charset fire = 32-33;
+    charset fish = 34-36;
+    charset full = 37-40;
+    charset hand = 41-44;
+    charset hear = 45-48;
+    charset horn = 49-50;
+    charset knee = 51-53;
+    charset leaf = 54-56;
+    charset liver = 57-59;
+    charset louse = 60-61;
+    charset mountain = 62-67;
+    charset name = 68-70;
+    charset new = 71-73;
+    charset night = 74-76;
+    charset nose = 77-78;
+    charset one = 79-80;
+    charset path = 81-86;
+    charset person = 87-90;
+    charset pl = 91-92;
+    charset see = 93-95;
+    charset sg = 96-98;
+    charset skin = 99-100;
+    charset star = 101-103;
+    charset stone = 104-109;
+    charset sun = 110-112;
+    charset tongue = 113-114;
+    charset tooth = 115-117;
+    charset tree = 118-119;
+    charset two = 120-126;
+    charset water = 127-130;
+END;

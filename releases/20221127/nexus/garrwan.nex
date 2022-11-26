@@ -1,0 +1,115 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=67;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_garrwan.blood.0216,
+        3 bone_0ascertainment,
+        4 bone_garrwan.bone.0003,
+        5 breast_0ascertainment,
+        6 breast_garrwan.breast.0317,
+        7 come_0ascertainment,
+        8 come_garrwan.come.0336,
+        9 die_0ascertainment,
+        10 die_garrwan.die.0404,
+        11 dog_0ascertainment,
+        12 dog_garrwan.dog.0271,
+        13 drink_0ascertainment,
+        14 drink_garrwan.drink.0431,
+        15 ear_0ascertainment,
+        16 ear_garrwan.ear.0035,
+        17 eye_0ascertainment,
+        18 eye_garrwan.eye.0344,
+        19 fire_0ascertainment,
+        20 fire_garrwan.fire.0185,
+        21 fish_0ascertainment,
+        22 fish_garrwan.fish.0037,
+        23 hand_0ascertainment,
+        24 hand_garrwan.hand.0082,
+        25 hear_0ascertainment,
+        26 hear_garrwan.hear.0466,
+        27 knee_0ascertainment,
+        28 knee_garrwan.knee.0158,
+        29 liver_0ascertainment,
+        30 liver_garrwan.liver.0398,
+        31 mountain_0ascertainment,
+        32 mountain_garrwan.mountain.0014,
+        33 name_0ascertainment,
+        34 name_garrwan.name.0282,
+        35 night_0ascertainment,
+        36 night_garrwan.night.0205,
+        37 nose_0ascertainment,
+        38 nose_garrwan.nose.0294,
+        39 one_0ascertainment,
+        40 one_garrwan.one.0023,
+        41 person_0ascertainment,
+        42 person_garrwan.person.0449,
+        43 pl_0ascertainment,
+        44 pl_garrwan.1pl.0222,
+        45 see_0ascertainment,
+        46 see_garrwan.see.0232,
+        47 sg_0ascertainment,
+        48 sg_garrwan.1sg.0070,
+        49 sg_garrwan.2sg.0082,
+        50 skin_0ascertainment,
+        51 skin_garrwan.skin.0002,
+        52 star_0ascertainment,
+        53 star_garrwan.star.0255,
+        54 stone_0ascertainment,
+        55 stone_garrwan.stone.0497,
+        56 sun_0ascertainment,
+        57 sun_garrwan.sun.0011,
+        58 tongue_0ascertainment,
+        59 tongue_garrwan.tongue.0039,
+        60 tooth_0ascertainment,
+        61 tooth_garrwan.tooth.0369,
+        62 tree_0ascertainment,
+        63 tree_garrwan.tree.0339,
+        64 two_0ascertainment,
+        65 two_garrwan.two.0084,
+        66 water_0ascertainment,
+        67 water_garrwan.water.0201
+;
+
+MATRIX
+garawa 0101010101010101010101010101010101010101010101011010101010101010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-6;
+    charset come = 7-8;
+    charset die = 9-10;
+    charset dog = 11-12;
+    charset drink = 13-14;
+    charset ear = 15-16;
+    charset eye = 17-18;
+    charset fire = 19-20;
+    charset fish = 21-22;
+    charset hand = 23-24;
+    charset hear = 25-26;
+    charset knee = 27-28;
+    charset liver = 29-30;
+    charset mountain = 31-32;
+    charset name = 33-34;
+    charset night = 35-36;
+    charset nose = 37-38;
+    charset one = 39-40;
+    charset person = 41-42;
+    charset pl = 43-44;
+    charset see = 45-46;
+    charset sg = 47-49;
+    charset skin = 50-51;
+    charset star = 52-53;
+    charset stone = 54-55;
+    charset sun = 56-57;
+    charset tongue = 58-59;
+    charset tooth = 60-61;
+    charset tree = 62-63;
+    charset two = 64-65;
+    charset water = 66-67;
+END;

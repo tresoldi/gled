@@ -1,0 +1,133 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=1 NCHAR=84;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_timucua.blood.0023,
+        3 bone_0ascertainment,
+        4 bone_timucua.bone.0354,
+        5 breast_0ascertainment,
+        6 breast_timucua.breast.0132,
+        7 breast_timucua.breast.0252,
+        8 come_0ascertainment,
+        9 come_timucua.come.0013,
+        10 come_timucua.come.0655,
+        11 die_0ascertainment,
+        12 die_timucua.die.0828,
+        13 die_timucua.die.0829,
+        14 dog_0ascertainment,
+        15 dog_timucua.dog.0462,
+        16 drink_0ascertainment,
+        17 drink_timucua.drink.0018,
+        18 drink_timucua.drink.0872,
+        19 ear_0ascertainment,
+        20 ear_timucua.ear.0021,
+        21 eye_0ascertainment,
+        22 eye_timucua.eye.0006,
+        23 fish_0ascertainment,
+        24 fish_timucua.fish.0124,
+        25 hand_0ascertainment,
+        26 hand_timucua.hand.0511,
+        27 hear_0ascertainment,
+        28 hear_timucua.hear.0938,
+        29 hear_timucua.hear.0939,
+        30 leaf_0ascertainment,
+        31 leaf_timucua.leaf.0013,
+        32 liver_0ascertainment,
+        33 liver_timucua.liver.0259,
+        34 louse_0ascertainment,
+        35 louse_timucua.louse.0666,
+        36 louse_timucua.louse.0667,
+        37 mountain_0ascertainment,
+        38 mountain_timucua.mountain.0727,
+        39 name_0ascertainment,
+        40 name_timucua.name.0018,
+        41 name_timucua.name.0238,
+        42 new_0ascertainment,
+        43 new_timucua.new.0641,
+        44 new_timucua.new.0642,
+        45 night_0ascertainment,
+        46 night_timucua.night.0605,
+        47 night_timucua.night.0606,
+        48 nose_0ascertainment,
+        49 nose_timucua.nose.0734,
+        50 one_0ascertainment,
+        51 one_timucua.one.0124,
+        52 one_timucua.one.0349,
+        53 path_0ascertainment,
+        54 path_timucua.path.0711,
+        55 person_0ascertainment,
+        56 person_timucua.person.0920,
+        57 pl_0ascertainment,
+        58 pl_timucua.1pl.0012,
+        59 see_0ascertainment,
+        60 see_timucua.see.0094,
+        61 see_timucua.see.0562,
+        62 sg_0ascertainment,
+        63 sg_timucua.1sg.0435,
+        64 sg_timucua.1sg.0436,
+        65 sg_timucua.2sg.0014,
+        66 sg_timucua.2sg.0055,
+        67 skin_0ascertainment,
+        68 skin_timucua.skin.0006,
+        69 skin_timucua.skin.0786,
+        70 star_0ascertainment,
+        71 star_timucua.star.0012,
+        72 stone_0ascertainment,
+        73 stone_timucua.stone.0990,
+        74 sun_0ascertainment,
+        75 sun_timucua.sun.0566,
+        76 tongue_0ascertainment,
+        77 tongue_timucua.tongue.0017,
+        78 tongue_timucua.tongue.0576,
+        79 tree_0ascertainment,
+        80 tree_timucua.tree.0607,
+        81 two_0ascertainment,
+        82 two_timucua.two.0025,
+        83 water_0ascertainment,
+        84 water_timucua.water.0514
+;
+
+MATRIX
+timucua 010101101101101011010101010110101011010110110110101101010101101111011010101011010101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-10;
+    charset die = 11-13;
+    charset dog = 14-15;
+    charset drink = 16-18;
+    charset ear = 19-20;
+    charset eye = 21-22;
+    charset fish = 23-24;
+    charset hand = 25-26;
+    charset hear = 27-29;
+    charset leaf = 30-31;
+    charset liver = 32-33;
+    charset louse = 34-36;
+    charset mountain = 37-38;
+    charset name = 39-41;
+    charset new = 42-44;
+    charset night = 45-47;
+    charset nose = 48-49;
+    charset one = 50-52;
+    charset path = 53-54;
+    charset person = 55-56;
+    charset pl = 57-58;
+    charset see = 59-61;
+    charset sg = 62-66;
+    charset skin = 67-69;
+    charset star = 70-71;
+    charset stone = 72-73;
+    charset sun = 74-75;
+    charset tongue = 76-78;
+    charset tree = 79-80;
+    charset two = 81-82;
+    charset water = 83-84;
+END;

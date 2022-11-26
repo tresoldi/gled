@@ -1,0 +1,150 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=2 NCHAR=101;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_kreshaja.blood.0007,
+        3 blood_kreshaja.blood.0008,
+        4 bone_0ascertainment,
+        5 bone_kreshaja.bone.0009,
+        6 bone_kreshaja.bone.0010,
+        7 breast_0ascertainment,
+        8 breast_kreshaja.breast.0011,
+        9 breast_kreshaja.breast.0012,
+        10 breast_kreshaja.breast.0013,
+        11 breast_kreshaja.breast.0014,
+        12 come_0ascertainment,
+        13 come_kreshaja.come.0015,
+        14 come_kreshaja.come.0016,
+        15 die_0ascertainment,
+        16 die_kreshaja.die.0017,
+        17 die_kreshaja.die.0018,
+        18 dog_0ascertainment,
+        19 dog_kreshaja.dog.0019,
+        20 dog_kreshaja.dog.0020,
+        21 drink_0ascertainment,
+        22 drink_kreshaja.drink.0021,
+        23 ear_0ascertainment,
+        24 ear_kreshaja.ear.0022,
+        25 ear_kreshaja.ear.0023,
+        26 eye_0ascertainment,
+        27 eye_kreshaja.eye.0024,
+        28 eye_kreshaja.eye.0025,
+        29 fire_0ascertainment,
+        30 fire_kreshaja.fire.0026,
+        31 fire_kreshaja.fire.0027,
+        32 fish_0ascertainment,
+        33 fish_kreshaja.fish.0028,
+        34 fish_kreshaja.fish.0029,
+        35 hand_0ascertainment,
+        36 hand_kreshaja.hand.0030,
+        37 hear_0ascertainment,
+        38 hear_kreshaja.hear.0031,
+        39 hear_kreshaja.hear.0032,
+        40 horn_0ascertainment,
+        41 horn_kreshaja.horn.0033,
+        42 horn_kreshaja.horn.0034,
+        43 knee_0ascertainment,
+        44 knee_kreshaja.knee.0035,
+        45 knee_kreshaja.knee.0036,
+        46 mountain_0ascertainment,
+        47 mountain_kreshaja.mountain.0037,
+        48 mountain_kreshaja.mountain.0038,
+        49 name_0ascertainment,
+        50 name_kreshaja.name.0039,
+        51 name_kreshaja.name.0040,
+        52 new_0ascertainment,
+        53 new_kreshaja.new.0041,
+        54 new_kreshaja.new.0042,
+        55 nose_0ascertainment,
+        56 nose_kreshaja.nose.0043,
+        57 nose_kreshaja.nose.0044,
+        58 one_0ascertainment,
+        59 one_kreshaja.one.0045,
+        60 one_kreshaja.one.0046,
+        61 path_0ascertainment,
+        62 path_kreshaja.path.0047,
+        63 path_kreshaja.path.0048,
+        64 pl_0ascertainment,
+        65 pl_kreshaja.1pl.0001,
+        66 pl_kreshaja.1pl.0002,
+        67 see_0ascertainment,
+        68 see_kreshaja.see.0049,
+        69 sg_0ascertainment,
+        70 sg_kreshaja.1sg.0003,
+        71 sg_kreshaja.1sg.0004,
+        72 sg_kreshaja.2sg.0005,
+        73 sg_kreshaja.2sg.0006,
+        74 skin_0ascertainment,
+        75 skin_kreshaja.skin.0050,
+        76 skin_kreshaja.skin.0051,
+        77 star_0ascertainment,
+        78 star_kreshaja.star.0052,
+        79 star_kreshaja.star.0053,
+        80 stone_0ascertainment,
+        81 stone_kreshaja.stone.0054,
+        82 stone_kreshaja.stone.0055,
+        83 stone_kreshaja.stone.0056,
+        84 sun_0ascertainment,
+        85 sun_kreshaja.sun.0057,
+        86 sun_kreshaja.sun.0058,
+        87 tongue_0ascertainment,
+        88 tongue_kreshaja.tongue.0059,
+        89 tongue_kreshaja.tongue.0060,
+        90 tooth_0ascertainment,
+        91 tooth_kreshaja.tooth.0061,
+        92 tooth_kreshaja.tooth.0062,
+        93 tree_0ascertainment,
+        94 tree_kreshaja.tree.0063,
+        95 tree_kreshaja.tree.0064,
+        96 two_0ascertainment,
+        97 two_kreshaja.two.0065,
+        98 two_kreshaja.two.0066,
+        99 water_0ascertainment,
+        100 water_kreshaja.water.0067,
+        101 water_kreshaja.water.0068
+;
+
+MATRIX
+aja   01001001010010010010010100100100100?01001001001001001001001001001001011110100100100010010010010010010
+gbaya 00100100101001001001010010010010010100100100100100100100100100100101010010010010011001001001001001001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-3;
+    charset bone = 4-6;
+    charset breast = 7-11;
+    charset come = 12-14;
+    charset die = 15-17;
+    charset dog = 18-20;
+    charset drink = 21-22;
+    charset ear = 23-25;
+    charset eye = 26-28;
+    charset fire = 29-31;
+    charset fish = 32-34;
+    charset hand = 35-36;
+    charset hear = 37-39;
+    charset horn = 40-42;
+    charset knee = 43-45;
+    charset mountain = 46-48;
+    charset name = 49-51;
+    charset new = 52-54;
+    charset nose = 55-57;
+    charset one = 58-60;
+    charset path = 61-63;
+    charset pl = 64-66;
+    charset see = 67-68;
+    charset sg = 69-73;
+    charset skin = 74-76;
+    charset star = 77-79;
+    charset stone = 80-83;
+    charset sun = 84-86;
+    charset tongue = 87-89;
+    charset tooth = 90-92;
+    charset tree = 93-95;
+    charset two = 96-98;
+    charset water = 99-101;
+END;

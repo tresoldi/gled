@@ -1,0 +1,227 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=7 NCHAR=167;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_huitotoan.blood.0012,
+        3 blood_huitotoan.blood.0013,
+        4 blood_huitotoan.blood.0014,
+        5 bone_0ascertainment,
+        6 bone_huitotoan.bone.0015,
+        7 bone_huitotoan.bone.0016,
+        8 bone_huitotoan.bone.0017,
+        9 bone_huitotoan.bone.0018,
+        10 breast_0ascertainment,
+        11 breast_huitotoan.breast.0019,
+        12 breast_huitotoan.breast.0020,
+        13 come_0ascertainment,
+        14 come_huitotoan.come.0021,
+        15 come_huitotoan.come.0022,
+        16 die_0ascertainment,
+        17 die_huitotoan.die.0023,
+        18 die_huitotoan.die.0024,
+        19 die_huitotoan.die.0025,
+        20 die_huitotoan.die.0026,
+        21 dog_0ascertainment,
+        22 dog_huitotoan.dog.0027,
+        23 dog_huitotoan.dog.0028,
+        24 drink_0ascertainment,
+        25 drink_huitotoan.drink.0029,
+        26 drink_huitotoan.drink.0030,
+        27 drink_huitotoan.drink.0031,
+        28 ear_0ascertainment,
+        29 ear_huitotoan.ear.0032,
+        30 ear_huitotoan.ear.0033,
+        31 ear_huitotoan.ear.0034,
+        32 eye_0ascertainment,
+        33 eye_huitotoan.eye.0035,
+        34 eye_huitotoan.eye.0036,
+        35 eye_huitotoan.eye.0037,
+        36 eye_huitotoan.eye.0038,
+        37 fire_0ascertainment,
+        38 fire_huitotoan.fire.0039,
+        39 fire_huitotoan.fire.0040,
+        40 fire_huitotoan.fire.0041,
+        41 fish_0ascertainment,
+        42 fish_huitotoan.fish.0042,
+        43 fish_huitotoan.fish.0043,
+        44 fish_huitotoan.fish.0044,
+        45 fish_huitotoan.fish.0045,
+        46 fish_huitotoan.fish.0046,
+        47 full_0ascertainment,
+        48 full_huitotoan.full.0047,
+        49 full_huitotoan.full.0048,
+        50 full_huitotoan.full.0049,
+        51 hand_0ascertainment,
+        52 hand_huitotoan.hand.0050,
+        53 hand_huitotoan.hand.0051,
+        54 hear_0ascertainment,
+        55 hear_huitotoan.hear.0052,
+        56 hear_huitotoan.hear.0053,
+        57 horn_0ascertainment,
+        58 horn_huitotoan.horn.0054,
+        59 horn_huitotoan.horn.0055,
+        60 horn_huitotoan.horn.0056,
+        61 knee_0ascertainment,
+        62 knee_huitotoan.knee.0057,
+        63 knee_huitotoan.knee.0058,
+        64 knee_huitotoan.knee.0059,
+        65 knee_huitotoan.knee.0060,
+        66 knee_huitotoan.knee.0061,
+        67 leaf_0ascertainment,
+        68 leaf_huitotoan.leaf.0062,
+        69 leaf_huitotoan.leaf.0063,
+        70 leaf_huitotoan.leaf.0064,
+        71 leaf_huitotoan.leaf.0065,
+        72 leaf_huitotoan.leaf.0066,
+        73 liver_0ascertainment,
+        74 liver_huitotoan.liver.0067,
+        75 liver_huitotoan.liver.0068,
+        76 liver_huitotoan.liver.0069,
+        77 louse_0ascertainment,
+        78 louse_huitotoan.louse.0070,
+        79 louse_huitotoan.louse.0071,
+        80 louse_huitotoan.louse.0072,
+        81 mountain_0ascertainment,
+        82 mountain_huitotoan.mountain.0073,
+        83 mountain_huitotoan.mountain.0074,
+        84 mountain_huitotoan.mountain.0075,
+        85 mountain_huitotoan.mountain.0076,
+        86 name_0ascertainment,
+        87 name_huitotoan.name.0077,
+        88 name_huitotoan.name.0078,
+        89 new_0ascertainment,
+        90 new_huitotoan.new.0079,
+        91 new_huitotoan.new.0080,
+        92 new_huitotoan.new.0081,
+        93 night_0ascertainment,
+        94 night_huitotoan.night.0082,
+        95 night_huitotoan.night.0083,
+        96 night_huitotoan.night.0084,
+        97 night_huitotoan.night.0085,
+        98 nose_0ascertainment,
+        99 nose_huitotoan.nose.0086,
+        100 one_0ascertainment,
+        101 one_huitotoan.one.0087,
+        102 one_huitotoan.one.0088,
+        103 one_huitotoan.one.0089,
+        104 path_0ascertainment,
+        105 path_huitotoan.path.0090,
+        106 path_huitotoan.path.0091,
+        107 path_huitotoan.path.0092,
+        108 path_huitotoan.path.0093,
+        109 person_0ascertainment,
+        110 person_huitotoan.person.0094,
+        111 person_huitotoan.person.0095,
+        112 person_huitotoan.person.0096,
+        113 person_huitotoan.person.0097,
+        114 person_huitotoan.person.0098,
+        115 pl_0ascertainment,
+        116 pl_huitotoan.1pl.0001,
+        117 pl_huitotoan.1pl.0002,
+        118 pl_huitotoan.1pl.0003,
+        119 see_0ascertainment,
+        120 see_huitotoan.see.0099,
+        121 see_huitotoan.see.0100,
+        122 see_huitotoan.see.0101,
+        123 see_huitotoan.see.0102,
+        124 see_huitotoan.see.0103,
+        125 see_huitotoan.see.0104,
+        126 sg_0ascertainment,
+        127 sg_huitotoan.1sg.0004,
+        128 sg_huitotoan.1sg.0005,
+        129 sg_huitotoan.1sg.0006,
+        130 sg_huitotoan.1sg.0007,
+        131 sg_huitotoan.2sg.0008,
+        132 sg_huitotoan.2sg.0009,
+        133 sg_huitotoan.2sg.0010,
+        134 sg_huitotoan.2sg.0011,
+        135 skin_0ascertainment,
+        136 skin_huitotoan.skin.0105,
+        137 skin_huitotoan.skin.0106,
+        138 skin_huitotoan.skin.0107,
+        139 skin_huitotoan.skin.0108,
+        140 star_0ascertainment,
+        141 star_huitotoan.star.0109,
+        142 star_huitotoan.star.0110,
+        143 stone_0ascertainment,
+        144 stone_huitotoan.stone.0111,
+        145 stone_huitotoan.stone.0112,
+        146 stone_huitotoan.stone.0113,
+        147 sun_0ascertainment,
+        148 sun_huitotoan.sun.0114,
+        149 sun_huitotoan.sun.0115,
+        150 sun_huitotoan.sun.0116,
+        151 tongue_0ascertainment,
+        152 tongue_huitotoan.tongue.0117,
+        153 tongue_huitotoan.tongue.0118,
+        154 tooth_0ascertainment,
+        155 tooth_huitotoan.tooth.0119,
+        156 tooth_huitotoan.tooth.0120,
+        157 tooth_huitotoan.tooth.0121,
+        158 tree_0ascertainment,
+        159 tree_huitotoan.tree.0122,
+        160 tree_huitotoan.tree.0123,
+        161 two_0ascertainment,
+        162 two_huitotoan.two.0124,
+        163 water_0ascertainment,
+        164 water_huitotoan.water.0125,
+        165 water_huitotoan.water.0126,
+        166 water_huitotoan.water.0127,
+        167 water_huitotoan.water.0128
+;
+
+MATRIX
+huitoto_mika   01000100001001001000010010001000100001000100000100010010010001000001000001000100010000100100010000101000100001000001000110000010001000010000??010001000??01000100101000
+huitoto_minica 01000010001001000100010010001000100001000100000010010010010000100001000001000100001100100100010000101000010000100001100010001010000100010000100100010001001000100101000
+huitoto_murui  01000100001001001100010010001000100001000100000010010010010000010001100001000100000100110100010000101000100000010001000011000001001000010000100100010001001000100101000
+huitoto_nipode 01000010001001000100010010001000100001000010010010010010010000100001000001000100001100100100010000101000010000100001100010001010000100001000100100010001001000100101000
+huitoto_nupode 01000010001001000100010010001000100001000010000???0100100???0?????010000010001000????01001000010001010000101001000011000100010100010000010001001000???01001000??0101000
+nonuya         00100001001001000100001001000100010000100001000001001001001000001000010100100010000010100010000100100100001000001000010000100000100010000100010010001000100100100100100
+ocaina         00010000100100100011010000100010001100010000100???0100100001000001000010000100010????0100001000010100010100000000101000000010000011001000010100001000101000010110100011
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-9;
+    charset breast = 10-12;
+    charset come = 13-15;
+    charset die = 16-20;
+    charset dog = 21-23;
+    charset drink = 24-27;
+    charset ear = 28-31;
+    charset eye = 32-36;
+    charset fire = 37-40;
+    charset fish = 41-46;
+    charset full = 47-50;
+    charset hand = 51-53;
+    charset hear = 54-56;
+    charset horn = 57-60;
+    charset knee = 61-66;
+    charset leaf = 67-72;
+    charset liver = 73-76;
+    charset louse = 77-80;
+    charset mountain = 81-85;
+    charset name = 86-88;
+    charset new = 89-92;
+    charset night = 93-97;
+    charset nose = 98-99;
+    charset one = 100-103;
+    charset path = 104-108;
+    charset person = 109-114;
+    charset pl = 115-118;
+    charset see = 119-125;
+    charset sg = 126-134;
+    charset skin = 135-139;
+    charset star = 140-142;
+    charset stone = 143-146;
+    charset sun = 147-150;
+    charset tongue = 151-153;
+    charset tooth = 154-157;
+    charset tree = 158-160;
+    charset two = 161-162;
+    charset water = 163-167;
+END;

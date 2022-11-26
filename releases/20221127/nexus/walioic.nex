@@ -1,0 +1,190 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=136;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_walioic.blood.0010,
+        3 blood_walioic.blood.0011,
+        4 blood_walioic.blood.0012,
+        5 bone_0ascertainment,
+        6 bone_walioic.bone.0013,
+        7 bone_walioic.bone.0014,
+        8 bone_walioic.bone.0015,
+        9 breast_0ascertainment,
+        10 breast_walioic.breast.0016,
+        11 breast_walioic.breast.0017,
+        12 breast_walioic.breast.0018,
+        13 come_0ascertainment,
+        14 come_walioic.come.0019,
+        15 come_walioic.come.0020,
+        16 die_0ascertainment,
+        17 die_walioic.die.0021,
+        18 dog_0ascertainment,
+        19 dog_walioic.dog.0022,
+        20 dog_walioic.dog.0023,
+        21 dog_walioic.dog.0024,
+        22 drink_0ascertainment,
+        23 drink_walioic.drink.0025,
+        24 drink_walioic.drink.0026,
+        25 ear_0ascertainment,
+        26 ear_walioic.ear.0027,
+        27 ear_walioic.ear.0028,
+        28 ear_walioic.ear.0029,
+        29 eye_0ascertainment,
+        30 eye_walioic.eye.0030,
+        31 eye_walioic.eye.0031,
+        32 eye_walioic.eye.0032,
+        33 fire_0ascertainment,
+        34 fire_walioic.fire.0033,
+        35 fire_walioic.fire.0034,
+        36 fish_0ascertainment,
+        37 fish_walioic.fish.0035,
+        38 fish_walioic.fish.0036,
+        39 fish_walioic.fish.0037,
+        40 full_0ascertainment,
+        41 full_walioic.full.0038,
+        42 hand_0ascertainment,
+        43 hand_walioic.hand.0039,
+        44 hand_walioic.hand.0040,
+        45 hand_walioic.hand.0041,
+        46 hear_0ascertainment,
+        47 hear_walioic.hear.0042,
+        48 hear_walioic.hear.0043,
+        49 knee_0ascertainment,
+        50 knee_walioic.knee.0044,
+        51 knee_walioic.knee.0045,
+        52 knee_walioic.knee.0046,
+        53 knee_walioic.knee.0047,
+        54 leaf_0ascertainment,
+        55 leaf_walioic.leaf.0048,
+        56 leaf_walioic.leaf.0049,
+        57 leaf_walioic.leaf.0050,
+        58 liver_0ascertainment,
+        59 liver_walioic.liver.0051,
+        60 liver_walioic.liver.0052,
+        61 liver_walioic.liver.0053,
+        62 louse_0ascertainment,
+        63 louse_walioic.louse.0054,
+        64 louse_walioic.louse.0055,
+        65 louse_walioic.louse.0056,
+        66 mountain_0ascertainment,
+        67 mountain_walioic.mountain.0057,
+        68 mountain_walioic.mountain.0058,
+        69 mountain_walioic.mountain.0059,
+        70 name_0ascertainment,
+        71 name_walioic.name.0060,
+        72 new_0ascertainment,
+        73 new_walioic.new.0061,
+        74 new_walioic.new.0062,
+        75 new_walioic.new.0063,
+        76 night_0ascertainment,
+        77 night_walioic.night.0064,
+        78 night_walioic.night.0065,
+        79 night_walioic.night.0066,
+        80 nose_0ascertainment,
+        81 nose_walioic.nose.0067,
+        82 nose_walioic.nose.0068,
+        83 one_0ascertainment,
+        84 one_walioic.one.0069,
+        85 one_walioic.one.0070,
+        86 one_walioic.one.0071,
+        87 path_0ascertainment,
+        88 path_walioic.path.0072,
+        89 path_walioic.path.0073,
+        90 path_walioic.path.0074,
+        91 pl_0ascertainment,
+        92 pl_walioic.1pl.0001,
+        93 pl_walioic.1pl.0002,
+        94 see_0ascertainment,
+        95 see_walioic.see.0075,
+        96 sg_0ascertainment,
+        97 sg_walioic.1sg.0003,
+        98 sg_walioic.1sg.0004,
+        99 sg_walioic.1sg.0005,
+        100 sg_walioic.2sg.0006,
+        101 sg_walioic.2sg.0007,
+        102 sg_walioic.2sg.0008,
+        103 sg_walioic.2sg.0009,
+        104 skin_0ascertainment,
+        105 skin_walioic.skin.0076,
+        106 skin_walioic.skin.0077,
+        107 skin_walioic.skin.0078,
+        108 star_0ascertainment,
+        109 star_walioic.star.0079,
+        110 star_walioic.star.0080,
+        111 star_walioic.star.0081,
+        112 stone_0ascertainment,
+        113 stone_walioic.stone.0082,
+        114 stone_walioic.stone.0083,
+        115 sun_0ascertainment,
+        116 sun_walioic.sun.0084,
+        117 sun_walioic.sun.0085,
+        118 tongue_0ascertainment,
+        119 tongue_walioic.tongue.0086,
+        120 tongue_walioic.tongue.0087,
+        121 tongue_walioic.tongue.0088,
+        122 tooth_0ascertainment,
+        123 tooth_walioic.tooth.0089,
+        124 tooth_walioic.tooth.0090,
+        125 tree_0ascertainment,
+        126 tree_walioic.tree.0091,
+        127 tree_walioic.tree.0092,
+        128 tree_walioic.tree.0093,
+        129 two_0ascertainment,
+        130 two_walioic.two.0094,
+        131 two_walioic.two.0095,
+        132 two_walioic.two.0096,
+        133 water_0ascertainment,
+        134 water_walioic.water.0097,
+        135 water_walioic.water.0098,
+        136 water_walioic.water.0099
+;
+
+MATRIX
+pei     0100010001000100?01000100100010001001000?01000100100001000100010001000?01000100010010001000100101001000010001000100100100010010001000100
+tuwari  00100010001000101001000100100010010001001001000100101001000100010001001001000100??001000100??0?00100101001000100100100010010001000100010
+walio_2 0001000100010??0?00010??0001000100100010?00010??0001000010001000100010?00010001001000100010010?00010010000100010010010001001000100010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-8;
+    charset breast = 9-12;
+    charset come = 13-15;
+    charset die = 16-17;
+    charset dog = 18-21;
+    charset drink = 22-24;
+    charset ear = 25-28;
+    charset eye = 29-32;
+    charset fire = 33-35;
+    charset fish = 36-39;
+    charset full = 40-41;
+    charset hand = 42-45;
+    charset hear = 46-48;
+    charset knee = 49-53;
+    charset leaf = 54-57;
+    charset liver = 58-61;
+    charset louse = 62-65;
+    charset mountain = 66-69;
+    charset name = 70-71;
+    charset new = 72-75;
+    charset night = 76-79;
+    charset nose = 80-82;
+    charset one = 83-86;
+    charset path = 87-90;
+    charset pl = 91-93;
+    charset see = 94-95;
+    charset sg = 96-103;
+    charset skin = 104-107;
+    charset star = 108-111;
+    charset stone = 112-114;
+    charset sun = 115-117;
+    charset tongue = 118-121;
+    charset tooth = 122-124;
+    charset tree = 125-128;
+    charset two = 129-132;
+    charset water = 133-136;
+END;

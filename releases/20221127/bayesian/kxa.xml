@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beast version="2.0" beautitemplate="Standard" beautistatus="" namespace="beast.core:beast.evolution.alignment:beast.evolution.tree.coalescent:beast.core.util:beast.evolution.nuc:beast.evolution.operators:beast.evolution.sitemodel:beast.evolution.substitutionmodel:beast.evolution.likelihood">
+  <taxonset id="taxa" spec="TaxonSet">
+    <plate var="language" range="Amkoe_hoaa1235,North-CentralJu_kung1261,NorthernJu_vase1234,South-EasternJu_juho1239">
+      <taxon id="$(language)" />
+    </plate>
+  </taxonset>
+  <map name="Beta">beast.math.distributions.Beta</map>
+  <map name="Exponential">beast.math.distributions.Exponential</map>
+  <map name="InverseGamma">beast.math.distributions.InverseGamma</map>
+  <map name="LogNormal">beast.math.distributions.LogNormalDistributionModel</map>
+  <map name="Gamma">beast.math.distributions.Gamma</map>
+  <map name="Uniform">beast.math.distributions.Uniform</map>
+  <map name="LaplaceDistribution">beast.math.distributions.LaplaceDistribution</map>
+  <map name="OneOnX">beast.math.distributions.OneOnX</map>
+  <map name="Normal">beast.math.distributions.Normal</map>
+  <map name="prior">beast.math.distributions.Prior</map>
+  <map name="taxon">beast.evolution.alignment.Taxon</map>
+  <map name="taxonset">beast.evolution.alignment.TaxonSet</map>
+  <data id="data_kxa" name="data_kxa" dataType="integer">
+    <sequence id="language_data_kxa:Amkoe_hoaa1235" taxon="Amkoe_hoaa1235" value="0100000000100100000100000010010001001001001000100001001000??01001000010000100??01000000100100000100100000100100000010010010001001001000100100" />
+    <sequence id="language_data_kxa:North-CentralJu_kung1261" taxon="North-CentralJu_kung1261" value="0010100000110001000001100001000101100100100110001101000100??00100001001010010??00001000010010000010000110010100000001010001000101000010010010" />
+    <sequence id="language_data_kxa:NorthernJu_vase1234" taxon="NorthernJu_vase1234" value="0000110010100000110000010001001101000100100100010001000100??00100001001010010??00001010010001010010000100010001011011010001000101000010010010" />
+    <sequence id="language_data_kxa:South-EasternJu_juho1239" taxon="South-EasternJu_juho1239" value="001100110010001010001100100100110110010010010001000110011011001001100011000101100111100010010100010011100010110100001011001100101100110010011" />
+  </data>
+  <branchRateModel clock.rate="@clockRate.c:default" id="RelaxedClockModel.c:default" spec="beast.evolution.branchratemodel.UCRelaxedClockModel" rateCategories="@rateCategories.c:default" tree="@Tree.t:beastlingTree" numberOfDiscreteRates="-1">
+    <LogNormal id="LogNormalDistributionModel.c:default" M="1.0" S="@ucldSdev.c:default" meanInRealSpace="true" name="distr" />
+  </branchRateModel>
+  <run id="mcmc" spec="MCMC" chainLength="100000" numInitializationAttempts="1000" sampleFromPrior="false">
+    <state id="state" storeEvery="5000">
+      <tree id="Tree.t:beastlingTree" name="stateNode">
+        <taxonset idref="taxa" />
+      </tree>
+      <parameter id="birthRate.t:beastlingTree" name="stateNode">1.0</parameter>
+      <parameter id="deathRate.t:beastlingTree" name="stateNode">0.5</parameter>
+      <parameter id="sampling.t:beastlingTree" name="stateNode">0.2</parameter>
+      <parameter id="clockRate.c:default" upper="1000.0" name="stateNode">1.0</parameter>
+      <stateNode id="rateCategories.c:default" spec="parameter.IntegerParameter" dimension="42">1</stateNode>
+      <parameter id="ucldSdev.c:default" lower="0.0" upper="10.0" name="stateNode">0.1</parameter>
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,full,hand,knee,leaf,liver,louse,new,night,nose,one,path,person,see,skin,star,sun,tongue,tooth,tree,two,water">
+        <parameter id="featureClockRate:kxa:$(rate)" name="stateNode">1.0</parameter>
+      </plate>
+      <parameter id="featureClockRateGammaShape:kxa" lower="1.1" upper="100.0" name="stateNode">5.0</parameter>
+      <parameter id="featureClockRateGammaScale:kxa" name="stateNode">0.2</parameter>
+      <parameter id="covarion_alpha.s:kxa" lower="1.0E-4" name="stateNode" upper="1.0">0.5</parameter>
+      <parameter id="covarion_s.s:kxa" lower="1.0E-4" name="stateNode" upper="Infinity">0.5</parameter>
+    </state>
+    <init estimate="false" id="startingTree" initial="@Tree.t:beastlingTree" taxonset="@taxa" spec="beast.evolution.tree.ConstrainedRandomTree" constraints="@constraints">
+      <populationModel spec="ConstantPopulation">
+        <popSize spec="parameter.RealParameter" value="1" />
+      </populationModel>
+    </init>
+    <distribution id="posterior" spec="util.CompoundDistribution">
+      <distribution id="prior" spec="util.CompoundDistribution">
+        <distribution id="constraints" spec="beast.math.distributions.MultiMonophyleticConstraint" tree="@Tree.t:beastlingTree" newick="(Amkoe_hoaa1235,(North-CentralJu_kung1261,NorthernJu_vase1234,South-EasternJu_juho1239));" />
+        <distribution id="BirthDeathModel.t:beastlingTree" tree="@Tree.t:beastlingTree" spec="beast.evolution.speciation.BirthDeathGernhard08Model" birthDiffRate="@birthRate.t:beastlingTree" relativeDeathRate="@deathRate.t:beastlingTree" sampleProbability="@sampling.t:beastlingTree" type="unscaled" />
+        <prior id="BirthRatePrior.t:beastlingTree" name="distribution" x="@birthRate.t:beastlingTree">
+          <Uniform id="Uniform.0" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="relativeDeathRatePrior.t:beastlingTree" name="distribution" x="@deathRate.t:beastlingTree">
+          <Uniform id="Uniform.1" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="samplingPrior.t:beastlingTree" name="distribution" x="@sampling.t:beastlingTree">
+          <Uniform id="Uniform.3" name="distr" lower="0" upper="1" />
+        </prior>
+        <prior id="clockPrior:default" name="distribution" x="@clockRate.c:default">
+          <Uniform id="UniformClockPrior:default" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="ucldSdev:default" name="distribution" x="@ucldSdev.c:default">
+          <Gamma id="uclSdevPrior:default" name="distr">
+            <parameter id="uclSdevPriorAlpha:default" estimate="false" name="alpha">0.5396</parameter>
+            <parameter id="uclSdevPriorBeta:default" estimate="false" name="beta">0.3819</parameter>
+          </Gamma>
+        </prior>
+        <prior id="featureClockRatePrior.s:kxa" name="distribution">
+          <input id="featureClockRateCompound:kxa" spec="beast.core.parameter.CompoundValuable" name="x">
+            <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,full,hand,knee,leaf,liver,louse,new,night,nose,one,path,person,see,skin,star,sun,tongue,tooth,tree,two,water">
+              <var idref="featureClockRate:kxa:$(rate)" />
+            </plate>
+          </input>
+          <input id="featureClockRatePriorGamma:kxa" spec="beast.math.distributions.Gamma" name="distr" alpha="@featureClockRateGammaShape:kxa" beta="@featureClockRateGammaScale:kxa" />
+        </prior>
+        <prior id="featureClockRateGammaScalePrior.s:kxa" name="distribution" x="@featureClockRateGammaScale:kxa">
+          <Exponential id="featureClockRateGammaShapePriorExponential.s:kxa" mean="0.23" name="distr" />
+        </prior>
+        <prior id="covarion_alpha_prior.s:kxa" name="distribution" x="@covarion_alpha.s:kxa">
+          <Uniform id="CovAlphaUniform:kxa" name="distr" upper="Infinity" />
+        </prior>
+        <prior id="covarion_s_prior.s:kxa" name="distribution" x="@covarion_s.s:kxa">
+          <Gamma id="Gamma.0:kxa" name="distr">
+            <parameter id="covarion_switch_gamma_param1:kxa" name="alpha" lower="0.0" upper="0.0">0.05</parameter>
+            <parameter id="covarion_switch_gamma_param2:kxa" name="beta" lower="0.0" upper="0.0">10.0</parameter>
+          </Gamma>
+        </prior>
+      </distribution>
+      <distribution id="likelihood" spec="util.CompoundDistribution">
+        <distribution id="featureLikelihood:kxa:1pl" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:1pl" spec="SiteModel" mutationRate="@featureClockRate:kxa:1pl" proportionInvariant="0">
+            <substModel id="covarion.s:kxa" spec="BinaryCovarion" alpha="@covarion_alpha.s:kxa" switchRate="@covarion_s.s:kxa">
+              <vfrequencies id="kxa:visiblefrequencies.s" dimension="2" spec="parameter.RealParameter">0.69 0.31</vfrequencies>
+              <parameter id="kxa:hiddenfrequencies.s" dimension="2" lower="0.0" name="hfrequencies" upper="1.0">0.5 0.5</parameter>
+              <frequencies id="kxa:dummyfrequences.s" spec="Frequencies" frequencies="0.5 0.5" />
+            </substModel>
+          </siteModel>
+          <data id="feature_data_kxa:1pl" spec="FilteredAlignment" data="@data_kxa" filter="1-9" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType id="TwoStateCovarionDatatype" spec="beast.evolution.datatype.TwoStateCovarion" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:1sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:1sg" spec="SiteModel" mutationRate="@featureClockRate:kxa:1sg" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:1sg" spec="FilteredAlignment" data="@data_kxa" filter="10-12" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:2sg" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:2sg" spec="SiteModel" mutationRate="@featureClockRate:kxa:2sg" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:2sg" spec="FilteredAlignment" data="@data_kxa" filter="13-18" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:blood" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:blood" spec="SiteModel" mutationRate="@featureClockRate:kxa:blood" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:blood" spec="FilteredAlignment" data="@data_kxa" filter="19-25" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:bone" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:bone" spec="SiteModel" mutationRate="@featureClockRate:kxa:bone" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:bone" spec="FilteredAlignment" data="@data_kxa" filter="26-28" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:breast" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:breast" spec="SiteModel" mutationRate="@featureClockRate:kxa:breast" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:breast" spec="FilteredAlignment" data="@data_kxa" filter="29-32" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:come" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:come" spec="SiteModel" mutationRate="@featureClockRate:kxa:come" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:come" spec="FilteredAlignment" data="@data_kxa" filter="33-35" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:die" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:die" spec="SiteModel" mutationRate="@featureClockRate:kxa:die" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:die" spec="FilteredAlignment" data="@data_kxa" filter="36-38" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:dog" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:dog" spec="SiteModel" mutationRate="@featureClockRate:kxa:dog" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:dog" spec="FilteredAlignment" data="@data_kxa" filter="39-41" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:drink" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:drink" spec="SiteModel" mutationRate="@featureClockRate:kxa:drink" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:drink" spec="FilteredAlignment" data="@data_kxa" filter="42-45" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:ear" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:ear" spec="SiteModel" mutationRate="@featureClockRate:kxa:ear" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:ear" spec="FilteredAlignment" data="@data_kxa" filter="46-50" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:eye" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:eye" spec="SiteModel" mutationRate="@featureClockRate:kxa:eye" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:eye" spec="FilteredAlignment" data="@data_kxa" filter="51-53" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:fire" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:fire" spec="SiteModel" mutationRate="@featureClockRate:kxa:fire" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:fire" spec="FilteredAlignment" data="@data_kxa" filter="54-57" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:full" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:full" spec="SiteModel" mutationRate="@featureClockRate:kxa:full" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:full" spec="FilteredAlignment" data="@data_kxa" filter="58-60" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:hand" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:hand" spec="SiteModel" mutationRate="@featureClockRate:kxa:hand" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:hand" spec="FilteredAlignment" data="@data_kxa" filter="61-63" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:knee" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:knee" spec="SiteModel" mutationRate="@featureClockRate:kxa:knee" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:knee" spec="FilteredAlignment" data="@data_kxa" filter="64-68" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:leaf" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:leaf" spec="SiteModel" mutationRate="@featureClockRate:kxa:leaf" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:leaf" spec="FilteredAlignment" data="@data_kxa" filter="69-73" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:liver" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:liver" spec="SiteModel" mutationRate="@featureClockRate:kxa:liver" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:liver" spec="FilteredAlignment" data="@data_kxa" filter="74-76" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:louse" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:louse" spec="SiteModel" mutationRate="@featureClockRate:kxa:louse" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:louse" spec="FilteredAlignment" data="@data_kxa" filter="77-79" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:new" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:new" spec="SiteModel" mutationRate="@featureClockRate:kxa:new" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:new" spec="FilteredAlignment" data="@data_kxa" filter="80-86" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:night" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:night" spec="SiteModel" mutationRate="@featureClockRate:kxa:night" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:night" spec="FilteredAlignment" data="@data_kxa" filter="87-89" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:nose" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:nose" spec="SiteModel" mutationRate="@featureClockRate:kxa:nose" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:nose" spec="FilteredAlignment" data="@data_kxa" filter="90-95" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:one" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:one" spec="SiteModel" mutationRate="@featureClockRate:kxa:one" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:one" spec="FilteredAlignment" data="@data_kxa" filter="96-98" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:path" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:path" spec="SiteModel" mutationRate="@featureClockRate:kxa:path" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:path" spec="FilteredAlignment" data="@data_kxa" filter="99-104" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:person" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:person" spec="SiteModel" mutationRate="@featureClockRate:kxa:person" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:person" spec="FilteredAlignment" data="@data_kxa" filter="105-107" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:see" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:see" spec="SiteModel" mutationRate="@featureClockRate:kxa:see" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:see" spec="FilteredAlignment" data="@data_kxa" filter="108-114" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:skin" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:skin" spec="SiteModel" mutationRate="@featureClockRate:kxa:skin" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:skin" spec="FilteredAlignment" data="@data_kxa" filter="115-117" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:star" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:star" spec="SiteModel" mutationRate="@featureClockRate:kxa:star" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:star" spec="FilteredAlignment" data="@data_kxa" filter="118-120" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:sun" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:sun" spec="SiteModel" mutationRate="@featureClockRate:kxa:sun" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:sun" spec="FilteredAlignment" data="@data_kxa" filter="121-124" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:tongue" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:tongue" spec="SiteModel" mutationRate="@featureClockRate:kxa:tongue" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:tongue" spec="FilteredAlignment" data="@data_kxa" filter="125-127" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:tooth" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:tooth" spec="SiteModel" mutationRate="@featureClockRate:kxa:tooth" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:tooth" spec="FilteredAlignment" data="@data_kxa" filter="128-130" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:tree" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:tree" spec="SiteModel" mutationRate="@featureClockRate:kxa:tree" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:tree" spec="FilteredAlignment" data="@data_kxa" filter="131-134" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:two" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:two" spec="SiteModel" mutationRate="@featureClockRate:kxa:two" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:two" spec="FilteredAlignment" data="@data_kxa" filter="135-137" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+        <distribution id="featureLikelihood:kxa:water" spec="TreeLikelihood" useAmbiguities="true" branchRateModel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree">
+          <siteModel id="SiteModel.kxa:water" spec="SiteModel" mutationRate="@featureClockRate:kxa:water" proportionInvariant="0" substModel="@covarion.s:kxa" />
+          <data id="feature_data_kxa:water" spec="FilteredAlignment" data="@data_kxa" filter="138-141" ascertained="true" excludefrom="0" excludeto="1">
+            <userDataType idref="TwoStateCovarionDatatype" />
+          </data>
+        </distribution>
+      </distribution>
+    </distribution>
+    <operator id="UpDown" spec="UpDownOperator" scaleFactor="0.5" weight="3.0">
+      <tree idref="Tree.t:beastlingTree" name="up" />
+      <parameter idref="birthRate.t:beastlingTree" name="down" />
+    </operator>
+    <operator id="YuleBirthRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@birthRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="SamplingScaler.t:beastlingTree" spec="ScaleOperator" parameter="@sampling.t:beastlingTree" scaleFactor="0.8" weight="1.0" />
+    <operator id="DeathRateScaler.t:beastlingTree" spec="ScaleOperator" parameter="@deathRate.t:beastlingTree" scaleFactor="0.5" weight="3.0" />
+    <operator id="rateCategoriesRandomWalkOperator.c:default" spec="IntRandomWalkOperator" parameter="@rateCategories.c:default" windowSize="1" weight="10.0" />
+    <operator id="rateCategoriesSwapOperator.c:default" spec="SwapOperator" intparameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="rateCategoriesUniformOperator.c:default" spec="UniformOperator" parameter="@rateCategories.c:default" weight="10.0" />
+    <operator id="ucldSdevScaler.c:default" spec="ScaleOperator" parameter="@ucldSdev.c:default" scaleFactor="0.5" weight="3.0" />
+    <operator id="featureClockRateGammaUpDown:kxa" spec="UpDownOperator" scaleFactor="0.5" weight="0.3">
+      <parameter idref="featureClockRateGammaShape:kxa" name="up" />
+      <parameter idref="featureClockRateGammaScale:kxa" name="down" />
+    </operator>
+    <operator id="covarion_alpha_scaler.s:kxa" spec="ScaleOperator" parameter="@covarion_alpha.s:kxa" scaleFactor="0.5" weight="1.0" />
+    <operator id="kxa:covarion_s_scaler.s" spec="ScaleOperator" parameter="@covarion_s.s:kxa" scaleFactor="0.5" weight="1.0" />
+    <operator id="featureClockRateDeltaExchanger:default" spec="DeltaExchangeOperator" weight="3.0">
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,full,hand,knee,leaf,liver,louse,new,night,nose,one,path,person,see,skin,star,sun,tongue,tooth,tree,two,water">
+        <parameter idref="featureClockRate:kxa:$(rate)" />
+      </plate>
+      <weightvector id="featureClockRateWeightParameter:default" spec="parameter.IntegerParameter" dimension="34" estimate="false">8 2 5 6 2 3 2 2 2 3 4 2 3 2 2 4 4 2 2 6 2 5 2 5 2 6 2 2 3 2 2 3 2 3</weightvector>
+    </operator>
+    <logger id="screenlog" logEvery="10">
+      <log arg="@posterior" id="ESS.0" spec="util.ESS" />
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+    </logger>
+    <logger id="tracelog" fileName="kxa.log" logEvery="10" sort="smart">
+      <log idref="prior" />
+      <log idref="likelihood" />
+      <log idref="posterior" />
+      <log id="treeStats" spec="beast.evolution.tree.TreeStatLogger" tree="@Tree.t:beastlingTree" />
+      <log idref="birthRate.t:beastlingTree" />
+      <log idref="deathRate.t:beastlingTree" />
+      <log idref="sampling.t:beastlingTree" />
+      <log idref="clockRate.c:default" />
+      <log id="rate.c:default" spec="beast.evolution.branchratemodel.RateStatistic" branchratemodel="@RelaxedClockModel.c:default" tree="@Tree.t:beastlingTree" />
+      <log idref="ucldSdev.c:default" />
+      <plate var="rate" range="1pl,1sg,2sg,blood,bone,breast,come,die,dog,drink,ear,eye,fire,full,hand,knee,leaf,liver,louse,new,night,nose,one,path,person,see,skin,star,sun,tongue,tooth,tree,two,water">
+        <log idref="featureClockRate:kxa:$(rate)" />
+      </plate>
+      <log idref="featureClockRateGammaShape:kxa" />
+      <log idref="covarion_alpha.s:kxa" />
+      <log idref="covarion_s.s:kxa" />
+    </logger>
+    <logger mode="tree" fileName="kxa.nex" logEvery="10" id="treeLogger">
+      <log id="TreeLoggerWithMetaData" spec="beast.evolution.tree.TreeWithMetaDataLogger" tree="@Tree.t:beastlingTree" dp="4">
+        <branchratemodel idref="RelaxedClockModel.c:default" />
+      </log>
+    </logger>
+  </run>
+</beast>

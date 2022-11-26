@@ -1,0 +1,165 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=109;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_lenguamascoy.blood.0009,
+        3 bone_0ascertainment,
+        4 bone_lenguamascoy.bone.0010,
+        5 breast_0ascertainment,
+        6 breast_lenguamascoy.breast.0011,
+        7 breast_lenguamascoy.breast.0012,
+        8 come_0ascertainment,
+        9 come_lenguamascoy.come.0013,
+        10 come_lenguamascoy.come.0014,
+        11 die_0ascertainment,
+        12 die_lenguamascoy.die.0015,
+        13 die_lenguamascoy.die.0016,
+        14 die_lenguamascoy.die.0017,
+        15 dog_0ascertainment,
+        16 dog_lenguamascoy.dog.0018,
+        17 drink_0ascertainment,
+        18 drink_lenguamascoy.drink.0019,
+        19 drink_lenguamascoy.drink.0020,
+        20 ear_0ascertainment,
+        21 ear_lenguamascoy.ear.0021,
+        22 ear_lenguamascoy.ear.0022,
+        23 eye_0ascertainment,
+        24 eye_lenguamascoy.eye.0023,
+        25 fire_0ascertainment,
+        26 fire_lenguamascoy.fire.0024,
+        27 fish_0ascertainment,
+        28 fish_lenguamascoy.fish.0025,
+        29 full_0ascertainment,
+        30 full_lenguamascoy.full.0026,
+        31 full_lenguamascoy.full.0027,
+        32 full_lenguamascoy.full.0028,
+        33 hand_0ascertainment,
+        34 hand_lenguamascoy.hand.0029,
+        35 hear_0ascertainment,
+        36 hear_lenguamascoy.hear.0030,
+        37 hear_lenguamascoy.hear.0031,
+        38 hear_lenguamascoy.hear.0032,
+        39 horn_0ascertainment,
+        40 horn_lenguamascoy.horn.0033,
+        41 knee_0ascertainment,
+        42 knee_lenguamascoy.knee.0034,
+        43 leaf_0ascertainment,
+        44 leaf_lenguamascoy.leaf.0035,
+        45 leaf_lenguamascoy.leaf.0036,
+        46 liver_0ascertainment,
+        47 liver_lenguamascoy.liver.0037,
+        48 louse_0ascertainment,
+        49 louse_lenguamascoy.louse.0038,
+        50 mountain_0ascertainment,
+        51 mountain_lenguamascoy.mountain.0039,
+        52 mountain_lenguamascoy.mountain.0040,
+        53 name_0ascertainment,
+        54 name_lenguamascoy.name.0041,
+        55 new_0ascertainment,
+        56 new_lenguamascoy.new.0042,
+        57 new_lenguamascoy.new.0043,
+        58 new_lenguamascoy.new.0044,
+        59 new_lenguamascoy.new.0045,
+        60 night_0ascertainment,
+        61 night_lenguamascoy.night.0046,
+        62 night_lenguamascoy.night.0047,
+        63 nose_0ascertainment,
+        64 nose_lenguamascoy.nose.0048,
+        65 one_0ascertainment,
+        66 one_lenguamascoy.one.0049,
+        67 path_0ascertainment,
+        68 path_lenguamascoy.path.0050,
+        69 path_lenguamascoy.path.0051,
+        70 path_lenguamascoy.path.0052,
+        71 person_0ascertainment,
+        72 person_lenguamascoy.person.0053,
+        73 person_lenguamascoy.person.0054,
+        74 pl_0ascertainment,
+        75 pl_lenguamascoy.1pl.0001,
+        76 see_0ascertainment,
+        77 see_lenguamascoy.see.0055,
+        78 sg_0ascertainment,
+        79 sg_lenguamascoy.1sg.0002,
+        80 sg_lenguamascoy.1sg.0003,
+        81 sg_lenguamascoy.1sg.0004,
+        82 sg_lenguamascoy.2sg.0005,
+        83 sg_lenguamascoy.2sg.0006,
+        84 sg_lenguamascoy.2sg.0007,
+        85 sg_lenguamascoy.2sg.0008,
+        86 skin_0ascertainment,
+        87 skin_lenguamascoy.skin.0056,
+        88 star_0ascertainment,
+        89 star_lenguamascoy.star.0057,
+        90 star_lenguamascoy.star.0058,
+        91 stone_0ascertainment,
+        92 stone_lenguamascoy.stone.0059,
+        93 stone_lenguamascoy.stone.0060,
+        94 sun_0ascertainment,
+        95 sun_lenguamascoy.sun.0061,
+        96 tongue_0ascertainment,
+        97 tongue_lenguamascoy.tongue.0062,
+        98 tooth_0ascertainment,
+        99 tooth_lenguamascoy.tooth.0063,
+        100 tooth_lenguamascoy.tooth.0064,
+        101 tooth_lenguamascoy.tooth.0065,
+        102 tree_0ascertainment,
+        103 tree_lenguamascoy.tree.0066,
+        104 tree_lenguamascoy.tree.0067,
+        105 two_0ascertainment,
+        106 two_lenguamascoy.two.0068,
+        107 two_lenguamascoy.two.0069,
+        108 water_0ascertainment,
+        109 water_lenguamascoy.water.0070
+;
+
+MATRIX
+lengua           010?0110??011001010011010?01010001010001010110101010010100001001010100010010101001001010??0100101010101001001
+sanapana_angaite 0101001010001001010001010101001001001001010100101001010010000101010100001010100100100010100100101001000101001
+sanapana_enlhet  0101001001000101001001010101000101000101010100101011010001101001010011001010100010110010010110101001001001101
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-2;
+    charset bone = 3-4;
+    charset breast = 5-7;
+    charset come = 8-10;
+    charset die = 11-14;
+    charset dog = 15-16;
+    charset drink = 17-19;
+    charset ear = 20-22;
+    charset eye = 23-24;
+    charset fire = 25-26;
+    charset fish = 27-28;
+    charset full = 29-32;
+    charset hand = 33-34;
+    charset hear = 35-38;
+    charset horn = 39-40;
+    charset knee = 41-42;
+    charset leaf = 43-45;
+    charset liver = 46-47;
+    charset louse = 48-49;
+    charset mountain = 50-52;
+    charset name = 53-54;
+    charset new = 55-59;
+    charset night = 60-62;
+    charset nose = 63-64;
+    charset one = 65-66;
+    charset path = 67-70;
+    charset person = 71-73;
+    charset pl = 74-75;
+    charset see = 76-77;
+    charset sg = 78-85;
+    charset skin = 86-87;
+    charset star = 88-90;
+    charset stone = 91-93;
+    charset sun = 94-95;
+    charset tongue = 96-97;
+    charset tooth = 98-101;
+    charset tree = 102-104;
+    charset two = 105-107;
+    charset water = 108-109;
+END;

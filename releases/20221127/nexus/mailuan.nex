@@ -1,0 +1,170 @@
+#NEXUS
+
+BEGIN DATA;
+    DIMENSIONS NTAX=3 NCHAR=116;
+    FORMAT DATATYPE=STANDARD MISSING=? GAP=- SYMBOLS="01";
+    CHARSTATELABELS
+        1 blood_0ascertainment,
+        2 blood_mailuan.blood.0005,
+        3 blood_mailuan.blood.0006,
+        4 blood_mailuan.blood.0007,
+        5 bone_0ascertainment,
+        6 bone_mailuan.bone.0008,
+        7 bone_mailuan.bone.0009,
+        8 breast_0ascertainment,
+        9 breast_mailuan.breast.0010,
+        10 come_0ascertainment,
+        11 come_mailuan.come.0011,
+        12 come_mailuan.come.0012,
+        13 die_0ascertainment,
+        14 die_mailuan.die.0013,
+        15 dog_0ascertainment,
+        16 dog_mailuan.dog.0014,
+        17 drink_0ascertainment,
+        18 drink_mailuan.drink.0015,
+        19 ear_0ascertainment,
+        20 ear_mailuan.ear.0016,
+        21 ear_mailuan.ear.0017,
+        22 eye_0ascertainment,
+        23 eye_mailuan.eye.0018,
+        24 eye_mailuan.eye.0019,
+        25 fire_0ascertainment,
+        26 fire_mailuan.fire.0020,
+        27 fire_mailuan.fire.0021,
+        28 fire_mailuan.fire.0022,
+        29 fish_0ascertainment,
+        30 fish_mailuan.fish.0023,
+        31 full_0ascertainment,
+        32 full_mailuan.full.0024,
+        33 full_mailuan.full.0025,
+        34 hand_0ascertainment,
+        35 hand_mailuan.hand.0026,
+        36 hand_mailuan.hand.0027,
+        37 hand_mailuan.hand.0028,
+        38 hear_0ascertainment,
+        39 hear_mailuan.hear.0029,
+        40 hear_mailuan.hear.0030,
+        41 knee_0ascertainment,
+        42 knee_mailuan.knee.0031,
+        43 leaf_0ascertainment,
+        44 leaf_mailuan.leaf.0032,
+        45 leaf_mailuan.leaf.0033,
+        46 liver_0ascertainment,
+        47 liver_mailuan.liver.0034,
+        48 louse_0ascertainment,
+        49 louse_mailuan.louse.0035,
+        50 louse_mailuan.louse.0036,
+        51 mountain_0ascertainment,
+        52 mountain_mailuan.mountain.0037,
+        53 mountain_mailuan.mountain.0038,
+        54 name_0ascertainment,
+        55 name_mailuan.name.0039,
+        56 name_mailuan.name.0040,
+        57 new_0ascertainment,
+        58 new_mailuan.new.0041,
+        59 new_mailuan.new.0042,
+        60 night_0ascertainment,
+        61 night_mailuan.night.0043,
+        62 night_mailuan.night.0044,
+        63 night_mailuan.night.0045,
+        64 nose_0ascertainment,
+        65 nose_mailuan.nose.0046,
+        66 nose_mailuan.nose.0047,
+        67 one_0ascertainment,
+        68 one_mailuan.one.0048,
+        69 one_mailuan.one.0049,
+        70 one_mailuan.one.0050,
+        71 path_0ascertainment,
+        72 path_mailuan.path.0051,
+        73 path_mailuan.path.0052,
+        74 path_mailuan.path.0053,
+        75 pl_0ascertainment,
+        76 pl_mailuan.1pl.0001,
+        77 see_0ascertainment,
+        78 see_mailuan.see.0054,
+        79 see_mailuan.see.0055,
+        80 see_mailuan.see.0056,
+        81 see_mailuan.see.0057,
+        82 sg_0ascertainment,
+        83 sg_mailuan.1sg.0002,
+        84 sg_mailuan.2sg.0003,
+        85 sg_mailuan.2sg.0004,
+        86 skin_0ascertainment,
+        87 skin_mailuan.skin.0058,
+        88 skin_mailuan.skin.0059,
+        89 star_0ascertainment,
+        90 star_mailuan.star.0060,
+        91 star_mailuan.star.0061,
+        92 star_mailuan.star.0062,
+        93 stone_0ascertainment,
+        94 stone_mailuan.stone.0063,
+        95 stone_mailuan.stone.0064,
+        96 sun_0ascertainment,
+        97 sun_mailuan.sun.0065,
+        98 sun_mailuan.sun.0066,
+        99 sun_mailuan.sun.0067,
+        100 tongue_0ascertainment,
+        101 tongue_mailuan.tongue.0068,
+        102 tongue_mailuan.tongue.0069,
+        103 tooth_0ascertainment,
+        104 tooth_mailuan.tooth.0070,
+        105 tooth_mailuan.tooth.0071,
+        106 tree_0ascertainment,
+        107 tree_mailuan.tree.0072,
+        108 tree_mailuan.tree.0073,
+        109 two_0ascertainment,
+        110 two_mailuan.two.0074,
+        111 two_mailuan.two.0075,
+        112 two_mailuan.two.0076,
+        113 water_0ascertainment,
+        114 water_mailuan.water.0077,
+        115 water_mailuan.water.0078,
+        116 water_mailuan.water.0079
+;
+
+MATRIX
+bauwaki 0100010010100?010?01001001000101001000??01010010100100100100100010010001000?010000???0100100010010001001001001000100
+domu    0010001010100?010100101001010100100100100?0??0?0010010010??00110??0010001101010000111001001001000100??00101100100110
+mailu_2 00010010?001010?010010010010010??00010010?0010?001001001001001000100010010010011101100010001011000100100101000010001
+;
+END;
+
+BEGIN ASSUMPTIONS;
+    charset blood = 1-4;
+    charset bone = 5-7;
+    charset breast = 8-9;
+    charset come = 10-12;
+    charset die = 13-14;
+    charset dog = 15-16;
+    charset drink = 17-18;
+    charset ear = 19-21;
+    charset eye = 22-24;
+    charset fire = 25-28;
+    charset fish = 29-30;
+    charset full = 31-33;
+    charset hand = 34-37;
+    charset hear = 38-40;
+    charset knee = 41-42;
+    charset leaf = 43-45;
+    charset liver = 46-47;
+    charset louse = 48-50;
+    charset mountain = 51-53;
+    charset name = 54-56;
+    charset new = 57-59;
+    charset night = 60-63;
+    charset nose = 64-66;
+    charset one = 67-70;
+    charset path = 71-74;
+    charset pl = 75-76;
+    charset see = 77-81;
+    charset sg = 82-85;
+    charset skin = 86-88;
+    charset star = 89-92;
+    charset stone = 93-95;
+    charset sun = 96-99;
+    charset tongue = 100-102;
+    charset tooth = 103-105;
+    charset tree = 106-108;
+    charset two = 109-112;
+    charset water = 113-116;
+END;
