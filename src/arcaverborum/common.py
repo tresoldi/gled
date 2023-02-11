@@ -7,7 +7,7 @@ import re
 from pathlib import Path
 from typing import *
 
-ETC_PATH = Path(__file__).parent.parent.parent / "etc"
+ETC_PATH = Path(__file__).parent / "etc"
 
 def read_matrix(filename:Union[Path, str]) -> Dict[str, Dict[str, float]]:
     """
@@ -62,5 +62,5 @@ def read_default_matrix() -> Dict[str, Dict[str, float]]:
         second key is the taxon to which the distance is computed.
     """
 
-    # TODO: fix to get the latest version
+    # TODO: read the latest version
     return read_matrix(ETC_PATH / "global.20221127.dst")

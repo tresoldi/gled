@@ -4,6 +4,7 @@ Setup script for `arcaverborum` package.
 
 # Import Python standard libraries
 from setuptools import setup, find_packages
+import glob
 import pathlib
 
 # The directory containing this file
@@ -14,7 +15,7 @@ README_FILE = (LOCAL_PATH / "arcaverborum.md").read_text(encoding="utf-8")
 
 # Load requirements, so they are listed in a single place
 with open("requirements.txt", encoding="utf-8") as fp:
-    install_requires = [dep.strip() for dep in fp.readlines()]
+    install_requires = [dep.strip() for dep in fp.readlines() if dep.strip()]
 
 # This call to setup() does all the work
 setup(
@@ -52,6 +53,6 @@ setup(
     test_suite="tests",
     tests_require=[],
     url="https://github.com/tresoldi/arcaverborum",
-    version="0.1.0",  # remember to sync with __init__.py
+    version="0.1.4",  # remember to sync with __init__.py
     zip_safe=False,
 )
